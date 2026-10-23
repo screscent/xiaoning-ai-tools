@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://screscent.github.io/xiaoning-ai-tools/sitemap.xml

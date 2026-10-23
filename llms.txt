@@ -1,0 +1,87 @@
+# 小凝 AI 工具集
+
+> 67 个即开即用的 AI 小工具，按场景分类；单个工具 ¥1–¥3 解锁，浏览器打开就能用。
+> 入口：https://rdndxd4t4r.app.weavefox.cn
+
+## 分类
+- [职场办公](https://screscent.github.io/xiaoning-ai-tools/categories/office.html)：周报、会议纪要、PPT 大纲、年终总结——把重复的文书工作交给工具，把时间留给真正要思考的事。（11 个）
+- [求职面试](https://screscent.github.io/xiaoning-ai-tools/categories/job.html)：从简历匹配、面试题预测到谈薪与 offer 对比，覆盖求职全流程的关键决策点。（7 个）
+- [学生教育](https://screscent.github.io/xiaoning-ai-tools/categories/study.html)：作文批改、错题讲解、学习计划与阅读出题，帮学生把「怎么学」拆成可执行的步骤。（8 个）
+- [自媒体运营](https://screscent.github.io/xiaoning-ai-tools/categories/media.html)：小红书笔记、公众号推文、短视频脚本与直播话术，从选题到成稿一次到位。（7 个）
+- [电商客服](https://screscent.github.io/xiaoning-ai-tools/categories/ecommerce.html)：商品文案、差评回复、退款纠纷与催付话术，把客服高频场景做成可复用的话术模板。（7 个）
+- [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（7 个）
+- [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（13 个）
+- [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（7 个）
+
+## 工具
+- [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
+- [SEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/seo-audit.html)：网址 6 项基础检查与修复建议（¥1）
+- [测试用例生成器](https://screscent.github.io/xiaoning-ai-tools/tools/test-cases.html)：一句话生成测试用例，含优先级与导出（¥2）
+- [产品需求文档PRD生成器](https://screscent.github.io/xiaoning-ai-tools/tools/prd-generator.html)：结构化 PRD：背景、画像、优先级、验收（¥3）
+- [简历塑](https://screscent.github.io/xiaoning-ai-tools/tools/resume-match.html)：简历 × 岗位 → 匹配度评分与修改建议（¥2）
+- [面试题预测](https://screscent.github.io/xiaoning-ai-tools/tools/interview-questions.html)：按 JD 生成 10 道高频题与回答框架（¥3）
+- [求职信生成器](https://screscent.github.io/xiaoning-ai-tools/tools/cover-letter.html)：岗位与经历 → 3 版求职信（¥1）
+- [轻编好文案](https://screscent.github.io/xiaoning-ai-tools/tools/product-copy.html)：商品信息 → 标题、卖点、详情与问答（¥1）
+- [客服话术生成器](https://screscent.github.io/xiaoning-ai-tools/tools/cs-script.html)：场景与情绪 → 3 套可用话术（¥2）
+- [小红书笔记生成器](https://screscent.github.io/xiaoning-ai-tools/tools/xhs-note.html)：主题 → 5 标题 + 正文 + 标签 + 封面文案（¥2）
+- [公众号推文生成器](https://screscent.github.io/xiaoning-ai-tools/tools/wechat-article.html)：主题与读者 → 标题、摘要、正文与配图建议（¥2）
+- [短视频脚本生成器](https://screscent.github.io/xiaoning-ai-tools/tools/video-script.html)：主题与时长 → 钩子 + 分镜 + 标签（¥2）
+- [短视频选题生成器](https://screscent.github.io/xiaoning-ai-tools/tools/short-video-topics.html)：领域与平台 → 20 个可拍选题（¥1）
+- [朋友圈文案生成器](https://screscent.github.io/xiaoning-ai-tools/tools/moments-copy.html)：场景 → 10 条朋友圈文案 + 配图建议（¥1）
+- [PPT大纲生成器](https://screscent.github.io/xiaoning-ai-tools/tools/ppt-outline.html)：主题与页数 → 每页要点 + 演讲备注（¥3）
+- [会议纪要整理器](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-minutes.html)：会议文字 → 摘要、决议、待办与风险（¥2）
+- [年终总结述职生成器](https://screscent.github.io/xiaoning-ai-tools/tools/annual-review.html)：岗位与年度工作 → 总结 + 述职口播稿（¥3）
+- [演讲稿生成器](https://screscent.github.io/xiaoning-ai-tools/tools/speech-writer.html)：场合与主题 → 完整讲稿 + 提词卡（¥2）
+- [招聘JD生成器](https://screscent.github.io/xiaoning-ai-tools/tools/jd-generator.html)：岗位信息 → 职责、要求与面试题（¥2）
+- [周报生成器](https://screscent.github.io/xiaoning-ai-tools/tools/weekly-report.html)：本周事项 → 结构化周报四段（¥1）
+- [报销清单整理器](https://screscent.github.io/xiaoning-ai-tools/tools/expense-list.html)：粘贴费用记录 → 规范报销清单与提醒（¥1）
+- [商务邮件生成器](https://screscent.github.io/xiaoning-ai-tools/tools/business-email.html)：对象与目的 → 3 版商务邮件（¥1）
+- [职场文书生成器](https://screscent.github.io/xiaoning-ai-tools/tools/hr-docs.html)：辞职/请假/调岗/证明 → 3 版规范文书（¥1）
+- [英语作文批改器](https://screscent.github.io/xiaoning-ai-tools/tools/essay-grader.html)：作文 → 总分、四维评分、逐句改错与示范（¥2）
+- [学习计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/study-planner.html)：目标与剩余天数 → 倒排周计划（¥2）
+- [读书笔记生成器](https://screscent.github.io/xiaoning-ai-tools/tools/reading-notes.html)：书名与要点 → 结构化笔记 + 书评（¥2）
+- [教师评语生成器](https://screscent.github.io/xiaoning-ai-tools/tools/teacher-comments.html)：学生特点 → 5 条期末评语（¥2）
+- [节日祝福生成器](https://screscent.github.io/xiaoning-ai-tools/tools/festival-wishes.html)：节日与对象 → 10 条可直接发送的祝福（¥1）
+- [取名生成器](https://screscent.github.io/xiaoning-ai-tools/tools/baby-name.html)：姓氏与期望 → 20 个带寓意与音律的名字（¥2）
+- [旅行行程规划器](https://screscent.github.io/xiaoning-ai-tools/tools/travel-planner.html)：城市与天数 → 逐日行程与预算分配（¥3）
+- [菜谱生成器](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-generator.html)：现有食材 → 3 道菜与分步做法（¥1）
+- [健身计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/fitness-planner.html)：目标与器械 → 4 周训练 + 饮食建议（¥2）
+- [一周买菜清单](https://screscent.github.io/xiaoning-ai-tools/tools/grocery-list.html)：7 天三餐菜单 + 分区采购清单（¥1）
+- [家庭月度预算表](https://screscent.github.io/xiaoning-ai-tools/tools/family-budget.html)：收入与支出 → 预算表 + 超支预警（¥2）
+- [婚礼流程策划器](https://screscent.github.io/xiaoning-ai-tools/tools/wedding-planner.html)：婚期与预算 → 流程、分工与物品清单（¥2）
+- [装修预算清单](https://screscent.github.io/xiaoning-ai-tools/tools/renovation-budget.html)：面积与档次 → 分项预算与超支预警（¥2）
+- [送礼推荐器](https://screscent.github.io/xiaoning-ai-tools/tools/gift-picker.html)：对象与预算 → 10 个礼物建议（¥1）
+- [宝宝辅食食谱](https://screscent.github.io/xiaoning-ai-tools/tools/baby-food.html)：月龄与忌口 → 7 天辅食与做法（¥1）
+- [儿童睡前故事](https://screscent.github.io/xiaoning-ai-tools/tools/bedtime-story.html)：年龄与主题 → 3 篇完整睡前故事（¥1）
+- [宠物喂养计划](https://screscent.github.io/xiaoning-ai-tools/tools/pet-feeding.html)：猫狗信息 → 每日喂食 + 每周护理（¥1）
+- [搬家清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/moving-checklist.html)：填入住信息 → 分场景搬迁清单与时间倒排（¥1）
+- [月度复盘生成器](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-review.html)：本月工作 → 结构化复盘与可视化总结（¥2）
+- [旅行攻略生成器](https://screscent.github.io/xiaoning-ai-tools/tools/travel-guide.html)：目的地与偏好 → 每日行程与美食指南（¥3）
+- [二手转卖文案生成器](https://screscent.github.io/xiaoning-ai-tools/tools/resale-copy.html)：物品信息 → 3 版转卖文案（标题/正文/议价/标签）（¥1）
+- [自由职业报价单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/freelance-quote.html)：服务与工时 → 规范报价单（分项/付款节点/不含项）（¥2）
+- [生日纪念日策划器](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-planner.html)：对象与预算 → 当日流程、礼物布置与预算分配（¥1）
+- [谈薪话术生成器](https://screscent.github.io/xiaoning-ai-tools/tools/salary-negotiation.html)：岗位与期望薪资 → 3 套话术与让步底线（¥3）
+- [差评回复生成器](https://screscent.github.io/xiaoning-ai-tools/tools/bad-review-reply.html)：差评原文 → 公开回复、安抚与申诉要点（¥2）
+- [宠物行为纠正方案](https://screscent.github.io/xiaoning-ai-tools/tools/pet-behavior.html)：行为问题 → 分周训练与环境改造（¥2）
+- [错题讲解生成器](https://screscent.github.io/xiaoning-ai-tools/tools/wrong-question.html)：错题原文 → 错因诊断、分步讲解与同类变式题（¥2）
+- [SQL 优化建议生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sql-optimizer.html)：慢 SQL → 问题定位、改写语句与索引建议（¥2）
+- [亲子沟通话术生成器](https://screscent.github.io/xiaoning-ai-tools/tools/parent-child-talk.html)：孩子年龄与场景 → 3 套可照读话术与习惯计划（¥2）
+- [offer 对比决策助手](https://screscent.github.io/xiaoning-ai-tools/tools/offer-compare.html)：多个 offer → 五维打分、风险提示与决策清单（¥2）
+- [退款纠纷处理话术](https://screscent.github.io/xiaoning-ai-tools/tools/refund-dispute.html)：平台与纠纷类型 → 首轮回复、让步阶梯与规则要点（¥2）
+- [直播带货话术生成器](https://screscent.github.io/xiaoning-ai-tools/tools/live-selling-script.html)：平台品类阶段 → 开场、憋单逼单与违规词替换（¥2）
+- [正则表达式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/regex-generator.html)：场景与样例 → 正则、测试表与可用代码（¥2）
+- [英语单词记忆计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/vocab-plan.html)：考试与天数 → 每日任务、复习节奏与词表（¥2）
+- [儿童兴趣班选择助手](https://screscent.github.io/xiaoning-ai-tools/tools/kids-class-picker.html)：孩子特点与预算 → 兴趣班推荐与避坑清单（¥2）
+- [商品定价建议生成器](https://screscent.github.io/xiaoning-ai-tools/tools/pricing-advisor.html)：成本与竞品价 → 三档定价、毛利测算与调价节奏（¥2）
+- [面试复盘分析器](https://screscent.github.io/xiaoning-ai-tools/tools/interview-review.html)：面试问答 → 逐题评分、优化回答与备战清单（¥2）
+- [作文素材生成器](https://screscent.github.io/xiaoning-ai-tools/tools/essay-material.html)：主题学段 → 开头结尾、事例素材与结构提纲（¥2）
+- [社群运营SOP生成器](https://screscent.github.io/xiaoning-ai-tools/tools/community-sop.html)：社群类型与周期 → 每日节奏、话术与活动（¥2）
+- [API 接口文档生成器](https://screscent.github.io/xiaoning-ai-tools/tools/api-doc.html)：接口用途与技术栈 → 接口定义、示例与错误码（¥2）
+- [阅读理解出题器](https://screscent.github.io/xiaoning-ai-tools/tools/reading-quiz.html)：文章与学段 → 5 道题、答案与逐题解析（¥2）
+- [自我介绍生成器](https://screscent.github.io/xiaoning-ai-tools/tools/self-intro.html)：场景与时长 → 3 版自我介绍、追问预案与口播提示（¥2）
+- [宝宝作息表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/baby-schedule.html)：月龄与困扰 → 作息表、哄睡流程与调整节奏（¥2）
+- [订单催付话术生成器](https://screscent.github.io/xiaoning-ai-tools/tools/payment-reminder.html)：平台与阶段 → 3 版催付话术、节奏与合规红线（¥2）
+
+## 说明
+- 联系方式：29185807@qq.com｜15980989344
+- 工具输出为参考结果，不构成专业意见。
