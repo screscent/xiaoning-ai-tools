@@ -630,5 +630,29 @@
   "price": 2,
   "cat": "自媒体运营",
   "url": "https://uiumjhxjku.app.weavefox.cn"
+ },
+ {
+  "id": "ygw7xuz2jf",
+  "name": "无领导小组讨论话术",
+  "desc": "方向与角色 → 开场破冰、观点输出与总结模板",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://ygw7xuz2jf.app.weavefox.cn"
+ },
+ {
+  "id": "ztjwbxhvkt",
+  "name": "技术债清单生成器",
+  "desc": "项目与痛点 → 债务清单、优先级与偿还计划",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://ztjwbxhvkt.app.weavefox.cn"
+ },
+ {
+  "id": "qscxinnhme",
+  "name": "阳台种植计划生成器",
+  "desc": "朝向季节 → 6 种植物、配土与养护卡",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://qscxinnhme.app.weavefox.cn"
  }
 ]
