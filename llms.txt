@@ -1,17 +1,17 @@
 # 小凝 AI 工具集
 
-> 76 个即开即用的 AI 小工具，按场景分类；单个工具 ¥1–¥3 解锁，浏览器打开就能用。
+> 79 个即开即用的 AI 小工具，按场景分类；单个工具 ¥1–¥3 解锁，浏览器打开就能用。
 > 入口：https://rdndxd4t4r.app.weavefox.cn
 
 ## 分类
 - [职场办公](https://screscent.github.io/xiaoning-ai-tools/categories/office.html)：周报、会议纪要、PPT 大纲、年终总结——把重复的文书工作交给工具，把时间留给真正要思考的事。（11 个）
 - [求职面试](https://screscent.github.io/xiaoning-ai-tools/categories/job.html)：从简历匹配、面试题预测到谈薪与 offer 对比，覆盖求职全流程的关键决策点。（8 个）
 - [学生教育](https://screscent.github.io/xiaoning-ai-tools/categories/study.html)：作文批改、错题讲解、学习计划与阅读出题，帮学生把「怎么学」拆成可执行的步骤。（10 个）
-- [自媒体运营](https://screscent.github.io/xiaoning-ai-tools/categories/media.html)：小红书笔记、公众号推文、短视频脚本与直播话术，从选题到成稿一次到位。（8 个）
-- [电商客服](https://screscent.github.io/xiaoning-ai-tools/categories/ecommerce.html)：商品文案、差评回复、退款纠纷与催付话术，把客服高频场景做成可复用的话术模板。（8 个）
+- [自媒体运营](https://screscent.github.io/xiaoning-ai-tools/categories/media.html)：小红书笔记、公众号推文、短视频脚本与直播话术，从选题到成稿一次到位。（9 个）
+- [电商客服](https://screscent.github.io/xiaoning-ai-tools/categories/ecommerce.html)：商品文案、差评回复、退款纠纷与催付话术，把客服高频场景做成可复用的话术模板。（9 个）
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（9 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（14 个）
-- [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（8 个）
+- [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（9 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -90,6 +90,9 @@
 - [英文面试问答生成器](https://screscent.github.io/xiaoning-ai-tools/tools/english-interview.html)：岗位与轮次 → 高频英文问题、回答框架与救场句（¥2）
 - [语文作文批改器](https://screscent.github.io/xiaoning-ai-tools/tools/chinese-essay-review.html)：学段文体与原文 → 四维评分、逐段点评与升格（¥2）
 - [日志排查助手](https://screscent.github.io/xiaoning-ai-tools/tools/log-triage.html)：日志片段与现象 → 线索、成因排序与验证步骤（¥2）
+- [客服排班表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/cs-shift.html)：人手与高峰 → 一周排班、SLA 与交接清单（¥2）
+- [儿童零花钱计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/pocket-money.html)：年龄与目标 → 规则、家务奖励与记账模板（¥2）
+- [小红书封面文案生成器](https://screscent.github.io/xiaoning-ai-tools/tools/xhs-cover.html)：类型人群 → 10 条封面大字、配色与 A/B（¥2）
 
 ## 说明
 - 联系方式：29185807@qq.com｜15980989344

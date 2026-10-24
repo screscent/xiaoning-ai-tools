@@ -606,5 +606,29 @@
   "price": 2,
   "cat": "研发效率",
   "url": "https://5chwqut6g5.app.weavefox.cn"
+ },
+ {
+  "id": "ew9sndixkx",
+  "name": "客服排班表生成器",
+  "desc": "人手与高峰 → 一周排班、SLA 与交接清单",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://ew9sndixkx.app.weavefox.cn"
+ },
+ {
+  "id": "m9veptue9a",
+  "name": "儿童零花钱计划生成器",
+  "desc": "年龄与目标 → 规则、家务奖励与记账模板",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://m9veptue9a.app.weavefox.cn"
+ },
+ {
+  "id": "uiumjhxjku",
+  "name": "小红书封面文案生成器",
+  "desc": "类型人群 → 10 条封面大字、配色与 A/B",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://uiumjhxjku.app.weavefox.cn"
  }
 ]
