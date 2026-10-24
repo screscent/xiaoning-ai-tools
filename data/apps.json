@@ -1030,5 +1030,21 @@
   "price": 2,
   "cat": "职场办公",
   "url": "https://5cmiedt6g5.app.weavefox.cn"
+ },
+ {
+  "id": "j25pukxyyi",
+  "name": "商品上架审核清单",
+  "desc": "平台品类 → 资质图文 + 违禁词 + 观察项",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://j25pukxyyi.app.weavefox.cn"
+ },
+ {
+  "id": "bnussdnsmb",
+  "name": "古诗词默写检测器",
+  "desc": "学段篇目 → 题卡 + 答案 + 复习安排",
+  "price": 1,
+  "cat": "学生教育",
+  "url": "https://bnussdnsmb.app.weavefox.cn"
  }
 ]
