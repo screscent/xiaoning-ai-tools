@@ -774,5 +774,29 @@
   "price": 2,
   "cat": "生活家庭",
   "url": "https://jamkukkp5e.app.weavefox.cn"
+ },
+ {
+  "id": "nyewxrpkdd",
+  "name": "客服质检评分表生成器",
+  "desc": "渠道品类 → 10 项质检指标 + 抽检规则 + 报告",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://nyewxrpkdd.app.weavefox.cn"
+ },
+ {
+  "id": "puwusa3a4t",
+  "name": "代码评审清单生成器",
+  "desc": "语言改动 → 15 项检查点 + 评论模板 + 门禁",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://puwusa3a4t.app.weavefox.cn"
+ },
+ {
+  "id": "sak6vv9xrs",
+  "name": "小红书评论区运营话术",
+  "desc": "笔记类型目标 → 10 条引导 + 差评应对 + 私信承接",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://sak6vv9xrs.app.weavefox.cn"
  }
 ]
