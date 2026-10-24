@@ -702,5 +702,29 @@
   "price": 2,
   "cat": "生活家庭",
   "url": "https://qsceyhnhme.app.weavefox.cn"
+ },
+ {
+  "id": "sakyi79xrs",
+  "name": "Git 提交信息生成器",
+  "desc": "改动描述 → 3 版提交信息 + 拆分建议 + PR 草稿",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://sakyi79xrs.app.weavefox.cn"
+ },
+ {
+  "id": "9pfa8pr8kd",
+  "name": "跨部门沟通话术生成器",
+  "desc": "对象与诉求 → 3 版开场 + IM/邮件正文 + 应对",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://9pfa8pr8kd.app.weavefox.cn"
+ },
+ {
+  "id": "hmxnvafxk9",
+  "name": "幼儿园入园准备清单",
+  "desc": "年龄园所 → 物品清单 + 作息表 + 沟通清单",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://hmxnvafxk9.app.weavefox.cn"
  }
 ]
