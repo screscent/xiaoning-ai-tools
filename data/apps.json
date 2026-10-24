@@ -966,5 +966,29 @@
   "price": 2,
   "cat": "职场办公",
   "url": "https://rdpk694t4r.app.weavefox.cn"
+ },
+ {
+  "id": "pz8zhnqyzx",
+  "name": "直播场控清单",
+  "desc": "平台品类 → 场控时间轴 + 口令表 + 复盘",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://pz8zhnqyzx.app.weavefox.cn"
+ },
+ {
+  "id": "ygjgstz2jf",
+  "name": "英语语法错题诊断器",
+  "desc": "板块错因 → 规则讲解 + 练习 + 训练",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://ygjgstz2jf.app.weavefox.cn"
+ },
+ {
+  "id": "frnrzvgsra",
+  "name": "儿童视力保护计划",
+  "desc": "年龄场景 → 用眼规则 + 户外安排 + 提醒",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://frnrzvgsra.app.weavefox.cn"
  }
 ]
