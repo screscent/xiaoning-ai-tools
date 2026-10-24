@@ -726,5 +726,29 @@
   "price": 2,
   "cat": "亲子宠物",
   "url": "https://hmxnvafxk9.app.weavefox.cn"
+ },
+ {
+  "id": "pziwayqyzx",
+  "name": "商品问答预埋清单",
+  "desc": "品类价格带 → 20 条预埋问答 + 客服模板",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://pziwayqyzx.app.weavefox.cn"
+ },
+ {
+  "id": "ygwbvdz2jf",
+  "name": "转行可行性评估器",
+  "desc": "现岗与目标 → 能力映射 + 四维评分 + 3 个月路线",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://ygwbvdz2jf.app.weavefox.cn"
+ },
+ {
+  "id": "ztjnhyhvkt",
+  "name": "播客节目策划器",
+  "desc": "节目类型时长 → 单集大纲 + 提问 + 上线包",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://ztjnhyhvkt.app.weavefox.cn"
  }
 ]
