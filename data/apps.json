@@ -534,5 +534,29 @@
   "price": 2,
   "cat": "电商客服",
   "url": "https://ew9hluixkx.app.weavefox.cn"
+ },
+ {
+  "id": "glzpvpcqng",
+  "name": "公众号选题生成器",
+  "desc": "领域与读者 → 20 个选题、钩子与排期",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://glzpvpcqng.app.weavefox.cn"
+ },
+ {
+  "id": "kesq6fdudk",
+  "name": "文言文实词卡片生成器",
+  "desc": "学段与词量 → 实词卡片、辨析与自测",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://kesq6fdudk.app.weavefox.cn"
+ },
+ {
+  "id": "dvynvcgy5d",
+  "name": "旧物断舍离清单生成器",
+  "desc": "空间与偏好 → 分类清单、执行表与防反弹",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://dvynvcgy5d.app.weavefox.cn"
  }
 ]
