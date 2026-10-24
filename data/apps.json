@@ -846,5 +846,29 @@
   "price": 2,
   "cat": "研发效率",
   "url": "https://4gpgk9btnf.app.weavefox.cn"
+ },
+ {
+  "id": "uiu5naxjku",
+  "name": "实习经历挖掘助手",
+  "desc": "专业目标 → 经历清单 + STAR 改写 + 投递话术",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://uiu5naxjku.app.weavefox.cn"
+ },
+ {
+  "id": "vfgcsmlsqf",
+  "name": "实验报告撰写助手",
+  "desc": "学科类型 → 报告结构 + 数据处理 + 讨论",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://vfgcsmlsqf.app.weavefox.cn"
+ },
+ {
+  "id": "fw4jakyqkh",
+  "name": "家庭收纳分区方案生成器",
+  "desc": "房型难点 → 分区方案 + 清单 + 预算",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://fw4jakyqkh.app.weavefox.cn"
  }
 ]
