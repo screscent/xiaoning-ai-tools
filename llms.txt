@@ -1,17 +1,17 @@
 # 小凝 AI 工具集
 
-> 82 个即开即用的 AI 小工具，按场景分类；单个工具 ¥1–¥3 解锁，浏览器打开就能用。
+> 85 个即开即用的 AI 小工具，按场景分类；单个工具 ¥1–¥3 解锁，浏览器打开就能用。
 > 入口：https://rdndxd4t4r.app.weavefox.cn
 
 ## 分类
 - [职场办公](https://screscent.github.io/xiaoning-ai-tools/categories/office.html)：周报、会议纪要、PPT 大纲、年终总结——把重复的文书工作交给工具，把时间留给真正要思考的事。（11 个）
 - [求职面试](https://screscent.github.io/xiaoning-ai-tools/categories/job.html)：从简历匹配、面试题预测到谈薪与 offer 对比，覆盖求职全流程的关键决策点。（9 个）
 - [学生教育](https://screscent.github.io/xiaoning-ai-tools/categories/study.html)：作文批改、错题讲解、学习计划与阅读出题，帮学生把「怎么学」拆成可执行的步骤。（10 个）
-- [自媒体运营](https://screscent.github.io/xiaoning-ai-tools/categories/media.html)：小红书笔记、公众号推文、短视频脚本与直播话术，从选题到成稿一次到位。（9 个）
-- [电商客服](https://screscent.github.io/xiaoning-ai-tools/categories/ecommerce.html)：商品文案、差评回复、退款纠纷与催付话术，把客服高频场景做成可复用的话术模板。（9 个）
+- [自媒体运营](https://screscent.github.io/xiaoning-ai-tools/categories/media.html)：小红书笔记、公众号推文、短视频脚本与直播话术，从选题到成稿一次到位。（10 个）
+- [电商客服](https://screscent.github.io/xiaoning-ai-tools/categories/ecommerce.html)：商品文案、差评回复、退款纠纷与催付话术，把客服高频场景做成可复用的话术模板。（10 个）
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（10 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（15 个）
-- [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（9 个）
+- [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（10 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -96,6 +96,9 @@
 - [无领导小组讨论话术](https://screscent.github.io/xiaoning-ai-tools/tools/group-interview.html)：方向与角色 → 开场破冰、观点输出与总结模板（¥2）
 - [技术债清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/tech-debt.html)：项目与痛点 → 债务清单、优先级与偿还计划（¥2）
 - [阳台种植计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/balcony-garden.html)：朝向季节 → 6 种植物、配土与养护卡（¥2）
+- [包裹异常件处理清单](https://screscent.github.io/xiaoning-ai-tools/tools/parcel-issue.html)：异常类型 → 处理流程、沟通话术与赔付划分（¥2）
+- [小学生作业陪伴计划](https://screscent.github.io/xiaoning-ai-tools/tools/homework-coach.html)：年级与弱项 → 作业节奏、检查清单与话术（¥2）
+- [公众号排版检查清单](https://screscent.github.io/xiaoning-ai-tools/tools/wechat-layout.html)：文章类型 → 排版模板、配图节奏与自检（¥2）
 
 ## 说明
 - 联系方式：29185807@qq.com｜15980989344

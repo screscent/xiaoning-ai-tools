@@ -654,5 +654,29 @@
   "price": 2,
   "cat": "生活家庭",
   "url": "https://qscxinnhme.app.weavefox.cn"
+ },
+ {
+  "id": "frbb5agsra",
+  "name": "包裹异常件处理清单",
+  "desc": "异常类型 → 处理流程、沟通话术与赔付划分",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://frbb5agsra.app.weavefox.cn"
+ },
+ {
+  "id": "mkqqx7rxwr",
+  "name": "小学生作业陪伴计划",
+  "desc": "年级与弱项 → 作业节奏、检查清单与话术",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://mkqqx7rxwr.app.weavefox.cn"
+ },
+ {
+  "id": "9pffrfr8kd",
+  "name": "公众号排版检查清单",
+  "desc": "文章类型 → 排版模板、配图节奏与自检",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://9pffrfr8kd.app.weavefox.cn"
  }
 ]
