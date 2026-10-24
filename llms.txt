@@ -1,13 +1,13 @@
 # 小凝 AI 工具集
 
-> 131 个即开即用的 AI 小工具，按场景分类；单个工具 ¥1–¥3 解锁，浏览器打开就能用。
+> 132 个即开即用的 AI 小工具，按场景分类；单个工具 ¥1–¥3 解锁，浏览器打开就能用。
 > 入口：https://rdndxd4t4r.app.weavefox.cn
 
 ## 分类
 - [职场办公](https://screscent.github.io/xiaoning-ai-tools/categories/office.html)：周报、会议纪要、PPT 大纲、年终总结——把重复的文书工作交给工具，把时间留给真正要思考的事。（17 个）
 - [求职面试](https://screscent.github.io/xiaoning-ai-tools/categories/job.html)：从简历匹配、面试题预测到谈薪与 offer 对比，覆盖求职全流程的关键决策点。（14 个）
 - [学生教育](https://screscent.github.io/xiaoning-ai-tools/categories/study.html)：作文批改、错题讲解、学习计划与阅读出题，帮学生把「怎么学」拆成可执行的步骤。（19 个）
-- [自媒体运营](https://screscent.github.io/xiaoning-ai-tools/categories/media.html)：小红书笔记、公众号推文、短视频脚本与直播话术，从选题到成稿一次到位。（15 个）
+- [自媒体运营](https://screscent.github.io/xiaoning-ai-tools/categories/media.html)：小红书笔记、公众号推文、短视频脚本与直播话术，从选题到成稿一次到位。（16 个）
 - [电商客服](https://screscent.github.io/xiaoning-ai-tools/categories/ecommerce.html)：商品文案、差评回复、退款纠纷与催付话术，把客服高频场景做成可复用的话术模板。（16 个）
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
@@ -145,6 +145,7 @@
 - [OKR 对齐检查器](https://screscent.github.io/xiaoning-ai-tools/tools/okr-alignment.html)：团队周期 → 写法判定 + 对齐 + 复盘（¥2）
 - [商品上架审核清单](https://screscent.github.io/xiaoning-ai-tools/tools/listing-audit.html)：平台品类 → 资质图文 + 违禁词 + 观察项（¥2）
 - [古诗词默写检测器](https://screscent.github.io/xiaoning-ai-tools/tools/poem-dictation.html)：学段篇目 → 题卡 + 答案 + 复习安排（¥1）
+- [内容选题日历生成器](https://screscent.github.io/xiaoning-ai-tools/tools/content-calendar.html)：平台赛道 → 30天选题 + 标题模板（¥2）
 
 ## 说明
 - 联系方式：29185807@qq.com｜15980989344
