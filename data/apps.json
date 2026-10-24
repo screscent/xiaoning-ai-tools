@@ -990,5 +990,29 @@
   "price": 2,
   "cat": "亲子宠物",
   "url": "https://frnrzvgsra.app.weavefox.cn"
+ },
+ {
+  "id": "c79wcbegmi",
+  "name": "远程协作规则清单",
+  "desc": "团队分布规模 → 协作规则 + 会议 + 文档",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://c79wcbegmi.app.weavefox.cn"
+ },
+ {
+  "id": "4gqctebtnf",
+  "name": "发布上线检查清单",
+  "desc": "应用类型 → 上线检查 + 回滚 + 验证",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://4gqctebtnf.app.weavefox.cn"
+ },
+ {
+  "id": "qseyv5nhme",
+  "name": "家庭年度体检计划",
+  "desc": "成员年龄 → 项目清单 + 频次 + 记录",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://qseyv5nhme.app.weavefox.cn"
  }
 ]
