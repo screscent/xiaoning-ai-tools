@@ -1014,5 +1014,21 @@
   "price": 2,
   "cat": "生活家庭",
   "url": "https://qseyv5nhme.app.weavefox.cn"
+ },
+ {
+  "id": "rdpcej4t4r",
+  "name": "小学数学口算题卡生成器",
+  "desc": "年级题型 → 题卡 + 答案 + 计时表",
+  "price": 1,
+  "cat": "学生教育",
+  "url": "https://rdpcej4t4r.app.weavefox.cn"
+ },
+ {
+  "id": "5cmiedt6g5",
+  "name": "OKR 对齐检查器",
+  "desc": "团队周期 → 写法判定 + 对齐 + 复盘",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://5cmiedt6g5.app.weavefox.cn"
  }
 ]
