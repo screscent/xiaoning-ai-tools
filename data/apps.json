@@ -750,5 +750,29 @@
   "price": 2,
   "cat": "自媒体运营",
   "url": "https://ztjnhyhvkt.app.weavefox.cn"
+ },
+ {
+  "id": "m9vf5hue9a",
+  "name": "绩效自评撰写器",
+  "desc": "岗位周期 → 自评结构 + 量化写法 + 面谈问答",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://m9vf5hue9a.app.weavefox.cn"
+ },
+ {
+  "id": "uiurb6xjku",
+  "name": "化学方程式配平练习生成器",
+  "desc": "学段题型 → 20 道题 + 步骤 + 口诀",
+  "price": 1,
+  "cat": "学生教育",
+  "url": "https://uiurb6xjku.app.weavefox.cn"
+ },
+ {
+  "id": "jamkukkp5e",
+  "name": "家庭药箱清单生成器",
+  "desc": "成员季节 → 分类清单 + 分区 + 就医信号",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://jamkukkp5e.app.weavefox.cn"
  }
 ]
