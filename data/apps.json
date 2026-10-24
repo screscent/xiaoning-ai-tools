@@ -870,5 +870,29 @@
   "price": 2,
   "cat": "生活家庭",
   "url": "https://fw4jakyqkh.app.weavefox.cn"
+ },
+ {
+  "id": "cjhgj9e3pc",
+  "name": "店铺售后数据周报表",
+  "desc": "平台品类 → 周报模板 + 归因 + 改进动作",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://cjhgj9e3pc.app.weavefox.cn"
+ },
+ {
+  "id": "mkqtkrrxwr",
+  "name": "短视频开头钩子生成器",
+  "desc": "赛道受众 → 10 条钩子 + 句式 + 避坑",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://mkqtkrrxwr.app.weavefox.cn"
+ },
+ {
+  "id": "tb2gbumk3t",
+  "name": "会议发言提纲生成器",
+  "desc": "会议角色 → 发言结构 + 开场 + 应答",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://tb2gbumk3t.app.weavefox.cn"
  }
 ]
