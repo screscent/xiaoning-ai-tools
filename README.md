@@ -9,7 +9,8 @@
 ## 本地构建
 
 ```bash
-python3 build.py
+python3 build.py          # 从 data/apps.json + data/content.py 生成全站
+python3 submit_indexnow.py  # 构建后提交 sitemap 全量 URL（需 key 文件已部署）
 ```
 
 数据源：`data/apps.json`（工具目录） + `data/content.py`（每个工具的介绍内容）。
@@ -19,6 +20,7 @@ python3 build.py
 - `index.html` 门户 · `categories/` 分类页 · `tools/` 工具页 · `pricing.html` 价格说明
 - `sitemap.xml` / `robots.txt` / `llms.txt`
 - `assets/style.css`
+- 更新流程见项目 `docs/14-公开站更新SOP.md`
 
 ## 说明
 
