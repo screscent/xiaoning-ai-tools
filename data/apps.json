@@ -822,5 +822,29 @@
   "price": 2,
   "cat": "亲子宠物",
   "url": "https://mkqywwrxwr.app.weavefox.cn"
+ },
+ {
+  "id": "qh824gstfq",
+  "name": "商品标题优化器",
+  "desc": "品类平台 → 10 条标题 + 关键词分层 + 违禁词检查",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://qh824gstfq.app.weavefox.cn"
+ },
+ {
+  "id": "c7s52qegmi",
+  "name": "账号定位诊断器",
+  "desc": "平台赛道 → 定位诊断 + 人设 + 30 天计划",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://c7s52qegmi.app.weavefox.cn"
+ },
+ {
+  "id": "4gpgk9btnf",
+  "name": "接口联调排错清单",
+  "desc": "协议现象 → 排查顺序 + 原因对照 + 验证",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://4gpgk9btnf.app.weavefox.cn"
  }
 ]
