@@ -918,5 +918,29 @@
   "price": 2,
   "cat": "亲子宠物",
   "url": "https://sakszh9xrs.app.weavefox.cn"
+ },
+ {
+  "id": "g42mpvtuhw",
+  "name": "商品评价管理清单",
+  "desc": "品类平台 → 评价获取 + 差评处理 + 周检查表",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://g42mpvtuhw.app.weavefox.cn"
+ },
+ {
+  "id": "7bpjk4web7",
+  "name": "代码注释规范检查器",
+  "desc": "语言团队 → 注释规范 + 检查清单 + 改写示例",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://7bpjk4web7.app.weavefox.cn"
+ },
+ {
+  "id": "rdpbtj4t4r",
+  "name": "家庭保险配置清单",
+  "desc": "家庭结构收入 → 险种优先级 + 保额 + 避坑",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://rdpbtj4t4r.app.weavefox.cn"
  }
 ]
