@@ -798,5 +798,29 @@
   "price": 2,
   "cat": "自媒体运营",
   "url": "https://sak6vv9xrs.app.weavefox.cn"
+ },
+ {
+  "id": "r3yheqzjyr",
+  "name": "校招网申填写助手",
+  "desc": "行业岗位 → 网申要点 + 经历改写 + 自查清单",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://r3yheqzjyr.app.weavefox.cn"
+ },
+ {
+  "id": "puwdj43a4t",
+  "name": "英语听力精听计划生成器",
+  "desc": "考试水平 → 21 天计划 + 五步法 + 专项",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://puwdj43a4t.app.weavefox.cn"
+ },
+ {
+  "id": "mkqywwrxwr",
+  "name": "儿童疫苗接种记录整理器",
+  "desc": "月龄地区 → 接种时间轴 + 补种对照",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://mkqywwrxwr.app.weavefox.cn"
  }
 ]
