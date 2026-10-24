@@ -678,5 +678,29 @@
   "price": 2,
   "cat": "自媒体运营",
   "url": "https://9pffrfr8kd.app.weavefox.cn"
+ },
+ {
+  "id": "ygwjhez2jf",
+  "name": "求职跟进邮件生成器",
+  "desc": "场景与公司类型 → 3 版邮件、中英对照与时机",
+  "price": 1,
+  "cat": "求职面试",
+  "url": "https://ygwjhez2jf.app.weavefox.cn"
+ },
+ {
+  "id": "ztjxmwhvkt",
+  "name": "物理公式速查卡生成器",
+  "desc": "学段章节 → 公式卡、推导与易错点",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://ztjxmwhvkt.app.weavefox.cn"
+ },
+ {
+  "id": "qsceyhnhme",
+  "name": "家用电器选购指南",
+  "desc": "电器预算户型 → 参数、配置与避坑",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://qsceyhnhme.app.weavefox.cn"
  }
 ]
