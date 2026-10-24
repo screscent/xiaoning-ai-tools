@@ -942,5 +942,29 @@
   "price": 2,
   "cat": "生活家庭",
   "url": "https://rdpbtj4t4r.app.weavefox.cn"
+ },
+ {
+  "id": "mknbacrxwr",
+  "name": "简历投递跟踪表",
+  "desc": "阶段行业 → 跟踪表 + 跟进话术 + 止损规则",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://mknbacrxwr.app.weavefox.cn"
+ },
+ {
+  "id": "xqt2mmbndh",
+  "name": "历史时间轴记忆卡生成器",
+  "desc": "学段范围 → 时间轴 + 因果链 + 口诀",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://xqt2mmbndh.app.weavefox.cn"
+ },
+ {
+  "id": "rdpk694t4r",
+  "name": "汇报图表选型助手",
+  "desc": "数据类型 → 图表选型 + 结构 + 讲解话术",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://rdpk694t4r.app.weavefox.cn"
  }
 ]
