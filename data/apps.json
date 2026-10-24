@@ -558,5 +558,29 @@
   "price": 2,
   "cat": "生活家庭",
   "url": "https://dvynvcgy5d.app.weavefox.cn"
+ },
+ {
+  "id": "2qx5klqqxb",
+  "name": "技术方案评审清单生成器",
+  "desc": "项目类型与关切 → 评审清单、风险与上线检查",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://2qx5klqqxb.app.weavefox.cn"
+ },
+ {
+  "id": "qh8c6dstfq",
+  "name": "亲子游戏活动生成器",
+  "desc": "年龄场地时长 → 5 个游戏、流程与安全提示",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://qh8c6dstfq.app.weavefox.cn"
+ },
+ {
+  "id": "c7sm46egmi",
+  "name": "电商大促备货清单",
+  "desc": "活动品类单量 → 备货测算、物料与倒排表",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://c7sm46egmi.app.weavefox.cn"
  }
 ]

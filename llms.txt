@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 70 个即开即用的 AI 小工具，按场景分类；单个工具 ¥1–¥3 解锁，浏览器打开就能用。
+> 73 个即开即用的 AI 小工具，按场景分类；单个工具 ¥1–¥3 解锁，浏览器打开就能用。
 > 入口：https://rdndxd4t4r.app.weavefox.cn
 
 ## 分类
@@ -8,10 +8,10 @@
 - [求职面试](https://screscent.github.io/xiaoning-ai-tools/categories/job.html)：从简历匹配、面试题预测到谈薪与 offer 对比，覆盖求职全流程的关键决策点。（7 个）
 - [学生教育](https://screscent.github.io/xiaoning-ai-tools/categories/study.html)：作文批改、错题讲解、学习计划与阅读出题，帮学生把「怎么学」拆成可执行的步骤。（9 个）
 - [自媒体运营](https://screscent.github.io/xiaoning-ai-tools/categories/media.html)：小红书笔记、公众号推文、短视频脚本与直播话术，从选题到成稿一次到位。（8 个）
-- [电商客服](https://screscent.github.io/xiaoning-ai-tools/categories/ecommerce.html)：商品文案、差评回复、退款纠纷与催付话术，把客服高频场景做成可复用的话术模板。（7 个）
-- [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（7 个）
+- [电商客服](https://screscent.github.io/xiaoning-ai-tools/categories/ecommerce.html)：商品文案、差评回复、退款纠纷与催付话术，把客服高频场景做成可复用的话术模板。（8 个）
+- [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（8 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（14 个）
-- [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（7 个）
+- [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（8 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -84,6 +84,9 @@
 - [公众号选题生成器](https://screscent.github.io/xiaoning-ai-tools/tools/wechat-topics.html)：领域与读者 → 20 个选题、钩子与排期（¥2）
 - [文言文实词卡片生成器](https://screscent.github.io/xiaoning-ai-tools/tools/wenyan-cards.html)：学段与词量 → 实词卡片、辨析与自测（¥2）
 - [旧物断舍离清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/declutter-list.html)：空间与偏好 → 分类清单、执行表与防反弹（¥2）
+- [技术方案评审清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/tech-review.html)：项目类型与关切 → 评审清单、风险与上线检查（¥2）
+- [亲子游戏活动生成器](https://screscent.github.io/xiaoning-ai-tools/tools/family-games.html)：年龄场地时长 → 5 个游戏、流程与安全提示（¥2）
+- [电商大促备货清单](https://screscent.github.io/xiaoning-ai-tools/tools/promo-stock.html)：活动品类单量 → 备货测算、物料与倒排表（¥2）
 
 ## 说明
 - 联系方式：29185807@qq.com｜15980989344
