@@ -582,5 +582,29 @@
   "price": 2,
   "cat": "电商客服",
   "url": "https://c7sm46egmi.app.weavefox.cn"
+ },
+ {
+  "id": "npu54v2aq6",
+  "name": "英文面试问答生成器",
+  "desc": "岗位与轮次 → 高频英文问题、回答框架与救场句",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://npu54v2aq6.app.weavefox.cn"
+ },
+ {
+  "id": "z5afxvaahj",
+  "name": "语文作文批改器",
+  "desc": "学段文体与原文 → 四维评分、逐段点评与升格",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://z5afxvaahj.app.weavefox.cn"
+ },
+ {
+  "id": "5chwqut6g5",
+  "name": "日志排查助手",
+  "desc": "日志片段与现象 → 线索、成因排序与验证步骤",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://5chwqut6g5.app.weavefox.cn"
  }
 ]
