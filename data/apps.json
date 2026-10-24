@@ -894,5 +894,29 @@
   "price": 2,
   "cat": "职场办公",
   "url": "https://tb2gbumk3t.app.weavefox.cn"
+ },
+ {
+  "id": "r3yrpgzjyr",
+  "name": "数据库表设计评审清单",
+  "desc": "场景规模 → 评审清单 + 索引建议 + 回滚表",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://r3yrpgzjyr.app.weavefox.cn"
+ },
+ {
+  "id": "frbfmbgsra",
+  "name": "考研复试准备计划",
+  "desc": "专业院校 → 复试流程 + 问题清单 + 应答",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://frbfmbgsra.app.weavefox.cn"
+ },
+ {
+  "id": "sakszh9xrs",
+  "name": "儿童家务分工表生成器",
+  "desc": "年龄结构 → 家务清单 + 分工表 + 激励",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://sakszh9xrs.app.weavefox.cn"
  }
 ]
