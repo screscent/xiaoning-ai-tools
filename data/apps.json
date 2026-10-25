@@ -1150,5 +1150,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://7bpyp2web7.app.weavefox.cn"
+  },
+  {
+    "id": "x8slbmcakb",
+    "name": "Markdown 表格生成器",
+    "desc": "CSV/TSV/竖线文本转标准 Markdown 表格，支持对齐",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://x8slbmcakb.app.weavefox.cn"
+  },
+  {
+    "id": "fwbncxyqkh",
+    "name": "数字进制转换器",
+    "desc": "二/八/十/十六进制互转，位宽与位模式展示",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://fwbncxyqkh.app.weavefox.cn"
+  },
+  {
+    "id": "uidvbyxjku",
+    "name": "命名风格转换器",
+    "desc": "camel/snake/kebab/Pascal/常量/中文标题互转",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://uidvbyxjku.app.weavefox.cn"
   }
 ]
