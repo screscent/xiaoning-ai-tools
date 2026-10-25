@@ -1222,5 +1222,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://g42uqytuhw.app.weavefox.cn"
+  },
+  {
+    "id": "keyw5ddudk",
+    "name": "单位换算器",
+    "desc": "长度/重量/面积/体积/温度/数据六类单位互转",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://keyw5ddudk.app.weavefox.cn"
+  },
+  {
+    "id": "r3akzzzjyr",
+    "name": "哈希校验工具",
+    "desc": "本地计算 SHA-256/384/512，文本与文件校验对比",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://r3akzzzjyr.app.weavefox.cn"
+  },
+  {
+    "id": "frnustgsra",
+    "name": "番茄钟与倒计时",
+    "desc": "专注/休息轮次计时，进度环与今日完成统计",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://frnustgsra.app.weavefox.cn"
   }
 ]
