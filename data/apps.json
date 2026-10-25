@@ -1342,5 +1342,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://ekgnlbvhte.app.weavefox.cn"
+  },
+  {
+    "id": "glh2nmcqng",
+    "name": "图片滤镜与灰度",
+    "desc": "本地滤镜/黑白/亮度对比度饱和度，导出图片",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://glh2nmcqng.app.weavefox.cn"
+  },
+  {
+    "id": "keybxzdudk",
+    "name": "数字转罗马与中文数字",
+    "desc": "阿拉伯/罗马/中文数字双向转换，含对照表",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://keybxzdudk.app.weavefox.cn"
+  },
+  {
+    "id": "dvznbegy5d",
+    "name": "随机决定器",
+    "desc": "转盘/骰子/硬币随机决定，带历史记录",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://dvznbegy5d.app.weavefox.cn"
   }
 ]
