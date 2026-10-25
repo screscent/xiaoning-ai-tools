@@ -1102,5 +1102,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://urjnzsdyk8.app.weavefox.cn"
+  },
+  {
+    "id": "keye5ddudk",
+    "name": "Base64 编解码器",
+    "desc": "文本与 Base64 双向转换，支持 UTF-8/URL 安全",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://keye5ddudk.app.weavefox.cn"
+  },
+  {
+    "id": "frnp3wgsra",
+    "name": "URL 编解码与参数解析器",
+    "desc": "URL 编码/解码 + 查询参数解析与地址分解",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://frnp3wgsra.app.weavefox.cn"
+  },
+  {
+    "id": "urjhfedyk8",
+    "name": "时间戳转换器",
+    "desc": "时间戳与日期互转，秒/毫秒/多时区/多格式",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://urjhfedyk8.app.weavefox.cn"
   }
 ]
