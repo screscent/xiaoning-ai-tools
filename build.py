@@ -21,11 +21,10 @@ PORTAL = "https://rdndxd4t4r.app.weavefox.cn"
 UNIFIED = "https://screscent.app.weavefox.cn"
 TOOLBOX = "https://7bpgquweb7.app.weavefox.cn"
 
-# 实用工具「按用途」分组（新增工具时在此补映射；未命中归入「其他」）
-UTIL_GROUPS = [
-    ("图片与文件", {"image-compressor"}),
-    ("金融计算", {"mortgage-calculator"}),
-    ("编码与链接", {"qr-generator"}),
+# 实用工具子分类（SSOT：apps.json 每条 cat=实用工具 必须带 subcat；顺序即门户分组顺序）
+UTIL_SUBCAT_ORDER = [
+    "图片处理", "文本处理", "编码转换", "时间日期",
+    "计算换算", "安全隐私", "设计绘图", "效率生活",
 ]
 OWNER = "月牙寂（龚浩华）"
 AGENT = "月绡凝（小凝）"
@@ -160,7 +159,11 @@ def tool_page(a, apps):
     c = C.APPS[a["id"]]
     _, hook, w1, w2, w3, inputs, output, example, fq, fa = c
     canon = f"{BASE_URL}/tools/{a['slug']}.html"
-    peers = [x for x in apps if x["cat"] == a["cat"] and x["id"] != a["id"]][:3]
+    is_util = a["cat"] == "实用工具"
+    label = a.get("subcat") or a["cat"] if is_util else a["cat"]
+    peers = [x for x in apps
+             if (x.get("subcat") == a.get("subcat") if is_util else x["cat"] == a["cat"])
+             and x["id"] != a["id"]][:3]
     peers_html = "".join(
         f'<li><a href="{x["slug"]}.html">{esc(x["name"])}</a><span>{esc(x["desc"])}</span></li>'
         for x in peers
@@ -173,9 +176,9 @@ def tool_page(a, apps):
     body = f"""
 <nav class="crumb"><a href="../index.html">工具集</a> › <a href="../categories/{cat_slug(a['cat'])}.html">{esc(a['cat'])}</a> › <span>{esc(a['name'])}</span></nav>
 <article>
-  <h1>{esc(a['name'])}<small>{esc(a['cat'])}</small></h1>
+  <h1>{esc(a['name'])}<small>{esc(label)}</small></h1>
   <p class="hook">{esc(hook)}</p>
-  <p class="lede"><strong>{esc(a['name'])}</strong> 是一个即开即用的 AI 小工具：{esc(a['desc'])}。不需要安装，浏览器打开就能用。</p>
+  <p class="lede"><strong>{esc(a['name'])}</strong> 是一个即开即用的{'纯前端免费工具' if is_util else 'AI 小工具'}：{esc(a['desc'])}。不需要安装，浏览器打开就能用。</p>
 
   <h2>谁需要它</h2>
   <ul class="who"><li>{esc(w1)}</li><li>{esc(w2)}</li><li>{esc(w3)}</li></ul>
@@ -191,7 +194,7 @@ def tool_page(a, apps):
 
   <h2>怎么用</h2>
   <ol class="steps">
-    <li>点下面的按钮打开工具（首次使用需手机号注册，免费）。</li>
+    <li>{'点下面的按钮打开工具（纯前端本地运行，无需注册与支付）。' if is_util else '点下面的按钮打开工具（首次使用需手机号注册，免费）。'}</li>
     <li>按提示填写上面的信息，点生成。</li>
     <li>{'复制或下载结果即可；本工具完全免费，无需解锁。' if a.get('price',0)==0 else "复制结果；需要继续用同一个工具时，在应用内解锁完整功能（¥%s）。" % a['price']}</li>
   </ol>
@@ -206,7 +209,7 @@ def tool_page(a, apps):
 </article>
 """
     return page_shell(
-        f"{a['name']} - {a['cat']} AI 工具 | {SITE_NAME}",
+        f"{a['name']} - {label} {'免费工具' if is_util else 'AI 工具'} | {SITE_NAME}",
         f"{a['desc']}。{a['name']}：{output}" + ("，完全免费，浏览器即开即用。" if a.get("price",0)==0 else f"，¥{a['price']} 解锁，浏览器即开即用。"),
         canon, body,
         extra_jsonld=app_jsonld(a, canon),
@@ -359,18 +362,16 @@ def utility_portal_page(apps):
                 f'<strong>{esc(a["name"])}</strong><span>{esc(a["desc"])}</span><em>免费</em></a>'
                 f'<p class="steps"><a href="../tools/{a["slug"]}.html">查看说明页</a></p></li>')
     groups = ""
-    used = set()
-    for gname, slugs in UTIL_GROUPS:
-        items = [a for a in util if a["slug"] in slugs]
-        used |= {a["id"] for a in items}
+    missing = [a["name"] for a in util if a.get("subcat") not in UTIL_SUBCAT_ORDER]
+    if missing:
+        print(f"FAIL: 实用工具缺少合法 subcat（须属 {UTIL_SUBCAT_ORDER}）：{missing}")
+        sys.exit(1)
+    for gname in UTIL_SUBCAT_ORDER:
+        items = [a for a in util if a.get("subcat") == gname]
         if not items:
             continue
         groups += (f'<section class="group"><h2>{esc(gname)}<small>{len(items)} 个</small></h2>'
                    f'<ul class="cards">{"".join(card(a) for a in items)}</ul></section>')
-    rest = [a for a in util if a["id"] not in used]
-    if rest:
-        groups += (f'<section class="group"><h2>其他<small>{len(rest)} 个</small></h2>'
-                   f'<ul class="cards">{"".join(card(a) for a in rest)}</ul></section>')
     body = f"""
 <p class="crumb"><a href="{BASE_URL}/">← 返回统一门户</a></p>
 <section class="hero">

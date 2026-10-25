@@ -1061,7 +1061,8 @@
     "desc": "本地批量压缩 → 指定 KB/像素，免费",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://ekgs3pvhte.app.weavefox.cn"
+    "url": "https://ekgs3pvhte.app.weavefox.cn",
+    "subcat": "图片处理"
   },
   {
     "id": "3xh2yr5af3",
@@ -1069,7 +1070,8 @@
     "desc": "等额本息对比 + 提前还款两方案，免费",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://3xh2yr5af3.app.weavefox.cn"
+    "url": "https://3xh2yr5af3.app.weavefox.cn",
+    "subcat": "计算换算"
   },
   {
     "id": "g42fhctuhw",
@@ -1077,7 +1079,8 @@
     "desc": "文本网址 → 本地生成 PNG，免费",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://g42fhctuhw.app.weavefox.cn"
+    "url": "https://g42fhctuhw.app.weavefox.cn",
+    "subcat": "效率生活"
   },
   {
     "id": "m9lqr6ue9a",
@@ -1085,7 +1088,8 @@
     "desc": "粘贴 JSON 即格式化、校验并统计结构，本地处理",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://m9lqr6ue9a.app.weavefox.cn"
+    "url": "https://m9lqr6ue9a.app.weavefox.cn",
+    "subcat": "编码转换"
   },
   {
     "id": "j25vhrxyyi",
@@ -1093,7 +1097,8 @@
     "desc": "CSV 与 JSON 双向转换，支持分隔符/表头/美化",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://j25vhrxyyi.app.weavefox.cn"
+    "url": "https://j25vhrxyyi.app.weavefox.cn",
+    "subcat": "编码转换"
   },
   {
     "id": "urjnzsdyk8",
@@ -1101,7 +1106,8 @@
     "desc": "批量去重、查找替换、排序与前后缀，本地处理",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://urjnzsdyk8.app.weavefox.cn"
+    "url": "https://urjnzsdyk8.app.weavefox.cn",
+    "subcat": "文本处理"
   },
   {
     "id": "keye5ddudk",
@@ -1109,7 +1115,8 @@
     "desc": "文本与 Base64 双向转换，支持 UTF-8/URL 安全",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://keye5ddudk.app.weavefox.cn"
+    "url": "https://keye5ddudk.app.weavefox.cn",
+    "subcat": "编码转换"
   },
   {
     "id": "frnp3wgsra",
@@ -1117,7 +1124,8 @@
     "desc": "URL 编码/解码 + 查询参数解析与地址分解",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://frnp3wgsra.app.weavefox.cn"
+    "url": "https://frnp3wgsra.app.weavefox.cn",
+    "subcat": "编码转换"
   },
   {
     "id": "urjhfedyk8",
@@ -1125,7 +1133,8 @@
     "desc": "时间戳与日期互转，秒/毫秒/多时区/多格式",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://urjhfedyk8.app.weavefox.cn"
+    "url": "https://urjhfedyk8.app.weavefox.cn",
+    "subcat": "时间日期"
   },
   {
     "id": "dvz878gy5d",
@@ -1133,7 +1142,8 @@
     "desc": "PNG/JPG/WebP 互转，质量/尺寸可调，本地处理",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://dvz878gy5d.app.weavefox.cn"
+    "url": "https://dvz878gy5d.app.weavefox.cn",
+    "subcat": "图片处理"
   },
   {
     "id": "wn3a9fj8gw",
@@ -1141,7 +1151,8 @@
     "desc": "逐行/逐词/逐字符对比，标注新增删除与相似度",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://wn3a9fj8gw.app.weavefox.cn"
+    "url": "https://wn3a9fj8gw.app.weavefox.cn",
+    "subcat": "文本处理"
   },
   {
     "id": "7bpyp2web7",
@@ -1149,7 +1160,8 @@
     "desc": "HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://7bpyp2web7.app.weavefox.cn"
+    "url": "https://7bpyp2web7.app.weavefox.cn",
+    "subcat": "设计绘图"
   },
   {
     "id": "x8slbmcakb",
@@ -1157,7 +1169,8 @@
     "desc": "CSV/TSV/竖线文本转标准 Markdown 表格，支持对齐",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://x8slbmcakb.app.weavefox.cn"
+    "url": "https://x8slbmcakb.app.weavefox.cn",
+    "subcat": "文本处理"
   },
   {
     "id": "fwbncxyqkh",
@@ -1165,7 +1178,8 @@
     "desc": "二/八/十/十六进制互转，位宽与位模式展示",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://fwbncxyqkh.app.weavefox.cn"
+    "url": "https://fwbncxyqkh.app.weavefox.cn",
+    "subcat": "编码转换"
   },
   {
     "id": "uidvbyxjku",
@@ -1173,7 +1187,8 @@
     "desc": "camel/snake/kebab/Pascal/常量/中文标题互转",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://uidvbyxjku.app.weavefox.cn"
+    "url": "https://uidvbyxjku.app.weavefox.cn",
+    "subcat": "文本处理"
   },
   {
     "id": "lymnmkjxel",
@@ -1181,7 +1196,8 @@
     "desc": "相差天数、日期加减与工作日计算，本地秒算",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://lymnmkjxel.app.weavefox.cn"
+    "url": "https://lymnmkjxel.app.weavefox.cn",
+    "subcat": "时间日期"
   },
   {
     "id": "urjgjtdyk8",
@@ -1189,7 +1205,8 @@
     "desc": "字符/词/行统计、阅读与演讲时长、词频 Top10",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://urjgjtdyk8.app.weavefox.cn"
+    "url": "https://urjgjtdyk8.app.weavefox.cn",
+    "subcat": "文本处理"
   },
   {
     "id": "wn363rj8gw",
@@ -1197,7 +1214,8 @@
     "desc": "本地裁剪头像/封面/商品图，比例尺寸自选可下载",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://wn363rj8gw.app.weavefox.cn"
+    "url": "https://wn363rj8gw.app.weavefox.cn",
+    "subcat": "图片处理"
   },
   {
     "id": "uidlsfxjku",
@@ -1205,7 +1223,8 @@
     "desc": "本地生成高强度密码，长度字符集可选，含强度评估",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://uidlsfxjku.app.weavefox.cn"
+    "url": "https://uidlsfxjku.app.weavefox.cn",
+    "subcat": "安全隐私"
   },
   {
     "id": "vftnmglsqf",
@@ -1213,7 +1232,8 @@
     "desc": "名单随机分组与单人抽签，加密随机公平不重复",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://vftnmglsqf.app.weavefox.cn"
+    "url": "https://vftnmglsqf.app.weavefox.cn",
+    "subcat": "效率生活"
   },
   {
     "id": "g42uqytuhw",
@@ -1221,7 +1241,8 @@
     "desc": "BMI 分级、基础代谢、每日消耗与目标热量计算",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://g42uqytuhw.app.weavefox.cn"
+    "url": "https://g42uqytuhw.app.weavefox.cn",
+    "subcat": "计算换算"
   },
   {
     "id": "keyw5ddudk",
@@ -1229,7 +1250,8 @@
     "desc": "长度/重量/面积/体积/温度/数据六类单位互转",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://keyw5ddudk.app.weavefox.cn"
+    "url": "https://keyw5ddudk.app.weavefox.cn",
+    "subcat": "计算换算"
   },
   {
     "id": "r3akzzzjyr",
@@ -1237,7 +1259,8 @@
     "desc": "本地计算 SHA-256/384/512，文本与文件校验对比",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://r3akzzzjyr.app.weavefox.cn"
+    "url": "https://r3akzzzjyr.app.weavefox.cn",
+    "subcat": "编码转换"
   },
   {
     "id": "frnustgsra",
@@ -1245,7 +1268,8 @@
     "desc": "专注/休息轮次计时，进度环与今日完成统计",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://frnustgsra.app.weavefox.cn"
+    "url": "https://frnustgsra.app.weavefox.cn",
+    "subcat": "时间日期"
   },
   {
     "id": "bnudn6nsmb",
@@ -1253,7 +1277,8 @@
     "desc": "四则与科学函数计算，角度模式、记忆键与历史",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://bnudn6nsmb.app.weavefox.cn"
+    "url": "https://bnudn6nsmb.app.weavefox.cn",
+    "subcat": "计算换算"
   },
   {
     "id": "ekg2knvhte",
@@ -1261,7 +1286,8 @@
     "desc": "本地实时渲染 Markdown，支持主题/导出 HTML",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://ekg2knvhte.app.weavefox.cn"
+    "url": "https://ekg2knvhte.app.weavefox.cn",
+    "subcat": "文本处理"
   },
   {
     "id": "3xhvxh5af3",
@@ -1269,7 +1295,8 @@
     "desc": "数字金额转中文大写，支持角分与银行汇款式",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://3xhvxh5af3.app.weavefox.cn"
+    "url": "https://3xhvxh5af3.app.weavefox.cn",
+    "subcat": "计算换算"
   },
   {
     "id": "mknibarxwr",
@@ -1277,7 +1304,8 @@
     "desc": "本地给图片加水印，文字/字号/透明度/位置可调",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://mknibarxwr.app.weavefox.cn"
+    "url": "https://mknibarxwr.app.weavefox.cn",
+    "subcat": "图片处理"
   },
   {
     "id": "tbqexcmk3t",
@@ -1285,7 +1313,8 @@
     "desc": "实时高亮比对，测 WPM/CPM 与正确率",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://tbqexcmk3t.app.weavefox.cn"
+    "url": "https://tbqexcmk3t.app.weavefox.cn",
+    "subcat": "效率生活"
   },
   {
     "id": "rdp8n24t4r",
@@ -1293,7 +1322,8 @@
     "desc": "本地保存的待办清单，优先级/截止日/导出 JSON",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://rdp8n24t4r.app.weavefox.cn"
+    "url": "https://rdp8n24t4r.app.weavefox.cn",
+    "subcat": "效率生活"
   },
   {
     "id": "sfw5ysy97s",
@@ -1301,7 +1331,8 @@
     "desc": "本地 AES-GCM 加解密文本，口令派生密钥",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://sfw5ysy97s.app.weavefox.cn"
+    "url": "https://sfw5ysy97s.app.weavefox.cn",
+    "subcat": "安全隐私"
   },
   {
     "id": "j25uddxyyi",
@@ -1309,7 +1340,8 @@
     "desc": "上传图片点击取色，HEX/RGB/HSL + 历史调色板",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://j25uddxyyi.app.weavefox.cn"
+    "url": "https://j25uddxyyi.app.weavefox.cn",
+    "subcat": "图片处理"
   },
   {
     "id": "bnuscunsmb",
@@ -1317,7 +1349,8 @@
     "desc": "本地记账，收支汇总、分类占比与导出 CSV",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://bnuscunsmb.app.weavefox.cn"
+    "url": "https://bnuscunsmb.app.weavefox.cn",
+    "subcat": "效率生活"
   },
   {
     "id": "j25db4xyyi",
@@ -1325,7 +1358,8 @@
     "desc": "本地涂鸦画板，颜色/粗细/橡皮，导出 PNG",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://j25db4xyyi.app.weavefox.cn"
+    "url": "https://j25db4xyyi.app.weavefox.cn",
+    "subcat": "设计绘图"
   },
   {
     "id": "bnu92knsmb",
@@ -1333,7 +1367,8 @@
     "desc": "图片一键切 3×3/2×2 等，逐张下载",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://bnu92knsmb.app.weavefox.cn"
+    "url": "https://bnu92knsmb.app.weavefox.cn",
+    "subcat": "图片处理"
   },
   {
     "id": "ekgnlbvhte",
@@ -1341,7 +1376,8 @@
     "desc": "生日查星座/生肖/年龄/下次生日倒计时",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://ekgnlbvhte.app.weavefox.cn"
+    "url": "https://ekgnlbvhte.app.weavefox.cn",
+    "subcat": "效率生活"
   },
   {
     "id": "glh2nmcqng",
@@ -1349,7 +1385,8 @@
     "desc": "本地滤镜/黑白/亮度对比度饱和度，导出图片",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://glh2nmcqng.app.weavefox.cn"
+    "url": "https://glh2nmcqng.app.weavefox.cn",
+    "subcat": "图片处理"
   },
   {
     "id": "keybxzdudk",
@@ -1357,7 +1394,8 @@
     "desc": "阿拉伯/罗马/中文数字双向转换，含对照表",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://keybxzdudk.app.weavefox.cn"
+    "url": "https://keybxzdudk.app.weavefox.cn",
+    "subcat": "计算换算"
   },
   {
     "id": "dvznbegy5d",
@@ -1365,7 +1403,8 @@
     "desc": "转盘/骰子/硬币随机决定，带历史记录",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://dvznbegy5d.app.weavefox.cn"
+    "url": "https://dvznbegy5d.app.weavefox.cn",
+    "subcat": "效率生活"
   },
   {
     "id": "fwbhjxyqkh",
@@ -1373,7 +1412,8 @@
     "desc": "图片转 DataURL/Base64/HTML/Markdown，可压缩",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://fwbhjxyqkh.app.weavefox.cn"
+    "url": "https://fwbhjxyqkh.app.weavefox.cn",
+    "subcat": "图片处理"
   },
   {
     "id": "x8s6kkcakb",
@@ -1381,7 +1421,8 @@
     "desc": "毫秒级秒表 + 计次分段 + 导出 CSV",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://x8s6kkcakb.app.weavefox.cn"
+    "url": "https://x8s6kkcakb.app.weavefox.cn",
+    "subcat": "时间日期"
   },
   {
     "id": "bcsb5nk6f9",
@@ -1389,7 +1430,8 @@
     "desc": "互补/邻近/三角等配色规则，一键复制色卡",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://bcsb5nk6f9.app.weavefox.cn"
+    "url": "https://bcsb5nk6f9.app.weavefox.cn",
+    "subcat": "设计绘图"
   },
   {
     "id": "qse3gvnhme",
@@ -1397,7 +1439,8 @@
     "desc": "两张图滑块/并排/叠影对比，导出对比图",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://qse3gvnhme.app.weavefox.cn"
+    "url": "https://qse3gvnhme.app.weavefox.cn",
+    "subcat": "图片处理"
   },
   {
     "id": "npxak92aq6",
@@ -1405,7 +1448,8 @@
     "desc": "按月/全年生成可打印月历，高亮今天与周数",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://npxak92aq6.app.weavefox.cn"
+    "url": "https://npxak92aq6.app.weavefox.cn",
+    "subcat": "时间日期"
   },
   {
     "id": "z56lnaaahj",
@@ -1413,7 +1457,8 @@
     "desc": "本地评估密码强度、熵值与改进建议",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://z56lnaaahj.app.weavefox.cn"
+    "url": "https://z56lnaaahj.app.weavefox.cn",
+    "subcat": "安全隐私"
   },
   {
     "id": "key2pcdudk",
@@ -1421,7 +1466,8 @@
     "desc": "输入主题与分支，生成可导出 SVG/PNG 的导图",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://key2pcdudk.app.weavefox.cn"
+    "url": "https://key2pcdudk.app.weavefox.cn",
+    "subcat": "设计绘图"
   },
   {
     "id": "r3avkczjyr",
@@ -1429,7 +1475,8 @@
     "desc": "多时区对照时钟，显示日期与时差",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://r3avkczjyr.app.weavefox.cn"
+    "url": "https://r3avkczjyr.app.weavefox.cn",
+    "subcat": "时间日期"
   },
   {
     "id": "frn8jngsra",
@@ -1437,6 +1484,7 @@
     "desc": "本地涂抹马赛克/模糊/黑块，保护隐私后下载",
     "price": 0,
     "cat": "实用工具",
-    "url": "https://frn8jngsra.app.weavefox.cn"
+    "url": "https://frn8jngsra.app.weavefox.cn",
+    "subcat": "图片处理"
   }
 ]
