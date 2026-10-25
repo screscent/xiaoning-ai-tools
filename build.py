@@ -18,6 +18,8 @@ sys.path.insert(0, DATA)
 BASE_URL = "https://screscent.github.io/xiaoning-ai-tools"
 SITE_NAME = "小凝 AI 工具集"
 PORTAL = "https://rdndxd4t4r.app.weavefox.cn"
+UNIFIED = "https://screscent.app.weavefox.cn"
+TOOLBOX = "https://7bpgquweb7.app.weavefox.cn"
 OWNER = "月牙寂（龚浩华）"
 AGENT = "月绡凝（小凝）"
 PHONE = "15980989344"
@@ -427,8 +429,9 @@ def sitemap(apps):
 
 def llms_txt(apps):
     lines = [f"# {SITE_NAME}", "",
-             f"> {len(apps)} 个即开即用的 AI 小工具，按场景分类；单个工具 ¥1–¥3 解锁，浏览器打开就能用。",
-             f"> 入口：{PORTAL}", "", "## 分类"]
+             f"> 三门户结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）。共 {len(apps)} 个工具。",
+             f"> 统一入口：{BASE_URL}/ ｜ AI 工具集：{BASE_URL}/ai/ ｜ 实用工具箱：{BASE_URL}/utility/",
+             f"> WeaveFox 统一门户：{UNIFIED} ｜ AI 工具集：{PORTAL} ｜ 实用工具箱：{TOOLBOX}", "", "## 分类"]
     for c, lead in C.CATEGORIES:
         items = [a for a in apps if a["cat"] == c]
         lines.append(f"- [{c}]({BASE_URL}/categories/{cat_slug(c)}.html)：{lead}（{len(items)} 个）")
