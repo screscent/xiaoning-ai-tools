@@ -1246,5 +1246,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://frnustgsra.app.weavefox.cn"
+  },
+  {
+    "id": "bnudn6nsmb",
+    "name": "科学计算器",
+    "desc": "四则与科学函数计算，角度模式、记忆键与历史",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://bnudn6nsmb.app.weavefox.cn"
+  },
+  {
+    "id": "ekg2knvhte",
+    "name": "Markdown 实时预览器",
+    "desc": "本地实时渲染 Markdown，支持主题/导出 HTML",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ekg2knvhte.app.weavefox.cn"
+  },
+  {
+    "id": "3xhvxh5af3",
+    "name": "人民币大写金额转换器",
+    "desc": "数字金额转中文大写，支持角分与银行汇款式",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://3xhvxh5af3.app.weavefox.cn"
   }
 ]
