@@ -31,6 +31,12 @@ def esc(s):
     return html.escape(str(s), quote=True)
 
 
+def price_label(a):
+    """免费工具（price=0）显示「免费」，其余按 ¥N。"""
+    p = a.get("price", 0)
+    return "免费" if p in (0, "0", None) else f"¥{p}"
+
+
 def u(label, medium="referral", campaign=""):
     q = f"utm_source=xiaoning-site&utm_medium={medium}"
     if campaign:
@@ -132,7 +138,7 @@ def app_jsonld(a, canon):
 CAT_SLUGS = {
     "职场办公": "office", "求职面试": "job", "学生教育": "study",
     "自媒体运营": "media", "电商客服": "ecommerce", "研发效率": "dev",
-    "生活家庭": "life", "亲子宠物": "family-pet",
+    "生活家庭": "life", "亲子宠物": "family-pet", "实用工具": "utility",
 }
 
 
@@ -177,10 +183,10 @@ def tool_page(a, apps):
   <ol class="steps">
     <li>点下面的按钮打开工具（首次使用需手机号注册，免费）。</li>
     <li>按提示填写上面的信息，点生成。</li>
-    <li>复制结果；需要继续用同一个工具时，在应用内解锁完整功能（¥{a['price']}）。</li>
+    <li>{'复制或下载结果即可；本工具完全免费，无需解锁。' if a.get('price',0)==0 else "复制结果；需要继续用同一个工具时，在应用内解锁完整功能（¥%s）。" % a['price']}</li>
   </ol>
 
-  <p class="cta"><a class="btn" href="{esc(u(a['url'], 'cta', a['slug']))}" rel="noopener">打开 {esc(a['name'])}（¥{a['price']}）</a></p>
+  <p class="cta"><a class="btn" href="{esc(u(a['url'], 'cta', a['slug']))}" rel="noopener">打开 {esc(a['name'])}（{price_label(a)}）</a></p>
 
   <h2>常见问题</h2>
   <div class="faq">{faq_html}</div>
@@ -191,7 +197,7 @@ def tool_page(a, apps):
 """
     return page_shell(
         f"{a['name']} - {a['cat']} AI 工具 | {SITE_NAME}",
-        f"{a['desc']}。{a['name']}：{output}，¥{a['price']} 解锁，浏览器即开即用。",
+        f"{a['desc']}。{a['name']}：{output}" + ("，完全免费，浏览器即开即用。" if a.get("price",0)==0 else f"，¥{a['price']} 解锁，浏览器即开即用。"),
         canon, body,
         extra_jsonld=app_jsonld(a, canon),
         depth=1,
@@ -203,7 +209,7 @@ def category_page(cat, apps):
     lead = C.CATEGORY_LEADS[cat]
     cards = "".join(
         f'<li><a href="../tools/{a["slug"]}.html"><strong>{esc(a["name"])}</strong>'
-        f'<span>{esc(a["desc"])}</span><em>¥{a["price"]}</em></a></li>'
+        f'<span>{esc(a["desc"])}</span><em>{price_label(a)}</em></a></li>'
         for a in items
     )
     canon = f"{BASE_URL}/categories/{cat_slug(cat)}.html"
@@ -247,7 +253,7 @@ def index_page(apps):
     for c in cats:
         rows = "".join(
             f'<li><a href="tools/{a["slug"]}.html">{esc(a["name"])}</a>'
-            f'<span>{esc(a["desc"])}</span><em>¥{a["price"]}</em></li>'
+            f'<span>{esc(a["desc"])}</span><em>{price_label(a)}</em></li>'
             for a in apps if a["cat"] == c
         )
         groups += f'<section class="group"><h2>{esc(c)}<small>{counts[c]} 个</small></h2><ul class="rows">{rows}</ul></section>'
@@ -294,7 +300,7 @@ def common_faq_block():
 def pricing_page(apps):
     from collections import Counter
     cnt = Counter(a["price"] for a in apps)
-    rows = "".join(f"<tr><td>¥{p}</td><td>{cnt[p]} 个</td></tr>" for p in sorted(cnt))
+    rows = "".join(f"<tr><td>{'免费' if p==0 else f'¥{p}'}</td><td>{cnt[p]} 个</td></tr>" for p in sorted(cnt))
     canon = f"{BASE_URL}/pricing.html"
     body = f"""
 <h1>价格与使用说明<small>{len(apps)} 个工具</small></h1>
@@ -343,7 +349,7 @@ def llms_txt(apps):
         lines.append(f"- [{c}]({BASE_URL}/categories/{cat_slug(c)}.html)：{lead}（{len(items)} 个）")
     lines += ["", "## 工具"]
     for a in apps:
-        lines.append(f"- [{a['name']}]({BASE_URL}/tools/{a['slug']}.html)：{a['desc']}（¥{a['price']}）")
+        lines.append(f"- [{a['name']}]({BASE_URL}/tools/{a['slug']}.html)：{a['desc']}（{price_label(a)}）")
     lines += ["", "## 说明", f"- 联系方式：{MAIL}｜{PHONE}", "- 工具输出为参考结果，不构成专业意见。"]
     return "\n".join(lines) + "\n"
 

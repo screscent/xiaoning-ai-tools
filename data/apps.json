@@ -1054,5 +1054,29 @@
   "price": 2,
   "cat": "自媒体运营",
   "url": "https://nyitt9pkdd.app.weavefox.cn"
+ },
+ {
+  "id": "ekgs3pvhte",
+  "name": "图片压缩改尺寸",
+  "desc": "本地批量压缩 → 指定 KB/像素，免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ekgs3pvhte.app.weavefox.cn"
+ },
+ {
+  "id": "3xh2yr5af3",
+  "name": "房贷提前还款计算器",
+  "desc": "等额本息对比 + 提前还款两方案，免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://3xh2yr5af3.app.weavefox.cn"
+ },
+ {
+  "id": "g42fhctuhw",
+  "name": "二维码生成器",
+  "desc": "文本网址 → 本地生成 PNG，免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://g42fhctuhw.app.weavefox.cn"
  }
 ]
