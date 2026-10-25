@@ -1318,5 +1318,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://bnuscunsmb.app.weavefox.cn"
+  },
+  {
+    "id": "j25db4xyyi",
+    "name": "简易画板",
+    "desc": "本地涂鸦画板，颜色/粗细/橡皮，导出 PNG",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://j25db4xyyi.app.weavefox.cn"
+  },
+  {
+    "id": "bnu92knsmb",
+    "name": "九宫格切图器",
+    "desc": "图片一键切 3×3/2×2 等，逐张下载",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://bnu92knsmb.app.weavefox.cn"
+  },
+  {
+    "id": "ekgnlbvhte",
+    "name": "星座与生肖查询器",
+    "desc": "生日查星座/生肖/年龄/下次生日倒计时",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ekgnlbvhte.app.weavefox.cn"
   }
 ]
