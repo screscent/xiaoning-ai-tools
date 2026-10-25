@@ -20,6 +20,13 @@ SITE_NAME = "小凝 AI 工具集"
 PORTAL = "https://rdndxd4t4r.app.weavefox.cn"
 UNIFIED = "https://screscent.app.weavefox.cn"
 TOOLBOX = "https://7bpgquweb7.app.weavefox.cn"
+
+# 实用工具「按用途」分组（新增工具时在此补映射；未命中归入「其他」）
+UTIL_GROUPS = [
+    ("图片与文件", {"image-compressor"}),
+    ("金融计算", {"mortgage-calculator"}),
+    ("编码与链接", {"qr-generator"}),
+]
 OWNER = "月牙寂（龚浩华）"
 AGENT = "月绡凝（小凝）"
 PHONE = "15980989344"
@@ -272,7 +279,7 @@ def unified_page(apps):
     jsonld = json.dumps({
         "@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME,
         "url": canon, "inLanguage": "zh-CN",
-        "description": f"统一入口：AI 工具集（{n_ai} 个）与实用工具箱（{n_util} 个免费纯前端工具）。",
+        "description": "统一入口：AI 工具集与免费实用工具箱。",
     }, ensure_ascii=False)
     body = f"""
 <section class="hero">
@@ -282,8 +289,8 @@ def unified_page(apps):
 
 <h2>选择工具集</h2>
 <ul class="cards">
-  <li><a href="ai/index.html"><strong>AI 工具集（{n_ai} 个）</strong><span>简历匹配、面试题、周报、会议纪要、PPT 大纲、小红书文案、SQL 优化等，生成类工具，单个 ¥1–¥3 解锁。</span><em>进入 →</em></a></li>
-  <li><a href="utility/index.html"><strong>实用工具箱（{n_util} 个 · 免费）</strong><span>图片压缩改尺寸、房贷提前还款计算器、二维码生成器——浏览器本地处理，数据不上传，完全免费。</span><em>进入 →</em></a></li>
+  <li><a href="ai/index.html"><strong>AI 工具集</strong><span>简历匹配、面试题、周报、会议纪要、PPT 大纲、小红书文案、SQL 优化等，生成类工具，单个 ¥1–¥3 解锁。</span><em>进入 →</em></a></li>
+  <li><a href="utility/index.html"><strong>实用工具箱 · 免费</strong><span>图片压缩改尺寸、房贷提前还款计算器、二维码生成器——浏览器本地处理，数据不上传，完全免费。</span><em>进入 →</em></a></li>
 </ul>
 
 <h2>常用入口</h2>
@@ -295,7 +302,7 @@ def unified_page(apps):
 """
     return page_shell(
         f"{SITE_NAME} - 统一入口（AI 工具集 + 实用工具箱）",
-        f"统一入口：{n_ai} 个 AI 小工具（¥1–¥3 解锁）与 {n_util} 个免费纯前端工具（图片压缩、房贷计算、二维码），浏览器即开即用。",
+        "统一入口：AI 工具集（单个 ¥1–¥3 解锁）与免费实用工具箱（图片压缩、房贷计算、二维码），浏览器即开即用。",
         canon, body,
         extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>',
         depth=0,
@@ -346,12 +353,23 @@ def utility_portal_page(apps):
         "url": canon, "inLanguage": "zh-CN",
         "description": "纯前端免费工具：图片压缩改尺寸、房贷提前还款计算器、二维码生成器；本地处理，数据不上传。",
     }, ensure_ascii=False)
-    cards = "".join(
-        f'<li><a href="{esc(u(a["url"], "utility", a["slug"]))}" rel="noopener">'
-        f'<strong>{esc(a["name"])}</strong><span>{esc(a["desc"])}</span><em>免费</em></a>'
-        f'<p class="steps"><a href="../tools/{a["slug"]}.html">查看说明页</a></p></li>'
-        for a in util
-    )
+    def card(a):
+        return (f'<li><a href="{esc(u(a["url"], "utility", a["slug"]))}" rel="noopener">'
+                f'<strong>{esc(a["name"])}</strong><span>{esc(a["desc"])}</span><em>免费</em></a>'
+                f'<p class="steps"><a href="../tools/{a["slug"]}.html">查看说明页</a></p></li>')
+    groups = ""
+    used = set()
+    for gname, slugs in UTIL_GROUPS:
+        items = [a for a in util if a["slug"] in slugs]
+        used |= {a["id"] for a in items}
+        if not items:
+            continue
+        groups += (f'<section class="group"><h2>{esc(gname)}<small>{len(items)} 个</small></h2>'
+                   f'<ul class="cards">{"".join(card(a) for a in items)}</ul></section>')
+    rest = [a for a in util if a["id"] not in used]
+    if rest:
+        groups += (f'<section class="group"><h2>其他<small>{len(rest)} 个</small></h2>'
+                   f'<ul class="cards">{"".join(card(a) for a in rest)}</ul></section>')
     body = f"""
 <p class="crumb"><a href="../index.html">← 返回统一门户</a></p>
 <section class="hero">
@@ -359,8 +377,8 @@ def utility_portal_page(apps):
   <p class="lede">这些工具全部在浏览器本地运行：图片不上传、文本不出设备，不需要注册与支付。手机和电脑都能用。</p>
 </section>
 
-<h2>全部工具</h2>
-<ul class="cards">{cards}</ul>
+<h2>按用途找工具</h2>
+{groups}
 
 <h2>怎么用</h2>
 <ol class="steps">
