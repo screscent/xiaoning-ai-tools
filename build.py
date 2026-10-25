@@ -57,7 +57,7 @@ def page_shell(title, desc, canonical, body, extra_jsonld="", depth=0):
     nav = f"""<header class="top">
   <div class="wrap">
     <a class="brand" href="{pre}index.html">{SITE_NAME}</a>
-    <nav><a href="{pre}index.html">全部工具</a><a href="{pre}pricing.html">价格与使用</a></nav>
+    <nav><a href="{pre}index.html">统一门户</a><a href="{pre}ai/index.html">AI 工具集</a><a href="{pre}utility/index.html">实用工具箱</a><a href="{pre}pricing.html">价格与使用</a></nav>
   </div>
 </header>"""
     return f"""<!DOCTYPE html>
@@ -241,54 +241,139 @@ def category_page(cat, apps):
     )
 
 
-def index_page(apps):
-    cats = [c for c, _ in C.CATEGORIES]
+def _cat_cards(apps, pre, cats):
     counts = {c: len([a for a in apps if a["cat"] == c]) for c in cats}
-    cat_cards = "".join(
-        f'<li><a href="categories/{cat_slug(c)}.html"><strong>{esc(c)}</strong>'
+    return "".join(
+        f'<li><a href="{pre}categories/{cat_slug(c)}.html"><strong>{esc(c)}</strong>'
         f'<span>{esc(C.CATEGORY_LEADS[c][:38])}…</span><em>{counts[c]} 个</em></a></li>'
         for c in cats
     )
-    groups = ""
+
+
+def _groups(apps, pre, cats):
+    out = ""
     for c in cats:
         rows = "".join(
-            f'<li><a href="tools/{a["slug"]}.html">{esc(a["name"])}</a>'
+            f'<li><a href="{pre}tools/{a["slug"]}.html">{esc(a["name"])}</a>'
             f'<span>{esc(a["desc"])}</span><em>{price_label(a)}</em></li>'
             for a in apps if a["cat"] == c
         )
-        groups += f'<section class="group"><h2>{esc(c)}<small>{counts[c]} 个</small></h2><ul class="rows">{rows}</ul></section>'
+        n = len([a for a in apps if a["cat"] == c])
+        out += f'<section class="group"><h2>{esc(c)}<small>{n} 个</small></h2><ul class="rows">{rows}</ul></section>'
+    return out
+
+
+def unified_page(apps):
+    n_util = len([a for a in apps if a["cat"] == "实用工具"])
+    n_ai = len(apps) - n_util
     canon = BASE_URL + "/"
     jsonld = json.dumps({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": SITE_NAME,
-        "url": canon,
-        "description": f"{len(apps)} 个即开即用的 AI 小工具，按场景分类，浏览器打开就能用。",
-        "inLanguage": "zh-CN",
+        "@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME,
+        "url": canon, "inLanguage": "zh-CN",
+        "description": f"统一入口：AI 工具集（{n_ai} 个）与实用工具箱（{n_util} 个免费纯前端工具）。",
     }, ensure_ascii=False)
     body = f"""
 <section class="hero">
-  <h1>{SITE_NAME}</h1>
-  <p class="lede">{len(apps)} 个即开即用的 AI 小工具，覆盖职场、求职、教育、自媒体、电商、研发与生活八类场景。手机号注册即用，单个工具 ¥1–¥3 解锁。</p>
-  <p class="cta"><a class="btn" href="{esc(u(PORTAL, 'portal', 'home'))}" rel="noopener">打开工具集门户</a><a class="btn ghost" href="pricing.html">价格与使用说明</a></p>
+  <h1>{SITE_NAME} · 统一入口</h1>
+  <p class="lede">两类工具，一个入口：<strong>AI 工具集</strong>负责把材料变成可直接使用的结果；<strong>实用工具箱</strong>用纯前端完成转换与计算，完全免费、数据不上传。</p>
+</section>
+
+<h2>选择工具集</h2>
+<ul class="cards">
+  <li><a href="ai/index.html"><strong>AI 工具集（{n_ai} 个）</strong><span>简历匹配、面试题、周报、会议纪要、PPT 大纲、小红书文案、SQL 优化等，生成类工具，单个 ¥1–¥3 解锁。</span><em>进入 →</em></a></li>
+  <li><a href="utility/index.html"><strong>实用工具箱（{n_util} 个 · 免费）</strong><span>图片压缩改尺寸、房贷提前还款计算器、二维码生成器——浏览器本地处理，数据不上传，完全免费。</span><em>进入 →</em></a></li>
+</ul>
+
+<h2>常用入口</h2>
+<p class="cta"><a class="btn" href="ai/index.html">AI 工具集</a><a class="btn" href="utility/index.html">实用工具箱</a><a class="btn ghost" href="pricing.html">价格与使用说明</a></p>
+
+<h2>工作方式</h2>
+<p>AI 工具在 WeaveFox 应用内运行，首次使用手机号注册（免费），按需解锁单个功能；实用工具完全在浏览器本地运行，无需支付。两套工具都由同一套内容源维护，页面只做介绍与入口。</p>
+{common_faq_block()}
+"""
+    return page_shell(
+        f"{SITE_NAME} - 统一入口（AI 工具集 + 实用工具箱）",
+        f"统一入口：{n_ai} 个 AI 小工具（¥1–¥3 解锁）与 {n_util} 个免费纯前端工具（图片压缩、房贷计算、二维码），浏览器即开即用。",
+        canon, body,
+        extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>',
+        depth=0,
+    )
+
+
+def ai_portal_page(apps):
+    ai_apps = [a for a in apps if a["cat"] != "实用工具"]
+    cats = [c for c, _ in C.CATEGORIES if c != "实用工具"]
+    canon = f"{BASE_URL}/ai/"
+    jsonld = json.dumps({
+        "@context": "https://schema.org", "@type": "CollectionPage", "name": f"AI 工具集（{len(ai_apps)} 个）",
+        "url": canon, "inLanguage": "zh-CN",
+        "description": f"{len(ai_apps)} 个生成类 AI 小工具，单个 ¥1–¥3 解锁。",
+    }, ensure_ascii=False)
+    body = f"""
+<p class="crumb"><a href="../index.html">← 返回统一门户</a></p>
+<section class="hero">
+  <h1>AI 工具集<small>{len(ai_apps)} 个</small></h1>
+  <p class="lede">{len(ai_apps)} 个即开即用的 AI 小工具，覆盖职场、求职、教育、自媒体、电商、研发与生活七类场景。手机号注册即用，单个工具 ¥1–¥3 解锁。</p>
+  <p class="cta"><a class="btn" href="{esc(u(PORTAL, 'portal', 'ai-home'))}" rel="noopener">打开 AI 工具集门户</a><a class="btn ghost" href="../utility/index.html">看看免费工具箱</a></p>
 </section>
 
 <h2>按场景找工具</h2>
-<ul class="cards">{cat_cards}</ul>
+<ul class="cards">{_cat_cards(ai_apps, "../", cats)}</ul>
 
-<h2>全部工具</h2>
-{groups}
+<h2>全部 AI 工具</h2>
+{_groups(ai_apps, "../", cats)}
 
 <h2>为什么做成这个样子</h2>
 <p>这些工具都只做一件事：把你手上的一段材料，变成可以直接使用的结果。没有复杂配置，不需要学习提示词，填完就出结果。工具运行在 WeaveFox 上，注册免费，只为实际使用的那一个功能付费。</p>
 {common_faq_block()}
 """
     return page_shell(
-        f"{SITE_NAME} - {len(apps)} 个即开即用的 AI 小工具",
-        f"{len(apps)} 个 AI 小工具合集：简历匹配、面试题、周报、会议纪要、PPT 大纲、小红书文案、SQL 优化等，浏览器即开即用，¥1–¥3 解锁。",
+        f"AI 工具集（{len(ai_apps)} 个）| {SITE_NAME}",
+        f"{len(ai_apps)} 个 AI 小工具合集：简历匹配、面试题、周报、会议纪要、PPT 大纲、小红书文案、SQL 优化等，浏览器即开即用，¥1–¥3 解锁。",
         canon, body,
         extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>',
-        depth=0,
+        depth=1,
+    )
+
+
+def utility_portal_page(apps):
+    util = [a for a in apps if a["cat"] == "实用工具"]
+    canon = f"{BASE_URL}/utility/"
+    jsonld = json.dumps({
+        "@context": "https://schema.org", "@type": "CollectionPage", "name": f"实用工具箱（{len(util)} 个 · 免费）",
+        "url": canon, "inLanguage": "zh-CN",
+        "description": "纯前端免费工具：图片压缩改尺寸、房贷提前还款计算器、二维码生成器；本地处理，数据不上传。",
+    }, ensure_ascii=False)
+    cards = "".join(
+        f'<li><a href="{esc(u(a["url"], "utility", a["slug"]))}" rel="noopener">'
+        f'<strong>{esc(a["name"])}</strong><span>{esc(a["desc"])}</span><em>免费</em></a>'
+        f'<p class="steps"><a href="../tools/{a["slug"]}.html">查看说明页</a></p></li>'
+        for a in util
+    )
+    body = f"""
+<p class="crumb"><a href="../index.html">← 返回统一门户</a></p>
+<section class="hero">
+  <h1>实用工具箱<small>{len(util)} 个 · 免费</small></h1>
+  <p class="lede">这些工具全部在浏览器本地运行：图片不上传、文本不出设备，不需要注册与支付。手机和电脑都能用。</p>
+</section>
+
+<h2>全部工具</h2>
+<ul class="cards">{cards}</ul>
+
+<h2>怎么用</h2>
+<ol class="steps">
+  <li>点工具卡片直接打开 WeaveFox 工具页（国内访问速度稳定）。</li>
+  <li>按提示选择参数或上传文件，处理在本地完成。</li>
+  <li>下载结果即可；完全免费，无解锁与登录。</li>
+</ol>
+{common_faq_block()}
+"""
+    return page_shell(
+        f"实用工具箱（{len(util)} 个免费纯前端工具）| {SITE_NAME}",
+        "免费纯前端工具：图片压缩改尺寸、房贷提前还款计算器、二维码生成器；浏览器本地处理，数据不上传，无需注册与支付。",
+        canon, body,
+        extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>',
+        depth=1,
     )
 
 
@@ -329,7 +414,7 @@ def pricing_page(apps):
 
 
 def sitemap(apps):
-    urls = [BASE_URL + "/", f"{BASE_URL}/pricing.html"]
+    urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html"]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
     urls += [f"{BASE_URL}/tools/{a['slug']}.html" for a in apps]
     items = "".join(
@@ -374,7 +459,7 @@ python3 submit_indexnow.py  # 构建后提交 sitemap 全量 URL（需 key 文�
 
 ## 目录
 
-- `index.html` 门户 · `categories/` 分类页 · `tools/` 工具页 · `pricing.html` 价格说明
+- `index.html` 统一门户 · `ai/` AI 工具集 · `utility/` 实用工具箱 · `categories/` 分类页 · `tools/` 工具页 · `pricing.html` 价格说明
 - `sitemap.xml` / `robots.txt` / `llms.txt`
 - `assets/style.css`
 - 更新流程见项目 `docs/14-公开站更新SOP.md`
@@ -451,6 +536,8 @@ def main():
     if missing or extra:
         raise SystemExit(f"内容与目录不一致 missing={missing} extra={extra}")
 
+    os.makedirs(os.path.join(HERE, "ai"), exist_ok=True)
+    os.makedirs(os.path.join(HERE, "utility"), exist_ok=True)
     os.makedirs(os.path.join(HERE, "tools"), exist_ok=True)
     os.makedirs(os.path.join(HERE, "categories"), exist_ok=True)
     os.makedirs(os.path.join(HERE, "assets"), exist_ok=True)
@@ -460,7 +547,9 @@ def main():
         with open(p, "w", encoding="utf-8") as f:
             f.write(text)
 
-    w("index.html", index_page(apps))
+    w("index.html", unified_page(apps))
+    w("ai/index.html", ai_portal_page(apps))
+    w("utility/index.html", utility_portal_page(apps))
     w("pricing.html", pricing_page(apps))
     for c, _ in C.CATEGORIES:
         w(f"categories/{cat_slug(c)}.html", category_page(c, apps))

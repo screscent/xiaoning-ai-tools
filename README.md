@@ -17,7 +17,7 @@ python3 submit_indexnow.py  # 构建后提交 sitemap 全量 URL（需 key 文�
 
 ## 目录
 
-- `index.html` 门户 · `categories/` 分类页 · `tools/` 工具页 · `pricing.html` 价格说明
+- `index.html` 统一门户 · `ai/` AI 工具集 · `utility/` 实用工具箱 · `categories/` 分类页 · `tools/` 工具页 · `pricing.html` 价格说明
 - `sitemap.xml` / `robots.txt` / `llms.txt`
 - `assets/style.css`
 - 更新流程见项目 `docs/14-公开站更新SOP.md`
