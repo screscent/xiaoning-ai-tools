@@ -1084,7 +1084,7 @@
     "name": "JSON 格式化校验器",
     "desc": "粘贴 JSON 即格式化、校验并统计结构，本地处理",
     "price": 0,
-    "cat": "研发效率",
+    "cat": "实用工具",
     "url": "https://m9lqr6ue9a.app.weavefox.cn"
   },
   {
@@ -1092,7 +1092,7 @@
     "name": "CSV ↔ JSON 转换器",
     "desc": "CSV 与 JSON 双向转换，支持分隔符/表头/美化",
     "price": 0,
-    "cat": "研发效率",
+    "cat": "实用工具",
     "url": "https://j25vhrxyyi.app.weavefox.cn"
   },
   {
@@ -1100,7 +1100,7 @@
     "name": "文本批量处理",
     "desc": "批量去重、查找替换、排序与前后缀，本地处理",
     "price": 0,
-    "cat": "研发效率",
+    "cat": "实用工具",
     "url": "https://urjnzsdyk8.app.weavefox.cn"
   }
 ]

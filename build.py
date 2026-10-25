@@ -320,7 +320,7 @@ def ai_portal_page(apps):
         "description": f"{len(ai_apps)} 个生成类 AI 小工具，单个 ¥1–¥3 解锁。",
     }, ensure_ascii=False)
     body = f"""
-<p class="crumb"><a href="../index.html">← 返回统一门户</a></p>
+<p class="crumb"><a href="{BASE_URL}/">← 返回统一门户</a></p>
 <section class="hero">
   <h1>AI 工具集<small>{len(ai_apps)} 个</small></h1>
   <p class="lede">{len(ai_apps)} 个即开即用的 AI 小工具，覆盖职场、求职、教育、自媒体、电商、研发与生活七类场景。手机号注册即用，单个工具 ¥1–¥3 解锁。</p>
@@ -372,7 +372,7 @@ def utility_portal_page(apps):
         groups += (f'<section class="group"><h2>其他<small>{len(rest)} 个</small></h2>'
                    f'<ul class="cards">{"".join(card(a) for a in rest)}</ul></section>')
     body = f"""
-<p class="crumb"><a href="../index.html">← 返回统一门户</a></p>
+<p class="crumb"><a href="{BASE_URL}/">← 返回统一门户</a></p>
 <section class="hero">
   <h1>实用工具箱<small>{len(util)} 个 · 免费</small></h1>
   <p class="lede">这些工具全部在浏览器本地运行：图片不上传、文本不出设备，不需要注册与支付。手机和电脑都能用。</p>
@@ -583,6 +583,20 @@ def main():
     w("assets/style.css", CSS)
     w("README.md", readme(apps))
     w(".nojekyll", "")
+    # 防回归：GitHub 站内不得出现 WeaveFox 统一门户链接（返回统一门户必须回 GitHub 自己的首页）
+    bad = []
+    for root, _, files in os.walk(HERE):
+        if "/.git" in root:
+            continue
+        for f in files:
+            if f.endswith(".html") and "screscent.app.weavefox.cn" in open(os.path.join(root, f), encoding="utf-8").read():
+                bad.append(os.path.relpath(os.path.join(root, f), HERE))
+    if bad:
+        raise SystemExit(f"GitHub 站内出现 WeaveFox 统一门户链接: {bad[:5]}")
+    for f in ("ai/index.html", "utility/index.html"):
+        html = open(os.path.join(HERE, f), encoding="utf-8").read()
+        if f'<a href="{BASE_URL}/">← 返回统一门户</a>' not in html:
+            raise SystemExit(f"{f} 的返回统一门户未指向 GitHub 首页")
     print(f"generated {len(apps)} tools + {len(C.CATEGORIES)} categories + index/pricing/sitemap")
 
 

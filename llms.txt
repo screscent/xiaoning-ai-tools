@@ -10,10 +10,10 @@
 - [学生教育](https://screscent.github.io/xiaoning-ai-tools/categories/study.html)：作文批改、错题讲解、学习计划与阅读出题，帮学生把「怎么学」拆成可执行的步骤。（19 个）
 - [自媒体运营](https://screscent.github.io/xiaoning-ai-tools/categories/media.html)：小红书笔记、公众号推文、短视频脚本与直播话术，从选题到成稿一次到位。（16 个）
 - [电商客服](https://screscent.github.io/xiaoning-ai-tools/categories/ecommerce.html)：商品文案、差评回复、退款纠纷与催付话术，把客服高频场景做成可复用的话术模板。（16 个）
-- [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（19 个）
+- [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（3 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（6 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
