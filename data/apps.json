@@ -1390,5 +1390,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://bcsb5nk6f9.app.weavefox.cn"
+  },
+  {
+    "id": "qse3gvnhme",
+    "name": "图片前后对比器",
+    "desc": "两张图滑块/并排/叠影对比，导出对比图",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qse3gvnhme.app.weavefox.cn"
+  },
+  {
+    "id": "npxak92aq6",
+    "name": "月历生成器",
+    "desc": "按月/全年生成可打印月历，高亮今天与周数",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://npxak92aq6.app.weavefox.cn"
+  },
+  {
+    "id": "z56lnaaahj",
+    "name": "密码强度检测器",
+    "desc": "本地评估密码强度、熵值与改进建议",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://z56lnaaahj.app.weavefox.cn"
   }
 ]
