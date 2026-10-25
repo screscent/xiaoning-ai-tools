@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 三门户结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）。共 159 个工具。
+> 三门户结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）。共 162 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（27 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（30 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -175,6 +175,9 @@
 - [科学计算器](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：四则与科学函数计算，角度模式、记忆键与历史（免费）
 - [Markdown 实时预览器](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：本地实时渲染 Markdown，支持主题/导出 HTML（免费）
 - [人民币大写金额转换器](https://screscent.github.io/xiaoning-ai-tools/tools/rmb-uppercase.html)：数字金额转中文大写，支持角分与银行汇款式（免费）
+- [图片加水印](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：本地给图片加水印，文字/字号/透明度/位置可调（免费）
+- [打字速度测试](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：实时高亮比对，测 WPM/CPM 与正确率（免费）
+- [本地待办便签](https://screscent.github.io/xiaoning-ai-tools/tools/local-todo.html)：本地保存的待办清单，优先级/截止日/导出 JSON（免费）
 
 ## 说明
 - 联系方式：29185807@qq.com｜15980989344

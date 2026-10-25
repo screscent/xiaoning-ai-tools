@@ -1270,5 +1270,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://3xhvxh5af3.app.weavefox.cn"
+  },
+  {
+    "id": "mknibarxwr",
+    "name": "图片加水印",
+    "desc": "本地给图片加水印，文字/字号/透明度/位置可调",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://mknibarxwr.app.weavefox.cn"
+  },
+  {
+    "id": "tbqexcmk3t",
+    "name": "打字速度测试",
+    "desc": "实时高亮比对，测 WPM/CPM 与正确率",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://tbqexcmk3t.app.weavefox.cn"
+  },
+  {
+    "id": "rdp8n24t4r",
+    "name": "本地待办便签",
+    "desc": "本地保存的待办清单，优先级/截止日/导出 JSON",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://rdp8n24t4r.app.weavefox.cn"
   }
 ]
