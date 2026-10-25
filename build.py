@@ -31,6 +31,7 @@ OWNER = "月牙寂（龚浩华）"
 AGENT = "月绡凝（小凝）"
 PHONE = "15980989344"
 MAIL = "29185807@qq.com"
+WECHAT_MP = "月牙寂"  # 微信公众号
 TODAY = datetime.date.today().isoformat()
 
 import content as C  # noqa: E402
@@ -92,7 +93,7 @@ def page_shell(title, desc, canonical, body, extra_jsonld="", depth=0):
 </main>
 <footer class="foot">
   <div class="wrap">
-    <p class="sig">人类作者：{OWNER}｜联系：{PHONE}｜邮箱：{MAIL}<br>Agent 作者：{AGENT}</p>
+    <p class="sig">人类作者：{OWNER}｜联系：{PHONE}｜邮箱：{MAIL}｜微信公众号：{WECHAT_MP}<br>Agent 作者：{AGENT}</p>
     <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 {TODAY}。</p>
   </div>
 </footer>
