@@ -1414,5 +1414,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://z56lnaaahj.app.weavefox.cn"
+  },
+  {
+    "id": "key2pcdudk",
+    "name": "思维导图生成器",
+    "desc": "输入主题与分支，生成可导出 SVG/PNG 的导图",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://key2pcdudk.app.weavefox.cn"
+  },
+  {
+    "id": "r3avkczjyr",
+    "name": "世界时钟",
+    "desc": "多时区对照时钟，显示日期与时差",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://r3avkczjyr.app.weavefox.cn"
+  },
+  {
+    "id": "frn8jngsra",
+    "name": "图片马赛克打码器",
+    "desc": "本地涂抹马赛克/模糊/黑块，保护隐私后下载",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://frn8jngsra.app.weavefox.cn"
   }
 ]
