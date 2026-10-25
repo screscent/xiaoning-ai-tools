@@ -1294,5 +1294,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://rdp8n24t4r.app.weavefox.cn"
+  },
+  {
+    "id": "sfw5ysy97s",
+    "name": "文本加密解密",
+    "desc": "本地 AES-GCM 加解密文本，口令派生密钥",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://sfw5ysy97s.app.weavefox.cn"
+  },
+  {
+    "id": "j25uddxyyi",
+    "name": "图片取色器",
+    "desc": "上传图片点击取色，HEX/RGB/HSL + 历史调色板",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://j25uddxyyi.app.weavefox.cn"
+  },
+  {
+    "id": "bnuscunsmb",
+    "name": "简易记账本",
+    "desc": "本地记账，收支汇总、分类占比与导出 CSV",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://bnuscunsmb.app.weavefox.cn"
   }
 ]
