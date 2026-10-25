@@ -276,6 +276,48 @@ def _groups(apps, pre, cats):
     return out
 
 
+# 实用工具箱 8 类导语（与 §S2.7.0 分类表一一对应）
+UTIL_SUBCAT_LEADS = {
+    "图片处理": "压缩、转换、裁剪、水印、打码与取色，本地处理不上传。",
+    "文本处理": "批量处理、Diff 对比、统计、Markdown 表格与预览、命名风格。",
+    "编码转换": "JSON、CSV、Base64、URL、进制与哈希，格式互转一次到位。",
+    "时间日期": "时间戳、日期计算、计时器、秒表、月历与世界时钟。",
+    "计算换算": "房贷、BMI、单位换算、科学计算、大写金额与数字互转。",
+    "安全隐私": "密码生成、文本加解密与强度检测，全部在浏览器本地完成。",
+    "设计绘图": "颜色与对比度、配色方案、画板与思维导图。",
+    "效率生活": "二维码、随机抽签、待办、打字测试、记账与生活查询。",
+}
+
+
+def _uni_card(a, pre, medium):
+    """AI / 实用两门户共用卡片模板：详情页（内链）+ 打开工具（外链 CTA）。"""
+    return (f'<li><a href="{pre}tools/{a["slug"]}.html"><strong>{esc(a["name"])}</strong>'
+            f'<span>{esc(a["desc"])}</span><em>{price_label(a)}</em></a>'
+            f'<p class="more"><a href="{esc(u(a["url"], medium, a["slug"]))}" rel="noopener">打开工具 →</a></p></li>')
+
+
+def _uni_groups(apps, cats, pre, medium, subcat=False):
+    """两门户共用分组模板：同一 section + cards 结构；subcat=True 时补锚点。"""
+    out = ""
+    for c in cats:
+        items = [a for a in apps if (a.get("subcat") if subcat else a["cat"]) == c]
+        if not items:
+            continue
+        gid = f' id="g-{esc(c)}"' if subcat else ""
+        out += (f'<section class="group"{gid}><h2>{esc(c)}<small>{len(items)} 个</small></h2>'
+                f'<ul class="cards">{"".join(_uni_card(a, pre, medium) for a in items)}</ul></section>')
+    return out
+
+
+def _util_cat_cards(util):
+    counts = {c: len([a for a in util if a.get("subcat") == c]) for c in UTIL_SUBCAT_ORDER}
+    return "".join(
+        f'<li><a href="#g-{esc(c)}"><strong>{esc(c)}</strong>'
+        f'<span>{esc(UTIL_SUBCAT_LEADS[c])}</span><em>{counts[c]} 个</em></a></li>'
+        for c in UTIL_SUBCAT_ORDER if counts[c]
+    )
+
+
 def unified_page(apps):
     n_util = len([a for a in apps if a["cat"] == "实用工具"])
     n_ai = len(apps) - n_util
@@ -334,7 +376,14 @@ def ai_portal_page(apps):
 <ul class="cards">{_cat_cards(ai_apps, "../", cats)}</ul>
 
 <h2>全部 AI 工具</h2>
-{_groups(ai_apps, "../", cats)}
+{_uni_groups(ai_apps, cats, "../", "ai")}
+
+<h2>怎么用</h2>
+<ol class="steps">
+  <li>点卡片查看工具说明，或直接点「打开工具」进入 WeaveFox。</li>
+  <li>首次使用用手机号注册（免费），填写材料后点生成。</li>
+  <li>先看免费效果；需要完整结果时在应用内解锁单个功能（¥1–¥3）。</li>
+</ol>
 
 <h2>为什么做成这个样子</h2>
 <p>这些工具都只做一件事：把你手上的一段材料，变成可以直接使用的结果。没有复杂配置，不需要学习提示词，填完就出结果。工具运行在 WeaveFox 上，注册免费，只为实际使用的那一个功能付费。</p>
@@ -357,35 +406,28 @@ def utility_portal_page(apps):
         "url": canon, "inLanguage": "zh-CN",
         "description": "纯前端免费工具：图片压缩改尺寸、房贷提前还款计算器、二维码生成器；本地处理，数据不上传。",
     }, ensure_ascii=False)
-    def card(a):
-        return (f'<li><a href="{esc(u(a["url"], "utility", a["slug"]))}" rel="noopener">'
-                f'<strong>{esc(a["name"])}</strong><span>{esc(a["desc"])}</span><em>免费</em></a>'
-                f'<p class="steps"><a href="../tools/{a["slug"]}.html">查看说明页</a></p></li>')
-    groups = ""
     missing = [a["name"] for a in util if a.get("subcat") not in UTIL_SUBCAT_ORDER]
     if missing:
         print(f"FAIL: 实用工具缺少合法 subcat（须属 {UTIL_SUBCAT_ORDER}）：{missing}")
         sys.exit(1)
-    for gname in UTIL_SUBCAT_ORDER:
-        items = [a for a in util if a.get("subcat") == gname]
-        if not items:
-            continue
-        groups += (f'<section class="group"><h2>{esc(gname)}<small>{len(items)} 个</small></h2>'
-                   f'<ul class="cards">{"".join(card(a) for a in items)}</ul></section>')
     body = f"""
 <p class="crumb"><a href="{BASE_URL}/">← 返回统一门户</a></p>
 <section class="hero">
   <h1>实用工具箱<small>{len(util)} 个 · 免费</small></h1>
   <p class="lede">这些工具全部在浏览器本地运行：图片不上传、文本不出设备，不需要注册与支付。手机和电脑都能用。</p>
+  <p class="cta"><a class="btn" href="{esc(u(TOOLBOX, 'portal', 'utility-home'))}" rel="noopener">打开实用工具箱门户</a><a class="btn ghost" href="../ai/index.html">看看 AI 工具集</a></p>
 </section>
 
 <h2>按用途找工具</h2>
-{groups}
+<ul class="cards">{_util_cat_cards(util)}</ul>
+
+<h2>全部实用工具</h2>
+{_uni_groups(util, UTIL_SUBCAT_ORDER, "../", "utility", subcat=True)}
 
 <h2>怎么用</h2>
 <ol class="steps">
-  <li>点工具卡片直接打开 WeaveFox 工具页（国内访问速度稳定）。</li>
-  <li>按提示选择参数或上传文件，处理在本地完成。</li>
+  <li>点卡片查看工具说明，或直接点「打开工具」进入 WeaveFox 工具页。</li>
+  <li>按提示选择参数或上传文件，处理全部在浏览器本地完成。</li>
   <li>下载结果即可；完全免费，无解锁与登录。</li>
 </ol>
 {common_faq_block()}
