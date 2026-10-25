@@ -1198,5 +1198,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://wn363rj8gw.app.weavefox.cn"
+  },
+  {
+    "id": "uidlsfxjku",
+    "name": "密码生成器",
+    "desc": "本地生成高强度密码，长度字符集可选，含强度评估",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://uidlsfxjku.app.weavefox.cn"
+  },
+  {
+    "id": "vftnmglsqf",
+    "name": "随机分组抽签器",
+    "desc": "名单随机分组与单人抽签，加密随机公平不重复",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://vftnmglsqf.app.weavefox.cn"
+  },
+  {
+    "id": "g42uqytuhw",
+    "name": "BMI 与热量计算器",
+    "desc": "BMI 分级、基础代谢、每日消耗与目标热量计算",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://g42uqytuhw.app.weavefox.cn"
   }
 ]
