@@ -1366,5 +1366,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://dvznbegy5d.app.weavefox.cn"
+  },
+  {
+    "id": "fwbhjxyqkh",
+    "name": "图片转 DataURL",
+    "desc": "图片转 DataURL/Base64/HTML/Markdown，可压缩",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://fwbhjxyqkh.app.weavefox.cn"
+  },
+  {
+    "id": "x8s6kkcakb",
+    "name": "秒表与分段计时",
+    "desc": "毫秒级秒表 + 计次分段 + 导出 CSV",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://x8s6kkcakb.app.weavefox.cn"
+  },
+  {
+    "id": "bcsb5nk6f9",
+    "name": "配色方案生成器",
+    "desc": "互补/邻近/三角等配色规则，一键复制色卡",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://bcsb5nk6f9.app.weavefox.cn"
   }
 ]
