@@ -1126,5 +1126,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://urjhfedyk8.app.weavefox.cn"
+  },
+  {
+    "id": "dvz878gy5d",
+    "name": "图片格式转换器",
+    "desc": "PNG/JPG/WebP 互转，质量/尺寸可调，本地处理",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://dvz878gy5d.app.weavefox.cn"
+  },
+  {
+    "id": "wn3a9fj8gw",
+    "name": "文本 Diff 对比器",
+    "desc": "逐行/逐词/逐字符对比，标注新增删除与相似度",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://wn3a9fj8gw.app.weavefox.cn"
+  },
+  {
+    "id": "7bpyp2web7",
+    "name": "颜色转换与对比度检测器",
+    "desc": "HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://7bpyp2web7.app.weavefox.cn"
   }
 ]
