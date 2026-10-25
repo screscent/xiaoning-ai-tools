@@ -1,1082 +1,1106 @@
 [
- {
-  "id": "keqhxldudk",
-  "name": "GEO 体检小工具",
-  "desc": "品牌 AI 可见性自查评分与优化建议",
-  "price": 1,
-  "cat": "研发效率",
-  "url": "https://keqhxldudk.app.weavefox.cn"
- },
- {
-  "id": "bcphhgk6f9",
-  "name": "SEO 体检小工具",
-  "desc": "网址 6 项基础检查与修复建议",
-  "price": 1,
-  "cat": "研发效率",
-  "url": "https://bcphhgk6f9.app.weavefox.cn"
- },
- {
-  "id": "m9efxgue9a",
-  "name": "测试用例生成器",
-  "desc": "一句话生成测试用例，含优先级与导出",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://m9efxgue9a.app.weavefox.cn"
- },
- {
-  "id": "3xvqjf5af3",
-  "name": "产品需求文档PRD生成器",
-  "desc": "结构化 PRD：背景、画像、优先级、验收",
-  "price": 3,
-  "cat": "研发效率",
-  "url": "https://3xvqjf5af3.app.weavefox.cn"
- },
- {
-  "id": "4gntg6btnf",
-  "name": "简历塑",
-  "desc": "简历 × 岗位 → 匹配度评分与修改建议",
-  "price": 2,
-  "cat": "求职面试",
-  "url": "https://4gntg6btnf.app.weavefox.cn"
- },
- {
-  "id": "ata9acpmpa",
-  "name": "面试题预测",
-  "desc": "按 JD 生成 10 道高频题与回答框架",
-  "price": 3,
-  "cat": "求职面试",
-  "url": "https://ata9acpmpa.app.weavefox.cn"
- },
- {
-  "id": "sakxhy9xrs",
-  "name": "求职信生成器",
-  "desc": "岗位与经历 → 3 版求职信",
-  "price": 1,
-  "cat": "求职面试",
-  "url": "https://sakxhy9xrs.app.weavefox.cn"
- },
- {
-  "id": "m9ewusue9a",
-  "name": "轻编好文案",
-  "desc": "商品信息 → 标题、卖点、详情与问答",
-  "price": 1,
-  "cat": "电商客服",
-  "url": "https://m9ewusue9a.app.weavefox.cn"
- },
- {
-  "id": "mkqfxqrxwr",
-  "name": "客服话术生成器",
-  "desc": "场景与情绪 → 3 套可用话术",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://mkqfxqrxwr.app.weavefox.cn"
- },
- {
-  "id": "vffcejlsqf",
-  "name": "小红书笔记生成器",
-  "desc": "主题 → 5 标题 + 正文 + 标签 + 封面文案",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://vffcejlsqf.app.weavefox.cn"
- },
- {
-  "id": "cjhrbfe3pc",
-  "name": "公众号推文生成器",
-  "desc": "主题与读者 → 标题、摘要、正文与配图建议",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://cjhrbfe3pc.app.weavefox.cn"
- },
- {
-  "id": "ewsct8ixkx",
-  "name": "短视频脚本生成器",
-  "desc": "主题与时长 → 钩子 + 分镜 + 标签",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://ewsct8ixkx.app.weavefox.cn"
- },
- {
-  "id": "cjhzq7e3pc",
-  "name": "短视频选题生成器",
-  "desc": "领域与平台 → 20 个可拍选题",
-  "price": 1,
-  "cat": "自媒体运营",
-  "url": "https://cjhzq7e3pc.app.weavefox.cn"
- },
- {
-  "id": "jatvexkp5e",
-  "name": "朋友圈文案生成器",
-  "desc": "场景 → 10 条朋友圈文案 + 配图建议",
-  "price": 1,
-  "cat": "自媒体运营",
-  "url": "https://jatvexkp5e.app.weavefox.cn"
- },
- {
-  "id": "r3fstczjyr",
-  "name": "PPT大纲生成器",
-  "desc": "主题与页数 → 每页要点 + 演讲备注",
-  "price": 3,
-  "cat": "职场办公",
-  "url": "https://r3fstczjyr.app.weavefox.cn"
- },
- {
-  "id": "keqbgpdudk",
-  "name": "会议纪要整理器",
-  "desc": "会议文字 → 摘要、决议、待办与风险",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://keqbgpdudk.app.weavefox.cn"
- },
- {
-  "id": "cjzg8se3pc",
-  "name": "年终总结述职生成器",
-  "desc": "岗位与年度工作 → 总结 + 述职口播稿",
-  "price": 3,
-  "cat": "职场办公",
-  "url": "https://cjzg8se3pc.app.weavefox.cn"
- },
- {
-  "id": "keqksvdudk",
-  "name": "演讲稿生成器",
-  "desc": "场合与主题 → 完整讲稿 + 提词卡",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://keqksvdudk.app.weavefox.cn"
- },
- {
-  "id": "dzj9zsslwd",
-  "name": "招聘JD生成器",
-  "desc": "岗位信息 → 职责、要求与面试题",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://dzj9zsslwd.app.weavefox.cn"
- },
- {
-  "id": "glzhcecqng",
-  "name": "周报生成器",
-  "desc": "本周事项 → 结构化周报四段",
-  "price": 1,
-  "cat": "职场办公",
-  "url": "https://glzhcecqng.app.weavefox.cn"
- },
- {
-  "id": "bnt4btnsmb",
-  "name": "报销清单整理器",
-  "desc": "粘贴费用记录 → 规范报销清单与提醒",
-  "price": 1,
-  "cat": "职场办公",
-  "url": "https://bnt4btnsmb.app.weavefox.cn"
- },
- {
-  "id": "g4n6jdtuhw",
-  "name": "商务邮件生成器",
-  "desc": "对象与目的 → 3 版商务邮件",
-  "price": 1,
-  "cat": "职场办公",
-  "url": "https://g4n6jdtuhw.app.weavefox.cn"
- },
- {
-  "id": "kes9usdudk",
-  "name": "职场文书生成器",
-  "desc": "辞职/请假/调岗/证明 → 3 版规范文书",
-  "price": 1,
-  "cat": "职场办公",
-  "url": "https://kes9usdudk.app.weavefox.cn"
- },
- {
-  "id": "bcqhbxk6f9",
-  "name": "英语作文批改器",
-  "desc": "作文 → 总分、四维评分、逐句改错与示范",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://bcqhbxk6f9.app.weavefox.cn"
- },
- {
-  "id": "jamztqkp5e",
-  "name": "学习计划生成器",
-  "desc": "目标与剩余天数 → 倒排周计划",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://jamztqkp5e.app.weavefox.cn"
- },
- {
-  "id": "bcqu6hk6f9",
-  "name": "读书笔记生成器",
-  "desc": "书名与要点 → 结构化笔记 + 书评",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://bcqu6hk6f9.app.weavefox.cn"
- },
- {
-  "id": "dvyrdugy5d",
-  "name": "教师评语生成器",
-  "desc": "学生特点 → 5 条期末评语",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://dvyrdugy5d.app.weavefox.cn"
- },
- {
-  "id": "sf7cpby97s",
-  "name": "节日祝福生成器",
-  "desc": "节日与对象 → 10 条可直接发送的祝福",
-  "price": 1,
-  "cat": "生活家庭",
-  "url": "https://sf7cpby97s.app.weavefox.cn"
- },
- {
-  "id": "npurza2aq6",
-  "name": "取名生成器",
-  "desc": "姓氏与期望 → 20 个带寓意与音律的名字",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://npurza2aq6.app.weavefox.cn"
- },
- {
-  "id": "jamrzfkp5e",
-  "name": "旅行行程规划器",
-  "desc": "城市与天数 → 逐日行程与预算分配",
-  "price": 3,
-  "cat": "生活家庭",
-  "url": "https://jamrzfkp5e.app.weavefox.cn"
- },
- {
-  "id": "at6bpspmpa",
-  "name": "菜谱生成器",
-  "desc": "现有食材 → 3 道菜与分步做法",
-  "price": 1,
-  "cat": "生活家庭",
-  "url": "https://at6bpspmpa.app.weavefox.cn"
- },
- {
-  "id": "k6rauxftrk",
-  "name": "健身计划生成器",
-  "desc": "目标与器械 → 4 周训练 + 饮食建议",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://k6rauxftrk.app.weavefox.cn"
- },
- {
-  "id": "ekf9edvhte",
-  "name": "一周买菜清单",
-  "desc": "7 天三餐菜单 + 分区采购清单",
-  "price": 1,
-  "cat": "生活家庭",
-  "url": "https://ekf9edvhte.app.weavefox.cn"
- },
- {
-  "id": "g4nwintuhw",
-  "name": "家庭月度预算表",
-  "desc": "收入与支出 → 预算表 + 超支预警",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://g4nwintuhw.app.weavefox.cn"
- },
- {
-  "id": "g4nvaxtuhw",
-  "name": "婚礼流程策划器",
-  "desc": "婚期与预算 → 流程、分工与物品清单",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://g4nvaxtuhw.app.weavefox.cn"
- },
- {
-  "id": "rdnuhb4t4r",
-  "name": "装修预算清单",
-  "desc": "面积与档次 → 分项预算与超支预警",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://rdnuhb4t4r.app.weavefox.cn"
- },
- {
-  "id": "at6pdhpmpa",
-  "name": "送礼推荐器",
-  "desc": "对象与预算 → 10 个礼物建议",
-  "price": 1,
-  "cat": "生活家庭",
-  "url": "https://at6pdhpmpa.app.weavefox.cn"
- },
- {
-  "id": "x8dznvcakb",
-  "name": "宝宝辅食食谱",
-  "desc": "月龄与忌口 → 7 天辅食与做法",
-  "price": 1,
-  "cat": "亲子宠物",
-  "url": "https://x8dznvcakb.app.weavefox.cn"
- },
- {
-  "id": "mkqvhgrxwr",
-  "name": "儿童睡前故事",
-  "desc": "年龄与主题 → 3 篇完整睡前故事",
-  "price": 1,
-  "cat": "亲子宠物",
-  "url": "https://mkqvhgrxwr.app.weavefox.cn"
- },
- {
-  "id": "kes9mgdudk",
-  "name": "宠物喂养计划",
-  "desc": "猫狗信息 → 每日喂食 + 每周护理",
-  "price": 1,
-  "cat": "亲子宠物",
-  "url": "https://kes9mgdudk.app.weavefox.cn"
- },
- {
-  "id": "mkqsmfrxwr",
-  "name": "搬家清单生成器",
-  "desc": "填入住信息 → 分场景搬迁清单与时间倒排",
-  "price": 1,
-  "cat": "生活家庭",
-  "url": "https://mkqsmfrxwr.app.weavefox.cn"
- },
- {
-  "id": "xq5vvhbndh",
-  "name": "月度复盘生成器",
-  "desc": "本月工作 → 结构化复盘与可视化总结",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://xq5vvhbndh.app.weavefox.cn"
- },
- {
-  "id": "frbu59gsra",
-  "name": "旅行攻略生成器",
-  "desc": "目的地与偏好 → 每日行程与美食指南",
-  "price": 3,
-  "cat": "生活家庭",
-  "url": "https://frbu59gsra.app.weavefox.cn"
- },
- {
-  "id": "g4nm82tuhw",
-  "name": "二手转卖文案生成器",
-  "desc": "物品信息 → 3 版转卖文案（标题/正文/议价/标签）",
-  "price": 1,
-  "cat": "电商客服",
-  "url": "https://g4nm82tuhw.app.weavefox.cn"
- },
- {
-  "id": "bcqrbrk6f9",
-  "name": "自由职业报价单生成器",
-  "desc": "服务与工时 → 规范报价单（分项/付款节点/不含项）",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://bcqrbrk6f9.app.weavefox.cn"
- },
- {
-  "id": "sf7axmy97s",
-  "name": "生日纪念日策划器",
-  "desc": "对象与预算 → 当日流程、礼物布置与预算分配",
-  "price": 1,
-  "cat": "生活家庭",
-  "url": "https://sf7axmy97s.app.weavefox.cn"
- },
- {
-  "id": "mkqcf3rxwr",
-  "name": "谈薪话术生成器",
-  "desc": "岗位与期望薪资 → 3 套话术与让步底线",
-  "price": 3,
-  "cat": "求职面试",
-  "url": "https://mkqcf3rxwr.app.weavefox.cn"
- },
- {
-  "id": "xq5hgdbndh",
-  "name": "差评回复生成器",
-  "desc": "差评原文 → 公开回复、安抚与申诉要点",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://xq5hgdbndh.app.weavefox.cn"
- },
- {
-  "id": "rdneyn4t4r",
-  "name": "宠物行为纠正方案",
-  "desc": "行为问题 → 分周训练与环境改造",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://rdneyn4t4r.app.weavefox.cn"
- },
- {
-  "id": "jamnflkp5e",
-  "name": "错题讲解生成器",
-  "desc": "错题原文 → 错因诊断、分步讲解与同类变式题",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://jamnflkp5e.app.weavefox.cn"
- },
- {
-  "id": "fw4q6myqkh",
-  "name": "SQL 优化建议生成器",
-  "desc": "慢 SQL → 问题定位、改写语句与索引建议",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://fw4q6myqkh.app.weavefox.cn"
- },
- {
-  "id": "qh8azestfq",
-  "name": "亲子沟通话术生成器",
-  "desc": "孩子年龄与场景 → 3 套可照读话术与习惯计划",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://qh8azestfq.app.weavefox.cn"
- },
- {
-  "id": "r3ykcgzjyr",
-  "name": "offer 对比决策助手",
-  "desc": "多个 offer → 五维打分、风险提示与决策清单",
-  "price": 2,
-  "cat": "求职面试",
-  "url": "https://r3ykcgzjyr.app.weavefox.cn"
- },
- {
-  "id": "frbuebgsra",
-  "name": "退款纠纷处理话术",
-  "desc": "平台与纠纷类型 → 首轮回复、让步阶梯与规则要点",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://frbuebgsra.app.weavefox.cn"
- },
- {
-  "id": "mkqe7frxwr",
-  "name": "直播带货话术生成器",
-  "desc": "平台品类阶段 → 开场、憋单逼单与违规词替换",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://mkqe7frxwr.app.weavefox.cn"
- },
- {
-  "id": "ztjtinhvkt",
-  "name": "正则表达式生成器",
-  "desc": "场景与样例 → 正则、测试表与可用代码",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://ztjtinhvkt.app.weavefox.cn"
- },
- {
-  "id": "qscr5qnhme",
-  "name": "英语单词记忆计划生成器",
-  "desc": "考试与天数 → 每日任务、复习节奏与词表",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://qscr5qnhme.app.weavefox.cn"
- },
- {
-  "id": "npus3h2aq6",
-  "name": "儿童兴趣班选择助手",
-  "desc": "孩子特点与预算 → 兴趣班推荐与避坑清单",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://npus3h2aq6.app.weavefox.cn"
- },
- {
-  "id": "wnpm4rj8gw",
-  "name": "商品定价建议生成器",
-  "desc": "成本与竞品价 → 三档定价、毛利测算与调价节奏",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://wnpm4rj8gw.app.weavefox.cn"
- },
- {
-  "id": "z5acqhaahj",
-  "name": "面试复盘分析器",
-  "desc": "面试问答 → 逐题评分、优化回答与备战清单",
-  "price": 2,
-  "cat": "求职面试",
-  "url": "https://z5acqhaahj.app.weavefox.cn"
- },
- {
-  "id": "5chjyut6g5",
-  "name": "作文素材生成器",
-  "desc": "主题学段 → 开头结尾、事例素材与结构提纲",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://5chjyut6g5.app.weavefox.cn"
- },
- {
-  "id": "url4vxdyk8",
-  "name": "社群运营SOP生成器",
-  "desc": "社群类型与周期 → 每日节奏、话术与活动",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://url4vxdyk8.app.weavefox.cn"
- },
- {
-  "id": "wnpmibj8gw",
-  "name": "API 接口文档生成器",
-  "desc": "接口用途与技术栈 → 接口定义、示例与错误码",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://wnpmibj8gw.app.weavefox.cn"
- },
- {
-  "id": "cjh2kee3pc",
-  "name": "阅读理解出题器",
-  "desc": "文章与学段 → 5 道题、答案与逐题解析",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://cjh2kee3pc.app.weavefox.cn"
- },
- {
-  "id": "sf7x93y97s",
-  "name": "自我介绍生成器",
-  "desc": "场景与时长 → 3 版自我介绍、追问预案与口播提示",
-  "price": 2,
-  "cat": "求职面试",
-  "url": "https://sf7x93y97s.app.weavefox.cn"
- },
- {
-  "id": "j239apxyyi",
-  "name": "宝宝作息表生成器",
-  "desc": "月龄与困扰 → 作息表、哄睡流程与调整节奏",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://j239apxyyi.app.weavefox.cn"
- },
- {
-  "id": "ew9hluixkx",
-  "name": "订单催付话术生成器",
-  "desc": "平台与阶段 → 3 版催付话术、节奏与合规红线",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://ew9hluixkx.app.weavefox.cn"
- },
- {
-  "id": "glzpvpcqng",
-  "name": "公众号选题生成器",
-  "desc": "领域与读者 → 20 个选题、钩子与排期",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://glzpvpcqng.app.weavefox.cn"
- },
- {
-  "id": "kesq6fdudk",
-  "name": "文言文实词卡片生成器",
-  "desc": "学段与词量 → 实词卡片、辨析与自测",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://kesq6fdudk.app.weavefox.cn"
- },
- {
-  "id": "dvynvcgy5d",
-  "name": "旧物断舍离清单生成器",
-  "desc": "空间与偏好 → 分类清单、执行表与防反弹",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://dvynvcgy5d.app.weavefox.cn"
- },
- {
-  "id": "2qx5klqqxb",
-  "name": "技术方案评审清单生成器",
-  "desc": "项目类型与关切 → 评审清单、风险与上线检查",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://2qx5klqqxb.app.weavefox.cn"
- },
- {
-  "id": "qh8c6dstfq",
-  "name": "亲子游戏活动生成器",
-  "desc": "年龄场地时长 → 5 个游戏、流程与安全提示",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://qh8c6dstfq.app.weavefox.cn"
- },
- {
-  "id": "c7sm46egmi",
-  "name": "电商大促备货清单",
-  "desc": "活动品类单量 → 备货测算、物料与倒排表",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://c7sm46egmi.app.weavefox.cn"
- },
- {
-  "id": "npu54v2aq6",
-  "name": "英文面试问答生成器",
-  "desc": "岗位与轮次 → 高频英文问题、回答框架与救场句",
-  "price": 2,
-  "cat": "求职面试",
-  "url": "https://npu54v2aq6.app.weavefox.cn"
- },
- {
-  "id": "z5afxvaahj",
-  "name": "语文作文批改器",
-  "desc": "学段文体与原文 → 四维评分、逐段点评与升格",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://z5afxvaahj.app.weavefox.cn"
- },
- {
-  "id": "5chwqut6g5",
-  "name": "日志排查助手",
-  "desc": "日志片段与现象 → 线索、成因排序与验证步骤",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://5chwqut6g5.app.weavefox.cn"
- },
- {
-  "id": "ew9sndixkx",
-  "name": "客服排班表生成器",
-  "desc": "人手与高峰 → 一周排班、SLA 与交接清单",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://ew9sndixkx.app.weavefox.cn"
- },
- {
-  "id": "m9veptue9a",
-  "name": "儿童零花钱计划生成器",
-  "desc": "年龄与目标 → 规则、家务奖励与记账模板",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://m9veptue9a.app.weavefox.cn"
- },
- {
-  "id": "uiumjhxjku",
-  "name": "小红书封面文案生成器",
-  "desc": "类型人群 → 10 条封面大字、配色与 A/B",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://uiumjhxjku.app.weavefox.cn"
- },
- {
-  "id": "ygw7xuz2jf",
-  "name": "无领导小组讨论话术",
-  "desc": "方向与角色 → 开场破冰、观点输出与总结模板",
-  "price": 2,
-  "cat": "求职面试",
-  "url": "https://ygw7xuz2jf.app.weavefox.cn"
- },
- {
-  "id": "ztjwbxhvkt",
-  "name": "技术债清单生成器",
-  "desc": "项目与痛点 → 债务清单、优先级与偿还计划",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://ztjwbxhvkt.app.weavefox.cn"
- },
- {
-  "id": "qscxinnhme",
-  "name": "阳台种植计划生成器",
-  "desc": "朝向季节 → 6 种植物、配土与养护卡",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://qscxinnhme.app.weavefox.cn"
- },
- {
-  "id": "frbb5agsra",
-  "name": "包裹异常件处理清单",
-  "desc": "异常类型 → 处理流程、沟通话术与赔付划分",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://frbb5agsra.app.weavefox.cn"
- },
- {
-  "id": "mkqqx7rxwr",
-  "name": "小学生作业陪伴计划",
-  "desc": "年级与弱项 → 作业节奏、检查清单与话术",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://mkqqx7rxwr.app.weavefox.cn"
- },
- {
-  "id": "9pffrfr8kd",
-  "name": "公众号排版检查清单",
-  "desc": "文章类型 → 排版模板、配图节奏与自检",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://9pffrfr8kd.app.weavefox.cn"
- },
- {
-  "id": "ygwjhez2jf",
-  "name": "求职跟进邮件生成器",
-  "desc": "场景与公司类型 → 3 版邮件、中英对照与时机",
-  "price": 1,
-  "cat": "求职面试",
-  "url": "https://ygwjhez2jf.app.weavefox.cn"
- },
- {
-  "id": "ztjxmwhvkt",
-  "name": "物理公式速查卡生成器",
-  "desc": "学段章节 → 公式卡、推导与易错点",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://ztjxmwhvkt.app.weavefox.cn"
- },
- {
-  "id": "qsceyhnhme",
-  "name": "家用电器选购指南",
-  "desc": "电器预算户型 → 参数、配置与避坑",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://qsceyhnhme.app.weavefox.cn"
- },
- {
-  "id": "sakyi79xrs",
-  "name": "Git 提交信息生成器",
-  "desc": "改动描述 → 3 版提交信息 + 拆分建议 + PR 草稿",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://sakyi79xrs.app.weavefox.cn"
- },
- {
-  "id": "9pfa8pr8kd",
-  "name": "跨部门沟通话术生成器",
-  "desc": "对象与诉求 → 3 版开场 + IM/邮件正文 + 应对",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://9pfa8pr8kd.app.weavefox.cn"
- },
- {
-  "id": "hmxnvafxk9",
-  "name": "幼儿园入园准备清单",
-  "desc": "年龄园所 → 物品清单 + 作息表 + 沟通清单",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://hmxnvafxk9.app.weavefox.cn"
- },
- {
-  "id": "pziwayqyzx",
-  "name": "商品问答预埋清单",
-  "desc": "品类价格带 → 20 条预埋问答 + 客服模板",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://pziwayqyzx.app.weavefox.cn"
- },
- {
-  "id": "ygwbvdz2jf",
-  "name": "转行可行性评估器",
-  "desc": "现岗与目标 → 能力映射 + 四维评分 + 3 个月路线",
-  "price": 2,
-  "cat": "求职面试",
-  "url": "https://ygwbvdz2jf.app.weavefox.cn"
- },
- {
-  "id": "ztjnhyhvkt",
-  "name": "播客节目策划器",
-  "desc": "节目类型时长 → 单集大纲 + 提问 + 上线包",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://ztjnhyhvkt.app.weavefox.cn"
- },
- {
-  "id": "m9vf5hue9a",
-  "name": "绩效自评撰写器",
-  "desc": "岗位周期 → 自评结构 + 量化写法 + 面谈问答",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://m9vf5hue9a.app.weavefox.cn"
- },
- {
-  "id": "uiurb6xjku",
-  "name": "化学方程式配平练习生成器",
-  "desc": "学段题型 → 20 道题 + 步骤 + 口诀",
-  "price": 1,
-  "cat": "学生教育",
-  "url": "https://uiurb6xjku.app.weavefox.cn"
- },
- {
-  "id": "jamkukkp5e",
-  "name": "家庭药箱清单生成器",
-  "desc": "成员季节 → 分类清单 + 分区 + 就医信号",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://jamkukkp5e.app.weavefox.cn"
- },
- {
-  "id": "nyewxrpkdd",
-  "name": "客服质检评分表生成器",
-  "desc": "渠道品类 → 10 项质检指标 + 抽检规则 + 报告",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://nyewxrpkdd.app.weavefox.cn"
- },
- {
-  "id": "puwusa3a4t",
-  "name": "代码评审清单生成器",
-  "desc": "语言改动 → 15 项检查点 + 评论模板 + 门禁",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://puwusa3a4t.app.weavefox.cn"
- },
- {
-  "id": "sak6vv9xrs",
-  "name": "小红书评论区运营话术",
-  "desc": "笔记类型目标 → 10 条引导 + 差评应对 + 私信承接",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://sak6vv9xrs.app.weavefox.cn"
- },
- {
-  "id": "r3yheqzjyr",
-  "name": "校招网申填写助手",
-  "desc": "行业岗位 → 网申要点 + 经历改写 + 自查清单",
-  "price": 2,
-  "cat": "求职面试",
-  "url": "https://r3yheqzjyr.app.weavefox.cn"
- },
- {
-  "id": "puwdj43a4t",
-  "name": "英语听力精听计划生成器",
-  "desc": "考试水平 → 21 天计划 + 五步法 + 专项",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://puwdj43a4t.app.weavefox.cn"
- },
- {
-  "id": "mkqywwrxwr",
-  "name": "儿童疫苗接种记录整理器",
-  "desc": "月龄地区 → 接种时间轴 + 补种对照",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://mkqywwrxwr.app.weavefox.cn"
- },
- {
-  "id": "qh824gstfq",
-  "name": "商品标题优化器",
-  "desc": "品类平台 → 10 条标题 + 关键词分层 + 违禁词检查",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://qh824gstfq.app.weavefox.cn"
- },
- {
-  "id": "c7s52qegmi",
-  "name": "账号定位诊断器",
-  "desc": "平台赛道 → 定位诊断 + 人设 + 30 天计划",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://c7s52qegmi.app.weavefox.cn"
- },
- {
-  "id": "4gpgk9btnf",
-  "name": "接口联调排错清单",
-  "desc": "协议现象 → 排查顺序 + 原因对照 + 验证",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://4gpgk9btnf.app.weavefox.cn"
- },
- {
-  "id": "uiu5naxjku",
-  "name": "实习经历挖掘助手",
-  "desc": "专业目标 → 经历清单 + STAR 改写 + 投递话术",
-  "price": 2,
-  "cat": "求职面试",
-  "url": "https://uiu5naxjku.app.weavefox.cn"
- },
- {
-  "id": "vfgcsmlsqf",
-  "name": "实验报告撰写助手",
-  "desc": "学科类型 → 报告结构 + 数据处理 + 讨论",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://vfgcsmlsqf.app.weavefox.cn"
- },
- {
-  "id": "fw4jakyqkh",
-  "name": "家庭收纳分区方案生成器",
-  "desc": "房型难点 → 分区方案 + 清单 + 预算",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://fw4jakyqkh.app.weavefox.cn"
- },
- {
-  "id": "cjhgj9e3pc",
-  "name": "店铺售后数据周报表",
-  "desc": "平台品类 → 周报模板 + 归因 + 改进动作",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://cjhgj9e3pc.app.weavefox.cn"
- },
- {
-  "id": "mkqtkrrxwr",
-  "name": "短视频开头钩子生成器",
-  "desc": "赛道受众 → 10 条钩子 + 句式 + 避坑",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://mkqtkrrxwr.app.weavefox.cn"
- },
- {
-  "id": "tb2gbumk3t",
-  "name": "会议发言提纲生成器",
-  "desc": "会议角色 → 发言结构 + 开场 + 应答",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://tb2gbumk3t.app.weavefox.cn"
- },
- {
-  "id": "r3yrpgzjyr",
-  "name": "数据库表设计评审清单",
-  "desc": "场景规模 → 评审清单 + 索引建议 + 回滚表",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://r3yrpgzjyr.app.weavefox.cn"
- },
- {
-  "id": "frbfmbgsra",
-  "name": "考研复试准备计划",
-  "desc": "专业院校 → 复试流程 + 问题清单 + 应答",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://frbfmbgsra.app.weavefox.cn"
- },
- {
-  "id": "sakszh9xrs",
-  "name": "儿童家务分工表生成器",
-  "desc": "年龄结构 → 家务清单 + 分工表 + 激励",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://sakszh9xrs.app.weavefox.cn"
- },
- {
-  "id": "g42mpvtuhw",
-  "name": "商品评价管理清单",
-  "desc": "品类平台 → 评价获取 + 差评处理 + 周检查表",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://g42mpvtuhw.app.weavefox.cn"
- },
- {
-  "id": "7bpjk4web7",
-  "name": "代码注释规范检查器",
-  "desc": "语言团队 → 注释规范 + 检查清单 + 改写示例",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://7bpjk4web7.app.weavefox.cn"
- },
- {
-  "id": "rdpbtj4t4r",
-  "name": "家庭保险配置清单",
-  "desc": "家庭结构收入 → 险种优先级 + 保额 + 避坑",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://rdpbtj4t4r.app.weavefox.cn"
- },
- {
-  "id": "mknbacrxwr",
-  "name": "简历投递跟踪表",
-  "desc": "阶段行业 → 跟踪表 + 跟进话术 + 止损规则",
-  "price": 2,
-  "cat": "求职面试",
-  "url": "https://mknbacrxwr.app.weavefox.cn"
- },
- {
-  "id": "xqt2mmbndh",
-  "name": "历史时间轴记忆卡生成器",
-  "desc": "学段范围 → 时间轴 + 因果链 + 口诀",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://xqt2mmbndh.app.weavefox.cn"
- },
- {
-  "id": "rdpk694t4r",
-  "name": "汇报图表选型助手",
-  "desc": "数据类型 → 图表选型 + 结构 + 讲解话术",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://rdpk694t4r.app.weavefox.cn"
- },
- {
-  "id": "pz8zhnqyzx",
-  "name": "直播场控清单",
-  "desc": "平台品类 → 场控时间轴 + 口令表 + 复盘",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://pz8zhnqyzx.app.weavefox.cn"
- },
- {
-  "id": "ygjgstz2jf",
-  "name": "英语语法错题诊断器",
-  "desc": "板块错因 → 规则讲解 + 练习 + 训练",
-  "price": 2,
-  "cat": "学生教育",
-  "url": "https://ygjgstz2jf.app.weavefox.cn"
- },
- {
-  "id": "frnrzvgsra",
-  "name": "儿童视力保护计划",
-  "desc": "年龄场景 → 用眼规则 + 户外安排 + 提醒",
-  "price": 2,
-  "cat": "亲子宠物",
-  "url": "https://frnrzvgsra.app.weavefox.cn"
- },
- {
-  "id": "c79wcbegmi",
-  "name": "远程协作规则清单",
-  "desc": "团队分布规模 → 协作规则 + 会议 + 文档",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://c79wcbegmi.app.weavefox.cn"
- },
- {
-  "id": "4gqctebtnf",
-  "name": "发布上线检查清单",
-  "desc": "应用类型 → 上线检查 + 回滚 + 验证",
-  "price": 2,
-  "cat": "研发效率",
-  "url": "https://4gqctebtnf.app.weavefox.cn"
- },
- {
-  "id": "qseyv5nhme",
-  "name": "家庭年度体检计划",
-  "desc": "成员年龄 → 项目清单 + 频次 + 记录",
-  "price": 2,
-  "cat": "生活家庭",
-  "url": "https://qseyv5nhme.app.weavefox.cn"
- },
- {
-  "id": "rdpcej4t4r",
-  "name": "小学数学口算题卡生成器",
-  "desc": "年级题型 → 题卡 + 答案 + 计时表",
-  "price": 1,
-  "cat": "学生教育",
-  "url": "https://rdpcej4t4r.app.weavefox.cn"
- },
- {
-  "id": "5cmiedt6g5",
-  "name": "OKR 对齐检查器",
-  "desc": "团队周期 → 写法判定 + 对齐 + 复盘",
-  "price": 2,
-  "cat": "职场办公",
-  "url": "https://5cmiedt6g5.app.weavefox.cn"
- },
- {
-  "id": "j25pukxyyi",
-  "name": "商品上架审核清单",
-  "desc": "平台品类 → 资质图文 + 违禁词 + 观察项",
-  "price": 2,
-  "cat": "电商客服",
-  "url": "https://j25pukxyyi.app.weavefox.cn"
- },
- {
-  "id": "bnussdnsmb",
-  "name": "古诗词默写检测器",
-  "desc": "学段篇目 → 题卡 + 答案 + 复习安排",
-  "price": 1,
-  "cat": "学生教育",
-  "url": "https://bnussdnsmb.app.weavefox.cn"
- },
- {
-  "id": "nyitt9pkdd",
-  "name": "内容选题日历生成器",
-  "desc": "平台赛道 → 30天选题 + 标题模板",
-  "price": 2,
-  "cat": "自媒体运营",
-  "url": "https://nyitt9pkdd.app.weavefox.cn"
- },
- {
-  "id": "ekgs3pvhte",
-  "name": "图片压缩改尺寸",
-  "desc": "本地批量压缩 → 指定 KB/像素，免费",
-  "price": 0,
-  "cat": "实用工具",
-  "url": "https://ekgs3pvhte.app.weavefox.cn"
- },
- {
-  "id": "3xh2yr5af3",
-  "name": "房贷提前还款计算器",
-  "desc": "等额本息对比 + 提前还款两方案，免费",
-  "price": 0,
-  "cat": "实用工具",
-  "url": "https://3xh2yr5af3.app.weavefox.cn"
- },
- {
-  "id": "g42fhctuhw",
-  "name": "二维码生成器",
-  "desc": "文本网址 → 本地生成 PNG，免费",
-  "price": 0,
-  "cat": "实用工具",
-  "url": "https://g42fhctuhw.app.weavefox.cn"
- }
+  {
+    "id": "keqhxldudk",
+    "name": "GEO 体检小工具",
+    "desc": "品牌 AI 可见性自查评分与优化建议",
+    "price": 1,
+    "cat": "研发效率",
+    "url": "https://keqhxldudk.app.weavefox.cn"
+  },
+  {
+    "id": "bcphhgk6f9",
+    "name": "SEO 体检小工具",
+    "desc": "网址 6 项基础检查与修复建议",
+    "price": 1,
+    "cat": "研发效率",
+    "url": "https://bcphhgk6f9.app.weavefox.cn"
+  },
+  {
+    "id": "m9efxgue9a",
+    "name": "测试用例生成器",
+    "desc": "一句话生成测试用例，含优先级与导出",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://m9efxgue9a.app.weavefox.cn"
+  },
+  {
+    "id": "3xvqjf5af3",
+    "name": "产品需求文档PRD生成器",
+    "desc": "结构化 PRD：背景、画像、优先级、验收",
+    "price": 3,
+    "cat": "研发效率",
+    "url": "https://3xvqjf5af3.app.weavefox.cn"
+  },
+  {
+    "id": "4gntg6btnf",
+    "name": "简历塑",
+    "desc": "简历 × 岗位 → 匹配度评分与修改建议",
+    "price": 2,
+    "cat": "求职面试",
+    "url": "https://4gntg6btnf.app.weavefox.cn"
+  },
+  {
+    "id": "ata9acpmpa",
+    "name": "面试题预测",
+    "desc": "按 JD 生成 10 道高频题与回答框架",
+    "price": 3,
+    "cat": "求职面试",
+    "url": "https://ata9acpmpa.app.weavefox.cn"
+  },
+  {
+    "id": "sakxhy9xrs",
+    "name": "求职信生成器",
+    "desc": "岗位与经历 → 3 版求职信",
+    "price": 1,
+    "cat": "求职面试",
+    "url": "https://sakxhy9xrs.app.weavefox.cn"
+  },
+  {
+    "id": "m9ewusue9a",
+    "name": "轻编好文案",
+    "desc": "商品信息 → 标题、卖点、详情与问答",
+    "price": 1,
+    "cat": "电商客服",
+    "url": "https://m9ewusue9a.app.weavefox.cn"
+  },
+  {
+    "id": "mkqfxqrxwr",
+    "name": "客服话术生成器",
+    "desc": "场景与情绪 → 3 套可用话术",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://mkqfxqrxwr.app.weavefox.cn"
+  },
+  {
+    "id": "vffcejlsqf",
+    "name": "小红书笔记生成器",
+    "desc": "主题 → 5 标题 + 正文 + 标签 + 封面文案",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://vffcejlsqf.app.weavefox.cn"
+  },
+  {
+    "id": "cjhrbfe3pc",
+    "name": "公众号推文生成器",
+    "desc": "主题与读者 → 标题、摘要、正文与配图建议",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://cjhrbfe3pc.app.weavefox.cn"
+  },
+  {
+    "id": "ewsct8ixkx",
+    "name": "短视频脚本生成器",
+    "desc": "主题与时长 → 钩子 + 分镜 + 标签",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://ewsct8ixkx.app.weavefox.cn"
+  },
+  {
+    "id": "cjhzq7e3pc",
+    "name": "短视频选题生成器",
+    "desc": "领域与平台 → 20 个可拍选题",
+    "price": 1,
+    "cat": "自媒体运营",
+    "url": "https://cjhzq7e3pc.app.weavefox.cn"
+  },
+  {
+    "id": "jatvexkp5e",
+    "name": "朋友圈文案生成器",
+    "desc": "场景 → 10 条朋友圈文案 + 配图建议",
+    "price": 1,
+    "cat": "自媒体运营",
+    "url": "https://jatvexkp5e.app.weavefox.cn"
+  },
+  {
+    "id": "r3fstczjyr",
+    "name": "PPT大纲生成器",
+    "desc": "主题与页数 → 每页要点 + 演讲备注",
+    "price": 3,
+    "cat": "职场办公",
+    "url": "https://r3fstczjyr.app.weavefox.cn"
+  },
+  {
+    "id": "keqbgpdudk",
+    "name": "会议纪要整理器",
+    "desc": "会议文字 → 摘要、决议、待办与风险",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://keqbgpdudk.app.weavefox.cn"
+  },
+  {
+    "id": "cjzg8se3pc",
+    "name": "年终总结述职生成器",
+    "desc": "岗位与年度工作 → 总结 + 述职口播稿",
+    "price": 3,
+    "cat": "职场办公",
+    "url": "https://cjzg8se3pc.app.weavefox.cn"
+  },
+  {
+    "id": "keqksvdudk",
+    "name": "演讲稿生成器",
+    "desc": "场合与主题 → 完整讲稿 + 提词卡",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://keqksvdudk.app.weavefox.cn"
+  },
+  {
+    "id": "dzj9zsslwd",
+    "name": "招聘JD生成器",
+    "desc": "岗位信息 → 职责、要求与面试题",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://dzj9zsslwd.app.weavefox.cn"
+  },
+  {
+    "id": "glzhcecqng",
+    "name": "周报生成器",
+    "desc": "本周事项 → 结构化周报四段",
+    "price": 1,
+    "cat": "职场办公",
+    "url": "https://glzhcecqng.app.weavefox.cn"
+  },
+  {
+    "id": "bnt4btnsmb",
+    "name": "报销清单整理器",
+    "desc": "粘贴费用记录 → 规范报销清单与提醒",
+    "price": 1,
+    "cat": "职场办公",
+    "url": "https://bnt4btnsmb.app.weavefox.cn"
+  },
+  {
+    "id": "g4n6jdtuhw",
+    "name": "商务邮件生成器",
+    "desc": "对象与目的 → 3 版商务邮件",
+    "price": 1,
+    "cat": "职场办公",
+    "url": "https://g4n6jdtuhw.app.weavefox.cn"
+  },
+  {
+    "id": "kes9usdudk",
+    "name": "职场文书生成器",
+    "desc": "辞职/请假/调岗/证明 → 3 版规范文书",
+    "price": 1,
+    "cat": "职场办公",
+    "url": "https://kes9usdudk.app.weavefox.cn"
+  },
+  {
+    "id": "bcqhbxk6f9",
+    "name": "英语作文批改器",
+    "desc": "作文 → 总分、四维评分、逐句改错与示范",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://bcqhbxk6f9.app.weavefox.cn"
+  },
+  {
+    "id": "jamztqkp5e",
+    "name": "学习计划生成器",
+    "desc": "目标与剩余天数 → 倒排周计划",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://jamztqkp5e.app.weavefox.cn"
+  },
+  {
+    "id": "bcqu6hk6f9",
+    "name": "读书笔记生成器",
+    "desc": "书名与要点 → 结构化笔记 + 书评",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://bcqu6hk6f9.app.weavefox.cn"
+  },
+  {
+    "id": "dvyrdugy5d",
+    "name": "教师评语生成器",
+    "desc": "学生特点 → 5 条期末评语",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://dvyrdugy5d.app.weavefox.cn"
+  },
+  {
+    "id": "sf7cpby97s",
+    "name": "节日祝福生成器",
+    "desc": "节日与对象 → 10 条可直接发送的祝福",
+    "price": 1,
+    "cat": "生活家庭",
+    "url": "https://sf7cpby97s.app.weavefox.cn"
+  },
+  {
+    "id": "npurza2aq6",
+    "name": "取名生成器",
+    "desc": "姓氏与期望 → 20 个带寓意与音律的名字",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://npurza2aq6.app.weavefox.cn"
+  },
+  {
+    "id": "jamrzfkp5e",
+    "name": "旅行行程规划器",
+    "desc": "城市与天数 → 逐日行程与预算分配",
+    "price": 3,
+    "cat": "生活家庭",
+    "url": "https://jamrzfkp5e.app.weavefox.cn"
+  },
+  {
+    "id": "at6bpspmpa",
+    "name": "菜谱生成器",
+    "desc": "现有食材 → 3 道菜与分步做法",
+    "price": 1,
+    "cat": "生活家庭",
+    "url": "https://at6bpspmpa.app.weavefox.cn"
+  },
+  {
+    "id": "k6rauxftrk",
+    "name": "健身计划生成器",
+    "desc": "目标与器械 → 4 周训练 + 饮食建议",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://k6rauxftrk.app.weavefox.cn"
+  },
+  {
+    "id": "ekf9edvhte",
+    "name": "一周买菜清单",
+    "desc": "7 天三餐菜单 + 分区采购清单",
+    "price": 1,
+    "cat": "生活家庭",
+    "url": "https://ekf9edvhte.app.weavefox.cn"
+  },
+  {
+    "id": "g4nwintuhw",
+    "name": "家庭月度预算表",
+    "desc": "收入与支出 → 预算表 + 超支预警",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://g4nwintuhw.app.weavefox.cn"
+  },
+  {
+    "id": "g4nvaxtuhw",
+    "name": "婚礼流程策划器",
+    "desc": "婚期与预算 → 流程、分工与物品清单",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://g4nvaxtuhw.app.weavefox.cn"
+  },
+  {
+    "id": "rdnuhb4t4r",
+    "name": "装修预算清单",
+    "desc": "面积与档次 → 分项预算与超支预警",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://rdnuhb4t4r.app.weavefox.cn"
+  },
+  {
+    "id": "at6pdhpmpa",
+    "name": "送礼推荐器",
+    "desc": "对象与预算 → 10 个礼物建议",
+    "price": 1,
+    "cat": "生活家庭",
+    "url": "https://at6pdhpmpa.app.weavefox.cn"
+  },
+  {
+    "id": "x8dznvcakb",
+    "name": "宝宝辅食食谱",
+    "desc": "月龄与忌口 → 7 天辅食与做法",
+    "price": 1,
+    "cat": "亲子宠物",
+    "url": "https://x8dznvcakb.app.weavefox.cn"
+  },
+  {
+    "id": "mkqvhgrxwr",
+    "name": "儿童睡前故事",
+    "desc": "年龄与主题 → 3 篇完整睡前故事",
+    "price": 1,
+    "cat": "亲子宠物",
+    "url": "https://mkqvhgrxwr.app.weavefox.cn"
+  },
+  {
+    "id": "kes9mgdudk",
+    "name": "宠物喂养计划",
+    "desc": "猫狗信息 → 每日喂食 + 每周护理",
+    "price": 1,
+    "cat": "亲子宠物",
+    "url": "https://kes9mgdudk.app.weavefox.cn"
+  },
+  {
+    "id": "mkqsmfrxwr",
+    "name": "搬家清单生成器",
+    "desc": "填入住信息 → 分场景搬迁清单与时间倒排",
+    "price": 1,
+    "cat": "生活家庭",
+    "url": "https://mkqsmfrxwr.app.weavefox.cn"
+  },
+  {
+    "id": "xq5vvhbndh",
+    "name": "月度复盘生成器",
+    "desc": "本月工作 → 结构化复盘与可视化总结",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://xq5vvhbndh.app.weavefox.cn"
+  },
+  {
+    "id": "frbu59gsra",
+    "name": "旅行攻略生成器",
+    "desc": "目的地与偏好 → 每日行程与美食指南",
+    "price": 3,
+    "cat": "生活家庭",
+    "url": "https://frbu59gsra.app.weavefox.cn"
+  },
+  {
+    "id": "g4nm82tuhw",
+    "name": "二手转卖文案生成器",
+    "desc": "物品信息 → 3 版转卖文案（标题/正文/议价/标签）",
+    "price": 1,
+    "cat": "电商客服",
+    "url": "https://g4nm82tuhw.app.weavefox.cn"
+  },
+  {
+    "id": "bcqrbrk6f9",
+    "name": "自由职业报价单生成器",
+    "desc": "服务与工时 → 规范报价单（分项/付款节点/不含项）",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://bcqrbrk6f9.app.weavefox.cn"
+  },
+  {
+    "id": "sf7axmy97s",
+    "name": "生日纪念日策划器",
+    "desc": "对象与预算 → 当日流程、礼物布置与预算分配",
+    "price": 1,
+    "cat": "生活家庭",
+    "url": "https://sf7axmy97s.app.weavefox.cn"
+  },
+  {
+    "id": "mkqcf3rxwr",
+    "name": "谈薪话术生成器",
+    "desc": "岗位与期望薪资 → 3 套话术与让步底线",
+    "price": 3,
+    "cat": "求职面试",
+    "url": "https://mkqcf3rxwr.app.weavefox.cn"
+  },
+  {
+    "id": "xq5hgdbndh",
+    "name": "差评回复生成器",
+    "desc": "差评原文 → 公开回复、安抚与申诉要点",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://xq5hgdbndh.app.weavefox.cn"
+  },
+  {
+    "id": "rdneyn4t4r",
+    "name": "宠物行为纠正方案",
+    "desc": "行为问题 → 分周训练与环境改造",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://rdneyn4t4r.app.weavefox.cn"
+  },
+  {
+    "id": "jamnflkp5e",
+    "name": "错题讲解生成器",
+    "desc": "错题原文 → 错因诊断、分步讲解与同类变式题",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://jamnflkp5e.app.weavefox.cn"
+  },
+  {
+    "id": "fw4q6myqkh",
+    "name": "SQL 优化建议生成器",
+    "desc": "慢 SQL → 问题定位、改写语句与索引建议",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://fw4q6myqkh.app.weavefox.cn"
+  },
+  {
+    "id": "qh8azestfq",
+    "name": "亲子沟通话术生成器",
+    "desc": "孩子年龄与场景 → 3 套可照读话术与习惯计划",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://qh8azestfq.app.weavefox.cn"
+  },
+  {
+    "id": "r3ykcgzjyr",
+    "name": "offer 对比决策助手",
+    "desc": "多个 offer → 五维打分、风险提示与决策清单",
+    "price": 2,
+    "cat": "求职面试",
+    "url": "https://r3ykcgzjyr.app.weavefox.cn"
+  },
+  {
+    "id": "frbuebgsra",
+    "name": "退款纠纷处理话术",
+    "desc": "平台与纠纷类型 → 首轮回复、让步阶梯与规则要点",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://frbuebgsra.app.weavefox.cn"
+  },
+  {
+    "id": "mkqe7frxwr",
+    "name": "直播带货话术生成器",
+    "desc": "平台品类阶段 → 开场、憋单逼单与违规词替换",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://mkqe7frxwr.app.weavefox.cn"
+  },
+  {
+    "id": "ztjtinhvkt",
+    "name": "正则表达式生成器",
+    "desc": "场景与样例 → 正则、测试表与可用代码",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://ztjtinhvkt.app.weavefox.cn"
+  },
+  {
+    "id": "qscr5qnhme",
+    "name": "英语单词记忆计划生成器",
+    "desc": "考试与天数 → 每日任务、复习节奏与词表",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://qscr5qnhme.app.weavefox.cn"
+  },
+  {
+    "id": "npus3h2aq6",
+    "name": "儿童兴趣班选择助手",
+    "desc": "孩子特点与预算 → 兴趣班推荐与避坑清单",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://npus3h2aq6.app.weavefox.cn"
+  },
+  {
+    "id": "wnpm4rj8gw",
+    "name": "商品定价建议生成器",
+    "desc": "成本与竞品价 → 三档定价、毛利测算与调价节奏",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://wnpm4rj8gw.app.weavefox.cn"
+  },
+  {
+    "id": "z5acqhaahj",
+    "name": "面试复盘分析器",
+    "desc": "面试问答 → 逐题评分、优化回答与备战清单",
+    "price": 2,
+    "cat": "求职面试",
+    "url": "https://z5acqhaahj.app.weavefox.cn"
+  },
+  {
+    "id": "5chjyut6g5",
+    "name": "作文素材生成器",
+    "desc": "主题学段 → 开头结尾、事例素材与结构提纲",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://5chjyut6g5.app.weavefox.cn"
+  },
+  {
+    "id": "url4vxdyk8",
+    "name": "社群运营SOP生成器",
+    "desc": "社群类型与周期 → 每日节奏、话术与活动",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://url4vxdyk8.app.weavefox.cn"
+  },
+  {
+    "id": "wnpmibj8gw",
+    "name": "API 接口文档生成器",
+    "desc": "接口用途与技术栈 → 接口定义、示例与错误码",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://wnpmibj8gw.app.weavefox.cn"
+  },
+  {
+    "id": "cjh2kee3pc",
+    "name": "阅读理解出题器",
+    "desc": "文章与学段 → 5 道题、答案与逐题解析",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://cjh2kee3pc.app.weavefox.cn"
+  },
+  {
+    "id": "sf7x93y97s",
+    "name": "自我介绍生成器",
+    "desc": "场景与时长 → 3 版自我介绍、追问预案与口播提示",
+    "price": 2,
+    "cat": "求职面试",
+    "url": "https://sf7x93y97s.app.weavefox.cn"
+  },
+  {
+    "id": "j239apxyyi",
+    "name": "宝宝作息表生成器",
+    "desc": "月龄与困扰 → 作息表、哄睡流程与调整节奏",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://j239apxyyi.app.weavefox.cn"
+  },
+  {
+    "id": "ew9hluixkx",
+    "name": "订单催付话术生成器",
+    "desc": "平台与阶段 → 3 版催付话术、节奏与合规红线",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://ew9hluixkx.app.weavefox.cn"
+  },
+  {
+    "id": "glzpvpcqng",
+    "name": "公众号选题生成器",
+    "desc": "领域与读者 → 20 个选题、钩子与排期",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://glzpvpcqng.app.weavefox.cn"
+  },
+  {
+    "id": "kesq6fdudk",
+    "name": "文言文实词卡片生成器",
+    "desc": "学段与词量 → 实词卡片、辨析与自测",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://kesq6fdudk.app.weavefox.cn"
+  },
+  {
+    "id": "dvynvcgy5d",
+    "name": "旧物断舍离清单生成器",
+    "desc": "空间与偏好 → 分类清单、执行表与防反弹",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://dvynvcgy5d.app.weavefox.cn"
+  },
+  {
+    "id": "2qx5klqqxb",
+    "name": "技术方案评审清单生成器",
+    "desc": "项目类型与关切 → 评审清单、风险与上线检查",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://2qx5klqqxb.app.weavefox.cn"
+  },
+  {
+    "id": "qh8c6dstfq",
+    "name": "亲子游戏活动生成器",
+    "desc": "年龄场地时长 → 5 个游戏、流程与安全提示",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://qh8c6dstfq.app.weavefox.cn"
+  },
+  {
+    "id": "c7sm46egmi",
+    "name": "电商大促备货清单",
+    "desc": "活动品类单量 → 备货测算、物料与倒排表",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://c7sm46egmi.app.weavefox.cn"
+  },
+  {
+    "id": "npu54v2aq6",
+    "name": "英文面试问答生成器",
+    "desc": "岗位与轮次 → 高频英文问题、回答框架与救场句",
+    "price": 2,
+    "cat": "求职面试",
+    "url": "https://npu54v2aq6.app.weavefox.cn"
+  },
+  {
+    "id": "z5afxvaahj",
+    "name": "语文作文批改器",
+    "desc": "学段文体与原文 → 四维评分、逐段点评与升格",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://z5afxvaahj.app.weavefox.cn"
+  },
+  {
+    "id": "5chwqut6g5",
+    "name": "日志排查助手",
+    "desc": "日志片段与现象 → 线索、成因排序与验证步骤",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://5chwqut6g5.app.weavefox.cn"
+  },
+  {
+    "id": "ew9sndixkx",
+    "name": "客服排班表生成器",
+    "desc": "人手与高峰 → 一周排班、SLA 与交接清单",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://ew9sndixkx.app.weavefox.cn"
+  },
+  {
+    "id": "m9veptue9a",
+    "name": "儿童零花钱计划生成器",
+    "desc": "年龄与目标 → 规则、家务奖励与记账模板",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://m9veptue9a.app.weavefox.cn"
+  },
+  {
+    "id": "uiumjhxjku",
+    "name": "小红书封面文案生成器",
+    "desc": "类型人群 → 10 条封面大字、配色与 A/B",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://uiumjhxjku.app.weavefox.cn"
+  },
+  {
+    "id": "ygw7xuz2jf",
+    "name": "无领导小组讨论话术",
+    "desc": "方向与角色 → 开场破冰、观点输出与总结模板",
+    "price": 2,
+    "cat": "求职面试",
+    "url": "https://ygw7xuz2jf.app.weavefox.cn"
+  },
+  {
+    "id": "ztjwbxhvkt",
+    "name": "技术债清单生成器",
+    "desc": "项目与痛点 → 债务清单、优先级与偿还计划",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://ztjwbxhvkt.app.weavefox.cn"
+  },
+  {
+    "id": "qscxinnhme",
+    "name": "阳台种植计划生成器",
+    "desc": "朝向季节 → 6 种植物、配土与养护卡",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://qscxinnhme.app.weavefox.cn"
+  },
+  {
+    "id": "frbb5agsra",
+    "name": "包裹异常件处理清单",
+    "desc": "异常类型 → 处理流程、沟通话术与赔付划分",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://frbb5agsra.app.weavefox.cn"
+  },
+  {
+    "id": "mkqqx7rxwr",
+    "name": "小学生作业陪伴计划",
+    "desc": "年级与弱项 → 作业节奏、检查清单与话术",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://mkqqx7rxwr.app.weavefox.cn"
+  },
+  {
+    "id": "9pffrfr8kd",
+    "name": "公众号排版检查清单",
+    "desc": "文章类型 → 排版模板、配图节奏与自检",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://9pffrfr8kd.app.weavefox.cn"
+  },
+  {
+    "id": "ygwjhez2jf",
+    "name": "求职跟进邮件生成器",
+    "desc": "场景与公司类型 → 3 版邮件、中英对照与时机",
+    "price": 1,
+    "cat": "求职面试",
+    "url": "https://ygwjhez2jf.app.weavefox.cn"
+  },
+  {
+    "id": "ztjxmwhvkt",
+    "name": "物理公式速查卡生成器",
+    "desc": "学段章节 → 公式卡、推导与易错点",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://ztjxmwhvkt.app.weavefox.cn"
+  },
+  {
+    "id": "qsceyhnhme",
+    "name": "家用电器选购指南",
+    "desc": "电器预算户型 → 参数、配置与避坑",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://qsceyhnhme.app.weavefox.cn"
+  },
+  {
+    "id": "sakyi79xrs",
+    "name": "Git 提交信息生成器",
+    "desc": "改动描述 → 3 版提交信息 + 拆分建议 + PR 草稿",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://sakyi79xrs.app.weavefox.cn"
+  },
+  {
+    "id": "9pfa8pr8kd",
+    "name": "跨部门沟通话术生成器",
+    "desc": "对象与诉求 → 3 版开场 + IM/邮件正文 + 应对",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://9pfa8pr8kd.app.weavefox.cn"
+  },
+  {
+    "id": "hmxnvafxk9",
+    "name": "幼儿园入园准备清单",
+    "desc": "年龄园所 → 物品清单 + 作息表 + 沟通清单",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://hmxnvafxk9.app.weavefox.cn"
+  },
+  {
+    "id": "pziwayqyzx",
+    "name": "商品问答预埋清单",
+    "desc": "品类价格带 → 20 条预埋问答 + 客服模板",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://pziwayqyzx.app.weavefox.cn"
+  },
+  {
+    "id": "ygwbvdz2jf",
+    "name": "转行可行性评估器",
+    "desc": "现岗与目标 → 能力映射 + 四维评分 + 3 个月路线",
+    "price": 2,
+    "cat": "求职面试",
+    "url": "https://ygwbvdz2jf.app.weavefox.cn"
+  },
+  {
+    "id": "ztjnhyhvkt",
+    "name": "播客节目策划器",
+    "desc": "节目类型时长 → 单集大纲 + 提问 + 上线包",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://ztjnhyhvkt.app.weavefox.cn"
+  },
+  {
+    "id": "m9vf5hue9a",
+    "name": "绩效自评撰写器",
+    "desc": "岗位周期 → 自评结构 + 量化写法 + 面谈问答",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://m9vf5hue9a.app.weavefox.cn"
+  },
+  {
+    "id": "uiurb6xjku",
+    "name": "化学方程式配平练习生成器",
+    "desc": "学段题型 → 20 道题 + 步骤 + 口诀",
+    "price": 1,
+    "cat": "学生教育",
+    "url": "https://uiurb6xjku.app.weavefox.cn"
+  },
+  {
+    "id": "jamkukkp5e",
+    "name": "家庭药箱清单生成器",
+    "desc": "成员季节 → 分类清单 + 分区 + 就医信号",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://jamkukkp5e.app.weavefox.cn"
+  },
+  {
+    "id": "nyewxrpkdd",
+    "name": "客服质检评分表生成器",
+    "desc": "渠道品类 → 10 项质检指标 + 抽检规则 + 报告",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://nyewxrpkdd.app.weavefox.cn"
+  },
+  {
+    "id": "puwusa3a4t",
+    "name": "代码评审清单生成器",
+    "desc": "语言改动 → 15 项检查点 + 评论模板 + 门禁",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://puwusa3a4t.app.weavefox.cn"
+  },
+  {
+    "id": "sak6vv9xrs",
+    "name": "小红书评论区运营话术",
+    "desc": "笔记类型目标 → 10 条引导 + 差评应对 + 私信承接",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://sak6vv9xrs.app.weavefox.cn"
+  },
+  {
+    "id": "r3yheqzjyr",
+    "name": "校招网申填写助手",
+    "desc": "行业岗位 → 网申要点 + 经历改写 + 自查清单",
+    "price": 2,
+    "cat": "求职面试",
+    "url": "https://r3yheqzjyr.app.weavefox.cn"
+  },
+  {
+    "id": "puwdj43a4t",
+    "name": "英语听力精听计划生成器",
+    "desc": "考试水平 → 21 天计划 + 五步法 + 专项",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://puwdj43a4t.app.weavefox.cn"
+  },
+  {
+    "id": "mkqywwrxwr",
+    "name": "儿童疫苗接种记录整理器",
+    "desc": "月龄地区 → 接种时间轴 + 补种对照",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://mkqywwrxwr.app.weavefox.cn"
+  },
+  {
+    "id": "qh824gstfq",
+    "name": "商品标题优化器",
+    "desc": "品类平台 → 10 条标题 + 关键词分层 + 违禁词检查",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://qh824gstfq.app.weavefox.cn"
+  },
+  {
+    "id": "c7s52qegmi",
+    "name": "账号定位诊断器",
+    "desc": "平台赛道 → 定位诊断 + 人设 + 30 天计划",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://c7s52qegmi.app.weavefox.cn"
+  },
+  {
+    "id": "4gpgk9btnf",
+    "name": "接口联调排错清单",
+    "desc": "协议现象 → 排查顺序 + 原因对照 + 验证",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://4gpgk9btnf.app.weavefox.cn"
+  },
+  {
+    "id": "uiu5naxjku",
+    "name": "实习经历挖掘助手",
+    "desc": "专业目标 → 经历清单 + STAR 改写 + 投递话术",
+    "price": 2,
+    "cat": "求职面试",
+    "url": "https://uiu5naxjku.app.weavefox.cn"
+  },
+  {
+    "id": "vfgcsmlsqf",
+    "name": "实验报告撰写助手",
+    "desc": "学科类型 → 报告结构 + 数据处理 + 讨论",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://vfgcsmlsqf.app.weavefox.cn"
+  },
+  {
+    "id": "fw4jakyqkh",
+    "name": "家庭收纳分区方案生成器",
+    "desc": "房型难点 → 分区方案 + 清单 + 预算",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://fw4jakyqkh.app.weavefox.cn"
+  },
+  {
+    "id": "cjhgj9e3pc",
+    "name": "店铺售后数据周报表",
+    "desc": "平台品类 → 周报模板 + 归因 + 改进动作",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://cjhgj9e3pc.app.weavefox.cn"
+  },
+  {
+    "id": "mkqtkrrxwr",
+    "name": "短视频开头钩子生成器",
+    "desc": "赛道受众 → 10 条钩子 + 句式 + 避坑",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://mkqtkrrxwr.app.weavefox.cn"
+  },
+  {
+    "id": "tb2gbumk3t",
+    "name": "会议发言提纲生成器",
+    "desc": "会议角色 → 发言结构 + 开场 + 应答",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://tb2gbumk3t.app.weavefox.cn"
+  },
+  {
+    "id": "r3yrpgzjyr",
+    "name": "数据库表设计评审清单",
+    "desc": "场景规模 → 评审清单 + 索引建议 + 回滚表",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://r3yrpgzjyr.app.weavefox.cn"
+  },
+  {
+    "id": "frbfmbgsra",
+    "name": "考研复试准备计划",
+    "desc": "专业院校 → 复试流程 + 问题清单 + 应答",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://frbfmbgsra.app.weavefox.cn"
+  },
+  {
+    "id": "sakszh9xrs",
+    "name": "儿童家务分工表生成器",
+    "desc": "年龄结构 → 家务清单 + 分工表 + 激励",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://sakszh9xrs.app.weavefox.cn"
+  },
+  {
+    "id": "g42mpvtuhw",
+    "name": "商品评价管理清单",
+    "desc": "品类平台 → 评价获取 + 差评处理 + 周检查表",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://g42mpvtuhw.app.weavefox.cn"
+  },
+  {
+    "id": "7bpjk4web7",
+    "name": "代码注释规范检查器",
+    "desc": "语言团队 → 注释规范 + 检查清单 + 改写示例",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://7bpjk4web7.app.weavefox.cn"
+  },
+  {
+    "id": "rdpbtj4t4r",
+    "name": "家庭保险配置清单",
+    "desc": "家庭结构收入 → 险种优先级 + 保额 + 避坑",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://rdpbtj4t4r.app.weavefox.cn"
+  },
+  {
+    "id": "mknbacrxwr",
+    "name": "简历投递跟踪表",
+    "desc": "阶段行业 → 跟踪表 + 跟进话术 + 止损规则",
+    "price": 2,
+    "cat": "求职面试",
+    "url": "https://mknbacrxwr.app.weavefox.cn"
+  },
+  {
+    "id": "xqt2mmbndh",
+    "name": "历史时间轴记忆卡生成器",
+    "desc": "学段范围 → 时间轴 + 因果链 + 口诀",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://xqt2mmbndh.app.weavefox.cn"
+  },
+  {
+    "id": "rdpk694t4r",
+    "name": "汇报图表选型助手",
+    "desc": "数据类型 → 图表选型 + 结构 + 讲解话术",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://rdpk694t4r.app.weavefox.cn"
+  },
+  {
+    "id": "pz8zhnqyzx",
+    "name": "直播场控清单",
+    "desc": "平台品类 → 场控时间轴 + 口令表 + 复盘",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://pz8zhnqyzx.app.weavefox.cn"
+  },
+  {
+    "id": "ygjgstz2jf",
+    "name": "英语语法错题诊断器",
+    "desc": "板块错因 → 规则讲解 + 练习 + 训练",
+    "price": 2,
+    "cat": "学生教育",
+    "url": "https://ygjgstz2jf.app.weavefox.cn"
+  },
+  {
+    "id": "frnrzvgsra",
+    "name": "儿童视力保护计划",
+    "desc": "年龄场景 → 用眼规则 + 户外安排 + 提醒",
+    "price": 2,
+    "cat": "亲子宠物",
+    "url": "https://frnrzvgsra.app.weavefox.cn"
+  },
+  {
+    "id": "c79wcbegmi",
+    "name": "远程协作规则清单",
+    "desc": "团队分布规模 → 协作规则 + 会议 + 文档",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://c79wcbegmi.app.weavefox.cn"
+  },
+  {
+    "id": "4gqctebtnf",
+    "name": "发布上线检查清单",
+    "desc": "应用类型 → 上线检查 + 回滚 + 验证",
+    "price": 2,
+    "cat": "研发效率",
+    "url": "https://4gqctebtnf.app.weavefox.cn"
+  },
+  {
+    "id": "qseyv5nhme",
+    "name": "家庭年度体检计划",
+    "desc": "成员年龄 → 项目清单 + 频次 + 记录",
+    "price": 2,
+    "cat": "生活家庭",
+    "url": "https://qseyv5nhme.app.weavefox.cn"
+  },
+  {
+    "id": "rdpcej4t4r",
+    "name": "小学数学口算题卡生成器",
+    "desc": "年级题型 → 题卡 + 答案 + 计时表",
+    "price": 1,
+    "cat": "学生教育",
+    "url": "https://rdpcej4t4r.app.weavefox.cn"
+  },
+  {
+    "id": "5cmiedt6g5",
+    "name": "OKR 对齐检查器",
+    "desc": "团队周期 → 写法判定 + 对齐 + 复盘",
+    "price": 2,
+    "cat": "职场办公",
+    "url": "https://5cmiedt6g5.app.weavefox.cn"
+  },
+  {
+    "id": "j25pukxyyi",
+    "name": "商品上架审核清单",
+    "desc": "平台品类 → 资质图文 + 违禁词 + 观察项",
+    "price": 2,
+    "cat": "电商客服",
+    "url": "https://j25pukxyyi.app.weavefox.cn"
+  },
+  {
+    "id": "bnussdnsmb",
+    "name": "古诗词默写检测器",
+    "desc": "学段篇目 → 题卡 + 答案 + 复习安排",
+    "price": 1,
+    "cat": "学生教育",
+    "url": "https://bnussdnsmb.app.weavefox.cn"
+  },
+  {
+    "id": "nyitt9pkdd",
+    "name": "内容选题日历生成器",
+    "desc": "平台赛道 → 30天选题 + 标题模板",
+    "price": 2,
+    "cat": "自媒体运营",
+    "url": "https://nyitt9pkdd.app.weavefox.cn"
+  },
+  {
+    "id": "ekgs3pvhte",
+    "name": "图片压缩改尺寸",
+    "desc": "本地批量压缩 → 指定 KB/像素，免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ekgs3pvhte.app.weavefox.cn"
+  },
+  {
+    "id": "3xh2yr5af3",
+    "name": "房贷提前还款计算器",
+    "desc": "等额本息对比 + 提前还款两方案，免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://3xh2yr5af3.app.weavefox.cn"
+  },
+  {
+    "id": "g42fhctuhw",
+    "name": "二维码生成器",
+    "desc": "文本网址 → 本地生成 PNG，免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://g42fhctuhw.app.weavefox.cn"
+  },
+  {
+    "id": "m9lqr6ue9a",
+    "name": "JSON 格式化校验器",
+    "desc": "粘贴 JSON 即格式化、校验并统计结构，本地处理",
+    "price": 0,
+    "cat": "研发效率",
+    "url": "https://m9lqr6ue9a.app.weavefox.cn"
+  },
+  {
+    "id": "j25vhrxyyi",
+    "name": "CSV ↔ JSON 转换器",
+    "desc": "CSV 与 JSON 双向转换，支持分隔符/表头/美化",
+    "price": 0,
+    "cat": "研发效率",
+    "url": "https://j25vhrxyyi.app.weavefox.cn"
+  },
+  {
+    "id": "urjnzsdyk8",
+    "name": "文本批量处理",
+    "desc": "批量去重、查找替换、排序与前后缀，本地处理",
+    "price": 0,
+    "cat": "研发效率",
+    "url": "https://urjnzsdyk8.app.weavefox.cn"
+  }
 ]
