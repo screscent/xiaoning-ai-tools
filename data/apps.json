@@ -1174,5 +1174,29 @@
     "price": 0,
     "cat": "实用工具",
     "url": "https://uidvbyxjku.app.weavefox.cn"
+  },
+  {
+    "id": "lymnmkjxel",
+    "name": "日期计算器",
+    "desc": "相差天数、日期加减与工作日计算，本地秒算",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://lymnmkjxel.app.weavefox.cn"
+  },
+  {
+    "id": "urjgjtdyk8",
+    "name": "文本统计与阅读时间",
+    "desc": "字符/词/行统计、阅读与演讲时长、词频 Top10",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://urjgjtdyk8.app.weavefox.cn"
+  },
+  {
+    "id": "wn363rj8gw",
+    "name": "图片裁剪器",
+    "desc": "本地裁剪头像/封面/商品图，比例尺寸自选可下载",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://wn363rj8gw.app.weavefox.cn"
   }
 ]
