@@ -1975,5 +1975,35 @@
     "cat": "实用工具",
     "url": "https://ny8guqpkdd.app.weavefox.cn",
     "subcat": "文本处理"
+  },
+  {
+    "id": "x89bsucakb",
+    "name": "发票税额与价税分离计算器",
+    "desc": "含税/不含税互转，按税率算税额并精确到分",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://x89bsucakb.app.weavefox.cn",
+    "subcat": "计算换算"
+  },
+  {
+    "id": "bcykmjk6f9",
+    "name": "CSS 按钮样式生成器",
+    "desc": "调色与圆角实时生成按钮 CSS/HTML，含 hover",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://bcykmjk6f9.app.weavefox.cn",
+    "subcat": "设计绘图"
+  },
+  {
+    "id": "bnxzbrnsmb",
+    "name": "日出日落与黄金时刻计算器",
+    "desc": "按经纬度算日出日落、昼长与黄金时刻",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://bnxzbrnsmb.app.weavefox.cn",
+    "subcat": "时间日期"
   }
 ]
