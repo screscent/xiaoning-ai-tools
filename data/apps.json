@@ -1918,5 +1918,32 @@
     "cat": "实用工具",
     "url": "https://atvxmfpmpa.app.weavefox.cn",
     "subcat": "设计绘图"
+  },
+  {
+    "id": "7b3qgqweb7",
+    "name": "中文转拼音工具",
+    "desc": "中文转带调/无调/首字母拼音，含逐字对照",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://7b3qgqweb7.app.weavefox.cn",
+    "subcat": "文本处理"
+  },
+  {
+    "id": "ijankg8zig",
+    "name": "隐私设置自查清单",
+    "desc": "按场景生成隐私自查项与整改建议，本地记进度",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ijankg8zig.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "2qezkyqqxb",
+    "name": "书签整理与导出 HTML",
+    "desc": "校验去重书签并导出可导入浏览器的 bookmarks.html",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://2qezkyqqxb.app.weavefox.cn",
+    "subcat": "效率生活"
   }
 ]
