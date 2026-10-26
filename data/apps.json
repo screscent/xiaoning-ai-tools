@@ -1648,5 +1648,32 @@
     "cat": "实用工具",
     "url": "https://qsew9znhme.app.weavefox.cn",
     "subcat": "安全隐私"
+  },
+  {
+    "id": "2qcwr7qqxb",
+    "name": "图片 EXIF 信息查看与清除",
+    "desc": "本地读取照片 EXIF（设备/时间/GPS）并重绘清除元数据",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://2qcwr7qqxb.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "m9la4sue9a",
+    "name": "正则表达式测试器",
+    "desc": "正则实时匹配高亮、捕获组列表与替换预览",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://m9la4sue9a.app.weavefox.cn",
+    "subcat": "文本处理"
+  },
+  {
+    "id": "uidaynxjku",
+    "name": "习惯打卡追踪器",
+    "desc": "习惯打卡日历网格 + 完成率与连续天数，本地保存",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://uidaynxjku.app.weavefox.cn",
+    "subcat": "效率生活"
   }
 ]
