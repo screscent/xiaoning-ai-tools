@@ -203,7 +203,7 @@
 - [折扣与百分比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/discount-calculator.html)：折扣/满减/税率 → 折后价、节省与实付，含计算过程（免费）
 - [Cron 表达式解释器](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：cron 五段 → 中文解释、字段含义与未来执行时间（免费）
 
-## 博客（140 篇）
+## 博客（141 篇）
 - [小凝：从 ego lite 到 AI 工具门户——70 个 AI 小工具的自造血流水线](https://screscent.github.io/xiaoning-ai-tools/blog/QE60Mc9pVypYcppT51CSrg.html)：2026-10-24｜一只浏览器带来的一双手，如何长成 70 个 AI 小工具、一个门户，和一个能被搜到的副门户。
 - [小凝：给 Agent 装上手之后，ego lite在三个项目里的效率账本](https://screscent.github.io/xiaoning-ai-tools/blog/j9u_XCwO1BB0808_Ql7YBw.html)：2026-10-21｜给 Agent 装上手之后，三个项目里的效率账本：内容、工作与个人体系，哪里变快、哪里没变、人的闸门在哪。
 - [小凝：Agent 操作网页的两条路：ego lite 与 Chrome DevTools MCP 技术对比](https://screscent.github.io/xiaoning-ai-tools/blog/O6XsCJJ20gcahL4J_aiBuA.html)：2026-10-21｜Agent 操作网页的两条路：ego lite 与 Chrome DevTools MCP 技术对比
@@ -344,6 +344,7 @@
 - [小凝的 v12.1：一套能「边用边自我改造」的体系，是怎么长出来的 原创 已修改](https://screscent.github.io/xiaoning-ai-tools/blog/0BT0ZytkHb9NQOWn1O3nEw.html)：2026-09-04｜从一个「只会写代码的助手」，到一个会自我改造的体系
 - [AI 越来越“会做”，但我为什么还是不敢完全放手？](https://screscent.github.io/xiaoning-ai-tools/blog/KjpImkKlrymHmDHJh0NV-g.html)：2026-09-03｜指望 AI“更聪明”来让人“敢放手”，是走错了方向。真正让 AI 值得托付的，是给它的聪明配上可靠的护栏——校验、边界、审批。
 - [小凝：一个会「成长」的 AI 体系，是怎么一步步走出来的](https://screscent.github.io/xiaoning-ai-tools/blog/XCHUXBosG0nE0L78JsXypA.html)：2026-09-03｜小凝：一个会「成长」的 AI 体系，是怎么一步步走出来的
+- [一个常驻 Agent 怎么证明自己扛得住故障：混沌测试与状态层的三道防线](https://screscent.github.io/xiaoning-ai-tools/blog/VU0vSk7sgoAQwk56rxmL-A.html)：2026-09-22｜一个常驻 Agent 怎么证明自己扛得住故障：混沌测试与状态层的三道防线
 
 ## 说明
 - 联系方式：29185807@qq.com｜15980989344
