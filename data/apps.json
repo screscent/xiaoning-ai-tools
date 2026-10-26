@@ -1729,5 +1729,32 @@
     "cat": "实用工具",
     "url": "https://ewrulmixkx.app.weavefox.cn",
     "subcat": "编码转换"
+  },
+  {
+    "id": "atwrmjpmpa",
+    "name": "TOTP 动态验证码生成器",
+    "desc": "本地计算 2FA 动态验证码，Base32 解码与倒计时",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://atwrmjpmpa.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "dzkmanslwd",
+    "name": "三班倒排班表生成器",
+    "desc": "按人员名单循环排早中晚班，导出表格与 CSV",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://dzkmanslwd.app.weavefox.cn",
+    "subcat": "时间日期"
+  },
+  {
+    "id": "nyi2whpkdd",
+    "name": "生日与纪念日提醒清单",
+    "desc": "生日纪念日倒数与提醒天数，本地保存并导出",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://nyi2whpkdd.app.weavefox.cn",
+    "subcat": "效率生活"
   }
 ]
