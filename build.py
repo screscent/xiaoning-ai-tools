@@ -621,6 +621,28 @@ def blog_post_page(art, post):
     )
 
 
+def blog_index_json(blog):
+    """博客索引导出（供 WeaveFox 门户动态拉取，避免门户内嵌长列表）。"""
+    arts = blog.get("articles", [])
+    return json.dumps(
+        {
+            "updated": blog.get("updated", ""),
+            "count": len(arts),
+            "home": f"{BASE_URL}/blog/",
+            "articles": [
+                {
+                    "date": a.get("publish_time", ""),
+                    "title": a["title"],
+                    "url": f"{BASE_URL}/blog/{a['slug']}.html",
+                }
+                for a in arts[:30]
+            ],
+        },
+        ensure_ascii=False,
+        indent=1,
+    ) + "\n"
+
+
 def sitemap(apps, blog=None):
     urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html"]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
@@ -786,6 +808,7 @@ def main():
     if blog["articles"]:
         os.makedirs(os.path.join(HERE, "blog"), exist_ok=True)
         w("blog/index.html", blog_list_page(blog))
+        w("blog/articles.json", blog_index_json(blog))
         for a in blog["articles"]:
             post = blog["posts"][a["slug"]]
             w(f"blog/{a['slug']}.html", blog_post_page(a, post))

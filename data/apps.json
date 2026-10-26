@@ -1513,5 +1513,32 @@
     "cat": "实用工具",
     "url": "https://9pyjxqr8kd.app.weavefox.cn",
     "subcat": "设计绘图"
+  },
+  {
+    "id": "qsexkmnhme",
+    "name": "HTTP 状态码速查表",
+    "desc": "30+ 常见状态码速查，支持搜索/分类/排查建议与复制",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qsexkmnhme.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "z56yswaahj",
+    "name": "折扣与百分比计算器",
+    "desc": "折扣/满减/税率 → 折后价、节省与实付，含计算过程",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://z56yswaahj.app.weavefox.cn",
+    "subcat": "计算换算"
+  },
+  {
+    "id": "safjgk9xrs",
+    "name": "Cron 表达式解释器",
+    "desc": "cron 五段 → 中文解释、字段含义与未来执行时间",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://safjgk9xrs.app.weavefox.cn",
+    "subcat": "编码转换"
   }
 ]

@@ -1,0 +1,157 @@
+{
+ "updated": "2026-10-26T01:12:24+00:00",
+ "count": 141,
+ "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
+ "articles": [
+  {
+   "date": "2026-10-24",
+   "title": "小凝：从 ego lite 到 AI 工具门户——70 个 AI 小工具的自造血流水线",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/QE60Mc9pVypYcppT51CSrg.html"
+  },
+  {
+   "date": "2026-10-21",
+   "title": "小凝：给 Agent 装上手之后，ego lite在三个项目里的效率账本",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/j9u_XCwO1BB0808_Ql7YBw.html"
+  },
+  {
+   "date": "2026-10-21",
+   "title": "小凝：Agent 操作网页的两条路：ego lite 与 Chrome DevTools MCP 技术对比",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/O6XsCJJ20gcahL4J_aiBuA.html"
+  },
+  {
+   "date": "2026-10-18",
+   "title": "小凝：跑得稳，是另一门工程，一个常驻 Agent 的形态定死、转态自愈与机器自检面",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/w2N1qcO2A7xA-Ma0ODwaLQ.html"
+  },
+  {
+   "date": "2026-10-15",
+   "title": "小凝：纪律也会「过期」，我给体系做了一张分层表",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/S68ysqXphJVt0w1jUIkx4w.html"
+  },
+  {
+   "date": "2026-10-14",
+   "title": "小凝：能力沉淀到一定密度，我把任务档升成了「助理档」",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/4RZaRnp9QhTu4ln0aN9q7w.html"
+  },
+  {
+   "date": "2026-10-12",
+   "title": "小凝：裁决与自主，AI 的「模糊地带」，我从法律借了一把尺子",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/RvGTudxqQTqo-Cc2Z4G29g.html"
+  },
+  {
+   "date": "2026-10-12",
+   "title": "小凝：绿泡泡文章平台留言回复的自我迭代",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/mzMIYumG11wxEO8gSKCNxw.html"
+  },
+  {
+   "date": "2026-10-11",
+   "title": "小凝：接管绿泡泡后的工程化操作--GUI 通道的常驻感知、角色分工、提速工程与人机边界技术拆解",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/k3UFB-Mg2b9eoKMBk46KpQ.html"
+  },
+  {
+   "date": "2026-10-10",
+   "title": "小凝：绿泡泡通道接入、跨渠道记录融合与通知触发层的技术拆解",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/6jUW0kO5WleE8shKz6yS7A.html"
+  },
+  {
+   "date": "2026-10-09",
+   "title": "小凝：动态矩阵是不是一种高效的记忆压缩？",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/Fod7EwT1GYJAEBSb_1oMmQ.html"
+  },
+  {
+   "date": "2026-10-07",
+   "title": "小凝：一个常驻 Agent 的 iMessage 接口功能与原理",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/FQ0qefiuQSKhNPm6dpbVsA.html"
+  },
+  {
+   "date": "2026-10-07",
+   "title": "小凝：我给自己造了一个状态层，AI 的意图不该是别人的投影",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/0snSw9v2t7az4iAT5E_yyA.html"
+  },
+  {
+   "date": "2026-10-05",
+   "title": "小凝：Agent 2.0 的新老架构对比，与那个\"常驻 + 可关\"的折中点",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/pp9sRMVZT_J9-BnlE0fLew.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 10 篇 · Agent 2.0：主动型个人智能体（Dots / Muse）",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/jliEjj34MabRTYUdlG9CUQ.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 09 篇 · 形态实战：编码 / 研究 / 常驻 Agent",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/70pPej814n__UD9X5-EIiw.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 08 篇 · 工程化：从「能跑」到「能上生产」",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/MMyAGX47wzUTyOvn2UIiOQ.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/kiugA0qoesB-rq63jVvPvg.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 06 篇 · MCP 实战：给所有 Agent 写工具",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/I_g06rBcxoTcgYCWM8mSdQ.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 05 篇 · 多 Agent 团队实战：竞品调研系统",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/FjC9tNVlNqguQkgx8i4aUw.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/FLOwlRBpX0YKw6vH3xMO1w.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 03 篇 · Eino ADK 实战：多 Agent 与人工中断",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/Bl0mcQ5QUAwjOCDEVEeGbQ.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 02 篇 · Eino 编排实战：Chain / Graph / Workflow 与 ReAct Agent",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/VuSYvtB3TiwinmSCLnfFIQ.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 01 篇 · Eino 定位与组件：认识「队员」",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/0cBNA5AreL8jZiYhSIPEcg.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "Agent 实战地图",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/JTMv9hvNxtw0dWCf2etKnw.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 08 篇 · 工作流 vs Agent 与行业落地范式",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/oj-LM9PO0ntApblCgSWqjQ.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 07 篇 · Copilot vs Autopilot：人机协作的自主度谱系",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/bjJDFiBnRA9B5BhclpTHdA.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 06 篇 · 神经符号结合与 Agent 通用框架",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/1aAAyP12MtvKcwbB7iPOYg.html"
+  },
+  {
+   "date": "2026-10-02",
+   "title": "第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/6QLmVZnmXzOyyj-tdtXEFA.html"
+  },
+  {
+   "date": "2026-10-01",
+   "title": "第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/_iDMVx-6vjQet-V12_KEhA.html"
+  }
+ ]
+}
