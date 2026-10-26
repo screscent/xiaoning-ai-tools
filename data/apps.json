@@ -1810,5 +1810,32 @@
     "cat": "实用工具",
     "url": "https://5cuungt6g5.app.weavefox.cn",
     "subcat": "设计绘图"
+  },
+  {
+    "id": "2qepstqqxb",
+    "name": "中文简繁转换器",
+    "desc": "简繁双向逐字转换，含对照表与未收录提示",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://2qepstqqxb.app.weavefox.cn",
+    "subcat": "文本处理"
+  },
+  {
+    "id": "m9jsrwue9a",
+    "name": "年龄与生日精确计算器",
+    "desc": "周岁精确到天、总天数、虚岁与下次生日倒计时",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://m9jsrwue9a.app.weavefox.cn",
+    "subcat": "时间日期"
+  },
+  {
+    "id": "uise8bxjku",
+    "name": "家务轮值表生成器",
+    "desc": "成员与家务循环排班，输出表格与 CSV",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://uise8bxjku.app.weavefox.cn",
+    "subcat": "效率生活"
   }
 ]
