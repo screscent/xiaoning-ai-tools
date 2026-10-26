@@ -1891,5 +1891,32 @@
     "cat": "实用工具",
     "url": "https://7b3nvgweb7.app.weavefox.cn",
     "subcat": "效率生活"
+  },
+  {
+    "id": "j2tnfgxyyi",
+    "name": "ISO 周数与日期查询器",
+    "desc": "查询 ISO 周数、周起止日期与年内第几天",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://j2tnfgxyyi.app.weavefox.cn",
+    "subcat": "时间日期"
+  },
+  {
+    "id": "bnxqa6nsmb",
+    "name": "图片转 ASCII 艺术",
+    "desc": "图片转字符画，可选字符集与彩色 HTML 输出",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://bnxqa6nsmb.app.weavefox.cn",
+    "subcat": "图片处理"
+  },
+  {
+    "id": "atvxmfpmpa",
+    "name": "CSS 霓虹文字效果生成器",
+    "desc": "调色与发光强度生成霓虹 text-shadow，可复制下载",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://atvxmfpmpa.app.weavefox.cn",
+    "subcat": "设计绘图"
   }
 ]
