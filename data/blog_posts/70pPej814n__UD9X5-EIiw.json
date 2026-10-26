@@ -1,0 +1,191 @@
+{
+ "slug": "70pPej814n__UD9X5-EIiw",
+ "title": "第 09 篇 · 形态实战：编码 / 研究 / 常驻 Agent",
+ "author": "月牙寂",
+ "publish_time": "2026-10-02",
+ "source_url": "https://mp.weixin.qq.com/s/70pPej814n__UD9X5-EIiw",
+ "digest": "第 09 篇 · 形态实战：编码 / 研究 / 常驻 Agent",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 实战系列板块四·趋势第 09 篇——形态实战：把技术装进三个最值钱的产品形态——编码 Agent、研究 Agent、常驻 Agent（实战要点与搭建骨架）。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，内容依据官方发布。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 09 篇 · 形态实战：编码 / 研究 / 常驻 Agent"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "框架（01-03）、通用（04-07）、工程化（08）都是「技术」。本篇是「产品」：把技术装进三个被市场验证的形态——编码 Agent（最强落地，SWE-bench 74.9%）、研究 Agent（deep research，几分钟顶几小时）、常驻 Agent（7×24 后台干活）。每类给「形态定位 + 搭建骨架 + 实战要点」。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、编码 Agent（Coding Agent）"
+  },
+  {
+   "type": "p",
+   "text": "•形态：读代码库 → 定位问题 → 改代码 → 跑测试 → 提 PR——「编程同事」；"
+  },
+  {
+   "type": "p",
+   "text": "•代表：Claude Code、Codex、Qwen3-Coder、Cursor；"
+  },
+  {
+   "type": "p",
+   "text": "•搭建骨架（语言无关）：代码库索引（RAG）→ ReAct/Agentic 循环（读→改→测）→ 沙箱执行 → HITL（写文件/跑命令确认）；"
+  },
+  {
+   "type": "p",
+   "text": "•实战要点：长程保持：一个 issue 十几步——用 checkpoint/上下文压缩（agent-系列 03 篇）；沙箱隔离：代码执行必须隔离环境（跑炸不伤主库）；评测：SWE-bench 思路——用「真实 issue 修没修好」衡量（不是「像不像代码」）。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：编码 Agent =「结构化环境里最好做的 Agent」代码有语法、有测试——环境可验证性高，所以 Agent 落地最强。你的第一个生产 Agent 建议从编码/文档处理这种「可验证」场景切入。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、研究 Agent（Deep Research）"
+  },
+  {
+   "type": "p",
+   "text": "•形态：开放问题 → 自动规划 → 多轮搜索 → 来源筛选 → 带引用报告——「调研助理」；"
+  },
+  {
+   "type": "p",
+   "text": "•代表：ChatGPT Deep Research、Gemini Deep Research、Claude deep research；"
+  },
+  {
+   "type": "p",
+   "text": "•搭建骨架：推理模型（o1/R1 系做深度规划）→ 搜索工具（MCP/API）→ 引用记录 → 综合成文；"
+  },
+  {
+   "type": "p",
+   "text": "•实战要点：引用强制：报告必须带可点击来源——对抗幻觉第一防线（agent-系列 10 篇）；来源可信度：官方 > 二手 > 社区，模型打分；迭代校验：矛盾信息交叉验证（反思机制，agent-范式 03 篇）；成本控制：深度研究 token 消耗大——设搜索轮数上限。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、常驻 Agent（Resident / Background Agent）"
+  },
+  {
+   "type": "p",
+   "text": "•形态：长期在线——监听事件、周期巡检、按时触发，「一直在干活的员工」；"
+  },
+  {
+   "type": "p",
+   "text": "•代表：个人智能体雏形（Dots/Muse 的后台形态）、监控/报告/自动化 Agent；"
+  },
+  {
+   "type": "p",
+   "text": "•搭建骨架：触发（事件/定时/轮询）→ 循环（感知→决策→行动→校验）→ 状态持久化 → 健康检查 → 通知主人；"
+  },
+  {
+   "type": "p",
+   "text": "•实战要点（常驻是最难工程，agent-系列 10 篇详述）：幂等：同一事件触发两次不能重复副作用（发两次邮件）；去重：事件去重键 + 时间窗；停滞检测：多轮无进展要自我报告；预算：单轮 token/时间上限——常驻 = 无限轮 × 每轮都要便宜。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：三形态 = 三条不同的「护城河」编码靠「环境可验证」、研究靠「引用纪律」、常驻靠「工程可靠」。选形态 = 选你团队最难的坑——都值得做，但别一次全做。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1编码 Agent：读库→改码→跑测→提 PR；沙箱 + 长程保持 + SWE-bench 式评测——结构化环境最强落地。"
+  },
+  {
+   "type": "p",
+   "text": "2研究 Agent：规划→搜索→引用→报告；引用纪律 = 防幻觉第一防线。"
+  },
+  {
+   "type": "p",
+   "text": "3常驻 Agent：事件/定时/轮询触发 + 状态持久化 + 健康检查——最难的工程（幂等/去重/停滞检测）。"
+  },
+  {
+   "type": "p",
+   "text": "4选型：从「可验证场景」切入第一个生产 Agent。"
+  },
+  {
+   "type": "p",
+   "text": "5衔接：形态 = 技术（01-08）的产品化，趋势（10 篇）是形态的下一代。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 10 篇（板块四·趋势，系列收官）：Agent 2.0 个人智能体——形态的下一代：OpenAI Dots / Meta Muse——云端虚拟机 7×24、主动 Agent（自己判断该干什么、主动商量）、ChatGPT Space 协作空间。从「被动执行」到「主动共事」。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Claude Code：https://www.anthropic.com/news ｜ Qwen3-Coder：https://qwenlm.github.io/blog/qwen3-coder/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] ChatGPT Deep Research：https://openai.com/index/introducing-deep-research/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Gemini Deep Research：https://blog.google/products/gemini/"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-02 月绡凝 · 依据官方发布。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:14:59+0800"
+}

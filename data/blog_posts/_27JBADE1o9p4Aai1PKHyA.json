@@ -1,0 +1,311 @@
+{
+ "slug": "_27JBADE1o9p4Aai1PKHyA",
+ "title": "人机协同与安全：可控自主",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/_27JBADE1o9p4Aai1PKHyA",
+ "digest": "人机协同与安全：可控自主",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 原理系列板块二·机制第 07 篇（收尾）——人机协同与安全：Human-in-the-Loop（人工审批）、Guardrails（程序化护栏）、授权与审计——「可控自主」是生产级 Agent 的分水岭。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方文档为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 07 篇 · 人机协同与安全：可控自主"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "Agent 越能干越危险：全自动跑一个 30 步任务，第 3 步就理解错方向，会一路错到底。生产级 Agent 的共识是**「可控自主」**：该自动的全自动，该让人的交给人，该拦的用护栏拦死。本篇讲三层防线：人在环（HITL）、程序护栏（Guardrails）、授权与审计。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、人在环（Human-in-the-Loop，HITL）"
+  },
+  {
+   "type": "p",
+   "text": "1.1 原则"
+  },
+  {
+   "type": "p",
+   "text": "Agent 的自主度 = 可逆程度：可逆动作全自动；不可逆/高风险动作必须人工确认。"
+  },
+  {
+   "type": "p",
+   "text": "动作类型"
+  },
+  {
+   "type": "p",
+   "text": "自主度"
+  },
+  {
+   "type": "p",
+   "text": "例子"
+  },
+  {
+   "type": "p",
+   "text": "完全可逆"
+  },
+  {
+   "type": "p",
+   "text": "全自动"
+  },
+  {
+   "type": "p",
+   "text": "草稿生成、检索、计算"
+  },
+  {
+   "type": "p",
+   "text": "部分可逆"
+  },
+  {
+   "type": "p",
+   "text": "自动 + 事后审计"
+  },
+  {
+   "type": "p",
+   "text": "改文档（留版本可回滚）"
+  },
+  {
+   "type": "p",
+   "text": "不可逆/高风险"
+  },
+  {
+   "type": "p",
+   "text": "人工审批"
+  },
+  {
+   "type": "p",
+   "text": "删数据、付款、发邮件、发布上线"
+  },
+  {
+   "type": "p",
+   "text": "1.2 三种人工介入形态"
+  },
+  {
+   "type": "p",
+   "text": "1审批点（Approve）：执行高危险动作前弹「确认/拒绝」（如 LangGraph interrupt、Claude Code 的写文件确认）；"
+  },
+  {
+   "type": "p",
+   "text": "2澄清点（Clarify）：任务歧义时停下来问人（衔接「模糊输入先确认」思想）；"
+  },
+  {
+   "type": "p",
+   "text": "3接管点（Escalate）：失败重试超限、置信度不足 → 升级人工。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：HITL 不是「不信任」，是「分工」人负责「值不值得做、方向对不对」，Agent 负责「怎么做、做得快」。好的 HITL 只在关键节点打断，而不是每一步都烦人——打断密度是设计参数。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、Guardrails（程序化护栏）"
+  },
+  {
+   "type": "p",
+   "text": "•定义：独立于模型的确定性校验层——在 Agent 输入/输出/工具调用处拦截不合规行为；"
+  },
+  {
+   "type": "p",
+   "text": "•四类护栏：位置拦截内容输入侧注入攻击、越权指令、非法请求输出侧敏感信息外泄、危险指令生成工具侧越权调用、高危命令（白名单外拒绝）行为侧死循环、异常频率、超预算"
+  },
+  {
+   "type": "p",
+   "text": "•特点：用规则/校验器实现（不是模型自觉）——护栏必须确定性生效，不能「靠模型自觉」。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、授权与审计"
+  },
+  {
+   "type": "p",
+   "text": "3.1 授权（最小权限）"
+  },
+  {
+   "type": "p",
+   "text": "•Agent 以「任务所需最小权限」运行：读/写/删除分级；身份隔离（不以人全权执行）；"
+  },
+  {
+   "type": "p",
+   "text": "•工程形态：token 级授权、动作白名单、BFMCP（业务层封装，衔接 05 篇）——别把裸 SQL/裸 Shell 交给 Agent。"
+  },
+  {
+   "type": "p",
+   "text": "3.2 审计（可追溯）"
+  },
+  {
+   "type": "p",
+   "text": "•每个动作留痕：谁（Agent 身份）→ 何时 → 做了什么 → 结果如何；"
+  },
+  {
+   "type": "p",
+   "text": "•出问题可回放：工具调用链、决策日志、中间产物；"
+  },
+  {
+   "type": "p",
+   "text": "•与评测呼应：可观测性（tracing）是生产 Agent 的标配（衔接板块五框架的 LangSmith 等）。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、安全的分层总览（三层防线）"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "第 1 层 程序化护栏（Guardrails）——确定性拦截，不靠模型自觉"
+  },
+  {
+   "type": "p",
+   "text": "第 2 层 人在环（HITL） ——关键决策人工把关"
+  },
+  {
+   "type": "p",
+   "text": "第 3 层 授权 + 审计 ——权限最小化 + 全程可追溯"
+  },
+  {
+   "type": "p",
+   "text": "•类比安全工程：护栏 = 防火墙，HITL = 审批流，审计 = 日志审计——三层都缺一不可。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、工程实践要点"
+  },
+  {
+   "type": "p",
+   "text": "1护栏优先：先写「绝对不能做什么」的硬规则，再谈自动化范围；"
+  },
+  {
+   "type": "p",
+   "text": "2打断密度可调：按任务风险调 HITL 频率（草稿 0 打断，付款必须确认）；"
+  },
+  {
+   "type": "p",
+   "text": "3审计默认开：不要等出事才加日志——tracing 从第一天开；"
+  },
+  {
+   "type": "p",
+   "text": "4灰度自主度：先高确认模式跑通，再逐步放开自主——自主度是渐进参数，不是开关。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1HITL 三形态：审批点 / 澄清点 / 接管点——自主度 = 可逆程度。"
+  },
+  {
+   "type": "p",
+   "text": "2Guardrails 四位置：输入 / 输出 / 工具 / 行为——确定性生效，不靠模型自觉。"
+  },
+  {
+   "type": "p",
+   "text": "3授权：最小权限 + 身份隔离 + 业务层封装（BFMCP）。"
+  },
+  {
+   "type": "p",
+   "text": "4审计：动作全留痕 + 可回放——从第一天开 tracing。"
+  },
+  {
+   "type": "p",
+   "text": "5三层防线：护栏（防火墙）× HITL（审批流）× 审计（日志审计）。"
+  },
+  {
+   "type": "p",
+   "text": "6板块二收官：MCP（05 接工具）× 多 Agent（06 组团队）× 人机协同（07 控风险）= Agent 机制层三件套。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "七、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 08 篇（板块三·训练）：Agentic 模型训练——前面讲的都是「用通用模型搭 Agent」，但 2025 年出现了新方向：直接把模型训练成 Agent（agent RL）。function calling SFT → agent RL → 推理 × Agent（o1/R1/GPT-5）——模型从「会说话」到「被训练成会干活」的转变。"
+  },
+  {
+   "type": "p",
+   "text": "10SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] LangGraph Human-in-the-loop：https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] OpenAI Agents SDK Guardrails：https://openai.github.io/openai-agents-python/guardrails/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Claude Code 安全与权限：https://docs.anthropic.com/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] 各家 Agent 平台安全最佳实践（Microsoft Foundry / Google ADK）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方文档。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:49+0800"
+}

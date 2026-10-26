@@ -1,0 +1,283 @@
+{
+ "slug": "SmZuuZ1o4sxix-6EUoMxRg",
+ "title": "Agent 的行动系统：工具、代码与「手脚」",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/SmZuuZ1o4sxix-6EUoMxRg",
+ "digest": "Agent 的行动系统：工具、代码与「手脚」",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 原理系列板块一·构成第 04 篇——行动系统（Action）。Agent 的「手脚」：工具调用、代码执行、界面操作三大行动形态，以及行动安全（授权与权限最小化）。板块一收官篇。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方论文与工程文档为准。"
+  },
+  {
+   "type": "p",
+   "text": "01CODE"
+  },
+  {
+   "type": "p",
+   "text": "第 04 篇 · Agent 的行动系统：工具、代码与「手脚」"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "感知（01）看见、推理（02）想清楚、记忆（03）记得住——最后一步是行动：真的去查、去算、去改、去点。行动系统是 Agent 对世界产生影响的唯一通道，也是风险最大的通道（改错文件、删错数据、越权调用）。本篇讲三大行动形态与行动安全。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、三大行动形态"
+  },
+  {
+   "type": "p",
+   "text": "1. 工具调用（Function Calling / Tool Use）"
+  },
+  {
+   "type": "p",
+   "text": "•模型输出结构化指令「调用 X 工具 + 传参 Y」，框架执行并回传结果；"
+  },
+  {
+   "type": "p",
+   "text": "•工具分类：应用内函数：计算、转换、业务逻辑；外部 API/服务：搜索、数据库、邮件、支付；MCP 服务端：统一接口接入的一批工具（板块二 05 篇详讲）；"
+  },
+  {
+   "type": "p",
+   "text": "•关键设计：工具定义（名称+描述+参数 Schema）质量决定调用准确率——「描述清楚」比「工具多」更重要。"
+  },
+  {
+   "type": "p",
+   "text": "2. 代码执行（Code Execution）"
+  },
+  {
+   "type": "p",
+   "text": "•Agent 生成代码 → 在沙箱/解释器中运行 → 读输出 → 修正（如 Python 数据分析、脚本任务）；"
+  },
+  {
+   "type": "p",
+   "text": "•形态：内嵌解释器（ChatGPT Advanced Data Analysis）、CLI Agent（Claude Code 跑命令）、云端沙箱（隔离执行）；"
+  },
+  {
+   "type": "p",
+   "text": "•优势：通用性——代码是万能工具，不需要预先定义每个工具；"
+  },
+  {
+   "type": "p",
+   "text": "•风险：代码 = 最大权限——必须沙箱隔离 + 命令白名单（谁都不想 Agent 执行 rm -rf /）。"
+  },
+  {
+   "type": "p",
+   "text": "3. 界面操作（Computer Use / GUI Action）"
+  },
+  {
+   "type": "p",
+   "text": "•模型像人一样操作界面：点击、键入、滚动、拖拽（感知 01 篇的环境鸿沟在这里兑现）；"
+  },
+  {
+   "type": "p",
+   "text": "•代表：Claude Computer Use（OSWorld 61.4%）、手机 Agent（AutoGLM）、浏览器 Agent；"
+  },
+  {
+   "type": "p",
+   "text": "•行动原语：点击(x,y) / 输入文本 / 按键 / 滚动 / 等待界面变化；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：把「没有 API 的老软件」也纳入 Agent 可操作范围——通用性极高、稳定性偏低。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：行动三形态 = 从「精」到「广」的权衡工具调用最稳但需预定义；代码执行最通用但需沙箱；界面操作最「人化」但最易漂移。生产级 Agent 通常三者在不同环节混用（先 API，缺口用代码，最后界面兜底）。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、行动的安全：权限是最关键的设计"
+  },
+  {
+   "type": "p",
+   "text": "Agent 能做的事越多，失控代价越大。行动系统必须内建控制："
+  },
+  {
+   "type": "p",
+   "text": "机制"
+  },
+  {
+   "type": "p",
+   "text": "思路"
+  },
+  {
+   "type": "p",
+   "text": "授权最小化"
+  },
+  {
+   "type": "p",
+   "text": "Agent 只拥有任务所需的最小权限（读 vs 写 vs 删除分级）"
+  },
+  {
+   "type": "p",
+   "text": "人工审批（HITL）"
+  },
+  {
+   "type": "p",
+   "text": "高危险动作（删数据/付款/发布）必须人工确认（板块二 07 篇详讲）"
+  },
+  {
+   "type": "p",
+   "text": "沙箱隔离"
+  },
+  {
+   "type": "p",
+   "text": "代码执行/文件操作在隔离环境，失败不伤主系统"
+  },
+  {
+   "type": "p",
+   "text": "可回滚"
+  },
+  {
+   "type": "p",
+   "text": "检查点/快照——做错能退回（LangGraph checkpoint、Claude Code checkpoints）"
+  },
+  {
+   "type": "p",
+   "text": "审计留痕"
+  },
+  {
+   "type": "p",
+   "text": "每个动作记录日志（谁/何时/做了什么）——出问题可追溯"
+  },
+  {
+   "type": "p",
+   "text": "熔断"
+  },
+  {
+   "type": "p",
+   "text": "异常循环/越权尝试超阈值即停（对齐「行为偏离熔断」思想）"
+  },
+  {
+   "type": "p",
+   "text": "•核心原则：Agent 的权限不是「能给多少」，而是「最小需要多少」——行动越自由，护栏越要硬。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、行动系统的工程实践要点"
+  },
+  {
+   "type": "p",
+   "text": "1工具粒度：单个工具映射「自然意图」（建 issue/查库存/读文件），而非低层 API 操作——粒度太细定义爆炸、太粗模型难用；"
+  },
+  {
+   "type": "p",
+   "text": "2错误回传：工具失败要返回可理解的结构化错误（原因+建议），让模型能修正重试（衔接推理系统反思）；"
+  },
+  {
+   "type": "p",
+   "text": "3确定性兜底：能用脚本/流程解决的步骤别让模型「自由发挥」——确定性部分外包给代码；"
+  },
+  {
+   "type": "p",
+   "text": "4动作预算：限制最大步数/最大成本，防死循环烧 token。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1三形态：工具调用（稳·需定义）/ 代码执行（通用·需沙箱）/ 界面操作（人化·易漂移）——生产级混用。"
+  },
+  {
+   "type": "p",
+   "text": "2工具定义质量 > 工具数量：名称+描述+Schema 决定调用准确率。"
+  },
+  {
+   "type": "p",
+   "text": "3代码 = 最大权限：必须沙箱 + 白名单。"
+  },
+  {
+   "type": "p",
+   "text": "4安全六机制：授权最小化 / HITL / 沙箱 / 回滚 / 审计 / 熔断。"
+  },
+  {
+   "type": "p",
+   "text": "5核心原则：权限 = 最小需要；行动越自由护栏越硬。"
+  },
+  {
+   "type": "p",
+   "text": "6板块一收官：感知 × 推理 × 记忆 × 行动 = Agent 构成四件套（00 开篇回顾）。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 05 篇（板块二·机制开篇）：MCP 协议——行动系统的「手脚」如何统一接入：一个工具接一次、处处可用。三原语（Tools/Resources/Prompts）、客户端-服务端架构、以及从 Anthropic 开源到 Linux Foundation 托管、2026-07-28 无状态规范 RC 的标准化之路。MCP = Agent 的 HTTP。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] OpenAI Function Calling 文档：https://platform.openai.com/docs/guides/function-calling"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Claude Computer Use：https://www.anthropic.com/news/claude-4-computer-use"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Anthropic Tool Use / MCP 文档：https://modelcontextprotocol.io"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] AIOS 1.0 / LiteCUA（行动抽象）：https://arxiv.org/abs/2505.18829"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方论文与工程文档。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:55+0800"
+}

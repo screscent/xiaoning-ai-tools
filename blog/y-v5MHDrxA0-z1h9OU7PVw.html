@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 9 篇 · DeepSeek 使用方式：按原理选模式、配提示词、做 Agent | 小凝 AI 工具集</title>
+<meta name="description" content="第 9 篇 · DeepSeek 使用方式：按原理选模式、配提示词、做 Agent">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/y-v5MHDrxA0-z1h9OU7PVw.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 9 篇 · DeepSeek 使用方式：按原理选模式、配提示词、做 Agent | 小凝 AI 工具集">
+<meta property="og:description" content="第 9 篇 · DeepSeek 使用方式：按原理选模式、配提示词、做 Agent">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/y-v5MHDrxA0-z1h9OU7PVw.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 9 篇 · DeepSeek 使用方式：按原理选模式、配提示词、做 Agent", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/y-v5MHDrxA0-z1h9OU7PVw.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 9 篇 · DeepSeek 使用方式：按原理选模式、配提示词、做 Agent"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 9 篇 · DeepSeek 使用方式：按原理选模式、配提示词、做 Agent</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 9 篇 · DeepSeek 使用方式：按原理选模式、配提示词、做 Agent</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：DeepSeek 原理学习系列第 9 篇（使用篇）——按原理决定怎么用 DeepSeek。本系列前 8 篇讲「DeepSeek 是怎么造出来的」，本篇把那些原理翻译成使用决策：选哪个模型、开不开思考、上下文怎么用、提示词怎么写、Agent 怎么接。用户视角（网页/App）与开发者视角（API/部署）兼顾。以 DeepSeek 官方文档与发布说明为唯一事实源。</p>
+<p>免责声明：本文为学习与技术分享用途，价格、模型名、参数以 DeepSeek 官方最新文档为准（2026 年起模型与定价多次调整）。</p>
+<p>01SECTION</p>
+<p>第 9 篇 · DeepSeek 使用方式：按原理选模式、配提示词、做 Agent</p>
+<p>02SECTION</p>
+<p>导读：用法不是玄学，是原理的下游推论</p>
+<p>「怎么用 DeepSeek」和「DeepSeek 怎么造的」是同一件事的两面：</p>
+<p>•知道推理是 RL 涌现的，你就明白为什么要给「思考模式」留预算；</p>
+<p>•知道MoE 激活少、KV 缓存被压缩，你就明白为什么「上下文是便宜的输入」；</p>
+<p>•知道思考已融入工具调用，你就明白 Agent 场景该怎么配；</p>
+<p>•知道R1 对提示敏感、输出可读性曾有问题，你就明白提示词为什么要写清楚。</p>
+<p>本篇把系列 8 篇的原理，逐条映射成 6 个使用决策。</p>
+<p>一句话总结：用 DeepSeek = 回答三个问题——要不要思考？上下文放什么？要不要给它工具？</p>
+<p>03SECTION</p>
+<p>一、模型全景：两个正交的「开关」</p>
+<p>DeepSeek 的能力由两个正交开关组合而成：</p>
+<p>开关</p>
+<p>选项</p>
+<p>原理来源</p>
+<p>思考模式</p>
+<p>开（reasoner）/ 关（chat）</p>
+<p>R1 证明推理靠 RL 涌现，思考长度 = 测试时扩展预算（第 6 篇）</p>
+<p>规模档位</p>
+<p>V4-Pro（1.6T/49B 激活）/ V4-Flash（284B/13B 激活）</p>
+<p>MoE「总参做加法、激活做减法」的成本结构（第 3/5 篇）</p>
+<p>API 模型名对照（2026 年起）：</p>
+<p>官方模型名</p>
+<p>说明</p>
+<p>deepseek-v4-pro</p>
+<p>/ deepseek-v4-flash</p>
+<p>现行正式名；均可选思考/非思考；1M 上下文标配（第 8 篇）</p>
+<p>deepseek-chat</p>
+<p>/ deepseek-reasoner</p>
+<p>历史名（V3.2 时代的非思考/思考）；2026-07-24 起退役，路由到 V4-Flash</p>
+<p>网页 / App 端：对应「深度思考」开关——开 = 思考模式，关 = 非思考模式。</p>
+<p>💡 学习要点：先记住「思考是个旋钮」思考模式不是「更强的模型」，而是同一模型多花算力多想几步。所以使用原则是：按任务难度拧旋钮，而不是无脑全开。</p>
+<p>1.1 选型决策树</p>
+<p>mermaid</p>
+<p>flowchart TD</p>
+<p>T[&quot;任务来了&quot;] --&gt; D1{&quot;涉及复杂推理？\n（数学、算法、逻辑难题）&quot;}</p>
+<p>D1 --&gt;|是| D2{&quot;需要调工具或长上下文？&quot;}</p>
+<p>D1 --&gt;|否| NC[&quot;非思考模式 deepseek-chat\n快、省：问答 / 写作 / 日常&quot;]</p>
+<p>D2 --&gt;|是| AG[&quot;思考模式 + 工具调用\nAgent 场景（effort 调高）&quot;]</p>
+<p>D2 --&gt;|否| TH[&quot;思考模式 deepseek-reasoner\neffort 按难度 low / high / max&quot;]</p>
+<p>读图：先判「要不要思考」，再判「要不要工具」——两条判断定下大部分使用方案。</p>
+<p>04SECTION</p>
+<p>二、第一课｜思考模式：用「想多久」换「多准」</p>
+<p>2.1 原理</p>
+<p>•R1-Zero 证明：不教它怎么想，只奖励「想得对」，模型自己学会反思与验证（第 6 篇「Aha Moment」）；</p>
+<p>•OpenAI o1 开了「测试时扩展」的头：思考得越长，难题答得越准——思考长度就是一张可调的计算预算；</p>
+<p>•代价：思考模式 token 消耗显著更多、响应更慢。</p>
+<p>2.2 操作：任务难度 ↔ 思考强度（V4 起三档）</p>
+<p>思考强度 reasoning_effort</p>
+<p>适用任务</p>
+<p>例子</p>
+<p>low</p>
+<p>简单、有标准答案</p>
+<p>翻译、格式整理、常识问答、简单代码补全</p>
+<p>high</p>
+<p>（默认日常）</p>
+<p>一般推理 + 日常 Agent</p>
+<p>业务代码、数据分析、工具调用流程</p>
+<p>max</p>
+<p>难题/边界探索</p>
+<p>竞赛题、数学证明、复杂算法设计、长链 Agent 任务</p>
+<p>两个铁律：</p>
+<p>1简单任务别开思考：非思考模式又快又便宜，效果往往一样好；</p>
+<p>2难题才开 max：max 的 token 消耗是 low 的数倍，只给真正值得的任务。</p>
+<p>💡 学习要点：思考 = 计算预算，不是玄学开关官方甚至建议在 Agent 场景「复杂任务用思考模式 + max」。记住这个映射，你就知道为什么「同一个模型，换个档位就像换了个人」。</p>
+<p>05SECTION</p>
+<p>三、第二课｜上下文是「便宜的输入」</p>
+<p>3.1 原理</p>
+<p>•MoE 激活少：V4-Flash 每 token 只激活 13B——算力按激活量计费（第 3/5 篇）；</p>
+<p>•KV 被压缩：MLA → DSA → CSA/HCA，百万上下文从「显存炸弹」变「标配」（第 3/7/8 篇）；</p>
+<p>•成本结构：DeepSeek 一贯「输入便宜、输出贵、缓存命中更便宜」——把料一次性喂进去，比反复来回问省得多。</p>
+<p>3.2 操作：把上下文当「外挂记忆」</p>
+<p>1长文档一次塞入，不要分多轮：V4 支持 1M 上下文（官方服务标配）——合同、代码库、会议记录直接整份喂；</p>
+<p>2关键信息放近处：HCA 对远处 token 做 128 倍高压缩、只保留「核心摘要」——最重要的指令/事实放在 prompt 前部或结尾，别埋在中间；</p>
+<p>3开发者：开上下文缓存：同一批前缀重复使用时命中缓存，输入成本可再降一档（官方曾实现硬盘缓存降价 90%）；</p>
+<p>4别为省 token 砍上下文：砍掉关键背景反而导致多轮补救，总成本更高。</p>
+<p>💡 学习要点：Agent 场景尤其吃「读」有测算显示 Agent 代码任务的输入:输出可达约 154:1——这正是 V4.1 用 CED 结构「prefill 便宜、decode 精准」的原因（第 8 篇）。给 Agent 的料越全，它越不需要来回试错。</p>
+<p>06SECTION</p>
+<p>四、第三课｜会思考、还会用工具</p>
+<p>4.1 原理</p>
+<p>•V3.2 是首个把思考融入工具使用的模型：思考模式下也能多轮调用工具（第 7 篇）；</p>
+<p>•V4 起 Agent 能力开源最强：Agentic Coding 开源第一，官方已适配 Claude Code / OpenClaw / OpenCode / CodeBuddy 等主流 Agent 产品，并支持 Function Calling、JSON Output、FIM 补全（第 8 篇）。</p>
+<p>4.2 操作：Agent 场景怎么配</p>
+<p>mermaid</p>
+<p>flowchart LR</p>
+<p>U[&quot;用户任务&quot;] --&gt; M1[&quot;思考：拆解步骤&quot;]</p>
+<p>M1 --&gt; T1[&quot;调用工具（读文件 / 跑代码 / 搜网页）&quot;]</p>
+<p>T1 --&gt; O1[&quot;观察工具返回&quot;]</p>
+<p>O1 --&gt; M2[&quot;再思考：分析结果&quot;]</p>
+<p>M2 --&gt; T2[&quot;再次调用工具（按需多轮）&quot;]</p>
+<p>T2 --&gt; O2[&quot;观察结果&quot;]</p>
+<p>O2 --&gt; M3[&quot;收敛：给出最终答案&quot;]</p>
+<p>•开发者接入：工具调用：用 Function Calling（OpenAI 兼容接口）给模型注册工具；结构化输出：用 JSON Output 约束返回格式，避免自己解析自由文本；代码补全：用 FIM（中间补全）在编辑器/IDE 光标处补全，配合插件体验最佳；Agent 框架：直接接入官方适配过的 Claude Code / OpenClaw / OpenCode 等脚手架，不用从零造轮子。</p>
+<p>•用户侧：在 App/网页里勾选「深度思考 + 工具」，就能让模型读文件、算数、查资料后给出更准确的回答。</p>
+<p>💡 学习要点：给模型「环境」比给模型「答案」更重要V3.2 用 1800+ 环境、8.5 万指令合成数据训出泛化工具能力，且官方明示「未针对评测集特训」——所以把真实的工具与环境交给它，它才会发挥出训练时的泛化能力。</p>
+<p>07WHY</p>
+<p>五、提示词技巧：原理告诉你「为什么要写清楚」</p>
+<p>5.1 原理依据（来自官方论文与发布说明）</p>
+<p>1R1 对提示敏感（论文明确写出）：同样的问题，措辞不同结果差异大——提示词要「给足约束」；</p>
+<p>2格式奖励：推理模型被训练成把思考包在 &lt;think&gt;…&lt;/think&gt; 里（第 6 篇）——别要求它把思考过程当答案输出；</p>
+<p>3语言一致性奖励：R1 曾出现中英混杂（第 6 篇）——提示词别中英混写；</p>
+<p>4官方建议：V2.5 发布说明提示「场景效果变差时，重新调整 System Prompt 与 Temperature」。</p>
+<p>5.2 操作清单</p>
+<p>技巧</p>
+<p>做法</p>
+<p>对应原理</p>
+<p>给边界</p>
+<p>明确「输入是什么、输出格式是什么、约束是什么」</p>
+<p>提示敏感 → 靠约束稳住输出</p>
+<p>给示例（few-shot）</p>
+<p>复杂任务附 1-2 个输入输出样例</p>
+<p>思考是涌现的，样例给「形状」</p>
+<p>分角色/分步骤</p>
+<p>system 里写清角色与流程，user 里只给材料</p>
+<p>对齐人类偏好（第 4/6 篇后训练）</p>
+<p>控制 temperature</p>
+<p>事实/代码用低（0~0.3）；创意写作用高</p>
+<p>官方明确建议按场景调整</p>
+<p>别混语言</p>
+<p>用中文就全中文提问</p>
+<p>语言一致性奖励（第 6 篇）</p>
+<p>别要求「展示思考」</p>
+<p>要最终答案，不要它把 CoT 当正文</p>
+<p>格式奖励只认 &lt;think&gt; 标签</p>
+<p>💡 学习要点：思考模型 ≠ 会读心它强在「自己想清楚」，弱在「猜你含糊的意思」。把任务边界写清楚，是思考模型发挥上限的前提——这正是 R1 论文里「对提示敏感」的另一面。</p>
+<p>08SECTION</p>
+<p>六、场景速查表（模型 + 模式 + 参数）</p>
+<p>场景</p>
+<p>推荐</p>
+<p>模式</p>
+<p>备注</p>
+<p>日常问答 / 闲聊</p>
+<p>V4-Flash</p>
+<p>非思考</p>
+<p>快、省</p>
+<p>写作 / 翻译 / 润色</p>
+<p>V4-Pro</p>
+<p>非思考</p>
+<p>输出质量优先</p>
+<p>代码补全（IDE）</p>
+<p>V4-Flash</p>
+<p>非思考 + FIM</p>
+<p>插件场景低延迟</p>
+<p>业务代码 / 重构</p>
+<p>V4-Pro</p>
+<p>思考 high</p>
+<p>复杂逻辑先想后写</p>
+<p>数学 / 竞赛题 / 证明</p>
+<p>V4-Pro</p>
+<p>思考 max</p>
+<p>给它足够的思考预算</p>
+<p>长文档总结 / 合同审阅</p>
+<p>V4-Pro</p>
+<p>非思考 + 全文上下文</p>
+<p>1M 上下文 + 缓存</p>
+<p>Agent / 工具链任务</p>
+<p>V4-Pro 或 Flash</p>
+<p>思考 high/max + 工具</p>
+<p>接入框架，给足环境</p>
+<p>本地部署 / 隐私场景</p>
+<p>Distill 家族（1.5B~70B）</p>
+<p>—</p>
+<p>见第七节</p>
+<p>09SECTION</p>
+<p>七、成本与部署：原理决定「怎么省」</p>
+<p>7.1 计费结构（官方多轮调整，以现行价为准）</p>
+<p>•输出 token 比输入贵数倍 → 让模型「少说废话」：明确要求简洁、控制 max_tokens；</p>
+<p>•缓存命中输入几乎免费档 → 公共前缀复用（system prompt、长文档头部）；</p>
+<p>•思考模式按 token 计费 → effort 档位就是省钱档位。</p>
+<p>7.2 本地部署：Distill 家族</p>
+<p>•用 R1 蒸馏的 1.5B / 7B / 8B / 14B / 32B / 70B 稠密模型（基于 Qwen/Llama）可本地跑，14B 超越当时最强开源推理 QwQ-32B-Preview，32B/70B 对标 o1-mini（第 6 篇）；</p>
+<p>•原理启示：蒸馏 = 「大模型的推理模式灌给小模型」——本地小模型也能有像样的推理，适合隐私/离线场景；</p>
+<p>•MIT License，明确允许蒸馏——你甚至可以拿 DeepSeek 的输出蒸馏自己的专用小模型（官方协议支持）。</p>
+<p>10SECTION</p>
+<p>八、常见误区（原理纠偏）</p>
+<p>误区</p>
+<p>真相（原理依据）</p>
+<p>「思考模式 = 更强，全程开」</p>
+<p>思考是计算预算，简单任务非思考又快又好（第一节）</p>
+<p>「上下文越长越好，拼命塞」</p>
+<p>远处信息被 HCA 高压缩，关键信息要放近处（第三节）</p>
+<p>「让推理模型做多轮闲聊/角色扮演」</p>
+<p>R1 论文自述：函数调用/多轮/角色扮演/JSON 弱于通用模型（第五/六节）</p>
+<p>「提示词越短越好」</p>
+<p>对提示敏感 + 格式奖励 → 给足约束与格式反而更稳（第五节）</p>
+<p>「中英混着问没关系」</p>
+<p>语言一致性奖励：混写容易触发混输出（第五节）</p>
+<p>「API 贵是因为模型大」</p>
+<p>输出贵、缓存便宜、effort 可控——成本结构由 MoE 激活决定（第七节）</p>
+<p>11SECTION</p>
+<p>九、本篇要点（复习卡片）</p>
+<p>1两个开关：思考（reasoner/chat）× 规模（Pro/Flash）——先判难度，再拧旋钮。</p>
+<p>2思考 = 计算预算：reasoning_effort low/high/max 对应简单/日常/难题。</p>
+<p>3上下文是便宜的输入：1M 标配、一次喂全、关键信息放近处、开缓存。</p>
+<p>4思考已融入工具：Function Calling / JSON / FIM / 主流 Agent 框架直接接。</p>
+<p>5提示词要「给约束」：边界、格式、示例、temperature、单一语言。</p>
+<p>6成本三招：控输出长度、复用缓存、按难度调 effort。</p>
+<p>7本地 = Distill 家族：1.5B~70B 免费可商用，MIT 允许蒸馏。</p>
+<p>12SECTION</p>
+<p>参考资料</p>
+<p>•[官方] DeepSeek API 文档（模型名/定价/思考模式指南）：https://api-docs.deepseek.com/</p>
+<p>•[官方] Thinking Mode 指南：https://api-docs.deepseek.com/guides/thinking_mode</p>
+<p>•[官方] DeepSeek-R1 论文（提示敏感/局限）：https://arxiv.org/abs/2501.12948</p>
+<p>•[官方] DeepSeek-V4 预览版发布说明（1M 上下文/Agent）：https://api-docs.deepseek.com/zh-cn/news/news260424/</p>
+<p>•[官方] V4.1-Flash 技术报告（CED/Agent 成本）：https://arxiv.org/abs/2609.19969</p>
+<p>•[官方] V3.2 发布说明（思考融入工具/Function Calling）：https://api-docs.deepseek.com/zh-cn/news/news251201/</p>
+<p>•[参考] 本系列前 8 篇（原理出处）：见 README 总索引</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方文档与发布说明；价格与参数以官方最新为准。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/y-v5MHDrxA0-z1h9OU7PVw" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

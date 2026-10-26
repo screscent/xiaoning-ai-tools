@@ -1,0 +1,471 @@
+{
+ "slug": "DnYatBp6Afw402vs7yYGOg",
+ "title": "Agent 原理发展史",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/DnYatBp6Afw402vs7yYGOg",
+ "digest": "Agent 原理发展史",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 原理学习系列的开篇——从 ReAct（2022）到 MCP 标准化（2025-2026）的 Agent 演进时间线、关键技术概念与进化逻辑总结。供主人先建立「一张图」，再进入各板块分篇。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方论文与规范为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "00 开篇 · Agent 原理发展史"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "2022 年之前，AI 只会「回答问题」；2022 年 ReAct 论文让模型学会「边想边做」；2024-2025 年，工具协议（MCP）、推理模型（o1/R1）、Agent 专门训练（agent RL）三股力量汇合，Agent 从「demo 玩具」变成「生产基础设施」（57.3% 的组织已有生产环境 Agent）。本篇把这条主线拉出来：Agent 是什么、怎么演化的、现在站在哪。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、演进时间线总览"
+  },
+  {
+   "type": "p",
+   "text": "时间"
+  },
+  {
+   "type": "p",
+   "text": "里程碑"
+  },
+  {
+   "type": "p",
+   "text": "意义"
+  },
+  {
+   "type": "p",
+   "text": "2022-10"
+  },
+  {
+   "type": "p",
+   "text": "ReAct"
+  },
+  {
+   "type": "p",
+   "text": "思考-行动-观察交错循环——Agent 范式原点"
+  },
+  {
+   "type": "p",
+   "text": "2023-02"
+  },
+  {
+   "type": "p",
+   "text": "Toolformer"
+  },
+  {
+   "type": "p",
+   "text": "模型自举学用工具（无需人工标注工具数据）"
+  },
+  {
+   "type": "p",
+   "text": "2023-03"
+  },
+  {
+   "type": "p",
+   "text": "Reflexion"
+  },
+  {
+   "type": "p",
+   "text": "自我反思 + 情景记忆——「犯错后长记性」"
+  },
+  {
+   "type": "p",
+   "text": "2023-06"
+  },
+  {
+   "type": "p",
+   "text": "OpenAI Function Calling"
+  },
+  {
+   "type": "p",
+   "text": "结构化工具调用成为产品标准能力"
+  },
+  {
+   "type": "p",
+   "text": "2023-04~09"
+  },
+  {
+   "type": "p",
+   "text": "多 Agent（MetaGPT / CAMEL / Generative Agents）"
+  },
+  {
+   "type": "p",
+   "text": "角色分工协作、社会模拟"
+  },
+  {
+   "type": "p",
+   "text": "2024-05"
+  },
+  {
+   "type": "p",
+   "text": "GPT-4o"
+  },
+  {
+   "type": "p",
+   "text": "多模态感知（看/听/说）进入 Agent"
+  },
+  {
+   "type": "p",
+   "text": "2024-10"
+  },
+  {
+   "type": "p",
+   "text": "Claude Computer Use"
+  },
+  {
+   "type": "p",
+   "text": "模型自己操作电脑（OSWorld 战场）"
+  },
+  {
+   "type": "p",
+   "text": "2024-09~11"
+  },
+  {
+   "type": "p",
+   "text": "o1 / MCP 开源"
+  },
+  {
+   "type": "p",
+   "text": "推理模型当 Agent 大脑；工具接入协议诞生（Anthropic）"
+  },
+  {
+   "type": "p",
+   "text": "2025-04"
+  },
+  {
+   "type": "p",
+   "text": "A2A（Google）/ o3 全工具"
+  },
+  {
+   "type": "p",
+   "text": "智能体间通信协议；推理模型自主调用全工具"
+  },
+  {
+   "type": "p",
+   "text": "2025-07"
+  },
+  {
+   "type": "p",
+   "text": "Qwen3-Coder（agent RL）"
+  },
+  {
+   "type": "p",
+   "text": "Agentic 训练"
+  },
+  {
+   "type": "p",
+   "text": "：RL 训模型「会规划+会用工具」"
+  },
+  {
+   "type": "p",
+   "text": "2025-08"
+  },
+  {
+   "type": "p",
+   "text": "GPT-5"
+  },
+  {
+   "type": "p",
+   "text": "编码/Agent 任务 SOTA；工具链长程稳定执行"
+  },
+  {
+   "type": "p",
+   "text": "2025-10"
+  },
+  {
+   "type": "p",
+   "text": "LangGraph 1.0 GA"
+  },
+  {
+   "type": "p",
+   "text": "图编排框架企业化（Uber/LinkedIn/Klarna/JP Morgan）"
+  },
+  {
+   "type": "p",
+   "text": "2025-12"
+  },
+  {
+   "type": "p",
+   "text": "MCP 捐 Linux Foundation（AAIF）"
+  },
+  {
+   "type": "p",
+   "text": "工具协议去单厂商化，走向行业标准"
+  },
+  {
+   "type": "p",
+   "text": "2026-03"
+  },
+  {
+   "type": "p",
+   "text": "MCP 月下载 97M、公共服务器 9400+"
+  },
+  {
+   "type": "p",
+   "text": "标准落地：一次接入、处处可用"
+  },
+  {
+   "type": "p",
+   "text": "2026-07"
+  },
+  {
+   "type": "p",
+   "text": "MCP 2026-07-28 规范 RC"
+  },
+  {
+   "type": "p",
+   "text": "无状态核心、Tasks 长任务、MCP Apps、OAuth 对齐"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、四条主线"
+  },
+  {
+   "type": "p",
+   "text": "1构成线（单 Agent 内部）：感知 → 推理 → 记忆 → 行动四系统从「提示技巧」逐步变成「系统架构」——Agent 不是魔法，是可拆解的组合件。"
+  },
+  {
+   "type": "p",
+   "text": "2规模线（Agent 外部）：单 Agent 循环 → 多 Agent 角色协作 → 平台化框架（图/角色/交接三范式）——「一个大脑」到「一支团队」。"
+  },
+  {
+   "type": "p",
+   "text": "3协议线（连接标准）：各家私接工具 → Function Calling 统一 API → MCP 统一协议 → Linux Foundation 托管 → A2A 智能体互联——工具接入从私有变成基础设施。"
+  },
+  {
+   "type": "p",
+   "text": "4模型线（能力底座）：通用模型 + prompt 硬套 → 专门 Agent 训练（agent RL）→ 推理模型 × 工具链（测试时扩展）——模型从「会说话」到「被训练成会干活」。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、关键技术概念详解"
+  },
+  {
+   "type": "p",
+   "text": "1. ReAct 循环（一切 Agent 的原型）"
+  },
+  {
+   "type": "p",
+   "text": "•三拍子：Thought（想下一步）→ Action（调用工具/API）→ Observation（读结果）→ 回到 Thought；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：把「推理」和「行动」交替编排——模型不再是「一次回答」，而是「逐步完成任务」；"
+  },
+  {
+   "type": "p",
+   "text": "•后续所有 Agent 框架（LangGraph/OpenAI SDK/Claude Agent SDK）本质都是这个循环的工程化。"
+  },
+  {
+   "type": "p",
+   "text": "2. 工具调用 / Function Calling"
+  },
+  {
+   "type": "p",
+   "text": "•模型输出结构化指令「调用哪个工具 + 传什么参数」，框架负责执行并回传结果；"
+  },
+  {
+   "type": "p",
+   "text": "•2023-06 OpenAI 把它做成 API 标准后，「工具调用」成为所有 LLM 的基础能力（各家对齐）；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：模型从「知识回忆器」变成「能力调度器」。"
+  },
+  {
+   "type": "p",
+   "text": "3. Reflexion 与反思机制"
+  },
+  {
+   "type": "p",
+   "text": "•任务失败后生成自然语言反思（哪里错了、怎么改），存入情景记忆，下次行动参考；"
+  },
+  {
+   "type": "p",
+   "text": "•本质：「无语义梯度的强化学习」（verbal RL）——不调权重，靠「长记性」变强；"
+  },
+  {
+   "type": "p",
+   "text": "•进阶：MIRROR 等把反思从「行动后」扩展到「行动前」（预判不良结果）。"
+  },
+  {
+   "type": "p",
+   "text": "4. MCP（Model Context Protocol）"
+  },
+  {
+   "type": "p",
+   "text": "•2024-11 Anthropic 开源：统一「Agent 客户端 ↔ 工具服务端」的连接协议；"
+  },
+  {
+   "type": "p",
+   "text": "•三原语：Tools（可执行动作）/ Resources（可读数据）/ Prompts（可复用模板）；"
+  },
+  {
+   "type": "p",
+   "text": "•标准化路径：ChatGPT（2025-04）→ 各家跟进 → 2025-12 捐 Linux Foundation AAIF → 2026-03 月下载 97M / 公共服务器 9400+；"
+  },
+  {
+   "type": "p",
+   "text": "•2026-07-28 规范 RC：无状态核心（普通 HTTP 可横向扩展）、Tasks 扩展（长任务）、MCP Apps（服务端渲染 UI）、OAuth 对齐授权。"
+  },
+  {
+   "type": "p",
+   "text": "5. 多 Agent 协作三范式"
+  },
+  {
+   "type": "p",
+   "text": "•图编排（LangGraph）：显式状态图，节点=步骤、边=转移，精确控制循环/重试/审批；"
+  },
+  {
+   "type": "p",
+   "text": "•角色制（CrewAI）：定义多个角色（研究员/写手/审查）组成「团队」协作；"
+  },
+  {
+   "type": "p",
+   "text": "•交接制（OpenAI Agents SDK）：主 Agent 把子任务 handoff 给专门子 Agent；"
+  },
+  {
+   "type": "p",
+   "text": "•共同点：都是「多 Agent 通信 + 任务分发 + 结果聚合」的工程化。"
+  },
+  {
+   "type": "p",
+   "text": "6. Agentic 模型训练（agent RL）"
+  },
+  {
+   "type": "p",
+   "text": "•不止让模型「会调用工具」，而是 RL 训练它自主规划长任务链（Qwen3-Coder：agent RL + 480B MoE）；"
+  },
+  {
+   "type": "p",
+   "text": "•奖励信号：可验证结果（代码跑通、任务完成）——与 R1 的推理 RL 同源（llm-理论 05）；"
+  },
+  {
+   "type": "p",
+   "text": "•方向：模型原生「会想 + 会干」，而非靠外层 prompt 拼。"
+  },
+  {
+   "type": "p",
+   "text": "7. 推理模型 × Agent"
+  },
+  {
+   "type": "p",
+   "text": "•o1/R1 让「思考链」可训练、可调深度；GPT-5 把推理与工具链合一；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：「想多深」与「干多久」都成为可调资源——测试时扩展与长程 Agent 合流。"
+  },
+  {
+   "type": "p",
+   "text": "8. 评测与安全"
+  },
+  {
+   "type": "p",
+   "text": "•基准：SWE-bench（编码）、OSWorld（计算机使用，1 年 12%→66.3%）、WebArena（浏览器）、Tau2-bench（工具链）、AgentBench；"
+  },
+  {
+   "type": "p",
+   "text": "•安全：HITL（人工审批）、Guardrails（程序化护栏）、授权最小化——Agent 越强，控制面越重要。"
+  },
+  {
+   "type": "p",
+   "text": "∞CONCLUSION"
+  },
+  {
+   "type": "p",
+   "text": "四、进化逻辑总结（学习重点）"
+  },
+  {
+   "type": "p",
+   "text": "1从「提示」到「系统」：ReAct 是提示技巧，LangGraph/MCP 是运行时与协议——Agent 已变成「工程」而非「咒语」。"
+  },
+  {
+   "type": "p",
+   "text": "2从「单」到「多」：单 Agent 循环 → 多 Agent 团队 → 平台化——复杂度靠分工消化。"
+  },
+  {
+   "type": "p",
+   "text": "3从「私有」到「标准」：工具接入从各家私接 → MCP/A2A 行业标准（Linux Foundation 托管）——基础设施化。"
+  },
+  {
+   "type": "p",
+   "text": "4从「通用」到「专门」：通用模型硬套 prompt → agent RL 专门训练——Agent 能力可被制造。"
+  },
+  {
+   "type": "p",
+   "text": "5从「会做」到「做对」：能做（66.3% OSWorld）≠ 可靠——评测、安全、可观测性成为新战场。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、资料源（供深入阅读）"
+  },
+  {
+   "type": "p",
+   "text": "•ReAct：https://arxiv.org/abs/2210.03629 ｜ Reflexion：https://arxiv.org/abs/2303.11366"
+  },
+  {
+   "type": "p",
+   "text": "•MCP 规范：https://modelcontextprotocol.io ｜ MCP 捐赠公告：https://blog.modelcontextprotocol.io/"
+  },
+  {
+   "type": "p",
+   "text": "•LangGraph 1.0：https://blog.langchain.com/langgraph-1-0/"
+  },
+  {
+   "type": "p",
+   "text": "•From Language to Action（Agent 综述 2508.17281）｜ LLM Agents Survey（2510.09244 相关）"
+  },
+  {
+   "type": "p",
+   "text": "•学习路径：本开篇 → 板块一构成（01-04）→ 板块二机制（05-07）→ 板块三训练（08）→ 板块四应用（09-10）→ 板块五平台（11）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方论文与协议规范。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:04+0800"
+}

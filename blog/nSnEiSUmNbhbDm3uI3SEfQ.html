@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent 的感知系统：眼睛、耳朵与「读懂环境」 | 小凝 AI 工具集</title>
+<meta name="description" content="Agent 的感知系统：眼睛、耳朵与「读懂环境」">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/nSnEiSUmNbhbDm3uI3SEfQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agent 的感知系统：眼睛、耳朵与「读懂环境」 | 小凝 AI 工具集">
+<meta property="og:description" content="Agent 的感知系统：眼睛、耳朵与「读懂环境」">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/nSnEiSUmNbhbDm3uI3SEfQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agent 的感知系统：眼睛、耳朵与「读懂环境」", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/nSnEiSUmNbhbDm3uI3SEfQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "Agent 的感知系统：眼睛、耳朵与「读懂环境」"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>Agent 的感知系统：眼睛、耳朵与「读懂环境」</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">Agent 的感知系统：眼睛、耳朵与「读懂环境」</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 原理系列板块一·构成第 01 篇——感知系统（Perception）。Agent 的「眼睛耳朵」：文本、多模态、结构化数据与工具感知，以及「环境语义鸿沟」这个根本难题。衔接 llm-基础理论 06（多模态）。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方论文为准。</p>
+<p>01SECTION</p>
+<p>第 01 篇 · Agent 的感知系统：眼睛、耳朵与「读懂环境」</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>Agent 要「做事」先要「看见」：读文件、看截图、听语音、查 API——把外部世界的状态变成模型能理解的输入。感知（Perception）是四大系统（感知/推理/记忆/行动）的第一环。本篇讲感知的四种形态、为什么「看懂环境」比想象中难（语义鸿沟），以及 2025-2026 年的解法方向。</p>
+<p>03SECTION</p>
+<p>一、感知系统的四种形态</p>
+<p>1. 文本感知（纯 LLM 时代）</p>
+<p>•输入即 prompt 文本：任务描述、文档、日志、网页 HTML、API 返回；</p>
+<p>•局限：只能「读字」，看不见图片、听不懂语音、摸不到界面；</p>
+<p>•适用：文档处理、文本分析类 Agent。</p>
+<p>2. 多模态感知（MM-LLM 时代）</p>
+<p>•模型直接吃图像/音频/视频：看截图、读图表、听会议、看操作界面；</p>
+<p>•代表：GPT-4V/4o、Gemini（原生多模态）、Claude（视觉输入）、Qwen-VL；</p>
+<p>•意义：Agent 的感知从「纯文本世界」扩展到「真实世界」——看屏幕才能操作屏幕（Computer Use 的前提）。</p>
+<p>3. 结构化感知（数据与工具）</p>
+<p>•通过 API / 数据库 / 文件系统拿结构化数据：表结构、Schema、JSON、代码库索引；</p>
+<p>•工具型感知：MCP 的 Resources（可读数据）就是这类感知的标准化形态；</p>
+<p>•意义：Agent 不靠「猜」，靠「查」——数据即感知（RAG 也是感知的一种：检索外部知识）。</p>
+<p>4. 环境感知（界面与状态）</p>
+<p>•操作界面类 Agent 需要「理解环境状态」：网页 DOM、桌面截图、手机 UI 树、应用状态；</p>
+<p>•代表：Claude Computer Use、AutoGLM（手机）、浏览器 Agent（WebArena 场景）；</p>
+<p>•感知粒度：截图（视觉）+ UI 树/可访问性树（结构化）双通道。</p>
+<p>💡 学习要点：感知 =「把世界变成上下文」四种形态的共同本质：把外部状态翻译成模型能读的 token/上下文。感知做得好不好，直接决定 Agent「看见的世界」是否真实——感知错一步，后面推理全错。</p>
+<p>04SECTION</p>
+<p>二、核心难题：环境语义鸿沟（Semantic Gap）</p>
+<p>2.1 问题</p>
+<p>人类操作电脑靠「眼睛 + 直觉」（看到图标就知道点哪）；模型看到的是像素/HTML，「界面长什么样」和「模型理解成什么」之间存在鸿沟：</p>
+<p>•截图里的一堆像素 → 模型要「翻译」成「这是一个按钮，点击可提交」；</p>
+<p>•复杂软件（IDE/Excel/设计工具）界面高度动态，截图理解容易出错。</p>
+<p>2.2 三类解法</p>
+<p>路线</p>
+<p>思路</p>
+<p>代表</p>
+<p>模型侧强化</p>
+<p>用大量「截图→操作」数据训练专门的视觉操作模型</p>
+<p>Claude Computer Use、GPT-4o（agentic 视觉）</p>
+<p>框架侧模块化</p>
+<p>加 grounding（定位元素）/ search（找按钮）/ reflection（校验）专用模块</p>
+<p>各 CUA 框架</p>
+<p>环境侧改造把环境本身「翻译」成模型友好形态</p>
+<p>——电脑/软件作为 MCP 服务端暴露语义化接口</p>
+<p>AIOS 1.0 / LiteCUA（Computer as MCP Server）</p>
+<p>2.3 环境侧改造为什么是趋势</p>
+<p>•LiteCUA 思路：不让模型硬看截图，而是把操作系统封装成 MCP 服务端，暴露「打开应用/点击按钮/读取窗口」等语义操作——界面复杂度与决策复杂度解耦；</p>
+<p>•意义：与其让模型适应环境，不如让环境适应模型——语义鸿沟从「模型问题」变成「环境设计问题」。</p>
+<p>💡 学习要点：语义鸿沟的三种解法=模型强、框架补、环境改2025-2026 的趋势是三管齐下，但「环境侧改造」（Computer/MCP Server、软件即接口）是降低整体难度的杠杆解——这也是 MCP 生态火热的原因之一。</p>
+<p>05SECTION</p>
+<p>三、感知的工程实践要点</p>
+<p>1多通道融合：截图（视觉）+ UI 树（结构）双通道，比单靠截图稳（AutoGLM/浏览器 Agent 通用做法）；</p>
+<p>2感知粒度：高分辨率截图 + 区域定位（grounding）——「看得清」和「点得准」是两件事；</p>
+<p>3感知缓存与摘要：长视频/长文档先摘要再进上下文——感知也要控制 token 成本（衔接 llm-理论 04）；</p>
+<p>4感知即工具：把「检索/查库/读文件」封装成工具——感知行为本身也可由模型调度。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1四形态：文本 / 多模态 / 结构化数据 / 环境界面——都是「把世界翻译成上下文」。</p>
+<p>2多模态是分水岭：会看图 → 才能操作屏幕（Computer Use/手机 Agent 的前提）。</p>
+<p>3语义鸿沟：界面像素 ≠ 模型理解——感知错则全错。</p>
+<p>4三解法：模型强化（专用 CUA 模型）/ 框架补（grounding 模块）/ 环境改造（Computer as MCP Server）。</p>
+<p>5工程要点：多通道融合、感知粒度、感知缓存、感知即工具。</p>
+<p>07SECTION</p>
+<p>五、下一篇预告</p>
+<p>第 02 篇：Agent 的推理系统——看见之后要「想」。任务分解（拆成子步骤）、规划（多方案选择）、反思（Reflexion/MIRROR）、以及推理模型（o1/R1）当大脑。ReAct 的「Thought」如何从提示技巧变成可训练、可验证的系统？</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] ReAct（Yao et al., 2022）：https://arxiv.org/abs/2210.03629</p>
+<p>•[官方] GPT-4o / Claude Computer Use / AutoGLM 发布说明（见各家族系列）</p>
+<p>•[官方] AIOS 1.0 / LiteCUA（Rutgers, 2025）：https://arxiv.org/abs/2505.18829</p>
+<p>•[参考] LLM Agents Survey（感知/推理/记忆/行动四系统分类）：https://arxiv.org/abs/2510.09244</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方论文。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/nSnEiSUmNbhbDm3uI3SEfQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 7 篇 · DeepSeek-V3.2：稀疏注意力 + 会「用工具」的思考 | 小凝 AI 工具集</title>
+<meta name="description" content="第 7 篇 · DeepSeek-V3.2：稀疏注意力 + 会「用工具」的思考">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/F10z_c4kEoZt29Okk3Z61g.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 7 篇 · DeepSeek-V3.2：稀疏注意力 + 会「用工具」的思考 | 小凝 AI 工具集">
+<meta property="og:description" content="第 7 篇 · DeepSeek-V3.2：稀疏注意力 + 会「用工具」的思考">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/F10z_c4kEoZt29Okk3Z61g.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 7 篇 · DeepSeek-V3.2：稀疏注意力 + 会「用工具」的思考", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/F10z_c4kEoZt29Okk3Z61g.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 7 篇 · DeepSeek-V3.2：稀疏注意力 + 会「用工具」的思考"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 7 篇 · DeepSeek-V3.2：稀疏注意力 + 会「用工具」的思考</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 7 篇 · DeepSeek-V3.2：稀疏注意力 + 会「用工具」的思考</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：DeepSeek 原理学习系列第 7 篇——DeepSeek-V3.2 系列的原理性深度分析：稀疏注意力（DSA）与「思考融入工具使用」的 Agent 强化。以官方论文《DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models》（arXiv:2512.02556）与官方发布说明（2025-09 V3.2-Exp / 2025-12 正式版）为唯一事实源，参考社区高质量解读整理，供主人系统学习，亦可作为技术文章对外分享。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以 DeepSeek 官方论文为准；个别三方解读数据如有出入，以官方为准。</p>
+<p>01SECTION</p>
+<p>第 7 篇 · DeepSeek-V3.2：稀疏注意力 + 会「用工具」的思考</p>
+<p>02SECTION</p>
+<p>导读：2025 年的「小步快跑」与最后合流</p>
+<p>2025 年是 DeepSeek 的「迭代年」：V3 架构不动，一路小版本累加——V3-0324（2 月，V3 更新）、R1-0528（5 月，R1 更新）、V3.1-Terminus（6 月/9 月更新，缓解中英混杂、优化 Code/Search Agent、统一思考/非思考模型），再到 V3.2-Exp（9 月）与 V3.2 正式版（12 月）。</p>
+<p>V3.2 系列干了三件大事：</p>
+<p>1DSA 稀疏注意力：把注意力复杂度从 O(L²) 压到 O(L·k)——长上下文从此「算得起」；</p>
+<p>2思考融入工具：第一个「边思考边调用工具」的模型，Agent 能力站上开源最高点；</p>
+<p>3可扩展 RL：后训练算力投入超过预训练的 10%，配得上「思考」的代价。</p>
+<p>而 V3.2-Speciale 直接把推理推到开源天花板：IMO / CMO / ICPC / IOI 四块金牌，ICPC 成绩相当于人类选手第二名。</p>
+<p>一句话总结：V3.2 同时补齐了效率、推理、Agent 三块短板，是 V3 时代的收官之作。</p>
+<p>03SECTION</p>
+<p>一、背景：开源与闭源的差距，反而在扩大</p>
+<p>V3.2 技术报告罕见地坦诚：开源模型仍在进步，但闭源（Anthropic/DeepMind/OpenAI）进步更快，性能差距不缩反扩。报告把开源模型的短板归结为三点：</p>
+<p>1注意力低效：仍依赖标准稠密注意力，长序列效率受限；</p>
+<p>2后训练投入不足：高难度任务上的「思考训练」算力太少；</p>
+<p>3Agent 泛化滞后：工具使用、指令跟随与闭源专业模型差距明显。</p>
+<p>V3.2 的三个突破，正好逐一对应这三点。</p>
+<p>04SECTION</p>
+<p>二、DSA：DeepSeek 稀疏注意力（V3.2-Exp 引入）</p>
+<p>2.1 问题：MLA 压缩了缓存，但注意力矩阵仍是稠密的</p>
+<p>第 3 篇讲过，MLA 把 KV 缓存压缩了 93.3%——缓存变小了。但每个 query 仍要跟所有历史 token 算注意力，复杂度 O(L²)。序列一长（128K、上百万 token），这个平方项就压垮算力与延迟。</p>
+<p>2.2 方案：Lightning Indexer + Top-k 选择</p>
+<p>DSA 由两个组件构成：</p>
+<p>组件</p>
+<p>作用</p>
+<p>闪电索引器（Lightning Indexer）</p>
+<p>一个轻量打分模块，快速估算「当前 query 与每个历史 token 的相关性」；复用 MLA 的压缩 latent，成本极低</p>
+<p>细粒度 Top-k 选择</p>
+<p>每个 query 只对最相关的 k 个 token（默认 2048）做注意力计算</p>
+<p>效果：复杂度从 O(L²) → O(L·k)（k 远小于 L）。长上下文下，训练与推理成本大幅下降——V3.2-Exp 发布当天 API 就降价 50% 以上。</p>
+<p>💡 学习要点：DSA = 内容感知的动态稀疏固定稀疏（如滑动窗口）会漏掉远处重要信息。DSA 的索引器是学出来的——它「知道」哪些历史 token 值得看，因此是内容感知的、动态的稀疏。</p>
+<p>2.3 两阶段训练（关键工程）</p>
+<p>阶段</p>
+<p>做法</p>
+<p>目的</p>
+<p>① 稠密预热（Dense Warm-up）</p>
+<p>保持稠密注意力，冻结主模型、只训索引器；用主注意力分布做「老师」，KL 散度对齐，约 1000 步 / 21 亿 token</p>
+<p>让索引器学会「模仿」真实注意力的选择</p>
+<p>② 稀疏训练（Sparse Training）</p>
+<p>打开 top-k 稀疏，全体参数一起训；每 query 选 2048 个 KV，约 15000 步 / 9437 亿 token</p>
+<p>让主模型适应稀疏模式</p>
+<p>对比验证：V3.2-Exp 与 V3.1-Terminus 训练配置刻意保持一致——分数差异只可能来自注意力机制本身。两个月用户实测「无显著劣化」，验证了 DSA 有效。</p>
+<p>💡 学习要点：先教索引器、再放开模型「让选择器先学会选择，再让主模型适应稀疏」——这个两阶段解耦，避免了稀疏引入时的训练崩溃，是 DSA 落地成功的关键。</p>
+<p>05SECTION</p>
+<p>三、思考融入工具：Agent 能力跃升</p>
+<p>3.1 突破点</p>
+<p>过往的推理模型「思考模式下不能用工具」。DeepSeek-V3.2 是首个将思考融入工具使用的模型——思考模式与非思考模式都支持工具调用：模型可以多轮「思考 + 调工具」，最终给出更准确、更详尽的回答。</p>
+<p>3.2 做法：大规模 Agent 数据合成</p>
+<p>•冷启动：沿用 V3 的方法，把「推理」与「工具使用」统一进同一条轨迹；</p>
+<p>•大规模合成：构建 1800+ 个环境、85,000+ 条复杂指令，生成大量「难解答、易验证」的强化学习任务；</p>
+<p>•官方强调：未针对评测集特殊训练——能力来自泛化而非「背题」。</p>
+<p>3.3 成绩</p>
+<p>Agent 工具调用评测上，V3.2 达到开源模型最高水平，大幅缩小与闭源差距。</p>
+<p>06SECTION</p>
+<p>四、可扩展 RL：配得上「思考」的算力投入</p>
+<p>•后训练（主要是 RL）计算预算超过预训练成本的 10%——开源模型里罕见的大手笔；</p>
+<p>•GRPO 进一步改进：无偏 KL 估计（修正原估计的偏差）、离策略序列掩码等，让大规模 RL 更稳。</p>
+<p>💡 学习要点：为什么开源差在「后训练」预训练开源大家都能做；差距在「思考训练」这种烧后训练算力的环节。DeepSeek 敢在开源模型上投入 &gt;10% 的后训练预算，是 V3.2 追平 GPT-5 的底气。</p>
+<p>07SECTION</p>
+<p>五、双轨模型：V3.2 与 V3.2-Speciale</p>
+<p>维度</p>
+<p>V3.2（标准版）</p>
+<p>V3.2-Speciale（研究增强版）</p>
+<p>定位</p>
+<p>平衡推理与输出长度，日常使用</p>
+<p>把开源推理推向极致</p>
+<p>推理成绩</p>
+<p>达 GPT-5 水平，略低于 Gemini-3.0-Pro</p>
+<p>媲美 Gemini-3.0-Pro</p>
+<p>数学增强</p>
+<p>—</p>
+<p>融合 DeepSeek-Math-V2 定理证明能力</p>
+<p>工具调用</p>
+<p>支持思考模式工具调用</p>
+<p>不支持（纯推理）</p>
+<p>输出</p>
+<p>比 Kimi-K2-Thinking 短得多，省算力</p>
+<p>长思考，token 消耗显著多</p>
+<p>荣誉</p>
+<p>—</p>
+<p>IMO/CMO/ICPC/IOI 2025 金牌</p>
+<p>；ICPC≈人类第 2、IOI≈人类第 10</p>
+<p>💡 学习要点：同一底座、两种「思考预算」日常任务用 V3.2 的平衡思考（快、省），极限难题用 Speciale 的长思考（贵、强）——思考长度 = 可调的计算预算，这正是「测试时扩展」的落地形态。</p>
+<p>08SECTION</p>
+<p>六、本篇要点（复习卡片）</p>
+<p>1V3 系列 2025 迭代路线：V3-0324 → R1-0528 → V3.1-Terminus → V3.2-Exp → V3.2 正式版——架构不动、能力累加。</p>
+<p>2开源三大短板（官方自述）：注意力低效、后训练投入不足、Agent 泛化滞后——V3.2 逐一补齐。</p>
+<p>3DSA：Lightning Indexer + Top-k 选择，O(L²)→O(L·k)；两阶段训练（稠密预热教索引器 → 稀疏训练适配）；API 降价 50%+。</p>
+<p>4思考融入工具：首个支持思考模式工具调用的模型；1800+ 环境、8.5 万指令的合成数据；未刷评测集。</p>
+<p>5可扩展 RL：后训练预算 &gt;10% 预训练；GRPO 无偏 KL 估计等改进。</p>
+<p>6双轨：V3.2 平衡（≈GPT-5）、Speciale 极致（≈Gemini-3.0-Pro，四奥赛金牌）。</p>
+<p>09SECTION</p>
+<p>七、下一篇预告（系列终篇）</p>
+<p>V3.2 把效率与 Agent 做到 V3 时代的极限，但注意力 O(L·k) 的「k」与 KV 缓存仍是长上下文的心头刺。下一篇进入 DeepSeek-V4 / V4.1：CSA + HCA 重度压缩注意力、Engram 条件记忆引擎、mHC 流形约束超连接、百万上下文普惠，以及 V4.1 Flash 的原生多模态——两条主线（效率 + 能力）的大结局。</p>
+<p>10SECTION</p>
+<p>参考资料</p>
+<p>•[官方] DeepSeek-V3.2 论文（arXiv:2512.02556）：https://arxiv.org/abs/2512.02556</p>
+<p>•[官方] V3.2 正式版发布说明（双轨模型/金牌/Agent 数据合成）：https://api-docs.deepseek.com/zh-cn/news/news251201/</p>
+<p>•[官方] 研究与动态索引（V3.2-Exp / V3.1-Terminus 等）：https://www.deepseek.com/news/</p>
+<p>•[参考] AI Wiki《DeepSeek Sparse Attention》(DSA 两阶段训练/复杂度)：https://www.aiwiki.ai/wiki/deepseek_sparse_attention</p>
+<p>•[参考] Weile Luo《DeepSeek NSA and DSA》（NSA vs DSA 对比）：https://luowle.tech/posts/deepseek-nsa-dsa/</p>
+<p>•[参考] 智源社区《DeepSeek V3.2 正式版发布》（2025 年发布梳理/Agent 最强）：https://hub.baai.ac.cn/view/50843</p>
+<p>•[参考] CSDN《DeepSeek-V3.2-Speciale：重塑开源模型推理能力边界》（技术细节/DSA 数字）：https://blog.csdn.net/Liudef06/article/details/155471019</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方论文与发布说明；个别三方文章数据以官方为准。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/F10z_c4kEoZt29Okk3Z61g" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

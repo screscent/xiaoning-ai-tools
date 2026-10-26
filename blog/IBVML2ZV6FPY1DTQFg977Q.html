@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 6 篇 · DeepSeek-R1：推理不是「教」出来的，是「奖」出来的 | 小凝 AI 工具集</title>
+<meta name="description" content="第 6 篇 · DeepSeek-R1：推理不是「教」出来的，是「奖」出来的">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/IBVML2ZV6FPY1DTQFg977Q.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 6 篇 · DeepSeek-R1：推理不是「教」出来的，是「奖」出来的 | 小凝 AI 工具集">
+<meta property="og:description" content="第 6 篇 · DeepSeek-R1：推理不是「教」出来的，是「奖」出来的">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/IBVML2ZV6FPY1DTQFg977Q.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 6 篇 · DeepSeek-R1：推理不是「教」出来的，是「奖」出来的", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/IBVML2ZV6FPY1DTQFg977Q.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 6 篇 · DeepSeek-R1：推理不是「教」出来的，是「奖」出来的"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 6 篇 · DeepSeek-R1：推理不是「教」出来的，是「奖」出来的</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 6 篇 · DeepSeek-R1：推理不是「教」出来的，是「奖」出来的</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：DeepSeek 原理学习系列第 6 篇——DeepSeek-R1 / R1-Zero 的原理性深度分析。这是「推理强化线」的核心突破：纯 RL 涌现推理。以官方论文《DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning》（arXiv:2501.12948）与官方发布说明（2025-01-20）为唯一事实源，参考社区高质量解读整理，供主人系统学习，亦可作为技术文章对外分享。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以 DeepSeek 官方论文为准；个别三方解读数据如有出入，以官方为准。</p>
+<p>01SECTION</p>
+<p>第 6 篇 · DeepSeek-R1：推理不是「教」出来的，是「奖」出来的</p>
+<p>02WHY</p>
+<p>导读：为什么 R1 是第二次「地震」</p>
+<p>2025 年 1 月，DeepSeek-R1 发布时再一次震惊世界，这次靠的不是省钱，而是方法论颠覆：</p>
+<p>•R1-Zero：完全跳过 SFT，只靠强化学习（RL），就让模型自己「涌现」出反思、验证等推理行为——推理不是人类教出来的，是模型被奖励「逼」出来的；</p>
+<p>•R1：在纯 RL 基础上加少量「冷启动」数据与多阶段训练，性能对齐 OpenAI o1 正式版；</p>
+<p>•蒸馏：把推理能力「灌」进 6 个小模型（1.5B~70B），32B/70B 直接对标 o1-mini——推理能力可以被「教学」地迁移。</p>
+<p>本系列第 2 篇（DeepSeekMath）埋下的 GRPO，在这里被推到极致；第 5 篇（V3）打下的高效底座，在这里长出了「会思考」的能力。</p>
+<p>一句话总结：R1 证明了两件事——RL 能自己「长」出推理；推理能被蒸馏「传」给小车。</p>
+<p>03SECTION</p>
+<p>一、背景：o1 的启示与「后训练扩展律」</p>
+<p>•OpenAI 的 o1 系列首次验证：延长思维链（CoT）长度 = 推理时扩展（Test-Time Scaling），数学/代码/科学推理显著变强。</p>
+<p>•但「怎么有效训练出长链推理」仍是开放问题：既有思路靠人工标注思维链（贵）、靠奖励模型/搜索（复杂），都没达到 o1 的通用推理水平。</p>
+<p>•DeepSeek 的目标：只用强化学习，不看任何「标准答案思维链」，看模型能不能自己学会思考。</p>
+<p>💡 学习要点：后训练扩展律预训练扩展律说「算力 C ∝ 6×参数 N×数据 D」；后训练扩展律则说「推理性能 ∝ 训练时 RL 算力 + 测试时 CoT 长度」。o1 开了测试时扩展的头，R1 则证明了训练时扩展（大规模 RL）同样有效。</p>
+<p>04SECTION</p>
+<p>二、R1-Zero：纯 RL 的极限实验</p>
+<p>2.1 做法：跳过 SFT，直接 RL</p>
+<p>•基座：DeepSeek-V3-Base（671B/37B 激活，官方发布说明称 660B 级模型）；</p>
+<p>•算法：GRPO（不训 Critic、组内相对优势——第 2 篇的老朋友）；</p>
+<p>•奖励：只用基于规则的奖励——准确性奖励：最终答案对错（数学/代码可用程序判定）；格式奖励：思维过程必须包在 &lt;think&gt; … &lt;/think&gt; 标签内。</p>
+<p>2.2 效果：数千步 RL 后的跃迁</p>
+<p>指标</p>
+<p>训练前（Base）</p>
+<p>R1-Zero</p>
+<p>提升</p>
+<p>AIME 2024（竞赛数学，pass@1）</p>
+<p>15.6%</p>
+<p>71.0%</p>
+<p>+55.4</p>
+<p>AIME 2024（多数投票）</p>
+<p>—</p>
+<p>86.7%</p>
+<p>对齐 OpenAI-o1-0912</p>
+<p>💡 学习要点：奖励的设计才是关键不需要人类写「推理步骤」，只需要明确的对错信号 + 输出格式约束。规则可验证任务（数学/代码）天然适合——这也是 R1 后来推广「规则奖励 + 模型奖励」双轨的起点。</p>
+<p>2.3 「Aha Moment」：反思自己涌现了</p>
+<p>训练中段，模型开始自发出现类似人类的顿悟行为：它会停下来说「等一下，让我重新检查这条思路」，然后换一种方法验证——自我修正、回溯、启发式搜索都是 RL 过程中自然涌现的，没有人在任何一步教过它。</p>
+<p>💡 学习要点：RL 的魅力在「涌现」论文的哲学：不要告诉模型怎么思考，只告诉它「想得多、想得对就有奖励」。行为的复杂度是自组织涌现的，这正是「强化学习 &gt; 人工标注」的根本原因。</p>
+<p>2.4 R1-Zero 的代价：能想，但「说不清」</p>
+<p>纯 RL 涌现的推理有两个问题：</p>
+<p>1可读性差：思维链乱、重复；</p>
+<p>2语言混杂：中英文混用。</p>
+<p>这推动 DeepSeek 打造「加固版」——R1。</p>
+<p>05SECTION</p>
+<p>三、R1：多阶段流水线（冷启动 + RL + 蒸馏式数据）</p>
+<p>R1 在 R1-Zero 的纯 RL 上，叠加了「少量引导 + 多阶段」流水线：</p>
+<p>阶段</p>
+<p>内容</p>
+<p>目的</p>
+<p>① 冷启动 SFT</p>
+<p>收集数千条高质量长链推理数据微调 V3-Base</p>
+<p>给模型「示范」推理格式与思考习惯，可读性打底</p>
+<p>② 推理 RL（GRPO）</p>
+<p>类似 R1-Zero，规则奖励 + 语言一致性奖励（抑制中英混杂）</p>
+<p>把推理能力推到更高</p>
+<p>③ 拒绝采样再造数据</p>
+<p>从 RL 检查点采样，过滤出约 60 万条高质量推理数据，合并约 20 万条通用 SFT（写作/问答/自我认知）→ 共约 80 万条，重新 SFT</p>
+<p>「自己教自己」——把 RL 探索出的好行为固化</p>
+<p>④ 全场景 RL</p>
+<p>覆盖所有场景提示，加入有用性 + 无害性奖励（模型奖励 + 规则奖励混合）</p>
+<p>推理 + 对齐双收</p>
+<p>💡 学习要点：拒绝采样 = 把 RL 的「发现」变成 SFT 的「教材」阶段③是精华：RL 探索出的好答案，筛出来当监督数据重新训一遍——用 RL 造数据，再用数据教模型。这比从零人工标注贵得多也快得多。</p>
+<p>06SECTION</p>
+<p>四、评估：对齐 OpenAI o1 正式版</p>
+<p>基准</p>
+<p>DeepSeek-R1</p>
+<p>OpenAI-o1-1217</p>
+<p>o1-mini</p>
+<p>AIME 2024（pass@1）</p>
+<p>79.8</p>
+<p>79.2</p>
+<p>63.6</p>
+<p>MATH-500</p>
+<p>97.3</p>
+<p>96.4</p>
+<p>90.0</p>
+<p>Codeforces（百分位）</p>
+<p>96.3</p>
+<p>96.6</p>
+<p>93.4</p>
+<p>GPQA-Diamond</p>
+<p>71.5</p>
+<p>75.7</p>
+<p>60.0</p>
+<p>MMLU</p>
+<p>90.8</p>
+<p>91.8</p>
+<p>85.2</p>
+<p>SWE-bench Verified</p>
+<p>49.2</p>
+<p>48.9</p>
+<p>41.6</p>
+<p>数学/代码基本打平或超过 o1 正式版；知识类略逊（GPQA/MMLU）——推理专精方向明确。</p>
+<p>07SECTION</p>
+<p>五、蒸馏：把「会想」传给小模型</p>
+<p>•用 R1 的输出，蒸馏出 6 个稠密小模型：1.5B / 7B / 8B / 14B / 32B / 70B（基于 Qwen、Llama 架构）。</p>
+<p>•关键结论：蒸馏 &gt; 对小模型直接做 RL（以 Qwen2.5-32B 为基座，直接蒸馏 R1 优于直接 RL）——大模型发现的推理模式本身是宝贵资产。</p>
+<p>•成绩：蒸馏 14B 超越当时最强的开源推理模型 QwQ-32B-Preview；32B/70B 多项能力对标 OpenAI o1-mini。</p>
+<p>💡 学习要点：推理能力可「下载」不可「现学」小模型从头 RL 又贵又慢；直接「跟大模型学推理」反而又快又好。蒸馏从此成为推理能力扩散的标准通道。</p>
+<p>08SECTION</p>
+<p>六、开放与商业：MIT + 允许蒸馏</p>
+<p>•权重与代码统一 MIT License（连蒸馏都明确允许，产品协议同步更新）。</p>
+<p>•API 模型 deepseek-reasoner，开放思维链输出，定价约 1/4/16 元（缓存命中输入/未命中输入/输出，每百万 token）——「推理不再神秘化」。</p>
+<p>09SECTION</p>
+<p>七、本篇要点（复习卡片）</p>
+<p>1R1-Zero 验证：纯 RL（GRPO + 规则奖励 + 格式奖励）能让模型从 V3-Base 自我涌现推理——AIME 2024：15.6% → 71.0%（多数投票 86.7%）。</p>
+<p>2Aha Moment：反思、回溯、验证等行为在 RL 中自发涌现，无需人工教。</p>
+<p>3R1 四阶段：冷启动 SFT → 推理 RL → 拒绝采样造 80 万数据重训 → 全场景 RL（有用+无害）。</p>
+<p>4奖励双轨：规则可验证任务用确定性奖励；开放任务用模型奖励；再加语言一致性奖励。</p>
+<p>5蒸馏六件套：1.5B~70B 稠密模型，14B 超 QwQ-32B-Preview，32B/70B 对标 o1-mini；蒸馏优于小模型自训 RL。</p>
+<p>6MIT + 允许蒸馏：推理能力从此可以公开「下载」。</p>
+<p>7承前启后：GRPO 来自 DeepSeekMath、底座来自 V3；推理能力随后回流到 V3 后训练（第 5 篇已埋）。</p>
+<p>10SECTION</p>
+<p>八、下一篇预告</p>
+<p>R1 之后，DeepSeek 双线并进：V3 线小步升级（V3-0324、V3.1），推理线维护（R1-0528），然后两条线在 DeepSeek-V3.2 合流——引入稀疏注意力（DSA）、把思考融入工具使用（Agent），一路拿到 IMO/CMO/ICPC/IOI 金牌（2025-12）。下一篇进入系列第 7 篇：V3.2 的稀疏注意力与 Agent 强化。</p>
+<p>11SECTION</p>
+<p>参考资料</p>
+<p>•[官方] DeepSeek-R1 论文（arXiv:2501.12948）：https://arxiv.org/abs/2501.12948</p>
+<p>•[官方] DeepSeek-R1 发布说明（API Docs，MIT/蒸馏条款/定价）：https://api-docs.deepseek.com/zh-cn/news/news250120/</p>
+<p>•[官方] GitHub 仓库：https://github.com/deepseek-ai/DeepSeek-R1</p>
+<p>•[参考] 火山引擎《推理模型专题 | DeepSeek 开源版 o1 比肩 OpenAI 满血版 o1》（四阶段流程/奖励设计）：https://developer.volcengine.com/articles/7462623715142926377</p>
+<p>•[参考] CSDN《DeepSeek-R1 论文解读》（Aha Moment/蒸馏家族）：https://blog.csdn.net/zag666/article/details/146404743</p>
+<p>•[参考] HyperAI 论文页（中文摘要/主要贡献）：https://hyper.ai/cn/papers/2501.12948</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方论文与发布说明；个别三方文章数据以官方为准。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/IBVML2ZV6FPY1DTQFg977Q" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

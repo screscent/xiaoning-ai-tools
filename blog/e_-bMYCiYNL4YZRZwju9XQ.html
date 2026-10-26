@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anthropic Claude 模型原理进化史 | 小凝 AI 工具集</title>
+<meta name="description" content="Anthropic Claude 模型原理进化史">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/e_-bMYCiYNL4YZRZwju9XQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anthropic Claude 模型原理进化史 | 小凝 AI 工具集">
+<meta property="og:description" content="Anthropic Claude 模型原理进化史">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/e_-bMYCiYNL4YZRZwju9XQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Anthropic Claude 模型原理进化史", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/e_-bMYCiYNL4YZRZwju9XQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "Anthropic Claude 模型原理进化史"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>Anthropic Claude 模型原理进化史</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">Anthropic Claude 模型原理进化史</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Anthropic Claude 家族的开篇总览——从宪法 AI 理念到 Opus 4.5 / Fable 5.1 的演进时间线、关键技术点详解与进化逻辑总结。供主人先建立「一张图」再深入各分篇。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方技术报告与系统卡为准。</p>
+<p>01SECTION</p>
+<p>Anthropic Claude 模型原理进化史</p>
+<p>02SECTION</p>
+<p>一、演进时间线总览</p>
+<p>时间</p>
+<p>模型</p>
+<p>核心变化</p>
+<p>2022-12</p>
+<p>Constitutional AI 论文</p>
+<p>对齐理念奠基：让模型按原则自我批评（RLAIF）</p>
+<p>2023-03</p>
+<p>Claude 1</p>
+<p>宪法 AI 首秀：安全优先、宁拒勿放</p>
+<p>2023-07</p>
+<p>Claude 2</p>
+<p>100K 长上下文；编码增强；方法论开源</p>
+<p>2024-03</p>
+<p>Claude 3 家族（Opus/Sonnet/Haiku）</p>
+<p>三档产品化</p>
+<p>；综合能力首次压过 GPT-4</p>
+<p>2024-06</p>
+<p>Claude 3.5 Sonnet</p>
+<p>口碑之王：Opus 级性能、Sonnet 级价格</p>
+<p>2025-02</p>
+<p>Claude 3.7 Sonnet</p>
+<p>Extended Thinking</p>
+<p>：可控深度思考</p>
+<p>2025-05</p>
+<p>Claude 4（Opus 4/Sonnet 4）</p>
+<p>Computer Use</p>
+<p>大幅增强；ASL 3 安全分级；Claude Code</p>
+<p>2025-09</p>
+<p>Claude Sonnet 4.5</p>
+<p>最对齐模型</p>
+<p>；OSWorld 61.4%；30 小时长程任务</p>
+<p>2025-10</p>
+<p>Claude Haiku 4.5</p>
+<p>最快档：5，200K 上下文</p>
+<p>2025-11</p>
+<p>Claude Opus 4.5</p>
+<p>长程 Agent 旗舰；25 旗舰平民化</p>
+<p>2026</p>
+<p>Fable 5.1 / Opus 5.5 / Sonnet 5.5</p>
+<p>1M 上下文；自适应思考（always on）</p>
+<p>03SECTION</p>
+<p>二、三条主线：对齐 · Agent · 推理</p>
+<p>Anthropic 的进化围绕三条主线交叉推进：</p>
+<p>1对齐线（宪法 AI→系统卡→ASL→最对齐）：把「安全原则」写进训练流程、做成可审查的发布制度——对齐优先是公司的 DNA。</p>
+<p>2Agent 线（长上下文→Computer Use→Claude Code→Agent SDK）：模型从「会说话」到「自己用电脑干活」，并开放给开发者。</p>
+<p>3推理线（3.7 Extended Thinking→4 系列→4.5 混合推理→5.x 自适应）：默认会想、按需深想。</p>
+<p>04SECTION</p>
+<p>三、关键技术点详解</p>
+<p>1. 宪法 AI / RLAIF（Claude 1 的地基）</p>
+<p>•人类写原则条文 → 模型自我批评修订（SFT）→ AI 自我打分做 RL；</p>
+<p>•与 RLHF 的根本区别：标准从「人工偏好」变「公开条文」——可审查、可迭代、可扩展。</p>
+<p>2. 长上下文（Claude 2 → 200K → 1M）</p>
+<p>•100K（2023）→ 200K（3.x/4.x）→ 1M（5.x）——读整本书/整个代码库；</p>
+<p>•长上下文是 Agent 长程任务（30 小时连续工作）的前提。</p>
+<p>3. 三档产品化（Claude 3）</p>
+<p>•Opus（最强）/ Sonnet（均衡）/ Haiku（最快）——一次覆盖全部需求；</p>
+<p>•教训成行业公式：中间档是产品主战场（对标 GPT mini/nano、Gemini Flash）。</p>
+<p>4. Extended Thinking / 混合推理（3.7 → 4.5）</p>
+<p>•模型支持快速答 + 按需深想两种模式，思考预算（budget_tokens）可调；</p>
+<p>•4.5 升级为 hybrid reasoning：默认会想、按需深想。</p>
+<p>5. Computer Use（Claude 4 起爆发）</p>
+<p>•模型像人一样操作电脑：看截图 → 点击/输入 → 再看结果；</p>
+<p>•OSWorld：Sonnet 4 的 42.2% → Sonnet 4.5 的 61.4%；</p>
+<p>•训练：屏幕操作合成轨迹 + RL；应用：Claude for Chrome、桌面自动化。</p>
+<p>6. Claude Code 与 MCP（Agent 平台）</p>
+<p>•Claude Code：终端编程 Agent（读库/改码/跑测/提 PR）；</p>
+<p>•MCP：开放工具接入协议——成为行业「工具接入」事实标准；</p>
+<p>•Agent SDK：把底层能力开放给开发者自建 Agent。</p>
+<p>7. 对齐的量化与制度化（4.5）</p>
+<p>•系统卡评测延伸到奖励黑客、诚实度、agentic 安全、可解释性（mechanistic interpretability）；</p>
+<p>•ASL（AI 安全分级）决定能否放行——能力越强门槛越高；</p>
+<p>•「最对齐」成为可宣传的卖点：该拒则拒、该干则干。</p>
+<p>∞CONCLUSION</p>
+<p>四、进化逻辑总结（学习重点）</p>
+<p>1对齐做「显式化」：从黑盒偏好打分 → 公开条文 + 系统卡 + 分级制度——安全成为可审查资产。</p>
+<p>2能力做「Agent 化」：长上下文 + 计算机使用 + 编程工具 = 从「助手」到「数字员工」。</p>
+<p>3推理做「融合」：Extended Thinking → 混合推理 → 自适应思考——对话与思考不分家。</p>
+<p>4定价做「下探」：旗舰从高价到 25、Sonnet $2——旗舰能力平民化。</p>
+<p>5差异化：对齐优先 × 会干活——与 GPT（产品生态）、Gemini（原生多模态）形成错位竞争。</p>
+<p>06SECTION</p>
+<p>五、资料源（供深入阅读）</p>
+<p>•Anthropic 官方：https://www.anthropic.com/news ｜ https://www.anthropic.com/research</p>
+<p>•Claude 系列系统卡：https://www.anthropic.com/research#system-cards</p>
+<p>•学习路径：本开篇 → 01~04 分篇 → 对照 llm-基础理论 03/05/06</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方发布说明与系统卡。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/e_-bMYCiYNL4YZRZwju9XQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>研究/搜索 Agent 与常驻 Agent | 小凝 AI 工具集</title>
+<meta name="description" content="研究/搜索 Agent 与常驻 Agent">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/FH8-7CcIBQfdZSv6DS0zHw.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="研究/搜索 Agent 与常驻 Agent | 小凝 AI 工具集">
+<meta property="og:description" content="研究/搜索 Agent 与常驻 Agent">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/FH8-7CcIBQfdZSv6DS0zHw.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "研究/搜索 Agent 与常驻 Agent", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/FH8-7CcIBQfdZSv6DS0zHw.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "研究/搜索 Agent 与常驻 Agent"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>研究/搜索 Agent 与常驻 Agent</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">研究/搜索 Agent 与常驻 Agent</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 原理系列板块四·应用第 10 篇——研究/搜索 Agent 与常驻 Agent：「动脑型」（deep research）与「后台型」（常驻监听/周期任务）两类 Agent 的原理与工程。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方发布为准。</p>
+<p>01SECTION</p>
+<p>第 10 篇 · 研究/搜索 Agent 与常驻 Agent</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>09 篇是「动手型」Agent（改代码、点界面）。本篇是另外两类形态：研究 Agent（替你做调研、给带引用的报告——动脑）和常驻 Agent（长期在线，监听事件、周期巡检——后台）。前者是「一次深度思考」，后者是「一直在线干活」。</p>
+<p>03SECTION</p>
+<p>一、研究/搜索 Agent（Deep Research）</p>
+<p>1.1 是什么</p>
+<p>•用户给一个开放问题 → Agent 自动规划研究路径 → 多轮搜索 → 阅读/筛选来源 → 综合成带引用的报告；</p>
+<p>•代表：ChatGPT Deep Research、Perplexity、Gemini Deep Research、Claude（deep research 能力）；</p>
+<p>•价值：把「几小时的人工调研」压缩到「几分钟」。</p>
+<p>1.2 原理拆解（对照 01-08）</p>
+<p>系统</p>
+<p>在研究 Agent 里是什么</p>
+<p>感知</p>
+<p>网页抓取、PDF/文档读取、检索结果（工具型感知）</p>
+<p>推理</p>
+<p>拆研究子问题 → 规划搜索顺序 → 评估来源可信度 → 综合</p>
+<p>记忆</p>
+<p>已查过的来源、中间结论、引用清单</p>
+<p>行动</p>
+<p>调用搜索 API、抓取页面、保存笔记</p>
+<p>训练（08）</p>
+<p>推理模型（o1/R1 系）做深度规划；agent RL 强化「搜索-综合」轨迹</p>
+<p>评测</p>
+<p>引用准确性、事实保真度（幻觉是头号风险）</p>
+<p>1.3 关键工程：防幻觉</p>
+<p>•引用强制：报告必须带可点击来源——「可验证」是对抗幻觉的第一防线；</p>
+<p>•来源评估：模型对来源可信度打分（官方 &gt; 二手 &gt; 社区）；</p>
+<p>•迭代校验：多轮搜索中交叉验证矛盾信息（衔接推理反思 02 篇）。</p>
+<p>💡 学习要点：研究 Agent = 推理模型 × 检索 × 引用纪律它本质是「带工具的推理任务」：思考深度（o1/R1）决定研究质量，检索广度决定信息覆盖，引用纪律决定可信度——三者缺一不可。</p>
+<p>04SECTION</p>
+<p>二、常驻 Agent（Resident / Background Agent）</p>
+<p>2.1 是什么</p>
+<p>•不是「问一次答一次」，而是长期驻留运行：监听外部事件、周期巡检、按时触发任务；</p>
+<p>•场景：监控告警、定时报告、竞品跟踪、邮件/消息自动响应、数据巡检；</p>
+<p>•与「即时 Agent」的区别：生命周期——小时/天/月级持续运行，而非单次会话。</p>
+<p>2.2 原理拆解</p>
+<p>组件</p>
+<p>说明</p>
+<p>触发机制</p>
+<p>事件驱动（消息/文件/告警到达触发）或定时（cron/周期）或轮询（查状态）</p>
+<p>状态保持</p>
+<p>跨轮次的状态持久化（任务进度、已处理事件去重）——记忆 03 篇的长时记忆</p>
+<p>循环控制</p>
+<p>每轮「感知→决策→行动→校验」循环，且要处理空转/去重/幂等</p>
+<p>健康与自愈</p>
+<p>异常退出重启、超时挂起、失败升级人工（07 篇）</p>
+<p>通知</p>
+<p>关键节点主动通知主人（不该打扰的别打扰、该打扰的必达）</p>
+<p>2.3 工程要点（常驻是最难的工程）</p>
+<p>1幂等：同一事件触发两次不能重复执行副作用（发两次邮件）；</p>
+<p>2去重：事件去重键（event-id）+ 时间窗；</p>
+<p>3停滞检测：多轮无进展要自我报告（对齐「停滞监测」思想，衔接 02 篇反思）；</p>
+<p>4资源控制：单轮 token/时间预算上限——常驻 = 无限轮 × 每轮都要便宜；</p>
+<p>5退出与升级：明确「什么时候算完、什么时候该找人」。</p>
+<p>💡 学习要点：常驻 Agent = 把「运维纪律」搬进 Agent幂等、去重、停滞检测、健康检查——这些是传统后台服务的工程纪律，现在要套在「会自主决策的模型」上。常驻 Agent 的难点不在 AI，在可靠性与治理。</p>
+<p>05SECTION</p>
+<p>三、本篇要点（复习卡片）</p>
+<p>1研究 Agent：规划→搜索→综合→引用四步；引用纪律是对抗幻觉第一防线。</p>
+<p>2研究质量 = 推理深度 × 检索广度 × 引用纪律。</p>
+<p>3常驻 Agent：事件/定时/轮询三触发；生命周期长——「一直在线」。</p>
+<p>4常驻工程纪律：幂等、去重、停滞检测、资源预算、退出升级。</p>
+<p>5应用全景：编码（稳）/ CUA（广）/ 研究（深）/ 常驻（久）——四类形态覆盖 Agent 的全部使用方式。</p>
+<p>06SECTION</p>
+<p>四、下一篇预告</p>
+<p>第 11 篇（板块五·平台，系列收官）：Agent 框架与协议标准——把前面所有原理装进工具：LangGraph / OpenAI Agents SDK / Claude Agent SDK / CrewAI / Microsoft Agent Framework / Google ADK 全对比 + MCP/A2A 协议标准化路径 + 选型指南。从「懂原理」到「会选型、能搭建」。</p>
+<p>07SECTION</p>
+<p>参考资料</p>
+<p>•[官方] ChatGPT Deep Research：https://openai.com/index/introducing-deep-research/</p>
+<p>•[官方] Gemini Deep Research：https://blog.google/products/gemini/</p>
+<p>•[官方] Anthropic Deep Research / Claude：https://www.anthropic.com/news</p>
+<p>•[参考] 常驻 Agent / goal-resident 形态（goal 驱动运行模式）</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方发布说明。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/FH8-7CcIBQfdZSv6DS0zHw" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

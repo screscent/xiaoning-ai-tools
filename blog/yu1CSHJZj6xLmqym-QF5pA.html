@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP 协议：Agent 的统一工具接口 | 小凝 AI 工具集</title>
+<meta name="description" content="MCP 协议：Agent 的统一工具接口">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/yu1CSHJZj6xLmqym-QF5pA.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MCP 协议：Agent 的统一工具接口 | 小凝 AI 工具集">
+<meta property="og:description" content="MCP 协议：Agent 的统一工具接口">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/yu1CSHJZj6xLmqym-QF5pA.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "MCP 协议：Agent 的统一工具接口", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/yu1CSHJZj6xLmqym-QF5pA.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "MCP 协议：Agent 的统一工具接口"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>MCP 协议：Agent 的统一工具接口</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">MCP 协议：Agent 的统一工具接口</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 原理系列板块二·机制第 05 篇——MCP 协议（Model Context Protocol）：Agent 的「HTTP」。三原语、客户端-服务端架构、标准化之路（Anthropic 开源 → Linux Foundation 托管 → 2026-07-28 无状态规范 RC），以及它与 A2A 的分工。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方协议规范为准。</p>
+<p>01SECTION</p>
+<p>第 05 篇 · MCP 协议：Agent 的统一工具接口</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>第 04 篇说行动靠工具，但有个历史痛点：每家框架自己接工具（LangChain 一套、AutoGPT 一套、自研又一套）——给数据库写一次集成，每个框架都得重写。MCP（Model Context Protocol）像浏览器有 HTTP、IDE 有 LSP 一样，给「Agent ↔ 工具」一个统一协议：工具接一次，处处可用。本篇是 Agent 机制层的基石。</p>
+<p>03SECTION</p>
+<p>一、MCP 是什么</p>
+<p>1.1 一句话</p>
+<p>MCP 是「Agent 客户端」与「工具/数据服务端」之间的标准化连接协议（JSON-RPC 2.0）——把「模型怎么调用工具」统一成工业协议。</p>
+<p>1.2 定位类比</p>
+<p>场景</p>
+<p>协议</p>
+<p>浏览器 ↔ 网站</p>
+<p>HTTP</p>
+<p>IDE ↔ 语言能力</p>
+<p>LSP</p>
+<p>Agent ↔ 工具/数据MCP</p>
+<p>•2024-11 Anthropic 开源；</p>
+<p>•2025-04 ChatGPT 接入（转折点：不再是 Anthropic 专属）；</p>
+<p>•2025-12 捐赠 Linux Foundation 旗下 Agentic AI Foundation（AAIF，与 OpenAI/Google/Microsoft/AWS 共管）；</p>
+<p>•2026-03：SDK 月下载 97M、公共服务器 9400+——业界默认工具协议。</p>
+<p>04SECTION</p>
+<p>二、架构与三原语</p>
+<p>2.1 客户端-服务端模型</p>
+<p>code</p>
+<p>Agent / 框架（MCP 客户端）</p>
+<p>│ 发现工具 → 调用工具 → 回传结果</p>
+<p>▼</p>
+<p>MCP 服务端（封装数据库/API/文件/业务系统）</p>
+<p>•传输：stdio（本地子进程，开发用）/ Streamable HTTP（远程生产用）；</p>
+<p>•2026-07-28 规范 RC：核心无状态化——普通 HTTP 负载均衡即可横向扩展（去掉会话黏滞）。</p>
+<p>2.2 三原语（一个服务端暴露三类能力）</p>
+<p>原语</p>
+<p>作用</p>
+<p>例子</p>
+<p>Tools</p>
+<p>可执行动作</p>
+<p>github.create_issue</p>
+<p>、db.query</p>
+<p>Resources</p>
+<p>可读数据（只读上下文）</p>
+<p>数据库 Schema、文件内容、API 文档</p>
+<p>Prompts</p>
+<p>可复用提示模板</p>
+<p>代码审查模板、Bug 报告模板</p>
+<p>•设计要点：工具粒度映射「自然意图」（建 issue/查库存）而非低层 API——粒度决定调用质量（衔接 04 篇）。</p>
+<p>05SECTION</p>
+<p>三、2026-07-28 规范 RC 的四个升级（最新）</p>
+<p>1无状态核心：协议层去会话——Mcp-Method 头路由、tools/list 可缓存，水平扩展如普通服务；</p>
+<p>2Tasks 扩展：长时运行工作（异步长任务）成为一等公民；</p>
+<p>3MCP Apps：服务端渲染 UI——工具不只返回数据，还能返回界面；</p>
+<p>4授权对齐 OAuth/OpenID：企业级鉴权；另有正式弃用策略（协议可持续演进）。</p>
+<p>•影响：远程 MCP 服务不再需要 sticky session/共享会话存储——部署成本与 HTTP 同级。</p>
+<p>06SECTION</p>
+<p>四、MCP 与 A2A 的分工（两张协议地图）</p>
+<p>协议</p>
+<p>连接</p>
+<p>场景</p>
+<p>MCP</p>
+<p>Agent ↔ 工具/数据</p>
+<p>让 Agent 能用一切（工具接入）</p>
+<p>A2A</p>
+<p>（Google 2025-04，入 AAIF）</p>
+<p>Agent ↔ Agent</p>
+<p>让 Agent 能互相协作（任务委派）</p>
+<p>•MCP = 毛细血管（接工具），A2A = 大动脉（接同事）——2026 后两协议同一基金会治理，构成完整互操作层。</p>
+<p>07SECTION</p>
+<p>五、工程实践要点</p>
+<p>1BFMCP 模式（Backend for MCP）：MCP 服务端只暴露业务级操作，后端承接数据访问与权限控制——避免把「裸 SQL 查询」直接交给 Agent（权限最小化，衔接 04 篇安全）；</p>
+<p>2三原语并用：好的服务端不只 Tools，还用 Resources（给上下文）+ Prompts（标准化交互）；</p>
+<p>3一个服务端多处用：写一次 MCP server，Claude/ChatGPT/Gemini/Cursor 全部可用——集成成本从 18 小时降到约 4 小时（2026 行业数据）。</p>
+<p>08SECTION</p>
+<p>六、本篇要点（复习卡片）</p>
+<p>1MCP = Agent 的 HTTP：统一「Agent ↔ 工具」连接协议；2024-11 开源 → 2026 已成行业标准（AAIF 托管、97M 月下载）。</p>
+<p>2三原语：Tools（动作）/ Resources（数据）/ Prompts（模板）——好服务端三者并用。</p>
+<p>3两传输：stdio（本地）/ Streamable HTTP（远程）；2026-07-28 RC 核心无状态化。</p>
+<p>4四个升级：无状态 / Tasks 长任务 / MCP Apps 服务端 UI / OAuth 授权对齐。</p>
+<p>5分工：MCP 管「接工具」，A2A 管「接 Agent」——同一基金会治理。</p>
+<p>6实践：BFMCP 防裸权限；写一次到处用。</p>
+<p>09SECTION</p>
+<p>七、下一篇预告</p>
+<p>第 06 篇（板块二·机制）：多 Agent 协作与编排——一个 Agent 不够时怎么办：图编排（LangGraph，显式状态图）/ 角色制（CrewAI，团队分工）/ 交接制（OpenAI Agents SDK，子 Agent 委派）三范式对比，以及多 Agent 的通信与任务分发。MCP 给了工具，编排给了「组织」。</p>
+<p>10SECTION</p>
+<p>参考资料</p>
+<p>•[官方] MCP 规范：https://modelcontextprotocol.io</p>
+<p>•[官方] MCP 2026-07-28 规范 RC 公告：https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</p>
+<p>•[官方] MCP 捐赠 Linux Foundation（2025-12）：https://www.linuxfoundation.org/</p>
+<p>•[参考] MCP 采用数据（97M 下载/9400+ 服务器）：行业统计报道</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方协议规范。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/yu1CSHJZj6xLmqym-QF5pA" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

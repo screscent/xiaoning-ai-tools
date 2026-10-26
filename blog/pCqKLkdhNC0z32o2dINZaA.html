@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>阿里 Qwen 模型原理进化史 | 小凝 AI 工具集</title>
+<meta name="description" content="阿里 Qwen 模型原理进化史">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/pCqKLkdhNC0z32o2dINZaA.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="阿里 Qwen 模型原理进化史 | 小凝 AI 工具集">
+<meta property="og:description" content="阿里 Qwen 模型原理进化史">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/pCqKLkdhNC0z32o2dINZaA.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "阿里 Qwen 模型原理进化史", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/pCqKLkdhNC0z32o2dINZaA.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "阿里 Qwen 模型原理进化史"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>阿里 Qwen 模型原理进化史</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">阿里 Qwen 模型原理进化史</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：阿里通义 Qwen 家族的开篇总览——从 Qwen 1 到 Qwen3-Max / 3.8 的演进时间线、关键技术点详解与进化逻辑总结。供主人先建立「一张图」再深入各分篇。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。</p>
+<p>01SECTION</p>
+<p>阿里 Qwen 模型原理进化史</p>
+<p>02SECTION</p>
+<p>一、演进时间线总览</p>
+<p>时间</p>
+<p>模型</p>
+<p>核心变化</p>
+<p>2023-08~11</p>
+<p>Qwen 1（7B/14B/72B）</p>
+<p>中文原生基座</p>
+<p>；Apache 2.0 商用许可</p>
+<p>2024-01</p>
+<p>Qwen 1.5（0.5B~72B 全矩阵）</p>
+<p>全尺寸矩阵 + 12 语言 + GQA</p>
+<p>2024-06</p>
+<p>Qwen 2（0.5B~72B）</p>
+<p>27 语言 + 128K 上下文 + ~18T 数据</p>
+<p>2024-09</p>
+<p>Qwen 2.5（72B 旗舰）</p>
+<p>代码/数学/长文本强化；闭源 Qwen2.5-Max 同步（双轨启动）</p>
+<p>2025-04</p>
+<p>Qwen 3（MoE 235B-A22B / 30B-A3B + 6 dense）</p>
+<p>混合推理</p>
+<p>（思考/非思考双模式）；36T 数据；119 语言</p>
+<p>2025-07</p>
+<p>Qwen3-Coder（480B-A35B）</p>
+<p>Agentic 编程：agent RL 训练；256K→1M 上下文</p>
+<p>2025-09</p>
+<p>Qwen3-VL / Omni / Qwen3-Max</p>
+<p>视觉智能体；端到端全模态；1T 闭源旗舰 SOTA</p>
+<p>2025-11~2026</p>
+<p>Qwen3-Max-Thinking / Qwen3.7-Max / 3.8 Max</p>
+<p>深度推理满分；闭源旗舰持续迭代</p>
+<p>03SECTION</p>
+<p>二、三条主线：语言 · 架构 · 双轨</p>
+<p>阿里的进化围绕三条主线交叉推进：</p>
+<p>1语言线：中英（1）→ 12 语（1.5）→ 27 语（2）→ 119 语（3）——开源模型语言覆盖最广。</p>
+<p>2架构线：Dense（1-2.5）→ MoE + 混合推理（3）——235B-A22B 与 30B-A3B 大小稀疏组合拳。</p>
+<p>3双轨线：开源全家桶（0.6B→235B→1T 蒸馏家族）+ 闭源旗舰（Max）——开源抢生态、闭源抢产品。</p>
+<p>04SECTION</p>
+<p>三、关键技术点详解</p>
+<p>1. 中文原生基座（Qwen 1）</p>
+<p>•中文 tokenizer 更省 token、中文能力更强——「语言适配 = 产品定位」；</p>
+<p>•Apache 2.0 商用许可——先拿中文市场，再打全球。</p>
+<p>2. 全尺寸矩阵 + 多语言（Qwen 1.5/2）</p>
+<p>•0.5B~72B 全矩阵：端侧到旗舰一个生态通吃；</p>
+<p>•GQA（分组查询注意力）：提速降显存（llm-理论 04 效率件）；</p>
+<p>•27 语言 + 128K 上下文：对标 Llama 3 全面对齐。</p>
+<p>3. 数据与后训练强化（Qwen 2.5）</p>
+<p>•18T 数据 + 代码/数学/长文本专项强化——后训练工程决定旗舰口碑；</p>
+<p>•闭源 Max 同步上线：开源 vs 闭源同源双轨成型。</p>
+<p>4. 混合推理：思考 / 非思考双模式（Qwen 3）</p>
+<p>•一个模型两种模式：Thinking（逐步思考，可设预算）/ Non-Thinking（快速直答）；</p>
+<p>•RL 把「非思考」无缝融入「思考」模型——「想多久」变成用户可调参数；</p>
+<p>•与 GPT-5 reasoning effort、Claude thinking 同代同思路。</p>
+<p>5. MoE 大小组合拳（Qwen 3）</p>
+<p>•235B-A22B（旗舰）+ 30B-A3B（小稀疏：30B 打 QwQ-32B 的 10 倍激活差距）；</p>
+<p>•Coder 480B-A35B：agent RL 训练编程；数据 36T、119 语言。</p>
+<p>6. 全模态与闭源旗舰（Qwen3 下半年）</p>
+<p>•Qwen3-VL-235B：视觉智能体（操作电脑/手机界面、GUI 识别）；</p>
+<p>•Qwen3-Omni：端到端全模态（文/图/音/视频）；</p>
+<p>•Qwen3-Max（1T 参数）：开源时代 SOTA（Tau2-Bench 74.8 超 Claude Opus 4）；Thinking 版数学满分。</p>
+<p>7. 衍生生态第一（贯穿全程）</p>
+<p>•基于 Qwen 的衍生模型 17 万 +，全球第一（超 LLaMA）——开源战略的回报。</p>
+<p>∞CONCLUSION</p>
+<p>四、进化逻辑总结（学习重点）</p>
+<p>1语言做「加法」：中英 → 119 语——语言覆盖是差异化第一战场。</p>
+<p>2架构做「双模」：混合推理（思考/非思考）+ MoE（大稀疏/小稀疏）——深度与成本都可调。</p>
+<p>3双轨做「同源」：开源抢生态、闭源抢产品，共享一套技术栈——生态与商业并行。</p>
+<p>4能力做「全模态 + Agent」：VL/Omni/Coder——从「会说话」到「会看、会写代码、会操作界面」。</p>
+<p>5对比：与 DeepSeek（效率极致）、LLaMA（生态基座）构成开源三极；混合推理是 Qwen 的差异化招牌。</p>
+<p>06SECTION</p>
+<p>五、资料源（供深入阅读）</p>
+<p>•Qwen 官方博客：https://qwenlm.github.io/blog/</p>
+<p>•Qwen3 发布（2025-04）：https://qwenlm.github.io/blog/qwen3/</p>
+<p>•Qwen3-Coder（2025-07）：https://qwenlm.github.io/blog/qwen3-coder/</p>
+<p>•学习路径：本开篇 → 01~03 分篇 → 对照 llm-基础理论 04/05/06</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方技术报告。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/pCqKLkdhNC0z32o2dINZaA" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

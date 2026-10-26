@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 03 篇 · Eino ADK 实战：多 Agent 与人工中断 | 小凝 AI 工具集</title>
+<meta name="description" content="第 03 篇 · Eino ADK 实战：多 Agent 与人工中断">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/Bl0mcQ5QUAwjOCDEVEeGbQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 03 篇 · Eino ADK 实战：多 Agent 与人工中断 | 小凝 AI 工具集">
+<meta property="og:description" content="第 03 篇 · Eino ADK 实战：多 Agent 与人工中断">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/Bl0mcQ5QUAwjOCDEVEeGbQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 03 篇 · Eino ADK 实战：多 Agent 与人工中断", "datePublished": "2026-10-02", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/Bl0mcQ5QUAwjOCDEVEeGbQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 03 篇 · Eino ADK 实战：多 Agent 与人工中断"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 03 篇 · Eino ADK 实战：多 Agent 与人工中断</h1>
+  <p class="meta-line">发布于 2026-10-02 · 作者 月牙寂</p>
+  <p class="hook">第 03 篇 · Eino ADK 实战：多 Agent 与人工中断</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 实战系列板块一·框架第 03 篇（收尾）——Eino ADK 实战：Agent Development Kit 的多 Agent 协作、子 Agent、HITL 中断恢复；事件流分发与任务控制权转让。</p>
+<p>免责声明：本文为学习与技术分享用途，代码示意依据官方文档。</p>
+<p>01SECTION</p>
+<p>第 03 篇 · Eino ADK 实战：多 Agent 与人工中断</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>02 篇的 ReAct Agent 是「单兵」。真实业务常要「多兵种协同」（主 Agent 派活 + 子 Agent 分工）+「人工把关」（高风险动作中断等人批）。Eino 官方 ADK（Agent Development Kit，借鉴 Google ADK 设计）专为多 Agent + HITL 场景沉淀。本篇搭一个主 Agent + 子 Agent 的最小系统，并演示中断/恢复。</p>
+<p>03SECTION</p>
+<p>一、ADK 是什么</p>
+<p>•定位：Eino 的高层 Agent 开发框架——比手写 Graph 更面向「Agent」抽象；</p>
+<p>•能力：多 Agent 协作（子 Agent）、上下文传递、事件流分发与转换、任务控制权转让（handoff）、中断与恢复（HITL）、通用切面；</p>
+<p>•与 flow/react 的关系：单 Agent 用 react 够了；多 Agent 场景建议用 ADK。</p>
+<p>04SECTION</p>
+<p>二、最小实战：单 Agent（ChatModelAgent）</p>
+<p>go</p>
+<p>agt, _ := adk.NewChatModelAgent(ctx, &amp;adk.ChatModelAgentConfig{</p>
+<p>Model: openaiCli, // 可调用模型</p>
+<p>ToolsConfig: adk.ToolsConfig{</p>
+<p>ToolsNodeConfig: compose.ToolsNodeConfig{</p>
+<p>Tools: todoTools, // 工具集（如任务管理工具）</p>
+<p>},</p>
+<p>},</p>
+<p>OutputKey: &quot;main-agent&quot;,</p>
+<p>MaxIterations: 50, // 最大迭代（比 react 的 MaxStep 更宽）</p>
+<p>Name: &quot;main-agent&quot;,</p>
+<p>Description: &quot;master agent&quot;, // 供父/子 Agent 调度时理解职责</p>
+<p>Instruction: &quot;角色：xx 助手\n核心职责：专注 xx。\n输出规范：xx&quot;,</p>
+<p>})</p>
+<p>•与 react 的差异：多了 Name/Description/Instruction——这些是给「别的 Agent」看的（调度方靠 Description 决定把任务派给谁）。</p>
+<p>05SECTION</p>
+<p>三、多 Agent 实战：主 Agent + 子 Agent</p>
+<p>go</p>
+<p>// 1. 创建子 Agent（如「搜索 Agent」「写作 Agent」）</p>
+<p>searchAgent, _ := adk.NewChatModelAgent(ctx, &amp;adk.ChatModelAgentConfig{</p>
+<p>Model: openaiCli,</p>
+<p>ToolsConfig: ... // 搜索工具</p>
+<p>Name: &quot;search-agent&quot;, Description: &quot;负责检索信息并返回摘要&quot;,</p>
+<p>Instruction: &quot;...&quot;,</p>
+<p>})</p>
+<p>writerAgent, _ := adk.NewChatModelAgent(ctx, &amp;adk.ChatModelAgentConfig{ /* ... */ })</p>
+<p>// 2. 把子 Agent 挂到主 Agent 下（SubAgent 机制）</p>
+<p>mainAgent, _ := adk.SetSubAgents(ctx, mainAgent, searchAgent, writerAgent)</p>
+<p>// 3. 运行：主 Agent 判断「该派谁」，把子任务 handoff 给对应子 Agent</p>
+<p>out, _ := mainAgent.Invoke(ctx, input)</p>
+<p>•原理（对应 agent-范式 06 篇「Manager-Worker 层级」）：主 Agent 当经理拆任务、子 Agent 当工人执行——上下文隔离（子 Agent 只带所需上下文）是核心收益；</p>
+<p>•工程点：每个 Agent 的 Description 决定了调度质量——把「谁负责什么」写清楚，多 Agent 才不乱。</p>
+<p>06SECTION</p>
+<p>四、HITL 中断与恢复（人工审批）</p>
+<p>4.1 为什么需要中断</p>
+<p>高风险动作（删数据/付款/发布）不能直接执行——要在执行前暂停 Agent、等人确认（agent-系列 07 篇 HITL 审批点）。</p>
+<p>4.2 中断/恢复的心智</p>
+<p>code</p>
+<p>Agent 跑到「需要人工」的节点</p>
+<p>→ 中断（保存状态，等待）</p>
+<p>→ 人工确认/修改/拒绝</p>
+<p>→ 恢复（从断点继续，不重跑）</p>
+<p>•ADK 提供中断与恢复能力：Agent 状态可保存、可续跑——长任务 + 人工审批 = 生产可用的关键拼图；</p>
+<p>•类比：LangGraph 的 interrupt / Claude Code 的 checkpoints（同款思路）。</p>
+<p>💡 学习要点：ADK 多 Agent + HITL =「复杂任务的正确打开方式」主 Agent 拆、子 Agent 做、关键节点人批。Token 成本会涨（多 Agent ≈ 单 Agent 的 3-4 倍），但换来的是复杂任务的可控与可审——值不值由任务价值决定。</p>
+<p>07SECTION</p>
+<p>五、实战要点与踩坑</p>
+<p>1Description 即调度契约：子 Agent 的 Description 写清楚，主 Agent 才知道「该派给谁」；</p>
+<p>2中断点别太多：HITL 打断频率是设计参数——高价值不可逆动作才打断；</p>
+<p>3事件流注意分发：多 Agent 事件流（流式输出）需要按 Agent 分发——ADK 已沉淀；</p>
+<p>4先单后多：先跑通单 ChatModelAgent，再加 SubAgents——多 Agent 的坑（上下文污染/重复调用）靠小步迭代排。</p>
+<p>08SECTION</p>
+<p>六、本篇要点（复习卡片）</p>
+<p>1ADK 定位：Eino 高层 Agent 框架——多 Agent 协作 + HITL 中断恢复 + 事件流分发 + 控制权转让。</p>
+<p>2单 Agent：adk.NewChatModelAgent(Model, Tools, Name/Description/Instruction)。</p>
+<p>3多 Agent：SetSubAgents(main, sub1, sub2)——主拆子做、上下文隔离。</p>
+<p>4HITL：中断（保存状态）→ 人工 → 恢复（断点续跑）——高风险动作的人审批。</p>
+<p>5关键：Description = 调度契约；先单后多；Token 成本要算。</p>
+<p>6板块一收官：Eino 组件（01）→ 编排/ReAct（02）→ ADK 多 Agent/HITL（03）——Go 专线三件套。</p>
+<p>09SECTION</p>
+<p>七、下一篇预告</p>
+<p>第 04 篇（板块二·通用）：从零搭单 Agent——语言无关的实战：不依赖框架，用 Python + 一个 API Key 写一个能自主调用工具的 Agent（工具调用 + ReAct 循环 + 避坑：token 消耗、上下文污染）。看清「没有框架时 Agent 的裸骨架」，框架的价值才更清楚。</p>
+<p>10SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Eino ADK 文档：https://www.cloudwego.io/docs/eino/</p>
+<p>•[官方] Eino Overview（ADK 定位）：https://www.cloudwego.io/docs/eino/overview/</p>
+<p>•[官方] eino pkg.go.dev（v0.8.0）：https://pkg.go.dev/github.com/cloudwego/eino@v0.8.0</p>
+<p>•[参考] 社区实战：eino ADK 多 Agent 使用（CSDN）</p>
+<p>整理：2026-10-02 月绡凝 · 依据官方文档。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/Bl0mcQ5QUAwjOCDEVEeGbQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

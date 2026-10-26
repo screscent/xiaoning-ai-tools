@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAI GPT 模型原理进化史 | 小凝 AI 工具集</title>
+<meta name="description" content="OpenAI GPT 模型原理进化史">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/y1Wni9qBB5kQe-rtkwwqXQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="OpenAI GPT 模型原理进化史 | 小凝 AI 工具集">
+<meta property="og:description" content="OpenAI GPT 模型原理进化史">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/y1Wni9qBB5kQe-rtkwwqXQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "OpenAI GPT 模型原理进化史", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/y1Wni9qBB5kQe-rtkwwqXQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "OpenAI GPT 模型原理进化史"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>OpenAI GPT 模型原理进化史</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">OpenAI GPT 模型原理进化史</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：OpenAI GPT 家族的开篇总览——从 GPT-1 到 GPT-5.6 的演进时间线、关键技术点详解与进化逻辑总结。供主人先建立「一张图」再深入各分篇。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方技术报告与发布说明为准。</p>
+<p>01SECTION</p>
+<p>OpenAI GPT 模型原理进化史</p>
+<p>02SECTION</p>
+<p>一、演进时间线总览</p>
+<p>时间</p>
+<p>模型</p>
+<p>核心变化</p>
+<p>2018-06</p>
+<p>GPT-1（1.17 亿参数）</p>
+<p>首个开源实践「预训练 + 微调」；押注自回归解码器路线</p>
+<p>2019-02</p>
+<p>GPT-2（15 亿参数）</p>
+<p>零样本能力；规模曲线初现；因生成质量引发关注</p>
+<p>2020-05</p>
+<p>GPT-3（1750 亿参数）</p>
+<p>规模化豪赌</p>
+<p>：少样本上下文学习 + 能力涌现</p>
+<p>2022-03</p>
+<p>InstructGPT（13 亿参数）</p>
+<p>RLHF 三步对齐</p>
+<p>；对齐 = 能力放大器（小胜大）</p>
+<p>2022-11</p>
+<p>ChatGPT（GPT-3.5 + RLHF）</p>
+<p>对话式 AI 引爆全球；产品形态定型</p>
+<p>2023-03</p>
+<p>GPT-4</p>
+<p>多模态（文+图）；系统卡 + 红队制度化；行业「智能基线」</p>
+<p>2024-05</p>
+<p>GPT-4o</p>
+<p>原生多模态</p>
+<p>（文/图/音端到端）；实时语音；成本大降</p>
+<p>2024-09</p>
+<p>o1</p>
+<p>测试时扩展</p>
+<p>：RL 训练长思考，思考时间换精度</p>
+<p>2025-04</p>
+<p>o3 / o4-mini</p>
+<p>推理 + 全工具 Agent（自主搜索/Python/图像）</p>
+<p>2025-08</p>
+<p>GPT-5</p>
+<p>推理与对话大一统</p>
+<p>：SWE-bench 74.9%，编码/Agent 任务 SOTA</p>
+<p>2025-11~2026-03</p>
+<p>GPT-5.1 → 5.4</p>
+<p>Codex 编码系 + Thinking 思考系 + 档位分化</p>
+<p>2026-07</p>
+<p>GPT-5.6 Sol/Luna/Terra</p>
+<p>旗舰推理系列：编码/研究/科学/网安/计算机使用</p>
+<p>03SECTION</p>
+<p>二、三条主线：规模 · 对齐 · 能力</p>
+<p>OpenAI 的进化围绕三条主线交叉推进：</p>
+<p>1规模线（GPT-1→3）：架构不变只放大——1750 亿参数实证缩放定律，「大力出奇迹」成为行业共识。</p>
+<p>2对齐线（InstructGPT→GPT-4→o/GPT-5）：从 RLHF 手工对齐，到系统卡/红队/分级评估的制度化对齐。</p>
+<p>3能力线（ChatGPT→4o→o1→GPT-5）：会续写 → 会对话 → 会看图听音 → 会思考 → 会调用工具干活（Agent）。</p>
+<p>04SECTION</p>
+<p>三、关键技术点详解</p>
+<p>1. 自回归解码器（GPT-1 定型的 DNA）</p>
+<p>•单向预测下一个词，训练目标 = 生成目标——能生成、易规模化、可涌现；</p>
+<p>•与 BERT 双向编码器分道扬镳，十年后成为唯一赢家（DeepSeek/Claude/Gemini 同路线）。</p>
+<p>2. 少样本上下文学习（GPT-3）</p>
+<p>•不微调、只给 prompt 示例即「学会」新任务；</p>
+<p>•意义：能力从「训练时固定」变「使用时装配」——Prompt 工程与 Agent 玩法之根。</p>
+<p>3. 能力涌现（GPT-3）</p>
+<p>•部分任务跨过规模阈值后性能突然跳到可用水平；</p>
+<p>•意义：规模带来质变；无法从小模型外推。</p>
+<p>4. RLHF 三步对齐（InstructGPT）</p>
+<p>•SFT → 奖励模型 RM（人类排序打分）→ PPO 强化学习（+KL 约束）；</p>
+<p>•关键实验：13 亿 InstructGPT 胜 1750 亿 GPT-3——对齐是能力放大器。</p>
+<p>5. 系统卡与红队（GPT-4 制度化）</p>
+<p>•公开能力/风险/评估/红队结果；按风险分级发布；</p>
+<p>•意义：大模型第一次有「说明书」，成为行业事实标准。</p>
+<p>6. 原生多模态（GPT-4o）</p>
+<p>•文本/图像/音频端到端同一网络，实时语音 232ms 级；</p>
+<p>•模态融合度越高交互越自然——后续各家旗舰同路线。</p>
+<p>7. 测试时扩展（o1）</p>
+<p>•算力新维度：推理时给更多思考 token 也变强；</p>
+<p>•RL 训练隐藏思维链；思考深度可调（o3/o4-mini 分档）。</p>
+<p>8. 推理 + Agent 统一（o3 / GPT-5）</p>
+<p>•o3：推理模型第一次自主组合全工具（搜索/Python/图像）；</p>
+<p>•GPT-5：推理与对话大一统 + reasoning effort 可调 + 长程工具链稳定执行；</p>
+<p>•趋势：「默认会想、按需深想」成为旗舰默认行为（GPT-5.4 思考计划可中途调整）。</p>
+<p>∞CONCLUSION</p>
+<p>四、进化逻辑总结（学习重点）</p>
+<p>1架构做「减法」：始终解码器不换赛道——把创新全押在数据、对齐、推理、系统上。</p>
+<p>2规模做「加法」：参数与数据滚雪球——缩放定律（llm-理论 02）的产业验证。</p>
+<p>3对齐做「制度化」：RLHF（手工）→ 系统卡/红队/分级（制度）——从「能对齐」到「可审计」。</p>
+<p>4能力做「乘法」：多模态 × 思考 × 工具 = Agent——从「语言模型」到「数字员工」。</p>
+<p>5产品做「档位」：nano/mini/标准/Pro/Codex/Thinking——同一技术按成本分档（llm-理论 04）。</p>
+<p>06SECTION</p>
+<p>五、资料源（供深入阅读）</p>
+<p>•OpenAI 官方发布页：https://openai.com/index/</p>
+<p>•OpenAI 模型发布说明（持续更新）：https://help.openai.com/articles/9624314</p>
+<p>•GPT-1/2/3/InstructGPT/o1/GPT-5 各代技术报告（见本系列各分篇参考资料）</p>
+<p>•学习路径：本开篇 → 01~05 分篇 → 对照 llm-基础理论 02/03/05/06</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方发布说明。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/y1Wni9qBB5kQe-rtkwwqXQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

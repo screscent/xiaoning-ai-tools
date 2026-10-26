@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 08 篇 · 工作流 vs Agent 与行业落地范式 | 小凝 AI 工具集</title>
+<meta name="description" content="第 08 篇 · 工作流 vs Agent 与行业落地范式">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/oj-LM9PO0ntApblCgSWqjQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 08 篇 · 工作流 vs Agent 与行业落地范式 | 小凝 AI 工具集">
+<meta property="og:description" content="第 08 篇 · 工作流 vs Agent 与行业落地范式">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/oj-LM9PO0ntApblCgSWqjQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 08 篇 · 工作流 vs Agent 与行业落地范式", "datePublished": "2026-10-02", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/oj-LM9PO0ntApblCgSWqjQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 08 篇 · 工作流 vs Agent 与行业落地范式"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 08 篇 · 工作流 vs Agent 与行业落地范式</h1>
+  <p class="meta-line">发布于 2026-10-02 · 作者 月牙寂</p>
+  <p class="hook">第 08 篇 · 工作流 vs Agent 与行业落地范式</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 范式系列板块三·应用第 08 篇（系列收官）——工作流 vs Agent 与行业落地范式：确定性工作流与动态 Agent 的混搭轴，以及范式在行业（研发评审/质检/办公/编码）的落地。应用板块收官 = 从「范式」到「生意」。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方发布为准。</p>
+<p>01SECTION</p>
+<p>第 08 篇 · 工作流 vs Agent 与行业落地范式</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>07 篇的轴是「人机权力」（Copilot→Autopilot），本篇的轴是「流程确定性」（固定工作流 vs 动态 Agent）。两条轴交叉，就得到 2025-2026 行业落地的最佳实践：能确定的用工作流、该动态的用 Agent，混搭是主流。收尾篇把范式接回「生意」。</p>
+<p>03SECTION</p>
+<p>一、工作流 vs Agent：两条自动化路线的本质</p>
+<p>维度</p>
+<p>工作流（Workflow）</p>
+<p>Agent（动态决策）</p>
+<p>流程</p>
+<p>预定义、确定</p>
+<p>模型动态决策</p>
+<p>控制</p>
+<p>代码/编排器</p>
+<p>模型 + 工具循环</p>
+<p>稳定性</p>
+<p>高、可测试</p>
+<p>中、需护栏</p>
+<p>灵活性</p>
+<p>低</p>
+<p>高</p>
+<p>成本</p>
+<p>低（无冗余推理）</p>
+<p>高（每步都调模型）</p>
+<p>适用</p>
+<p>规则明确、高频稳定</p>
+<p>开放、多变、非结构化</p>
+<p>•官方建议（Anthropic《Building Effective Agents》观点）：先问「能不能用工作流解决」——确定性优先；只有需要动态决策才用 Agent。</p>
+<p>04SECTION</p>
+<p>二、两条轴交叉 → 行业落地矩阵</p>
+<p>｜</p>
+<p>低确定性任务</p>
+<p>高确定性任务</p>
+<p>人主导（Copilot）</p>
+<p>研究助手、创意写作</p>
+<p>表格补全、代码建议</p>
+<p>机主导（Autopilot/Agent）</p>
+<p>自主编码 Agent、深度研究</p>
+<p>流水线 Agent</p>
+<p>（质检/评审/巡检）</p>
+<p>•落地铁律：任务越「可验证、高频、规则化」，越该往「工作流 + 机主导」走；任务越「开放、一次、非结构化」，越该「Agent + 人监督」。</p>
+<p>05SECTION</p>
+<p>三、行业落地范式（2026 商用元年实录）</p>
+<p>行业场景</p>
+<p>范式选择</p>
+<p>实录</p>
+<p>研发评审</p>
+<p>工作流 + Agent 辅助</p>
+<p>江汽 DFMEA 评审智能体：Agent 查规范/提建议，工程师判断拍板（闭环评审）</p>
+<p>质量检测</p>
+<p>确定性模型（CV）+ 流程</p>
+<p>华为盘古 CV 质检大模型：130 万图训练，一套模型多场景，99.9% 精度</p>
+<p>办公自动化</p>
+<p>Agent + 工作流混搭</p>
+<p>邮件/报表/会议纪要：固定步骤走流程、开放内容走 Agent</p>
+<p>编码全流程</p>
+<p>Agent（自主）+ HITL</p>
+<p>Claude Code / Qwen3-Coder：读库→改码→跑测，人审关键节点</p>
+<p>客服/搜索</p>
+<p>对话 Agent + 检索</p>
+<p>研究 Agent（Deep Research）、智能客服：检索确定性 + 生成动态性</p>
+<p>•共性：都是「确定性骨架 + 动态 Agent 局部」——骨架保证可控与合规，Agent 处理非结构化部分。</p>
+<p>💡 学习要点：2026 的落地范式 = 工作流为骨、Agent 为肉、人工为关口纯工作流太僵、纯 Agent 太险。生产级方案三合一：工作流管确定性步骤、Agent 处理开放环节、人工在关键节点把关（衔接 agent-系列 07 篇三层防线）。</p>
+<p>06SECTION</p>
+<p>四、系列收官：范式全景回顾（00-08 一张图）</p>
+<p>code</p>
+<p>工程视角（01-03）：ReAct → P&amp;E/Workflow → 反思/多 Agent ——怎么搭</p>
+<p>研究视角（04-06）：双血统 → 自进化 → 神经符号/通用框架 ——为什么对</p>
+<p>应用视角（07-08）：Copilot→Autopilot 谱系；工作流×Agent 矩阵 ——拿来干嘛</p>
+<p>•三视角合起来的范式选择口诀：任务开放 → ReAct 探索；任务复杂 → P&amp;E 规划；流程固定 → Workflow；要保证 → 神经符号兜底；要成长 → 自进化机制；人负责高价值不可逆 → Copilot 模式；流程成熟可验证 → Autopilot 模式。</p>
+<p>07SECTION</p>
+<p>五、本篇要点（复习卡片）</p>
+<p>1工作流 vs Agent：确定性 vs 动态；能确定的别用 Agent（Anthropic 建议）。</p>
+<p>2落地矩阵：两条轴（人机权力 × 流程确定性）交叉 = 行业方案四象限。</p>
+<p>3三合一范式：工作流为骨 + Agent 为肉 + 人工为关口——2026 生产级标配。</p>
+<p>4行业实录：评审（Agent 辅助人拍板）/ 质检（确定性 CV）/ 办公（混搭）/ 编码（自主+HITL）。</p>
+<p>5系列收官口诀：开放→ReAct；复杂→P&amp;E；固定→Workflow；要保证→符号；要成长→自进化；高价值→Copilot；成熟→Autopilot。</p>
+<p>08SECTION</p>
+<p>六、系列学习路径（总复习）</p>
+<p>code</p>
+<p>00 开篇（三视角全景）→ 01-03 工程（怎么搭）→ 04-06 研究（为什么对）→ 07-08 应用（拿来干嘛）</p>
+<p>•衔接外部：agent-系列（Agent 构成/机制/训练）——范式线讲「设计与演化」，原理线讲「内部构造」；两者合成 Agent 全景。</p>
+<p>09SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Building Effective Agents（Anthropic, 2024）：https://www.anthropic.com/research/building-effective-agents</p>
+<p>•[官方] 江汽×华为智能体实践（人民日报，2026-09）：https://www.people.com.cn/</p>
+<p>•[官方] Claude Code / Qwen3-Coder（编码 Agent，见家族系列）</p>
+<p>•[参考] 2026 AI Agent 商用元年行业综述（OpenClaw/Nanobot/MCP-A2A）</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方发布。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/oj-LM9PO0ntApblCgSWqjQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

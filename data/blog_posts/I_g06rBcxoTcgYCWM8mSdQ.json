@@ -1,0 +1,275 @@
+{
+ "slug": "I_g06rBcxoTcgYCWM8mSdQ",
+ "title": "第 06 篇 · MCP 实战：给所有 Agent 写工具",
+ "author": "月牙寂",
+ "publish_time": "2026-10-02",
+ "source_url": "https://mp.weixin.qq.com/s/I_g06rBcxoTcgYCWM8mSdQ",
+ "digest": "第 06 篇 · MCP 实战：给所有 Agent 写工具",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 实战系列板块二·通用第 06 篇——MCP 实战：写一个 MCP Server 把业务能力封装成工具，一次开发、多 Agent 处处可用；三原语（Tools/Resources/Prompts）与 BFMCP 安全模式。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，代码示意基于官方 SDK 用法。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 06 篇 · MCP 实战：给所有 Agent 写工具"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "04/05 篇给「单个模型」写工具（function calling）。但现实中，同一套工具（查数据库、操作飞书、读文件）要在 Claude/ChatGPT/Gemini/自己的框架里重复接。MCP 解决「写一次、处处用」（原理见 agent-系列 05 篇）。本篇动手写一个 MCP Server，并讲 BFMCP 安全模式。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、MCP Server 是什么"
+  },
+  {
+   "type": "p",
+   "text": "•架构：Agent/框架 = MCP 客户端；外部系统（数据库/API/文件）封装成 MCP 服务端；"
+  },
+  {
+   "type": "p",
+   "text": "•三原语：Tools：可执行动作（github.create_issue、db.query）；Resources：可读数据（Schema、文件、API 文档）；Prompts：可复用模板（代码审查模板等）；"
+  },
+  {
+   "type": "p",
+   "text": "•传输：stdio（本地开发）/ Streamable HTTP（远程生产）；2026-07-28 规范已无状态化。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、最小实战：写一个「订单查询」MCP Server"
+  },
+  {
+   "type": "p",
+   "text": "python"
+  },
+  {
+   "type": "p",
+   "text": "from mcp.server.fastmcp import FastMCP"
+  },
+  {
+   "type": "p",
+   "text": "mcp = FastMCP(\"orders\") # 一个订单服务的 MCP Server"
+  },
+  {
+   "type": "p",
+   "text": "# ① Tools：可执行动作"
+  },
+  {
+   "type": "p",
+   "text": "@mcp.tool()"
+  },
+  {
+   "type": "p",
+   "text": "def query_order(order_id: str) -> str:"
+  },
+  {
+   "type": "p",
+   "text": "\"\"\"按 ID 查询订单状态（返回给 Agent 的文本结果）\"\"\""
+  },
+  {
+   "type": "p",
+   "text": "# 真实实现：查数据库/业务系统"
+  },
+  {
+   "type": "p",
+   "text": "return f\"订单 {order_id} 状态：已发货，预计 10-02 送达\""
+  },
+  {
+   "type": "p",
+   "text": "# ② Resources：可读数据（只读上下文，如 Schema）"
+  },
+  {
+   "type": "p",
+   "text": "@mcp.resource(\"orders://schema\")"
+  },
+  {
+   "type": "p",
+   "text": "def orders_schema() -> str:"
+  },
+  {
+   "type": "p",
+   "text": "\"\"\"订单表结构（Agent 读取以理解字段）\"\"\""
+  },
+  {
+   "type": "p",
+   "text": "return \"订单表：id, product, status, eta\""
+  },
+  {
+   "type": "p",
+   "text": "# ③ Prompts：可复用模板"
+  },
+  {
+   "type": "p",
+   "text": "@mcp.prompt()"
+  },
+  {
+   "type": "p",
+   "text": "def order_inquiry(order_id: str) -> str:"
+  },
+  {
+   "type": "p",
+   "text": "\"\"\"引导 Agent 如何向用户说明订单状态\"\"\""
+  },
+  {
+   "type": "p",
+   "text": "return f\"用户查询订单 {order_id}，请说明状态与预计送达时间\""
+  },
+  {
+   "type": "p",
+   "text": "if __name__ == \"__main__\":"
+  },
+  {
+   "type": "p",
+   "text": "mcp.run() # 默认 stdio 传输，本地即可跑"
+  },
+  {
+   "type": "p",
+   "text": "•跑起来后：Claude Desktop / ChatGPT（Apps SDK）/ 任何 MCP 兼容客户端都能发现并调用这三个能力——不用为每个平台重写集成。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：写一次 MCP Server = 全生态 Agent 可用集成一个 SaaS 工具的平均时间从 ~18 小时（各家手写胶水）降到 ~4 小时（MCP 标准化）。三原语的设计纪律：动作给 Tools、数据给 Resources、交互模板给 Prompts——一个 Server 三种能力配合最好。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、BFMCP 安全模式（生产必读）"
+  },
+  {
+   "type": "p",
+   "text": "•问题：直接暴露「裸 SQL 查询」给 Agent = 攻击面过大（任意查、改敏感表、耗资源）；"
+  },
+  {
+   "type": "p",
+   "text": "•BFMCP（Backend for MCP，类比 BFF 模式）：MCP Server 只暴露业务级操作，真正的数据访问与权限控制放在后端服务："
+  },
+  {
+   "type": "p",
+   "text": "•收益：Server 薄（好测好审）、权限在业务层（不裸奔）、可限流可审计（衔接 agent-系列 07 篇授权最小化）。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、实战要点与踩坑"
+  },
+  {
+   "type": "p",
+   "text": "1工具粒度 = 自然意图：query_order 优于 execute_sql——粒度决定调用质量（agent-系列 04 篇）；"
+  },
+  {
+   "type": "p",
+   "text": "2参数 Schema 要描述清楚：jsonschema_description 帮助模型正确传参；"
+  },
+  {
+   "type": "p",
+   "text": "3返回要「给模型读」的文本：结构化 JSON/简洁 Markdown，别让模型二次解析复杂二进制；"
+  },
+  {
+   "type": "p",
+   "text": "4错误返回结构化：失败时给「原因 + 建议」，让 Agent 能修正重试。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1MCP = 工具接入标准：客户端-服务端；三原语 Tools/Resources/Prompts。"
+  },
+  {
+   "type": "p",
+   "text": "2一次开发处处用：写一个 Server，Claude/ChatGPT/Gemini/自有框架都可用（集成 18h→4h）。"
+  },
+  {
+   "type": "p",
+   "text": "3BFMCP：Server 只暴露业务操作、后端管权限——防「裸 SQL」攻击面。"
+  },
+  {
+   "type": "p",
+   "text": "4粒度：工具 = 自然意图；描述清楚；返回模型友好文本；错误结构化。"
+  },
+  {
+   "type": "p",
+   "text": "5衔接：MCP 原理（agent-系列 05 篇）→ 实战（本篇）→ 安全（agent-系列 07 篇）。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 07 篇（板块二·通用）：Claude 三维协同实战——MCP + PTC + Skills + Subagents：工具协议、程序化工具调用（LLM 写 Python 一次调多次工具）、知识胶囊（SKILL.md）、分而治之（子 Agent）四件套怎么配合用，以及「什么时候该用 PTC、什么时候该用 ReAct 循环」。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] MCP 规范与 SDK：https://modelcontextprotocol.io ｜ Python SDK：https://github.com/modelcontextprotocol/python-sdk"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] MCP 2026-07-28 规范 RC：https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] BFMCP 模式（社区实践，类比 BFF）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-02 月绡凝 · 依据官方协议规范。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:07+0800"
+}

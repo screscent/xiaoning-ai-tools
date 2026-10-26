@@ -1,0 +1,231 @@
+{
+ "slug": "bptCeenB8a1d_PDUkMEGiw",
+ "title": "第 02 篇 · Claude 3 家族与 3.5：三档定位与口碑之王",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/bptCeenB8a1d_PDUkMEGiw",
+ "digest": "第 02 篇 · Claude 3 家族与 3.5：三档定位与口碑之王",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Anthropic Claude 家族系列第 02 篇——Claude 3 家族与 3.5：三档产品化策略，以及 3.5 Sonnet 如何成为开发者口碑之王。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 02 篇 · Claude 3 家族与 3.5：三档定位与口碑之王"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "2023 年的 Claude 在能力上一直被 GPT-4 压着。2024 年 3 月，Anthropic 放出一套组合拳：Claude 3 家族（Opus / Sonnet / Haiku），第一次在综合能力上压过 GPT-4，并开创了「按需求分档」的产品哲学。同年 6 月的 3.5 Sonnet 更是一战封神——被全行业开发者推为「年度性价比之王」。本篇讲这套产品哲学与它背后的技术取舍。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、Claude 3 家族（2024-03）：三档定位"
+  },
+  {
+   "type": "p",
+   "text": "型号"
+  },
+  {
+   "type": "p",
+   "text": "定位"
+  },
+  {
+   "type": "p",
+   "text": "特点"
+  },
+  {
+   "type": "p",
+   "text": "Claude 3 Opus"
+  },
+  {
+   "type": "p",
+   "text": "最强"
+  },
+  {
+   "type": "p",
+   "text": "复杂推理/长任务；对标 GPT-4 并多处胜出"
+  },
+  {
+   "type": "p",
+   "text": "Claude 3 Sonnet"
+  },
+  {
+   "type": "p",
+   "text": "均衡"
+  },
+  {
+   "type": "p",
+   "text": "能力/速度/成本平衡（商用主力）"
+  },
+  {
+   "type": "p",
+   "text": "Claude 3 Haiku"
+  },
+  {
+   "type": "p",
+   "text": "最快"
+  },
+  {
+   "type": "p",
+   "text": "低延迟高吞吐；模块化子任务"
+  },
+  {
+   "type": "p",
+   "text": "1.1 三档的智慧"
+  },
+  {
+   "type": "p",
+   "text": "•一次覆盖全部需求：复杂分析用 Opus、日常业务用 Sonnet、海量调用用 Haiku——把「按模型选」变成「按成本选」；"
+  },
+  {
+   "type": "p",
+   "text": "•能力进步的技术基础：更好的数据质量（训练数据更精筛）、上下文 200K、多模态（视觉）加入、大幅降成本；"
+  },
+  {
+   "type": "p",
+   "text": "•家族首发即超 GPT-4：Opus 在数学/编程/多模态多项基准领先——Anthropic 从「安全学院派」变成「能打的前沿厂」。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：三档产品化 =「把能力做成货架」同一代技术拆成三档卖：最强 / 均衡 / 最快——这是 LLM 商业化的关键一步（OpenAI 后来也照做：GPT-4o/o4-mini、gpt-5-mini/nano）。定价分档与推理效率（llm-理论 04）直接挂钩。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、Claude 3.5 Sonnet（2024-06）：口碑之王"
+  },
+  {
+   "type": "p",
+   "text": "2.1 为什么封神"
+  },
+  {
+   "type": "p",
+   "text": "•性能对标 Opus 3，价格只有 Sonnet 档——「越级打怪」；"
+  },
+  {
+   "type": "p",
+   "text": "•编码：SWE-bench 等基准当时 SOTA；写作/翻译质感公认一流；"
+  },
+  {
+   "type": "p",
+   "text": "•性价比：15（输入/输出每百万 token），大量开发者从 GPT-4 迁移；"
+  },
+  {
+   "type": "p",
+   "text": "•附加：3.5 Haiku（2024-10）把极速档补全。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 技术含金量"
+  },
+  {
+   "type": "p",
+   "text": "•高质量合成数据 + 偏好训练：Claude 3.5 用「AI 生成数据 + 严格过滤」提升编码/长文质量——数据工程成为核心差异；"
+  },
+  {
+   "type": "p",
+   "text": "•长上下文（200K）稳定：长文档/代码库处理不掉链子；"
+  },
+  {
+   "type": "p",
+   "text": "•安全不减配：同为当时「最稳拒答」模型之一。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：3.5 Sonnet 教给行业的 =「中间档是产品主战场」最强模型当门面，中间档拿销量。多数真实任务不需要「最强」，需要「够用且便宜」——这与 DeepSeek-V3 的「激活 37B 打全场」逻辑殊途同归（效率革命 §llm-理论 04）。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1Claude 3 三档：Opus（最强）/ Sonnet（均衡）/ Haiku（最快）——一次覆盖全部需求。"
+  },
+  {
+   "type": "p",
+   "text": "2家族首发超 GPT-4：Anthropic 完成「从安全学院派到前沿厂」的转身。"
+  },
+  {
+   "type": "p",
+   "text": "33.5 Sonnet：对标 Opus 性能、Sonnet 价格 → 开发者口碑之王、年度性价比标杆。"
+  },
+  {
+   "type": "p",
+   "text": "4数据工程：合成数据 + 偏好训练成为能力差异点。"
+  },
+  {
+   "type": "p",
+   "text": "5产品哲学：三档货架 + 中间档主战场 = LLM 商业化的通用公式。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 03 篇：Claude 4 与计算机使用——2025 年 Claude 4 系列带来两大跃迁：Extended Thinking（可控深度思考） 和 Computer Use（自己用电脑）。Claude Code（编程 Agent）与 MCP 协议把「模型」变成「能干活的基础设施」。这是 Claude 从「聊天」走向「Agent 平台」的分水岭。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Introducing the Claude 3 Family（2024）：https://www.anthropic.com/news/claude-3-family"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Claude 3.5 Sonnet 发布（2024）：https://www.anthropic.com/news/claude-3-5-sonnet"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方发布说明。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:30+0800"
+}

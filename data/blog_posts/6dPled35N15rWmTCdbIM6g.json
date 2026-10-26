@@ -1,0 +1,339 @@
+{
+ "slug": "6dPled35N15rWmTCdbIM6g",
+ "title": "第 03 篇 · LLaMA 4：MoE 与原生多模态",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/6dPled35N15rWmTCdbIM6g",
+ "digest": "第 03 篇 · LLaMA 4：MoE 与原生多模态",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Meta LLaMA 家族系列第 03 篇（收尾）——LLaMA 4：架构级转向 MoE + 原生多模态。Scout 的 10M 上下文与 Maverick 的 N:M 稀疏专家。与 llm-基础理论第 04/06 篇（效率/多模态）衔接。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 03 篇 · LLaMA 4：MoE 与原生多模态"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "LLaMA 1-3 的哲学是「Dense 到底 + 数据翻倍」。2025 年 4 月的 LLaMA 4 来了一次架构级转向：全面拥抱 MoE（混合专家）与原生多模态——这等于 Meta 公开承认「单纯 Dense 越大，性价比越低」。LLaMA 4 = 开源阵营向「效率革命」（llm-理论 04）的集体转向中的标志性事件。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、LLaMA 4 家族（2025-04）"
+  },
+  {
+   "type": "p",
+   "text": "1.1 双旗舰"
+  },
+  {
+   "type": "p",
+   "text": "型号"
+  },
+  {
+   "type": "p",
+   "text": "结构"
+  },
+  {
+   "type": "p",
+   "text": "总参 / 激活"
+  },
+  {
+   "type": "p",
+   "text": "上下文"
+  },
+  {
+   "type": "p",
+   "text": "定位"
+  },
+  {
+   "type": "p",
+   "text": "Scout"
+  },
+  {
+   "type": "p",
+   "text": "17B × 16 专家"
+  },
+  {
+   "type": "p",
+   "text": "109B / 17B"
+  },
+  {
+   "type": "p",
+   "text": "10M token"
+  },
+  {
+   "type": "p",
+   "text": "（行业第一）"
+  },
+  {
+   "type": "p",
+   "text": "单卡可跑（int4 量化单 H100）"
+  },
+  {
+   "type": "p",
+   "text": "Maverick"
+  },
+  {
+   "type": "p",
+   "text": "17B × 128 专家"
+  },
+  {
+   "type": "p",
+   "text": "400B / 17B"
+  },
+  {
+   "type": "p",
+   "text": "1M token"
+  },
+  {
+   "type": "p",
+   "text": "多模态 + 推理 + 编码旗舰"
+  },
+  {
+   "type": "p",
+   "text": "1.2 训练与数据"
+  },
+  {
+   "type": "p",
+   "text": "•数据：约 22T token（前代 15T 再 +47%），多语言 12 种；"
+  },
+  {
+   "type": "p",
+   "text": "•架构：原生多模态（图文交错预训练，iTPT）——图片在预训练阶段就与文本交织，而非后期拼视觉塔；"
+  },
+  {
+   "type": "p",
+   "text": "•创新点：N:M 稀疏专家 + 多模态特定门控（tGating 等）——不同模态/任务路由到不同专家。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：LLaMA 4 =「MoE + 原生多模态」双转型架构从「所有参数对每个 token 全量计算」变成「每 token 只激活 17B 专家」。总参决定知识上限、激活决定单次成本——与 DeepSeek-V3（671B/37B）同一逻辑，只是 Meta 走「更大稀疏比 + 多模态路由」。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、两个杀手级卖点"
+  },
+  {
+   "type": "p",
+   "text": "2.1 Scout 的 10M 上下文"
+  },
+  {
+   "type": "p",
+   "text": "•10M token 上下文窗口（行业当时第一）——理论可装几十本书；"
+  },
+  {
+   "type": "p",
+   "text": "•面向场景：多文档总结、海量日志分析、超长代码库检索；"
+  },
+  {
+   "type": "p",
+   "text": "•实现代价：长上下文对算力要求极高——「能用得起」仍是课题（与 Gemini 1M、DeepSeek V4 百万上下文同一战场）。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 单卡可跑的「旗舰级」"
+  },
+  {
+   "type": "p",
+   "text": "•Scout int4 量化后 单张 H100 即可推理；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：「旗舰级知识 + 消费级硬件」——开源模型第一次让「大模型平民化」有了可量化的数字（NVIDIA 实测 Blackwell B200 上 40K+ token/s）。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、与 DeepSeek 的对照（效率路线）"
+  },
+  {
+   "type": "p",
+   "text": "维度"
+  },
+  {
+   "type": "p",
+   "text": "LLaMA 4"
+  },
+  {
+   "type": "p",
+   "text": "DeepSeek-V3"
+  },
+  {
+   "type": "p",
+   "text": "MoE 规模"
+  },
+  {
+   "type": "p",
+   "text": "109B/400B 总 · 17B 激活"
+  },
+  {
+   "type": "p",
+   "text": "671B 总 · 37B 激活"
+  },
+  {
+   "type": "p",
+   "text": "稀疏专家"
+  },
+  {
+   "type": "p",
+   "text": "16~128 专家"
+  },
+  {
+   "type": "p",
+   "text": "256 专家 + 细粒度"
+  },
+  {
+   "type": "p",
+   "text": "多模态"
+  },
+  {
+   "type": "p",
+   "text": "原生（图文交错预训练）"
+  },
+  {
+   "type": "p",
+   "text": "V3 纯文本（V4 才多模态）"
+  },
+  {
+   "type": "p",
+   "text": "上下文"
+  },
+  {
+   "type": "p",
+   "text": "1M~10M"
+  },
+  {
+   "type": "p",
+   "text": "128K（V4 到百万）"
+  },
+  {
+   "type": "p",
+   "text": "特色"
+  },
+  {
+   "type": "p",
+   "text": "单卡部署、10M 上下文"
+  },
+  {
+   "type": "p",
+   "text": "MLA 注意力压缩、FP8 训练"
+  },
+  {
+   "type": "p",
+   "text": "•共同点：都押 MoE + 效率——「开源阵营的效率共识」由此坐实（Qwen3 同代也是 MoE）。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1LLaMA 4 双旗舰：Scout（109B/17B，10M 上下文）/ Maverick（400B/17B，1M，多模态旗舰）。"
+  },
+  {
+   "type": "p",
+   "text": "2架构转向：Dense → MoE；原生多模态（图文交错预训练 + 模态门控）。"
+  },
+  {
+   "type": "p",
+   "text": "3数据 22T：开源数据军备竞赛继续（15T→22T）。"
+  },
+  {
+   "type": "p",
+   "text": "4杀手锏：10M 上下文（Scout）+ 单 H100 部署（int4）——旗舰平民化。"
+  },
+  {
+   "type": "p",
+   "text": "5产业意义：MoE + 多模态 = 开源对 2025 两大潮流的官方答卷（对照 DeepSeek/Qwen 同路线）。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、系列收尾：LLaMA 四篇地图"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "01 LLaMA 1/2（数据质量 + 商用化）→ 02 LLaMA 3/3.1（15T 数据 + 405B 旗舰 + 蒸馏家族）"
+  },
+  {
+   "type": "p",
+   "text": "→ 03 LLaMA 4（MoE + 原生多模态）"
+  },
+  {
+   "type": "p",
+   "text": "对照理论线：数据翻倍 = llm-理论 02（缩放）；蒸馏家族 = 04（效率/蒸馏）；MoE + 多模态 = 04 + 06。LLaMA 家族 = 「开源基座」路线的完整标本——用生态（而非 API）赢得影响力，与 DeepSeek/Qwen 构成开源三极。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Llama 4 发布（2025-04）：https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Llama 4 Model Card：https://www.llama.com/llama4/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] NVIDIA Llama 4 推理优化实测：https://developer.nvidia.com/blog/nvidia-accelerates-inference-on-meta-llama-4-scout-and-maverick"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方技术报告。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:18+0800"
+}

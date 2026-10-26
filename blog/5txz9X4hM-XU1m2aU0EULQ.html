@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>多 Agent 协作与编排：从「单兵」到「团队」 | 小凝 AI 工具集</title>
+<meta name="description" content="多 Agent 协作与编排：从「单兵」到「团队」">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/5txz9X4hM-XU1m2aU0EULQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="多 Agent 协作与编排：从「单兵」到「团队」 | 小凝 AI 工具集">
+<meta property="og:description" content="多 Agent 协作与编排：从「单兵」到「团队」">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/5txz9X4hM-XU1m2aU0EULQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "多 Agent 协作与编排：从「单兵」到「团队」", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/5txz9X4hM-XU1m2aU0EULQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "多 Agent 协作与编排：从「单兵」到「团队」"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>多 Agent 协作与编排：从「单兵」到「团队」</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">多 Agent 协作与编排：从「单兵」到「团队」</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 原理系列板块二·机制第 06 篇——多 Agent 协作与编排：为什么「一个大脑」不够，图编排（LangGraph）/ 角色制（CrewAI）/ 交接制（OpenAI Agents SDK）三范式对比，以及多 Agent 的通信与任务分发原理。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方文档与论文为准。</p>
+<p>01SECTION</p>
+<p>第 06 篇 · 多 Agent 协作与编排：从「单兵」到「团队」</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>单 Agent（01-04 篇的四系统）能做一件事，但复杂任务有三难：上下文超载（一个窗口装不下全部）、角色冲突（又要调研又要写又要审）、并行低效（串行慢）。解法是「多 Agent」：把大任务拆给多个各有分工的大脑。本篇讲三范式与编排原理。</p>
+<p>03WHY</p>
+<p>一、为什么需要多 Agent</p>
+<p>单 Agent 瓶颈</p>
+<p>多 Agent 解法</p>
+<p>一个上下文窗口装不下完整任务</p>
+<p>每个子 Agent 只带自己所需的上下文（sub-agent 隔离）</p>
+<p>一个角色做不了对立职责（写手兼审查）</p>
+<p>角色分离：写手 Agent / 审查 Agent</p>
+<p>串行执行慢</p>
+<p>并行：调研与检索同时进行</p>
+<p>单点失败无冗余</p>
+<p>分工 + 校验节点</p>
+<p>•代价：协调开销（通信、状态同步、失败归属）——不是所有任务都该上多 Agent，简单任务单 Agent 更快更省。</p>
+<p>04SECTION</p>
+<p>二、三大编排范式</p>
+<p>1. 图编排（Graph-Based · LangGraph）</p>
+<p>•显式状态图：节点 = 步骤（LLM 调用/工具/判定），边 = 转移（顺序/分支/循环/重试/审批）；</p>
+<p>•特点：控制最精确——能定义「做完 A 校验，不过就重试，重试 3 次转人工」；</p>
+<p>•生产级：durable checkpointing（断点续跑）、human-in-the-loop、可追踪（LangSmith）；</p>
+<p>•代表用户：Uber、LinkedIn、Klarna、JP Morgan（2025-10 1.0 GA）；</p>
+<p>•定位：要可靠性的生产 Agent 首选。</p>
+<p>2. 角色制（Role-Based · CrewAI）</p>
+<p>•定义角色团队：研究员 Agent / 内容写手 Agent / 审查 Agent——各自有 role、goal、backstory；</p>
+<p>•流程（Flow）+ 任务（Task）编排；20 行 Python 出一个可跑原型；</p>
+<p>•特点：上手最快、心智模型直观（像组团队）；</p>
+<p>•定位：快速原型与团队化写作/调研类任务。</p>
+<p>3. 交接制（Handoff · OpenAI Agents SDK）</p>
+<p>•主 Agent 判断「这个子任务该子 Agent 做」→ handoff 交接，子 Agent 完成后交回；</p>
+<p>•配套：Guardrails（入口出口校验）、Sessions（会话状态）、Tracing（追踪）；</p>
+<p>•模型无关（LiteLLM 支持 100+ 模型）；</p>
+<p>•定位：轻量、清晰、OpenAI 系首选。</p>
+<p>💡 学习要点：三范式 = 三种「控制粒度」图 = 程序员式（一切显式可控）；角色 = 组织式（分工靠角色定义）；交接 = 经理式（主管派活给下属）。选型看需求：要确定性选图，要快出原型选角色，要轻量委派选交接。</p>
+<p>05SECTION</p>
+<p>三、多 Agent 通信与协作机制</p>
+<p>3.1 协作模式（学术谱系）</p>
+<p>•对等讨论（CAMEL）：两个 Agent 角色扮演对话推进任务；</p>
+<p>•组织分工（MetaGPT）：模拟软件公司——产品经理/架构师/程序员/测试各司其职，共享结构化产物（SOP 文档）；</p>
+<p>•社会模拟（Generative Agents）：多个 Agent 带记忆与反思，模拟社区行为（记忆流，衔接 03 篇）；</p>
+<p>•反思协作（MIRROR）：工具 Agent + 反思 Agent，行动前预判 + 行动后纠错。</p>
+<p>3.2 通信协议</p>
+<p>•内部：框架内的消息/状态传递（图的状态、crew 的共享上下文、SDK 的 handoff 消息）；</p>
+<p>•外部：A2A 协议（Agent ↔ Agent 的标准接口，Google 2025-04，与 MCP 同入 AAIF）——跨厂商 Agent 互操作（衔接 05 篇）。</p>
+<p>3.3 任务分发的三个设计点</p>
+<p>1谁来拆：主控 Agent 拆？还是预定义流程拆？——预定义更稳，模型拆更灵活；</p>
+<p>2谁验证：每个子任务出口要校验（结果质量门禁），不合格重做——没有校验的多 Agent 会「接力传垃圾」；</p>
+<p>3谁来兜底：超时/失败升级到人工（HITL，衔接 07 篇）。</p>
+<p>06SECTION</p>
+<p>四、工程实践要点</p>
+<p>1能单不双：单 Agent 能完成就别上多 Agent——协调开销往往是隐藏成本；</p>
+<p>2上下文隔离：子 Agent 只拿所需上下文（这是多 Agent 最重要的收益）；</p>
+<p>3产物共享：Agent 间传递「结构化产物」（文档/表格/代码）而非闲聊——MetaGPT 的 SOP 做法；</p>
+<p>4失败归属：每个 Agent 的输出可追踪（谁产出的、过了哪些校验）——出问题能定位。</p>
+<p>07SECTION</p>
+<p>五、本篇要点（复习卡片）</p>
+<p>1为什么多：上下文超载 / 角色冲突 / 并行低效 / 单点失败——四难四解。</p>
+<p>2三范式：图（LangGraph，确定性最强）/ 角色（CrewAI，最快原型）/ 交接（OpenAI SDK，轻量委派）。</p>
+<p>3协作谱系：对等（CAMEL）/ 分工（MetaGPT）/ 模拟（Generative Agents）/ 反思（MIRROR）。</p>
+<p>4通信：内部框架消息；外部 A2A 协议（跨厂商）。</p>
+<p>5三设计点：谁来拆 / 谁验证 / 谁兜底——没有校验的多 Agent = 接力传垃圾。</p>
+<p>6原则：能单不双；上下文隔离；产物共享；失败可归属。</p>
+<p>08SECTION</p>
+<p>六、下一篇预告</p>
+<p>第 07 篇（板块二收尾）：人机协同与安全——Agent 越自主，越需要「人在环」（HITL）：人工审批点、Guardrails 护栏、授权与审计。从「全自动」到「可控自主」是生产级 Agent 的分水岭。</p>
+<p>09SECTION</p>
+<p>参考资料</p>
+<p>•[官方] LangGraph 1.0：https://blog.langchain.com/langgraph-1-0/ ｜ https://langchain-ai.github.io/langgraph/</p>
+<p>•[官方] CrewAI：https://docs.crewai.com/</p>
+<p>•[官方] OpenAI Agents SDK：https://openai.github.io/openai-agents-python/</p>
+<p>•[官方] MetaGPT（2023）：https://arxiv.org/abs/2308.00352 ｜ CAMEL：https://arxiv.org/abs/2303.17760</p>
+<p>•[官方] A2A 协议：https://a2a-protocol.org/</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方文档与论文。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/5txz9X4hM-XU1m2aU0EULQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

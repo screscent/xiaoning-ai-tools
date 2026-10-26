@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM 基础理论发展史 | 小凝 AI 工具集</title>
+<meta name="description" content="LLM 基础理论发展史">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/P_X2u05s8oX7AlQmaefEZQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LLM 基础理论发展史 | 小凝 AI 工具集">
+<meta property="og:description" content="LLM 基础理论发展史">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/P_X2u05s8oX7AlQmaefEZQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "LLM 基础理论发展史", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/P_X2u05s8oX7AlQmaefEZQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "LLM 基础理论发展史"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>LLM 基础理论发展史</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">LLM 基础理论发展史</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：LLM 基础理论发展系列的开篇总览——从词表示到多模态/Agent 的整个理论演进时间线、关键技术点详解与进化逻辑总结。供主人先建立「一张图」，再进入 00~06 各篇深入。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以经典论文为准。</p>
+<p>01SECTION</p>
+<p>LLM 基础理论发展史</p>
+<p>02SECTION</p>
+<p>一、演进时间线总览</p>
+<p>时间</p>
+<p>理论/论文</p>
+<p>落地模型</p>
+<p>意义</p>
+<p>2013</p>
+<p>Word2Vec</p>
+<p>—</p>
+<p>分布式词表示：用上下文学向量（一切表示的起点）</p>
+<p>2014-15</p>
+<p>Seq2Seq / Bahdanau Attention</p>
+<p>神经机器翻译</p>
+<p>注意力诞生：按相关性加权读取</p>
+<p>2017</p>
+<p>Attention Is All You Need</p>
+<p>Transformer</p>
+<p>干掉 RNN；并行 + 长程 + 通用</p>
+<p>2018</p>
+<p>ELMo / BERT / GPT</p>
+<p>GPT-1、BERT、T5</p>
+<p>三大预训练范式</p>
+<p>；GPT 路线最终胜出</p>
+<p>2020</p>
+<p>Kaplan Scaling Laws / GPT-3</p>
+<p>GPT-3（175B）</p>
+<p>缩放定律</p>
+<p>：大力出奇迹 + 能力涌现</p>
+<p>2022</p>
+<p>CoT / InstructGPT / Constitutional AI</p>
+<p>ChatGPT、Claude</p>
+<p>对齐时代</p>
+<p>：RLHF / 宪法 AI；对话 AI 引爆全球</p>
+<p>2022</p>
+<p>Chinchilla（计算最优）</p>
+<p>LLaMA 一代</p>
+<p>参数与数据 1:20 同比例——当前主流</p>
+<p>2023</p>
+<p>DPO</p>
+<p>Vicuna/Zephyr</p>
+<p>去掉 RM+RL 的对齐简化——开源标配</p>
+<p>2021-24</p>
+<p>MoE / GPTQ / RoPE</p>
+<p>Mixtral、LLaMA、DeepSeek-V2/V3</p>
+<p>效率革命</p>
+<p>：稀疏化、量化、长上下文</p>
+<p>2024</p>
+<p>测试时扩展（o1）</p>
+<p>o1</p>
+<p>思考时间换精度——推理成为新维度</p>
+<p>2025</p>
+<p>纯 RL 推理（R1/GRPO）</p>
+<p>DeepSeek-R1</p>
+<p>推理可被训练：不给步骤只给判分，涌现思考</p>
+<p>2021-26</p>
+<p>CLIP / 原生多模态 / Agent</p>
+<p>GPT-4o、Gemini、Claude 4、V4</p>
+<p>多模态与 Agent</p>
+<p>：看见 + 动手</p>
+<p>03SECTION</p>
+<p>二、一条主线：七篇的因果链</p>
+<p>本系列 00~06 不是并列，而是一条因果链：</p>
+<p>code</p>
+<p>00 词表示（怎么表示词）</p>
+<p>→ 01 Transformer（怎么处理序列）+ 预训练范式</p>
+<p>→ 02 缩放定律（为什么更大更强）</p>
+<p>→ 03 对齐（为什么需要「驯服」）</p>
+<p>→ 04 效率（怎么用得起）</p>
+<p>→ 05 推理（怎么「会思考」）</p>
+<p>→ 06 多模态与 Agent（怎么「看见」和「做事」）</p>
+<p>没有 01 的注意力就没有 02 的规模化；没有 03 的对齐就没有 05 的推理可控；没有 05 的推理就没有 06 的 Agent。</p>
+<p>04SECTION</p>
+<p>三、关键技术点详解</p>
+<p>1. 分布式表示（00 篇核心）</p>
+<p>•One-Hot 无语义 → word2vec 用上下文学向量——「相似词相近」；</p>
+<p>•思想延续：从词表规模的上下文学表示，到今天整个互联网文本的预训练。</p>
+<p>2. Self-Attention 与多头（01 篇核心）</p>
+<p>•Attention(Q,K,V)=softmax(QKᵀ/√d)·V：任意两位置直接相连，距离=1；</p>
+<p>•多头 = 多个子空间视角（语法/指代/语义）；位置编码注入顺序。</p>
+<p>3. 三大预训练范式（01 篇核心）</p>
+<p>•ELMo（浅双向）/ BERT（深双向编码器·掩码）/ GPT（单向解码器·自回归）；</p>
+<p>•胜者：GPT 式自回归——能生成、易规模化、可涌现。</p>
+<p>4. 缩放定律（02 篇核心）</p>
+<p>•loss 与参数 N / 数据 D / 算力 C 呈幂律——大即变强，且可预测；</p>
+<p>•Kaplan（参数优先）vs Chinchilla（计算最优 1:20）——两套目标两种路线；</p>
+<p>•涌现：跨过阈值能力突然出现——红利与风险并存。</p>
+<p>5. RLHF 与对齐谱系（03 篇核心）</p>
+<p>•RLHF 三步：SFT → 奖励模型 RM → PPO 强化学习；</p>
+<p>•宪法 AI：原则条文 + AI 自我批评（RLAIF）；DPO：偏好对直接监督学习；</p>
+<p>•合流：DeepSeek 的 GRPO（规则奖励纯 RL）——对齐与推理一体。</p>
+<p>6. MoE / 量化 / 蒸馏 / 长上下文（04 篇核心）</p>
+<p>•MoE：总参定上限、激活定成本（Mixtral→DeepSeek-V2/V3）；</p>
+<p>•量化：GPTQ/AWQ/FP8——省显存提速，精度有代价；</p>
+<p>•蒸馏：教师产数据、学生跟着学——能力下放；</p>
+<p>•长上下文：ALiBi/RoPE/稀疏注意力/RAG——O(n²) 是第一杀手。</p>
+<p>7. 测试时扩展与纯 RL 推理（05 篇核心）</p>
+<p>•CoT（2022）：分步思考引导出参数里的推理能力；</p>
+<p>•测试时扩展（o1）：推理时思考 token 越多越准；</p>
+<p>•纯 RL（R1）：GRPO + 规则奖励，不给步骤只给判分——推理可被制造。</p>
+<p>8. 多模态与 Agent（06 篇核心）</p>
+<p>•CLIP：图文对比学习，跨模态语义对齐——多模态基石；</p>
+<p>•原生多模态：从预训练就图文联合（Gemini/GPT-4o/V4）；</p>
+<p>•Agent 三拼图：工具调用 + 规划反思 + 环境反馈循环——从「答问」到「做事」。</p>
+<p>∞CONCLUSION</p>
+<p>四、进化逻辑总结（学习重点）</p>
+<p>1表示演进：离散 → 分布式 → 上下文化 → 多模态——「怎么表示信息」是一切的地基。</p>
+<p>2架构收敛：RNN 之争 → Transformer 一统 → 稀疏化（MoE）优化——架构稳定后拼规模与工程。</p>
+<p>3规模与效率双轮：缩放定律（大力出奇迹）× 效率革命（用得起）——能力上限与成本解耦。</p>
+<p>4对齐制度化：RLHF → 宪法 AI → DPO/GRPO——从「人工打分」到「规则可训练」。</p>
+<p>5能力外延：会说话 → 会思考 → 会看会动手（Agent）——LLM 正在变成「数字员工」。</p>
+<p>06SECTION</p>
+<p>五、资料源（供深入阅读）</p>
+<p>•本系列各篇参考资料（每篇末尾附论文链接）：00~06</p>
+<p>•经典论文：Attention Is All You Need（1706.03762）/ BERT（1810.04805）/ GPT-3（2005.14165）/ InstructGPT（2203.02155）/ DPO（2305.18290）/ R1（2501.12948）</p>
+<p>•学习路径：本开篇 → 00~06 逐篇 → 再读各家族系列（deepseek / openai-gpt / anthropic-claude / google-gemini / meta-llama / aliyun-qwen）</p>
+<p>整理：2026-10-01 月绡凝 · 依据经典论文。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/P_X2u05s8oX7AlQmaefEZQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

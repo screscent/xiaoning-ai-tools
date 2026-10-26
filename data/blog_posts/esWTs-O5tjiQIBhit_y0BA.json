@@ -1,0 +1,279 @@
+{
+ "slug": "esWTs-O5tjiQIBhit_y0BA",
+ "title": "第 03 篇 · InstructGPT / ChatGPT：RLHF 与「听话的模型」",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/esWTs-O5tjiQIBhit_y0BA",
+ "digest": "第 03 篇 · InstructGPT / ChatGPT：RLHF 与「听话的模型」",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：OpenAI GPT 家族系列第 03 篇——InstructGPT 与 ChatGPT：RLHF 三步对齐如何把「会说话」变成「会听话」，以及这次对齐如何引爆全球产品浪潮。与 llm-基础理论第 03 篇（对齐时代）衔接。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 03 篇 · InstructGPT / ChatGPT：RLHF 与「听话的模型」"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "GPT-3 很强大但很难用：用户要它翻译，它自说自话；要它安全，它随口编。OpenAI 2022 年的 InstructGPT 做了一个反直觉的实验——用只有 GPT-3 千分之一大的模型（13 亿参数）+ 人类反馈训练，结果人类偏好完胜 1750 亿参数裸奔。这证明：对齐不是修修补补，而是能力放大器。两个月后 ChatGPT 上线，AI 从此走进千家万户。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、RLHF 三步法（InstructGPT，2022）"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "第 1 步 SFT 第 2 步 奖励模型 RM 第 3 步 强化学习 PPO"
+  },
+  {
+   "type": "p",
+   "text": "人工写「指令→回答」→ 人对同一指令的多份回答 → 用 RM 当奖励信号，"
+  },
+  {
+   "type": "p",
+   "text": "微调模型听指令 排序打分，训练打分器 PPO 更新模型 + KL 约束"
+  },
+  {
+   "type": "p",
+   "text": "1.1 为什么是三步"
+  },
+  {
+   "type": "p",
+   "text": "•只做第 1 步（SFT）：模型「会模仿」但上限是标注数据，且无法超过标注员水平；"
+  },
+  {
+   "type": "p",
+   "text": "•加上第 2 步（RM）：把「人觉得好不好」变成可优化的标量——有了反馈信号；"
+  },
+  {
+   "type": "p",
+   "text": "•第 3 步（RL/PPO）：让模型在「打分标准」上持续优化，突破标注数据的上限，同时 KL 惩罚防止模型过度改写乱说话。"
+  },
+  {
+   "type": "p",
+   "text": "1.2 结果（OpenAI 自己的实验）"
+  },
+  {
+   "type": "p",
+   "text": "对比"
+  },
+  {
+   "type": "p",
+   "text": "人类偏好胜率"
+  },
+  {
+   "type": "p",
+   "text": "13 亿 InstructGPT vs 1750 亿 GPT-3"
+  },
+  {
+   "type": "p",
+   "text": "InstructGPT 大幅胜出"
+  },
+  {
+   "type": "p",
+   "text": "13 亿 InstructGPT vs 13 亿 GPT-3"
+  },
+  {
+   "type": "p",
+   "text": "显著胜出（有用性 ↑ 真实性 ↑ 毒性 ↓）"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：对齐 = 能力放大器模型小 100 倍，仅因「被调教过」，用户体验反而更好。参数决定上限，对齐决定你能用出多少上限。 这是后来所有产品（ChatGPT/Claude/Gemini）的共同前提。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、ChatGPT（2022-11）：从研究到产品"
+  },
+  {
+   "type": "p",
+   "text": "2.1 它做了什么"
+  },
+  {
+   "type": "p",
+   "text": "•基座：GPT-3.5 系列（约 1750 亿级）+ 大规模 RLHF；"
+  },
+  {
+   "type": "p",
+   "text": "•形态：对话界面 + 指令遵循 + 拒绝不当请求；"
+  },
+  {
+   "type": "p",
+   "text": "•结果：5 天 100 万用户，两月破亿——史上最快消费者应用。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 为什么是它引爆"
+  },
+  {
+   "type": "p",
+   "text": "1对话即产品：不需要教程，人人都能「跟 AI 说话」；"
+  },
+  {
+   "type": "p",
+   "text": "2对齐改变了交互：会认错、会拒绝、会追问——首次像「助手」而非「搜索引擎的自动补全」；"
+  },
+  {
+   "type": "p",
+   "text": "3能力被大众重新发现：写代码、写方案、改简历——第一次让普通人感受到大模型的生产力。"
+  },
+  {
+   "type": "p",
+   "text": "2.3 暴露的新问题"
+  },
+  {
+   "type": "p",
+   "text": "•幻觉：自信地胡说（对齐改善真实性，但没消灭）；"
+  },
+  {
+   "type": "p",
+   "text": "•对齐不足：越狱提示词可绕过安全限制（红队成为常态工作）；"
+  },
+  {
+   "type": "p",
+   "text": "•成本：单次对话的推理成本高——推动了后来「模型做小做快」（GPT-4o-mini 等）的效率路线。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、RLHF 的代价与演进"
+  },
+  {
+   "type": "p",
+   "text": "问题"
+  },
+  {
+   "type": "p",
+   "text": "后续演进"
+  },
+  {
+   "type": "p",
+   "text": "人工标注贵、标准不稳定"
+  },
+  {
+   "type": "p",
+   "text": "宪法 AI（Anthropic 规则自评）/ DPO（2023 去 RM+RL）/ GRPO（DeepSeek 规则奖励）"
+  },
+  {
+   "type": "p",
+   "text": "RL 训练不稳定"
+  },
+  {
+   "type": "p",
+   "text": "参考模型 KL 约束 → 逐步放宽；监督式偏好训练"
+  },
+  {
+   "type": "p",
+   "text": "对齐税（过拟合讨好）"
+  },
+  {
+   "type": "p",
+   "text": "系统卡 + 红队 + 可解释性评估（GPT-4 起制度化）"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1RLHF 三步：SFT → 奖励模型 RM → PPO 强化学习（+KL 约束）。"
+  },
+  {
+   "type": "p",
+   "text": "2核心实验：13 亿 InstructGPT 完胜 1750 亿 GPT-3——对齐是能力放大器。"
+  },
+  {
+   "type": "p",
+   "text": "3ChatGPT（2022-11）：GPT-3.5 + RLHF + 对话形态 = 史上最快破亿产品。"
+  },
+  {
+   "type": "p",
+   "text": "4对话即产品：指令遵循/认错/拒绝让 AI 首次像「助手」。"
+  },
+  {
+   "type": "p",
+   "text": "5遗留问题：幻觉、越狱、成本 → 推动对齐方法演进（DPO/宪法 AI/GRPO）与效率革命。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 04 篇：GPT-4 与 GPT-4o——从「文本聊天」到「多模态系统」：GPT-4（2023）引入视觉理解、成为产业智商标杆，GPT-4o（2024）用「原生多模态 + 实时语音」把 AI 装进每个人的耳机。同时，安全治理（系统卡/红队/对齐制度）在 GPT-4 正式制度化——大模型第一次有了「说明书」。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Training language models to follow instructions with human feedback（InstructGPT, 2022）：https://arxiv.org/abs/2203.02155"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] ChatGPT 发布博客（2022）：https://openai.com/blog/chatgpt"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] OpenAI 关于对齐的官方系列解读：https://openai.com/research/instruction-following"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方技术报告。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:51+0800"
+}

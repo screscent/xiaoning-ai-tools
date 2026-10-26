@@ -1,0 +1,675 @@
+{
+ "slug": "vu5GnH-ijte8upytXz008A",
+ "title": "MetaGPT 源码拆解：一行需求如何跑成一家「软件公司」",
+ "author": "月牙寂",
+ "publish_time": "2026-09-28",
+ "source_url": "https://mp.weixin.qq.com/s/vu5GnH-ijte8upytXz008A",
+ "digest": "MetaGPT 源码拆解：一行需求如何跑成一家「软件公司」",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为月牙寂与月绡凝的个人 AI 工程化实践知识分享，仅供学习参考，不构成任何商业建议或技术承诺。读者使用文中任何方法、工具、配置时请自行评估风险并担责。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "MetaGPT 源码拆解：一行需求如何跑成一家「软件公司」"
+  },
+  {
+   "type": "p",
+   "text": "MetaGPT 不是「多个 Agent 拼在一起」，而是把一家软件公司的 SOP 物化成可运行代码：Code = SOP(Team)。 本文基于 commit 11cdf46（v1.0.0）源码做纯技术拆解，只讲工程实现：三个核心抽象、一条消息链路、一套 LLM 无关分层，以及它们如何串起「一行需求 → 可运行软件仓库」的端到端流水线。"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、总体分层"
+  },
+  {
+   "type": "p",
+   "text": "源码 metagpt/ 包自底向上大致七层："
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "入口/编排 software_company.py · startup.py · team.py"
+  },
+  {
+   "type": "p",
+   "text": "角色层 roles/（Role 及 ProductManager/Engineer/DataInterpreter…）"
+  },
+  {
+   "type": "p",
+   "text": "行为层 actions/（Action + ActionNode 树形结构）"
+  },
+  {
+   "type": "p",
+   "text": "消息/环境 schema.py（Message）· environment/（Environment）"
+  },
+  {
+   "type": "p",
+   "text": "记忆层 memory/（Memory · LongTermMemory · BrainMemory…）"
+  },
+  {
+   "type": "p",
+   "text": "底座抽象 base/（BaseRole · BaseEnv）· context_mixin.py"
+  },
+  {
+   "type": "p",
+   "text": "LLM 层 llm.py · provider/（门面 + 多 Provider 实现）"
+  },
+  {
+   "type": "p",
+   "text": "配置层 config2.py · configs/（Config / LLMConfig）"
+  },
+  {
+   "type": "p",
+   "text": "关键设计是分层单向依赖：上层（入口）只消费下层（配置/LLM）的公开接口，角色与行为层不直接碰具体 Provider——这让「换模型」从代码问题退化成配置问题（见 §六）。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、核心抽象之一：Role 与 react 三态"
+  },
+  {
+   "type": "p",
+   "text": "2.1 基座链"
+  },
+  {
+   "type": "p",
+   "text": "BaseSerialization（pydantic BaseModel，extra=\"forbid\"）→ SerializationMixin（serialize/deserialize/get_serialization_path）→ ContextMixin（context_mixin.py:17，公共/私有 context 配置 + llm 三件套，私有优先否则回落公共）。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 Role 组合结构"
+  },
+  {
+   "type": "p",
+   "text": "Role（roles/role.py:125）= BaseRole + SerializationMixin + ContextMixin + BaseModel，持有："
+  },
+  {
+   "type": "p",
+   "text": "•RoleContext.rc：env / msg_buffer（异步消息队列）/ memory / working_memory / watch（订阅标签集）/ todo / react_mode / max_react_loop；"
+  },
+  {
+   "type": "p",
+   "text": "•Planner（strategy/planner.py）：PLAN_AND_ACT 模式的计划器；"
+  },
+  {
+   "type": "p",
+   "text": "•actions：装配的行为列表。"
+  },
+  {
+   "type": "p",
+   "text": "2.3 react 三态（role.py:82 RoleReactMode）"
+  },
+  {
+   "type": "p",
+   "text": "模式"
+  },
+  {
+   "type": "p",
+   "text": "选择下一个 Action 的方式"
+  },
+  {
+   "type": "p",
+   "text": "源码路径"
+  },
+  {
+   "type": "p",
+   "text": "REACT"
+  },
+  {
+   "type": "p",
+   "text": "（默认）"
+  },
+  {
+   "type": "p",
+   "text": "LLM 读 STATE_TEMPLATE，输出状态数字，extract_state_value_from_output 解析后 _set_state 选 action"
+  },
+  {
+   "type": "p",
+   "text": "_think"
+  },
+  {
+   "type": "p",
+   "text": "role.py:340"
+  },
+  {
+   "type": "p",
+   "text": "BY_ORDER"
+  },
+  {
+   "type": "p",
+   "text": "严格按 actions 顺序逐个执行，状态号自增"
+  },
+  {
+   "type": "p",
+   "text": "role.py:353"
+  },
+  {
+   "type": "p",
+   "text": "PLAN_AND_ACT"
+  },
+  {
+   "type": "p",
+   "text": "先 Planner.update_plan(goal) 生成计划，再逐任务 _act_on_task + process_task_result"
+  },
+  {
+   "type": "p",
+   "text": "_plan_and_act"
+  },
+  {
+   "type": "p",
+   "text": "role.py:472"
+  },
+  {
+   "type": "p",
+   "text": "核心循环在 _react（role.py:454）：while actions_taken < max_react_loop: _think() → _act()。REACT 模式下「选什么动作」本身就是一次 LLM 推理，这是 MetaGPT 与固定流程图的分水岭——角色是状态机，但状态转移由模型决定。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、核心抽象之二：Action 与 ActionNode 动态模型"
+  },
+  {
+   "type": "p",
+   "text": "3.1 Action：执行单元"
+  },
+  {
+   "type": "p",
+   "text": "Action（actions/action.py:29），关键字段 node: ActionNode。run()（action.py:110）两条路径：有 node 走 _run_action_node（组装需求 + 调 LLM）；无 node 由子类实现 run（如 WritePRD、WriteCode）。"
+  },
+  {
+   "type": "p",
+   "text": "3.2 ActionNode：树形结构 + 运行时生成的校验模型"
+  },
+  {
+   "type": "p",
+   "text": "ActionNode（actions/action_node.py:135）是普通对象（非 pydantic），核心特征："
+  },
+  {
+   "type": "p",
+   "text": "•树形节点：children / prevs / nexts，可以递归嵌套定义输出结构；"
+  },
+  {
+   "type": "p",
+   "text": "•动态生成校验模型（action_node.py:248 create_model_class）：按节点的 field mapping 用 pydantic v2 create_model 运行时构造校验类，带 model_validator(before) 做必填字段缺失检查 + 未知字段告警；遇到嵌套 dict 递归生成子模型类（{class_name}_{field_name}）；"
+  },
+  {
+   "type": "p",
+   "text": "•多填充策略：simple/complex、code_fill / xml_fill / single_fill 等，适配不同输出格式（JSON/XML/代码）；"
+  },
+  {
+   "type": "p",
+   "text": "•评审机制：HUMAN（人工确认）/ AUTO（LLM 自评）两种评审路径；"
+  },
+  {
+   "type": "p",
+   "text": "•经验池缓存：fill 方法带 @exp_cache（action_node.py:596），命中过的填充结果直接复用。"
+  },
+  {
+   "type": "p",
+   "text": "工程含义：上游角色产出的 PRD/设计必须是「结构正确」的——不是靠提示词碰运气，而是用运行时构造的 pydantic 模型强制校验，不符合字段约束就过不去。这是「结构化中间产物」的技术底座。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、消息流：Observer 订阅发布的三个层次"
+  },
+  {
+   "type": "p",
+   "text": "Message（schema.py:232）字段：content / cause_by / sent_from / send_to / role / instruct_content；send_to 默认 MESSAGE_ROUTE_TO_ALL，子类 UserMessage / SystemMessage / AIMessage。"
+  },
+  {
+   "type": "p",
+   "text": "消息传递拆成三层，职责分离（RFC 116 落地）："
+  },
+  {
+   "type": "p",
+   "text": "1publish_message（role.py:429）：角色把消息发给 Environment，由 env 广播；"
+  },
+  {
+   "type": "p",
+   "text": "2put_message（role.py:448）：消息进入角色私有"
+  },
+  {
+   "type": "p",
+   "text": "msg_buffer（异步队列）；"
+  },
+  {
+   "type": "p",
+   "text": "3_observe（role.py:399）：从 buffer 取出消息，按 (cause_by in watch or 自己的名字 in send_to) 过滤去重后写入 memory。"
+  },
+  {
+   "type": "p",
+   "text": "路由发生在 Environment.publish_message（environment/base_env.py:175）：遍历 member_addrs，对每条消息按 is_send_to(message, addrs) 匹配订阅者，命中则 role.put_message。订阅关系由 _watch([Action类型]) 声明——协作关系即订阅关系，加一个新角色不需要改主流程。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、执行流水线：Team.run 的调度循环"
+  },
+  {
+   "type": "p",
+   "text": "5.1 软件公司模式入口（software_company.py:14 generate_repo）"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "config.update_via_cli(...) → Context(config)"
+  },
+  {
+   "type": "p",
+   "text": "→ Team.hire([TeamLeader, ProductManager, Architect, Engineer2, DataAnalyst]) # ProjectManager 被注释"
+  },
+  {
+   "type": "p",
+   "text": "→ company.invest(investment) # 投资额度注入角色上下文"
+  },
+  {
+   "type": "p",
+   "text": "→ asyncio.run(company.run(n_round, idea))"
+  },
+  {
+   "type": "p",
+   "text": "5.2 调度循环（team.py:123 run）"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "run_project(idea) 发布 UserMessage 触发首轮"
+  },
+  {
+   "type": "p",
+   "text": "while n_round > 0:"
+  },
+  {
+   "type": "p",
+   "text": "若 env.is_idle 则 break"
+  },
+  {
+   "type": "p",
+   "text": "n_round -= 1"
+  },
+  {
+   "type": "p",
+   "text": "_check_balance() # 投资余额耗尽即停"
+  },
+  {
+   "type": "p",
+   "text": "await env.run() # asyncio.gather 并行跑所有非空闲角色的 run()"
+  },
+  {
+   "type": "p",
+   "text": "env.archive(auto_archive) # 归档历史"
+  },
+  {
+   "type": "p",
+   "text": "Environment.run（base_env.py:197）用 asyncio.gather"
+  },
+  {
+   "type": "p",
+   "text": "并行驱动每个 role.run()，角色之间靠消息订阅异步衔接，不是同步函数调用。"
+  },
+  {
+   "type": "p",
+   "text": "5.3 角色间 SOP 协作链（消息订阅驱动）"
+  },
+  {
+   "type": "p",
+   "text": "TeamLeader（RoleZero，含 Plan 工具）拆解需求 → ProductManager（watch UserRequirement）产出 PRD → Architect（watch WritePRD）产出系统设计/API → Engineer2 产出代码 → DataAnalyst 做数据相关分析 → 代码经 ProjectRepo 落盘为仓库。这就是「SOP 即代码」：流程不是脚本，是 Team + 订阅关系的运行时行为。"
+  },
+  {
+   "type": "p",
+   "text": "产物结构（utils/project_repo.py + const.py:86-106）："
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "workspace/<project>/"
+  },
+  {
+   "type": "p",
+   "text": "├── docs/ # PRD / 设计文档"
+  },
+  {
+   "type": "p",
+   "text": "├── resources/ # 资源"
+  },
+  {
+   "type": "p",
+   "text": "├── src/ # 源码（with_src_path 时）"
+  },
+  {
+   "type": "p",
+   "text": "├── tests/ # 测试"
+  },
+  {
+   "type": "p",
+   "text": "└── requirements/requirements.txt"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、LLM 无关分层：换模型 = 改配置"
+  },
+  {
+   "type": "p",
+   "text": "6.1 调用链"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "LLM(llm_config, context) # 门面 llm.py:15"
+  },
+  {
+   "type": "p",
+   "text": "→ ctx.llm() / llm_with_cost_manager_from_llm_config"
+  },
+  {
+   "type": "p",
+   "text": "→ create_llm_instance(config) # llm_provider_registry.py:38"
+  },
+  {
+   "type": "p",
+   "text": "→ LLM_REGISTRY.get_provider(config.api_type) # 注册表路由"
+  },
+  {
+   "type": "p",
+   "text": "→ 具体 Provider（OpenAILLM / AnthropicLLM / …）"
+  },
+  {
+   "type": "p",
+   "text": "→ HTTP/SDK requestor → BasePostProcessPlugin 输出修复"
+  },
+  {
+   "type": "p",
+   "text": "6.2 注册机制"
+  },
+  {
+   "type": "p",
+   "text": "LLMProviderRegistry（provider/llm_provider_registry.py:12）维护 {key: cls}；register_provider(keys) 装饰器副作用注册——import provider 模块即自动注册，新增 Provider 只需新增一个文件 + 一个装饰器。LLMType.__missing__（configs/llm_config.py:48）对未知 api_type 静默回落 OpenAI（不报错，排障时注意）。"
+  },
+  {
+   "type": "p",
+   "text": "6.3 api_type → 实现类映射（节选）"
+  },
+  {
+   "type": "p",
+   "text": "api_type"
+  },
+  {
+   "type": "p",
+   "text": "实现类"
+  },
+  {
+   "type": "p",
+   "text": "OPENAI / MOONSHOT / DEEPSEEK / SILICONFLOW / OPENROUTER / FIREWORKS…"
+  },
+  {
+   "type": "p",
+   "text": "OpenAILLM"
+  },
+  {
+   "type": "p",
+   "text": "ANTHROPIC / CLAUDE"
+  },
+  {
+   "type": "p",
+   "text": "AnthropicLLM"
+  },
+  {
+   "type": "p",
+   "text": "GEMINI / SPARK / ZHIPUAI / QIANFAN / DASHSCOPE / BEDROCK / OLLAMA / ARK"
+  },
+  {
+   "type": "p",
+   "text": "各自独立实现"
+  },
+  {
+   "type": "p",
+   "text": "AZURE / METAGPT"
+  },
+  {
+   "type": "p",
+   "text": "继承 OpenAILLM 的 AzureOpenAILLM / MetaGPTLLM"
+  },
+  {
+   "type": "p",
+   "text": "BaseLLM（provider/base_llm.py:35）抽象 __init__ / _achat_completion / acompletion / aask…，通用能力包括 format_msg、get_choice_text、aask_batch、消息压缩 compress_messages、成本 _update_costs。"
+  },
+  {
+   "type": "p",
+   "text": "6.4 配置加载优先级"
+  },
+  {
+   "type": "p",
+   "text": "Config.default()（config2.py:109）合并两处 yaml 后，最终 dict 优先级：os.environ"
+  },
+  {
+   "type": "p",
+   "text": "→ 仓库 config2.yaml → ~/.metagpt/config2.yaml → 代码 kwargs，结果缓存于模块级 _CONFIG_CACHE。api_key 缺失在 LLMConfig 校验阶段直接报错（configs/llm_config.py:116）。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "七、记忆分层与经验池"
+  },
+  {
+   "type": "p",
+   "text": "记忆实现"
+  },
+  {
+   "type": "p",
+   "text": "存储"
+  },
+  {
+   "type": "p",
+   "text": "关键机制"
+  },
+  {
+   "type": "p",
+   "text": "适用"
+  },
+  {
+   "type": "p",
+   "text": "Memory"
+  },
+  {
+   "type": "p",
+   "text": "内存 storage + index"
+  },
+  {
+   "type": "p",
+   "text": "get_by_action(s)"
+  },
+  {
+   "type": "p",
+   "text": "按 cause_by 索引查询"
+  },
+  {
+   "type": "p",
+   "text": "角色短时记忆"
+  },
+  {
+   "type": "p",
+   "text": "LongTermMemory"
+  },
+  {
+   "type": "p",
+   "text": "内存 + Faiss"
+  },
+  {
+   "type": "p",
+   "text": "recover/persist 持久化；find_news 相似度过滤旧闻"
+  },
+  {
+   "type": "p",
+   "text": "跨会话长时记忆"
+  },
+  {
+   "type": "p",
+   "text": "MemoryStorage"
+  },
+  {
+   "type": "p",
+   "text": "Faiss ANN"
+  },
+  {
+   "type": "p",
+   "text": "向量近邻检索引擎"
+  },
+  {
+   "type": "p",
+   "text": "长时记忆底座"
+  },
+  {
+   "type": "p",
+   "text": "BrainMemory"
+  },
+  {
+   "type": "p",
+   "text": "Redis"
+  },
+  {
+   "type": "p",
+   "text": "缓存 + 自动压缩 summarize"
+  },
+  {
+   "type": "p",
+   "text": "Assistant 等常驻角色"
+  },
+  {
+   "type": "p",
+   "text": "RoleZeroLongTermMemory"
+  },
+  {
+   "type": "p",
+   "text": "Chroma RAG"
+  },
+  {
+   "type": "p",
+   "text": "短时满 200 条自动转长时"
+  },
+  {
+   "type": "p",
+   "text": "RoleZero 家族"
+  },
+  {
+   "type": "p",
+   "text": "**经验池（exp_pool）**是独立亮点：@exp_cache 装饰器（exp_pool/decorator.py:29）把「输入上下文 → 输出结果」落库，命中的经验直接复用，未命中才调 LLM。使用点包括 RoleZero._plan_and_act（role_zero.py:267）与 ActionNode.fill（action_node.py:596）——这是「越跑越快」的机制来源：同一类任务第二次执行会命中缓存，省一次推理。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "八、RAG 与文档存储"
+  },
+  {
+   "type": "p",
+   "text": "•RAG 模块（metagpt/rag/）：retrievers（faiss / es / chroma / bm25 / hybrid / base）+ rankers（LLM 重排 object_ranker）+ engines（simple.py 基础流水线 / flare.py）+ factories（retriever/ranker/llm/embedding/index 工厂），支撑客服 FAQ 等场景；"
+  },
+  {
+   "type": "p",
+   "text": "•Document Store（metagpt/document_store/）：base_store.py 统一抽象，提供 chromadb / faiss / lancedb / milvus / qdrant 五种向量库实现——向量库的选择也是配置问题，不污染业务代码。"
+  },
+  {
+   "type": "p",
+   "text": "10SECTION"
+  },
+  {
+   "type": "p",
+   "text": "九、关键设计要点（技术判据）"
+  },
+  {
+   "type": "p",
+   "text": "1SOP 即代码：软件公司流程 = Team + 订阅关系 + Action 序列，加角色/改流程不动主循环；"
+  },
+  {
+   "type": "p",
+   "text": "2结构化中间产物强制校验：ActionNode 运行时构造 pydantic 模型，上游输出结构不对就过不了（必填字段缺失直接 ValueError）；"
+  },
+  {
+   "type": "p",
+   "text": "3可序列化恢复：Team/Context 支持序列化，recover_path 从已序列化的 team 目录恢复续跑（software_company.py:63）——长任务可中断可续跑；"
+  },
+  {
+   "type": "p",
+   "text": "4角色无状态化可选：enable_memory=False 可关闭记忆，原子型角色省内存；"
+  },
+  {
+   "type": "p",
+   "text": "5react 策略可插拔：一个 Role 通过 react_mode 在「LLM 选动作 / 固定顺序 / 计划驱动」间切换，同一套抽象覆盖从简单问答到计划执行的复杂度梯度。"
+  },
+  {
+   "type": "p",
+   "text": "一句话总结这套工程架构的边界：MetaGPT 的强项是「多角色 + 结构化产物 + 强校验」——用流程约束单模型的长上下文与幻觉；而它的一次性团队生命周期、无跨任务主体记忆，也正对应 Agent 演进谱系里「第一代任务流水线」的天花板位置（这也正是常驻主体型范式要补的课，这里不展开）。"
+  },
+  {
+   "type": "p",
+   "text": "技术拆解就到这。想深入哪一层（ActionNode 校验 / 消息路由 / Provider 接入），欢迎留言聊聊；也可以顺着文末的联系方式找到我们。"
+  },
+  {
+   "type": "p",
+   "text": "— 月牙寂 × 月绡凝（人机协作）"
+  },
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  }
+ ],
+ "archived_at": "2026-10-26T09:17:41+0800"
+}

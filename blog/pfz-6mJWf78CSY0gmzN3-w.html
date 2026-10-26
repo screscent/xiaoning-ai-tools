@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力 | 小凝 AI 工具集</title>
+<meta name="description" content="第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/pfz-6mJWf78CSY0gmzN3-w.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力 | 小凝 AI 工具集">
+<meta property="og:description" content="第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/pfz-6mJWf78CSY0gmzN3-w.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/pfz-6mJWf78CSY0gmzN3-w.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：DeepSeek 原理学习系列第 2 篇——DeepSeekMath（7B）数学推理专项的原理性深度分析。以官方论文《DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models》（arXiv:2402.03300）为唯一事实源，参考社区高质量解读整理，供主人系统学习，亦可作为技术文章对外分享。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以 DeepSeek 官方论文为准；个别三方解读数据如有出入，以官方为准。</p>
+<p>01SECTION</p>
+<p>第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力</p>
+<p>02WHY</p>
+<p>导读：这一篇为什么重要</p>
+<p>第 1 篇的初始版 DeepSeek LLM 证明了「抄好作业 + 数据工程 + Scaling Law」能把通用大模型做强。第 2 篇的 DeepSeekMath 则打出两记更响的拳头：</p>
+<p>1数据视角：全网数学内容占比不足 0.5%——好的数学数据不是「攒」出来的，是用分类器「找」出来的；</p>
+<p>2算法视角：论文在这里首次提出了 GRPO（组相对策略优化）——这正是 2025 年引爆推理革命的 DeepSeek-R1 的核心算法。</p>
+<p>更惊人的是成绩：一个 7B 的模型，在竞赛级 MATH 基准上做到 51.7%，逼近 GPT-4（52.9%） 与 Gemini Ultra（53.2%），而它的体积只有 GPT-4 的几十分之一。</p>
+<p>一句话总结：这一篇是「数据挖掘」与「强化学习算法」两场好戏的合体，也是通往 R1 的关键一站。</p>
+<p>03SECTION</p>
+<p>一、背景：数学 = 大模型的「试金石」</p>
+<p>•数学推理需要多步逻辑推导，是检验 LLM 推理深度的最硬科目。</p>
+<p>•当时最强的 GPT-4 / Gemini Ultra 是闭源的；开源模型在 MATH 上落后闭源十几分，差距刺眼。</p>
+<p>•DeepSeek 的选择：不追求「更大」，而是做一个数学专项 7B 模型，用「数据 + 算法」去追平差距。</p>
+<p>当时的 MATH 分数榜（无外部工具、无投票，CoT 直答）：</p>
+<p>模型</p>
+<p>参数规模</p>
+<p>MATH（%）</p>
+<p>Gemini Ultra</p>
+<p>闭源超大</p>
+<p>53.2</p>
+<p>GPT-4</p>
+<p>闭源超大</p>
+<p>52.9</p>
+<p>DeepSeekMath-RL 7B7B51.7</p>
+<p>InternLM2-Math 20B</p>
+<p>20B</p>
+<p>37.7</p>
+<p>Qwen 72B</p>
+<p>72B</p>
+<p>35.2</p>
+<p>WizardMath 7B</p>
+<p>7B</p>
+<p>33.0</p>
+<p>Grok-1</p>
+<p>闭源超大</p>
+<p>23.9</p>
+<p>💡 学习要点：注意 DeepSeekMath 与第二梯队（20B/72B）之间的断层——它不是「略好」，而是把开源数学能力整体抬高了一档。</p>
+<p>04SECTION</p>
+<p>二、数据工程：用分类器「找」数学，而不是攒数学</p>
+<p>2.1 难题：全网数学内容 &lt; 0.5%</p>
+<p>数学网页在整个互联网里占比极低（三方解读估计不足 0.5%），靠关键词或人工整理很难凑够大规模语料。DeepSeek 的洞见：最好的数学数据不在少数精选站点，而是散落在海量网页里，只是「找不出来」。</p>
+<p>2.2 DeepSeekMath-Corpus：120B token 的迭代挖掘</p>
+<p>核心是一套 fastText 分类器 + 人类修正的迭代闭环：</p>
+<p>步骤</p>
+<p>做法</p>
+<p>① 种子训练</p>
+<p>用高质量数学网页集 OpenWebMath 作为正样本，混入多样化普通网页作负样本，训练 fastText 分类器（低成本、轻量，适合大规模网页快速筛选）</p>
+<p>② 分类器挖掘</p>
+<p>用分类器从 Common Crawl 海量网页中召回数学页面</p>
+<p>③ 人类反馈</p>
+<p>分析召回页面的域名，把数学含量高的站点（如 MathOverflow 等）找出来；人工标注这些域名下的 URL 模式，补充未召回的数学页</p>
+<p>④ 循环迭代</p>
+<p>用扩充后的语料重新训练分类器，再挖一轮；重复 4 轮直到召回趋于饱和（第 4 轮约 98% 的页面在第 3 轮已收集）</p>
+<p>产出：35.5M 数学网页 ≈ 120B token，多语言（英中为主），是当时最大规模的公开数学语料（约为此前最佳公开数学语料的 9 倍）。</p>
+<p>2.3 去重与去污染</p>
+<p>•去重：URL 去重 + 近似去重（将 Common Crawl 约 40B 网页规模先收缩）。</p>
+<p>•去污染（防作弊）：严格过滤任何包含 GSM8K / MATH 等基准题目或答案 n-gram 的网页——保证评估分数真实、不是「背题」。</p>
+<p>💡 学习要点：迭代式数据挖掘的通用套路「种子语料 → 训练分类器 → 自动挖掘 → 人工修正 → 再来一轮」是个可复用的方法论。DeepSeek 后来在代码、Agent 等方向都沿用了这种**「机器挖掘 + 人工校正」**的闭环。</p>
+<p>05CODE</p>
+<p>三、模型：从代码模型续训，而不是从零开始</p>
+<p>3.1 关键决策：初始化自 DeepSeek-Coder-Base-v1.5 7B</p>
+<p>DeepSeek 用代码预训练模型作为起点，而不是通用模型。理由是实验观察到的：从代码模型起步，数学能力显著更好——代码的逻辑结构、精确语法与数学推理高度同源。</p>
+<p>💡 学习要点：代码 × 数学的协同代码预训练已经教会模型「精确、结构化、可验证」的思维；数学续训只是把这种能力迁移并强化到符号推理上。这是 DeepSeek 后续「数学强 → 推理强 → Agent 强」链条的源头。</p>
+<p>3.2 续训数据配比（共约 500B token）</p>
+<p>来源</p>
+<p>占比</p>
+<p>作用</p>
+<p>DeepSeekMath-Corpus（120B）</p>
+<p>56%</p>
+<p>数学推理主料</p>
+<p>GitHub 代码</p>
+<p>20%</p>
+<p>保住并强化代码/结构化能力</p>
+<p>arXiv 论文</p>
+<p>10%</p>
+<p>学术与公式语言</p>
+<p>通用中英文自然语言</p>
+<p>10%</p>
+<p>防「数学偏科」、保通用性</p>
+<p>AlgebraicStack（数学代码）</p>
+<p>4%</p>
+<p>数学-程序桥接</p>
+<p>验证收益：Base 7B 不仅 GSM8K 64.2%、MATH 36.2%（超越当时 540B 的 Minerva），而且 MMLU、BBH 等通用推理基准也同步提升——数学训练强化的是「通用推理」本身。</p>
+<p>06SECTION</p>
+<p>四、指令微调：SFT 的三种解题「姿势」</p>
+<p>预训练后，用 77.6 万条数学指令样本（覆盖英/中文 K-12 及以上难度）做 SFT，关键在同一道题配多种解法格式：</p>
+<p>格式</p>
+<p>全称</p>
+<p>思路</p>
+<p>CoT</p>
+<p>Chain-of-Thought 思维链</p>
+<p>用自然语言逐步推理（人类解题习惯）</p>
+<p>PoT</p>
+<p>Program-of-Thought 程序思维</p>
+<p>把解题写成代码，让模型「写程序代替心算」</p>
+<p>工具集成推理</p>
+<p>Tool-integrated reasoning</p>
+<p>自然语言 + 代码工具（如 Python）混合求解</p>
+<p>产出 DeepSeekMath-Instruct 7B：击败所有 7B 同类，与 70B 开源指令模型相当。</p>
+<p>07SECTION</p>
+<p>五、GRPO：本篇最值钱的算法（R1 的前奏）</p>
+<p>5.1 PPO 的两大痛点</p>
+<p>传统 RLHF 强化学习用 PPO，需要同时训练两个模型：策略模型 + Critic 价值模型（估计每条回答的好坏基线）。痛点：</p>
+<p>1显存翻倍：Critic 与策略模型一般大，GPU 压力巨大；</p>
+<p>2训练不稳：价值函数要为每个 token 预测奖励，而奖励通常只对最后结果打分，学起来既慢又脆。</p>
+<p>5.2 GRPO 的核心思想：扔掉 Critic，让「组内互评」</p>
+<p>GRPO 的改动一句话：不再训练价值模型，用「同一个问题的一组答案」来构造基线。</p>
+<p>具体流程（每个问题 q）：</p>
+<p>1从当前策略对 q 采样一组（G 个）答案；</p>
+<p>2用规则（最终答案对错）给每个答案打分，得到组内分数 {r1, r2, …, rG}；</p>
+<p>3用组内均值/标准差把分数归一化为相对优势——做得比同组平均水平好就推，差就拉；</p>
+<p>4以 PPO 同款的 clip 策略更新，保证训练稳定。</p>
+<p>对比</p>
+<p>PPO</p>
+<p>GRPO</p>
+<p>价值模型（Critic）</p>
+<p>需要（同策略同规模）</p>
+<p>不需要</p>
+<p>基线来源</p>
+<p>价值模型预测</p>
+<p>组内答案的平均分</p>
+<p>显存</p>
+<p>高（约翻倍）</p>
+<p>省一半以上</p>
+<p>稳定性</p>
+<p>依赖价值模型训练质量</p>
+<p>组内相对比较，更稳</p>
+<p>5.3 GRPO 的成绩（RL 阶段）</p>
+<p>只用一部分英语指令数据做强化学习，GRPO 让模型再上一个台阶：</p>
+<p>基准</p>
+<p>Instruct 基线</p>
+<p>+GRPO</p>
+<p>提升</p>
+<p>GSM8K</p>
+<p>82.9%</p>
+<p>88.2%</p>
+<p>+5.3</p>
+<p>MATH</p>
+<p>46.8%</p>
+<p>51.7%</p>
+<p>+4.9</p>
+<p>CMATH（中文，域外）</p>
+<p>—</p>
+<p>88.8%</p>
+<p>域外也强</p>
+<p>再叠上 64 样本自一致性（Self-Consistency）投票，MATH 可达 60.9%。</p>
+<p>💡 学习要点：GRPO 为什么是「战略级」发明去掉价值模型，意味着大规模 RL 的显存与成本门槛大幅下降，也让「纯 RL 从零训推理」变得可操作——这正是 2025-01 月 R1-Zero 的雏形。GRPO 从本篇诞生，在 R1 篇中我们将看到它如何被推到极致。</p>
+<p>08SECTION</p>
+<p>六、评估与意义</p>
+<p>•7B 单模型（无工具、无投票）MATH 51.7%，逼近 GPT-4 与 Gemini Ultra——开源模型的数学天花板被整体抬高。</p>
+<p>•域外泛化：中文 CMATH 88.8%，说明学到的不是「背题技巧」而是可迁移的推理能力。</p>
+<p>•通用推理同步提升：MMLU、BBH 均受益——「练数学 ≈ 练推理」。</p>
+<p>•全套权重（Base / Instruct / RL）开源，代码 MIT、权重可商用——研究社区从此有了免费的高质量数学基座。</p>
+<p>09SECTION</p>
+<p>七、本篇要点（复习卡片）</p>
+<p>1数学数据 &lt;0.5% 的难题 → fastText 分类器 + 人工校正的四轮迭代挖掘，产出 120B token（当时最大数学语料，约 9 倍于此前最佳）。</p>
+<p>2从代码模型续训：以 DeepSeek-Coder-Base-v1.5 7B 为起点，数学 = 代码逻辑能力的迁移与强化。</p>
+<p>3500B 混合配比：56% 数学 + 20% 代码 + 10% arXiv + 10% 通用 + 4% 数学代码。</p>
+<p>4SFT 三姿势：CoT（语言推理）/ PoT（写程序）/ 工具集成推理。</p>
+<p>5GRPO 诞生于此：抛弃 Critic 价值模型，用组内均值/标准差做相对优势——显存省一半、训练更稳，是 R1 的核心算法。</p>
+<p>6成绩：7B 无工具 MATH 51.7%（逼近 GPT-4 52.9 / Gemini Ultra 53.2）；自一致性 64 样本达 60.9%；中文 CMATH 88.8%。</p>
+<p>7通用性：数学训练同时提升 MMLU / BBH——练数学即练推理。</p>
+<p>10SECTION</p>
+<p>八、下一篇预告</p>
+<p>DeepSeekMath 在「数学专项」上证明了两件事：数据挖掘能挖出性能、GRPO 能替代 PPO。下一篇进入全系列最重要的架构转折：DeepSeek-V2（236B / 21B 激活）——MLA + DeepSeekMoE。你将看到 DeepSeek 如何从「训练一个大而全的稠密模型」切换到「总参很大、激活很少」的稀疏架构，把训练成本省 42.5%、KV 缓存压掉 93.3%、推理吞吐拉高 5.76 倍——这也是「参数做加法、成本做减法」路线的正式确立。</p>
+<p>11SECTION</p>
+<p>参考资料</p>
+<p>•[官方] DeepSeekMath 论文（arXiv:2402.03300）：https://arxiv.org/abs/2402.03300</p>
+<p>•[官方] GitHub 仓库（DeepSeek-Math）：https://github.com/deepseek-ai/DeepSeek-Math</p>
+<p>•[参考] AI Wiki《DeepSeekMath》条目（参数/许可/基准汇总）：https://www.aiwiki.ai/wiki/deepseek_math</p>
+<p>•[参考] AIAny《DeepSeekMath (2024) — Visual Explainer》（MATH 分数榜）：https://aiany.app/html/deepseekmath-pushing-the-limits-of-mathematical-reasoning-in-open-language-models?lang=en</p>
+<p>•[参考] AGI Frontier《DeepSeekMath 论文解读》（三阶段流程/数据配比）：https://agifrontier.github.io/tutorials/deepseekmath-pushing-the-limits-of-mathematical-reasoning-in-open-language-model/</p>
+<p>•[参考] CSDN《突破数学推理极限：DeepSeekMath 的算法与实现》（GRPO 原理）：https://blog.csdn.net/weixin_36829761/article/details/145280505</p>
+<p>•[参考] 51CTO《从 DeepSeek-Math 到 DeepSeek-Coder》（代码×数学协同）：https://blog.51cto.com/u_16213559/14972810</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方论文；个别三方文章数据以官方为准。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/pfz-6mJWf78CSY0gmzN3-w" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

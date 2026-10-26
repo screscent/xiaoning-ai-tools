@@ -1,0 +1,331 @@
+{
+ "slug": "5txz9X4hM-XU1m2aU0EULQ",
+ "title": "多 Agent 协作与编排：从「单兵」到「团队」",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/5txz9X4hM-XU1m2aU0EULQ",
+ "digest": "多 Agent 协作与编排：从「单兵」到「团队」",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 原理系列板块二·机制第 06 篇——多 Agent 协作与编排：为什么「一个大脑」不够，图编排（LangGraph）/ 角色制（CrewAI）/ 交接制（OpenAI Agents SDK）三范式对比，以及多 Agent 的通信与任务分发原理。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方文档与论文为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 06 篇 · 多 Agent 协作与编排：从「单兵」到「团队」"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "单 Agent（01-04 篇的四系统）能做一件事，但复杂任务有三难：上下文超载（一个窗口装不下全部）、角色冲突（又要调研又要写又要审）、并行低效（串行慢）。解法是「多 Agent」：把大任务拆给多个各有分工的大脑。本篇讲三范式与编排原理。"
+  },
+  {
+   "type": "p",
+   "text": "03WHY"
+  },
+  {
+   "type": "p",
+   "text": "一、为什么需要多 Agent"
+  },
+  {
+   "type": "p",
+   "text": "单 Agent 瓶颈"
+  },
+  {
+   "type": "p",
+   "text": "多 Agent 解法"
+  },
+  {
+   "type": "p",
+   "text": "一个上下文窗口装不下完整任务"
+  },
+  {
+   "type": "p",
+   "text": "每个子 Agent 只带自己所需的上下文（sub-agent 隔离）"
+  },
+  {
+   "type": "p",
+   "text": "一个角色做不了对立职责（写手兼审查）"
+  },
+  {
+   "type": "p",
+   "text": "角色分离：写手 Agent / 审查 Agent"
+  },
+  {
+   "type": "p",
+   "text": "串行执行慢"
+  },
+  {
+   "type": "p",
+   "text": "并行：调研与检索同时进行"
+  },
+  {
+   "type": "p",
+   "text": "单点失败无冗余"
+  },
+  {
+   "type": "p",
+   "text": "分工 + 校验节点"
+  },
+  {
+   "type": "p",
+   "text": "•代价：协调开销（通信、状态同步、失败归属）——不是所有任务都该上多 Agent，简单任务单 Agent 更快更省。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、三大编排范式"
+  },
+  {
+   "type": "p",
+   "text": "1. 图编排（Graph-Based · LangGraph）"
+  },
+  {
+   "type": "p",
+   "text": "•显式状态图：节点 = 步骤（LLM 调用/工具/判定），边 = 转移（顺序/分支/循环/重试/审批）；"
+  },
+  {
+   "type": "p",
+   "text": "•特点：控制最精确——能定义「做完 A 校验，不过就重试，重试 3 次转人工」；"
+  },
+  {
+   "type": "p",
+   "text": "•生产级：durable checkpointing（断点续跑）、human-in-the-loop、可追踪（LangSmith）；"
+  },
+  {
+   "type": "p",
+   "text": "•代表用户：Uber、LinkedIn、Klarna、JP Morgan（2025-10 1.0 GA）；"
+  },
+  {
+   "type": "p",
+   "text": "•定位：要可靠性的生产 Agent 首选。"
+  },
+  {
+   "type": "p",
+   "text": "2. 角色制（Role-Based · CrewAI）"
+  },
+  {
+   "type": "p",
+   "text": "•定义角色团队：研究员 Agent / 内容写手 Agent / 审查 Agent——各自有 role、goal、backstory；"
+  },
+  {
+   "type": "p",
+   "text": "•流程（Flow）+ 任务（Task）编排；20 行 Python 出一个可跑原型；"
+  },
+  {
+   "type": "p",
+   "text": "•特点：上手最快、心智模型直观（像组团队）；"
+  },
+  {
+   "type": "p",
+   "text": "•定位：快速原型与团队化写作/调研类任务。"
+  },
+  {
+   "type": "p",
+   "text": "3. 交接制（Handoff · OpenAI Agents SDK）"
+  },
+  {
+   "type": "p",
+   "text": "•主 Agent 判断「这个子任务该子 Agent 做」→ handoff 交接，子 Agent 完成后交回；"
+  },
+  {
+   "type": "p",
+   "text": "•配套：Guardrails（入口出口校验）、Sessions（会话状态）、Tracing（追踪）；"
+  },
+  {
+   "type": "p",
+   "text": "•模型无关（LiteLLM 支持 100+ 模型）；"
+  },
+  {
+   "type": "p",
+   "text": "•定位：轻量、清晰、OpenAI 系首选。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：三范式 = 三种「控制粒度」图 = 程序员式（一切显式可控）；角色 = 组织式（分工靠角色定义）；交接 = 经理式（主管派活给下属）。选型看需求：要确定性选图，要快出原型选角色，要轻量委派选交接。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、多 Agent 通信与协作机制"
+  },
+  {
+   "type": "p",
+   "text": "3.1 协作模式（学术谱系）"
+  },
+  {
+   "type": "p",
+   "text": "•对等讨论（CAMEL）：两个 Agent 角色扮演对话推进任务；"
+  },
+  {
+   "type": "p",
+   "text": "•组织分工（MetaGPT）：模拟软件公司——产品经理/架构师/程序员/测试各司其职，共享结构化产物（SOP 文档）；"
+  },
+  {
+   "type": "p",
+   "text": "•社会模拟（Generative Agents）：多个 Agent 带记忆与反思，模拟社区行为（记忆流，衔接 03 篇）；"
+  },
+  {
+   "type": "p",
+   "text": "•反思协作（MIRROR）：工具 Agent + 反思 Agent，行动前预判 + 行动后纠错。"
+  },
+  {
+   "type": "p",
+   "text": "3.2 通信协议"
+  },
+  {
+   "type": "p",
+   "text": "•内部：框架内的消息/状态传递（图的状态、crew 的共享上下文、SDK 的 handoff 消息）；"
+  },
+  {
+   "type": "p",
+   "text": "•外部：A2A 协议（Agent ↔ Agent 的标准接口，Google 2025-04，与 MCP 同入 AAIF）——跨厂商 Agent 互操作（衔接 05 篇）。"
+  },
+  {
+   "type": "p",
+   "text": "3.3 任务分发的三个设计点"
+  },
+  {
+   "type": "p",
+   "text": "1谁来拆：主控 Agent 拆？还是预定义流程拆？——预定义更稳，模型拆更灵活；"
+  },
+  {
+   "type": "p",
+   "text": "2谁验证：每个子任务出口要校验（结果质量门禁），不合格重做——没有校验的多 Agent 会「接力传垃圾」；"
+  },
+  {
+   "type": "p",
+   "text": "3谁来兜底：超时/失败升级到人工（HITL，衔接 07 篇）。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、工程实践要点"
+  },
+  {
+   "type": "p",
+   "text": "1能单不双：单 Agent 能完成就别上多 Agent——协调开销往往是隐藏成本；"
+  },
+  {
+   "type": "p",
+   "text": "2上下文隔离：子 Agent 只拿所需上下文（这是多 Agent 最重要的收益）；"
+  },
+  {
+   "type": "p",
+   "text": "3产物共享：Agent 间传递「结构化产物」（文档/表格/代码）而非闲聊——MetaGPT 的 SOP 做法；"
+  },
+  {
+   "type": "p",
+   "text": "4失败归属：每个 Agent 的输出可追踪（谁产出的、过了哪些校验）——出问题能定位。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1为什么多：上下文超载 / 角色冲突 / 并行低效 / 单点失败——四难四解。"
+  },
+  {
+   "type": "p",
+   "text": "2三范式：图（LangGraph，确定性最强）/ 角色（CrewAI，最快原型）/ 交接（OpenAI SDK，轻量委派）。"
+  },
+  {
+   "type": "p",
+   "text": "3协作谱系：对等（CAMEL）/ 分工（MetaGPT）/ 模拟（Generative Agents）/ 反思（MIRROR）。"
+  },
+  {
+   "type": "p",
+   "text": "4通信：内部框架消息；外部 A2A 协议（跨厂商）。"
+  },
+  {
+   "type": "p",
+   "text": "5三设计点：谁来拆 / 谁验证 / 谁兜底——没有校验的多 Agent = 接力传垃圾。"
+  },
+  {
+   "type": "p",
+   "text": "6原则：能单不双；上下文隔离；产物共享；失败可归属。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 07 篇（板块二收尾）：人机协同与安全——Agent 越自主，越需要「人在环」（HITL）：人工审批点、Guardrails 护栏、授权与审计。从「全自动」到「可控自主」是生产级 Agent 的分水岭。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] LangGraph 1.0：https://blog.langchain.com/langgraph-1-0/ ｜ https://langchain-ai.github.io/langgraph/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] CrewAI：https://docs.crewai.com/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] OpenAI Agents SDK：https://openai.github.io/openai-agents-python/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] MetaGPT（2023）：https://arxiv.org/abs/2308.00352 ｜ CAMEL：https://arxiv.org/abs/2303.17760"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] A2A 协议：https://a2a-protocol.org/"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方文档与论文。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:52+0800"
+}

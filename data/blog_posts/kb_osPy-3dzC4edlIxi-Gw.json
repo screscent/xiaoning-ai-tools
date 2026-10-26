@@ -1,0 +1,347 @@
+{
+ "slug": "kb_osPy-3dzC4edlIxi-Gw",
+ "title": "第 01 篇 · Transformer 革命 + 三大预训练范式",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/kb_osPy-3dzC4edlIxi-Gw",
+ "digest": "第 01 篇 · Transformer 革命 + 三大预训练范式",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：LLM 基础理论发展系列第 01 篇——Transformer 革命与三大预训练范式。本系列最重要的里程碑：一个 2017 年的架构如何统治一切，以及它开启的「预训练」范式如何定义今天的 LLM。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以原论文为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 01 篇 · Transformer 革命 + 三大预训练范式"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "2017 年《Attention Is All You Need》用一个大胆主张终结了 RNN 时代：不要循环，只要注意力。紧接着 2018-2019 年，ELMo/BERT/GPT 把「预训练」变成新范式——先在海量文本上学通用表示，再微调。这两件事合起来 = 今天所有 LLM 的 DNA。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、Transformer：Attention Is All You Need（2017）"
+  },
+  {
+   "type": "p",
+   "text": "1.1 三个关键设计（对照 RNN 的痛点）"
+  },
+  {
+   "type": "p",
+   "text": "RNN 痛点"
+  },
+  {
+   "type": "p",
+   "text": "Transformer 解法"
+  },
+  {
+   "type": "p",
+   "text": "串行无法并行"
+  },
+  {
+   "type": "p",
+   "text": "Self-Attention"
+  },
+  {
+   "type": "p",
+   "text": "：所有位置同时计算，天然可并行"
+  },
+  {
+   "type": "p",
+   "text": "长程依赖弱"
+  },
+  {
+   "type": "p",
+   "text": "注意力直接建立任意两位置的连接，距离=1"
+  },
+  {
+   "type": "p",
+   "text": "无法看后文"
+  },
+  {
+   "type": "p",
+   "text": "双向/多头注意力"
+  },
+  {
+   "type": "p",
+   "text": "（编码器可看全文）"
+  },
+  {
+   "type": "p",
+   "text": "1.2 核心组件"
+  },
+  {
+   "type": "p",
+   "text": "1Self-Attention（自注意力）：每个词与所有词算相关性后加权融合——Attention(Q,K,V) = softmax(QKᵀ/√d)·V。"
+  },
+  {
+   "type": "p",
+   "text": "2多头注意力（Multi-Head）：多个注意力「头」并行，各自关注不同子空间（语法关系/指代/语义）。"
+  },
+  {
+   "type": "p",
+   "text": "3位置编码（Positional Encoding）：注意力本身无序，需注入位置信息（原始用三角函数；后来的 RoPE 是升级版——DeepSeek 系列第 3 篇讲过）。"
+  },
+  {
+   "type": "p",
+   "text": "4FFN + 残差 + LayerNorm：每个位置过前馈网络，残差连接保训练稳定。"
+  },
+  {
+   "type": "p",
+   "text": "1.3 意义"
+  },
+  {
+   "type": "p",
+   "text": "•并行 → 训练规模可以暴力放大（GPU 越多越快）；"
+  },
+  {
+   "type": "p",
+   "text": "•通用 → 可平移去做文本/图像/音频（后来都被 Transformer 统一）。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：为什么说「Attention 即一切」不是注意力取代了所有结构，而是「按相关性加权读取」这一机制被证明足以承载语言理解的核心。Transformer = 注意力 × 位置 × 前馈 × 深度。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、预训练范式：ELMo / BERT / GPT 三足鼎立"
+  },
+  {
+   "type": "p",
+   "text": "2.1 共同思想：先在无标注海量文本上「预训练」，再「微调/适配」"
+  },
+  {
+   "type": "p",
+   "text": "•无标注文本几乎无限 → 语言模型目标（预测下一个词 / 预测被掩码的词）自动提供监督信号；"
+  },
+  {
+   "type": "p",
+   "text": "•学到的表示是通用的 → 下游任务只需轻量微调。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 三家的路线分歧（决定今天的格局）"
+  },
+  {
+   "type": "p",
+   "text": "模型（年份）"
+  },
+  {
+   "type": "p",
+   "text": "预训练目标"
+  },
+  {
+   "type": "p",
+   "text": "方向性"
+  },
+  {
+   "type": "p",
+   "text": "架构"
+  },
+  {
+   "type": "p",
+   "text": "命运"
+  },
+  {
+   "type": "p",
+   "text": "ELMo"
+  },
+  {
+   "type": "p",
+   "text": "（2018）"
+  },
+  {
+   "type": "p",
+   "text": "前向+后向语言模型拼接"
+  },
+  {
+   "type": "p",
+   "text": "双向但浅层"
+  },
+  {
+   "type": "p",
+   "text": "双向 LSTM"
+  },
+  {
+   "type": "p",
+   "text": "被 BERT 取代（教训：拼接≠融合）"
+  },
+  {
+   "type": "p",
+   "text": "BERT"
+  },
+  {
+   "type": "p",
+   "text": "（2018）"
+  },
+  {
+   "type": "p",
+   "text": "掩码语言模型（MLM）"
+  },
+  {
+   "type": "p",
+   "text": "：随机盖词预测"
+  },
+  {
+   "type": "p",
+   "text": "双向（编码器）"
+  },
+  {
+   "type": "p",
+   "text": "Transformer 编码器"
+  },
+  {
+   "type": "p",
+   "text": "统治 NLU（理解类任务）"
+  },
+  {
+   "type": "p",
+   "text": "GPT"
+  },
+  {
+   "type": "p",
+   "text": "（2018）"
+  },
+  {
+   "type": "p",
+   "text": "自回归"
+  },
+  {
+   "type": "p",
+   "text": "：预测下一个词"
+  },
+  {
+   "type": "p",
+   "text": "单向（解码器）"
+  },
+  {
+   "type": "p",
+   "text": "Transformer 解码器"
+  },
+  {
+   "type": "p",
+   "text": "统治生成式 LLM（今天的赢家）"
+  },
+  {
+   "type": "p",
+   "text": "2.3 为什么最后是「GPT 路线」赢了"
+  },
+  {
+   "type": "p",
+   "text": "•生成天然兼容：预测下一个词 = 生成；对话/写作/代码直接可用；"
+  },
+  {
+   "type": "p",
+   "text": "•规模化友好：自回归目标简单稳定，容易扩到千亿参数；"
+  },
+  {
+   "type": "p",
+   "text": "•能力涌现：规模上去后，推理/指令遵循等能力自发出现（第 02 篇的缩放定律解释）。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：BERT 双向 vs GPT 单向——「看懂」与「会写」BERT 能「看懂」句子（双向上下文），但不会生成；GPT 会「续写」（单向），但能生成。今天的 LLM 全部是 GPT 式自回归解码器——包括 DeepSeek、Claude、Gemini。方向性选择决定了模型是「理解工具」还是「生成引擎」。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1Transformer 三大件：Self-Attention（并行+长程）+ 多头（多视角）+ 位置编码（注入顺序）。"
+  },
+  {
+   "type": "p",
+   "text": "2预训练范式：无标注文本自动监督 → 通用表示 → 微调适配。"
+  },
+  {
+   "type": "p",
+   "text": "3三范式：ELMo（浅双向）/ BERT（深双向编码器）/ GPT（单向解码器）。"
+  },
+  {
+   "type": "p",
+   "text": "4赢家：GPT 式自回归——因为它能生成、易规模化、可涌现。"
+  },
+  {
+   "type": "p",
+   "text": "5与 DeepSeek 系列衔接：DeepSeek 初始版就是 GPT 式解码器架构的工程化（第 1 篇）。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 02 篇：缩放定律（Scaling Laws）——为什么「更大的模型 + 更多的数据」会稳定地变强？Kaplan 2020 与 Chinchilla 2022 给出两套结论，GPT-3 用 1750 亿参数验证了「大力出奇迹」，而 DeepSeek 在自家缩放定律研究上给出了「偏模型侧」的第三条路（第 1 篇）。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Attention Is All You Need（Vaswani et al., 2017）：https://arxiv.org/abs/1706.03762"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] ELMo（Peters et al., 2018）：https://arxiv.org/abs/1802.05365"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] BERT（Devlin et al., 2018）：https://arxiv.org/abs/1810.04805"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] GPT-1（Radford et al., 2018）：https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据原论文。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:17:12+0800"
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent 框架与协议标准：从原理到搭建 | 小凝 AI 工具集</title>
+<meta name="description" content="Agent 框架与协议标准：从原理到搭建">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/wmLlyY8Ck3MsMrbuoOToZw.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agent 框架与协议标准：从原理到搭建 | 小凝 AI 工具集">
+<meta property="og:description" content="Agent 框架与协议标准：从原理到搭建">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/wmLlyY8Ck3MsMrbuoOToZw.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agent 框架与协议标准：从原理到搭建", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/wmLlyY8Ck3MsMrbuoOToZw.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "Agent 框架与协议标准：从原理到搭建"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>Agent 框架与协议标准：从原理到搭建</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">Agent 框架与协议标准：从原理到搭建</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 原理系列板块五·平台第 11 篇（系列收官）——Agent 框架与协议标准：主流框架对比、选型指南，以及 MCP/A2A 协议标准化路径。从「懂原理」到「会选型、能搭建」。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方文档为准。</p>
+<p>01SECTION</p>
+<p>第 11 篇 · Agent 框架与协议标准：从原理到搭建</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>前 10 篇是「原理」，本篇是「工具箱」：用什么搭、怎么选、靠什么互联。2025-2026 年框架从「百家混战」走向「按场景分工」，协议（MCP/A2A）走向基金会标准化。读完后，Agent 系列从「知道是什么」闭环到「知道怎么选」。</p>
+<p>03SECTION</p>
+<p>一、主流框架一览（2026 快照）</p>
+<p>框架</p>
+<p>定位</p>
+<p>语言</p>
+<p>多 Agent</p>
+<p>特点</p>
+<p>LangGraph 1.0</p>
+<p>生产级图编排（企业默认）</p>
+<p>Python/TS</p>
+<p>✅</p>
+<p>显式状态图、durable checkpoint、HITL、可观测（LangSmith）</p>
+<p>OpenAI Agents SDK</p>
+<p>轻量交接委派</p>
+<p>Python/TS</p>
+<p>✅</p>
+<p>handoff、guardrails、模型无关（LiteLLM）</p>
+<p>Claude Agent SDK</p>
+<p>Anthropic 系编码/计算机使用</p>
+<p>Python/TS</p>
+<p>✅（subagents）</p>
+<p>Claude-first、长程任务</p>
+<p>CrewAI 1.14</p>
+<p>角色制团队快速原型</p>
+<p>Python</p>
+<p>✅</p>
+<p>crew/flow/task、上手最快</p>
+<p>Microsoft Agent Framework 1.0</p>
+<p>企业 .NET/Azure</p>
+<p>.NET/Python/Go</p>
+<p>✅</p>
+<p>AutoGen+Semantic Kernel 后继</p>
+<p>Google ADK 2.0</p>
+<p>Gemini/GCP 生态</p>
+<p>Python/Java/Go/TS</p>
+<p>✅</p>
+<p>图工作流、A2A、调试 UI</p>
+<p>LlamaIndex Workflows</p>
+<p>RAG/文档重</p>
+<p>Python/TS</p>
+<p>✅</p>
+<p>事件驱动、检索集成丰富</p>
+<p>Pydantic AI</p>
+<p>类型安全 Python</p>
+<p>Python</p>
+<p>✅</p>
+<p>强类型输出、校验、DI</p>
+<p>Mastra</p>
+<p>TypeScript 全栈</p>
+<p>TS</p>
+<p>✅</p>
+<p>workflows、memory、Studio</p>
+<p>04SECTION</p>
+<p>二、选型指南（怎么选）</p>
+<p>你的场景</p>
+<p>首选</p>
+<p>理由</p>
+<p>要确定性/长任务可靠</p>
+<p>LangGraph</p>
+<p>图控制 + 断点续跑 + HITL</p>
+<p>已在 OpenAI 生态</p>
+<p>OpenAI Agents SDK</p>
+<p>轻、交接清晰</p>
+<p>编码/计算机使用</p>
+<p>Claude Agent SDK</p>
+<p>Claude-first、长程最强</p>
+<p>快速出多 Agent 原型</p>
+<p>CrewAI</p>
+<p>角色制最快</p>
+<p>企业 .NET/Azure</p>
+<p>Microsoft Agent Framework</p>
+<p>统一 AutoGen+SK</p>
+<p>已在 Google 生态</p>
+<p>Google ADK</p>
+<p>Gemini-first + A2A</p>
+<p>RAG/文档密集</p>
+<p>LlamaIndex Workflows</p>
+<p>检索集成最深</p>
+<p>类型安全洁癖</p>
+<p>Pydantic AI</p>
+<p>校验与类型第一</p>
+<p>•通用原则：先定「需要确定性还是灵活性」→ 再定「在哪个生态」→ 最后看多 Agent 复杂度。框架选型不重要到「选错就死」，重要的是可观测性（tracing/evals）从第一天开。</p>
+<p>05SECTION</p>
+<p>三、协议标准化路径（MCP / A2A）</p>
+<p>3.1 MCP（Agent ↔ 工具）——05 篇回顾</p>
+<p>code</p>
+<p>2024-11 Anthropic 开源 → 2025-04 ChatGPT 接入（行业转折）</p>
+<p>→ 2025-12 捐赠 Linux Foundation AAIF（与 OpenAI/Google/MS/AWS 共管）</p>
+<p>→ 2026-03 月下载 97M / 公共服务器 9400+</p>
+<p>→ 2026-07-28 规范 RC（无状态核心 / Tasks / MCP Apps / OAuth 对齐）</p>
+<p>3.2 A2A（Agent ↔ Agent）</p>
+<p>•Google 2025-04 发布：智能体间任务委派/通信的标准协议；</p>
+<p>•2025-06 并入 AAIF（IBM 的 Agent Communication Protocol 合入）；</p>
+<p>•与 MCP 分工：MCP = 接工具（毛细血管），A2A = 接同事（大动脉）。</p>
+<p>3.3 为什么标准化重要</p>
+<p>•一次接入处处可用（MCP 服务器写一次，Claude/ChatGPT/Gemini/Cursor 都能用）；</p>
+<p>•集成成本：接一个 SaaS 工具从 18 小时降到约 4 小时；</p>
+<p>•去单厂商风险：Linux Foundation 治理 = 生态基础设施（类比 Kubernetes/PyTorch）。</p>
+<p>06SECTION</p>
+<p>四、从原理到搭建的完整视图（系列收官图）</p>
+<p>code</p>
+<p>Agent = 感知(01) × 推理(02) × 记忆(03) × 行动(04) ← 构成</p>
+<p>× 工具协议(05) × 多Agent(06) × 人机协同(07) ← 机制</p>
+<p>× Agentic训练(08) ← 模型侧</p>
+<p>→ 应用：编码/CUA(09)、研究/常驻(10) ← 形态</p>
+<p>→ 搭建：框架选型 + MCP/A2A(11) ← 平台</p>
+<p>07SECTION</p>
+<p>五、本篇要点（复习卡片）</p>
+<p>1九大框架按场景分工：LangGraph（可靠）/ OpenAI SDK（轻）/ Claude SDK（编码）/ CrewAI（原型）/ MS AF（.NET）/ ADK（Google）/ LlamaIndex（RAG）/ Pydantic（类型）/ Mastra（TS）。</p>
+<p>2选型三步：确定性 vs 灵活性 → 生态 → 多 Agent 复杂度；可观测性第一天开。</p>
+<p>3MCP 标准化：2024-11 开源 → AAIF 托管 → 2026-07-28 无状态 RC——工具接入基础设施化。</p>
+<p>4A2A 补位：Agent↔Agent；与 MCP 同基金会、分工不同。</p>
+<p>5系列收官：构成 × 机制 × 训练 → 应用 → 平台——Agent 原理全景闭环。</p>
+<p>08SECTION</p>
+<p>六、系列学习路径（总复习）</p>
+<p>code</p>
+<p>00 开篇（一张图）→ 01-04 构成（Agent 是什么）</p>
+<p>→ 05-07 机制（靠什么转）→ 08 训练（怎么训出来）</p>
+<p>→ 09-10 应用（长什么样）→ 11 平台（用什么搭）</p>
+<p>•衔接外部：llm-基础理论 05（推理时代）/ 06（多模态与 Agent）；各家族系列 computer use / MCP / Agent 能力篇——模型原理线 + Agent 线共同构成「理解 2026 年 AI」的完整拼图。</p>
+<p>09SECTION</p>
+<p>参考资料</p>
+<p>•[官方] LangGraph / CrewAI / OpenAI Agents SDK / Claude Agent SDK / Google ADK / Microsoft Agent Framework 官方文档（见正文链接）</p>
+<p>•[官方] MCP：https://modelcontextprotocol.io ｜ A2A：https://a2a-protocol.org/</p>
+<p>•[参考] 2026 框架对比综述（LangChain / AI Wiki / The Agent Report）</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方文档。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/wmLlyY8Ck3MsMrbuoOToZw" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

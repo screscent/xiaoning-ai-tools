@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent 原理发展史 | 小凝 AI 工具集</title>
+<meta name="description" content="Agent 原理发展史">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/DnYatBp6Afw402vs7yYGOg.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agent 原理发展史 | 小凝 AI 工具集">
+<meta property="og:description" content="Agent 原理发展史">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/DnYatBp6Afw402vs7yYGOg.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agent 原理发展史", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/DnYatBp6Afw402vs7yYGOg.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "Agent 原理发展史"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>Agent 原理发展史</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">Agent 原理发展史</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 原理学习系列的开篇——从 ReAct（2022）到 MCP 标准化（2025-2026）的 Agent 演进时间线、关键技术概念与进化逻辑总结。供主人先建立「一张图」，再进入各板块分篇。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方论文与规范为准。</p>
+<p>01SECTION</p>
+<p>00 开篇 · Agent 原理发展史</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>2022 年之前，AI 只会「回答问题」；2022 年 ReAct 论文让模型学会「边想边做」；2024-2025 年，工具协议（MCP）、推理模型（o1/R1）、Agent 专门训练（agent RL）三股力量汇合，Agent 从「demo 玩具」变成「生产基础设施」（57.3% 的组织已有生产环境 Agent）。本篇把这条主线拉出来：Agent 是什么、怎么演化的、现在站在哪。</p>
+<p>03SECTION</p>
+<p>一、演进时间线总览</p>
+<p>时间</p>
+<p>里程碑</p>
+<p>意义</p>
+<p>2022-10</p>
+<p>ReAct</p>
+<p>思考-行动-观察交错循环——Agent 范式原点</p>
+<p>2023-02</p>
+<p>Toolformer</p>
+<p>模型自举学用工具（无需人工标注工具数据）</p>
+<p>2023-03</p>
+<p>Reflexion</p>
+<p>自我反思 + 情景记忆——「犯错后长记性」</p>
+<p>2023-06</p>
+<p>OpenAI Function Calling</p>
+<p>结构化工具调用成为产品标准能力</p>
+<p>2023-04~09</p>
+<p>多 Agent（MetaGPT / CAMEL / Generative Agents）</p>
+<p>角色分工协作、社会模拟</p>
+<p>2024-05</p>
+<p>GPT-4o</p>
+<p>多模态感知（看/听/说）进入 Agent</p>
+<p>2024-10</p>
+<p>Claude Computer Use</p>
+<p>模型自己操作电脑（OSWorld 战场）</p>
+<p>2024-09~11</p>
+<p>o1 / MCP 开源</p>
+<p>推理模型当 Agent 大脑；工具接入协议诞生（Anthropic）</p>
+<p>2025-04</p>
+<p>A2A（Google）/ o3 全工具</p>
+<p>智能体间通信协议；推理模型自主调用全工具</p>
+<p>2025-07</p>
+<p>Qwen3-Coder（agent RL）</p>
+<p>Agentic 训练</p>
+<p>：RL 训模型「会规划+会用工具」</p>
+<p>2025-08</p>
+<p>GPT-5</p>
+<p>编码/Agent 任务 SOTA；工具链长程稳定执行</p>
+<p>2025-10</p>
+<p>LangGraph 1.0 GA</p>
+<p>图编排框架企业化（Uber/LinkedIn/Klarna/JP Morgan）</p>
+<p>2025-12</p>
+<p>MCP 捐 Linux Foundation（AAIF）</p>
+<p>工具协议去单厂商化，走向行业标准</p>
+<p>2026-03</p>
+<p>MCP 月下载 97M、公共服务器 9400+</p>
+<p>标准落地：一次接入、处处可用</p>
+<p>2026-07</p>
+<p>MCP 2026-07-28 规范 RC</p>
+<p>无状态核心、Tasks 长任务、MCP Apps、OAuth 对齐</p>
+<p>04SECTION</p>
+<p>二、四条主线</p>
+<p>1构成线（单 Agent 内部）：感知 → 推理 → 记忆 → 行动四系统从「提示技巧」逐步变成「系统架构」——Agent 不是魔法，是可拆解的组合件。</p>
+<p>2规模线（Agent 外部）：单 Agent 循环 → 多 Agent 角色协作 → 平台化框架（图/角色/交接三范式）——「一个大脑」到「一支团队」。</p>
+<p>3协议线（连接标准）：各家私接工具 → Function Calling 统一 API → MCP 统一协议 → Linux Foundation 托管 → A2A 智能体互联——工具接入从私有变成基础设施。</p>
+<p>4模型线（能力底座）：通用模型 + prompt 硬套 → 专门 Agent 训练（agent RL）→ 推理模型 × 工具链（测试时扩展）——模型从「会说话」到「被训练成会干活」。</p>
+<p>05SECTION</p>
+<p>三、关键技术概念详解</p>
+<p>1. ReAct 循环（一切 Agent 的原型）</p>
+<p>•三拍子：Thought（想下一步）→ Action（调用工具/API）→ Observation（读结果）→ 回到 Thought；</p>
+<p>•意义：把「推理」和「行动」交替编排——模型不再是「一次回答」，而是「逐步完成任务」；</p>
+<p>•后续所有 Agent 框架（LangGraph/OpenAI SDK/Claude Agent SDK）本质都是这个循环的工程化。</p>
+<p>2. 工具调用 / Function Calling</p>
+<p>•模型输出结构化指令「调用哪个工具 + 传什么参数」，框架负责执行并回传结果；</p>
+<p>•2023-06 OpenAI 把它做成 API 标准后，「工具调用」成为所有 LLM 的基础能力（各家对齐）；</p>
+<p>•意义：模型从「知识回忆器」变成「能力调度器」。</p>
+<p>3. Reflexion 与反思机制</p>
+<p>•任务失败后生成自然语言反思（哪里错了、怎么改），存入情景记忆，下次行动参考；</p>
+<p>•本质：「无语义梯度的强化学习」（verbal RL）——不调权重，靠「长记性」变强；</p>
+<p>•进阶：MIRROR 等把反思从「行动后」扩展到「行动前」（预判不良结果）。</p>
+<p>4. MCP（Model Context Protocol）</p>
+<p>•2024-11 Anthropic 开源：统一「Agent 客户端 ↔ 工具服务端」的连接协议；</p>
+<p>•三原语：Tools（可执行动作）/ Resources（可读数据）/ Prompts（可复用模板）；</p>
+<p>•标准化路径：ChatGPT（2025-04）→ 各家跟进 → 2025-12 捐 Linux Foundation AAIF → 2026-03 月下载 97M / 公共服务器 9400+；</p>
+<p>•2026-07-28 规范 RC：无状态核心（普通 HTTP 可横向扩展）、Tasks 扩展（长任务）、MCP Apps（服务端渲染 UI）、OAuth 对齐授权。</p>
+<p>5. 多 Agent 协作三范式</p>
+<p>•图编排（LangGraph）：显式状态图，节点=步骤、边=转移，精确控制循环/重试/审批；</p>
+<p>•角色制（CrewAI）：定义多个角色（研究员/写手/审查）组成「团队」协作；</p>
+<p>•交接制（OpenAI Agents SDK）：主 Agent 把子任务 handoff 给专门子 Agent；</p>
+<p>•共同点：都是「多 Agent 通信 + 任务分发 + 结果聚合」的工程化。</p>
+<p>6. Agentic 模型训练（agent RL）</p>
+<p>•不止让模型「会调用工具」，而是 RL 训练它自主规划长任务链（Qwen3-Coder：agent RL + 480B MoE）；</p>
+<p>•奖励信号：可验证结果（代码跑通、任务完成）——与 R1 的推理 RL 同源（llm-理论 05）；</p>
+<p>•方向：模型原生「会想 + 会干」，而非靠外层 prompt 拼。</p>
+<p>7. 推理模型 × Agent</p>
+<p>•o1/R1 让「思考链」可训练、可调深度；GPT-5 把推理与工具链合一；</p>
+<p>•意义：「想多深」与「干多久」都成为可调资源——测试时扩展与长程 Agent 合流。</p>
+<p>8. 评测与安全</p>
+<p>•基准：SWE-bench（编码）、OSWorld（计算机使用，1 年 12%→66.3%）、WebArena（浏览器）、Tau2-bench（工具链）、AgentBench；</p>
+<p>•安全：HITL（人工审批）、Guardrails（程序化护栏）、授权最小化——Agent 越强，控制面越重要。</p>
+<p>∞CONCLUSION</p>
+<p>四、进化逻辑总结（学习重点）</p>
+<p>1从「提示」到「系统」：ReAct 是提示技巧，LangGraph/MCP 是运行时与协议——Agent 已变成「工程」而非「咒语」。</p>
+<p>2从「单」到「多」：单 Agent 循环 → 多 Agent 团队 → 平台化——复杂度靠分工消化。</p>
+<p>3从「私有」到「标准」：工具接入从各家私接 → MCP/A2A 行业标准（Linux Foundation 托管）——基础设施化。</p>
+<p>4从「通用」到「专门」：通用模型硬套 prompt → agent RL 专门训练——Agent 能力可被制造。</p>
+<p>5从「会做」到「做对」：能做（66.3% OSWorld）≠ 可靠——评测、安全、可观测性成为新战场。</p>
+<p>07SECTION</p>
+<p>五、资料源（供深入阅读）</p>
+<p>•ReAct：https://arxiv.org/abs/2210.03629 ｜ Reflexion：https://arxiv.org/abs/2303.11366</p>
+<p>•MCP 规范：https://modelcontextprotocol.io ｜ MCP 捐赠公告：https://blog.modelcontextprotocol.io/</p>
+<p>•LangGraph 1.0：https://blog.langchain.com/langgraph-1-0/</p>
+<p>•From Language to Action（Agent 综述 2508.17281）｜ LLM Agents Survey（2510.09244 相关）</p>
+<p>•学习路径：本开篇 → 板块一构成（01-04）→ 板块二机制（05-07）→ 板块三训练（08）→ 板块四应用（09-10）→ 板块五平台（11）</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方论文与协议规范。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/DnYatBp6Afw402vs7yYGOg" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

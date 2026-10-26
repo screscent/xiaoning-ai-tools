@@ -1,0 +1,551 @@
+{
+ "slug": "wmLlyY8Ck3MsMrbuoOToZw",
+ "title": "Agent 框架与协议标准：从原理到搭建",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/wmLlyY8Ck3MsMrbuoOToZw",
+ "digest": "Agent 框架与协议标准：从原理到搭建",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 原理系列板块五·平台第 11 篇（系列收官）——Agent 框架与协议标准：主流框架对比、选型指南，以及 MCP/A2A 协议标准化路径。从「懂原理」到「会选型、能搭建」。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方文档为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 11 篇 · Agent 框架与协议标准：从原理到搭建"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "前 10 篇是「原理」，本篇是「工具箱」：用什么搭、怎么选、靠什么互联。2025-2026 年框架从「百家混战」走向「按场景分工」，协议（MCP/A2A）走向基金会标准化。读完后，Agent 系列从「知道是什么」闭环到「知道怎么选」。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、主流框架一览（2026 快照）"
+  },
+  {
+   "type": "p",
+   "text": "框架"
+  },
+  {
+   "type": "p",
+   "text": "定位"
+  },
+  {
+   "type": "p",
+   "text": "语言"
+  },
+  {
+   "type": "p",
+   "text": "多 Agent"
+  },
+  {
+   "type": "p",
+   "text": "特点"
+  },
+  {
+   "type": "p",
+   "text": "LangGraph 1.0"
+  },
+  {
+   "type": "p",
+   "text": "生产级图编排（企业默认）"
+  },
+  {
+   "type": "p",
+   "text": "Python/TS"
+  },
+  {
+   "type": "p",
+   "text": "✅"
+  },
+  {
+   "type": "p",
+   "text": "显式状态图、durable checkpoint、HITL、可观测（LangSmith）"
+  },
+  {
+   "type": "p",
+   "text": "OpenAI Agents SDK"
+  },
+  {
+   "type": "p",
+   "text": "轻量交接委派"
+  },
+  {
+   "type": "p",
+   "text": "Python/TS"
+  },
+  {
+   "type": "p",
+   "text": "✅"
+  },
+  {
+   "type": "p",
+   "text": "handoff、guardrails、模型无关（LiteLLM）"
+  },
+  {
+   "type": "p",
+   "text": "Claude Agent SDK"
+  },
+  {
+   "type": "p",
+   "text": "Anthropic 系编码/计算机使用"
+  },
+  {
+   "type": "p",
+   "text": "Python/TS"
+  },
+  {
+   "type": "p",
+   "text": "✅（subagents）"
+  },
+  {
+   "type": "p",
+   "text": "Claude-first、长程任务"
+  },
+  {
+   "type": "p",
+   "text": "CrewAI 1.14"
+  },
+  {
+   "type": "p",
+   "text": "角色制团队快速原型"
+  },
+  {
+   "type": "p",
+   "text": "Python"
+  },
+  {
+   "type": "p",
+   "text": "✅"
+  },
+  {
+   "type": "p",
+   "text": "crew/flow/task、上手最快"
+  },
+  {
+   "type": "p",
+   "text": "Microsoft Agent Framework 1.0"
+  },
+  {
+   "type": "p",
+   "text": "企业 .NET/Azure"
+  },
+  {
+   "type": "p",
+   "text": ".NET/Python/Go"
+  },
+  {
+   "type": "p",
+   "text": "✅"
+  },
+  {
+   "type": "p",
+   "text": "AutoGen+Semantic Kernel 后继"
+  },
+  {
+   "type": "p",
+   "text": "Google ADK 2.0"
+  },
+  {
+   "type": "p",
+   "text": "Gemini/GCP 生态"
+  },
+  {
+   "type": "p",
+   "text": "Python/Java/Go/TS"
+  },
+  {
+   "type": "p",
+   "text": "✅"
+  },
+  {
+   "type": "p",
+   "text": "图工作流、A2A、调试 UI"
+  },
+  {
+   "type": "p",
+   "text": "LlamaIndex Workflows"
+  },
+  {
+   "type": "p",
+   "text": "RAG/文档重"
+  },
+  {
+   "type": "p",
+   "text": "Python/TS"
+  },
+  {
+   "type": "p",
+   "text": "✅"
+  },
+  {
+   "type": "p",
+   "text": "事件驱动、检索集成丰富"
+  },
+  {
+   "type": "p",
+   "text": "Pydantic AI"
+  },
+  {
+   "type": "p",
+   "text": "类型安全 Python"
+  },
+  {
+   "type": "p",
+   "text": "Python"
+  },
+  {
+   "type": "p",
+   "text": "✅"
+  },
+  {
+   "type": "p",
+   "text": "强类型输出、校验、DI"
+  },
+  {
+   "type": "p",
+   "text": "Mastra"
+  },
+  {
+   "type": "p",
+   "text": "TypeScript 全栈"
+  },
+  {
+   "type": "p",
+   "text": "TS"
+  },
+  {
+   "type": "p",
+   "text": "✅"
+  },
+  {
+   "type": "p",
+   "text": "workflows、memory、Studio"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、选型指南（怎么选）"
+  },
+  {
+   "type": "p",
+   "text": "你的场景"
+  },
+  {
+   "type": "p",
+   "text": "首选"
+  },
+  {
+   "type": "p",
+   "text": "理由"
+  },
+  {
+   "type": "p",
+   "text": "要确定性/长任务可靠"
+  },
+  {
+   "type": "p",
+   "text": "LangGraph"
+  },
+  {
+   "type": "p",
+   "text": "图控制 + 断点续跑 + HITL"
+  },
+  {
+   "type": "p",
+   "text": "已在 OpenAI 生态"
+  },
+  {
+   "type": "p",
+   "text": "OpenAI Agents SDK"
+  },
+  {
+   "type": "p",
+   "text": "轻、交接清晰"
+  },
+  {
+   "type": "p",
+   "text": "编码/计算机使用"
+  },
+  {
+   "type": "p",
+   "text": "Claude Agent SDK"
+  },
+  {
+   "type": "p",
+   "text": "Claude-first、长程最强"
+  },
+  {
+   "type": "p",
+   "text": "快速出多 Agent 原型"
+  },
+  {
+   "type": "p",
+   "text": "CrewAI"
+  },
+  {
+   "type": "p",
+   "text": "角色制最快"
+  },
+  {
+   "type": "p",
+   "text": "企业 .NET/Azure"
+  },
+  {
+   "type": "p",
+   "text": "Microsoft Agent Framework"
+  },
+  {
+   "type": "p",
+   "text": "统一 AutoGen+SK"
+  },
+  {
+   "type": "p",
+   "text": "已在 Google 生态"
+  },
+  {
+   "type": "p",
+   "text": "Google ADK"
+  },
+  {
+   "type": "p",
+   "text": "Gemini-first + A2A"
+  },
+  {
+   "type": "p",
+   "text": "RAG/文档密集"
+  },
+  {
+   "type": "p",
+   "text": "LlamaIndex Workflows"
+  },
+  {
+   "type": "p",
+   "text": "检索集成最深"
+  },
+  {
+   "type": "p",
+   "text": "类型安全洁癖"
+  },
+  {
+   "type": "p",
+   "text": "Pydantic AI"
+  },
+  {
+   "type": "p",
+   "text": "校验与类型第一"
+  },
+  {
+   "type": "p",
+   "text": "•通用原则：先定「需要确定性还是灵活性」→ 再定「在哪个生态」→ 最后看多 Agent 复杂度。框架选型不重要到「选错就死」，重要的是可观测性（tracing/evals）从第一天开。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、协议标准化路径（MCP / A2A）"
+  },
+  {
+   "type": "p",
+   "text": "3.1 MCP（Agent ↔ 工具）——05 篇回顾"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "2024-11 Anthropic 开源 → 2025-04 ChatGPT 接入（行业转折）"
+  },
+  {
+   "type": "p",
+   "text": "→ 2025-12 捐赠 Linux Foundation AAIF（与 OpenAI/Google/MS/AWS 共管）"
+  },
+  {
+   "type": "p",
+   "text": "→ 2026-03 月下载 97M / 公共服务器 9400+"
+  },
+  {
+   "type": "p",
+   "text": "→ 2026-07-28 规范 RC（无状态核心 / Tasks / MCP Apps / OAuth 对齐）"
+  },
+  {
+   "type": "p",
+   "text": "3.2 A2A（Agent ↔ Agent）"
+  },
+  {
+   "type": "p",
+   "text": "•Google 2025-04 发布：智能体间任务委派/通信的标准协议；"
+  },
+  {
+   "type": "p",
+   "text": "•2025-06 并入 AAIF（IBM 的 Agent Communication Protocol 合入）；"
+  },
+  {
+   "type": "p",
+   "text": "•与 MCP 分工：MCP = 接工具（毛细血管），A2A = 接同事（大动脉）。"
+  },
+  {
+   "type": "p",
+   "text": "3.3 为什么标准化重要"
+  },
+  {
+   "type": "p",
+   "text": "•一次接入处处可用（MCP 服务器写一次，Claude/ChatGPT/Gemini/Cursor 都能用）；"
+  },
+  {
+   "type": "p",
+   "text": "•集成成本：接一个 SaaS 工具从 18 小时降到约 4 小时；"
+  },
+  {
+   "type": "p",
+   "text": "•去单厂商风险：Linux Foundation 治理 = 生态基础设施（类比 Kubernetes/PyTorch）。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、从原理到搭建的完整视图（系列收官图）"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "Agent = 感知(01) × 推理(02) × 记忆(03) × 行动(04) ← 构成"
+  },
+  {
+   "type": "p",
+   "text": "× 工具协议(05) × 多Agent(06) × 人机协同(07) ← 机制"
+  },
+  {
+   "type": "p",
+   "text": "× Agentic训练(08) ← 模型侧"
+  },
+  {
+   "type": "p",
+   "text": "→ 应用：编码/CUA(09)、研究/常驻(10) ← 形态"
+  },
+  {
+   "type": "p",
+   "text": "→ 搭建：框架选型 + MCP/A2A(11) ← 平台"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1九大框架按场景分工：LangGraph（可靠）/ OpenAI SDK（轻）/ Claude SDK（编码）/ CrewAI（原型）/ MS AF（.NET）/ ADK（Google）/ LlamaIndex（RAG）/ Pydantic（类型）/ Mastra（TS）。"
+  },
+  {
+   "type": "p",
+   "text": "2选型三步：确定性 vs 灵活性 → 生态 → 多 Agent 复杂度；可观测性第一天开。"
+  },
+  {
+   "type": "p",
+   "text": "3MCP 标准化：2024-11 开源 → AAIF 托管 → 2026-07-28 无状态 RC——工具接入基础设施化。"
+  },
+  {
+   "type": "p",
+   "text": "4A2A 补位：Agent↔Agent；与 MCP 同基金会、分工不同。"
+  },
+  {
+   "type": "p",
+   "text": "5系列收官：构成 × 机制 × 训练 → 应用 → 平台——Agent 原理全景闭环。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、系列学习路径（总复习）"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "00 开篇（一张图）→ 01-04 构成（Agent 是什么）"
+  },
+  {
+   "type": "p",
+   "text": "→ 05-07 机制（靠什么转）→ 08 训练（怎么训出来）"
+  },
+  {
+   "type": "p",
+   "text": "→ 09-10 应用（长什么样）→ 11 平台（用什么搭）"
+  },
+  {
+   "type": "p",
+   "text": "•衔接外部：llm-基础理论 05（推理时代）/ 06（多模态与 Agent）；各家族系列 computer use / MCP / Agent 能力篇——模型原理线 + Agent 线共同构成「理解 2026 年 AI」的完整拼图。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] LangGraph / CrewAI / OpenAI Agents SDK / Claude Agent SDK / Google ADK / Microsoft Agent Framework 官方文档（见正文链接）"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] MCP：https://modelcontextprotocol.io ｜ A2A：https://a2a-protocol.org/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] 2026 框架对比综述（LangChain / AI Wiki / The Agent Report）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方文档。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:41+0800"
+}

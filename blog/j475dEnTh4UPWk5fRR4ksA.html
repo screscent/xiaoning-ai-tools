@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 3 篇 · DeepSeek-V2：MLA + MoE，架构的「效率大转向」 | 小凝 AI 工具集</title>
+<meta name="description" content="第 3 篇 · DeepSeek-V2：MLA + MoE，架构的「效率大转向」">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/j475dEnTh4UPWk5fRR4ksA.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 3 篇 · DeepSeek-V2：MLA + MoE，架构的「效率大转向」 | 小凝 AI 工具集">
+<meta property="og:description" content="第 3 篇 · DeepSeek-V2：MLA + MoE，架构的「效率大转向」">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/j475dEnTh4UPWk5fRR4ksA.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 3 篇 · DeepSeek-V2：MLA + MoE，架构的「效率大转向」", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/j475dEnTh4UPWk5fRR4ksA.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 3 篇 · DeepSeek-V2：MLA + MoE，架构的「效率大转向」"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 3 篇 · DeepSeek-V2：MLA + MoE，架构的「效率大转向」</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 3 篇 · DeepSeek-V2：MLA + MoE，架构的「效率大转向」</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：DeepSeek 原理学习系列第 3 篇——DeepSeek-V2（236B/21B 激活）的原理性深度分析。这是全系列最重要的架构转折点：MLA + DeepSeekMoE。以官方论文《DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model》（arXiv:2405.04434）为唯一事实源，参考社区高质量解读整理，供主人系统学习，亦可作为技术文章对外分享。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以 DeepSeek 官方论文为准；个别三方解读数据如有出入，以官方为准。</p>
+<p>01SECTION</p>
+<p>第 3 篇 · DeepSeek-V2：MLA + MoE，架构的「效率大转向」</p>
+<p>02WHY</p>
+<p>导读：为什么说 V2 是全系列的转折点</p>
+<p>前两篇的模型都是**稠密（Dense）**架构：每个 token 要经过全部参数。到了 V2，DeepSeek 做了一次影响深远的「大转向」：</p>
+<p>•注意力侧：用 MLA（多头潜在注意力） 把 KV 缓存压掉 93.3%——长上下文从此不再「显存爆炸」；</p>
+<p>•FFN 侧：用 DeepSeekMoE 把每个 token 的计算量大幅削减——总参数 236B，但每个 token 只激活 21B，训练成本省 42.5%；</p>
+<p>•合起来：最大生成吞吐提升 5.76 倍，同时性能还全面超过自家 67B。</p>
+<p>从此，DeepSeek 确立了两条贯穿至今的路线：MLA 是 V2→V3→V4 从未换过的注意力底座；MoE「总参做加法、激活做减法」是效率路线的灵魂。这也是进化史文档里那条「效率架构线」的正式起点。</p>
+<p>一句话总结：V2 同时重构了 Transformer 最贵的两笔账——Attention 的「状态存储」和 FFN 的「计算开销」。</p>
+<p>03SECTION</p>
+<p>一、背景：同时要付的两张「账单」</p>
+<p>大模型变大，有两笔账越来越贵：</p>
+<p>账单</p>
+<p>出现在哪</p>
+<p>为什么贵</p>
+<p>KV 缓存</p>
+<p>推理（长上下文生成）</p>
+<p>每个历史 token、每层、每个注意力头都要缓存一份 K 和 V，随层数×头数×序列长度线性膨胀；上下文越长，显存越吃不消</p>
+<p>FFN 稠密计算</p>
+<p>训练 + 推理</p>
+<p>传统 Transformer 每个 token 都要算完整套 FFN，参数越多，训练/推理成本越高</p>
+<p>只解决一笔，另一笔仍会卡住规模化。DeepSeek-V2 的策略是：两笔账同时改——Attention 交给 MLA 省状态，FFN 交给 DeepSeekMoE 省计算。</p>
+<p>1.1 先看总览：V2 的一个 Transformer Block 长这样</p>
+<p>模型骨架仍是经典的「注意力 + FFN」，只是两处都被替换：</p>
+<p>mermaid</p>
+<p>flowchart TD</p>
+<p>X[&quot;输入 x_l&quot;] --&gt; N1[&quot;RMSNorm&quot;]</p>
+<p>N1 --&gt; MLA[&quot;MLA 多头潜在注意力&quot;]</p>
+<p>MLA --&gt; R1[&quot;+ 残差&quot;]</p>
+<p>R1 --&gt; N2[&quot;RMSNorm&quot;]</p>
+<p>N2 --&gt; MOE[&quot;DeepSeekMoE（2 共享 + 160 路由专家）&quot;]</p>
+<p>MOE --&gt; R2[&quot;+ 残差&quot;]</p>
+<p>R2 --&gt; Y[&quot;输出 x_{l+1}&quot;]</p>
+<p>读图：上半段是注意力路径（MLA 负责省 KV 缓存），下半段是 FFN 路径（MoE 负责省计算）——「两笔账」正好在这两个位置被改掉。</p>
+<p>04SECTION</p>
+<p>二、MLA：把 KV 缓存「压缩」到潜空间</p>
+<p>2.1 问题回顾：为什么 KV 缓存是瓶颈</p>
+<p>标准多头注意力（MHA）里，每个 token 的 K/V 都要缓存，大小为 2 × 头数 × 头维度 × 层数。头越多、上下文越长，缓存越大——长上下文推理时显存主要被它吃掉。</p>
+<p>2.2 已有方案都有「代价」</p>
+<p>•MQA：所有 Query 头共享一份 K/V → 省但掉性能；</p>
+<p>•GQA：Query 分组共享 K/V → 折中，仍掉一些性能。</p>
+<p>论文在 7B 稠密模型上做的消融很说明问题（MMLU）：</p>
+<p>注意力机制</p>
+<p>MMLU</p>
+<p>MHA（不压缩）</p>
+<p>45.2</p>
+<p>GQA</p>
+<p>41.2</p>
+<p>MQA</p>
+<p>37.9</p>
+<p>四种机制在「缓存什么」上的直观对比：</p>
+<p>mermaid</p>
+<p>flowchart LR</p>
+<p>subgraph S1[&quot;MHA 多头注意力&quot;]</p>
+<p>A1[&quot;每个 Query 头&quot;] --&gt; A2[&quot;各缓存一份 K/V（最全最贵）&quot;]</p>
+<p>end</p>
+<p>subgraph S2[&quot;GQA 分组共享&quot;]</p>
+<p>B1[&quot;Query 头分组&quot;] --&gt; B2[&quot;每组共享一份 K/V（折中）&quot;]</p>
+<p>end</p>
+<p>subgraph S3[&quot;MQA 全共享&quot;]</p>
+<p>C1[&quot;所有 Query 头&quot;] --&gt; C2[&quot;共享同一份 K/V（最省但掉性能）&quot;]</p>
+<p>end</p>
+<p>subgraph S4[&quot;MLA 低秩压缩&quot;]</p>
+<p>D1[&quot;Query 低秩压缩&quot;] --&gt; D2[&quot;只缓存潜在向量 c_t（≈2.25 组 GQA 的量）&quot;]</p>
+<p>end</p>
+<p>读图：MHA/GQA/MQA 的思路都是「共享」——让多个 Query 头共用更少的 K/V，靠牺牲表达力换缓存；MLA 的思路是「压缩」——先把 K/V 压成一个低维潜在向量再缓存，表达力不减、缓存照省。</p>
+<p>💡 学习要点：GQA/MQA 的代价是「共享」压缩 KV 缓存的朴素思路是让多个 Query 头共享同一份 K/V。省是省了，但 K/V 的表达能力下降，性能跟着掉。DeepSeek 要的是「又省又不掉性能」——于是想到了压缩而非共享。</p>
+<p>2.3 MLA 核心：低秩联合压缩（Key Idea）</p>
+<p>MLA 的思路不是「少存」，而是「压缩后再存」：</p>
+<p>1每个 token 的 K、V 先一起下投影到一个低维潜在向量</p>
+<p>c_t（低秩分解，维度 d_c 远小于原来的 头数 × 头维度）；</p>
+<p>2推理时只缓存这个小小的潜在向量（而不是全部 K/V）；</p>
+<p>3真正计算注意力时，再通过上投影把 K、V「恢复」出来——恢复计算只发生在当前步，历史 token 不再占大显存。</p>
+<p>完整数据流（V2 的 MLA 就是这么走的）：</p>
+<p>mermaid</p>
+<p>flowchart TD</p>
+<p>H[&quot;h_t 当前 Token 输入&quot;]</p>
+<p>subgraph S1[&quot;阶段一：K/V 低秩联合压缩&quot;]</p>
+<p>D1[&quot;下投影 W_DKV&quot;]</p>
+<p>C[&quot;c_t 潜在向量（512 维）&quot;]</p>
+<p>U1[&quot;上投影得到 K&quot;]</p>
+<p>U2[&quot;上投影得到 V&quot;]</p>
+<p>end</p>
+<p>subgraph S2[&quot;阶段二：Query 低秩压缩 + 解耦 RoPE&quot;]</p>
+<p>D2[&quot;下投影 W_DQ&quot;]</p>
+<p>QC[&quot;q 内容部分&quot;]</p>
+<p>QR[&quot;q 位置部分（RoPE）&quot;]</p>
+<p>end</p>
+<p>subgraph S3[&quot;阶段三：推理时 KV 缓存&quot;]</p>
+<p>CK[&quot;只缓存 c_t，不缓存 K/V&quot;]</p>
+<p>end</p>
+<p>A[&quot;注意力计算 Softmax(q·K) 加权 V&quot;]</p>
+<p>O[&quot;输出 u_t（随后过输出投影）&quot;]</p>
+<p>H --&gt; D1 --&gt; C</p>
+<p>C --&gt; CK</p>
+<p>C --&gt; U1</p>
+<p>C --&gt; U2</p>
+<p>H --&gt; D2 --&gt; QC</p>
+<p>H --&gt; QR</p>
+<p>U1 --&gt; A</p>
+<p>U2 --&gt; A</p>
+<p>QC --&gt; A</p>
+<p>QR --&gt; A</p>
+<p>A --&gt; O</p>
+<p>读图：阶段三（推理时 KV 缓存）是精髓——推理时进缓存的只有 c_t 这个小向量；K 和 V 是在注意力计算这一步才「现恢复、现用」，用完不长期占显存。Query 侧同样先压缩，且位置信息（RoPE）单独走一条路，不参与低秩压缩（见 2.4）。</p>
+<p>为什么低秩压缩有效（直觉）：多头注意力里，不同头的 K/V 并非彼此独立——它们共享大量「公共结构」。低秩分解用 d_c 维的潜在向量抓住这份公共结构，需要时再展开回各头。既然公共部分已被复用，「压缩」几乎不损失表达能力——这正是 MLA 能同时做到「省缓存 + 不降性能」的根本原因。</p>
+<p>为了省训练显存，Query 也做了类似的低秩压缩。</p>
+<p>效果量化：缓存量从 2 × n_h × d_h × l 降到约 (d_c + d_R^h) × l，等价于只相当于「2.25 组 GQA」的缓存量——但性能优于 MHA。论文实测：KV 缓存整体减少 93.3%。</p>
+<p>用 V2 的配置算一笔账（每层、每个 token）：V2 有 n_h = 128 个注意力头、每头 d_h = 128 维。若按 MHA 全量缓存，需要 K + V = 2 × 128 × 128 = 32,768 维；MLA 只需缓存 c_t（512 维）+ 位置分量（64 维）= 576 维。单层缓存降到约 1/57；而 576 维也恰好等价于「2.25 组 GQA」（一组 GQA 的 K+V = 2 × 128 = 256 维，576 ÷ 256 = 2.25）。用不到 3 组 GQA 的缓存量，做出超过 MHA 的性能——这笔账就是 MLA 的全部意义。</p>
+<p>2.4 解耦 RoPE：位置信息不能被压缩「压坏」</p>
+<p>一个精妙细节：K/V 压缩的是内容，但位置信息（RoPE）不能一起压进低秩空间，否则旋转位置编码的可重参数化性质会被破坏。MLA 的做法是解耦（Decoupled RoPE）：把 q/k 拆成「内容部分（走低秩压缩）+ 位置部分（单独做 RoPE）」，最后拼接再算注意力。</p>
+<p>💡 学习要点：MLA 的三个动作 = 下投影压缩 + 缓存 latent + 解耦位置记住这三点，你就理解了 MLA 的全部。它既拿到了 GQA/MQA 的省，又没有付出共享 KV 的代价——这是 V2 最有含金量的发明。</p>
+<p>05SECTION</p>
+<p>三、DeepSeekMoE：FFN 做「细粒度稀疏」</p>
+<p>3.1 传统 MoE 的问题</p>
+<p>MoE（混合专家）思路：把 FFN 拆成多个「专家」，每个 token 只激活其中几个。但早期的 GShard / Switch / Mixtral 用的是粗粒度专家（专家大而少），稀疏化收益有限。</p>
+<p>3.2 DeepSeekMoE 的两个设计</p>
+<p>设计</p>
+<p>内容</p>
+<p>收益</p>
+<p>细粒度专家切分</p>
+<p>把专家切成更多更小的单元，每个 token 激活少量几个（V2：每层 2 个共享专家 + 160 个路由专家，激活 6 个路由专家）</p>
+<p>组合自由度更高，专家可专业化出更多「专长」</p>
+<p>共享专家隔离</p>
+<p>单独保留几个始终激活的共享专家，吸收通用知识</p>
+<p>通用知识与「专长知识」分离，路由专家更纯粹地专精化</p>
+<p>一个 token 穿过 MoE 层时的路由示意：</p>
+<p>mermaid</p>
+<p>flowchart LR</p>
+<p>T[&quot;当前 Token&quot;] --&gt; R[&quot;路由器（门控打分）&quot;]</p>
+<p>R --&gt; S1[&quot;共享专家 1（始终激活）&quot;]</p>
+<p>R --&gt; S2[&quot;共享专家 2（始终激活）&quot;]</p>
+<p>R --&gt; E1[&quot;路由专家 E3（top-6 选中）&quot;]</p>
+<p>R --&gt; E2[&quot;路由专家 E57（top-6 选中）&quot;]</p>
+<p>R --&gt; E3[&quot;路由专家 E131（top-6 选中）&quot;]</p>
+<p>R -.-&gt; X1[&quot;其余 154 个路由专家（本次未选中）&quot;]</p>
+<p>S1 --&gt; O[&quot;按门控权重加权求和后输出&quot;]</p>
+<p>S2 --&gt; O</p>
+<p>E1 --&gt; O</p>
+<p>E2 --&gt; O</p>
+<p>E3 --&gt; O</p>
+<p>读图：每层 160 个路由专家，但每个 token 只激活 6 个（加上 2 个共享专家共 8 个「活着的」专家）——「总参做加法、激活做减法」的直观形态。</p>
+<p>3.3 负载均衡三件套（训练稳定性的工程关键）</p>
+<p>MoE 的天然痛点：路由不均 → 部分专家闲置/过载 → 训练崩溃、通信失衡。DeepSeek 用三层策略控制：</p>
+<p>1Device-Limited Routing：限制每个 token 的专家尽量落在少数设备上，控制跨设备通信量；</p>
+<p>2辅助损失（Auxiliary Loss）：三类——专家级负载均衡、设备级负载均衡、通信均衡，用惩罚项把负载「拉平」（注：到 V3 才升级为「无辅助损失」方案，下一篇细讲）；</p>
+<p>3Token-Dropping：极端负载下丢弃少量 token，防止容量溢出。</p>
+<p>💡 学习要点：MoE 的灵魂是「路由器」每个 token 由路由器决定走哪几个专家。专家数（总参数）决定知识容量上限，激活数决定推理成本——「总参做加法、激活做减法」自此正式成立。</p>
+<p>06SECTION</p>
+<p>四、训练与对齐</p>
+<p>项目</p>
+<p>配置</p>
+<p>模型规模</p>
+<p>236B 总参数 / 21B 激活；60 层，hidden 5120，128 注意力头</p>
+<p>上下文</p>
+<p>128K</p>
+<p>（长上下文扩展后；大海捞针测试几乎全绿）</p>
+<p>预训练数据</p>
+<p>8.1T token</p>
+<p>高质量多源语料（相比 67B 语料：数据量更大、中文占比更高、质量更高）</p>
+<p>SFT</p>
+<p>收集 150 万条对话会话（数学/代码/写作/推理/安全等领域）</p>
+<p>RL</p>
+<p>GRPO</p>
+<p>（第 2 篇发明的算法，这里正式用于 V2 后训练）</p>
+<p>注：V2 还发布了 V2-Lite（16B / 2.4B 激活），把 MLA + MoE 缩到小模型验证。</p>
+<p>07SECTION</p>
+<p>五、评估：21B 激活，打赢 70B 稠密</p>
+<p>「只激活 21B」听起来小，但成绩是顶级的（部分基准，V2 Chat）：</p>
+<p>基准</p>
+<p>领域</p>
+<p>Qwen1.5 72B</p>
+<p>Mixtral 8×22B</p>
+<p>LLaMA3 70B</p>
+<p>DeepSeek-V2 (RL)</p>
+<p>MMLU</p>
+<p>英文</p>
+<p>76.2</p>
+<p>77.8</p>
+<p>80.3</p>
+<p>77.8</p>
+<p>C-Eval</p>
+<p>中文</p>
+<p>82.2</p>
+<p>60.0</p>
+<p>67.9</p>
+<p>78.0</p>
+<p>HumanEval</p>
+<p>代码</p>
+<p>68.9</p>
+<p>75.0</p>
+<p>76.2</p>
+<p>81.1</p>
+<p>MATH</p>
+<p>数学</p>
+<p>40.6</p>
+<p>49.8</p>
+<p>48.5</p>
+<p>53.9</p>
+<p>GSM8K</p>
+<p>数学</p>
+<p>81.9</p>
+<p>87.9</p>
+<p>93.2</p>
+<p>92.2</p>
+<p>中文开放式评测（AlignBench）中，V2 Chat(RL) 7.91 分，逼近 GPT-4（8.01）。</p>
+<p>💡 学习要点：激活参数 vs 总参数V2 用 21B 激活参数打平/超过 70B 稠密模型——说明 MoE 的总参数撑起了「知识面」，稀疏激活没拖垮「推理质量」。这是「性价比」路线最硬核的证据。</p>
+<p>08SECTION</p>
+<p>六、本篇要点（复习卡片）</p>
+<p>1V2 = 两笔账一起改：MLA 省 KV 缓存（推理显存），MoE 省 FFN 计算（训练/推理成本）。</p>
+<p>2MLA 三动作：K/V 低秩联合压缩 → 只缓存 latent 向量 → 解耦 RoPE 保位置信息；KV 缓存 -93.3%，单层每 token 缓存 32,768 维 → 576 维（约 1/57，等价 2.25 组 GQA），性能却优于 MHA（详见 2.3 数据流图解与数值演算）。</p>
+<p>3GQA/MQA 靠「共享」省缓存、MLA 靠「压缩」省缓存——后者不掉性能，这是关键差异。</p>
+<p>4DeepSeekMoE：细粒度专家（2 共享 + 160 路由，激活 6）+ 共享专家隔离；负载均衡三件套（设备限制路由 + 辅助损失 + token dropping）。</p>
+<p>5规模与数据：236B/21B 激活、128K 上下文、8.1T token（中文扩充）、SFT 150 万会话、RL 用 GRPO。</p>
+<p>6成绩：训练成本 -42.5%、KV 缓存 -93.3%、最大吞吐 5.76×；21B 激活在代码/数学上反超 LLaMA3 70B，AlignBench 逼近 GPT-4。</p>
+<p>7V3 的伏笔：MLA + MoE 被 V3 原样继承；「辅助损失负载均衡」在 V3 升级为「无辅助损失」。</p>
+<p>09SECTION</p>
+<p>七、下一篇预告</p>
+<p>V2 确立了 MLA + MoE 的底座。下一篇先花一小篇看 V2.5（2024-09）：V2 的「加固版」——在保持架构不变的前提下，扩充数据、优化训练策略，把中英文综合体验再拉一档（也是「小步快跑迭代」的典型）。随后第 5 篇就是重头戏 DeepSeek-V3（671B/37B 激活）：无辅助损失负载均衡、MTP、FP8、DualPipe 系统工程，以及惊世骇俗的「2.788M GPU 小时训练成本」。</p>
+<p>10SECTION</p>
+<p>参考资料</p>
+<p>•[官方] DeepSeek-V2 论文（arXiv:2405.04434）：https://arxiv.org/abs/2405.04434</p>
+<p>•[官方] GitHub 仓库（DeepSeek-V2）：https://github.com/deepseek-ai/DeepSeek-V2</p>
+<p>•[参考] 智源社区论文页（中文摘要）：https://hub.baai.ac.cn/paper/61c65e8e-acb2-4f47-a678-a452c8e21f27</p>
+<p>•[参考] 掘金《DeepSeek-V2 论文精读》（MHA/MQA/GQA 对比与基准）：https://aicoding.juejin.cn/post/7478232629919645747</p>
+<p>•[参考] 火山引擎开发者社区《deepseek-v2 开源》（完整基准表/AlignBench）：https://developer.volcengine.com/articles/7390577415371620391</p>
+<p>•[参考] 51CTO《DeepSeek-V2 详解：把 KV Cache 和 MoE 一起做成成本杠杆》：https://blog.51cto.com/u_16213696/14941005</p>
+<p>•[参考] CSDN《DeepSeek-V2 论文解析》：https://blog.csdn.net/bqw18744018044/article/details/138751458</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方论文；个别三方文章数据以官方为准。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/j475dEnTh4UPWk5fRR4ksA" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

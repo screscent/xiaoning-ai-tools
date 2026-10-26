@@ -1,0 +1,731 @@
+{
+ "slug": "pfz-6mJWf78CSY0gmzN3-w",
+ "title": "第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/pfz-6mJWf78CSY0gmzN3-w",
+ "digest": "第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：DeepSeek 原理学习系列第 2 篇——DeepSeekMath（7B）数学推理专项的原理性深度分析。以官方论文《DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models》（arXiv:2402.03300）为唯一事实源，参考社区高质量解读整理，供主人系统学习，亦可作为技术文章对外分享。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以 DeepSeek 官方论文为准；个别三方解读数据如有出入，以官方为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 2 篇 · DeepSeekMath：7B 小模型如何逼近 GPT-4 的数学能力"
+  },
+  {
+   "type": "p",
+   "text": "02WHY"
+  },
+  {
+   "type": "p",
+   "text": "导读：这一篇为什么重要"
+  },
+  {
+   "type": "p",
+   "text": "第 1 篇的初始版 DeepSeek LLM 证明了「抄好作业 + 数据工程 + Scaling Law」能把通用大模型做强。第 2 篇的 DeepSeekMath 则打出两记更响的拳头："
+  },
+  {
+   "type": "p",
+   "text": "1数据视角：全网数学内容占比不足 0.5%——好的数学数据不是「攒」出来的，是用分类器「找」出来的；"
+  },
+  {
+   "type": "p",
+   "text": "2算法视角：论文在这里首次提出了 GRPO（组相对策略优化）——这正是 2025 年引爆推理革命的 DeepSeek-R1 的核心算法。"
+  },
+  {
+   "type": "p",
+   "text": "更惊人的是成绩：一个 7B 的模型，在竞赛级 MATH 基准上做到 51.7%，逼近 GPT-4（52.9%） 与 Gemini Ultra（53.2%），而它的体积只有 GPT-4 的几十分之一。"
+  },
+  {
+   "type": "p",
+   "text": "一句话总结：这一篇是「数据挖掘」与「强化学习算法」两场好戏的合体，也是通往 R1 的关键一站。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、背景：数学 = 大模型的「试金石」"
+  },
+  {
+   "type": "p",
+   "text": "•数学推理需要多步逻辑推导，是检验 LLM 推理深度的最硬科目。"
+  },
+  {
+   "type": "p",
+   "text": "•当时最强的 GPT-4 / Gemini Ultra 是闭源的；开源模型在 MATH 上落后闭源十几分，差距刺眼。"
+  },
+  {
+   "type": "p",
+   "text": "•DeepSeek 的选择：不追求「更大」，而是做一个数学专项 7B 模型，用「数据 + 算法」去追平差距。"
+  },
+  {
+   "type": "p",
+   "text": "当时的 MATH 分数榜（无外部工具、无投票，CoT 直答）："
+  },
+  {
+   "type": "p",
+   "text": "模型"
+  },
+  {
+   "type": "p",
+   "text": "参数规模"
+  },
+  {
+   "type": "p",
+   "text": "MATH（%）"
+  },
+  {
+   "type": "p",
+   "text": "Gemini Ultra"
+  },
+  {
+   "type": "p",
+   "text": "闭源超大"
+  },
+  {
+   "type": "p",
+   "text": "53.2"
+  },
+  {
+   "type": "p",
+   "text": "GPT-4"
+  },
+  {
+   "type": "p",
+   "text": "闭源超大"
+  },
+  {
+   "type": "p",
+   "text": "52.9"
+  },
+  {
+   "type": "p",
+   "text": "DeepSeekMath-RL 7B7B51.7"
+  },
+  {
+   "type": "p",
+   "text": "InternLM2-Math 20B"
+  },
+  {
+   "type": "p",
+   "text": "20B"
+  },
+  {
+   "type": "p",
+   "text": "37.7"
+  },
+  {
+   "type": "p",
+   "text": "Qwen 72B"
+  },
+  {
+   "type": "p",
+   "text": "72B"
+  },
+  {
+   "type": "p",
+   "text": "35.2"
+  },
+  {
+   "type": "p",
+   "text": "WizardMath 7B"
+  },
+  {
+   "type": "p",
+   "text": "7B"
+  },
+  {
+   "type": "p",
+   "text": "33.0"
+  },
+  {
+   "type": "p",
+   "text": "Grok-1"
+  },
+  {
+   "type": "p",
+   "text": "闭源超大"
+  },
+  {
+   "type": "p",
+   "text": "23.9"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：注意 DeepSeekMath 与第二梯队（20B/72B）之间的断层——它不是「略好」，而是把开源数学能力整体抬高了一档。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、数据工程：用分类器「找」数学，而不是攒数学"
+  },
+  {
+   "type": "p",
+   "text": "2.1 难题：全网数学内容 < 0.5%"
+  },
+  {
+   "type": "p",
+   "text": "数学网页在整个互联网里占比极低（三方解读估计不足 0.5%），靠关键词或人工整理很难凑够大规模语料。DeepSeek 的洞见：最好的数学数据不在少数精选站点，而是散落在海量网页里，只是「找不出来」。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 DeepSeekMath-Corpus：120B token 的迭代挖掘"
+  },
+  {
+   "type": "p",
+   "text": "核心是一套 fastText 分类器 + 人类修正的迭代闭环："
+  },
+  {
+   "type": "p",
+   "text": "步骤"
+  },
+  {
+   "type": "p",
+   "text": "做法"
+  },
+  {
+   "type": "p",
+   "text": "① 种子训练"
+  },
+  {
+   "type": "p",
+   "text": "用高质量数学网页集 OpenWebMath 作为正样本，混入多样化普通网页作负样本，训练 fastText 分类器（低成本、轻量，适合大规模网页快速筛选）"
+  },
+  {
+   "type": "p",
+   "text": "② 分类器挖掘"
+  },
+  {
+   "type": "p",
+   "text": "用分类器从 Common Crawl 海量网页中召回数学页面"
+  },
+  {
+   "type": "p",
+   "text": "③ 人类反馈"
+  },
+  {
+   "type": "p",
+   "text": "分析召回页面的域名，把数学含量高的站点（如 MathOverflow 等）找出来；人工标注这些域名下的 URL 模式，补充未召回的数学页"
+  },
+  {
+   "type": "p",
+   "text": "④ 循环迭代"
+  },
+  {
+   "type": "p",
+   "text": "用扩充后的语料重新训练分类器，再挖一轮；重复 4 轮直到召回趋于饱和（第 4 轮约 98% 的页面在第 3 轮已收集）"
+  },
+  {
+   "type": "p",
+   "text": "产出：35.5M 数学网页 ≈ 120B token，多语言（英中为主），是当时最大规模的公开数学语料（约为此前最佳公开数学语料的 9 倍）。"
+  },
+  {
+   "type": "p",
+   "text": "2.3 去重与去污染"
+  },
+  {
+   "type": "p",
+   "text": "•去重：URL 去重 + 近似去重（将 Common Crawl 约 40B 网页规模先收缩）。"
+  },
+  {
+   "type": "p",
+   "text": "•去污染（防作弊）：严格过滤任何包含 GSM8K / MATH 等基准题目或答案 n-gram 的网页——保证评估分数真实、不是「背题」。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：迭代式数据挖掘的通用套路「种子语料 → 训练分类器 → 自动挖掘 → 人工修正 → 再来一轮」是个可复用的方法论。DeepSeek 后来在代码、Agent 等方向都沿用了这种**「机器挖掘 + 人工校正」**的闭环。"
+  },
+  {
+   "type": "p",
+   "text": "05CODE"
+  },
+  {
+   "type": "p",
+   "text": "三、模型：从代码模型续训，而不是从零开始"
+  },
+  {
+   "type": "p",
+   "text": "3.1 关键决策：初始化自 DeepSeek-Coder-Base-v1.5 7B"
+  },
+  {
+   "type": "p",
+   "text": "DeepSeek 用代码预训练模型作为起点，而不是通用模型。理由是实验观察到的：从代码模型起步，数学能力显著更好——代码的逻辑结构、精确语法与数学推理高度同源。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：代码 × 数学的协同代码预训练已经教会模型「精确、结构化、可验证」的思维；数学续训只是把这种能力迁移并强化到符号推理上。这是 DeepSeek 后续「数学强 → 推理强 → Agent 强」链条的源头。"
+  },
+  {
+   "type": "p",
+   "text": "3.2 续训数据配比（共约 500B token）"
+  },
+  {
+   "type": "p",
+   "text": "来源"
+  },
+  {
+   "type": "p",
+   "text": "占比"
+  },
+  {
+   "type": "p",
+   "text": "作用"
+  },
+  {
+   "type": "p",
+   "text": "DeepSeekMath-Corpus（120B）"
+  },
+  {
+   "type": "p",
+   "text": "56%"
+  },
+  {
+   "type": "p",
+   "text": "数学推理主料"
+  },
+  {
+   "type": "p",
+   "text": "GitHub 代码"
+  },
+  {
+   "type": "p",
+   "text": "20%"
+  },
+  {
+   "type": "p",
+   "text": "保住并强化代码/结构化能力"
+  },
+  {
+   "type": "p",
+   "text": "arXiv 论文"
+  },
+  {
+   "type": "p",
+   "text": "10%"
+  },
+  {
+   "type": "p",
+   "text": "学术与公式语言"
+  },
+  {
+   "type": "p",
+   "text": "通用中英文自然语言"
+  },
+  {
+   "type": "p",
+   "text": "10%"
+  },
+  {
+   "type": "p",
+   "text": "防「数学偏科」、保通用性"
+  },
+  {
+   "type": "p",
+   "text": "AlgebraicStack（数学代码）"
+  },
+  {
+   "type": "p",
+   "text": "4%"
+  },
+  {
+   "type": "p",
+   "text": "数学-程序桥接"
+  },
+  {
+   "type": "p",
+   "text": "验证收益：Base 7B 不仅 GSM8K 64.2%、MATH 36.2%（超越当时 540B 的 Minerva），而且 MMLU、BBH 等通用推理基准也同步提升——数学训练强化的是「通用推理」本身。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、指令微调：SFT 的三种解题「姿势」"
+  },
+  {
+   "type": "p",
+   "text": "预训练后，用 77.6 万条数学指令样本（覆盖英/中文 K-12 及以上难度）做 SFT，关键在同一道题配多种解法格式："
+  },
+  {
+   "type": "p",
+   "text": "格式"
+  },
+  {
+   "type": "p",
+   "text": "全称"
+  },
+  {
+   "type": "p",
+   "text": "思路"
+  },
+  {
+   "type": "p",
+   "text": "CoT"
+  },
+  {
+   "type": "p",
+   "text": "Chain-of-Thought 思维链"
+  },
+  {
+   "type": "p",
+   "text": "用自然语言逐步推理（人类解题习惯）"
+  },
+  {
+   "type": "p",
+   "text": "PoT"
+  },
+  {
+   "type": "p",
+   "text": "Program-of-Thought 程序思维"
+  },
+  {
+   "type": "p",
+   "text": "把解题写成代码，让模型「写程序代替心算」"
+  },
+  {
+   "type": "p",
+   "text": "工具集成推理"
+  },
+  {
+   "type": "p",
+   "text": "Tool-integrated reasoning"
+  },
+  {
+   "type": "p",
+   "text": "自然语言 + 代码工具（如 Python）混合求解"
+  },
+  {
+   "type": "p",
+   "text": "产出 DeepSeekMath-Instruct 7B：击败所有 7B 同类，与 70B 开源指令模型相当。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、GRPO：本篇最值钱的算法（R1 的前奏）"
+  },
+  {
+   "type": "p",
+   "text": "5.1 PPO 的两大痛点"
+  },
+  {
+   "type": "p",
+   "text": "传统 RLHF 强化学习用 PPO，需要同时训练两个模型：策略模型 + Critic 价值模型（估计每条回答的好坏基线）。痛点："
+  },
+  {
+   "type": "p",
+   "text": "1显存翻倍：Critic 与策略模型一般大，GPU 压力巨大；"
+  },
+  {
+   "type": "p",
+   "text": "2训练不稳：价值函数要为每个 token 预测奖励，而奖励通常只对最后结果打分，学起来既慢又脆。"
+  },
+  {
+   "type": "p",
+   "text": "5.2 GRPO 的核心思想：扔掉 Critic，让「组内互评」"
+  },
+  {
+   "type": "p",
+   "text": "GRPO 的改动一句话：不再训练价值模型，用「同一个问题的一组答案」来构造基线。"
+  },
+  {
+   "type": "p",
+   "text": "具体流程（每个问题 q）："
+  },
+  {
+   "type": "p",
+   "text": "1从当前策略对 q 采样一组（G 个）答案；"
+  },
+  {
+   "type": "p",
+   "text": "2用规则（最终答案对错）给每个答案打分，得到组内分数 {r1, r2, …, rG}；"
+  },
+  {
+   "type": "p",
+   "text": "3用组内均值/标准差把分数归一化为相对优势——做得比同组平均水平好就推，差就拉；"
+  },
+  {
+   "type": "p",
+   "text": "4以 PPO 同款的 clip 策略更新，保证训练稳定。"
+  },
+  {
+   "type": "p",
+   "text": "对比"
+  },
+  {
+   "type": "p",
+   "text": "PPO"
+  },
+  {
+   "type": "p",
+   "text": "GRPO"
+  },
+  {
+   "type": "p",
+   "text": "价值模型（Critic）"
+  },
+  {
+   "type": "p",
+   "text": "需要（同策略同规模）"
+  },
+  {
+   "type": "p",
+   "text": "不需要"
+  },
+  {
+   "type": "p",
+   "text": "基线来源"
+  },
+  {
+   "type": "p",
+   "text": "价值模型预测"
+  },
+  {
+   "type": "p",
+   "text": "组内答案的平均分"
+  },
+  {
+   "type": "p",
+   "text": "显存"
+  },
+  {
+   "type": "p",
+   "text": "高（约翻倍）"
+  },
+  {
+   "type": "p",
+   "text": "省一半以上"
+  },
+  {
+   "type": "p",
+   "text": "稳定性"
+  },
+  {
+   "type": "p",
+   "text": "依赖价值模型训练质量"
+  },
+  {
+   "type": "p",
+   "text": "组内相对比较，更稳"
+  },
+  {
+   "type": "p",
+   "text": "5.3 GRPO 的成绩（RL 阶段）"
+  },
+  {
+   "type": "p",
+   "text": "只用一部分英语指令数据做强化学习，GRPO 让模型再上一个台阶："
+  },
+  {
+   "type": "p",
+   "text": "基准"
+  },
+  {
+   "type": "p",
+   "text": "Instruct 基线"
+  },
+  {
+   "type": "p",
+   "text": "+GRPO"
+  },
+  {
+   "type": "p",
+   "text": "提升"
+  },
+  {
+   "type": "p",
+   "text": "GSM8K"
+  },
+  {
+   "type": "p",
+   "text": "82.9%"
+  },
+  {
+   "type": "p",
+   "text": "88.2%"
+  },
+  {
+   "type": "p",
+   "text": "+5.3"
+  },
+  {
+   "type": "p",
+   "text": "MATH"
+  },
+  {
+   "type": "p",
+   "text": "46.8%"
+  },
+  {
+   "type": "p",
+   "text": "51.7%"
+  },
+  {
+   "type": "p",
+   "text": "+4.9"
+  },
+  {
+   "type": "p",
+   "text": "CMATH（中文，域外）"
+  },
+  {
+   "type": "p",
+   "text": "—"
+  },
+  {
+   "type": "p",
+   "text": "88.8%"
+  },
+  {
+   "type": "p",
+   "text": "域外也强"
+  },
+  {
+   "type": "p",
+   "text": "再叠上 64 样本自一致性（Self-Consistency）投票，MATH 可达 60.9%。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：GRPO 为什么是「战略级」发明去掉价值模型，意味着大规模 RL 的显存与成本门槛大幅下降，也让「纯 RL 从零训推理」变得可操作——这正是 2025-01 月 R1-Zero 的雏形。GRPO 从本篇诞生，在 R1 篇中我们将看到它如何被推到极致。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、评估与意义"
+  },
+  {
+   "type": "p",
+   "text": "•7B 单模型（无工具、无投票）MATH 51.7%，逼近 GPT-4 与 Gemini Ultra——开源模型的数学天花板被整体抬高。"
+  },
+  {
+   "type": "p",
+   "text": "•域外泛化：中文 CMATH 88.8%，说明学到的不是「背题技巧」而是可迁移的推理能力。"
+  },
+  {
+   "type": "p",
+   "text": "•通用推理同步提升：MMLU、BBH 均受益——「练数学 ≈ 练推理」。"
+  },
+  {
+   "type": "p",
+   "text": "•全套权重（Base / Instruct / RL）开源，代码 MIT、权重可商用——研究社区从此有了免费的高质量数学基座。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "七、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1数学数据 <0.5% 的难题 → fastText 分类器 + 人工校正的四轮迭代挖掘，产出 120B token（当时最大数学语料，约 9 倍于此前最佳）。"
+  },
+  {
+   "type": "p",
+   "text": "2从代码模型续训：以 DeepSeek-Coder-Base-v1.5 7B 为起点，数学 = 代码逻辑能力的迁移与强化。"
+  },
+  {
+   "type": "p",
+   "text": "3500B 混合配比：56% 数学 + 20% 代码 + 10% arXiv + 10% 通用 + 4% 数学代码。"
+  },
+  {
+   "type": "p",
+   "text": "4SFT 三姿势：CoT（语言推理）/ PoT（写程序）/ 工具集成推理。"
+  },
+  {
+   "type": "p",
+   "text": "5GRPO 诞生于此：抛弃 Critic 价值模型，用组内均值/标准差做相对优势——显存省一半、训练更稳，是 R1 的核心算法。"
+  },
+  {
+   "type": "p",
+   "text": "6成绩：7B 无工具 MATH 51.7%（逼近 GPT-4 52.9 / Gemini Ultra 53.2）；自一致性 64 样本达 60.9%；中文 CMATH 88.8%。"
+  },
+  {
+   "type": "p",
+   "text": "7通用性：数学训练同时提升 MMLU / BBH——练数学即练推理。"
+  },
+  {
+   "type": "p",
+   "text": "10SECTION"
+  },
+  {
+   "type": "p",
+   "text": "八、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "DeepSeekMath 在「数学专项」上证明了两件事：数据挖掘能挖出性能、GRPO 能替代 PPO。下一篇进入全系列最重要的架构转折：DeepSeek-V2（236B / 21B 激活）——MLA + DeepSeekMoE。你将看到 DeepSeek 如何从「训练一个大而全的稠密模型」切换到「总参很大、激活很少」的稀疏架构，把训练成本省 42.5%、KV 缓存压掉 93.3%、推理吞吐拉高 5.76 倍——这也是「参数做加法、成本做减法」路线的正式确立。"
+  },
+  {
+   "type": "p",
+   "text": "11SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] DeepSeekMath 论文（arXiv:2402.03300）：https://arxiv.org/abs/2402.03300"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] GitHub 仓库（DeepSeek-Math）：https://github.com/deepseek-ai/DeepSeek-Math"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] AI Wiki《DeepSeekMath》条目（参数/许可/基准汇总）：https://www.aiwiki.ai/wiki/deepseek_math"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] AIAny《DeepSeekMath (2024) — Visual Explainer》（MATH 分数榜）：https://aiany.app/html/deepseekmath-pushing-the-limits-of-mathematical-reasoning-in-open-language-models?lang=en"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] AGI Frontier《DeepSeekMath 论文解读》（三阶段流程/数据配比）：https://agifrontier.github.io/tutorials/deepseekmath-pushing-the-limits-of-mathematical-reasoning-in-open-language-model/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] CSDN《突破数学推理极限：DeepSeekMath 的算法与实现》（GRPO 原理）：https://blog.csdn.net/weixin_36829761/article/details/145280505"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] 51CTO《从 DeepSeek-Math 到 DeepSeek-Coder》（代码×数学协同）：https://blog.51cto.com/u_16213559/14972810"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方论文；个别三方文章数据以官方为准。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:17:32+0800"
+}

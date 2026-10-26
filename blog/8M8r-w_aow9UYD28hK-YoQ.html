@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点 | 小凝 AI 工具集</title>
+<meta name="description" content="第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/8M8r-w_aow9UYD28hK-YoQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点 | 小凝 AI 工具集">
+<meta property="og:description" content="第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/8M8r-w_aow9UYD28hK-YoQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/8M8r-w_aow9UYD28hK-YoQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Anthropic Claude 家族系列第 01 篇——Claude 1 与宪法 AI：Anthropic 对齐路线的原点。理解「让模型按原则自我批评」如何取代「人工逐条打分」。与 llm-基础理论第 03 篇（对齐时代）衔接。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。</p>
+<p>01SECTION</p>
+<p>第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>2021 年，OpenAI 副总裁 Dario Amodei 带团队出走成立 Anthropic，公开宣言是：「我们担心 AI 走太快而忘了安全。」 2023-03 推出的 Claude 1 承载了这个立场——它不是参数最大的模型，但它是第一个把「安全原则」写进训练流程（而非事后过滤）的大模型。</p>
+<p>03SECTION</p>
+<p>一、宪法 AI（Constitutional AI）三步</p>
+<p>code</p>
+<p>第 1 步 原则清单（宪法）</p>
+<p>人类写「有帮助 / 无害 / 诚实 / 不歧视…」的原则条文</p>
+<p>第 2 步 自我批评（RLAIF）</p>
+<p>模型输出 → 按宪法自我批评 → 修订成合规回答 → 用修订数据监督微调（SFT）</p>
+<p>第 3 步 自我打分（RL）</p>
+<p>用「是否违反宪法」做奖励信号，强化学习训练（AI 反馈替代人类反馈）</p>
+<p>1.1 与 RLHF 的根本区别</p>
+<p>维度</p>
+<p>RLHF（OpenAI）</p>
+<p>宪法 AI（Anthropic）</p>
+<p>「好坏标准」来源</p>
+<p>人类标注员逐条打分</p>
+<p>公开原则条文</p>
+<p>（宪法）</p>
+<p>反馈信号</p>
+<p>人类偏好</p>
+<p>AI 自我批评/自我打分（RLAIF）</p>
+<p>可审查性</p>
+<p>标注数据难公开</p>
+<p>宪法可公开、可迭代</p>
+<p>人力成本</p>
+<p>高（海量标注）</p>
+<p>低（原则一次性编写）</p>
+<p>1.2 为什么重要</p>
+<p>•对齐从「黑盒偏好」变「可写代码」：原则条文可以像法律一样修改、版本化、公开讨论；</p>
+<p>•可扩展性：模型越强，越难靠人逐条打分——「让 AI 审 AI」是必然方向（后来各家的 RLAIF/红队 AI 都是这个思想的延伸）。</p>
+<p>💡 学习要点：宪法 AI =「给 AI 一部法律，而不是一个打分表」打分表会过时、会偏、且无法覆盖未知场景；法律条文可审查、可演进。Claude 的全部后续（无害性、诚实性、系统卡）都建立在这个「规则显式化」的地基上。</p>
+<p>04SECTION</p>
+<p>二、Claude 1（2023-03）的产品事实</p>
+<p>•定位：安全 + 有帮助并重的对话助手（当时 GPT-3.5 的竞品）；</p>
+<p>•亮点：倾向拒绝危险请求（宁可拒绝不错放——「harmless」优先）；</p>
+<p>•弱项：能力不及同期的 GPT-4（安全与能力的初始权衡，Anthropic 选择前者）；</p>
+<p>•定价先例：按 token 计费进入 API 市场。</p>
+<p>2.1 早期「性格」</p>
+<p>•被评测者称为「谨慎到啰嗦」：对政治/医疗/法律问题过度回避——对齐过度的早期样本（对齐税 §llm-理论 03）；</p>
+<p>•教训：后来各版逐步放宽「有帮助性」，走向「该拒绝的拒绝、该答的答」。</p>
+<p>05SECTION</p>
+<p>三、Claude 2（2023-07）：长上下文与编码</p>
+<p>•上下文 100K token（当时行业天花板，可读整本书）；</p>
+<p>•编码能力显著提升（Codex 之外的选项）；</p>
+<p>•论文同步公开 Constitution AI 细节——把方法论开放给行业。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1宪法 AI 三步：原则条文 → AI 自我批评修订（SFT）→ AI 自我打分 RL（RLAIF）。</p>
+<p>2vs RLHF：标准从「人工偏好」变「公开条文」；反馈从「人打分」变「AI 审 AI」。</p>
+<p>3Claude 1（2023）：安全优先、宁拒勿放；对齐过度 → 早期「谨慎啰嗦」。</p>
+<p>4Claude 2（2023）：100K 长上下文 + 编码增强 + 方法论开源。</p>
+<p>5原点意义：对齐 = 可写条文、可审查、可演进——Anthropic 的 DNA。</p>
+<p>07SECTION</p>
+<p>五、下一篇预告</p>
+<p>第 02 篇：Claude 3 家族与 3.5——2024 年 Anthropic 推出 Opus/Sonnet/Haiku 三档：最强/均衡/最快。其中 Claude 3.5 Sonnet 成为年度口碑之王（编码、写作、性价比全面领先，被开发者称为「被低估的 SOTA」）。这一篇讲「三档产品化」如何让安全路线第一次赢得大众市场。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Constitutional AI: Harmlessness from AI Feedback（Bai et al., 2022）：https://arxiv.org/abs/2212.08073</p>
+<p>•[官方] Claude 2 发布博客（2023）：https://www.anthropic.com/news/claude-2</p>
+<p>•[参考] Anthropic 对齐研究综述：https://www.anthropic.com/research</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方技术报告。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/8M8r-w_aow9UYD28hK-YoQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -13,6 +13,8 @@ import datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "data")
 APPS_JSON = os.path.join(DATA, "apps.json")
+BLOG_FEED = os.path.join(DATA, "blog_feed.json")
+BLOG_POSTS = os.path.join(DATA, "blog_posts")
 sys.path.insert(0, DATA)
 
 BASE_URL = "https://screscent.github.io/xiaoning-ai-tools"
@@ -61,12 +63,44 @@ def load_apps():
     return apps
 
 
+def load_blog():
+    """加载博客数据（上游同步副本）。缺失时返回空，不阻断工具站构建。"""
+    if not os.path.exists(BLOG_FEED):
+        return {"articles": [], "posts": {}}
+    with open(BLOG_FEED, encoding="utf-8") as f:
+        feed = json.load(f)
+    posts = {}
+    if os.path.isdir(BLOG_POSTS):
+        for name in os.listdir(BLOG_POSTS):
+            if name.endswith(".json"):
+                with open(os.path.join(BLOG_POSTS, name), encoding="utf-8") as f:
+                    p = json.load(f)
+                p.setdefault("kind", "wechat")
+                posts[p.get("slug", name[:-5])] = p
+    arts = []
+    for a in feed.get("articles", []):
+        if a.get("status") != "published":
+            continue
+        p = posts.get(a["slug"])
+        if not p:
+            continue
+        a = dict(a)
+        a["kind"] = p.get("kind", "wechat")
+        a["digest"] = a.get("digest") or p.get("digest", "")
+        arts.append(a)
+    return {"articles": arts, "posts": posts, "updated": feed.get("updated", "")}
+
+
+def blog_post_path(post):
+    return os.path.join(BLOG_POSTS, f"{post['slug']}.json")
+
+
 def page_shell(title, desc, canonical, body, extra_jsonld="", depth=0):
     pre = "../" * depth
     nav = f"""<header class="top">
   <div class="wrap">
     <a class="brand" href="{pre}index.html">{SITE_NAME}</a>
-    <nav><a href="{pre}index.html">统一门户</a><a href="{pre}ai/index.html">AI 工具集</a><a href="{pre}utility/index.html">实用工具箱</a><a href="{pre}pricing.html">价格与使用</a></nav>
+    <nav><a href="{pre}index.html">统一门户</a><a href="{pre}ai/index.html">AI 工具集</a><a href="{pre}utility/index.html">实用工具箱</a><a href="{pre}blog/index.html">博客</a><a href="{pre}pricing.html">价格与使用</a></nav>
   </div>
 </header>"""
     return f"""<!DOCTYPE html>
@@ -318,14 +352,23 @@ def _util_cat_cards(util):
     )
 
 
-def unified_page(apps):
+def unified_page(apps, blog=None):
     n_util = len([a for a in apps if a["cat"] == "实用工具"])
     n_ai = len(apps) - n_util
     canon = BASE_URL + "/"
+    latest = (blog or {}).get("articles", [])[:5]
+    latest_html = ""
+    if latest:
+        rows = "".join(
+            f'<li><a href="blog/{esc(a["slug"])}.html"><strong>{esc(a["title"])}</strong>'
+            f'<em>{esc(a.get("publish_time") or "")}</em></a></li>'
+            for a in latest
+        )
+        latest_html = f'<h2>最新文章</h2><ul class="rows">{rows}</ul><p class="cta"><a class="btn ghost" href="blog/index.html">浏览全部博客</a></p>'
     jsonld = json.dumps({
         "@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME,
         "url": canon, "inLanguage": "zh-CN",
-        "description": "统一入口：AI 工具集与免费实用工具箱。",
+        "description": "统一入口：AI 工具集、免费实用工具箱与博客。",
     }, ensure_ascii=False)
     body = f"""
 <section class="hero">
@@ -337,18 +380,21 @@ def unified_page(apps):
 <ul class="cards">
   <li><a href="ai/index.html"><strong>AI 工具集</strong><span>简历匹配、面试题、周报、会议纪要、PPT 大纲、小红书文案、SQL 优化等，生成类工具，单个 ¥1–¥3 解锁。</span><em>进入 →</em></a></li>
   <li><a href="utility/index.html"><strong>实用工具箱 · 免费</strong><span>图片压缩改尺寸、房贷提前还款计算器、二维码生成器——浏览器本地处理，数据不上传，完全免费。</span><em>进入 →</em></a></li>
+  <li><a href="blog/index.html"><strong>博客</strong><span>公众号文章全文归档 + 独立博客：记录一个 AI 体系怎么被赋予行动能力、怎么在真实项目里交付。</span><em>进入 →</em></a></li>
 </ul>
 
 <h2>常用入口</h2>
-<p class="cta"><a class="btn" href="ai/index.html">AI 工具集</a><a class="btn" href="utility/index.html">实用工具箱</a><a class="btn ghost" href="pricing.html">价格与使用说明</a></p>
+<p class="cta"><a class="btn" href="ai/index.html">AI 工具集</a><a class="btn" href="utility/index.html">实用工具箱</a><a class="btn ghost" href="blog/index.html">博客</a><a class="btn ghost" href="pricing.html">价格与使用说明</a></p>
+
+{latest_html}
 
 <h2>工作方式</h2>
 <p>AI 工具在 WeaveFox 应用内运行，首次使用手机号注册（免费），按需解锁单个功能；实用工具完全在浏览器本地运行，无需支付。两套工具都由同一套内容源维护，页面只做介绍与入口。</p>
 {common_faq_block()}
 """
     return page_shell(
-        f"{SITE_NAME} - 统一入口（AI 工具集 + 实用工具箱）",
-        "统一入口：AI 工具集（单个 ¥1–¥3 解锁）与免费实用工具箱（图片压缩、房贷计算、二维码），浏览器即开即用。",
+        f"{SITE_NAME} - 统一入口（AI 工具集 + 实用工具箱 + 博客）",
+        "统一入口：AI 工具集（单个 ¥1–¥3 解锁）、免费实用工具箱（图片压缩、房贷计算、二维码）与博客，浏览器即开即用。",
         canon, body,
         extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>',
         depth=0,
@@ -477,22 +523,126 @@ def pricing_page(apps):
                       canon, body)
 
 
-def sitemap(apps):
+def blog_article_jsonld(art, canon):
+    data = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": art["title"],
+        "datePublished": art.get("publish_time", ""),
+        "inLanguage": "zh-CN",
+        "url": canon,
+        "author": {"@type": "Person", "name": OWNER},
+        "publisher": {"@type": "Person", "name": OWNER},
+        "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": BASE_URL + "/"},
+    }
+    if art.get("digest"):
+        data["description"] = art["digest"]
+    return f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>'
+
+
+def blog_list_page(blog):
+    arts = blog["articles"]
+    wechat = [a for a in arts if a.get("kind") != "self"]
+    selfp = [a for a in arts if a.get("kind") == "self"]
+    canon = f"{BASE_URL}/blog/"
+
+    def section(title, note, items):
+        if not items:
+            return ""
+        groups, order = {}, []
+        for a in items:
+            key = (a.get("publish_time") or "")[:7] or "未标注"
+            if key not in groups:
+                groups[key] = []
+                order.append(key)
+            groups[key].append(a)
+        out = [f'<h2>{esc(title)}<small>{len(items)} 篇</small></h2>']
+        if note:
+            out.append(f'<p class="lede">{esc(note)}</p>')
+        for key in order:
+            rows = "".join(
+                f'<li><a href="{esc(a["slug"])}.html"><strong>{esc(a["title"])}</strong>'
+                f'<span>{esc((a.get("digest") or "")[:110])}</span>'
+                f'<em>{esc(a.get("publish_time") or "")}</em></a></li>'
+                for a in groups[key]
+            )
+            out.append(f'<section class="group"><h3>{esc(key)}<small>{len(groups[key])} 篇</small></h3><ul class="cards one">{rows}</ul></section>')
+        return "\n".join(out)
+
+    body = f"""
+<section class="hero">
+  <h1>博客<small>{len(arts)} 篇</small></h1>
+  <p class="lede">这里的文章分两类：<strong>公众号文章</strong>（同步自微信公众号「月牙寂」的已发表内容，本页保留全文便于检索与阅读）与<strong>独立博客</strong>（不在公众号发布的补充记录）。正文均可在本页直接阅读，文末附公众号原文链接。</p>
+</section>
+{section("公众号文章", "由公众号后台「发表记录」同步，已删除的文章不收录。", wechat)}
+{section("独立博客", "", selfp)}
+<h2>关于这里</h2>
+<p>这些内容以第一人称记录一个 AI 体系（月绡凝 / 小凝）的工程化实践：怎么被赋予行动能力、怎么在真实项目里交付、以及由此沉淀出的工具与方法。文章同时在微信公众号「月牙寂」发布，本页是它们的长期归档。</p>
+{common_faq_block()}
+"""
+    return page_shell(
+        f"博客（{len(arts)} 篇）| {SITE_NAME}",
+        "小凝体系的工程化实践记录：公众号文章全文归档与独立博客，涵盖 Agent 行动能力、自动化交付与工具化沉淀。",
+        canon, body,
+        depth=1,
+    )
+
+
+def blog_post_page(art, post):
+    canon = f"{BASE_URL}/blog/{art['slug']}.html"
+    parts = []
+    for b in post.get("blocks", []):
+        if b.get("type") == "img":
+            parts.append(f'<p><img src="{esc(b["src"])}" alt="{esc(art["title"])}" loading="lazy"></p>')
+        else:
+            t = esc(b.get("text", ""))
+            if t:
+                parts.append(f"<p>{t}</p>")
+    src = post.get("source_url") or art.get("url", "")
+    body = f"""
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>{esc(post.get('title') or art['title'])}</h1>
+  <p class="meta-line">发布于 {esc(post.get('publish_time') or art.get('publish_time') or '')} · 作者 {esc(post.get('author') or OWNER)}</p>
+  <p class="hook">{esc(post.get('digest') or '')}</p>
+  <div class="post-body">
+{chr(10).join(parts)}
+  </div>
+  <p class="cta">{f'<a class="btn ghost" href="{esc(src)}" rel="noopener">在公众号阅读原文</a>' if src else ''}<a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：{OWNER}｜联系：{PHONE}｜邮箱：{MAIL}｜微信公众号：{WECHAT_MP}<br>Agent 作者：{AGENT}</p>
+</article>
+"""
+    return page_shell(
+        f"{post.get('title') or art['title']} | {SITE_NAME}",
+        (post.get("digest") or art.get("digest") or "")[:150],
+        canon, body,
+        extra_jsonld=blog_article_jsonld(art, canon),
+        depth=1,
+    )
+
+
+def sitemap(apps, blog=None):
     urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html"]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
     urls += [f"{BASE_URL}/tools/{a['slug']}.html" for a in apps]
+    blog_posts = []
+    if blog and blog.get("articles"):
+        urls.append(f"{BASE_URL}/blog/")
+        blog_posts = [a["slug"] for a in blog["articles"] if a.get("slug")]
+        urls += [f"{BASE_URL}/blog/{s}.html" for s in blog_posts]
+    blog_url = f"{BASE_URL}/blog/"
     items = "".join(
         f"<url><loc>{x}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq>"
-        f"<priority>{'1.0' if x == BASE_URL + '/' else '0.8' if '/categories/' in x else '0.7'}</priority></url>"
+        f"<priority>{'1.0' if x == BASE_URL + '/' else '0.9' if x == blog_url else '0.8' if '/categories/' in x else '0.7'}</priority></url>"
         for x in urls
     )
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{items}</urlset>\n'
 
 
-def llms_txt(apps):
+def llms_txt(apps, blog=None):
     lines = [f"# {SITE_NAME}", "",
-             f"> 三门户结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）。共 {len(apps)} 个工具。",
-             f"> 统一入口：{BASE_URL}/ ｜ AI 工具集：{BASE_URL}/ai/ ｜ 实用工具箱：{BASE_URL}/utility/",
+             f"> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 {len(apps)} 个工具。",
+             f"> 统一入口：{BASE_URL}/ ｜ AI 工具集：{BASE_URL}/ai/ ｜ 实用工具箱：{BASE_URL}/utility/ ｜ 博客：{BASE_URL}/blog/",
              f"> WeaveFox 统一门户：{UNIFIED} ｜ AI 工具集：{PORTAL} ｜ 实用工具箱：{TOOLBOX}", "", "## 分类"]
     for c, lead in C.CATEGORIES:
         items = [a for a in apps if a["cat"] == c]
@@ -500,6 +650,11 @@ def llms_txt(apps):
     lines += ["", "## 工具"]
     for a in apps:
         lines.append(f"- [{a['name']}]({BASE_URL}/tools/{a['slug']}.html)：{a['desc']}（{price_label(a)}）")
+    arts = (blog or {}).get("articles", [])
+    if arts:
+        lines += ["", f"## 博客（{len(arts)} 篇）"]
+        for a in arts:
+            lines.append(f"- [{a['title']}]({BASE_URL}/blog/{a['slug']}.html)：{a.get('publish_time','')}｜{(a.get('digest') or '')[:80]}")
     lines += ["", "## 说明", f"- 联系方式：{MAIL}｜{PHONE}", "- 工具输出为参考结果，不构成专业意见。"]
     return "\n".join(lines) + "\n"
 
@@ -590,6 +745,10 @@ table ul{margin:0;padding-left:18px}
 .foot{border-top:1px solid var(--line);background:var(--bg);padding:22px 0;color:var(--muted);font-size:13px}
 .sig{color:#4a4a4f}
 .meta{margin-top:6px}
+.cards.one{grid-template-columns:1fr}
+.post-body p{margin:12px 0;line-height:1.9;color:#2b2b2f}
+.post-body img{max-width:100%;border-radius:8px;margin:10px 0;display:block}
+.meta-line{color:var(--muted);font-size:13px;margin:0 0 8px}
 @media (max-width:640px){.cards{grid-template-columns:1fr}h1{font-size:24px}.rows li{flex-direction:column;gap:2px}.rows a{min-width:0}}
 """
 
@@ -600,6 +759,8 @@ def main():
     extra = [k for k in C.APPS if k not in {a["id"] for a in apps}]
     if missing or extra:
         raise SystemExit(f"内容与目录不一致 missing={missing} extra={extra}")
+
+    blog = load_blog()
 
     os.makedirs(os.path.join(HERE, "ai"), exist_ok=True)
     os.makedirs(os.path.join(HERE, "utility"), exist_ok=True)
@@ -612,7 +773,7 @@ def main():
         with open(p, "w", encoding="utf-8") as f:
             f.write(text)
 
-    w("index.html", unified_page(apps))
+    w("index.html", unified_page(apps, blog))
     w("ai/index.html", ai_portal_page(apps))
     w("utility/index.html", utility_portal_page(apps))
     w("pricing.html", pricing_page(apps))
@@ -620,9 +781,27 @@ def main():
         w(f"categories/{cat_slug(c)}.html", category_page(c, apps))
     for a in apps:
         w(f"tools/{a['slug']}.html", tool_page(a, apps))
-    w("sitemap.xml", sitemap(apps))
+
+    # 博客：列表 + 已归档文章页 + 图片副本
+    if blog["articles"]:
+        os.makedirs(os.path.join(HERE, "blog"), exist_ok=True)
+        w("blog/index.html", blog_list_page(blog))
+        for a in blog["articles"]:
+            post = blog["posts"][a["slug"]]
+            w(f"blog/{a['slug']}.html", blog_post_page(a, post))
+        src_assets = os.path.join(BLOG_POSTS, "assets")
+        dst_assets = os.path.join(HERE, "blog", "assets")
+        if os.path.isdir(src_assets):
+            os.makedirs(dst_assets, exist_ok=True)
+            for f in os.listdir(src_assets):
+                src = os.path.join(src_assets, f)
+                if os.path.isfile(src):
+                    with open(src, "rb") as rf, open(os.path.join(dst_assets, f), "wb") as of:
+                        of.write(rf.read())
+
+    w("sitemap.xml", sitemap(apps, blog))
     w("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n")
-    w("llms.txt", llms_txt(apps))
+    w("llms.txt", llms_txt(apps, blog))
     w("assets/style.css", CSS)
     w("README.md", readme(apps))
     w(".nojekyll", "")
@@ -640,7 +819,8 @@ def main():
         html = open(os.path.join(HERE, f), encoding="utf-8").read()
         if f'<a href="{BASE_URL}/">← 返回统一门户</a>' not in html:
             raise SystemExit(f"{f} 的返回统一门户未指向 GitHub 首页")
-    print(f"generated {len(apps)} tools + {len(C.CATEGORIES)} categories + index/pricing/sitemap")
+    n_blog = len(blog["articles"])
+    print(f"generated {len(apps)} tools + {len(C.CATEGORIES)} categories + {n_blog} blog posts + index/pricing/sitemap")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 03 篇 · 对齐时代：让模型「被驯服」 | 小凝 AI 工具集</title>
+<meta name="description" content="第 03 篇 · 对齐时代：让模型「被驯服」">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/RBAesanSgyNModSyI1eMJQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 03 篇 · 对齐时代：让模型「被驯服」 | 小凝 AI 工具集">
+<meta property="og:description" content="第 03 篇 · 对齐时代：让模型「被驯服」">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/RBAesanSgyNModSyI1eMJQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 03 篇 · 对齐时代：让模型「被驯服」", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/RBAesanSgyNModSyI1eMJQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 03 篇 · 对齐时代：让模型「被驯服」"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 03 篇 · 对齐时代：让模型「被驯服」</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 03 篇 · 对齐时代：让模型「被驯服」</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：LLM 基础理论发展系列第 03 篇——对齐时代。预训练给了模型「能力」，但能力不可控：胡说、有害、偏见。本篇讲三套解法：InstructGPT/RLHF（OpenAI）、Constitutional AI（Anthropic）、DPO（2023 简化），并衔接 DeepSeek 的 GRPO。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以原论文为准。</p>
+<p>01SECTION</p>
+<p>第 03 篇 · 对齐时代：让模型「被驯服」</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>第 02 篇的 GPT-3 很强大，但也很危险：随口编造事实、吐露有害内容、对着简单问题答非所问。能力（capability）不等于可用（alignment）。 2022 年起，行业把重心从「更大」转向「更听话」——这就是对齐时代。本篇是理解 ChatGPT 为什么能火、Claude 为什么强调安全、以及今天所有 AI 产品的「价值观」从哪来的钥匙。</p>
+<p>03WHY</p>
+<p>一、为什么需要对齐（Alignment）</p>
+<p>1.1 预训练目标 ≠ 人类需求</p>
+<p>预训练只优化一件事：预测下一个 token。这个目标会带来三个偏差：</p>
+<p>偏差</p>
+<p>表现</p>
+<p>不求有用</p>
+<p>诚实但废话连篇：「我不知道」也要硬编一段</p>
+<p>不求安全</p>
+<p>中性回答，同样概率给出危险操作步骤</p>
+<p>不求风格</p>
+<p>冷冰冰的统计语言，不像「助手」</p>
+<p>💡 学习要点：对齐 = 在「会说话」和「说人话」之间架桥预训练回答「什么词最可能」，对齐回答「什么回答最有帮助且安全」。后者本质是价值观工程。</p>
+<p>04SECTION</p>
+<p>二、第一套系统解法：RLHF（OpenAI，2022）</p>
+<p>2.1 InstructGPT 三步走（RLHF 标准流程）</p>
+<p>code</p>
+<p>第 1 步 SFT（监督微调） 第 2 步 奖励模型 RM 第 3 步 强化学习 RL</p>
+<p>人类写「指令→理想回答」 → 人类对多份回答打分 → 用 RM 当老师，PPO 更新模型</p>
+<p>1SFT：拿一批人工写的高质量「指令-回答」对，先微调模型（让它会「听指令」）；</p>
+<p>2奖励模型（RM）：让标注员给同一指令的多份回答排序，训练一个打分器——把「人觉得好不好」变成可优化的标量；</p>
+<p>3PPO 强化学习：用 RM 给模型输出的回答打分，通过 RL 让模型学会「高分行为」。为避免模型乱改，加了 KL 惩罚约束它与原模型不过度偏离。</p>
+<p>2.2 效果与意义</p>
+<p>•InstructGPT 仅 13 亿参数，但人类偏好胜率显著超过 1750 亿的 GPT-3——证明对齐是「能力放大器」；</p>
+<p>•ChatGPT（2022-11）＝ GPT-3.5 基座 + RLHF 打磨 → 引爆全球；</p>
+<p>•代价：贵。每轮 RL 都要 RM 打分 + 多次前向，且 RM 本身就是人工标注训练出来的。</p>
+<p>💡 学习要点：RLHF 的哲学 = 「找个人工老师」模型的「好坏标准」由人类标注决定，再让强化学习把这个标准内化。优点：标准清晰；缺点：标注贵、且「标准本身」也被模型学了偏见。</p>
+<p>05SECTION</p>
+<p>三、第二条路：Constitutional AI（Anthropic，2022）</p>
+<p>3.1 问题：RLHF 的「老师」还是人</p>
+<p>Anthropic 的洞察：与其让人一遍遍打分，不如给 AI 一部「宪法」，让它自我批评、自我修订——人只写原则，不写答案。</p>
+<p>3.2 两步法</p>
+<p>1监督阶段（RLAIF）：模型先输出回答 → 按宪法原则自我批评 → 修订成符合宪法的版本 → 用这些「修订数据」微调模型；</p>
+<p>2RL 阶段：用「违反宪法程度」当奖励信号（AI 反馈替代人类反馈）——即 RLAIF（AI Feedback 强化学习）。</p>
+<p>3.3 意义</p>
+<p>•标准显式化：宪法是公开的原则清单（helpful/harmless/诚实等），可审查、可迭代；</p>
+<p>•省人力：打分从「人排」变成「AI 自评」；</p>
+<p>•Claude 的血统：Claude 系列从 1 代起就是这条路的实践者（对应 Anthropic 家族系列将详讲）。</p>
+<p>💡 学习要点：RLHF vs 宪法 AI =「人工打分」 vs「规则自评」一个依赖人工标准，一个把标准写成条文。今天的主流已趋同：先有原则清单，再让模型自评（DPO/GRPO 都吸收了这个思想）。</p>
+<p>06SECTION</p>
+<p>四、DPO：把 RL 砍掉（2023）</p>
+<p>4.1 核心洞察</p>
+<p>RLHF 的强化学习环节又贵又抖。DPO（Direct Preference Optimization）证明：不需要单独的奖励模型 + PPO，直接拿「偏好数据」做监督学习即可——因为 RL 的最优策略，其实可以解析地写出来。</p>
+<p>4.2 做法</p>
+<p>•输入：人类偏好的数据对（回答 A 好于回答 B）；</p>
+<p>•目标：让模型直接提高「好回答」的似然、压低「差回答」的似然，同时约束与参考模型不过度偏离；</p>
+<p>•结果：训练稳定、省算力、无 RM 无 RL——对齐成本大幅下降。</p>
+<p>4.3 影响</p>
+<p>•Vicuna/Zephyr 等开源模型迅速跟进（这也是 README 规划表里列 Vicuna 的原因）；</p>
+<p>•为 DeepSeek 的 GRPO 铺路：R1 用「基于规则/可验证奖励」的 GRPO 做纯强化学习训练推理（第 05 篇详讲）——两者结合 = 对齐与推理一体的今日格局。</p>
+<p>💡 学习要点：DPO 的哲学 = 「把偏好看成数据，而不是看成流程」RLHF 把对齐做成多阶段流程，DPO 把它简化成「用偏好对做一次分类训练」。流程越简单，越可复制——这是开源对齐能普及的关键。</p>
+<p>07SECTION</p>
+<p>五、对齐的未竟问题</p>
+<p>•标准谁来定：RLHF 的人类标注、宪法 AI 的宪法、DPO 的偏好对——背后都是「某群人的价值观」；</p>
+<p>•对齐税：过度对齐可能损害能力（过拟合「讨好」）；</p>
+<p>•对齐 ≠ 安全：能拒绝 ≠ 不会出事故——需要可解释性与红队（对应 rule 体系里的安全防护思路）。</p>
+<p>08SECTION</p>
+<p>六、本篇要点（复习卡片）</p>
+<p>1对齐动机：预训练优化「预测」，不优化「有用/安全」——能力与可用之间的鸿沟。</p>
+<p>2RLHF 三步：SFT → 奖励模型 RM → PPO 强化学习（OpenAI InstructGPT，ChatGPT 的底座）。</p>
+<p>3宪法 AI：用公开原则清单让模型自我批评修订（Anthropic，Claude 的血统）。</p>
+<p>4DPO：去掉 RM + PPO，用偏好对直接监督学习——简单可复制（2023 开源标配）。</p>
+<p>5DeepSeek 衔接：GRPO = 用规则奖励做纯 RL 训练推理（R1）；对齐与推理在 DeepSeek 合流。</p>
+<p>6未竟问题：标准主权、对齐税、对齐≠安全。</p>
+<p>09SECTION</p>
+<p>七、下一篇预告</p>
+<p>第 04 篇：效率革命——对齐解决了「乖不乖」，但模型太贵：千亿参数推理一次要租几块 A100。2021 年起行业开始「抠」：MoE 稀疏化（Switch/Mixtral/DeepSeek-V2）、量化（GPTQ/AWQ）、蒸馏、长上下文工程（ALiBi/RoPE）。DeepSeek-V3 是这场革命的集大成者——这是它的家族系列的立身之本。</p>
+<p>10SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Training language models to follow instructions with human feedback（InstructGPT, Ouyang et al., 2022）：https://arxiv.org/abs/2203.02155</p>
+<p>•[官方] Constitutional AI: Harmlessness from AI Feedback（Bai et al., 2022）：https://arxiv.org/abs/2212.08073</p>
+<p>•[官方] Direct Preference Optimization（Rafailov et al., 2023）：https://arxiv.org/abs/2305.18290</p>
+<p>•[参考] 人类反馈如何塑造 ChatGPT（OpenAI 官方博客翻译解读）：https://openai.com/research/instruction-following</p>
+<p>整理：2026-10-01 月绡凝 · 依据原论文。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/RBAesanSgyNModSyI1eMJQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 08 篇 · 工程化：从「能跑」到「能上生产」 | 小凝 AI 工具集</title>
+<meta name="description" content="第 08 篇 · 工程化：从「能跑」到「能上生产」">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/MMyAGX47wzUTyOvn2UIiOQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 08 篇 · 工程化：从「能跑」到「能上生产」 | 小凝 AI 工具集">
+<meta property="og:description" content="第 08 篇 · 工程化：从「能跑」到「能上生产」">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/MMyAGX47wzUTyOvn2UIiOQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 08 篇 · 工程化：从「能跑」到「能上生产」", "datePublished": "2026-10-02", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/MMyAGX47wzUTyOvn2UIiOQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 08 篇 · 工程化：从「能跑」到「能上生产」"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 08 篇 · 工程化：从「能跑」到「能上生产」</h1>
+  <p class="meta-line">发布于 2026-10-02 · 作者 月牙寂</p>
+  <p class="hook">第 08 篇 · 工程化：从「能跑」到「能上生产」</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 实战系列板块三·工程化第 08 篇——生产级要点：能跑 ≠ 能上。流式、可观测（tracing）、评测、HITL、护栏五件套落地，以及「先高确认、再渐进放自主度」的发布节奏。</p>
+<p>免责声明：本文为学习与技术分享用途，内容依据官方工程实践。</p>
+<p>01SECTION</p>
+<p>第 08 篇 · 工程化：从「能跑」到「能上生产」</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>04-07 篇教会你「跑通」。但跑通 ≠ 上生产：流式卡顿、出问题不知道哪一步错的、模型变差没人发现、高风险动作没审批。本篇给「生产五件套」的实战姿势——先高确认模式跑通，再渐进放自主度。</p>
+<p>03SECTION</p>
+<p>一、生产五件套</p>
+<p>1. 流式（Streaming）</p>
+<p>•为什么：Agent 任务分钟级，不让用户干等——token 边出边显示；</p>
+<p>•落地：Eino Stream（StreamReader[*Message]）/ OpenAI/Claude SDK 的 stream 参数；</p>
+<p>•坑：流式下 tool_use 参数分片——攒齐再执行（01-04 篇都提过）。</p>
+<p>2. 可观测（Tracing / Callback）</p>
+<p>•为什么：Agent 每一步（推理/工具/结果）都可能是错的源头——没有 trace 的多步 Agent 出问题只能瞎猜；</p>
+<p>•落地：Eino Callback（OnStart/OnEnd 切面 → 日志/指标）、LangSmith、自家埋点；</p>
+<p>•最小要求：每个工具调用留痕（谁调的、参数、结果、耗时）——对应「审计留痕」思想。</p>
+<p>3. 评测（Eval）</p>
+<p>•为什么：模型会变、prompt 会退化——没有评测的 Agent 上线后悄悄变蠢；</p>
+<p>•落地：任务级基准（SWE-bench/OSWorld 思路）+ 自建测试集（一批真实任务跑分）；</p>
+<p>•原则：测「任务干成了没」，不测「答得像不像」（agent-系列 08 篇）；上线前建基线、上线后周期回归。</p>
+<p>4. HITL 人工审批</p>
+<p>•为什么：不可逆/高风险动作不能全自动（删数据/付款/发布）；</p>
+<p>•落地：Eino ADK 中断恢复 / LangGraph interrupt / 自研审批服务——Agent 跑到审批点 → 暂停 → 人工确认 → 断点续跑（agent-实战 03 篇）。</p>
+<p>5. 护栏（Guardrails）</p>
+<p>•为什么：护栏必须确定性生效，不能靠模型自觉；</p>
+<p>•落地：输入侧（防注入）、输出侧（防敏感外泄）、工具侧（白名单外拒绝）、行为侧（死循环/超预算熔断）；</p>
+<p>•最省事的起点：先写「绝对不能做什么」的硬规则清单，再谈自动化范围。</p>
+<p>💡 学习要点：五件套 = 一套「发布清单」流式（体验）→ tracing（排障）→ eval（质量）→ HITL（安全）→ 护栏（边界）。缺一样都不该全量放量——这五样是「能跑」与「能上」的分界线。</p>
+<p>04SECTION</p>
+<p>二、发布节奏：渐进放自主度</p>
+<p>code</p>
+<p>阶段 0 高确认模式：每个关键动作都审批（HITL 密集）</p>
+<p>阶段 1 内部灰度：放开低风险动作，高风险仍审批</p>
+<p>阶段 2 小范围生产：全自动 + 护栏 + 审计，异常熔断转人工</p>
+<p>阶段 3 全量：自主运行 + 周期评测回归 + 熔断兜底</p>
+<p>•每一档的前提（对齐 agent-范式 07 篇渐进自主四条件）：错误可逆 / 结果可验证 / 护栏到位 / 经验积累；</p>
+<p>•反模式：一上来就「全自动」——Agent 会以你想不到的方式失败（死循环、调错工具、上下文污染）。</p>
+<p>05SECTION</p>
+<p>三、实战检查清单（上线前过一遍）</p>
+<p>•流式输出已通（长任务有进度感）</p>
+<p>•每个工具调用有 trace（时间/参数/结果）</p>
+<p>•评测集建好（≥20 个真实任务，跑出基线分）</p>
+<p>•高风险动作有 HITL 审批点（不可逆动作零遗漏）</p>
+<p>•Guardrails 有「硬规则」清单（非模型自觉）</p>
+<p>•最大步数/token 预算有上限（防死循环烧钱）</p>
+<p>•失败有回退路径（重试→降级→人工接管）</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1生产五件套：流式 / tracing / 评测 / HITL / 护栏——缺一不可。</p>
+<p>2评测原则：测任务级（干成了没），不测「像不像」；上线前基线、周期回归。</p>
+<p>3护栏铁律：确定性生效，不靠模型自觉。</p>
+<p>4发布节奏：高确认 → 内部灰度 → 小范围 → 全量——渐进放自主度。</p>
+<p>5四条件：错误可逆 / 结果可验证 / 护栏到位 / 经验积累。</p>
+<p>6板块三收官：生产 = 五件套 + 渐进节奏——「能跑」与「能上」的分界线。</p>
+<p>07SECTION</p>
+<p>五、下一篇预告</p>
+<p>第 09 篇（板块四·趋势）：形态实战——把前面所有技术装进三个最值钱的产品形态：编码 Agent（SWE-bench 74.9%）、研究 Agent（deep research）、常驻 Agent（监听/巡检/周期任务）。技术（框架/通用/工程化）→ 形态（拿来做什么产品）。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Eino Callback / ADK（中断恢复）：https://www.cloudwego.io/docs/eino/</p>
+<p>•[官方] LangSmith（可观测与评测）：https://www.langchain.com/langsmith</p>
+<p>•[官方] Building Effective Agents（Anthropic，工作流 vs Agent + 生产建议）：https://www.anthropic.com/research/building-effective-agents</p>
+<p>•[参考] 2026 生产 Agent 工程实践行业共识</p>
+<p>整理：2026-10-02 月绡凝 · 依据官方工程实践。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/MMyAGX47wzUTyOvn2UIiOQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

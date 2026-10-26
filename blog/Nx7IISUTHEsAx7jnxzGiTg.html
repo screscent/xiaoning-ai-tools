@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 05 篇 · 推理时代：从「续写」到「思考」 | 小凝 AI 工具集</title>
+<meta name="description" content="第 05 篇 · 推理时代：从「续写」到「思考」">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/Nx7IISUTHEsAx7jnxzGiTg.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 05 篇 · 推理时代：从「续写」到「思考」 | 小凝 AI 工具集">
+<meta property="og:description" content="第 05 篇 · 推理时代：从「续写」到「思考」">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/Nx7IISUTHEsAx7jnxzGiTg.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 05 篇 · 推理时代：从「续写」到「思考」", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/Nx7IISUTHEsAx7jnxzGiTg.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 05 篇 · 推理时代：从「续写」到「思考」"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 05 篇 · 推理时代：从「续写」到「思考」</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 05 篇 · 推理时代：从「续写」到「思考」</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：LLM 基础理论发展系列第 05 篇——推理时代。从「会说话」到「会思考」：Chain-of-Thought（2022）发现分步思考有效，o1（2024）把「想」变成可训练能力（测试时扩展），DeepSeek-R1（2025）证明纯强化学习就能涌现推理。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以原论文为准。</p>
+<p>01SECTION</p>
+<p>第 05 篇 · 推理时代：从「续写」到「思考」</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>第 03 篇让模型「乖」，第 04 篇让模型「便宜」——但 2022 年的大模型有个尴尬：知识碾压人类，数学一塌糊涂。为什么？因为预训练只教「下一个词最像什么」，没教「一步步算」。2022 年的 Chain-of-Thought 论文掀开第一道口子，2024 年 OpenAI 的 o1 把它产品化，2025 年 DeepSeek-R1 用纯强化学习把「思考」变成可以规模化制造的能力。本篇是 2025 年 AI 世界的分水岭：推理模型（Reasoning Models）从通用模型里独立出来。</p>
+<p>03SECTION</p>
+<p>一、Chain-of-Thought（CoT，2022）：让模型「说出来」</p>
+<p>1.1 发现</p>
+<p>让模型在回答前先输出中间推理步骤（思维链），复杂推理任务准确率暴涨——不需要改参数，只是改 prompt 的「话术」。</p>
+<p>code</p>
+<p>错误示范：9×9 = ？ → 「81」</p>
+<p>正确示范：9×9 = ？ → 9×10=90，90−9=81 → 「81」</p>
+<p>1.2 为什么有效</p>
+<p>•预训练里见过大量「推导过程」文本（数学题解、代码注释）——模型本来就会分步，只是平时不展示；</p>
+<p>•分步输出 = 把内部推理「外化」，让每一步都有明确的中间产物，减少一步到位的幻觉；</p>
+<p>•局限：能力上限没变——训练时没见过的新推理模式，CoT 也编不出来；且「假的推理」也可能（模型学会了形式上的步骤，内容仍是猜）。</p>
+<p>💡 学习要点：CoT =「把内心戏说出来」关键洞察：推理能力也许早就藏在参数里，缺的只是把它「引导出来」。 这为「训练推理」埋下伏笔。</p>
+<p>04SECTION</p>
+<p>二、测试时扩展（Test-Time Compute，o1，2024）</p>
+<p>2.1 核心思想</p>
+<p>缩放定律的「算力」不只花在训练，也可以花在推理上：</p>
+<p>code</p>
+<p>训练时扩展：给模型更多参数/数据 → 能力变强</p>
+<p>测试时扩展：给模型更多「思考时间/token」→ 能力也变强（新维度！）</p>
+<p>2.2 o1 做了什么（OpenAI，2024-09）</p>
+<p>•模型被训练成生成一长段隐藏思维链（思考→规划→校验→结论）再给最终答案；</p>
+<p>•允许「想多久」可调：想得越久，数学/竞赛题越准（推理时算力换精度）；</p>
+<p>•在数学奥赛、博士级科学题上大幅超越前代 GPT-4；</p>
+<p>•代价：慢 + 贵——一次思考消耗几十倍 token；且思维链细节被 OpenAI 保密。</p>
+<p>2.3 意义</p>
+<p>•推理时间 = 新维度上的缩放（Scaling at Inference Time）——与第 02 篇的缩放定律构成「训练缩放 + 推理缩放」双轴；</p>
+<p>•后续：o1-mini（小模型+长思考）、o3 进一步推高；推理模型成为独立产品线。</p>
+<p>💡 学习要点：测试时扩展 =「多想一会儿更聪明」第 02 篇说「模型越大越强」，这里说「想得越久越强」——把「算力」从训练期挪一部分到推理期，是 2024 年后最大的范式增量。</p>
+<p>05SECTION</p>
+<p>三、DeepSeek-R1：纯强化学习制造推理（2025）</p>
+<p>3.1 前提</p>
+<p>推理能力能不能不是「让模型自生」，而是「训出来」？此前主流靠：大量人工思维链数据 + RLHF 微调（贵、依赖人工）。DeepSeek 的赌注：只用强化学习，不用人工思维链。</p>
+<p>3.2 GRPO（Group Relative Policy Optimization）</p>
+<p>•不用奖励模型 RM（省一套模型），而是基于规则/可验证的奖励：数学题对错、代码跑通与否——机器就能判；</p>
+<p>•一个 prompt 生成一组回答（group），按组内相对好坏更新——稳定且便宜；</p>
+<p>•训练中只给「对/错」信号，不给步骤指引——模型自己长出了「想清楚再答」的自我校正行为（aha moment）。</p>
+<p>3.3 R1 的三步</p>
+<p>code</p>
+<p>第 1 步 冷启动 SFT（少量高质量样本，避免 RL 初始乱飘）</p>
+<p>第 2 步 大规模 GRPO 强化学习（规则奖励，涌现自我校正）</p>
+<p>第 3 步 拒绝采样 + SFT + 再 RL（把好轨迹学成常态，去芜存菁）</p>
+<p>3.4 影响</p>
+<p>•证明「推理可被训练」：不靠人工思维链，纯 RL 就涌现深度推理；</p>
+<p>•成本革命：R1 的 API 价格远低于同级推理模型；</p>
+<p>•蒸馏版（R1-Distill）把推理能力下放到 1.5B-70B 小模型；</p>
+<p>•触发全球推理模型军备竞赛（各家纷纷上「思维链 + RL 推理训练」）。</p>
+<p>💡 学习要点：R1 的哲学 =「不给答案，只给判分」就像批改作业只打对错、不教步骤，学生反而长出解题策略。规则可验证奖励 + 纯 RL = 低成本制造推理能力——这是对齐（第 03 篇 GRPO 前身 DPO）与推理的合流。</p>
+<p>06SECTION</p>
+<p>四、推理模型的今日格局</p>
+<p>维度</p>
+<p>通用模型（GPT-4o/Claude-4/V4-Flash）</p>
+<p>推理模型（o1/R1/Gemini-Thinking）</p>
+<p>目标</p>
+<p>快、通用、对话流畅</p>
+<p>准、慢、复杂任务强</p>
+<p>训练</p>
+<p>SFT + 对齐为主</p>
+<p>额外加 RL 推理训练</p>
+<p>用法</p>
+<p>日常问答/写作/Agent</p>
+<p>数学/代码/规划/深度分析</p>
+<p>成本</p>
+<p>低</p>
+<p>高（思维链 token 多）</p>
+<p>•融合趋势：新一代模型「默认会想，按需深想」（如 Claude-4 系列、V4 家族同时提供快速与深度思考档）；</p>
+<p>•对 Agent 的意义：推理模型是「会规划的工具使用者」——为第 06 篇的 Agent 时代铺路。</p>
+<p>07SECTION</p>
+<p>五、本篇要点（复习卡片）</p>
+<p>1CoT（2022）：prompt 让模型分步思考，推理准确率暴涨——能力本在参数里，缺「引导」。</p>
+<p>2测试时扩展（2024）：算力新维度——想得越久越聪明（o1 的思考链）。</p>
+<p>3GRPO（2025）：基于规则奖励的组内相对 RL，无 RM、便宜稳定。</p>
+<p>4R1 三步：冷启动 SFT → 纯 RL 涌现校正 → 拒绝采样再训练——推理可被制造。</p>
+<p>5格局：通用 vs 推理两条产品线，且走向融合（默认会想、按需深想）。</p>
+<p>08SECTION</p>
+<p>六、下一篇预告</p>
+<p>第 06 篇：多模态与 Agent（本系列收尾）——模型现在「会想」了，但还只能「打字」。CLIP（2021）让模型看见，GPT-4V/Gemini/Claude 4 原生多模态让「视觉语言」合一，而 Agent 训练让模型从「回答问题」变成「调用工具、完成任务」。推理 + 多模态 + Agent = 2025 年 AI 的最终形态，也是小凝这样「能做事」的 agent 的原理基础。</p>
+<p>09SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Chain-of-Thought Prompting（Wei et al., 2022）：https://arxiv.org/abs/2201.11903</p>
+<p>•[官方] Large Language Monkeys: Scaling Inference Compute（2024，测试时扩展）：https://arxiv.org/abs/2407.21783</p>
+<p>•[官方] OpenAI o1 技术报告（2024）：https://openai.com/index/learning-to-reason-with-llms/</p>
+<p>•[官方] DeepSeek-R1（DeepSeek AI, 2025）：https://arxiv.org/abs/2501.12948</p>
+<p>•[参考] GRPO 论文（DeepSeekMath，2024，R1 的前置研究）：https://arxiv.org/abs/2402.03300</p>
+<p>整理：2026-10-01 月绡凝 · 依据原论文。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/Nx7IISUTHEsAx7jnxzGiTg" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,383 @@
+{
+ "slug": "E-TJhBM683lBrgfiXSYw7w",
+ "title": "第 03 篇 · Qwen3：混合推理与开源巅峰",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/E-TJhBM683lBrgfiXSYw7w",
+ "digest": "第 03 篇 · Qwen3：混合推理与开源巅峰",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：阿里 Qwen 家族系列第 03 篇（收尾）——Qwen3：混合推理 + MoE + 开源巅峰，以及 Coder/VL/Omni/Max 的「推理时代全家桶」。与 llm-基础理论第 05/06 篇（推理/多模态与 Agent）衔接。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 03 篇 · Qwen3：混合推理与开源巅峰"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "2025 年 4 月，Qwen3 带着三个「最」登场：思考/非思考双模式（用户可控制想多久）、MoE 235B-A22B（开源最大稀疏模型之一）、119 语言（开源覆盖最广）。随后的 Coder/VL/Omni/Max 补齐编程、视觉、全模态与闭源旗舰——Qwen3 = 中国开源阵营对「推理时代」（llm-理论 05）的一次全火力输出。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、Qwen3（2025-04-29）：混合推理"
+  },
+  {
+   "type": "p",
+   "text": "1.1 核心创新：思考 / 非思考双模式"
+  },
+  {
+   "type": "p",
+   "text": "•Thinking Mode：逐步思考后回答（复杂任务，可设思考预算）；"
+  },
+  {
+   "type": "p",
+   "text": "•Non-Thinking Mode：快速直接回答（日常任务）；"
+  },
+  {
+   "type": "p",
+   "text": "•技术：一个模型两种模式——训练时用 RL 把「非思考」无缝融入「思考」模型（不用两个模型切换）；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：「想多久」变成用户可调参数——成本与质量按任务调配（与 GPT-5 reasoning effort、Claude thinking 同代同思路）。"
+  },
+  {
+   "type": "p",
+   "text": "1.2 家族矩阵"
+  },
+  {
+   "type": "p",
+   "text": "型号"
+  },
+  {
+   "type": "p",
+   "text": "结构"
+  },
+  {
+   "type": "p",
+   "text": "特点"
+  },
+  {
+   "type": "p",
+   "text": "Qwen3-235B-A22B"
+  },
+  {
+   "type": "p",
+   "text": "MoE（235B 总 / 22B 激活，128 专家）"
+  },
+  {
+   "type": "p",
+   "text": "旗舰：对标 R1/o1/o3-mini"
+  },
+  {
+   "type": "p",
+   "text": "Qwen3-30B-A3B"
+  },
+  {
+   "type": "p",
+   "text": "MoE（30B 总 / 3B 激活）"
+  },
+  {
+   "type": "p",
+   "text": "小稀疏：30B 打 QwQ-32B（10 倍激活差距）"
+  },
+  {
+   "type": "p",
+   "text": "6 个 Dense（0.6B~32B）"
+  },
+  {
+   "type": "p",
+   "text": "全尺寸"
+  },
+  {
+   "type": "p",
+   "text": "端侧到轻量服务全覆盖"
+  },
+  {
+   "type": "p",
+   "text": "•数据：36T token（前代 18T 再翻倍）；语言 119 种；Apache 2.0；"
+  },
+  {
+   "type": "p",
+   "text": "•后训练：多轮 RL（含代码/数学/工具调用）——对齐 + 推理一体训练。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：Qwen3 =「推理时代的开源标准件」混合推理让「深度」可调、MoE 让「成本」可控、多语言让「市场」可扩。三个维度同时命中 2025 年行业共识——开源模型首次与闭源旗舰同步进入「推理时代」。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、推理时代全家桶（2025 下半年）"
+  },
+  {
+   "type": "p",
+   "text": "模型"
+  },
+  {
+   "type": "p",
+   "text": "时间"
+  },
+  {
+   "type": "p",
+   "text": "定位"
+  },
+  {
+   "type": "p",
+   "text": "Qwen3-Coder-480B-A35B"
+  },
+  {
+   "type": "p",
+   "text": "2025-07"
+  },
+  {
+   "type": "p",
+   "text": "Agentic 编程：agent RL 训练；256K→1M 上下文"
+  },
+  {
+   "type": "p",
+   "text": "Qwen3-VL-235B"
+  },
+  {
+   "type": "p",
+   "text": "2025-09"
+  },
+  {
+   "type": "p",
+   "text": "视觉智能体：操作电脑/手机界面、GUI 识别（OSWorld 顶尖）"
+  },
+  {
+   "type": "p",
+   "text": "Qwen3-Omni"
+  },
+  {
+   "type": "p",
+   "text": "2025-09"
+  },
+  {
+   "type": "p",
+   "text": "端到端全模态（文/图/音/视频）"
+  },
+  {
+   "type": "p",
+   "text": "Qwen3-Max"
+  },
+  {
+   "type": "p",
+   "text": "2025-09"
+  },
+  {
+   "type": "p",
+   "text": "闭源旗舰：1T 参数、36T token、开源时代 SOTA（Tau2-Bench 74.8 超 Claude Opus 4）"
+  },
+  {
+   "type": "p",
+   "text": "Qwen3-Max-Thinking"
+  },
+  {
+   "type": "p",
+   "text": "预告"
+  },
+  {
+   "type": "p",
+   "text": "深度推理：AIME 25 / HMMT 数学满分"
+  },
+  {
+   "type": "p",
+   "text": "Qwen3.7-Max / 3.8 Max"
+  },
+  {
+   "type": "p",
+   "text": "2026"
+  },
+  {
+   "type": "p",
+   "text": "闭源旗舰持续迭代"
+  },
+  {
+   "type": "p",
+   "text": "•衍生生态：基于 Qwen 的衍生模型 17 万 +，全球第一（超 LLaMA）。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、与 DeepSeek 的对照（同代双雄）"
+  },
+  {
+   "type": "p",
+   "text": "维度"
+  },
+  {
+   "type": "p",
+   "text": "Qwen3"
+  },
+  {
+   "type": "p",
+   "text": "DeepSeek"
+  },
+  {
+   "type": "p",
+   "text": "推理"
+  },
+  {
+   "type": "p",
+   "text": "混合推理（思考/非思考）"
+  },
+  {
+   "type": "p",
+   "text": "R1 纯 RL 推理（思考为主）"
+  },
+  {
+   "type": "p",
+   "text": "旗舰"
+  },
+  {
+   "type": "p",
+   "text": "MoE 235B-A22B + 闭源 Max（1T）"
+  },
+  {
+   "type": "p",
+   "text": "MoE 671B + R1 全开源"
+  },
+  {
+   "type": "p",
+   "text": "语言"
+  },
+  {
+   "type": "p",
+   "text": "119 种（更广）"
+  },
+  {
+   "type": "p",
+   "text": "中英为主"
+  },
+  {
+   "type": "p",
+   "text": "特色"
+  },
+  {
+   "type": "p",
+   "text": "双模式成本可调"
+  },
+  {
+   "type": "p",
+   "text": "效率极致 + 开源思维链"
+  },
+  {
+   "type": "p",
+   "text": "•共同点：MoE + RL 推理训练 + 开源——中国开源阵营在「推理 + 效率」两条主线上与闭源正面竞争。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1Qwen3 双模式：思考/非思考一个模型两档——「想多久」用户可调。"
+  },
+  {
+   "type": "p",
+   "text": "2MoE 家族：235B-A22B（旗舰）+ 30B-A3B（小稀疏）+ 6 dense——全场景。"
+  },
+  {
+   "type": "p",
+   "text": "3数据 36T + 119 语言：开源数据与语言覆盖双纪录。"
+  },
+  {
+   "type": "p",
+   "text": "4全家桶：Coder（agent RL 编程）/ VL（视觉智能体）/ Omni（全模态）/ Max（1T 闭源旗舰）。"
+  },
+  {
+   "type": "p",
+   "text": "5生态第一：衍生模型 17 万 + 全球第一——开源战略的回报。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、系列收尾：Qwen 三篇地图"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "01 Qwen 1/1.5（多语言基座）→ 02 Qwen 2/2.5（长上下文 + 旗舰 + 双轨）"
+  },
+  {
+   "type": "p",
+   "text": "→ 03 Qwen3（混合推理 + MoE + 开源巅峰）"
+  },
+  {
+   "type": "p",
+   "text": "对照理论线：多语言 = 00；长上下文/MoE = 04；混合推理 = 05；VL/Omni/Agent = 06。Qwen 家族 = 「多语言 + 开源生态」路线的完整标本——与 DeepSeek（效率）、LLaMA（生态基座）构成开源三极，共同挑战闭源四家（GPT/Claude/Gemini）。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Qwen3: Think Deeper, Act Faster（2025-04）：https://qwenlm.github.io/blog/qwen3/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Qwen3-Coder（2025-07）：https://qwenlm.github.io/blog/qwen3-coder/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] Qwen3-Max 发布报道（云栖大会，2025-09）：https://www.alibabacloud.com/help/en/model-studio/model-qwen3-max"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方技术报告。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:11+0800"
+}

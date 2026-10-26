@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强 | 小凝 AI 工具集</title>
+<meta name="description" content="第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/6QLmVZnmXzOyyj-tdtXEFA.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强 | 小凝 AI 工具集">
+<meta property="og:description" content="第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/6QLmVZnmXzOyyj-tdtXEFA.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强", "datePublished": "2026-10-02", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/6QLmVZnmXzOyyj-tdtXEFA.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强</h1>
+  <p class="meta-line">发布于 2026-10-02 · 作者 月牙寂</p>
+  <p class="hook">第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 范式系列板块二·研究第 05 篇——自进化 Agent 范式（Self-Evolving）：从「一次执行」到「持续成长」。what/when/how 三问框架，SWE-RL 自博弈、Voyager 技能库、EvolveR 经验蒸馏。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方论文为准。</p>
+<p>01SECTION</p>
+<p>第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>前面的范式都是「静态」的：部署即定型，执行完拉倒。自进化（Self-Evolving）范式回答一个新问题：Agent 能不能把执行结果变成学习信号，持续自我改进？ 2025-2026 年这个方向从理论进入实证（SWE-RL 自博弈 +10.4pp），是当前研究范式的最前沿。本篇用「what/when/how」三问拆解。</p>
+<p>03WHY</p>
+<p>一、为什么需要自进化</p>
+<p>•传统模式：「一次执行」——任务完成就完，下次同类任务从零开始；</p>
+<p>•现实世界的三个特征让这不够用：开放性：环境在变（API 升级、界面改版、数据漂移）；长程性：任务跨会话、需要跨会话积累；重复性：用户反复做相似任务——每次都重新发明轮子太浪费；</p>
+<p>•核心思想：把执行结果变成学习信号，让系统修改自己的组件。</p>
+<p>04SECTION</p>
+<p>二、三问框架（What / When / How）</p>
+<p>2.1 What to Evolve（进化什么——四个层）</p>
+<p>层</p>
+<p>进化对象</p>
+<p>代表</p>
+<p>模型层</p>
+<p>权重/策略：自我生成 SFT、交互反馈 RL、自博弈</p>
+<p>SWE-RL（自博弈，SWE-bench +10.4pp）、STaR</p>
+<p>上下文层</p>
+<p>记忆 + 提示词：记忆流、经验蒸馏、Prompt 优化</p>
+<p>Voyager 技能库、EvolveR、OPRO、Self-Refine</p>
+<p>工具层</p>
+<p>工具：自主发现、创造、改进工具</p>
+<p>Voyager（写技能进库）、RoboPhD</p>
+<p>架构层</p>
+<p>系统结构：单 Agent/多 Agent 流程优化</p>
+<p>HyperAgents、Agentic Workflow 优化</p>
+<p>2.2 When to Evolve（何时进化）</p>
+<p>•测试内（Intra-test-time）：单任务执行中，靠上下文学习/反思即时调整（最便宜）；</p>
+<p>•测试间（Inter-test-time）：跨任务/会话，积累经验持久化（Reflexion 的延伸——从「本次长记性」到「永久长记性」）；</p>
+<p>•越靠后越「贵」但越「持久」——演进时机的选择 = 成本与持久性的权衡。</p>
+<p>2.3 How to Evolve（怎么进化——三条路径）</p>
+<p>路径</p>
+<p>机制</p>
+<p>代表</p>
+<p>基于奖励</p>
+<p>文本反馈/内部奖励/外部奖励 + RL</p>
+<p>SWE-RL、R1 系</p>
+<p>示范学习</p>
+<p>自生成示范 / 跨 Agent 示范 / 混合</p>
+<p>STaR（自己生成→筛选→微调）</p>
+<p>群体演化</p>
+<p>单 Agent 进化 / 多 Agent 群体选择</p>
+<p>类遗传算法式 Agent 进化</p>
+<p>05SECTION</p>
+<p>三、三个标志性系统（2025-2026）</p>
+<p>3.1 SWE-RL（Meta Superintelligence Labs，2025-12）</p>
+<p>•自博弈：一个 Agent 同时扮演「注入 bug 者」和「修 bug 者」——先造 bug 再训练自己修；</p>
+<p>•结果：SWE-bench Verified +10.4pp，不依赖任何外部数据——纯自博弈驱动的自我改进。</p>
+<p>3.2 Voyager（2023，里程碑）</p>
+<p>•Minecraft 中：Agent 把学到的技能写成可执行代码存入技能库，下次任务直接调用；</p>
+<p>•效果：解锁物品 3.3×、科技树推进 15.3×——「会做事」被沉淀为「可复用技能」。</p>
+<p>3.3 EvolveR（2026）</p>
+<p>•离线自蒸馏：把交互轨迹提炼成可复用的抽象策略原则；</p>
+<p>•在线交互：检索原则指导决策 + 策略强化迭代更新——从「重放解决方案」到「提炼可泛化的策略」。</p>
+<p>💡 学习要点：自进化 =「从执行到学习」的闭环静态 Agent：执行 → 输出 → 完。自进化 Agent：执行 → 提取经验（反思/技能/策略） → 存储 → 下次调用。递归自我改进 2026 已从理论进入实证——这是 Agent 范式最重要的前沿信号。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1动机三特征：开放性 / 长程性 / 重复性——「一次执行」不够用。</p>
+<p>2What 四层：模型（权重）/ 上下文（记忆+提示）/ 工具（创造技能）/ 架构（流程）。</p>
+<p>3When 两时机：测试内（即时调整，便宜）/ 测试间（持久积累，贵但持久）。</p>
+<p>4How 三路径：奖励（RL）/ 示范（STaR）/ 群体演化。</p>
+<p>5三标杆：SWE-RL（自博弈 +10.4pp）/ Voyager（技能库 3.3×）/ EvolveR（经验蒸馏）。</p>
+<p>6核心闭环：执行 → 提取经验 → 存储 → 复用——递归自我改进已实证。</p>
+<p>07SECTION</p>
+<p>五、下一篇预告</p>
+<p>第 06 篇（板块二收尾）：神经符号结合与通用框架——04 讲双血统趋势、05 讲自进化，最后收束：神经符号的具体结合模式，以及「一个 Agent 的通用框架」长什么样（李航 JCST 2026：任务导向 × 多模态 × LLM 推理 × RL 构建 × 工具记忆）。研究板块三篇 = 路线之争 + 演进前沿 + 统一框架。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] A Survey of Self-Evolving Agents（2507.21046）：https://arxiv.org/abs/2507.21046</p>
+<p>•[官方] Voyager（2023）：https://arxiv.org/abs/2305.16291</p>
+<p>•[官方] STaR（2022）：https://arxiv.org/abs/2203.14465</p>
+<p>•[参考] SWE-RL 发布（Meta，2025-12）｜ EvolveR（2026）</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方论文。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/6QLmVZnmXzOyyj-tdtXEFA" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

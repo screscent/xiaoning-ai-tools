@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争 | 小凝 AI 工具集</title>
+<meta name="description" content="第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/_iDMVx-6vjQet-V12_KEhA.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争 | 小凝 AI 工具集">
+<meta property="og:description" content="第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/_iDMVx-6vjQet-V12_KEhA.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/_iDMVx-6vjQet-V12_KEhA.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 范式系列板块二·研究第 04 篇——符号 vs 神经双血统：Agent 学术谱系的两种路线（MDP/BDI 的确定性决策 vs DRL/LLM 的生成式自适应），以及 2025-2026 的混合架构趋势。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方综述为准。</p>
+<p>01SECTION</p>
+<p>第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>工程板块讲「怎么搭」，研究板块讲「为什么这么设计是对的」。Agent 的学术谱系有两条血统：符号派（从 1950s 的逻辑/规划走来）和神经派（从统计学习/深度学习走来）。LLM Agent 看似「全新」，其实是神经派借 LLM 爆发后的产物，且正在与符号派重新融合。读这篇能预判范式往哪走。</p>
+<p>03SECTION</p>
+<p>一、双血统的底子</p>
+<p>1.1 符号派（Symbolic/Classical Lineage）</p>
+<p>•基础：MDP/POMDP（马尔可夫决策过程）、BDI（信念-愿望-意图认知架构）、SOAR、规划器（PDDL）、约束求解；</p>
+<p>•特点：确定性、可验证、可解释——决策基于显式状态与规则，输出有保证；</p>
+<p>•局限：规则靠人工维护、无法理解自然语言、面对开放世界僵化。</p>
+<p>1.2 神经派（Neural/Generative Lineage）</p>
+<p>•基础：深度强化学习（DRL）、LLM；</p>
+<p>•特点：泛化、自适应、理解自然语言——从海量数据学出模式，处理开放式问题；</p>
+<p>•局限：幻觉、不可审计、易注入、推理链一长就丢。</p>
+<p>1.3 概念要点（避免「概念返祖」）</p>
+<p>•Agentic AI 综述（2510.25445）指出一个常见错误：把现代神经 Agent 硬套成旧符号模型（conceptual retrofitting）；</p>
+<p>•正确读法：LLM Agent 是「神经派 + 工具 + 记忆」的新物种，符号派不因 LLM 出现而消失——它退到「约束/校验/规划」这些需要保证的位置。</p>
+<p>💡 学习要点：两派不是「新旧替代」，是「能力互补」神经负责「流畅」（理解、生成、泛化），符号负责「严谨」（约束、验证、可解释）。2025-2026 的共识 = 混合——不是谁赢，是分工。</p>
+<p>04SECTION</p>
+<p>二、混合架构的三种形态（2025-2026 趋势）</p>
+<p>形态</p>
+<p>结构</p>
+<p>代表</p>
+<p>解决什么</p>
+<p>顺序级联</p>
+<p>（Neural→Symbolic）</p>
+<p>神经理解输入 → 符号引擎做确定性决策</p>
+<p>ATA（LLM 转知识库，运行时纯符号，防注入）</p>
+<p>确定性 + 免疫 Prompt 注入</p>
+<p>分层校验</p>
+<p>神经生成候选 → 符号校验约束/一致性</p>
+<p>约束求解 + LLM 组合</p>
+<p>合规、政策执行</p>
+<p>符号增强推理</p>
+<p>符号工具（求解器/证明器）作为 LLM 的工具</p>
+<p>AlphaGeometry 2（IMO 金牌）</p>
+<p>数学/逻辑：LLM 找思路、符号保证明</p>
+<p>•关键证据：2026 年 ScienceDirect 对 178 篇论文（2020-2025）的系统调查，确认神经符号 Agent 架构已成熟为一门有完整分类的领域。</p>
+<p>05SECTION</p>
+<p>三、对范式选择的影响（研究 → 工程）</p>
+<p>1需要可验证的环节（合规、财务、医疗）：让符号层把关——LLM 出草稿、符号层验证；</p>
+<p>2需要探索的环节（创意、开放问答）：纯神经更合适；</p>
+<p>3需要防注入的环节（Agent 联网/工具多）：符号层做确定性路由或校验（ATA 思路）——把「最关键的决定」交给不可被 prompt 污染的部分。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1双血统：符号（MDP/BDI/SOAR——确定性可验证）vs 神经（DRL/LLM——泛化自适应）。</p>
+<p>2各有死穴：符号僵化、神经幻觉/不可审计——互补而非替代。</p>
+<p>3避免概念返祖：LLM Agent 是新物种，别硬套旧符号模型框架。</p>
+<p>4混合三形态：顺序级联（ATA 防注入）/ 分层校验（合规）/ 符号增强推理（AlphaGeometry）。</p>
+<p>52026 结论：神经符号已是成熟领域（178 篇 taxonomy）；可验证环节交符号、探索环节交神经。</p>
+<p>07SECTION</p>
+<p>五、下一篇预告</p>
+<p>第 05 篇：自进化 Agent 范式——双血统解决「怎么设计对」，自进化回答「Agent 能不能自己变强」：从「一次执行」到「持续成长」（what/when/how 三问，SWE-RL 自博弈、Voyager 技能库）。范式的最新前沿：让 Agent 把执行结果变成学习信号。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Agentic AI: A Comprehensive Survey（双血统，2510.25445）：https://arxiv.org/abs/2510.25445</p>
+<p>•[官方] ATA（Autonomous Trustworthy Agents, 2510.16381）：https://arxiv.org/abs/2510.16381</p>
+<p>•[官方] AlphaGeometry 2（DeepMind，2025）：https://deepmind.google/discover/blog/</p>
+<p>•[参考] Neuro-Symbolic Agent 系统综述（ScienceDirect，2026 年 1 月调查）</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方综述。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/_iDMVx-6vjQet-V12_KEhA" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

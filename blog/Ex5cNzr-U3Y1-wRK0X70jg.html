@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 8 篇（终篇）· DeepSeek-V4 / V4.1：百万上下文普惠与原生多模态 | 小凝 AI 工具集</title>
+<meta name="description" content="第 8 篇（终篇）· DeepSeek-V4 / V4.1：百万上下文普惠与原生多模态">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/Ex5cNzr-U3Y1-wRK0X70jg.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 8 篇（终篇）· DeepSeek-V4 / V4.1：百万上下文普惠与原生多模态 | 小凝 AI 工具集">
+<meta property="og:description" content="第 8 篇（终篇）· DeepSeek-V4 / V4.1：百万上下文普惠与原生多模态">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/Ex5cNzr-U3Y1-wRK0X70jg.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 8 篇（终篇）· DeepSeek-V4 / V4.1：百万上下文普惠与原生多模态", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/Ex5cNzr-U3Y1-wRK0X70jg.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 8 篇（终篇）· DeepSeek-V4 / V4.1：百万上下文普惠与原生多模态"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 8 篇（终篇）· DeepSeek-V4 / V4.1：百万上下文普惠与原生多模态</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 8 篇（终篇）· DeepSeek-V4 / V4.1：百万上下文普惠与原生多模态</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：DeepSeek 原理学习系列第 8 篇（终篇）——DeepSeek-V4 / V4.1 的原理性深度分析：混合压缩注意力（CSA+HCA）、mHC、Engram、Muon、百万上下文普惠与原生多模态。以官方技术报告（arXiv:2606.19348）与官方发布说明（2026-04 V4 预览版 / 2026-09 V4.1-Flash）为唯一事实源，参考社区高质量解读整理，供主人系统学习，亦可作为技术文章对外分享。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以 DeepSeek 官方技术报告为准；个别三方解读数据如有出入，以官方为准。</p>
+<p>01SECTION</p>
+<p>第 8 篇（终篇）· DeepSeek-V4 / V4.1：百万上下文普惠与原生多模态</p>
+<p>02SECTION</p>
+<p>导读：两条主线的「大结局」</p>
+<p>从 2024 年 1 月的初始版算起，DeepSeek 用两年多走完了本系列的全部旅程。V4 是效率架构线（V1→V2→V3→V4）的终点站，也是推理/能力线（R1→V3.2→V4）的收束点：</p>
+<p>•注意力第三次革命：CSA + HCA 混合压缩，百万 token 上下文从「奢侈品」变「标配」；</p>
+<p>•记忆架构创新：Engram 条件记忆引擎——存算解耦，把知识「书架」搬出 GPU；</p>
+<p>•训练稳定性革命：mHC 让万亿参数深网络稳定收敛；</p>
+<p>•原生多模态：V4.1-Flash 能「看」了，且读得快、写得准。</p>
+<p>一句话总结：V4 时代，DeepSeek 把「百万上下文 + 强推理 + Agent + 视觉」全部普惠到开源。</p>
+<p>03SECTION</p>
+<p>一、V4 预览版：百万上下文成为标配</p>
+<p>2026-04-24，DeepSeek-V4 预览版上线并开源，两个版本：</p>
+<p>版本</p>
+<p>总参数</p>
+<p>激活参数</p>
+<p>定位</p>
+<p>V4-Pro</p>
+<p>1.6T</p>
+<p>49B</p>
+<p>旗舰：Agent 开源最强、世界知识领先、推理比肩顶级闭源</p>
+<p>V4-Flash</p>
+<p>284B</p>
+<p>13B</p>
+<p>经济：速度快、价格低，推理接近 Pro</p>
+<p>•1M（百万）上下文成为 DeepSeek 所有官方服务的标配。</p>
+<p>•Agent 能力：Agentic Coding 开源最强；内部员工实测「体验优于 Sonnet 4.5、交付质量接近 Opus 4.6 非思考模式」。</p>
+<p>•世界知识：领先全部开源，仅稍逊 Gemini-3.1-Pro。</p>
+<p>•推理：数学/STEM/竞赛代码超越全部开源，比肩顶级闭源。</p>
+<p>04SECTION</p>
+<p>二、架构三大创新（V4 论文：arXiv:2606.19348）</p>
+<p>2.1 CSA + HCA：注意力第三次革命</p>
+<p>V2 的 MLA 压缩了缓存大小，V3.2 的 DSA 稀疏了计算范围，V4 再进一步——在 token 维度上压缩 KV，并把 DSA 集成进混合注意力：</p>
+<p>机制</p>
+<p>全称</p>
+<p>做法</p>
+<p>分工</p>
+<p>CSA</p>
+<p>Compressed Sparse Attention（压缩稀疏注意力）</p>
+<p>连续 4 个 token 的 KV 合并为 1 个聚合单元，过滤局部冗余，再配合 Lightning Indexer 稀疏选择</p>
+<p>管「近处细看」</p>
+<p>HCA</p>
+<p>Heavily Compressed Attention（重度压缩注意力）</p>
+<p>远距离 token 做 128 倍高压缩二次聚合，只对「核心摘要」做全局注意力</p>
+<p>管「远处宏观」</p>
+<p>「长短结合」的效果（100 万 token 上下文）：</p>
+<p>•单 token 推理 FLOPs 降至 V3.2 的 27%；</p>
+<p>•KV 缓存占用降至 10%；</p>
+<p>•直观对比（同为 100 万字上下文）：Llama3.1 需 274GB KV 缓存、GLM-5 需 60GB、DeepSeek-V4 仅 5.48GB。</p>
+<p>💡 学习要点：注意力压缩的三级跳MLA（压缓存）→ DSA（压计算）→ CSA/HCA（token 维度压 KV + 分级注意力）。每一级都建立在上一级之上——本系列的「注意力做压缩」主线，至此封顶。</p>
+<p>2.2 mHC：流形约束超连接（2026-01，arXiv:2512.24880）</p>
+<p>•问题：参数量到万亿级，网络极深，传统残差连接会信号爆炸或消失，训练不稳。</p>
+<p>•做法：信息混合的可学习矩阵强制投影到「双随机矩阵流形」（每行每列之和为 1），配合 Sinkhorn-Knopp 归一化——信息在前向/反向传播中既不爆炸也不消失。</p>
+<p>•效果：信号增益从 3000 倍压到 1.6 倍以内；1.6T 模型训练收敛稳定性提升 3.2 倍，额外开销仅 6.7%。</p>
+<p>•源流：在字节 Seed 的 Hyper-Connections（HC，ICLR 2025）基础上改进，解决 HC 的规模化瓶颈。</p>
+<p>💡 学习要点：mHC 是「加深度」路线的钥匙本系列第 1 篇就提到 DeepSeek「加深度不加宽度」；到万亿参数，深度路线终于需要新的连接拓扑兜底——mHC 就是这套兜底。</p>
+<p>2.3 Muon 优化器</p>
+<p>引入 Muon 优化器：收敛更快、训练更稳定（结合 Hybrid Newton-Schulz 迭代等工程实现），进一步降低万亿参数训练难度。</p>
+<p>05SECTION</p>
+<p>三、Engram 条件记忆引擎（2026-01，arXiv:2601.07372）</p>
+<p>•思想：存算解耦，模拟海马体——GPU 显存是「书桌」，只放当前思考要用的知识；静态知识放「书架」（CPU 内存/SSD）。</p>
+<p>•做法：N-gram 哈希 + 近似最近邻检索，实现 O(1) 级召回（tokenizer 压缩、多头哈希、上下文感知门控、多分支集成）。</p>
+<p>•效果：Multi-Query NIAH 从 84.2% → 97.0%；静态知识查询快 100 倍、能耗降 90%。</p>
+<p>💡 学习要点：记忆 ≠ 参数参数里存的「知识」也可以搬到外部存储，用时再取。Engram 把「学到的知识」和「正在用的知识」分开管理——这是长上下文普惠背后的存储革命。</p>
+<p>06SECTION</p>
+<p>四、V4.1-Flash：原生多模态 + 更激进的压缩（2026-09-10）</p>
+<p>4.1 定位</p>
+<p>V4.1-Flash 是新架构家族的最小成员，原生多模态（视觉理解），设计目标：能力上限更高、推理更快、吞吐更大、可扩展。全新非对称模型结构。</p>
+<p>4.2 三大关键设计</p>
+<p>设计</p>
+<p>全称</p>
+<p>要点</p>
+<p>CED</p>
+<p>Causal Encoder-Decoder（因果编码器-解码器）</p>
+<p>40 层主干拆成 20 层编码器 + 20 层解码器：prefill 只激活 8B/token、decode 激活 16B/token——读输入便宜、写输出精准（Agent 输入:输出可达 154:1）</p>
+<p>CSA2</p>
+<p>Compressed Sparse Attention 2</p>
+<p>沿层维度跨层复用 KV 与索引（Full/Reindex/Reuse 三种模式，一层干活、多层抄作业）</p>
+<p>FP4 缓存</p>
+<p>FP4 KV Cache</p>
+<p>全局 KV 缓存压到 890 字节/token（约为 V4-Flash 的 1/4），持久化缓存降至约 1/8</p>
+<p>架构也集成了 mHC、Engram、DSpark，并支持 1M 上下文。</p>
+<p>4.3 成绩（公开基准）</p>
+<p>GPQA-Diamond 90.9、HLE 36.8、Codeforces Rating 3471、MathArena Apex 65.6、Terminal-Bench 2.1 90.6、DeepSWE v1.1 74.2、Chartography（视觉）78.9、BabyVision 89.6——纯文本与多模态 Agent 双强。</p>
+<p>💡 学习要点：为 Agent 而生的不对称结构传统模型输入短输出长；Agent 恰恰相反（读几十万 token、输出几行补丁）。CED 的「prefill 便宜、decode 精确」就是为 Agent 工作负载量身定制——架构跟着使用场景走。</p>
+<p>∞CONCLUSION</p>
+<p>五、系列总结：DeepSeek 的进化逻辑（学习闭环）</p>
+<p>至此，本系列 8 篇全部完成。回头看，DeepSeek 的两条主线早已贯通：</p>
+<p>1参数做「加法」，激活做「减法」：MoE（V2 起）——总参量能大就大，激活量能省就省。</p>
+<p>2注意力做「压缩」：MLA → DSA → CSA/HCA——KV 缓存与长上下文算力层层压缩。</p>
+<p>3训练做「省钱」：FP8 + DualPipe + 无 aux-loss + Muon——前沿模型成本降两个数量级。</p>
+<p>4推理做「强化」：GRPO 纯 RL 让模型自发「想」——推理是 RL 涌现的，不是 SFT 教出来的。</p>
+<p>5能力做「多模态 + Agent」：V3.2 思考融入工具，V4.1 原生视觉——从「会说话」到「会做事、会看」。</p>
+<p>回顾路径：初始版打地基（Scaling Law）→ Math 发明 GRPO → V2 架构转折（MLA+MoE）→ V2.5 整合加固 → V3 效率巅峰 → R1 推理突破 → V3.2 稀疏 + Agent → V4/V4.1 百万上下文 + 多模态。每一篇都是下一篇的伏笔。</p>
+<p>08SECTION</p>
+<p>六、参考资料</p>
+<p>•[官方] DeepSeek-V4 技术报告（arXiv:2606.19348）：https://arxiv.org/abs/2606.19348</p>
+<p>•[官方] V4 预览版发布说明（Pro/Flash 规格与成绩）：https://api-docs.deepseek.com/zh-cn/news/news260424/</p>
+<p>•[官方] V4.1-Flash 技术报告（arXiv:2609.19969，CED/CSA2/FP4/Engram）：https://arxiv.org/abs/2609.19969</p>
+<p>•[官方] Engram 论文（arXiv:2601.07372）：https://arxiv.org/abs/2601.07372</p>
+<p>•[官方] mHC 论文（arXiv:2512.24880）：https://arxiv.org/abs/2512.24880</p>
+<p>•[参考] 腾讯云《DeepSeek 大模型：从&quot;效率颠覆者&quot;到&quot;规模追赶者&quot;的架构演进》（CSA/HCA/Engram/mHC 数据）：https://developer.cloud.tencent.cn/article/2749830</p>
+<p>•[参考] CSDN《DeepSeek V4.1-Flash 为什么这么强？CED 与 CSA2 架构全拆解》：https://blog.csdn.net/h1773655323/article/details/165484315</p>
+<p>•[参考] deepinsightai《DeepSeek V4 Is Here》（CSA+HCA/mHC/Muon 速览）：https://deepinsightai.io/deepseek-v4/</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方技术报告与发布说明；个别三方文章数据以官方为准。本系列 8 篇至此完结，详见</p>
+<p>README 总索引。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/Ex5cNzr-U3Y1-wRK0X70jg" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,287 @@
+{
+ "slug": "8M8r-w_aow9UYD28hK-YoQ",
+ "title": "第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/8M8r-w_aow9UYD28hK-YoQ",
+ "digest": "第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Anthropic Claude 家族系列第 01 篇——Claude 1 与宪法 AI：Anthropic 对齐路线的原点。理解「让模型按原则自我批评」如何取代「人工逐条打分」。与 llm-基础理论第 03 篇（对齐时代）衔接。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 01 篇 · Claude 1 与宪法 AI：对齐路线的原点"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "2021 年，OpenAI 副总裁 Dario Amodei 带团队出走成立 Anthropic，公开宣言是：「我们担心 AI 走太快而忘了安全。」 2023-03 推出的 Claude 1 承载了这个立场——它不是参数最大的模型，但它是第一个把「安全原则」写进训练流程（而非事后过滤）的大模型。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、宪法 AI（Constitutional AI）三步"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "第 1 步 原则清单（宪法）"
+  },
+  {
+   "type": "p",
+   "text": "人类写「有帮助 / 无害 / 诚实 / 不歧视…」的原则条文"
+  },
+  {
+   "type": "p",
+   "text": "第 2 步 自我批评（RLAIF）"
+  },
+  {
+   "type": "p",
+   "text": "模型输出 → 按宪法自我批评 → 修订成合规回答 → 用修订数据监督微调（SFT）"
+  },
+  {
+   "type": "p",
+   "text": "第 3 步 自我打分（RL）"
+  },
+  {
+   "type": "p",
+   "text": "用「是否违反宪法」做奖励信号，强化学习训练（AI 反馈替代人类反馈）"
+  },
+  {
+   "type": "p",
+   "text": "1.1 与 RLHF 的根本区别"
+  },
+  {
+   "type": "p",
+   "text": "维度"
+  },
+  {
+   "type": "p",
+   "text": "RLHF（OpenAI）"
+  },
+  {
+   "type": "p",
+   "text": "宪法 AI（Anthropic）"
+  },
+  {
+   "type": "p",
+   "text": "「好坏标准」来源"
+  },
+  {
+   "type": "p",
+   "text": "人类标注员逐条打分"
+  },
+  {
+   "type": "p",
+   "text": "公开原则条文"
+  },
+  {
+   "type": "p",
+   "text": "（宪法）"
+  },
+  {
+   "type": "p",
+   "text": "反馈信号"
+  },
+  {
+   "type": "p",
+   "text": "人类偏好"
+  },
+  {
+   "type": "p",
+   "text": "AI 自我批评/自我打分（RLAIF）"
+  },
+  {
+   "type": "p",
+   "text": "可审查性"
+  },
+  {
+   "type": "p",
+   "text": "标注数据难公开"
+  },
+  {
+   "type": "p",
+   "text": "宪法可公开、可迭代"
+  },
+  {
+   "type": "p",
+   "text": "人力成本"
+  },
+  {
+   "type": "p",
+   "text": "高（海量标注）"
+  },
+  {
+   "type": "p",
+   "text": "低（原则一次性编写）"
+  },
+  {
+   "type": "p",
+   "text": "1.2 为什么重要"
+  },
+  {
+   "type": "p",
+   "text": "•对齐从「黑盒偏好」变「可写代码」：原则条文可以像法律一样修改、版本化、公开讨论；"
+  },
+  {
+   "type": "p",
+   "text": "•可扩展性：模型越强，越难靠人逐条打分——「让 AI 审 AI」是必然方向（后来各家的 RLAIF/红队 AI 都是这个思想的延伸）。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：宪法 AI =「给 AI 一部法律，而不是一个打分表」打分表会过时、会偏、且无法覆盖未知场景；法律条文可审查、可演进。Claude 的全部后续（无害性、诚实性、系统卡）都建立在这个「规则显式化」的地基上。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、Claude 1（2023-03）的产品事实"
+  },
+  {
+   "type": "p",
+   "text": "•定位：安全 + 有帮助并重的对话助手（当时 GPT-3.5 的竞品）；"
+  },
+  {
+   "type": "p",
+   "text": "•亮点：倾向拒绝危险请求（宁可拒绝不错放——「harmless」优先）；"
+  },
+  {
+   "type": "p",
+   "text": "•弱项：能力不及同期的 GPT-4（安全与能力的初始权衡，Anthropic 选择前者）；"
+  },
+  {
+   "type": "p",
+   "text": "•定价先例：按 token 计费进入 API 市场。"
+  },
+  {
+   "type": "p",
+   "text": "2.1 早期「性格」"
+  },
+  {
+   "type": "p",
+   "text": "•被评测者称为「谨慎到啰嗦」：对政治/医疗/法律问题过度回避——对齐过度的早期样本（对齐税 §llm-理论 03）；"
+  },
+  {
+   "type": "p",
+   "text": "•教训：后来各版逐步放宽「有帮助性」，走向「该拒绝的拒绝、该答的答」。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、Claude 2（2023-07）：长上下文与编码"
+  },
+  {
+   "type": "p",
+   "text": "•上下文 100K token（当时行业天花板，可读整本书）；"
+  },
+  {
+   "type": "p",
+   "text": "•编码能力显著提升（Codex 之外的选项）；"
+  },
+  {
+   "type": "p",
+   "text": "•论文同步公开 Constitution AI 细节——把方法论开放给行业。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1宪法 AI 三步：原则条文 → AI 自我批评修订（SFT）→ AI 自我打分 RL（RLAIF）。"
+  },
+  {
+   "type": "p",
+   "text": "2vs RLHF：标准从「人工偏好」变「公开条文」；反馈从「人打分」变「AI 审 AI」。"
+  },
+  {
+   "type": "p",
+   "text": "3Claude 1（2023）：安全优先、宁拒勿放；对齐过度 → 早期「谨慎啰嗦」。"
+  },
+  {
+   "type": "p",
+   "text": "4Claude 2（2023）：100K 长上下文 + 编码增强 + 方法论开源。"
+  },
+  {
+   "type": "p",
+   "text": "5原点意义：对齐 = 可写条文、可审查、可演进——Anthropic 的 DNA。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 02 篇：Claude 3 家族与 3.5——2024 年 Anthropic 推出 Opus/Sonnet/Haiku 三档：最强/均衡/最快。其中 Claude 3.5 Sonnet 成为年度口碑之王（编码、写作、性价比全面领先，被开发者称为「被低估的 SOTA」）。这一篇讲「三档产品化」如何让安全路线第一次赢得大众市场。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Constitutional AI: Harmlessness from AI Feedback（Bai et al., 2022）：https://arxiv.org/abs/2212.08073"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Claude 2 发布博客（2023）：https://www.anthropic.com/news/claude-2"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] Anthropic 对齐研究综述：https://www.anthropic.com/research"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方技术报告。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:33+0800"
+}

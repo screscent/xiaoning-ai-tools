@@ -1,0 +1,383 @@
+{
+ "slug": "VuSYvtB3TiwinmSCLnfFIQ",
+ "title": "第 02 篇 · Eino 编排实战：Chain / Graph / Workflow 与 ReAct Agent",
+ "author": "月牙寂",
+ "publish_time": "2026-10-02",
+ "source_url": "https://mp.weixin.qq.com/s/VuSYvtB3TiwinmSCLnfFIQ",
+ "digest": "第 02 篇 · Eino 编排实战：Chain / Graph / Workflow 与 ReAct Agent",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 实战系列板块一·框架第 02 篇——Eino 编排实战：Chain / Graph / Workflow 三种编排怎么选、Node/Edge/Branch 心智模型，以及官方预构建 ReAct Agent 的开箱即用。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，代码示意依据官方文档。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 02 篇 · Eino 编排实战：Chain / Graph / Workflow 与 ReAct Agent"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "01 篇认识了「队员」（组件）。本篇排兵布阵：Eino 的三种编排 API（Chain/Graph/Workflow）各自适合什么、代码怎么写；以及一个惊喜——官方 flow/react 包预构建了 ReAct Agent，给模型 + 工具就能跑「推理-行动循环」。从「写图」到「开箱即用」都要会。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、编排三 API（阵型选择）"
+  },
+  {
+   "type": "p",
+   "text": "编排"
+  },
+  {
+   "type": "p",
+   "text": "结构"
+  },
+  {
+   "type": "p",
+   "text": "特点"
+  },
+  {
+   "type": "p",
+   "text": "适用"
+  },
+  {
+   "type": "p",
+   "text": "Chain"
+  },
+  {
+   "type": "p",
+   "text": "单向链（只能前进）"
+  },
+  {
+   "type": "p",
+   "text": "最简单，AppendChatTemplate→AppendChatModel"
+  },
+  {
+   "type": "p",
+   "text": "线性流水线（提示→模型）"
+  },
+  {
+   "type": "p",
+   "text": "Graph"
+  },
+  {
+   "type": "p",
+   "text": "有向图（可环可无环）"
+  },
+  {
+   "type": "p",
+   "text": "最灵活：Node + Edge + Branch"
+  },
+  {
+   "type": "p",
+   "text": "复杂分支/循环（Agent 类）"
+  },
+  {
+   "type": "p",
+   "text": "Workflow"
+  },
+  {
+   "type": "p",
+   "text": "DAG + 字段级映射"
+  },
+  {
+   "type": "p",
+   "text": "节点输入输出按 struct 字段映射"
+  },
+  {
+   "type": "p",
+   "text": "多输入多输出、数据变换密集"
+  },
+  {
+   "type": "p",
+   "text": "1.1 Chain 最小实战（线性）"
+  },
+  {
+   "type": "p",
+   "text": "go"
+  },
+  {
+   "type": "p",
+   "text": "chain, _ := NewChain[map[string]any, *schema.Message]()."
+  },
+  {
+   "type": "p",
+   "text": "AppendChatTemplate(prompt). // 外部输入 → 预设 prompt"
+  },
+  {
+   "type": "p",
+   "text": "AppendChatModel(model). // prompt → 模型输出"
+  },
+  {
+   "type": "p",
+   "text": "Compile(ctx)"
+  },
+  {
+   "type": "p",
+   "text": "out, _ := chain.Invoke(ctx, map[string]any{\"query\": \"what's your name?\"})"
+  },
+  {
+   "type": "p",
+   "text": "1.2 Graph 最小实战（最多一次工具调用）"
+  },
+  {
+   "type": "p",
+   "text": "go"
+  },
+  {
+   "type": "p",
+   "text": "graph := NewGraph[map[string]any, *schema.Message]()"
+  },
+  {
+   "type": "p",
+   "text": "graph.AddChatTemplateNode(\"node_template\", chatTpl)"
+  },
+  {
+   "type": "p",
+   "text": "graph.AddChatModelNode(\"node_model\", chatModel)"
+  },
+  {
+   "type": "p",
+   "text": "graph.AddToolsNode(\"node_tools\", toolsNode)"
+  },
+  {
+   "type": "p",
+   "text": "graph.AddLambdaNode(\"node_converter\", takeOne) // 取工具结果第一项"
+  },
+  {
+   "type": "p",
+   "text": "graph.AddEdge(START, \"node_template\")"
+  },
+  {
+   "type": "p",
+   "text": "graph.AddEdge(\"node_template\", \"node_model\")"
+  },
+  {
+   "type": "p",
+   "text": "graph.AddBranch(\"node_model\", branch) // 模型输出 → 分流：结束 or 走工具"
+  },
+  {
+   "type": "p",
+   "text": "graph.AddEdge(\"node_tools\", \"node_converter\")"
+  },
+  {
+   "type": "p",
+   "text": "graph.AddEdge(\"node_converter\", END)"
+  },
+  {
+   "type": "p",
+   "text": "compiled, _ := graph.Compile(ctx)"
+  },
+  {
+   "type": "p",
+   "text": "out, _ := compiled.Invoke(ctx, map[string]any{\"query\": \"Beijing's weather this weekend\"})"
+  },
+  {
+   "type": "p",
+   "text": "•心智模型：组件 = Node（节点）；1→1 连接 = Edge（边）；N 选 1 分流 = Branch（分支）——用图描述「如何给模型充分的上下文、如何让输出可靠影响环境」。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：编排解决三件事① 流式数据（复制/合并/拼接）② 类型安全（编译期图检查）③ 并发（扇入扇出）。业务逻辑 = 画图，脏活累活框架干。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、预构建 ReAct Agent（开箱即用）"
+  },
+  {
+   "type": "p",
+   "text": "Eino 的 flow/agent/react 包把「推理-行动循环」封装好了："
+  },
+  {
+   "type": "p",
+   "text": "go"
+  },
+  {
+   "type": "p",
+   "text": "agent, _ := react.NewAgent(ctx, &react.AgentConfig{"
+  },
+  {
+   "type": "p",
+   "text": "ToolCallingModel: chatModel, // 可调用的模型（已绑工具）"
+  },
+  {
+   "type": "p",
+   "text": "ToolsConfig: compose.ToolsNodeConfig{"
+  },
+  {
+   "type": "p",
+   "text": "Tools: []tool.BaseTool{searchTool, calcTool}, // 给一组工具"
+  },
+  {
+   "type": "p",
+   "text": "},"
+  },
+  {
+   "type": "p",
+   "text": "MaxStep: 20, // 总交互次数上限"
+  },
+  {
+   "type": "p",
+   "text": "MessageRewriter: func(...) []*schema.Message { // 可注入系统提示词"
+  },
+  {
+   "type": "p",
+   "text": "// 例如 return append(input, schema.SystemMessage(\"你是一个 xx 助手\"))"
+  },
+  {
+   "type": "p",
+   "text": "},"
+  },
+  {
+   "type": "p",
+   "text": "MessageModifier: func(...) []*schema.Message { // 上下文压缩/历史存储"
+  },
+  {
+   "type": "p",
+   "text": "return input"
+  },
+  {
+   "type": "p",
+   "text": "},"
+  },
+  {
+   "type": "p",
+   "text": "})"
+  },
+  {
+   "type": "p",
+   "text": "out, _ := agent.Generate(ctx, []*schema.Message{schema.UserMessage(task)})"
+  },
+  {
+   "type": "p",
+   "text": "•原理（对应 agent-范式 01 篇）：模型自主判断「调用工具 or 输出结果」→ 工具执行 → 结果回喂 → 循环，直到 MaxStep 或模型停止调工具；"
+  },
+  {
+   "type": "p",
+   "text": "•工程点：MessageRewriter 注入系统提示、MessageModifier 做上下文压缩（记忆管理，agent-系列 03 篇）——开箱即用但留了口子给你调。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：官方预构建 =「先跑通再魔改」的黄金入口不用自己写图就能跑一个 ReAct Agent。建议路径：先 react.NewAgent 跑通 → 再手写 Graph 理解底层 → 最后用 Workflow 上复杂业务。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、实战踩坑提示（官方与社区反馈）"
+  },
+  {
+   "type": "p",
+   "text": "1流式工具调用的参数拼接：流式输出里 tool call 参数可能分片——需要自行拼接再执行（社区 CSDN 实战踩过）；"
+  },
+  {
+   "type": "p",
+   "text": "2MaxStep 别贪大：1 次「模型+工具」≈2 个 step，20 步已是长任务，再大要控成本；"
+  },
+  {
+   "type": "p",
+   "text": "3消息重写器幂等：MessageRewriter 每次循环都调，注意别重复注入系统提示。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1三 API：Chain（线性）/ Graph（Node+Edge+Branch，最灵活）/ Workflow（字段级映射 DAG）。"
+  },
+  {
+   "type": "p",
+   "text": "2心智模型：组件=Node、连接=Edge、分流=Branch——业务逻辑=画图。"
+  },
+  {
+   "type": "p",
+   "text": "3预构建 ReAct Agent：react.NewAgent(model, tools, MaxStep) 开箱即用。"
+  },
+  {
+   "type": "p",
+   "text": "4两个口子：MessageRewriter（系统提示）/ MessageModifier（上下文压缩）——留给你调。"
+  },
+  {
+   "type": "p",
+   "text": "5踩坑：流式 tool call 参数拼接、MaxStep 成本、重写器幂等。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 03 篇（板块一·框架）：Eino ADK 实战——单 Agent 之外，官方 ADK（Agent Development Kit，借鉴 Google ADK）支持多 Agent 协作、子 Agent、HITL 中断恢复：adk.NewChatModelAgent + SetSubAgents 搭多 Agent 团队，中断/恢复实现人工审批。从「单兵」到「多兵种协同」。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Eino 编排文档（Chain/Graph/Workflow）：https://www.cloudwego.io/docs/eino/overview/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] ReAct Agent 手册：https://www.cloudwego.io/zh/docs/eino/core_modules/flow_integration_components/react_agent_manual/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Eino 实践（含 Eino Agent 实战）：https://www.cloudwego.io/docs/eino/overview/bytedance_eino_practice/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] 社区实战（CSDN）：eino 框架使用与踩坑"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-02 月绡凝 · 依据官方文档。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:16+0800"
+}

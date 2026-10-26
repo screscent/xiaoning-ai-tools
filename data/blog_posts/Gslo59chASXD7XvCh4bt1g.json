@@ -1,0 +1,367 @@
+{
+ "slug": "Gslo59chASXD7XvCh4bt1g",
+ "title": "第 02 篇 · 规划-执行与工作流范式：从循环到工程",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/Gslo59chASXD7XvCh4bt1g",
+ "digest": "第 02 篇 · 规划-执行与工作流范式：从循环到工程",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 范式系列板块一·工程第 02 篇——规划-执行与工作流范式：Plan-and-Execute 的分离哲学、Verifier/Refiner 四角色，以及 DAG/状态机如何把 Agent 流程变成「可控制的工程」。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方论文与工程文档为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 02 篇 · 规划-执行与工作流范式：从循环到工程"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "ReAct（01 篇）的「短视」——走一步算一步——在长任务里会绕远路、烧 token、不可预测。Plan-and-Execute（P&E）给出相反设计：先全盘规划、再逐步执行。更进一步，DAG 与状态机把流程显式化，Agent 从「自由循环」变成「可控工程」。本篇是生产中 Agent 范式最常用的一课。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、Plan-and-Execute 范式（P&E）"
+  },
+  {
+   "type": "p",
+   "text": "1.1 分离哲学"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "Planner（规划器）：先把大任务拆成步骤清单/计划"
+  },
+  {
+   "type": "p",
+   "text": "↓"
+  },
+  {
+   "type": "p",
+   "text": "Executor（执行器）：按计划逐步执行（每步调工具/模型）"
+  },
+  {
+   "type": "p",
+   "text": "↓"
+  },
+  {
+   "type": "p",
+   "text": "Verifier（校验器）：每步/整体验证结果对不对"
+  },
+  {
+   "type": "p",
+   "text": "↓"
+  },
+  {
+   "type": "p",
+   "text": "Refiner（精化器）：失败/偏差 → 修订计划 → 回到执行"
+  },
+  {
+   "type": "p",
+   "text": "•与 ReAct 的本质区别：ReAct 边想边做（交织），P&E 先想后做（分离）；"
+  },
+  {
+   "type": "p",
+   "text": "•好处：可预测：计划先给用户/系统看——能审、能改、能审批（HITL 天然友好）；省成本：规划一次，执行不重复思考（少很多 token）；抗错：Verifier/Refiner 让「执行错 → 修订计划」结构化，而非自由重试。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：P&E =「谋定而后动」ReAct 像边走边问路，P&E 像先看地图再出发。计划先行的价值 = 可审（给人看）+ 可省（不重复思考）+ 可控（失败走结构化修订）——这是生产级 Agent 的默认姿势。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、工作流范式（Workflow）：把流程变成图"
+  },
+  {
+   "type": "p",
+   "text": "2.1 为什么还要「工作流」"
+  },
+  {
+   "type": "p",
+   "text": "•单 Agent 自由循环不够，多步任务需要显式编排：谁先谁后、要不要并行、失败了怎么走；"
+  },
+  {
+   "type": "p",
+   "text": "•学术定义（Agent Workflow 综述 2508.01186）：Agent 工作流 = 角色 + 流程 + 规范语言 的结构化编排；"
+  },
+  {
+   "type": "p",
+   "text": "•两种表示：DAG（有向无环图）：步骤之间并行/串行，适合「可确定的流水线」；状态机（State Machine）：显式状态与转移，支持循环/重试/审批——LangGraph 的实现。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 一个「状态机 Agent」长什么样（LangGraph 心智）"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "节点：规划 → 检索 → 生成 → 校验 → 完成"
+  },
+  {
+   "type": "p",
+   "text": "边： 规划→检索；检索→生成；生成→校验（不通过→回生成，重试≤3；超限→转人工）"
+  },
+  {
+   "type": "p",
+   "text": "•关键收益：控制面显式化——循环次数、重试上限、审批点、超时都是「图上的边」，可测试、可追踪；"
+  },
+  {
+   "type": "p",
+   "text": "•与自由 ReAct 的对比：自由循环「信任模型」，图编排「约束模型 + 兜底」——确定性兜底。"
+  },
+  {
+   "type": "p",
+   "text": "∞CONCLUSION"
+  },
+  {
+   "type": "p",
+   "text": "三、范式对比总结（ReAct vs P&E vs Workflow）"
+  },
+  {
+   "type": "p",
+   "text": "维度"
+  },
+  {
+   "type": "p",
+   "text": "ReAct（自由循环）"
+  },
+  {
+   "type": "p",
+   "text": "Plan-and-Execute"
+  },
+  {
+   "type": "p",
+   "text": "Workflow（图/状态机）"
+  },
+  {
+   "type": "p",
+   "text": "思考方式"
+  },
+  {
+   "type": "p",
+   "text": "边想边做"
+  },
+  {
+   "type": "p",
+   "text": "先规划后执行"
+  },
+  {
+   "type": "p",
+   "text": "流程预定义"
+  },
+  {
+   "type": "p",
+   "text": "灵活性"
+  },
+  {
+   "type": "p",
+   "text": "最高"
+  },
+  {
+   "type": "p",
+   "text": "中（计划可修订）"
+  },
+  {
+   "type": "p",
+   "text": "最低（结构固定）"
+  },
+  {
+   "type": "p",
+   "text": "可预测性"
+  },
+  {
+   "type": "p",
+   "text": "低"
+  },
+  {
+   "type": "p",
+   "text": "中"
+  },
+  {
+   "type": "p",
+   "text": "高"
+  },
+  {
+   "type": "p",
+   "text": "成本"
+  },
+  {
+   "type": "p",
+   "text": "高（每步都想）"
+  },
+  {
+   "type": "p",
+   "text": "中（规划一次）"
+  },
+  {
+   "type": "p",
+   "text": "低（确定性步骤便宜）"
+  },
+  {
+   "type": "p",
+   "text": "适用"
+  },
+  {
+   "type": "p",
+   "text": "开放探索任务"
+  },
+  {
+   "type": "p",
+   "text": "复杂长任务"
+  },
+  {
+   "type": "p",
+   "text": "稳定生产流程"
+  },
+  {
+   "type": "p",
+   "text": "代表"
+  },
+  {
+   "type": "p",
+   "text": "AutoGPT"
+  },
+  {
+   "type": "p",
+   "text": "各框架 PlanAgent"
+  },
+  {
+   "type": "p",
+   "text": "LangGraph / Dify"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：三范式 = 确定性滑杆ReAct（全灵活）→ P&E（半结构化）→ Workflow（全结构化）。生产里通常三层混用：框架层用状态机管流程、任务层用 P&E 规划、单步内用 ReAct 探索——按环节选确定性程度。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、工程实践要点"
+  },
+  {
+   "type": "p",
+   "text": "1能确定就确定：机械步骤（查库/计算/转换）用流程代码，别让模型自由发挥；"
+  },
+  {
+   "type": "p",
+   "text": "2校验必须独立：Verifier 别用同一个「执行模型」自我评价——独立校验或规则校验（对齐「不靠自评」思想）；"
+  },
+  {
+   "type": "p",
+   "text": "3计划给人工审：高风险任务的计划先展示给人确认（HITL 审批点，agent-系列 07 篇）；"
+  },
+  {
+   "type": "p",
+   "text": "4状态可恢复：状态机 + 检查点——中途崩溃能续跑（LangGraph durable execution）。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1P&E 四角色：Planner / Executor / Verifier / Refiner——先谋后动、失败走结构化修订。"
+  },
+  {
+   "type": "p",
+   "text": "2P&E 三价值：可审（给人看计划）/ 可省（不重复思考）/ 可控（结构化纠错）。"
+  },
+  {
+   "type": "p",
+   "text": "3工作流两表示：DAG（并行流水线）/ 状态机（循环/重试/审批，LangGraph）。"
+  },
+  {
+   "type": "p",
+   "text": "4三范式 = 确定性滑杆：ReAct（灵活）→ P&E（半结构）→ Workflow（全结构）；生产三层混用。"
+  },
+  {
+   "type": "p",
+   "text": "5实践：能确定就确定 / 校验独立 / 计划给人审 / 状态可恢复。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 03 篇：反思自修正与多 Agent 范式——执行会出错，除了 P&E 的结构化修订，还有「反思」这条心智路线（Reflexion/Self-Refine/MIRROR）；而单 Agent 搞不定时，多 Agent（Manager-Worker/对等/组织）是第三条路。三个范式合起来 = 工程侧的完整武器库。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Plan-and-Solve（2023）：https://arxiv.org/abs/2305.04091"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] A Survey on Agent Workflow（2508.01186）：https://arxiv.org/abs/2508.01186"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] LangGraph 文档：https://langchain-ai.github.io/langgraph/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] Architecting Resilient LLM Agents（P-t-E 安全实现，2509.08646）：https://arxiv.org/abs/2509.08646"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方论文与工程文档。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:32+0800"
+}

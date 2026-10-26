@@ -1,0 +1,419 @@
+{
+ "slug": "FLOwlRBpX0YKw6vH3xMO1w",
+ "title": "第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架",
+ "author": "月牙寂",
+ "publish_time": "2026-10-02",
+ "source_url": "https://mp.weixin.qq.com/s/FLOwlRBpX0YKw6vH3xMO1w",
+ "digest": "第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 实战系列板块二·通用第 04 篇——从零搭单 Agent：不依赖框架，用 Python + 一个 API Key 手写工具调用 + ReAct 循环，看清「裸骨架」再理解框架价值。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，代码示意基于官方 SDK 用法。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "Eino（01-03 篇）把 Agent 封装得很好，但先手写一次，你才知道框架替你干了什么。本篇不依赖任何框架，用 Python + Anthropic SDK 搭一个能自主调用搜索工具的单 Agent——代码只有几十行，却完整包含 ReAct 循环的三拍子（推理→行动→观察）。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、Agent vs 普通 LLM 调用"
+  },
+  {
+   "type": "p",
+   "text": "普通 LLM 调用"
+  },
+  {
+   "type": "p",
+   "text": "Agent"
+  },
+  {
+   "type": "p",
+   "text": "交互"
+  },
+  {
+   "type": "p",
+   "text": "一问一答"
+  },
+  {
+   "type": "p",
+   "text": "多轮自主决策"
+  },
+  {
+   "type": "p",
+   "text": "工具"
+  },
+  {
+   "type": "p",
+   "text": "人写代码串联"
+  },
+  {
+   "type": "p",
+   "text": "自己决定调哪个"
+  },
+  {
+   "type": "p",
+   "text": "任务"
+  },
+  {
+   "type": "p",
+   "text": "单步"
+  },
+  {
+   "type": "p",
+   "text": "多步"
+  },
+  {
+   "type": "p",
+   "text": "决策权"
+  },
+  {
+   "type": "p",
+   "text": "人定每步"
+  },
+  {
+   "type": "p",
+   "text": "AI 定下一步"
+  },
+  {
+   "type": "p",
+   "text": "•一句话：Agent = 能自己调工具的 AI。核心循环就是 ReAct（agent-范式 01 篇）。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、最小实战：带搜索工具的 ReAct Agent"
+  },
+  {
+   "type": "p",
+   "text": "python"
+  },
+  {
+   "type": "p",
+   "text": "import anthropic, json"
+  },
+  {
+   "type": "p",
+   "text": "client = anthropic.Anthropic() # 需设 ANTHROPIC_API_KEY"
+  },
+  {
+   "type": "p",
+   "text": "# 1. 定义工具：让模型知道「有搜索能力可用」"
+  },
+  {
+   "type": "p",
+   "text": "tools = [{"
+  },
+  {
+   "type": "p",
+   "text": "\"name\": \"web_search\","
+  },
+  {
+   "type": "p",
+   "text": "\"description\": \"搜索网页并返回相关结果摘要\","
+  },
+  {
+   "type": "p",
+   "text": "\"input_schema\": {"
+  },
+  {
+   "type": "p",
+   "text": "\"type\": \"object\","
+  },
+  {
+   "type": "p",
+   "text": "\"properties\": {\"query\": {\"type\": \"string\"}},"
+  },
+  {
+   "type": "p",
+   "text": "\"required\": [\"query\"],"
+  },
+  {
+   "type": "p",
+   "text": "},"
+  },
+  {
+   "type": "p",
+   "text": "}]"
+  },
+  {
+   "type": "p",
+   "text": "def web_search(query):"
+  },
+  {
+   "type": "p",
+   "text": "# 真实接入搜索 API（如 Tavily/Serper）；此处为示意"
+  },
+  {
+   "type": "p",
+   "text": "return f\"关于「{query}」的模拟搜索结果……\""
+  },
+  {
+   "type": "p",
+   "text": "# 2. ReAct 循环：推理 → 工具调用 → 观察 → 再推理"
+  },
+  {
+   "type": "p",
+   "text": "def run_agent(user_query):"
+  },
+  {
+   "type": "p",
+   "text": "messages = [{\"role\": \"user\", \"content\": user_query}]"
+  },
+  {
+   "type": "p",
+   "text": "for step in range(5): # 最大步数护栏"
+  },
+  {
+   "type": "p",
+   "text": "resp = client.messages.create("
+  },
+  {
+   "type": "p",
+   "text": "model=\"claude-sonnet-4-5\", max_tokens=2048,"
+  },
+  {
+   "type": "p",
+   "text": "messages=messages, tools=tools,"
+  },
+  {
+   "type": "p",
+   "text": ")"
+  },
+  {
+   "type": "p",
+   "text": "# 检查模型是否请求调用工具"
+  },
+  {
+   "type": "p",
+   "text": "tool_call = next((b for b in resp.content if b.type == \"tool_use\"), None)"
+  },
+  {
+   "type": "p",
+   "text": "if tool_call is None:"
+  },
+  {
+   "type": "p",
+   "text": "return resp.content[-1].text # 无工具调用 → 输出最终答案"
+  },
+  {
+   "type": "p",
+   "text": "# 3. 执行工具，把结果回喂给模型（Observation）"
+  },
+  {
+   "type": "p",
+   "text": "result = web_search(tool_call.input[\"query\"])"
+  },
+  {
+   "type": "p",
+   "text": "messages.append({\"role\": \"assistant\", \"content\": resp.content})"
+  },
+  {
+   "type": "p",
+   "text": "messages.append({\"role\": \"user\", \"content\": ["
+  },
+  {
+   "type": "p",
+   "text": "{\"type\": \"tool_result\", \"tool_use_id\": tool_call.id, \"content\": result},"
+  },
+  {
+   "type": "p",
+   "text": "])"
+  },
+  {
+   "type": "p",
+   "text": "return \"达到最大步数，任务未完成。\""
+  },
+  {
+   "type": "p",
+   "text": "print(run_agent(\"帮我查一下 Agent 最新的开源框架\"))"
+  },
+  {
+   "type": "p",
+   "text": "•五步解析（对照 agent-范式 01 篇）：工具定义：JSON Schema 告诉模型「有什么能力、参数是什么」；推理：模型决定「该查一下」并输出 tool_use；行动：你执行工具（这里是 web_search）；观察：把 tool_result 回喂；循环：模型看到结果再推理，直到不调工具直接回答。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：裸骨架 = 一个 while 循环 + 工具回喂Agent 的本质不是魔法：「模型输出 tool_use → 你执行 → 结果回喂 → 模型再想」。框架（Eino/LangGraph）干的是把这个循环工程化（状态、重试、流式、追踪）。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、实战避坑（官方/社区共识）"
+  },
+  {
+   "type": "p",
+   "text": "1Token 消耗爆炸：单 Agent 一次任务 token ≈ 普通聊天的 4 倍（每次循环都重发全部消息）——所以要有 max_steps 护栏和上下文管理；"
+  },
+  {
+   "type": "p",
+   "text": "2上下文污染：中间结果全塞进 messages，长任务会爆窗口——需要摘要/压缩（agent-系列 03 篇上下文工程）；"
+  },
+  {
+   "type": "p",
+   "text": "3工具描述即一切：description 写不好，模型就不会用或乱用——工具是「说明书」，不是「开关」；"
+  },
+  {
+   "type": "p",
+   "text": "4流式 tool_use 拼接：流式输出时 tool_use 参数可能分片，要攒齐再执行（与 Eino 踩坑同源）。"
+  },
+  {
+   "type": "p",
+   "text": "06WHY"
+  },
+  {
+   "type": "p",
+   "text": "四、从裸骨架到框架（为什么要用 Eino/LangGraph）"
+  },
+  {
+   "type": "p",
+   "text": "裸骨架（本篇）"
+  },
+  {
+   "type": "p",
+   "text": "框架版（01-03 篇）"
+  },
+  {
+   "type": "p",
+   "text": "手写循环"
+  },
+  {
+   "type": "p",
+   "text": "react.NewAgent(...)"
+  },
+  {
+   "type": "p",
+   "text": "一行"
+  },
+  {
+   "type": "p",
+   "text": "手写上下文管理"
+  },
+  {
+   "type": "p",
+   "text": "MessageModifier / checkpoint"
+  },
+  {
+   "type": "p",
+   "text": "无流式支持"
+  },
+  {
+   "type": "p",
+   "text": "StreamReader 原生流式"
+  },
+  {
+   "type": "p",
+   "text": "无追踪"
+  },
+  {
+   "type": "p",
+   "text": "Callback / LangSmith 自动埋点"
+  },
+  {
+   "type": "p",
+   "text": "单 Agent 到头"
+  },
+  {
+   "type": "p",
+   "text": "ADK 多 Agent + HITL"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1Agent 定义：能自己调工具的 AI；核心 = ReAct 循环。"
+  },
+  {
+   "type": "p",
+   "text": "2五步骨架：定义工具 → 模型出 tool_use → 执行 → 结果回喂 → 循环。"
+  },
+  {
+   "type": "p",
+   "text": "3工具描述 = 说明书：description 决定模型用不用、用得对不对。"
+  },
+  {
+   "type": "p",
+   "text": "4两大坑：token 4 倍成本（要护栏）、上下文污染（要压缩）。"
+  },
+  {
+   "type": "p",
+   "text": "5框架价值：把循环工程化——流式、状态、追踪、多 Agent。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 05 篇（板块二·通用）：多 Agent 团队实战——单 Agent 会了，怎么组队：Claude Agent Teams 从零搭「竞品调研系统」（搜索 Agent + 分析 Agent + 汇总 Agent 分工协作），附选型判断（什么时候该多 Agent、token 15 倍代价怎么算）。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Anthropic Claude API / Tool Use：https://docs.anthropic.com/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] Claude Agent Teams 实战手册（从零搭多 Agent，社区）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-02 月绡凝 · 依据官方 SDK 用法。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:12+0800"
+}

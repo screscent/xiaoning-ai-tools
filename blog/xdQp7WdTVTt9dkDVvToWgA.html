@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 02 篇 · LLaMA 3 / 3.1：数据飞轮与 405B 旗舰 | 小凝 AI 工具集</title>
+<meta name="description" content="第 02 篇 · LLaMA 3 / 3.1：数据飞轮与 405B 旗舰">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/xdQp7WdTVTt9dkDVvToWgA.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 02 篇 · LLaMA 3 / 3.1：数据飞轮与 405B 旗舰 | 小凝 AI 工具集">
+<meta property="og:description" content="第 02 篇 · LLaMA 3 / 3.1：数据飞轮与 405B 旗舰">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/xdQp7WdTVTt9dkDVvToWgA.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 02 篇 · LLaMA 3 / 3.1：数据飞轮与 405B 旗舰", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/xdQp7WdTVTt9dkDVvToWgA.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 02 篇 · LLaMA 3 / 3.1：数据飞轮与 405B 旗舰"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 02 篇 · LLaMA 3 / 3.1：数据飞轮与 405B 旗舰</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 02 篇 · LLaMA 3 / 3.1：数据飞轮与 405B 旗舰</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Meta LLaMA 家族系列第 02 篇——LLaMA 3 与 3.1：15T 数据飞轮、405B 开源旗舰与「教师蒸馏家族」结构。与 llm-基础理论第 02/04 篇（缩放/效率）衔接。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。</p>
+<p>01SECTION</p>
+<p>第 02 篇 · LLaMA 3 / 3.1：数据飞轮与 405B 旗舰</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>LLaMA 2 是「企业能用」，LLaMA 3 是「能力能打」。Meta 在 2024 年干了三件事：把数据从 2T 翻到 15T（当时开源最大语料）、把 8B 小模型做到 128K 上下文、用 405B 证明「开源旗舰 = 世界第一梯队」。并且发明了可复制的产品结构：旗舰教师 → 蒸馏学生家族。</p>
+<p>03SECTION</p>
+<p>一、LLaMA 3（2024-04）：数据飞轮启动</p>
+<p>1.1 规模数字</p>
+<p>•模型：8B / 70B（Dense）；</p>
+<p>•数据：15T token（LLaMA 2 的 7.5 倍，约等于 45 个 Wikipedia）；</p>
+<p>•上下文：初版 8K → 官方后续更新至 128K；</p>
+<p>•性能：8B 打平 LLaMA 2 70B；70B 对标当时闭源旗舰（GPT-4 级别部分基准）。</p>
+<p>1.2 为什么数据暴涨有效</p>
+<p>•缩放定律的「数据轴」（llm-理论 02）：N 与 D 同比例涨，能力才能持续爬坡；</p>
+<p>•质量过滤同步升级（多语言 + 代码 + 推理语料配比）——不只多，还要杂而精；</p>
+<p>•意义：「数据工程能力」成为 Meta 开源护城河——此后各家（Qwen/DeepSeek）也进入「数据军备竞赛」。</p>
+<p>04SECTION</p>
+<p>二、LLaMA 3.1（2024-07）：405B 旗舰 + 蒸馏家族</p>
+<p>2.1 405B：开源史上最大开放权重</p>
+<p>•405B 旗舰：对标当时最强闭源（GPT-4o/Claude 3.5）多数基准持平；</p>
+<p>•多语言 + 128K 上下文 + 工具调用原生支持；</p>
+<p>•训练：15T 高质量数据 + 后训练对齐（SFT + 偏好优化）——把闭源旗舰的完整训练管线搬到开源。</p>
+<p>2.2 「教师蒸馏」家族结构（最重要的方法论）</p>
+<p>•用 405B 当「教师」，生成高质量数据训练 8B/70B「学生」；</p>
+<p>•结果：8B/70B 的小模型显著强于「自己单独练大」——旗舰的成本由家族共享；</p>
+<p>•意义：定义「一个旗舰 + 多个蒸馏档位」的产品结构（后来 Qwen/DeepSeek 全部照做：Qwen3-Max 蒸馏家族、R1-Distill）。</p>
+<p>💡 学习要点：405B 的意义 =「开源的旗舰天花板被顶开」此前开源 = 中端模型；405B 证明开源也能拥有「闭源级教师」——而教师的存在，让全家桶（8B/70B）都能受益。蒸馏（llm-理论 04）从技巧变成产品战略。</p>
+<p>05SECTION</p>
+<p>三、LLaMA 3.2（2024-09）：端侧与视觉</p>
+<p>•1B/3B：手机端侧可跑（语音摘要、本地助手）；</p>
+<p>•11B/90B：视觉分支（图文理解）——LLaMA 首度多模态；</p>
+<p>•意义：补齐「端侧 + 视觉」两块拼图，为 LLaMA 4 的原生多模态 MoE 铺路。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1LLaMA 3：15T 数据（7.5 倍）+ 8B/70B + 128K 上下文——数据飞轮启动。</p>
+<p>2数据工程：量（15T）× 质（多语言/代码/推理配比）= 开源护城河。</p>
+<p>3LLaMA 3.1：405B 开源旗舰 ≈ 闭源第一梯队；多语言 + 工具调用原生。</p>
+<p>4教师蒸馏：旗舰教师 + 学生家族 = 可复制的产品结构（Qwen/DeepSeek 均跟进）。</p>
+<p>53.2：端侧 1B/3B + 视觉 11B/90B——补齐拼图，指向下代多模态 MoE。</p>
+<p>07SECTION</p>
+<p>五、下一篇预告</p>
+<p>第 03 篇：LLaMA 4——架构级转向：放弃「一个劲儿做大的 Dense」，改用 MoE + 原生多模态。Scout（17B×16E=109B，10M 上下文）/ Maverick（17B×128E=400B，1M 上下文），单卡 H100 就能跑 Scout（int4）。LLaMA 4 = Meta 对「效率革命 + 多模态」两大 2025 潮流的官方答卷。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Introducing Meta Llama 3（2024-04）：https://ai.meta.com/blog/meta-llama-3/</p>
+<p>•[官方] The Llama 3 Herd of Models（405B 技术报告，2024）：https://arxiv.org/abs/2407.21783</p>
+<p>•[官方] Llama 3.2 发布（2024-09）：https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile/</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方技术报告。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/xdQp7WdTVTt9dkDVvToWgA" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 03 篇 · LLaMA 4：MoE 与原生多模态 | 小凝 AI 工具集</title>
+<meta name="description" content="第 03 篇 · LLaMA 4：MoE 与原生多模态">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/6dPled35N15rWmTCdbIM6g.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 03 篇 · LLaMA 4：MoE 与原生多模态 | 小凝 AI 工具集">
+<meta property="og:description" content="第 03 篇 · LLaMA 4：MoE 与原生多模态">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/6dPled35N15rWmTCdbIM6g.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 03 篇 · LLaMA 4：MoE 与原生多模态", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/6dPled35N15rWmTCdbIM6g.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 03 篇 · LLaMA 4：MoE 与原生多模态"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 03 篇 · LLaMA 4：MoE 与原生多模态</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 03 篇 · LLaMA 4：MoE 与原生多模态</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Meta LLaMA 家族系列第 03 篇（收尾）——LLaMA 4：架构级转向 MoE + 原生多模态。Scout 的 10M 上下文与 Maverick 的 N:M 稀疏专家。与 llm-基础理论第 04/06 篇（效率/多模态）衔接。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。</p>
+<p>01SECTION</p>
+<p>第 03 篇 · LLaMA 4：MoE 与原生多模态</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>LLaMA 1-3 的哲学是「Dense 到底 + 数据翻倍」。2025 年 4 月的 LLaMA 4 来了一次架构级转向：全面拥抱 MoE（混合专家）与原生多模态——这等于 Meta 公开承认「单纯 Dense 越大，性价比越低」。LLaMA 4 = 开源阵营向「效率革命」（llm-理论 04）的集体转向中的标志性事件。</p>
+<p>03SECTION</p>
+<p>一、LLaMA 4 家族（2025-04）</p>
+<p>1.1 双旗舰</p>
+<p>型号</p>
+<p>结构</p>
+<p>总参 / 激活</p>
+<p>上下文</p>
+<p>定位</p>
+<p>Scout</p>
+<p>17B × 16 专家</p>
+<p>109B / 17B</p>
+<p>10M token</p>
+<p>（行业第一）</p>
+<p>单卡可跑（int4 量化单 H100）</p>
+<p>Maverick</p>
+<p>17B × 128 专家</p>
+<p>400B / 17B</p>
+<p>1M token</p>
+<p>多模态 + 推理 + 编码旗舰</p>
+<p>1.2 训练与数据</p>
+<p>•数据：约 22T token（前代 15T 再 +47%），多语言 12 种；</p>
+<p>•架构：原生多模态（图文交错预训练，iTPT）——图片在预训练阶段就与文本交织，而非后期拼视觉塔；</p>
+<p>•创新点：N:M 稀疏专家 + 多模态特定门控（tGating 等）——不同模态/任务路由到不同专家。</p>
+<p>💡 学习要点：LLaMA 4 =「MoE + 原生多模态」双转型架构从「所有参数对每个 token 全量计算」变成「每 token 只激活 17B 专家」。总参决定知识上限、激活决定单次成本——与 DeepSeek-V3（671B/37B）同一逻辑，只是 Meta 走「更大稀疏比 + 多模态路由」。</p>
+<p>04SECTION</p>
+<p>二、两个杀手级卖点</p>
+<p>2.1 Scout 的 10M 上下文</p>
+<p>•10M token 上下文窗口（行业当时第一）——理论可装几十本书；</p>
+<p>•面向场景：多文档总结、海量日志分析、超长代码库检索；</p>
+<p>•实现代价：长上下文对算力要求极高——「能用得起」仍是课题（与 Gemini 1M、DeepSeek V4 百万上下文同一战场）。</p>
+<p>2.2 单卡可跑的「旗舰级」</p>
+<p>•Scout int4 量化后 单张 H100 即可推理；</p>
+<p>•意义：「旗舰级知识 + 消费级硬件」——开源模型第一次让「大模型平民化」有了可量化的数字（NVIDIA 实测 Blackwell B200 上 40K+ token/s）。</p>
+<p>05SECTION</p>
+<p>三、与 DeepSeek 的对照（效率路线）</p>
+<p>维度</p>
+<p>LLaMA 4</p>
+<p>DeepSeek-V3</p>
+<p>MoE 规模</p>
+<p>109B/400B 总 · 17B 激活</p>
+<p>671B 总 · 37B 激活</p>
+<p>稀疏专家</p>
+<p>16~128 专家</p>
+<p>256 专家 + 细粒度</p>
+<p>多模态</p>
+<p>原生（图文交错预训练）</p>
+<p>V3 纯文本（V4 才多模态）</p>
+<p>上下文</p>
+<p>1M~10M</p>
+<p>128K（V4 到百万）</p>
+<p>特色</p>
+<p>单卡部署、10M 上下文</p>
+<p>MLA 注意力压缩、FP8 训练</p>
+<p>•共同点：都押 MoE + 效率——「开源阵营的效率共识」由此坐实（Qwen3 同代也是 MoE）。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1LLaMA 4 双旗舰：Scout（109B/17B，10M 上下文）/ Maverick（400B/17B，1M，多模态旗舰）。</p>
+<p>2架构转向：Dense → MoE；原生多模态（图文交错预训练 + 模态门控）。</p>
+<p>3数据 22T：开源数据军备竞赛继续（15T→22T）。</p>
+<p>4杀手锏：10M 上下文（Scout）+ 单 H100 部署（int4）——旗舰平民化。</p>
+<p>5产业意义：MoE + 多模态 = 开源对 2025 两大潮流的官方答卷（对照 DeepSeek/Qwen 同路线）。</p>
+<p>07SECTION</p>
+<p>五、系列收尾：LLaMA 四篇地图</p>
+<p>code</p>
+<p>01 LLaMA 1/2（数据质量 + 商用化）→ 02 LLaMA 3/3.1（15T 数据 + 405B 旗舰 + 蒸馏家族）</p>
+<p>→ 03 LLaMA 4（MoE + 原生多模态）</p>
+<p>对照理论线：数据翻倍 = llm-理论 02（缩放）；蒸馏家族 = 04（效率/蒸馏）；MoE + 多模态 = 04 + 06。LLaMA 家族 = 「开源基座」路线的完整标本——用生态（而非 API）赢得影响力，与 DeepSeek/Qwen 构成开源三极。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Llama 4 发布（2025-04）：https://ai.meta.com/blog/llama-4-multimodal-intelligence/</p>
+<p>•[官方] Llama 4 Model Card：https://www.llama.com/llama4/</p>
+<p>•[参考] NVIDIA Llama 4 推理优化实测：https://developer.nvidia.com/blog/nvidia-accelerates-inference-on-meta-llama-4-scout-and-maverick</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方技术报告。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/6dPled35N15rWmTCdbIM6g" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

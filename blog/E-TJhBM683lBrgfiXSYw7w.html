@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 03 篇 · Qwen3：混合推理与开源巅峰 | 小凝 AI 工具集</title>
+<meta name="description" content="第 03 篇 · Qwen3：混合推理与开源巅峰">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/E-TJhBM683lBrgfiXSYw7w.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 03 篇 · Qwen3：混合推理与开源巅峰 | 小凝 AI 工具集">
+<meta property="og:description" content="第 03 篇 · Qwen3：混合推理与开源巅峰">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/E-TJhBM683lBrgfiXSYw7w.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 03 篇 · Qwen3：混合推理与开源巅峰", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/E-TJhBM683lBrgfiXSYw7w.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 03 篇 · Qwen3：混合推理与开源巅峰"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 03 篇 · Qwen3：混合推理与开源巅峰</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 03 篇 · Qwen3：混合推理与开源巅峰</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：阿里 Qwen 家族系列第 03 篇（收尾）——Qwen3：混合推理 + MoE + 开源巅峰，以及 Coder/VL/Omni/Max 的「推理时代全家桶」。与 llm-基础理论第 05/06 篇（推理/多模态与 Agent）衔接。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。</p>
+<p>01SECTION</p>
+<p>第 03 篇 · Qwen3：混合推理与开源巅峰</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>2025 年 4 月，Qwen3 带着三个「最」登场：思考/非思考双模式（用户可控制想多久）、MoE 235B-A22B（开源最大稀疏模型之一）、119 语言（开源覆盖最广）。随后的 Coder/VL/Omni/Max 补齐编程、视觉、全模态与闭源旗舰——Qwen3 = 中国开源阵营对「推理时代」（llm-理论 05）的一次全火力输出。</p>
+<p>03SECTION</p>
+<p>一、Qwen3（2025-04-29）：混合推理</p>
+<p>1.1 核心创新：思考 / 非思考双模式</p>
+<p>•Thinking Mode：逐步思考后回答（复杂任务，可设思考预算）；</p>
+<p>•Non-Thinking Mode：快速直接回答（日常任务）；</p>
+<p>•技术：一个模型两种模式——训练时用 RL 把「非思考」无缝融入「思考」模型（不用两个模型切换）；</p>
+<p>•意义：「想多久」变成用户可调参数——成本与质量按任务调配（与 GPT-5 reasoning effort、Claude thinking 同代同思路）。</p>
+<p>1.2 家族矩阵</p>
+<p>型号</p>
+<p>结构</p>
+<p>特点</p>
+<p>Qwen3-235B-A22B</p>
+<p>MoE（235B 总 / 22B 激活，128 专家）</p>
+<p>旗舰：对标 R1/o1/o3-mini</p>
+<p>Qwen3-30B-A3B</p>
+<p>MoE（30B 总 / 3B 激活）</p>
+<p>小稀疏：30B 打 QwQ-32B（10 倍激活差距）</p>
+<p>6 个 Dense（0.6B~32B）</p>
+<p>全尺寸</p>
+<p>端侧到轻量服务全覆盖</p>
+<p>•数据：36T token（前代 18T 再翻倍）；语言 119 种；Apache 2.0；</p>
+<p>•后训练：多轮 RL（含代码/数学/工具调用）——对齐 + 推理一体训练。</p>
+<p>💡 学习要点：Qwen3 =「推理时代的开源标准件」混合推理让「深度」可调、MoE 让「成本」可控、多语言让「市场」可扩。三个维度同时命中 2025 年行业共识——开源模型首次与闭源旗舰同步进入「推理时代」。</p>
+<p>04SECTION</p>
+<p>二、推理时代全家桶（2025 下半年）</p>
+<p>模型</p>
+<p>时间</p>
+<p>定位</p>
+<p>Qwen3-Coder-480B-A35B</p>
+<p>2025-07</p>
+<p>Agentic 编程：agent RL 训练；256K→1M 上下文</p>
+<p>Qwen3-VL-235B</p>
+<p>2025-09</p>
+<p>视觉智能体：操作电脑/手机界面、GUI 识别（OSWorld 顶尖）</p>
+<p>Qwen3-Omni</p>
+<p>2025-09</p>
+<p>端到端全模态（文/图/音/视频）</p>
+<p>Qwen3-Max</p>
+<p>2025-09</p>
+<p>闭源旗舰：1T 参数、36T token、开源时代 SOTA（Tau2-Bench 74.8 超 Claude Opus 4）</p>
+<p>Qwen3-Max-Thinking</p>
+<p>预告</p>
+<p>深度推理：AIME 25 / HMMT 数学满分</p>
+<p>Qwen3.7-Max / 3.8 Max</p>
+<p>2026</p>
+<p>闭源旗舰持续迭代</p>
+<p>•衍生生态：基于 Qwen 的衍生模型 17 万 +，全球第一（超 LLaMA）。</p>
+<p>05SECTION</p>
+<p>三、与 DeepSeek 的对照（同代双雄）</p>
+<p>维度</p>
+<p>Qwen3</p>
+<p>DeepSeek</p>
+<p>推理</p>
+<p>混合推理（思考/非思考）</p>
+<p>R1 纯 RL 推理（思考为主）</p>
+<p>旗舰</p>
+<p>MoE 235B-A22B + 闭源 Max（1T）</p>
+<p>MoE 671B + R1 全开源</p>
+<p>语言</p>
+<p>119 种（更广）</p>
+<p>中英为主</p>
+<p>特色</p>
+<p>双模式成本可调</p>
+<p>效率极致 + 开源思维链</p>
+<p>•共同点：MoE + RL 推理训练 + 开源——中国开源阵营在「推理 + 效率」两条主线上与闭源正面竞争。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1Qwen3 双模式：思考/非思考一个模型两档——「想多久」用户可调。</p>
+<p>2MoE 家族：235B-A22B（旗舰）+ 30B-A3B（小稀疏）+ 6 dense——全场景。</p>
+<p>3数据 36T + 119 语言：开源数据与语言覆盖双纪录。</p>
+<p>4全家桶：Coder（agent RL 编程）/ VL（视觉智能体）/ Omni（全模态）/ Max（1T 闭源旗舰）。</p>
+<p>5生态第一：衍生模型 17 万 + 全球第一——开源战略的回报。</p>
+<p>07SECTION</p>
+<p>五、系列收尾：Qwen 三篇地图</p>
+<p>code</p>
+<p>01 Qwen 1/1.5（多语言基座）→ 02 Qwen 2/2.5（长上下文 + 旗舰 + 双轨）</p>
+<p>→ 03 Qwen3（混合推理 + MoE + 开源巅峰）</p>
+<p>对照理论线：多语言 = 00；长上下文/MoE = 04；混合推理 = 05；VL/Omni/Agent = 06。Qwen 家族 = 「多语言 + 开源生态」路线的完整标本——与 DeepSeek（效率）、LLaMA（生态基座）构成开源三极，共同挑战闭源四家（GPT/Claude/Gemini）。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Qwen3: Think Deeper, Act Faster（2025-04）：https://qwenlm.github.io/blog/qwen3/</p>
+<p>•[官方] Qwen3-Coder（2025-07）：https://qwenlm.github.io/blog/qwen3-coder/</p>
+<p>•[参考] Qwen3-Max 发布报道（云栖大会，2025-09）：https://www.alibabacloud.com/help/en/model-studio/model-qwen3-max</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方技术报告。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/E-TJhBM683lBrgfiXSYw7w" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

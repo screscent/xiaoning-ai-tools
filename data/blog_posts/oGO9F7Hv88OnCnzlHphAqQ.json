@@ -1,0 +1,255 @@
+{
+ "slug": "oGO9F7Hv88OnCnzlHphAqQ",
+ "title": "第 01 篇 · LLaMA 1 / 2：开源基座与商用化转折",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/oGO9F7Hv88OnCnzlHphAqQ",
+ "digest": "第 01 篇 · LLaMA 1 / 2：开源基座与商用化转折",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Meta LLaMA 家族系列第 01 篇——LLaMA 1 与 LLaMA 2：开源基座的起源与商用化转折。理解「小模型 + 好数据 > 大模型 + 脏数据」以及「许可证是最大的技术决策」。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 01 篇 · LLaMA 1 / 2：开源基座与商用化转折"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "2023 年初，前沿模型全是闭源。Meta 的 LLaMA 1 用了反直觉打法：模型不大（最大 65B），但数据质量极高（只用高置信语料）——结果 13B 打平 GPT-3 175B。随后 LLaMA 2 打开商用许可，彻底点燃开源生态。开源模型从「玩具」变成「工业标准」，起点就是这两代。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、LLaMA 1（2023-02）：质量 > 规模"
+  },
+  {
+   "type": "p",
+   "text": "1.1 核心反直觉"
+  },
+  {
+   "type": "p",
+   "text": "•规模：7B/13B/33B/65B（对比当时 GPT-3 175B 是「小模型」）；"
+  },
+  {
+   "type": "p",
+   "text": "•数据：1T~1.4T token，只用高置信度来源（CommonCrawl 去重清洗、维基、书籍、GitHub 等），严格过滤；"
+  },
+  {
+   "type": "p",
+   "text": "•结果：13B 多项基准 ≈ GPT-3（175B），65B ≈ Chinchilla-70B——用 1/10 的参数拿到同档性能。"
+  },
+  {
+   "type": "p",
+   "text": "1.2 为什么成立"
+  },
+  {
+   "type": "p",
+   "text": "•缩放定律（llm-理论 02）说「参数 × 数据共同决定能力」——在参数受限时，把数据质量拉满是对冲；"
+  },
+  {
+   "type": "p",
+   "text": "•数据清洗技术（去重、语言过滤、质量打分）自此成为开源模型的必修课；"
+  },
+  {
+   "type": "p",
+   "text": "•影响：整个开源社区以 LLaMA 为底座开始魔改（Alpaca/Vicuna 等微调浪潮）——LLaMA 1 定义了「基座模型（foundation model）玩法」。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：LLaMA 1 =「参数不够，数据来凑」缩放定律的正确读法：N 和 D 都要够。闭源卷 N（参数），开源先卷 D（数据质量）。数据工程从此与模型工程平起平坐。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、LLaMA 2（2023-07）：商用化大爆炸"
+  },
+  {
+   "type": "p",
+   "text": "2.1 关键变化"
+  },
+  {
+   "type": "p",
+   "text": "维度"
+  },
+  {
+   "type": "p",
+   "text": "LLaMA 1"
+  },
+  {
+   "type": "p",
+   "text": "LLaMA 2"
+  },
+  {
+   "type": "p",
+   "text": "规模"
+  },
+  {
+   "type": "p",
+   "text": "最大 65B"
+  },
+  {
+   "type": "p",
+   "text": "7B/13B/70B"
+  },
+  {
+   "type": "p",
+   "text": "数据"
+  },
+  {
+   "type": "p",
+   "text": "1T~1.4T"
+  },
+  {
+   "type": "p",
+   "text": "2T token"
+  },
+  {
+   "type": "p",
+   "text": "（+40%）"
+  },
+  {
+   "type": "p",
+   "text": "许可证"
+  },
+  {
+   "type": "p",
+   "text": "研究专用"
+  },
+  {
+   "type": "p",
+   "text": "商用许可（LLaMA 2 License）"
+  },
+  {
+   "type": "p",
+   "text": "对齐"
+  },
+  {
+   "type": "p",
+   "text": "无"
+  },
+  {
+   "type": "p",
+   "text": "RLHF 对齐"
+  },
+  {
+   "type": "p",
+   "text": "（Chat 版）"
+  },
+  {
+   "type": "p",
+   "text": "2.2 商用开放的产业影响"
+  },
+  {
+   "type": "p",
+   "text": "•开源模型成为企业可选方案：私有化部署、数据不出域、成本可控——企业 AI 的「安卓时刻」；"
+  },
+  {
+   "type": "p",
+   "text": "•生态大爆炸：微调/量化/推理框架（llama.cpp、Ollama、vLLM）以 LLaMA 为第一兼容目标；"
+  },
+  {
+   "type": "p",
+   "text": "•标准之争：LLaMA 系成为开源「事实标准」（后 Qwen/DeepSeek 逐代追赶对照）；"
+  },
+  {
+   "type": "p",
+   "text": "•局限：上下文仅 4K（初版）——长上下文是下代课题；70B 推理成本仍高。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：许可证 = 最被低估的技术决策LLaMA 2 的价值不在多 300 亿参数，而在**「允许商用」四个字**——它把开源从「研究者玩具」变成「企业基础设施」。生态 > 单点性能，这是 Meta 的长期主义。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1LLaMA 1：13B ≈ GPT-3（175B）——高质量数据对冲小参数，开源基座玩法诞生。"
+  },
+  {
+   "type": "p",
+   "text": "2数据清洗：去重/过滤/质量打分成为开源必修课（后续每代数据翻倍的起点）。"
+  },
+  {
+   "type": "p",
+   "text": "3LLaMA 2：70B + 2T token + 商用许可 = 开源产业化的转折点。"
+  },
+  {
+   "type": "p",
+   "text": "4RLHF 对齐入列：Chat 版对齐成为开源标配（对应 llm-理论 03）。"
+  },
+  {
+   "type": "p",
+   "text": "5遗留课题：4K 上下文太短、70B 太贵——下一代的「数据翻倍 + 更大模型」在路上。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 02 篇：LLaMA 3 与 3.1——数据从 2T 暴涨到 15T（7.5 倍），性能直接对标闭源旗舰；3.1 推出 405B 开源最大旗舰，用「超级教师蒸馏」把 405B 的能力浓缩进 8B/70B。这一代证明「开源模型也能站上世界之巅」，并定义「旗舰 + 蒸馏家族」的产品结构。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] LLaMA 1：Open and Efficient Foundation Language Models（2023）：https://arxiv.org/abs/2302.13971"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] LLaMA 2：Open Foundation and Fine-Tuned Chat Models（2023）：https://arxiv.org/abs/2307.09288"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方技术报告。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:21+0800"
+}

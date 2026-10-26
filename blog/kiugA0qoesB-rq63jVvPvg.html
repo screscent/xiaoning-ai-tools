@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents | 小凝 AI 工具集</title>
+<meta name="description" content="第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/kiugA0qoesB-rq63jVvPvg.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents | 小凝 AI 工具集">
+<meta property="og:description" content="第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/kiugA0qoesB-rq63jVvPvg.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents", "datePublished": "2026-10-02", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/kiugA0qoesB-rq63jVvPvg.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents</h1>
+  <p class="meta-line">发布于 2026-10-02 · 作者 月牙寂</p>
+  <p class="hook">第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 实战系列板块二·通用第 07 篇（收尾）——Claude 三维协同实战：MCP（工具协议）+ PTC（程序化工具调用）+ Skills（知识胶囊）+ Subagents（子 Agent）四件套怎么配合、何时用哪个。</p>
+<p>免责声明：本文为学习与技术分享用途，内容依据官方发布与社区深度解读。</p>
+<p>01SECTION</p>
+<p>第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>06 篇写了 MCP。本篇把它放进 Claude 的完整工具箱：MCP（接工具）+ PTC（连招执行）+ Skills（知识胶囊）+ Subagents（分工协作）。这四个不是孤立功能，而是「工具 - 执行 - 知识 - 组织」四个维度——本篇讲四者定位、协同关系，以及关键判断：什么时候用 PTC、什么时候用 ReAct 循环。</p>
+<p>03SECTION</p>
+<p>一、四件套定位</p>
+<p>维度</p>
+<p>组件</p>
+<p>定位</p>
+<p>类比</p>
+<p>接工具MCP</p>
+<p>标准化「Agent ↔ 外部资源」连接（USB-C）</p>
+<p>充电口标准</p>
+<p>连招执行PTC</p>
+<p>（Programmatic Tool Calling）</p>
+<p>让 LLM 写一段 Python，在沙箱里一次完成多次工具调用/循环/判断</p>
+<p>组合拳脚本</p>
+<p>注入知识Skills</p>
+<p>模块化技能胶囊（文件夹：SKILL.md + 脚本 + 资源），告诉模型「这类任务该怎么做」</p>
+<p>说明书</p>
+<p>组织分工Subagents</p>
+<p>子 Agent 分而治之，各自上下文隔离</p>
+<p>部门分工</p>
+<p>04SECTION</p>
+<p>二、PTC：程序化工具调用（重点新机制）</p>
+<p>2.1 它解决什么</p>
+<p>传统 ReAct 循环的「乒乓球效应」：</p>
+<p>code</p>
+<p>LLM 推理 → 调工具 A → 结果塞上下文 → LLM 再推理 → 调工具 B → 结果再塞……又慢又贵</p>
+<p>PTC 的做法：LLM 直接写一段完整 Python，在沙箱一次跑完：</p>
+<p>python</p>
+<p># 模型生成（PTC 模式）：一次执行多次工具调用</p>
+<p>orders = await toolA.query_orders() # 查所有订单</p>
+<p>chart = await toolB.generate_chart(orders) # 生成图表</p>
+<p>return chart # 一次交付，无中间往返</p>
+<p>•收益：少 N 次网络往返与上下文塞入 → 延迟与 token 大幅下降。</p>
+<p>2.2 何时用 PTC / 何时用 ReAct（关键判断）</p>
+<p>任务特征</p>
+<p>用哪个</p>
+<p>流程确定性强、结果无需 LLM 语义判断</p>
+<p>PTC</p>
+<p>（写代码一次跑完）</p>
+<p>每步结果需要 LLM 理解再决策（如「分析合同风险等级再决定下一步」）</p>
+<p>ReAct 循环</p>
+<p>（LLM 决策点）</p>
+<p>💡 学习要点：PTC =「能写死的流程交给代码，不能写死的交给循环」PTC 本质是「自动写代码」——适合确定性强、工具调用可编排的流程；一旦「下一步取决于语义判断」（LLM 决策点），就要退回 ReAct 循环。两者互补，不是替代。</p>
+<p>05SECTION</p>
+<p>三、Skills：知识胶囊</p>
+<p>•物理形态：一个文件夹 = SKILL.md（核心说明）+ 脚本/代码 + 资源（文档/模板/示例）；</p>
+<p>•作用：告诉模型「遇到这类任务该怎么做」——把专业操作流程、该用的模块、模板以模块化方式注入，不占满上下文；</p>
+<p>•场景：PDF 处理技能、特定框架开发技能、公司内部规范技能；</p>
+<p>•与 MCP 的区别：MCP = 「能做什么」（工具能力）；Skills = 「该怎么做」（知识与流程）。</p>
+<p>06SECTION</p>
+<p>四、Subagents：分而治之</p>
+<p>•定位：把大任务拆给上下文隔离的子 Agent（对应 agent-系列 06 篇/范式 03 篇的 Manager-Worker）；</p>
+<p>•与 PTC/Skills 的协同：子 Agent 可以带自己的 Skills（专业分工）、各自接自己的 MCP 工具（权限隔离）——四件套组合拳。</p>
+<p>07SECTION</p>
+<p>五、四件套协同全景（怎么配合用）</p>
+<p>code</p>
+<p>任务进来</p>
+<p>→ Skills 告诉「怎么做」+ MCP 提供「能做什么」</p>
+<p>→ 主 Agent（Subagents 组织）：拆任务 → 派给子 Agent</p>
+<p>→ 子 Agent：确定流程用 PTC 连招、需要语义判断用 ReAct 循环</p>
+<p>→ 关键节点 HITL 人工审批</p>
+<p>•生产建议：先只上 MCP（接工具）跑通 → 加 Skills（灌知识）→ 复杂流程试 PTC（省成本）→ 任务大到拆 Subagents——四件套按需叠加，别一次全上。</p>
+<p>08SECTION</p>
+<p>六、本篇要点（复习卡片）</p>
+<p>1四件套：MCP（接工具）/ PTC（连招执行）/ Skills（知识胶囊）/ Subagents（分工协作）。</p>
+<p>2PTC 核心：LLM 写 Python 一次跑完多次工具调用——省往返省 token。</p>
+<p>3关键判断：确定流程 → PTC；需要 LLM 语义决策 → ReAct 循环。</p>
+<p>4Skills vs MCP：能做什么（工具）vs 怎么做（知识）——互补。</p>
+<p>5协同路径：MCP → Skills → PTC → Subagents 按需叠加。</p>
+<p>6板块二收官：单 Agent（04）→ 多 Agent（05）→ MCP（06）→ Claude 三维（07）——语言无关实战齐了。</p>
+<p>09SECTION</p>
+<p>七、下一篇预告</p>
+<p>第 08 篇（板块三·工程化）：生产级要点——能跑 ≠ 能上：流式处理、tracing/可观测、评测（任务级基准）、HITL 审批、护栏五件套怎么落地，以及「先高确认模式跑通、再渐进放自主度」的发布节奏。</p>
+<p>10SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Anthropic 开发者文档（PTC / Skills / Subagents）：https://docs.anthropic.com/</p>
+<p>•[官方] MCP：https://modelcontextprotocol.io</p>
+<p>•[参考] Claude Agent 架构深度拆解（MCP+PTC+Skills+Subagents 三维协同，社区）</p>
+<p>整理：2026-10-02 月绡凝 · 依据官方发布与社区解读。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/kiugA0qoesB-rq63jVvPvg" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

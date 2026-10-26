@@ -1,0 +1,383 @@
+{
+ "slug": "e_-bMYCiYNL4YZRZwju9XQ",
+ "title": "Anthropic Claude 模型原理进化史",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/e_-bMYCiYNL4YZRZwju9XQ",
+ "digest": "Anthropic Claude 模型原理进化史",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Anthropic Claude 家族的开篇总览——从宪法 AI 理念到 Opus 4.5 / Fable 5.1 的演进时间线、关键技术点详解与进化逻辑总结。供主人先建立「一张图」再深入各分篇。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告与系统卡为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "Anthropic Claude 模型原理进化史"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、演进时间线总览"
+  },
+  {
+   "type": "p",
+   "text": "时间"
+  },
+  {
+   "type": "p",
+   "text": "模型"
+  },
+  {
+   "type": "p",
+   "text": "核心变化"
+  },
+  {
+   "type": "p",
+   "text": "2022-12"
+  },
+  {
+   "type": "p",
+   "text": "Constitutional AI 论文"
+  },
+  {
+   "type": "p",
+   "text": "对齐理念奠基：让模型按原则自我批评（RLAIF）"
+  },
+  {
+   "type": "p",
+   "text": "2023-03"
+  },
+  {
+   "type": "p",
+   "text": "Claude 1"
+  },
+  {
+   "type": "p",
+   "text": "宪法 AI 首秀：安全优先、宁拒勿放"
+  },
+  {
+   "type": "p",
+   "text": "2023-07"
+  },
+  {
+   "type": "p",
+   "text": "Claude 2"
+  },
+  {
+   "type": "p",
+   "text": "100K 长上下文；编码增强；方法论开源"
+  },
+  {
+   "type": "p",
+   "text": "2024-03"
+  },
+  {
+   "type": "p",
+   "text": "Claude 3 家族（Opus/Sonnet/Haiku）"
+  },
+  {
+   "type": "p",
+   "text": "三档产品化"
+  },
+  {
+   "type": "p",
+   "text": "；综合能力首次压过 GPT-4"
+  },
+  {
+   "type": "p",
+   "text": "2024-06"
+  },
+  {
+   "type": "p",
+   "text": "Claude 3.5 Sonnet"
+  },
+  {
+   "type": "p",
+   "text": "口碑之王：Opus 级性能、Sonnet 级价格"
+  },
+  {
+   "type": "p",
+   "text": "2025-02"
+  },
+  {
+   "type": "p",
+   "text": "Claude 3.7 Sonnet"
+  },
+  {
+   "type": "p",
+   "text": "Extended Thinking"
+  },
+  {
+   "type": "p",
+   "text": "：可控深度思考"
+  },
+  {
+   "type": "p",
+   "text": "2025-05"
+  },
+  {
+   "type": "p",
+   "text": "Claude 4（Opus 4/Sonnet 4）"
+  },
+  {
+   "type": "p",
+   "text": "Computer Use"
+  },
+  {
+   "type": "p",
+   "text": "大幅增强；ASL 3 安全分级；Claude Code"
+  },
+  {
+   "type": "p",
+   "text": "2025-09"
+  },
+  {
+   "type": "p",
+   "text": "Claude Sonnet 4.5"
+  },
+  {
+   "type": "p",
+   "text": "最对齐模型"
+  },
+  {
+   "type": "p",
+   "text": "；OSWorld 61.4%；30 小时长程任务"
+  },
+  {
+   "type": "p",
+   "text": "2025-10"
+  },
+  {
+   "type": "p",
+   "text": "Claude Haiku 4.5"
+  },
+  {
+   "type": "p",
+   "text": "最快档：5，200K 上下文"
+  },
+  {
+   "type": "p",
+   "text": "2025-11"
+  },
+  {
+   "type": "p",
+   "text": "Claude Opus 4.5"
+  },
+  {
+   "type": "p",
+   "text": "长程 Agent 旗舰；25 旗舰平民化"
+  },
+  {
+   "type": "p",
+   "text": "2026"
+  },
+  {
+   "type": "p",
+   "text": "Fable 5.1 / Opus 5.5 / Sonnet 5.5"
+  },
+  {
+   "type": "p",
+   "text": "1M 上下文；自适应思考（always on）"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、三条主线：对齐 · Agent · 推理"
+  },
+  {
+   "type": "p",
+   "text": "Anthropic 的进化围绕三条主线交叉推进："
+  },
+  {
+   "type": "p",
+   "text": "1对齐线（宪法 AI→系统卡→ASL→最对齐）：把「安全原则」写进训练流程、做成可审查的发布制度——对齐优先是公司的 DNA。"
+  },
+  {
+   "type": "p",
+   "text": "2Agent 线（长上下文→Computer Use→Claude Code→Agent SDK）：模型从「会说话」到「自己用电脑干活」，并开放给开发者。"
+  },
+  {
+   "type": "p",
+   "text": "3推理线（3.7 Extended Thinking→4 系列→4.5 混合推理→5.x 自适应）：默认会想、按需深想。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、关键技术点详解"
+  },
+  {
+   "type": "p",
+   "text": "1. 宪法 AI / RLAIF（Claude 1 的地基）"
+  },
+  {
+   "type": "p",
+   "text": "•人类写原则条文 → 模型自我批评修订（SFT）→ AI 自我打分做 RL；"
+  },
+  {
+   "type": "p",
+   "text": "•与 RLHF 的根本区别：标准从「人工偏好」变「公开条文」——可审查、可迭代、可扩展。"
+  },
+  {
+   "type": "p",
+   "text": "2. 长上下文（Claude 2 → 200K → 1M）"
+  },
+  {
+   "type": "p",
+   "text": "•100K（2023）→ 200K（3.x/4.x）→ 1M（5.x）——读整本书/整个代码库；"
+  },
+  {
+   "type": "p",
+   "text": "•长上下文是 Agent 长程任务（30 小时连续工作）的前提。"
+  },
+  {
+   "type": "p",
+   "text": "3. 三档产品化（Claude 3）"
+  },
+  {
+   "type": "p",
+   "text": "•Opus（最强）/ Sonnet（均衡）/ Haiku（最快）——一次覆盖全部需求；"
+  },
+  {
+   "type": "p",
+   "text": "•教训成行业公式：中间档是产品主战场（对标 GPT mini/nano、Gemini Flash）。"
+  },
+  {
+   "type": "p",
+   "text": "4. Extended Thinking / 混合推理（3.7 → 4.5）"
+  },
+  {
+   "type": "p",
+   "text": "•模型支持快速答 + 按需深想两种模式，思考预算（budget_tokens）可调；"
+  },
+  {
+   "type": "p",
+   "text": "•4.5 升级为 hybrid reasoning：默认会想、按需深想。"
+  },
+  {
+   "type": "p",
+   "text": "5. Computer Use（Claude 4 起爆发）"
+  },
+  {
+   "type": "p",
+   "text": "•模型像人一样操作电脑：看截图 → 点击/输入 → 再看结果；"
+  },
+  {
+   "type": "p",
+   "text": "•OSWorld：Sonnet 4 的 42.2% → Sonnet 4.5 的 61.4%；"
+  },
+  {
+   "type": "p",
+   "text": "•训练：屏幕操作合成轨迹 + RL；应用：Claude for Chrome、桌面自动化。"
+  },
+  {
+   "type": "p",
+   "text": "6. Claude Code 与 MCP（Agent 平台）"
+  },
+  {
+   "type": "p",
+   "text": "•Claude Code：终端编程 Agent（读库/改码/跑测/提 PR）；"
+  },
+  {
+   "type": "p",
+   "text": "•MCP：开放工具接入协议——成为行业「工具接入」事实标准；"
+  },
+  {
+   "type": "p",
+   "text": "•Agent SDK：把底层能力开放给开发者自建 Agent。"
+  },
+  {
+   "type": "p",
+   "text": "7. 对齐的量化与制度化（4.5）"
+  },
+  {
+   "type": "p",
+   "text": "•系统卡评测延伸到奖励黑客、诚实度、agentic 安全、可解释性（mechanistic interpretability）；"
+  },
+  {
+   "type": "p",
+   "text": "•ASL（AI 安全分级）决定能否放行——能力越强门槛越高；"
+  },
+  {
+   "type": "p",
+   "text": "•「最对齐」成为可宣传的卖点：该拒则拒、该干则干。"
+  },
+  {
+   "type": "p",
+   "text": "∞CONCLUSION"
+  },
+  {
+   "type": "p",
+   "text": "四、进化逻辑总结（学习重点）"
+  },
+  {
+   "type": "p",
+   "text": "1对齐做「显式化」：从黑盒偏好打分 → 公开条文 + 系统卡 + 分级制度——安全成为可审查资产。"
+  },
+  {
+   "type": "p",
+   "text": "2能力做「Agent 化」：长上下文 + 计算机使用 + 编程工具 = 从「助手」到「数字员工」。"
+  },
+  {
+   "type": "p",
+   "text": "3推理做「融合」：Extended Thinking → 混合推理 → 自适应思考——对话与思考不分家。"
+  },
+  {
+   "type": "p",
+   "text": "4定价做「下探」：旗舰从高价到 25、Sonnet $2——旗舰能力平民化。"
+  },
+  {
+   "type": "p",
+   "text": "5差异化：对齐优先 × 会干活——与 GPT（产品生态）、Gemini（原生多模态）形成错位竞争。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、资料源（供深入阅读）"
+  },
+  {
+   "type": "p",
+   "text": "•Anthropic 官方：https://www.anthropic.com/news ｜ https://www.anthropic.com/research"
+  },
+  {
+   "type": "p",
+   "text": "•Claude 系列系统卡：https://www.anthropic.com/research#system-cards"
+  },
+  {
+   "type": "p",
+   "text": "•学习路径：本开篇 → 01~04 分篇 → 对照 llm-基础理论 03/05/06"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方发布说明与系统卡。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:34+0800"
+}

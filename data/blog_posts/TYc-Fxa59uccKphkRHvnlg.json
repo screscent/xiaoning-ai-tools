@@ -1,0 +1,375 @@
+{
+ "slug": "TYc-Fxa59uccKphkRHvnlg",
+ "title": "第 01 篇 · 推理-行动交错范式：CoT 到 ReAct 的谱系",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/TYc-Fxa59uccKphkRHvnlg",
+ "digest": "第 01 篇 · 推理-行动交错范式：CoT 到 ReAct 的谱系",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 范式系列板块一·工程第 01 篇——推理-行动交错范式：从 CoT 的「只动脑」到 ReAct 的「边想边做」，谱系关系与范式取舍。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方论文为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 01 篇 · 推理-行动交错范式：CoT 到 ReAct 的谱系"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "Agent 范式的地基是 ReAct——「思考-行动-观察」交错循环。但要理解它，得先看它从哪来：CoT 教会模型「分步想」，ReAct 让模型「边想边做」，Self-Ask/ToT 补上「追问与分支」。本篇讲这条「推理-行动交错」谱系的每个节点、它们解决什么、留下什么局限（为下一篇 Plan-and-Execute 埋伏笔）。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、谱系节点"
+  },
+  {
+   "type": "p",
+   "text": "范式"
+  },
+  {
+   "type": "p",
+   "text": "时间"
+  },
+  {
+   "type": "p",
+   "text": "核心"
+  },
+  {
+   "type": "p",
+   "text": "解决的问题"
+  },
+  {
+   "type": "p",
+   "text": "局限"
+  },
+  {
+   "type": "p",
+   "text": "CoT"
+  },
+  {
+   "type": "p",
+   "text": "（Chain-of-Thought）"
+  },
+  {
+   "type": "p",
+   "text": "2022"
+  },
+  {
+   "type": "p",
+   "text": "prompt 让模型输出中间推理步骤"
+  },
+  {
+   "type": "p",
+   "text": "一步到位的幻觉、复杂推理差"
+  },
+  {
+   "type": "p",
+   "text": "只「想」不「做」——没有工具与反馈"
+  },
+  {
+   "type": "p",
+   "text": "Self-Ask"
+  },
+  {
+   "type": "p",
+   "text": "2022"
+  },
+  {
+   "type": "p",
+   "text": "模型自问自答（分解子问题）"
+  },
+  {
+   "type": "p",
+   "text": "多跳问题"
+  },
+  {
+   "type": "p",
+   "text": "仍是纯文本推理"
+  },
+  {
+   "type": "p",
+   "text": "ToT"
+  },
+  {
+   "type": "p",
+   "text": "（Tree of Thoughts）"
+  },
+  {
+   "type": "p",
+   "text": "2023"
+  },
+  {
+   "type": "p",
+   "text": "树状分支探索 + 自我评估"
+  },
+  {
+   "type": "p",
+   "text": "需要「试错」的规划类问题"
+  },
+  {
+   "type": "p",
+   "text": "搜索成本高、每节点都要评估"
+  },
+  {
+   "type": "p",
+   "text": "ReAct"
+  },
+  {
+   "type": "p",
+   "text": "（Reason+Act）"
+  },
+  {
+   "type": "p",
+   "text": "2022"
+  },
+  {
+   "type": "p",
+   "text": "思考→行动→观察"
+  },
+  {
+   "type": "p",
+   "text": "交错循环"
+  },
+  {
+   "type": "p",
+   "text": "推理与事实脱节、无法验证"
+  },
+  {
+   "type": "p",
+   "text": "无全局规划、行动短视（下一步见 02 篇）"
+  },
+  {
+   "type": "p",
+   "text": "04WHY"
+  },
+  {
+   "type": "p",
+   "text": "二、ReAct：为什么它是范式原点"
+  },
+  {
+   "type": "p",
+   "text": "2.1 机制"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "Thought（想：下一步做什么/需要什么信息）"
+  },
+  {
+   "type": "p",
+   "text": "→ Action（做：调用工具/API/查百科）"
+  },
+  {
+   "type": "p",
+   "text": "→ Observation（看：工具返回了什么）"
+  },
+  {
+   "type": "p",
+   "text": "→ 回到 Thought ……直到任务完成"
+  },
+  {
+   "type": "p",
+   "text": "•关键：推理被观察「接地」——不是凭空想，而是基于工具返回的事实继续想（减少幻觉、抑制错误传播）；"
+  },
+  {
+   "type": "p",
+   "text": "•与 CoT 的区别：CoT 的推理是「封闭世界」的（凭记忆），ReAct 的推理是「开放世界」的（查证后再推理）。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 为什么赢"
+  },
+  {
+   "type": "p",
+   "text": "1可解释：每一步的 Thought/Action/Observation 都可回放——出错了能定位（对齐「审计留痕」思想）；"
+  },
+  {
+   "type": "p",
+   "text": "2可纠错：Observation 反馈天然驱动下一步修正（不用额外机制）；"
+  },
+  {
+   "type": "p",
+   "text": "3工程极简：本质是「一个循环」，任何框架都能实现——它是所有后续范式的最小公分母。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：ReAct =「把思考接到地面上」CoT 让模型「想」，ReAct 让模型「想 + 查 + 再想」。范式跃迁不是「更聪明」，而是「与环境的闭环」——思考有了事实反馈，幻觉被抑制、错误可修正。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、ReAct 的三个局限（下一篇的引子）"
+  },
+  {
+   "type": "p",
+   "text": "局限"
+  },
+  {
+   "type": "p",
+   "text": "表现"
+  },
+  {
+   "type": "p",
+   "text": "反例范式"
+  },
+  {
+   "type": "p",
+   "text": "无全局规划"
+  },
+  {
+   "type": "p",
+   "text": "每一步只看眼前，容易「走一步算一步」绕远路"
+  },
+  {
+   "type": "p",
+   "text": "Plan-and-Execute（02 篇）"
+  },
+  {
+   "type": "p",
+   "text": "成本高"
+  },
+  {
+   "type": "p",
+   "text": "每步都调模型+工具，长任务 token 爆炸"
+  },
+  {
+   "type": "p",
+   "text": "先规划后执行（省步骤）"
+  },
+  {
+   "type": "p",
+   "text": "不可预测"
+  },
+  {
+   "type": "p",
+   "text": "自由循环 = 可能死循环/跑偏，生产难控制"
+  },
+  {
+   "type": "p",
+   "text": "状态机/DAG 约束（02 篇）"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、工程实践要点（何时用 ReAct）"
+  },
+  {
+   "type": "p",
+   "text": "1适合：需要查证的任务（问答/检索/调用 API）、短到中等任务链、交互式场景；"
+  },
+  {
+   "type": "p",
+   "text": "2不适合：超长稳定流程（重规划）、必须可审计控制的流水线（该用工作流/状态机）；"
+  },
+  {
+   "type": "p",
+   "text": "3组合：ReAct 作为「循环内核」，外包给确定性编排（LangGraph 等）——自由循环 + 外层护栏是生产标配（agent-系列 07 篇）。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1谱系：CoT（分步想）→ Self-Ask（自追问）→ ToT（树状试错）→ ReAct（想+做+看循环）。"
+  },
+  {
+   "type": "p",
+   "text": "2ReAct 三拍子：Thought → Action → Observation → 循环——推理被观察「接地」。"
+  },
+  {
+   "type": "p",
+   "text": "3三个赢点：可解释 / 可纠错 / 工程极简——一切后续范式的最小公分母。"
+  },
+  {
+   "type": "p",
+   "text": "4三个局限：无全局规划 / 成本高 / 不可预测——引向 Plan-and-Execute。"
+  },
+  {
+   "type": "p",
+   "text": "5生产建议：ReAct 当内核、外层加编排与护栏（自由循环 + 确定性兜底）。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 02 篇：规划-执行与工作流范式——针对 ReAct 的「短视」，Plan-and-Execute 把「全盘规划」和「逐步执行」分离（Planner/Executor/Verifier/Refiner），DAG 与状态机把流程变成可控制的图。从「一个循环」到「一套工程」。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Chain-of-Thought（2022）：https://arxiv.org/abs/2201.11903"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Self-Ask（2022）：https://arxiv.org/abs/2210.03350"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Tree of Thoughts（2023）：https://arxiv.org/abs/2305.10601"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] ReAct（2022）：https://arxiv.org/abs/2210.03629"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方论文。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:34+0800"
+}

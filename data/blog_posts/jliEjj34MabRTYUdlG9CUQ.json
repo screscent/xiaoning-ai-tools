@@ -1,0 +1,307 @@
+{
+ "slug": "jliEjj34MabRTYUdlG9CUQ",
+ "title": "第 10 篇 · Agent 2.0：主动型个人智能体（Dots / Muse）",
+ "author": "月牙寂",
+ "publish_time": "2026-10-02",
+ "source_url": "https://mp.weixin.qq.com/s/jliEjj34MabRTYUdlG9CUQ",
+ "digest": "第 10 篇 · Agent 2.0：主动型个人智能体（Dots / Muse）",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 实战系列板块四·趋势第 10 篇（系列收官）——Agent 2.0 个人智能体：OpenAI Dots / Meta Muse——云端虚拟机 7×24、主动 Agent、ChatGPT Space 协作空间。从「被动执行」到「主动共事」。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，内容依据官方发布与行业报道。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 10 篇 · Agent 2.0：主动型个人智能体（Dots / Muse）"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "前 9 篇的 Agent 都是「被动型」：你发指令它干活。2026 年的代际变化是「主动型」：Agent 自己判断该干什么、主动跟你商量、7×24 后台推进任务。OpenAI Dots 与 Meta Muse 是这波「Agent 2.0 / 个人智能体」的代表。本篇拆解它们的产品形态与技术底座，以及给自建 Agent 的启示。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、Agent 2.0 是什么（代际对比）"
+  },
+  {
+   "type": "p",
+   "text": "Agent 1.0（工具型）"
+  },
+  {
+   "type": "p",
+   "text": "Agent 2.0（个人智能体）"
+  },
+  {
+   "type": "p",
+   "text": "触发"
+  },
+  {
+   "type": "p",
+   "text": "用户指令驱动"
+  },
+  {
+   "type": "p",
+   "text": "主动"
+  },
+  {
+   "type": "p",
+   "text": "：自己判断该干什么"
+  },
+  {
+   "type": "p",
+   "text": "运行"
+  },
+  {
+   "type": "p",
+   "text": "一次性会话"
+  },
+  {
+   "type": "p",
+   "text": "7×24 云端后台持续运行"
+  },
+  {
+   "type": "p",
+   "text": "交互"
+  },
+  {
+   "type": "p",
+   "text": "等结果"
+  },
+  {
+   "type": "p",
+   "text": "带着建议跟你商量（主动汇报/请示）"
+  },
+  {
+   "type": "p",
+   "text": "类比"
+  },
+  {
+   "type": "p",
+   "text": "小学生（给明确指令）"
+  },
+  {
+   "type": "p",
+   "text": "合伙人"
+  },
+  {
+   "type": "p",
+   "text": "（给大目标，自己拆解推进）"
+  },
+  {
+   "type": "p",
+   "text": "•官方原型：Meta Muse（2026 初爆火）→ OpenAI Dots（2026-09 开发者大会对标发布）。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、OpenAI Dots 拆解（2026-09）"
+  },
+  {
+   "type": "p",
+   "text": "•形态：个人 Agent + 云端虚拟机（自己的电脑和浏览器）——7×24 后台自主推进任务；"
+  },
+  {
+   "type": "p",
+   "text": "•能力：跨应用操作（已支持 4000+ 应用连接）、主动检查夜间邮件并提醒、董事会前自动更新 PPT、供应商违约自己找替补再请示；"
+  },
+  {
+   "type": "p",
+   "text": "•互动：ChatGPT 发消息/通话、Slack/Teams 触达、未来短信；"
+  },
+  {
+   "type": "p",
+   "text": "•企业版：Specialist Dots——有企业身份/凭证/权限，长期负责某岗位（邮件营销/会计/法律分析）；微软 Microsoft Agent 365 可管理；"
+  },
+  {
+   "type": "p",
+   "text": "•配套：ChatGPT Space 协作空间——用户、同事、多个 Agent 在同一文档协作，@ 一下派活；"
+  },
+  {
+   "type": "p",
+   "text": "•定价：Pro/Business/Enterprise 开放，约 **"
+  },
+  {
+   "type": "p",
+   "text": "20/月档）。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：Dots =「打开权限 + 云端底座 + 主动商量」三件套①云端虚拟机 = 7×24 运行与跨应用权限；②主动判断 = 自己找活干；③主动商量 = 高风险/决策前回来问你（HITL 从「审批」变「共事」）。Agent 2.0 的核心不是更聪明，是「更主动 + 更自主 + 更共事」。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、Meta Muse 对比"
+  },
+  {
+   "type": "p",
+   "text": "•同为个人智能体：学习用户习惯、主动完成琐碎工作、C 端定位；"
+  },
+  {
+   "type": "p",
+   "text": "•价格更亲民（免费体验 /"
+  },
+  {
+   "type": "p",
+   "text": "100 月）——赛道刚开，定价与体验都在试探。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、对未来 Agent 开发的启示（实战视角）"
+  },
+  {
+   "type": "p",
+   "text": "1常驻底座：个人 Agent = 09 篇「常驻 Agent」的产品化——云端容器 + 事件监听 + 状态持久化（幂等/去重/健康检查全套要上）；"
+  },
+  {
+   "type": "p",
+   "text": "2主动权限设计：跨应用操作 = 权限面巨大——授权最小化 + 每动作可审计是生死线（agent-系列 07 篇）；"
+  },
+  {
+   "type": "p",
+   "text": "3「共事」式 HITL：不是「每步问」，而是「关键决策回来商量」——打断密度是产品体验核心参数；"
+  },
+  {
+   "type": "p",
+   "text": "4多 Agent 团队化：多个 Specialist Dots 协作（管日程/财务/项目）——对应多 Agent 编排（agent-系列 06 篇）进入个人生活场景；"
+  },
+  {
+   "type": "p",
+   "text": "5平台化：ChatGPT Space = Agent 与人的「协作空间」——未来办公/生活的界面。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、系列收官：Agent 实战全景（00-10 一张图）"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "框架（01-03）：Eino 组件/编排/ADK ——Go 怎么搭"
+  },
+  {
+   "type": "p",
+   "text": "通用（04-07）：单/多 Agent、MCP、Claude 三维 ——语言无关怎么搭"
+  },
+  {
+   "type": "p",
+   "text": "工程化（08）：生产五件套 + 渐进放自主度 ——怎么上生产"
+  },
+  {
+   "type": "p",
+   "text": "形态（09）：编码/研究/常驻 ——做成什么产品"
+  },
+  {
+   "type": "p",
+   "text": "趋势（10）：Agent 2.0 主动个人智能体 ——下一步在哪"
+  },
+  {
+   "type": "p",
+   "text": "•学习路径回顾（00 篇地图）：原理（agent-系列）→ 范式（agent-范式）→ 实战（本系列）——三线闭环；"
+  },
+  {
+   "type": "p",
+   "text": "•动手建议：从 04 从零搭单 Agent 跑通 → Eino 落项目（01-03）→ 08 五件套上生产 → 09/10 看产品与方向。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1Agent 2.0：主动（自己找活）× 7×24（云端后台）× 共事（主动商量）——从「被动执行」到「合伙人」。"
+  },
+  {
+   "type": "p",
+   "text": "2Dots 三件套：云端虚拟机（权限+常驻）/ 主动判断 / 主动商量（HITL 共事化）。"
+  },
+  {
+   "type": "p",
+   "text": "3Muse vs Dots：赛道刚开，定价试探（"
+  },
+  {
+   "type": "p",
+   "text": "100）。"
+  },
+  {
+   "type": "p",
+   "text": "4实战启示：常驻底座 + 权限最小化 + 打断密度设计 + 多 Agent 团队 + 协作空间。"
+  },
+  {
+   "type": "p",
+   "text": "5系列收官：框架 → 通用 → 工程化 → 形态 → 趋势；与原理/范式两线闭环。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] OpenAI 开发者大会（Dots / ChatGPT Space，2026-09）：https://openai.com/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Meta Muse：https://ai.meta.com/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] 光锥智能/钛媒体《OpenAI、Meta、Manus 同时下注，智能体 2.0 来了》（行业报道）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-02 月绡凝 · 依据官方发布与行业报道。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:14:57+0800"
+}

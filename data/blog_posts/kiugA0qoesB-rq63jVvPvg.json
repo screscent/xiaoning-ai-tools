@@ -1,0 +1,359 @@
+{
+ "slug": "kiugA0qoesB-rq63jVvPvg",
+ "title": "第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents",
+ "author": "月牙寂",
+ "publish_time": "2026-10-02",
+ "source_url": "https://mp.weixin.qq.com/s/kiugA0qoesB-rq63jVvPvg",
+ "digest": "第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 实战系列板块二·通用第 07 篇（收尾）——Claude 三维协同实战：MCP（工具协议）+ PTC（程序化工具调用）+ Skills（知识胶囊）+ Subagents（子 Agent）四件套怎么配合、何时用哪个。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，内容依据官方发布与社区深度解读。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "06 篇写了 MCP。本篇把它放进 Claude 的完整工具箱：MCP（接工具）+ PTC（连招执行）+ Skills（知识胶囊）+ Subagents（分工协作）。这四个不是孤立功能，而是「工具 - 执行 - 知识 - 组织」四个维度——本篇讲四者定位、协同关系，以及关键判断：什么时候用 PTC、什么时候用 ReAct 循环。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、四件套定位"
+  },
+  {
+   "type": "p",
+   "text": "维度"
+  },
+  {
+   "type": "p",
+   "text": "组件"
+  },
+  {
+   "type": "p",
+   "text": "定位"
+  },
+  {
+   "type": "p",
+   "text": "类比"
+  },
+  {
+   "type": "p",
+   "text": "接工具MCP"
+  },
+  {
+   "type": "p",
+   "text": "标准化「Agent ↔ 外部资源」连接（USB-C）"
+  },
+  {
+   "type": "p",
+   "text": "充电口标准"
+  },
+  {
+   "type": "p",
+   "text": "连招执行PTC"
+  },
+  {
+   "type": "p",
+   "text": "（Programmatic Tool Calling）"
+  },
+  {
+   "type": "p",
+   "text": "让 LLM 写一段 Python，在沙箱里一次完成多次工具调用/循环/判断"
+  },
+  {
+   "type": "p",
+   "text": "组合拳脚本"
+  },
+  {
+   "type": "p",
+   "text": "注入知识Skills"
+  },
+  {
+   "type": "p",
+   "text": "模块化技能胶囊（文件夹：SKILL.md + 脚本 + 资源），告诉模型「这类任务该怎么做」"
+  },
+  {
+   "type": "p",
+   "text": "说明书"
+  },
+  {
+   "type": "p",
+   "text": "组织分工Subagents"
+  },
+  {
+   "type": "p",
+   "text": "子 Agent 分而治之，各自上下文隔离"
+  },
+  {
+   "type": "p",
+   "text": "部门分工"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、PTC：程序化工具调用（重点新机制）"
+  },
+  {
+   "type": "p",
+   "text": "2.1 它解决什么"
+  },
+  {
+   "type": "p",
+   "text": "传统 ReAct 循环的「乒乓球效应」："
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "LLM 推理 → 调工具 A → 结果塞上下文 → LLM 再推理 → 调工具 B → 结果再塞……又慢又贵"
+  },
+  {
+   "type": "p",
+   "text": "PTC 的做法：LLM 直接写一段完整 Python，在沙箱一次跑完："
+  },
+  {
+   "type": "p",
+   "text": "python"
+  },
+  {
+   "type": "p",
+   "text": "# 模型生成（PTC 模式）：一次执行多次工具调用"
+  },
+  {
+   "type": "p",
+   "text": "orders = await toolA.query_orders() # 查所有订单"
+  },
+  {
+   "type": "p",
+   "text": "chart = await toolB.generate_chart(orders) # 生成图表"
+  },
+  {
+   "type": "p",
+   "text": "return chart # 一次交付，无中间往返"
+  },
+  {
+   "type": "p",
+   "text": "•收益：少 N 次网络往返与上下文塞入 → 延迟与 token 大幅下降。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 何时用 PTC / 何时用 ReAct（关键判断）"
+  },
+  {
+   "type": "p",
+   "text": "任务特征"
+  },
+  {
+   "type": "p",
+   "text": "用哪个"
+  },
+  {
+   "type": "p",
+   "text": "流程确定性强、结果无需 LLM 语义判断"
+  },
+  {
+   "type": "p",
+   "text": "PTC"
+  },
+  {
+   "type": "p",
+   "text": "（写代码一次跑完）"
+  },
+  {
+   "type": "p",
+   "text": "每步结果需要 LLM 理解再决策（如「分析合同风险等级再决定下一步」）"
+  },
+  {
+   "type": "p",
+   "text": "ReAct 循环"
+  },
+  {
+   "type": "p",
+   "text": "（LLM 决策点）"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：PTC =「能写死的流程交给代码，不能写死的交给循环」PTC 本质是「自动写代码」——适合确定性强、工具调用可编排的流程；一旦「下一步取决于语义判断」（LLM 决策点），就要退回 ReAct 循环。两者互补，不是替代。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、Skills：知识胶囊"
+  },
+  {
+   "type": "p",
+   "text": "•物理形态：一个文件夹 = SKILL.md（核心说明）+ 脚本/代码 + 资源（文档/模板/示例）；"
+  },
+  {
+   "type": "p",
+   "text": "•作用：告诉模型「遇到这类任务该怎么做」——把专业操作流程、该用的模块、模板以模块化方式注入，不占满上下文；"
+  },
+  {
+   "type": "p",
+   "text": "•场景：PDF 处理技能、特定框架开发技能、公司内部规范技能；"
+  },
+  {
+   "type": "p",
+   "text": "•与 MCP 的区别：MCP = 「能做什么」（工具能力）；Skills = 「该怎么做」（知识与流程）。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、Subagents：分而治之"
+  },
+  {
+   "type": "p",
+   "text": "•定位：把大任务拆给上下文隔离的子 Agent（对应 agent-系列 06 篇/范式 03 篇的 Manager-Worker）；"
+  },
+  {
+   "type": "p",
+   "text": "•与 PTC/Skills 的协同：子 Agent 可以带自己的 Skills（专业分工）、各自接自己的 MCP 工具（权限隔离）——四件套组合拳。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、四件套协同全景（怎么配合用）"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "任务进来"
+  },
+  {
+   "type": "p",
+   "text": "→ Skills 告诉「怎么做」+ MCP 提供「能做什么」"
+  },
+  {
+   "type": "p",
+   "text": "→ 主 Agent（Subagents 组织）：拆任务 → 派给子 Agent"
+  },
+  {
+   "type": "p",
+   "text": "→ 子 Agent：确定流程用 PTC 连招、需要语义判断用 ReAct 循环"
+  },
+  {
+   "type": "p",
+   "text": "→ 关键节点 HITL 人工审批"
+  },
+  {
+   "type": "p",
+   "text": "•生产建议：先只上 MCP（接工具）跑通 → 加 Skills（灌知识）→ 复杂流程试 PTC（省成本）→ 任务大到拆 Subagents——四件套按需叠加，别一次全上。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1四件套：MCP（接工具）/ PTC（连招执行）/ Skills（知识胶囊）/ Subagents（分工协作）。"
+  },
+  {
+   "type": "p",
+   "text": "2PTC 核心：LLM 写 Python 一次跑完多次工具调用——省往返省 token。"
+  },
+  {
+   "type": "p",
+   "text": "3关键判断：确定流程 → PTC；需要 LLM 语义决策 → ReAct 循环。"
+  },
+  {
+   "type": "p",
+   "text": "4Skills vs MCP：能做什么（工具）vs 怎么做（知识）——互补。"
+  },
+  {
+   "type": "p",
+   "text": "5协同路径：MCP → Skills → PTC → Subagents 按需叠加。"
+  },
+  {
+   "type": "p",
+   "text": "6板块二收官：单 Agent（04）→ 多 Agent（05）→ MCP（06）→ Claude 三维（07）——语言无关实战齐了。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "七、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 08 篇（板块三·工程化）：生产级要点——能跑 ≠ 能上：流式处理、tracing/可观测、评测（任务级基准）、HITL 审批、护栏五件套怎么落地，以及「先高确认模式跑通、再渐进放自主度」的发布节奏。"
+  },
+  {
+   "type": "p",
+   "text": "10SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Anthropic 开发者文档（PTC / Skills / Subagents）：https://docs.anthropic.com/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] MCP：https://modelcontextprotocol.io"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] Claude Agent 架构深度拆解（MCP+PTC+Skills+Subagents 三维协同，社区）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-02 月绡凝 · 依据官方发布与社区解读。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:05+0800"
+}

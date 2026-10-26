@@ -1,0 +1,323 @@
+{
+ "slug": "FH8-7CcIBQfdZSv6DS0zHw",
+ "title": "研究/搜索 Agent 与常驻 Agent",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/FH8-7CcIBQfdZSv6DS0zHw",
+ "digest": "研究/搜索 Agent 与常驻 Agent",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 原理系列板块四·应用第 10 篇——研究/搜索 Agent 与常驻 Agent：「动脑型」（deep research）与「后台型」（常驻监听/周期任务）两类 Agent 的原理与工程。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方发布为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 10 篇 · 研究/搜索 Agent 与常驻 Agent"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "09 篇是「动手型」Agent（改代码、点界面）。本篇是另外两类形态：研究 Agent（替你做调研、给带引用的报告——动脑）和常驻 Agent（长期在线，监听事件、周期巡检——后台）。前者是「一次深度思考」，后者是「一直在线干活」。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、研究/搜索 Agent（Deep Research）"
+  },
+  {
+   "type": "p",
+   "text": "1.1 是什么"
+  },
+  {
+   "type": "p",
+   "text": "•用户给一个开放问题 → Agent 自动规划研究路径 → 多轮搜索 → 阅读/筛选来源 → 综合成带引用的报告；"
+  },
+  {
+   "type": "p",
+   "text": "•代表：ChatGPT Deep Research、Perplexity、Gemini Deep Research、Claude（deep research 能力）；"
+  },
+  {
+   "type": "p",
+   "text": "•价值：把「几小时的人工调研」压缩到「几分钟」。"
+  },
+  {
+   "type": "p",
+   "text": "1.2 原理拆解（对照 01-08）"
+  },
+  {
+   "type": "p",
+   "text": "系统"
+  },
+  {
+   "type": "p",
+   "text": "在研究 Agent 里是什么"
+  },
+  {
+   "type": "p",
+   "text": "感知"
+  },
+  {
+   "type": "p",
+   "text": "网页抓取、PDF/文档读取、检索结果（工具型感知）"
+  },
+  {
+   "type": "p",
+   "text": "推理"
+  },
+  {
+   "type": "p",
+   "text": "拆研究子问题 → 规划搜索顺序 → 评估来源可信度 → 综合"
+  },
+  {
+   "type": "p",
+   "text": "记忆"
+  },
+  {
+   "type": "p",
+   "text": "已查过的来源、中间结论、引用清单"
+  },
+  {
+   "type": "p",
+   "text": "行动"
+  },
+  {
+   "type": "p",
+   "text": "调用搜索 API、抓取页面、保存笔记"
+  },
+  {
+   "type": "p",
+   "text": "训练（08）"
+  },
+  {
+   "type": "p",
+   "text": "推理模型（o1/R1 系）做深度规划；agent RL 强化「搜索-综合」轨迹"
+  },
+  {
+   "type": "p",
+   "text": "评测"
+  },
+  {
+   "type": "p",
+   "text": "引用准确性、事实保真度（幻觉是头号风险）"
+  },
+  {
+   "type": "p",
+   "text": "1.3 关键工程：防幻觉"
+  },
+  {
+   "type": "p",
+   "text": "•引用强制：报告必须带可点击来源——「可验证」是对抗幻觉的第一防线；"
+  },
+  {
+   "type": "p",
+   "text": "•来源评估：模型对来源可信度打分（官方 > 二手 > 社区）；"
+  },
+  {
+   "type": "p",
+   "text": "•迭代校验：多轮搜索中交叉验证矛盾信息（衔接推理反思 02 篇）。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：研究 Agent = 推理模型 × 检索 × 引用纪律它本质是「带工具的推理任务」：思考深度（o1/R1）决定研究质量，检索广度决定信息覆盖，引用纪律决定可信度——三者缺一不可。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、常驻 Agent（Resident / Background Agent）"
+  },
+  {
+   "type": "p",
+   "text": "2.1 是什么"
+  },
+  {
+   "type": "p",
+   "text": "•不是「问一次答一次」，而是长期驻留运行：监听外部事件、周期巡检、按时触发任务；"
+  },
+  {
+   "type": "p",
+   "text": "•场景：监控告警、定时报告、竞品跟踪、邮件/消息自动响应、数据巡检；"
+  },
+  {
+   "type": "p",
+   "text": "•与「即时 Agent」的区别：生命周期——小时/天/月级持续运行，而非单次会话。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 原理拆解"
+  },
+  {
+   "type": "p",
+   "text": "组件"
+  },
+  {
+   "type": "p",
+   "text": "说明"
+  },
+  {
+   "type": "p",
+   "text": "触发机制"
+  },
+  {
+   "type": "p",
+   "text": "事件驱动（消息/文件/告警到达触发）或定时（cron/周期）或轮询（查状态）"
+  },
+  {
+   "type": "p",
+   "text": "状态保持"
+  },
+  {
+   "type": "p",
+   "text": "跨轮次的状态持久化（任务进度、已处理事件去重）——记忆 03 篇的长时记忆"
+  },
+  {
+   "type": "p",
+   "text": "循环控制"
+  },
+  {
+   "type": "p",
+   "text": "每轮「感知→决策→行动→校验」循环，且要处理空转/去重/幂等"
+  },
+  {
+   "type": "p",
+   "text": "健康与自愈"
+  },
+  {
+   "type": "p",
+   "text": "异常退出重启、超时挂起、失败升级人工（07 篇）"
+  },
+  {
+   "type": "p",
+   "text": "通知"
+  },
+  {
+   "type": "p",
+   "text": "关键节点主动通知主人（不该打扰的别打扰、该打扰的必达）"
+  },
+  {
+   "type": "p",
+   "text": "2.3 工程要点（常驻是最难的工程）"
+  },
+  {
+   "type": "p",
+   "text": "1幂等：同一事件触发两次不能重复执行副作用（发两次邮件）；"
+  },
+  {
+   "type": "p",
+   "text": "2去重：事件去重键（event-id）+ 时间窗；"
+  },
+  {
+   "type": "p",
+   "text": "3停滞检测：多轮无进展要自我报告（对齐「停滞监测」思想，衔接 02 篇反思）；"
+  },
+  {
+   "type": "p",
+   "text": "4资源控制：单轮 token/时间预算上限——常驻 = 无限轮 × 每轮都要便宜；"
+  },
+  {
+   "type": "p",
+   "text": "5退出与升级：明确「什么时候算完、什么时候该找人」。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：常驻 Agent = 把「运维纪律」搬进 Agent幂等、去重、停滞检测、健康检查——这些是传统后台服务的工程纪律，现在要套在「会自主决策的模型」上。常驻 Agent 的难点不在 AI，在可靠性与治理。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1研究 Agent：规划→搜索→综合→引用四步；引用纪律是对抗幻觉第一防线。"
+  },
+  {
+   "type": "p",
+   "text": "2研究质量 = 推理深度 × 检索广度 × 引用纪律。"
+  },
+  {
+   "type": "p",
+   "text": "3常驻 Agent：事件/定时/轮询三触发；生命周期长——「一直在线」。"
+  },
+  {
+   "type": "p",
+   "text": "4常驻工程纪律：幂等、去重、停滞检测、资源预算、退出升级。"
+  },
+  {
+   "type": "p",
+   "text": "5应用全景：编码（稳）/ CUA（广）/ 研究（深）/ 常驻（久）——四类形态覆盖 Agent 的全部使用方式。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 11 篇（板块五·平台，系列收官）：Agent 框架与协议标准——把前面所有原理装进工具：LangGraph / OpenAI Agents SDK / Claude Agent SDK / CrewAI / Microsoft Agent Framework / Google ADK 全对比 + MCP/A2A 协议标准化路径 + 选型指南。从「懂原理」到「会选型、能搭建」。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] ChatGPT Deep Research：https://openai.com/index/introducing-deep-research/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Gemini Deep Research：https://blog.google/products/gemini/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Anthropic Deep Research / Claude：https://www.anthropic.com/news"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] 常驻 Agent / goal-resident 形态（goal 驱动运行模式）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方发布说明。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:43+0800"
+}

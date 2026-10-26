@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」 | 小凝 AI 工具集</title>
+<meta name="description" content="第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/g7YRepn_1wiZ3LUZ_jQRLg.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」 | 小凝 AI 工具集">
+<meta property="og:description" content="第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/g7YRepn_1wiZ3LUZ_jQRLg.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/g7YRepn_1wiZ3LUZ_jQRLg.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：LLM 基础理论发展系列第 00 篇——前深度学习时代：词表示与序列建模。以经典论文为唯一事实源，供主人系统学习，亦可作为技术文章对外分享。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以原论文为准。</p>
+<p>01SECTION</p>
+<p>第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」</p>
+<p>02WHY</p>
+<p>导读：为什么 LLM 的历史要从「词」讲起</p>
+<p>语言模型（LLM）的「L」是 Language——一切从计算机如何表示词开始。本篇是整条理论线的起点：词的表示（离散→分布式）→ 序列建模（无法并行→可以记忆）→ 注意力（为 Transformer 埋下伏笔）。没有这三步，就没有 2017 年的 Transformer 革命。</p>
+<p>03SECTION</p>
+<p>一、词的表示：从 One-Hot 到词嵌入</p>
+<p>1.1 One-Hot（词袋）的问题</p>
+<p>早期把词表示成 One-Hot 向量（一个维度代表一个词）：</p>
+<p>•维度灾难：词表 10 万，向量就是 10 万维；</p>
+<p>•无语义：猫 和 狗 的向量正交，距离为 0——没有「相似词相近」。</p>
+<p>1.2 Word2Vec（Mikolov 2013）：分布式表示的诞生</p>
+<p>核心思想：用「上下文」学词的向量——出现在相似上下文的词，向量相近。</p>
+<p>•CBOW：用周围词预测中心词；</p>
+<p>•Skip-gram：用中心词预测周围词。</p>
+<p>•效果：king - man + woman ≈ queen 这类向量算术成立——词向量编码了语义关系。</p>
+<p>💡 学习要点：分布式表示 = 一切的基础「用上下文学表示」这个思想，从 word2vec 一路延续到 BERT/GPT 的预训练——只是规模从词表换成了整个互联网文本。</p>
+<p>04SECTION</p>
+<p>二、序列建模：RNN 与 LSTM</p>
+<p>2.1 为什么需要序列模型</p>
+<p>句子是有顺序的，词袋模型丢掉了顺序。RNN（循环神经网络）让网络逐步读词并携带记忆：</p>
+<p>code</p>
+<p>h_t = f(W·x_t + U·h_{t-1})</p>
+<p>2.2 LSTM（Hochreiter 1997）：解决「长程记忆」</p>
+<p>RNN 的梯度消失让「隔很远的词」学不到。LSTM 引入门控（输入门/遗忘门/输出门），让信息可以选择性记住或遗忘——可以记住「这个句子的主语是单数」直到句尾。</p>
+<p>2.3 局限（为 Transformer 埋下伏笔）</p>
+<p>•串行：必须一个词一个词算，无法并行（GPU 利用率低）；</p>
+<p>•长程弱：即便 LSTM，几千步的依赖仍吃力；</p>
+<p>•方向性：只能从左往右（单向），看不到后文。</p>
+<p>05SECTION</p>
+<p>三、Seq2Seq 与注意力（Attention 的诞生）</p>
+<p>3.1 Seq2Seq（2014）：编码器-解码器框架</p>
+<p>机器翻译的标准框架：编码器把整个源句压成一个向量 → 解码器逐词生成译文。问题：一个向量装不下整句信息，长句翻译崩坏。</p>
+<p>3.2 Bahdanau 注意力（2015）：「对齐」思想</p>
+<p>注意力（Attention）：解码每一步时，不是只看那个「总结向量」，而是回看源句的每个词、按相关性加权——权重高的词贡献大。</p>
+<p>code</p>
+<p>attention 权重 = 当前解码状态 与 各源词编码 的相关性</p>
+<p>💡 学习要点：Attention = 按相关性加权读取「加权读取」是 2017 年 Transformer 的核心组件。Bahdanau 的注意力还只是 Seq2Seq 的辅助机制，Transformer 把它扶正为唯一机制——这是下一篇的引子。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1词表示三阶段：One-Hot（无语义）→ 分布式（word2vec，用上下文学向量）→ 上下文化表示（下一篇的 ELMo/BERT）。</p>
+<p>2序列建模两难：RNN/LSTM 能记顺序但串行且长程弱——这是 Transformer 要解决的痛点。</p>
+<p>3注意力诞生：Bahdanau 2015 提出按相关性加权读取，为「Attention Is All You Need」铺路。</p>
+<p>4主线：分布式表示 → 序列建模 → 注意力 = 2017 前夜的全部。</p>
+<p>07SECTION</p>
+<p>五、下一篇预告</p>
+<p>第 01 篇是本系列的第一个高潮：Transformer 革命（2017）——为什么「注意力即一切」能干掉 RNN，以及它开启的三大预训练范式：ELMo（双向语言模型）、BERT（双向编码器）、GPT（单向生成式）——三者的分工与较量，直接决定了今天 LLM 的形态。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Word2Vec（Mikolov et al., 2013）：https://arxiv.org/abs/1301.3781</p>
+<p>•[官方] LSTM（Hochreiter &amp; Schmidhuber, 1997）：https://www.bioinf.jku.at/publications/older/2604.pdf</p>
+<p>•[官方] Seq2Seq（Sutskever et al., 2014）：https://arxiv.org/abs/1409.3215</p>
+<p>•[官方] Bahdanau Attention（2015）：https://arxiv.org/abs/1409.0473</p>
+<p>整理：2026-10-01 月绡凝 · 依据原论文。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/g7YRepn_1wiZ3LUZ_jQRLg" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

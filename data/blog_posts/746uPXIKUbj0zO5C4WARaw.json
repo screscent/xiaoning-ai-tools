@@ -1,0 +1,387 @@
+{
+ "slug": "746uPXIKUbj0zO5C4WARaw",
+ "title": "Agentic 模型训练：把「会干活」训进模型",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/746uPXIKUbj0zO5C4WARaw",
+ "digest": "Agentic 模型训练：把「会干活」训进模型",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 原理系列板块三·训练第 08 篇——Agentic 模型训练：从「用通用模型搭 Agent」到「把模型训练成 Agent」。function calling SFT → agent RL → 推理模型 × Agent（o1/R1/GPT-5）。衔接 llm-基础理论 05（推理时代）。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方论文为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 08 篇 · Agentic 模型训练：把「会干活」训进模型"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "00-07 篇讲的都是用通用模型 + 框架搭 Agent——模型只负责「想」，工具循环由外层代码管。但 2025 年出现第三条路：直接训练模型原生会 Agent 化（Qwen3-Coder 的 agent RL、GPT-5 的长程工具链）。本篇讲这条训练线的三段演进与原理。"
+  },
+  {
+   "type": "p",
+   "text": "03WHY"
+  },
+  {
+   "type": "p",
+   "text": "一、为什么需要「训进模型」"
+  },
+  {
+   "type": "p",
+   "text": "外层搭（prompt + 框架）"
+  },
+  {
+   "type": "p",
+   "text": "训进模型（agentic 训练）"
+  },
+  {
+   "type": "p",
+   "text": "依赖提示词工程，脆弱"
+  },
+  {
+   "type": "p",
+   "text": "行为成为模型内化能力，稳"
+  },
+  {
+   "type": "p",
+   "text": "工具调用靠「会模仿」，易错"
+  },
+  {
+   "type": "p",
+   "text": "学会「何时调、怎么调、错了怎么修」"
+  },
+  {
+   "type": "p",
+   "text": "长任务靠外层步数上限，易迷路"
+  },
+  {
+   "type": "p",
+   "text": "模型自带长程规划与自我校验"
+  },
+  {
+   "type": "p",
+   "text": "每个框架重写一遍逻辑"
+  },
+  {
+   "type": "p",
+   "text": "模型原生输出工具指令，框架只做执行"
+  },
+  {
+   "type": "p",
+   "text": "•代价：训练数据/算力贵、专精化可能损失通用能力——通用与专精的权衡。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、训练线三段演进"
+  },
+  {
+   "type": "p",
+   "text": "第 1 段：Function Calling SFT（2023-2024）"
+  },
+  {
+   "type": "p",
+   "text": "•做法：人工构造「指令 → 工具调用序列」数据，SFT 让模型学会输出结构化工具指令；"
+  },
+  {
+   "type": "p",
+   "text": "•里程碑：OpenAI 2023-06 function calling 成为产品标准，各家对齐；"
+  },
+  {
+   "type": "p",
+   "text": "•局限：只学会「调用」，不学会「规划」——长任务仍靠外层循环。"
+  },
+  {
+   "type": "p",
+   "text": "第 2 段：Agentic RL（2025 起）"
+  },
+  {
+   "type": "p",
+   "text": "•做法：强化学习直接训练「完整任务链」——模型从任务开始，自主规划 → 调工具 → 看结果 → 修正 → 完成；"
+  },
+  {
+   "type": "p",
+   "text": "•奖励信号：可验证结果（代码跑通、任务完成、测试通过）——与 R1 推理 RL（llm-理论 05）同源；"
+  },
+  {
+   "type": "p",
+   "text": "•代表：Qwen3-Coder（agent RL + 480B MoE）、各家编程/浏览器 Agent 模型；"
+  },
+  {
+   "type": "p",
+   "text": "•效果：模型学会「长程保持目标、错误自愈、工具选择」——agent 能力从外层逻辑变成内化行为。"
+  },
+  {
+   "type": "p",
+   "text": "第 3 段：推理模型 × Agent（2024-2026 合流）"
+  },
+  {
+   "type": "p",
+   "text": "•o1/R1：RL 训出「先想后答」——思考链成为模型能力；"
+  },
+  {
+   "type": "p",
+   "text": "•GPT-5 系列：推理与工具链合一——边想边调工具、长程几十次调用不迷路（SWE-bench 74.9%、τ²-bench 96.7%）；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：「想多深」与「干多久」都成为可训练、可调度的资源（测试时扩展 × 长程任务）。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：训练线 = 把「ReAct 循环」从提示词搬进权重ReAct（2022）是提示技巧，agent RL 把它变成训练目标——循环变成本能。三段演进 = 先会调用（SFT）→ 会规划（RL）→ 会深思（推理×Agent）。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、agent RL 的关键设计"
+  },
+  {
+   "type": "p",
+   "text": "设计点"
+  },
+  {
+   "type": "p",
+   "text": "说明"
+  },
+  {
+   "type": "p",
+   "text": "可验证奖励"
+  },
+  {
+   "type": "p",
+   "text": "用「任务是否真的完成/代码是否跑通」当信号（比偏好打分更客观）——GRPO 思路（llm-理论 03/05）"
+  },
+  {
+   "type": "p",
+   "text": "长程轨迹"
+  },
+  {
+   "type": "p",
+   "text": "训练样本是整个任务链（几十步），不是单轮问答——算力与数据成本高"
+  },
+  {
+   "type": "p",
+   "text": "自我纠错"
+  },
+  {
+   "type": "p",
+   "text": "RL 中模型学会「观察错误 → 修正路径」（类似 R1 的 aha moment，但作用于工具链）"
+  },
+  {
+   "type": "p",
+   "text": "失败采样"
+  },
+  {
+   "type": "p",
+   "text": "保留失败轨迹做反例——教模型「什么是错的」"
+  },
+  {
+   "type": "p",
+   "text": "多任务混合"
+  },
+  {
+   "type": "p",
+   "text": "防止只过拟合单类任务——通用性保持"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、Agentic 模型的评测（怎么算「会干活」）"
+  },
+  {
+   "type": "p",
+   "text": "基准"
+  },
+  {
+   "type": "p",
+   "text": "测什么"
+  },
+  {
+   "type": "p",
+   "text": "代表分数"
+  },
+  {
+   "type": "p",
+   "text": "SWE-bench"
+  },
+  {
+   "type": "p",
+   "text": "真实软件工程任务"
+  },
+  {
+   "type": "p",
+   "text": "GPT-5：74.9%"
+  },
+  {
+   "type": "p",
+   "text": "τ²-bench"
+  },
+  {
+   "type": "p",
+   "text": "长程工具调用链"
+  },
+  {
+   "type": "p",
+   "text": "GPT-5：96.7%"
+  },
+  {
+   "type": "p",
+   "text": "OSWorld"
+  },
+  {
+   "type": "p",
+   "text": "计算机使用（GUI）"
+  },
+  {
+   "type": "p",
+   "text": "Sonnet 4.5：61.4%"
+  },
+  {
+   "type": "p",
+   "text": "Tau2/WebArena"
+  },
+  {
+   "type": "p",
+   "text": "工具链 / 浏览器任务"
+  },
+  {
+   "type": "p",
+   "text": "各家 SOTA 交替"
+  },
+  {
+   "type": "p",
+   "text": "•关键：Agent 评测必须是「任务级」而非「问答级」——测「干成了没」，不是「答对了没」。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、工程实践要点"
+  },
+  {
+   "type": "p",
+   "text": "1两条路并存：外层框架（快速迭代、换模型灵活）与内化训练（稳、长程强）按任务选——不是替代关系；"
+  },
+  {
+   "type": "p",
+   "text": "2专精化要锚定任务：编程 Agent 训编程轨迹、浏览器 Agent 训界面轨迹——数据决定专长；"
+  },
+  {
+   "type": "p",
+   "text": "3评测驱动：用 SWE-bench/OSWorld 等任务级基准做迭代门禁（对齐「不靠自评」思想）；"
+  },
+  {
+   "type": "p",
+   "text": "4成本意识：agent RL 训练极贵——先在「错误率损失最大的任务」上专精。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1为什么训：外层搭脆弱、易迷路；内化稳、长程强——「循环变本能」。"
+  },
+  {
+   "type": "p",
+   "text": "2三段演进：Function Calling SFT（会调用）→ agent RL（会规划）→ 推理×Agent（会深思）。"
+  },
+  {
+   "type": "p",
+   "text": "3agent RL 核心：可验证奖励（GRPO 思路）+ 长程轨迹 + 自我纠错 + 失败反例。"
+  },
+  {
+   "type": "p",
+   "text": "4评测：任务级基准（SWE-bench/τ²/OSWorld）——测「干成了没」。"
+  },
+  {
+   "type": "p",
+   "text": "5实践：双路并存、专精锚定任务、评测驱动、成本意识。"
+  },
+  {
+   "type": "p",
+   "text": "6衔接：agent RL 与 R1 推理 RL 同源（llm-理论 05）——「会想」与「会干」一体训练。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "七、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 09 篇（板块四·应用）：编码 Agent 与计算机使用 Agent——训练（08）之后的落地形态：Claude Code/Cursor/Codex 这类「编程同事」，和 Claude Computer Use/AutoGLM 这类「自己操作电脑手机的数字员工」。Agent 最强应用 = 软件工程与桌面自动化。"
+  },
+  {
+   "type": "p",
+   "text": "10SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Qwen3-Coder（agent RL，2025）：https://qwenlm.github.io/blog/qwen3-coder/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] OpenAI Function Calling 文档：https://platform.openai.com/docs/guides/function-calling"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] GPT-5 / o1 / R1（推理 × Agent，见家族系列）"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] LLM Agents 训练综述（From Language to Action, 2508.17281）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方论文与发布说明。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:47+0800"
+}

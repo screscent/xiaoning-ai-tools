@@ -1,0 +1,523 @@
+{
+ "slug": "0cBNA5AreL8jZiYhSIPEcg",
+ "title": "第 01 篇 · Eino 定位与组件：认识「队员」",
+ "author": "月牙寂",
+ "publish_time": "2026-10-02",
+ "source_url": "https://mp.weixin.qq.com/s/0cBNA5AreL8jZiYhSIPEcg",
+ "digest": "第 01 篇 · Eino 定位与组件：认识「队员」",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 实战系列板块一·框架第 01 篇——Eino 定位与组件：为什么 Go 项目选 Eino、9 类组件抽象与官方实现、组件单独用 vs 编排用的区别。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方文档为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 01 篇 · Eino 定位与组件：认识「队员」"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "实战地图（00 篇）把 Eino 列为 Go 专线主角。本篇「认识队员」：Eino 是什么、为什么 Go 项目值得选它、它的 9 类组件抽象长什么样、组件单独用与编排用的差别。跑通一个最小 ChatModel 调用，你就站在起跑线上了。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、Eino 是什么（官方定位）"
+  },
+  {
+   "type": "p",
+   "text": "•一句话：字节跳动开源的 Go 语言 LLM 应用开发框架（CloudWeGo 旗下，Apache-2.0，当前 v0.8.0）——覆盖 LLM 应用 DevOps 全流程（开发/调试/追踪/评测）；"
+  },
+  {
+   "type": "p",
+   "text": "•血统：借鉴 LangChain/LlamaIndex/Google ADK 的设计，但按 Go 惯例重做——强类型、可读、可靠；"
+  },
+  {
+   "type": "p",
+   "text": "•背书：豆包、抖音、扣子等多业务线、数百服务内部接入，内外用一套代码。"
+  },
+  {
+   "type": "p",
+   "text": "1.1 为什么 Go 项目选 Eino（对照 Python 框架）"
+  },
+  {
+   "type": "p",
+   "text": "维度"
+  },
+  {
+   "type": "p",
+   "text": "Python 系（LangChain 等）"
+  },
+  {
+   "type": "p",
+   "text": "Eino（Go）"
+  },
+  {
+   "type": "p",
+   "text": "类型"
+  },
+  {
+   "type": "p",
+   "text": "动态类型，重构易错"
+  },
+  {
+   "type": "p",
+   "text": "强类型"
+  },
+  {
+   "type": "p",
+   "text": "：接口/泛型，编译期查错"
+  },
+  {
+   "type": "p",
+   "text": "性能/部署"
+  },
+  {
+   "type": "p",
+   "text": "解释型、需 Python 运行时"
+  },
+  {
+   "type": "p",
+   "text": "编译型、单二进制、适合高并发服务"
+  },
+  {
+   "type": "p",
+   "text": "流式"
+  },
+  {
+   "type": "p",
+   "text": "需额外库"
+  },
+  {
+   "type": "p",
+   "text": "一等公民"
+  },
+  {
+   "type": "p",
+   "text": "：StreamReader 原生流处理"
+  },
+  {
+   "type": "p",
+   "text": "生态"
+  },
+  {
+   "type": "p",
+   "text": "最广"
+  },
+  {
+   "type": "p",
+   "text": "字节系（豆包 Ark）深度集成，社区增长中"
+  },
+  {
+   "type": "p",
+   "text": "适用"
+  },
+  {
+   "type": "p",
+   "text": "快速原型/研究"
+  },
+  {
+   "type": "p",
+   "text": "生产服务接入"
+  },
+  {
+   "type": "p",
+   "text": "（Go 存量项目、性能敏感）"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：Eino =「把 LLM 应用工程的坑，用强类型堵住」Go 的接口 + 泛型让「组件输入输出是什么」编译期就明确——代码即文档。Python 拼起来快，Go 改起来稳。选型：快原型用 Python，上生产服务用 Go。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、9 类组件抽象（队员清单）"
+  },
+  {
+   "type": "p",
+   "text": "Eino 的每个组件是 Go 接口：固定输入输出类型 + Option + 方法签名。官方实现覆盖主流："
+  },
+  {
+   "type": "p",
+   "text": "组件"
+  },
+  {
+   "type": "p",
+   "text": "职责"
+  },
+  {
+   "type": "p",
+   "text": "官方实现"
+  },
+  {
+   "type": "p",
+   "text": "ChatModel"
+  },
+  {
+   "type": "p",
+   "text": "与大模型交互：Message[] → Message"
+  },
+  {
+   "type": "p",
+   "text": "OpenAI、Claude、Gemini、豆包 Ark、Ollama"
+  },
+  {
+   "type": "p",
+   "text": "Tool"
+  },
+  {
+   "type": "p",
+   "text": "与世界交互：模型输出 → 执行动作"
+  },
+  {
+   "type": "p",
+   "text": "Google Search、DuckDuckGo 等"
+  },
+  {
+   "type": "p",
+   "text": "Retriever"
+  },
+  {
+   "type": "p",
+   "text": "检索相关上下文（接地事实）"
+  },
+  {
+   "type": "p",
+   "text": "ElasticSearch、Volc VikingDB"
+  },
+  {
+   "type": "p",
+   "text": "ChatTemplate"
+  },
+  {
+   "type": "p",
+   "text": "外部输入 → 预设格式 prompt"
+  },
+  {
+   "type": "p",
+   "text": "DefaultChatTemplate"
+  },
+  {
+   "type": "p",
+   "text": "Document Loader"
+  },
+  {
+   "type": "p",
+   "text": "加载文本"
+  },
+  {
+   "type": "p",
+   "text": "WebURL、Amazon S3、File"
+  },
+  {
+   "type": "p",
+   "text": "Document Transformer"
+  },
+  {
+   "type": "p",
+   "text": "按规则转换文本（切分/重排）"
+  },
+  {
+   "type": "p",
+   "text": "HTMLSplitter、ScoreReranker"
+  },
+  {
+   "type": "p",
+   "text": "Indexer"
+  },
+  {
+   "type": "p",
+   "text": "存储并建索引（供 Retriever）"
+  },
+  {
+   "type": "p",
+   "text": "ElasticSearch、VikingDB"
+  },
+  {
+   "type": "p",
+   "text": "Embedding"
+  },
+  {
+   "type": "p",
+   "text": "文本 → 向量（Retriever/Indexer 依赖）"
+  },
+  {
+   "type": "p",
+   "text": "OpenAI、Ark"
+  },
+  {
+   "type": "p",
+   "text": "Lambda"
+  },
+  {
+   "type": "p",
+   "text": "用户定制函数"
+  },
+  {
+   "type": "p",
+   "text": "JSONMessageParser 等"
+  },
+  {
+   "type": "p",
+   "text": "•使用范式：先决定「要哪个组件抽象」（我需要一个前锋），再选「哪个实现」（谁当前锋）——抽象与实现分离。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、最小实战：单独用 ChatModel"
+  },
+  {
+   "type": "p",
+   "text": "go"
+  },
+  {
+   "type": "p",
+   "text": "import ("
+  },
+  {
+   "type": "p",
+   "text": "\"github.com/cloudwego/eino-ext/components/model/openai\""
+  },
+  {
+   "type": "p",
+   "text": ")"
+  },
+  {
+   "type": "p",
+   "text": "func main() {"
+  },
+  {
+   "type": "p",
+   "text": "// 创建一个可调用的 LLM 实例（OpenAI 实现）"
+  },
+  {
+   "type": "p",
+   "text": "model, _ := openai.NewChatModel(ctx, &openai.Config{"
+  },
+  {
+   "type": "p",
+   "text": "APIKey: os.Getenv(\"OPENAI_API_KEY\"),"
+  },
+  {
+   "type": "p",
+   "text": "Model: \"gpt-4o\","
+  },
+  {
+   "type": "p",
+   "text": "})"
+  },
+  {
+   "type": "p",
+   "text": "// 直接调用：输入消息数组，得到模型输出"
+  },
+  {
+   "type": "p",
+   "text": "message, _ := model.Generate(ctx, []*schema.Message{"
+  },
+  {
+   "type": "p",
+   "text": "schema.SystemMessage(\"you are a helpful assistant.\"),"
+  },
+  {
+   "type": "p",
+   "text": "schema.UserMessage(\"what does the future AI App look like?\"),"
+  },
+  {
+   "type": "p",
+   "text": "})"
+  },
+  {
+   "type": "p",
+   "text": "println(message.Content)"
+  },
+  {
+   "type": "p",
+   "text": "}"
+  },
+  {
+   "type": "p",
+   "text": "•关键：Generate（一次性）/ Stream（流式，返回 StreamReader[*Message]）/ BindTools（绑定工具）三个方法——单组件就能跑通 LLM 调用。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：先跑通「组件单独用」，再学「编排」单独用 = 一个 ChatModel 一个调用；编排 = 多个组件连成图。别跳过第一步——先确认「队员能踢」，再谈「阵型」。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、单独用 vs 编排用的本质区别"
+  },
+  {
+   "type": "p",
+   "text": "单独用组件"
+  },
+  {
+   "type": "p",
+   "text": "编排（Chain/Graph）"
+  },
+  {
+   "type": "p",
+   "text": "场景"
+  },
+  {
+   "type": "p",
+   "text": "一次模型调用"
+  },
+  {
+   "type": "p",
+   "text": "多组件协同（检索→提示→模型→工具）"
+  },
+  {
+   "type": "p",
+   "text": "流式"
+  },
+  {
+   "type": "p",
+   "text": "自己处理"
+  },
+  {
+   "type": "p",
+   "text": "框架处理流的复制/合并/拼接"
+  },
+  {
+   "type": "p",
+   "text": "类型检查"
+  },
+  {
+   "type": "p",
+   "text": "手动"
+  },
+  {
+   "type": "p",
+   "text": "编译期图类型检查"
+  },
+  {
+   "type": "p",
+   "text": "并发"
+  },
+  {
+   "type": "p",
+   "text": "手动"
+  },
+  {
+   "type": "p",
+   "text": "框架管理扇入扇出"
+  },
+  {
+   "type": "p",
+   "text": "收益"
+  },
+  {
+   "type": "p",
+   "text": "简单"
+  },
+  {
+   "type": "p",
+   "text": "复杂业务逻辑的「骨架」（下一章）"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1Eino：字节 Go LLM 框架（Apache-2.0，v0.8.0）——豆包/抖音在用，覆盖 DevOps 全流程。"
+  },
+  {
+   "type": "p",
+   "text": "2为什么 Go：强类型（代码即文档）/ 性能单二进制 / 流式一等公民 / 生产服务友好。"
+  },
+  {
+   "type": "p",
+   "text": "39 组件：ChatModel/Tool/Retriever/ChatTemplate/Loader/Transformer/Indexer/Embedding/Lambda——抽象与实现分离。"
+  },
+  {
+   "type": "p",
+   "text": "4三方法：Generate（一次）/ Stream（流式 StreamReader）/ BindTools（绑工具）。"
+  },
+  {
+   "type": "p",
+   "text": "5路径：先单独用跑通，再学编排（下一篇）。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 02 篇（板块一·框架）：Eino 编排实战——Chain（单向链）/ Graph（有向图 + Branch）/ Workflow（字段级映射 DAG）三种编排怎么选，以及官方预构建的 ReAct Agent（给模型+工具即跑推理行动循环）。从「单个队员」到「排兵布阵」。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Eino 开源公告：https://www.cloudwego.io/zh/docs/eino/overview/eino_open_source/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Eino 文档总览（组件/编排）：https://www.cloudwego.io/docs/eino/overview/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Eino GitHub：https://github.com/cloudwego/eino ｜ eino-ext：https://github.com/cloudwego/eino-ext"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Eino 实践（豆包实战）：https://www.cloudwego.io/docs/eino/overview/bytedance_eino_practice/"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-02 月绡凝 · 依据官方文档。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:17+0800"
+}

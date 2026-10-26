@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic 模型训练：把「会干活」训进模型 | 小凝 AI 工具集</title>
+<meta name="description" content="Agentic 模型训练：把「会干活」训进模型">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/746uPXIKUbj0zO5C4WARaw.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agentic 模型训练：把「会干活」训进模型 | 小凝 AI 工具集">
+<meta property="og:description" content="Agentic 模型训练：把「会干活」训进模型">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/746uPXIKUbj0zO5C4WARaw.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agentic 模型训练：把「会干活」训进模型", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/746uPXIKUbj0zO5C4WARaw.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "Agentic 模型训练：把「会干活」训进模型"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>Agentic 模型训练：把「会干活」训进模型</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">Agentic 模型训练：把「会干活」训进模型</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 原理系列板块三·训练第 08 篇——Agentic 模型训练：从「用通用模型搭 Agent」到「把模型训练成 Agent」。function calling SFT → agent RL → 推理模型 × Agent（o1/R1/GPT-5）。衔接 llm-基础理论 05（推理时代）。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方论文为准。</p>
+<p>01SECTION</p>
+<p>第 08 篇 · Agentic 模型训练：把「会干活」训进模型</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>00-07 篇讲的都是用通用模型 + 框架搭 Agent——模型只负责「想」，工具循环由外层代码管。但 2025 年出现第三条路：直接训练模型原生会 Agent 化（Qwen3-Coder 的 agent RL、GPT-5 的长程工具链）。本篇讲这条训练线的三段演进与原理。</p>
+<p>03WHY</p>
+<p>一、为什么需要「训进模型」</p>
+<p>外层搭（prompt + 框架）</p>
+<p>训进模型（agentic 训练）</p>
+<p>依赖提示词工程，脆弱</p>
+<p>行为成为模型内化能力，稳</p>
+<p>工具调用靠「会模仿」，易错</p>
+<p>学会「何时调、怎么调、错了怎么修」</p>
+<p>长任务靠外层步数上限，易迷路</p>
+<p>模型自带长程规划与自我校验</p>
+<p>每个框架重写一遍逻辑</p>
+<p>模型原生输出工具指令，框架只做执行</p>
+<p>•代价：训练数据/算力贵、专精化可能损失通用能力——通用与专精的权衡。</p>
+<p>04SECTION</p>
+<p>二、训练线三段演进</p>
+<p>第 1 段：Function Calling SFT（2023-2024）</p>
+<p>•做法：人工构造「指令 → 工具调用序列」数据，SFT 让模型学会输出结构化工具指令；</p>
+<p>•里程碑：OpenAI 2023-06 function calling 成为产品标准，各家对齐；</p>
+<p>•局限：只学会「调用」，不学会「规划」——长任务仍靠外层循环。</p>
+<p>第 2 段：Agentic RL（2025 起）</p>
+<p>•做法：强化学习直接训练「完整任务链」——模型从任务开始，自主规划 → 调工具 → 看结果 → 修正 → 完成；</p>
+<p>•奖励信号：可验证结果（代码跑通、任务完成、测试通过）——与 R1 推理 RL（llm-理论 05）同源；</p>
+<p>•代表：Qwen3-Coder（agent RL + 480B MoE）、各家编程/浏览器 Agent 模型；</p>
+<p>•效果：模型学会「长程保持目标、错误自愈、工具选择」——agent 能力从外层逻辑变成内化行为。</p>
+<p>第 3 段：推理模型 × Agent（2024-2026 合流）</p>
+<p>•o1/R1：RL 训出「先想后答」——思考链成为模型能力；</p>
+<p>•GPT-5 系列：推理与工具链合一——边想边调工具、长程几十次调用不迷路（SWE-bench 74.9%、τ²-bench 96.7%）；</p>
+<p>•意义：「想多深」与「干多久」都成为可训练、可调度的资源（测试时扩展 × 长程任务）。</p>
+<p>💡 学习要点：训练线 = 把「ReAct 循环」从提示词搬进权重ReAct（2022）是提示技巧，agent RL 把它变成训练目标——循环变成本能。三段演进 = 先会调用（SFT）→ 会规划（RL）→ 会深思（推理×Agent）。</p>
+<p>05SECTION</p>
+<p>三、agent RL 的关键设计</p>
+<p>设计点</p>
+<p>说明</p>
+<p>可验证奖励</p>
+<p>用「任务是否真的完成/代码是否跑通」当信号（比偏好打分更客观）——GRPO 思路（llm-理论 03/05）</p>
+<p>长程轨迹</p>
+<p>训练样本是整个任务链（几十步），不是单轮问答——算力与数据成本高</p>
+<p>自我纠错</p>
+<p>RL 中模型学会「观察错误 → 修正路径」（类似 R1 的 aha moment，但作用于工具链）</p>
+<p>失败采样</p>
+<p>保留失败轨迹做反例——教模型「什么是错的」</p>
+<p>多任务混合</p>
+<p>防止只过拟合单类任务——通用性保持</p>
+<p>06SECTION</p>
+<p>四、Agentic 模型的评测（怎么算「会干活」）</p>
+<p>基准</p>
+<p>测什么</p>
+<p>代表分数</p>
+<p>SWE-bench</p>
+<p>真实软件工程任务</p>
+<p>GPT-5：74.9%</p>
+<p>τ²-bench</p>
+<p>长程工具调用链</p>
+<p>GPT-5：96.7%</p>
+<p>OSWorld</p>
+<p>计算机使用（GUI）</p>
+<p>Sonnet 4.5：61.4%</p>
+<p>Tau2/WebArena</p>
+<p>工具链 / 浏览器任务</p>
+<p>各家 SOTA 交替</p>
+<p>•关键：Agent 评测必须是「任务级」而非「问答级」——测「干成了没」，不是「答对了没」。</p>
+<p>07SECTION</p>
+<p>五、工程实践要点</p>
+<p>1两条路并存：外层框架（快速迭代、换模型灵活）与内化训练（稳、长程强）按任务选——不是替代关系；</p>
+<p>2专精化要锚定任务：编程 Agent 训编程轨迹、浏览器 Agent 训界面轨迹——数据决定专长；</p>
+<p>3评测驱动：用 SWE-bench/OSWorld 等任务级基准做迭代门禁（对齐「不靠自评」思想）；</p>
+<p>4成本意识：agent RL 训练极贵——先在「错误率损失最大的任务」上专精。</p>
+<p>08SECTION</p>
+<p>六、本篇要点（复习卡片）</p>
+<p>1为什么训：外层搭脆弱、易迷路；内化稳、长程强——「循环变本能」。</p>
+<p>2三段演进：Function Calling SFT（会调用）→ agent RL（会规划）→ 推理×Agent（会深思）。</p>
+<p>3agent RL 核心：可验证奖励（GRPO 思路）+ 长程轨迹 + 自我纠错 + 失败反例。</p>
+<p>4评测：任务级基准（SWE-bench/τ²/OSWorld）——测「干成了没」。</p>
+<p>5实践：双路并存、专精锚定任务、评测驱动、成本意识。</p>
+<p>6衔接：agent RL 与 R1 推理 RL 同源（llm-理论 05）——「会想」与「会干」一体训练。</p>
+<p>09SECTION</p>
+<p>七、下一篇预告</p>
+<p>第 09 篇（板块四·应用）：编码 Agent 与计算机使用 Agent——训练（08）之后的落地形态：Claude Code/Cursor/Codex 这类「编程同事」，和 Claude Computer Use/AutoGLM 这类「自己操作电脑手机的数字员工」。Agent 最强应用 = 软件工程与桌面自动化。</p>
+<p>10SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Qwen3-Coder（agent RL，2025）：https://qwenlm.github.io/blog/qwen3-coder/</p>
+<p>•[官方] OpenAI Function Calling 文档：https://platform.openai.com/docs/guides/function-calling</p>
+<p>•[官方] GPT-5 / o1 / R1（推理 × Agent，见家族系列）</p>
+<p>•[参考] LLM Agents 训练综述（From Language to Action, 2508.17281）</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方论文与发布说明。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/746uPXIKUbj0zO5C4WARaw" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

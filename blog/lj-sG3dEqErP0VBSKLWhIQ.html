@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>编码 Agent 与计算机使用 Agent | 小凝 AI 工具集</title>
+<meta name="description" content="编码 Agent 与计算机使用 Agent">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/lj-sG3dEqErP0VBSKLWhIQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="编码 Agent 与计算机使用 Agent | 小凝 AI 工具集">
+<meta property="og:description" content="编码 Agent 与计算机使用 Agent">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/lj-sG3dEqErP0VBSKLWhIQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "编码 Agent 与计算机使用 Agent", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/lj-sG3dEqErP0VBSKLWhIQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "编码 Agent 与计算机使用 Agent"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>编码 Agent 与计算机使用 Agent</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">编码 Agent 与计算机使用 Agent</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 原理系列板块四·应用第 09 篇——编码 Agent 与计算机使用 Agent：目前落地最强、最受关注的两类 Agent，看构成/机制/训练原理如何在这里兑现（SWE-bench / OSWorld）。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方发布为准。</p>
+<p>01SECTION</p>
+<p>第 09 篇 · 编码 Agent 与计算机使用 Agent</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>前 8 篇是「原理」，本篇看「兑现」：Agent 目前最值钱的两张应用牌——编码 Agent（改代码、提 PR，Claude Code/Cursor/Codex）和计算机使用 Agent（自己操作电脑手机，Claude Computer Use/AutoGLM）。它们把感知、推理、记忆、行动、训练（01-08 篇）全部串起来，是「数字员工」的雏形。</p>
+<p>03SECTION</p>
+<p>一、编码 Agent（Coding Agent）</p>
+<p>1.1 是什么</p>
+<p>•不是「自动补全一行」，而是独立完成软件工程任务：读代码库 → 定位问题 → 改代码 → 跑测试 → 提 PR；</p>
+<p>•代表：Claude Code（终端 Agent）、Cursor（IDE Agent）、Codex（OpenAI）、Devin、Qwen3-Coder；</p>
+<p>•基准：SWE-bench Verified（真实 GitHub issue 修复）——GPT-5 达 74.9%。</p>
+<p>1.2 原理拆解（对照 01-08）</p>
+<p>系统</p>
+<p>在编码 Agent 里是什么</p>
+<p>感知（01）</p>
+<p>读代码库文件树、检索符号、看测试输出——代码即「世界」</p>
+<p>推理（02）</p>
+<p>定位 bug → 规划修复方案 → 反思测试为何红</p>
+<p>记忆（03）</p>
+<p>代码库索引（RAG）+ 会话上下文 + 项目约定</p>
+<p>行动（04）</p>
+<p>编辑文件、跑命令、执行测试、git 操作</p>
+<p>训练（08）</p>
+<p>agent RL 专门训练（Qwen3-Coder 480B / 各家 coding 模型）</p>
+<p>安全（07）</p>
+<p>写文件确认、命令白名单、断点回滚</p>
+<p>1.3 关键工程：长程任务</p>
+<p>•一个真实 issue 要十几步到几十步：改 5 个文件、跑 3 轮测试——长程目标保持是最大难点；</p>
+<p>•解法：上下文工程（03 篇）+ 检查点续跑 + 失败反思重试（02 篇）+ agent RL 内化（08 篇）。</p>
+<p>💡 学习要点：编码 Agent = 四大系统 × 长程训练的「集大成」它是感知（代码库）、推理（调试）、行动（git/测试）最密集的场景，也是 agent RL 回报最明显的场景——软件工程成了 Agent 的第一个成熟战场。</p>
+<p>04SECTION</p>
+<p>二、计算机使用 Agent（Computer-Use Agent，CUA）</p>
+<p>2.1 是什么</p>
+<p>•模型像人一样操作界面：看屏幕 → 决定点击/输入 → 执行 → 看结果（感知 01 篇的环境鸿沟在这里兑现）；</p>
+<p>•代表：Claude Computer Use（OSWorld 61.4%）、GPT-4o（agentic 视觉）、AutoGLM（手机）、浏览器 Agent（WebArena）；</p>
+<p>•应用：网页填表、跨应用整理、桌面自动化、手机操作。</p>
+<p>2.2 原理拆解</p>
+<p>系统</p>
+<p>在 CUA 里是什么</p>
+<p>感知</p>
+<p>截图（视觉）+ UI 树（结构）双通道；理解界面语义（语义鸿沟三解法）</p>
+<p>推理</p>
+<p>分解任务（打开→定位→操作→校验）+ 界面出错后的反思</p>
+<p>记忆</p>
+<p>界面状态历史 + 任务目标保持</p>
+<p>行动</p>
+<p>点击(x,y)/输入文本/按键/滚动——「手脚」原语</p>
+<p>训练</p>
+<p>大量「截图→操作」轨迹数据 + agent RL（08 篇）</p>
+<p>2.3 难度与趋势</p>
+<p>•难点：界面动态变化、元素定位漂移、无 API 的老软件——比编码 Agent 更不稳定（OSWorld 66.3% 已是大进步，但离可靠还远）；</p>
+<p>•趋势：环境侧改造（AIOS「Computer as MCP Server」把界面变语义接口，衔接 05 篇）——让环境适应模型，可能是比「硬看截图」更稳的路线。</p>
+<p>💡 学习要点：编码 Agent「稳」，CUA「广」编码世界结构化（有语法、有测试），所以 Agent 已可用；GUI 世界是像素，所以还在爬坡。谁能把「没有 API 的世界」语义化（MCP/环境改造），谁就解锁最大应用面。</p>
+<p>05SECTION</p>
+<p>三、两类 Agent 的对照与启示</p>
+<p>维度</p>
+<p>编码 Agent</p>
+<p>CUA</p>
+<p>环境</p>
+<p>结构化（代码/测试/git）</p>
+<p>非结构化（像素/界面）</p>
+<p>成熟度</p>
+<p>高（SWE-bench 74.9%）</p>
+<p>中（OSWorld 66.3%）</p>
+<p>关键瓶颈</p>
+<p>长程任务保持</p>
+<p>界面感知与定位</p>
+<p>核心资产</p>
+<p>代码库理解</p>
+<p>视觉 + 界面操作</p>
+<p>代表</p>
+<p>Claude Code / Codex / Qwen3-Coder</p>
+<p>Claude Computer Use / AutoGLM</p>
+<p>•启示：Agent 的可用性 = 环境结构化程度——先把环境变语义（MCP/接口/测试），Agent 就好用一倍。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1编码 Agent：读库→改码→跑测→提 PR 全链路；SWE-bench 74.9%；长程保持是难点。</p>
+<p>2CUA：看屏幕→操作→校验循环；OSWorld 61.4%~66.3%；界面感知与定位是难点。</p>
+<p>3原理复用：四大系统（01-04）× 训练（08）× 安全（07）全兑现——编码 Agent 是集大成。</p>
+<p>4环境结构化是关键：编码世界已可用、GUI 世界在爬坡——环境改造（Computer as MCP Server）是杠杆。</p>
+<p>5启示：Agent 可用性 = 环境结构化程度 + 长程训练强度。</p>
+<p>07SECTION</p>
+<p>五、下一篇预告</p>
+<p>第 10 篇（板块四·应用）：研究/搜索 Agent 与常驻 Agent——编码和 CUA 是「动手型」，本篇是「动脑型 + 后台型」：deep research（把调研做成产品）与常驻 Agent（监听/巡检/周期任务，长期在线干活）。Agent 从「干一票」到「一直干」。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Claude Code / Claude Computer Use：https://www.anthropic.com/news</p>
+<p>•[官方] GPT-5（SWE-bench 74.9%）：https://openai.com/index/introducing-gpt-5/</p>
+<p>•[官方] Qwen3-Coder：https://qwenlm.github.io/blog/qwen3-coder/</p>
+<p>•[官方] AIOS 1.0 / LiteCUA：https://arxiv.org/abs/2505.18829</p>
+<p>•[参考] OSWorld 基准（Stanford/清华，2024-2025）：https://osworld.stanford.edu/</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方发布说明。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/lj-sG3dEqErP0VBSKLWhIQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

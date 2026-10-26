@@ -1,0 +1,347 @@
+{
+ "slug": "JTMv9hvNxtw0dWCf2etKnw",
+ "title": "Agent 实战地图",
+ "author": "月牙寂",
+ "publish_time": "2026-10-02",
+ "source_url": "https://mp.weixin.qq.com/s/JTMv9hvNxtw0dWCf2etKnw",
+ "digest": "Agent 实战地图",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 实战系列的开篇——实战地图：三条线的关系（原理→范式→实战）、四条实战路径（Go/通用/工程化/趋势）、工具链总览。供主人先定位「我该从哪开始动手」。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方文档为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "00 开篇 · Agent 实战地图"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "原理（agent-系列）告诉你 Agent 是什么，范式（agent-范式）告诉你有哪些设计模式——现在要动手了。本篇画一张「实战地图」：三条线怎么衔接、四条路径怎么选、工具链有哪些。读完你该知道：Go 选手从哪篇开始、Python 选手从哪篇开始、上生产前必须看什么。"
+  },
+  {
+   "type": "p",
+   "text": "03WHY"
+  },
+  {
+   "type": "p",
+   "text": "一、三条线的关系（为什么顺序很重要）"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "agent-系列（原理） agent-范式（范式） agent-实战（动手）"
+  },
+  {
+   "type": "p",
+   "text": "「Agent 由什么组成」 「有哪些设计模式」 「用什么搭、代码怎么写」"
+  },
+  {
+   "type": "p",
+   "text": "感知/推理/记忆/行动 ReAct/P&E/Workflow/ Eino 组件/编排/ADK"
+  },
+  {
+   "type": "p",
+   "text": "机制/训练/应用/平台 双血统/自进化/神经符号 MCP/PTC/多Agent 实战"
+  },
+  {
+   "type": "p",
+   "text": "•学习顺序建议：原理打底（知道概念）→ 范式选型（知道用什么模式）→ 实战落地（在框架里写出来）；"
+  },
+  {
+   "type": "p",
+   "text": "•本系列默认读者已有前两线概念，遇到 ReAct/MCP/多 Agent 只给「实战姿势」，不重复原理。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、四条实战路径（按你的背景选）"
+  },
+  {
+   "type": "p",
+   "text": "路径"
+  },
+  {
+   "type": "p",
+   "text": "板块"
+  },
+  {
+   "type": "p",
+   "text": "适合"
+  },
+  {
+   "type": "p",
+   "text": "起点"
+  },
+  {
+   "type": "p",
+   "text": "Go 专线"
+  },
+  {
+   "type": "p",
+   "text": "板块一·框架"
+  },
+  {
+   "type": "p",
+   "text": "Go 技术栈、字节生态、强类型洁癖"
+  },
+  {
+   "type": "p",
+   "text": "01 Eino 定位与组件"
+  },
+  {
+   "type": "p",
+   "text": "Python/通用线"
+  },
+  {
+   "type": "p",
+   "text": "板块二·通用"
+  },
+  {
+   "type": "p",
+   "text": "Python 技术栈、想快速上手"
+  },
+  {
+   "type": "p",
+   "text": "04 从零搭单 Agent"
+  },
+  {
+   "type": "p",
+   "text": "上生产线"
+  },
+  {
+   "type": "p",
+   "text": "板块三·工程化"
+  },
+  {
+   "type": "p",
+   "text": "要部署/监控/评测"
+  },
+  {
+   "type": "p",
+   "text": "08 生产级要点"
+  },
+  {
+   "type": "p",
+   "text": "趋势线"
+  },
+  {
+   "type": "p",
+   "text": "板块四·趋势"
+  },
+  {
+   "type": "p",
+   "text": "想做产品、跟前沿"
+  },
+  {
+   "type": "p",
+   "text": "09-10 形态与 Agent 2.0"
+  },
+  {
+   "type": "p",
+   "text": "•交叉建议：任何人最终都要过 08 工程化——「能跑」和「能上生产」是两回事。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、工具链总览（2026-10）"
+  },
+  {
+   "type": "p",
+   "text": "层"
+  },
+  {
+   "type": "p",
+   "text": "工具"
+  },
+  {
+   "type": "p",
+   "text": "定位"
+  },
+  {
+   "type": "p",
+   "text": "Go 框架Eino"
+  },
+  {
+   "type": "p",
+   "text": "（cloudwego/eino，v0.8.0）"
+  },
+  {
+   "type": "p",
+   "text": "字节 LLM 应用框架：组件 + Chain/Graph/Workflow + ADK；豆包/抖音在用"
+  },
+  {
+   "type": "p",
+   "text": "Python 框架"
+  },
+  {
+   "type": "p",
+   "text": "LangGraph / CrewAI / OpenAI SDK / Claude SDK"
+  },
+  {
+   "type": "p",
+   "text": "多 Agent、状态图、快速原型（agent-范式 11 篇有对比）"
+  },
+  {
+   "type": "p",
+   "text": "工具协议MCP"
+  },
+  {
+   "type": "p",
+   "text": "工具接入标准（agent-系列 05 篇原理，实战在 06 篇）"
+  },
+  {
+   "type": "p",
+   "text": "模型"
+  },
+  {
+   "type": "p",
+   "text": "OpenAI / Claude / Gemini / 豆包（Ark）/ Ollama"
+  },
+  {
+   "type": "p",
+   "text": "Eino 官方实现覆盖"
+  },
+  {
+   "type": "p",
+   "text": "运维"
+  },
+  {
+   "type": "p",
+   "text": "Eino Callback（tracing/日志）、LangSmith、评测工具"
+  },
+  {
+   "type": "p",
+   "text": "可观测性与评测"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、实战第一原则（贯穿全系列）"
+  },
+  {
+   "type": "p",
+   "text": "1先单后多：先跑通单 Agent，再上多 Agent（多 Agent token ≈ 15 倍，别一上来就贵）；"
+  },
+  {
+   "type": "p",
+   "text": "2先官方例再魔改：Eino-examples / 官方 cookbook 是事实源，改之前先跑通；"
+  },
+  {
+   "type": "p",
+   "text": "3代码即文档：类型安全（Go）让 Agent 代码可读可维护——这是 Eino 的核心卖点；"
+  },
+  {
+   "type": "p",
+   "text": "4生产五件套：流式 / tracing / 评测 / HITL / 护栏——能跑 ≠ 能上（08 篇展开）。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：实战地图 =「原理 → 范式 → 框架 → 代码」的最后一公里前面两线给了「脑」，本系列给「手」。动手的正确姿势：先小后大、先官方后魔改、先能跑后能上。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1三线关系：原理（是什么）→ 范式（怎么设计）→ 实战（怎么写）——顺序学习。"
+  },
+  {
+   "type": "p",
+   "text": "2四路径：Go 专线（Eino）/ 通用线（Python）/ 生产线 / 趋势线——按背景选入口。"
+  },
+  {
+   "type": "p",
+   "text": "3Eino 一句话：字节 Go LLM 框架——组件 9 类 + 编排 3 API + ADK 多 Agent。"
+  },
+  {
+   "type": "p",
+   "text": "4实战四原则：先单后多 / 先官方例 / 代码即文档 / 生产五件套。"
+  },
+  {
+   "type": "p",
+   "text": "5本系列结构：00 地图 → 01-03 框架 → 04-07 通用 → 08 工程化 → 09-10 趋势。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 01 篇（板块一·框架）：Eino 定位与组件——为什么 Go 项目选 Eino（对比 LangChain/LlamaIndex）、9 类组件抽象与官方实现（ChatModel/Tool/Retriever/...）、组件单独用 vs 编排用的区别。先认识「队员」，再谈「战术」。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Eino 开源公告（CloudWeGo）：https://www.cloudwego.io/zh/docs/eino/overview/eino_open_source/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Eino 文档总览：https://www.cloudwego.io/docs/eino/overview/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Eino GitHub：https://github.com/cloudwego/eino ｜ eino-examples：https://github.com/cloudwego/eino-examples"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] Claude Agent Teams 实战 / Agent 2.0 报道（见后续分篇）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-02 月绡凝 · 依据官方文档。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:19+0800"
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 03 篇 · Claude 4：混合推理、计算机使用与 Agent 平台 | 小凝 AI 工具集</title>
+<meta name="description" content="第 03 篇 · Claude 4：混合推理、计算机使用与 Agent 平台">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/2NFfhF-52bX9vsmRtfOanQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 03 篇 · Claude 4：混合推理、计算机使用与 Agent 平台 | 小凝 AI 工具集">
+<meta property="og:description" content="第 03 篇 · Claude 4：混合推理、计算机使用与 Agent 平台">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/2NFfhF-52bX9vsmRtfOanQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 03 篇 · Claude 4：混合推理、计算机使用与 Agent 平台", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/2NFfhF-52bX9vsmRtfOanQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 03 篇 · Claude 4：混合推理、计算机使用与 Agent 平台"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 03 篇 · Claude 4：混合推理、计算机使用与 Agent 平台</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 03 篇 · Claude 4：混合推理、计算机使用与 Agent 平台</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Anthropic Claude 家族系列第 03 篇——Claude 4 与计算机使用：Extended Thinking 混合推理、Computer Use 自己操作电脑、Claude Code 与 MCP 构建 Agent 平台。与 llm-基础理论第 05/06 篇（推理时代/多模态与 Agent）衔接。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方技术报告/系统卡为准。</p>
+<p>01SECTION</p>
+<p>第 03 篇 · Claude 4：混合推理、计算机使用与 Agent 平台</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>2025 年 2 月的 Claude 3.7 Sonnet 先开了「Extended Thinking」的口子，5 月的 Claude 4 家族（Opus 4 / Sonnet 4）把它做成标准能力，并放出两张王牌：Computer Use（模型自己操作电脑） 和 Claude Code（编程 Agent）。这一代，Claude 正式从「对话助手」转型为「能干活的基础设施」。</p>
+<p>03SECTION</p>
+<p>一、混合推理：Extended Thinking</p>
+<p>1.1 是什么</p>
+<p>•模型支持两种模式：普通模式：快速直接回答（日常对话）；Extended Thinking：先输出隐藏推理过程（思考），再给答案；</p>
+<p>•用户/开发者可控制思考预算（budget_tokens）——想多久花多少，深度与成本可调。</p>
+<p>1.2 意义</p>
+<p>•与 o1 的「必须想」不同，Claude 是「默认会答、按需深想」——一条模型两条能力（对应 llm-理论 05 的融合趋势）；</p>
+<p>•长程任务受益最大：规划、排错、复杂编码时「先想后做」显著降低返工。</p>
+<p>💡 学习要点：混合推理 =「对话与思考不分家」用户无需判断「该用哪个模型」——同一模型快慢自洽。这是 2025 年所有旗舰的共同终点（GPT-5、Gemini、V4 皆如此）。</p>
+<p>04SECTION</p>
+<p>二、Computer Use（2024-10 起，2025 爆发）</p>
+<p>2.1 是什么</p>
+<p>•模型被训练成像人一样操作电脑：看屏幕截图 → 决定点击/输入/滚动 → 执行 → 再看结果；</p>
+<p>•基准：OSWorld（真实桌面任务）——Claude 4 首次突破 40%+，Sonnet 4.5 到 61.4%（对照：四个月前 42.2%）；</p>
+<p>•应用：Claude for Chrome（浏览器自动填表/整理/购物流程）、桌面自动化。</p>
+<p>2.2 技术要点</p>
+<p>•训练：大量「屏幕 → 操作」合成轨迹数据 + 强化学习；</p>
+<p>•架构：视觉理解（截图）+ 工具调用（点击/键入）+ 长程记忆（上下文追踪）三者打通；</p>
+<p>•局限：界面变化敏感、操作偶发漂移——但方向确定：模型正在获得「手脚」（llm-理论 06 的 Agent 三拼图）。</p>
+<p>05SECTION</p>
+<p>三、Claude Code 与 MCP：Agent 平台</p>
+<p>组件</p>
+<p>作用</p>
+<p>Claude Code</p>
+<p>终端里的编程 Agent：读代码库、改文件、跑测试、提 PR——自然语言驱动开发</p>
+<p>MCP（Model Context Protocol）</p>
+<p>开放协议：把「工具/数据源」统一接入模型（数据库、浏览器、内部系统）</p>
+<p>Claude Agent SDK</p>
+<p>把 Claude Code 的底层能力开放给开发者自建 Agent</p>
+<p>•影响：MCP 成为行业「工具接入」事实标准（多家公司/框架跟进）；</p>
+<p>•形态：从「Chat 应用」→「开发者基础设施」——Anthropic 把「Agent 平台」做成了商业模式。</p>
+<p>06SECTION</p>
+<p>四、安全配套：ASL 与系统卡</p>
+<p>•发布按 ASL（AI 安全分级） 管理：Claude 4 达到 ASL 3 标准才放行；</p>
+<p>•系统卡公开：能力、风险、对齐测试、红队结果、可解释性分析（mechanistic interpretability 首度大规模商用）；</p>
+<p>•意义：能力越强的 Agent，安全门槛越高——对齐优先的路线在此兑现。</p>
+<p>07SECTION</p>
+<p>五、本篇要点（复习卡片）</p>
+<p>1Extended Thinking：混合推理——快速答 + 按需深想，思考预算可调。</p>
+<p>2Computer Use：模型像人一样操作电脑；OSWorld 40%→61.4%（4.5）；「手脚」成型。</p>
+<p>3Claude Code + MCP：编程 Agent + 开放工具协议 = Agent 平台（行业事实标准）。</p>
+<p>4Agent SDK：底层能力开放，开发者自建 Agent。</p>
+<p>5ASL 分级 + 系统卡：对齐优先在 Agent 时代落地为发布门槛。</p>
+<p>08SECTION</p>
+<p>六、下一篇预告</p>
+<p>第 04 篇：Sonnet 4.5 与 Opus 4.5——2025 年下半年的「对齐巅峰」：Sonnet 4.5（9 月）被官方称为「史上最对齐模型」，SWE-bench/计算机使用双第一；Opus 4.5（11 月）以 25 把旗舰级长程 Agent 能力做便宜，30 小时自主任务稳如老狗。Claude 系列用「安全 + 会干活」定义了 2025 年 Agent 时代的旗舰标准。</p>
+<p>09SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Claude 3.7 Sonnet 与 Extended Thinking（2025-02）：https://www.anthropic.com/news/claude-3-7-sonnet</p>
+<p>•[官方] Introducing Claude 4（2025-05）：https://www.anthropic.com/news/claude-4</p>
+<p>•[官方] Anthropic 计算机使用研究：https://www.anthropic.com/engineering/claude-4-computer-use</p>
+<p>•[官方] MCP 协议：https://modelcontextprotocol.io</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方发布说明。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/2NFfhF-52bX9vsmRtfOanQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

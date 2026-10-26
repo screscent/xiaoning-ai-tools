@@ -1,0 +1,347 @@
+{
+ "slug": "pZ5ZoGuTuKuLrFbnjT2T_A",
+ "title": "Google Gemini 模型原理进化史",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/pZ5ZoGuTuKuLrFbnjT2T_A",
+ "digest": "Google Gemini 模型原理进化史",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Google Gemini 家族的开篇总览——从 BERT/T5/PaLM 基因库到 Gemini 3.8 的演进时间线、关键技术点详解与进化逻辑总结。供主人先建立「一张图」再深入各分篇。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告与发布说明为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "Google Gemini 模型原理进化史"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、演进时间线总览"
+  },
+  {
+   "type": "p",
+   "text": "时间"
+  },
+  {
+   "type": "p",
+   "text": "模型"
+  },
+  {
+   "type": "p",
+   "text": "核心变化"
+  },
+  {
+   "type": "p",
+   "text": "2018~2023"
+  },
+  {
+   "type": "p",
+   "text": "BERT / T5 / PaLM（基因库）"
+  },
+  {
+   "type": "p",
+   "text": "预训练范式、Text-to-Text 统一、540B 规模化——Gemini 的三块地基"
+  },
+  {
+   "type": "p",
+   "text": "2023-12"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 1.0（Ultra/Pro/Nano）"
+  },
+  {
+   "type": "p",
+   "text": "原生多模态"
+  },
+  {
+   "type": "p",
+   "text": "：图文音视频从预训练起联合训练"
+  },
+  {
+   "type": "p",
+   "text": "2024-02~05"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 1.5"
+  },
+  {
+   "type": "p",
+   "text": "100 万 token 上下文"
+  },
+  {
+   "type": "p",
+   "text": "；Flash 快速档"
+  },
+  {
+   "type": "p",
+   "text": "2024-12"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 2.0"
+  },
+  {
+   "type": "p",
+   "text": "Agent 能力"
+  },
+  {
+   "type": "p",
+   "text": "：函数调用、计算机使用、实时多模态"
+  },
+  {
+   "type": "p",
+   "text": "2025-03"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 2.5 Pro"
+  },
+  {
+   "type": "p",
+   "text": "Thinking 思考模式"
+  },
+  {
+   "type": "p",
+   "text": "；LMArena 榜首 6 个月；2M 上下文实验"
+  },
+  {
+   "type": "p",
+   "text": "2025-06"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 2.5 Flash"
+  },
+  {
+   "type": "p",
+   "text": "高速档推理（性价比）"
+  },
+  {
+   "type": "p",
+   "text": "2025-11"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 3 Pro"
+  },
+  {
+   "type": "p",
+   "text": "1501 Elo 登顶"
+  },
+  {
+   "type": "p",
+   "text": "；Deep Think 深思考；发布当日接 Search"
+  },
+  {
+   "type": "p",
+   "text": "2026"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 3.1 → 3.8 Flash 系"
+  },
+  {
+   "type": "p",
+   "text": "高频迭代：Flash-Lite→3.8 Flash/Live/TTS + 图像全家桶"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、三条主线：多模态 · 上下文 · 生态"
+  },
+  {
+   "type": "p",
+   "text": "Google 的进化围绕三条主线交叉推进："
+  },
+  {
+   "type": "p",
+   "text": "1多模态线：原生多模态（1.0）→ 视频/实时语音（2.0）→ 全模态 Agent + 图像系（3.x）——「从一开始就在一起」而非后期拼接。"
+  },
+  {
+   "type": "p",
+   "text": "2上下文线：32K → 1M（1.5）→ 2M 实验（2.5）——长上下文霸主，一次装下整个世界。"
+  },
+  {
+   "type": "p",
+   "text": "3生态线：函数调用/搜索（2.0/2.5）→ AI Mode in Search + Antigravity（3）——模型 × 搜索 × 安卓 × 云端叠护城河。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、关键技术点详解"
+  },
+  {
+   "type": "p",
+   "text": "1. 原生多模态（Gemini 1.0 的定义级差异）"
+  },
+  {
+   "type": "p",
+   "text": "•图文音视频从预训练第一刻联合训练，一套权重内贯通理解；"
+  },
+  {
+   "type": "p",
+   "text": "•对比「拼接式」（视觉塔翻译成 token 再喂文本）：原生式跨模态推理更深；"
+  },
+  {
+   "type": "p",
+   "text": "•影响：宣告「多模态 = 下一主战场」，各家旗舰（GPT-4o/Claude 4/V4）随后全部转原生。"
+  },
+  {
+   "type": "p",
+   "text": "2. 百万上下文（Gemini 1.5）"
+  },
+  {
+   "type": "p",
+   "text": "•100 万 token：一次读整书/整代码库/2-3 小时视频；"
+  },
+  {
+   "type": "p",
+   "text": "•技术：稀疏注意力 + 高效 KV 管理；基建：TPU + 自家数据管道；"
+  },
+  {
+   "type": "p",
+   "text": "•课题：塞得下 ≠ 用得起——长上下文算力成本持续优化（Flash 系对冲）。"
+  },
+  {
+   "type": "p",
+   "text": "3. 思考模式（Thinking / 2.5 Pro）"
+  },
+  {
+   "type": "p",
+   "text": "•可见思考过程（一步步推理再给答案），深度可调；"
+  },
+  {
+   "type": "p",
+   "text": "•与 o1（保密思维链）、R1（公开思维链）形成路线对照——Gemini 走「思考可见」；"
+  },
+  {
+   "type": "p",
+   "text": "•战绩：LMArena 榜首连续 6 个月（人类盲评之王）。"
+  },
+  {
+   "type": "p",
+   "text": "4. Agent 能力（Gemini 2.0）"
+  },
+  {
+   "type": "p",
+   "text": "•原生工具调用（搜索/代码/Google 服务）、计算机使用、实时多模态；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：模型从「知识回忆器」变「能力调度器」——感知（多模态）→ 决策（思考）→ 执行（工具）闭环。"
+  },
+  {
+   "type": "p",
+   "text": "5. Deep Think 与档位矩阵（Gemini 3 / 2026）"
+  },
+  {
+   "type": "p",
+   "text": "•Deep Think：比标准思考更深的推理档（拆解/规划/校验更彻底）；"
+  },
+  {
+   "type": "p",
+   "text": "•档位矩阵：Flash（快/省）× Pro（深）× Live（实时语音）× Image（图像）——全场景全价位覆盖；"
+  },
+  {
+   "type": "p",
+   "text": "•高频迭代：3.1→3.8 半年更替，稳定版常换常新——模型迭代运营化。"
+  },
+  {
+   "type": "p",
+   "text": "6. 搜索生态 day-one（Gemini 3）"
+  },
+  {
+   "type": "p",
+   "text": "•首次在模型发布当日接入 Search AI Mode（实时检索 + 深度推理）；"
+  },
+  {
+   "type": "p",
+   "text": "•Antigravity：agentic 开发平台——模型 × 入口 = Google 独有护城河。"
+  },
+  {
+   "type": "p",
+   "text": "∞CONCLUSION"
+  },
+  {
+   "type": "p",
+   "text": "四、进化逻辑总结（学习重点）"
+  },
+  {
+   "type": "p",
+   "text": "1多模态做「原生」：从预训练就联合，而非拼装——跨模态理解深度是核心竞争力。"
+  },
+  {
+   "type": "p",
+   "text": "2上下文做「碾压」：1M→2M 一次装下——用「阅读量」打差异（配合稀疏注意力控成本）。"
+  },
+  {
+   "type": "p",
+   "text": "3推理做「档位」：Thinking → Deep Think——深度按任务调配（llm-理论 05）。"
+  },
+  {
+   "type": "p",
+   "text": "4生态做「绑定」：搜索/安卓/云端/平台 day-one 接入——模型强不如入口强。"
+  },
+  {
+   "type": "p",
+   "text": "5迭代做「高频」：Flash 系月更——把模型迭代变成日常运营。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、资料源（供深入阅读）"
+  },
+  {
+   "type": "p",
+   "text": "•Google DeepMind 博客：https://deepmind.google/discover/blog/"
+  },
+  {
+   "type": "p",
+   "text": "•Gemini 发布说明：https://blog.google/technology/ai/gemini/"
+  },
+  {
+   "type": "p",
+   "text": "•Gemini API 模型文档：https://ai.google.dev/gemini-api/docs/models"
+  },
+  {
+   "type": "p",
+   "text": "•学习路径：本开篇 → 01~03 分篇 → 对照 llm-基础理论 04/05/06"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方发布说明。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:46+0800"
+}

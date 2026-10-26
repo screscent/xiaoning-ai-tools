@@ -1,0 +1,243 @@
+{
+ "slug": "DsG8ZR7WCNXBsj6Nk59P9A",
+ "title": "第 01 篇 · GPT-1 → GPT-2：预训练范式的确立与规模化初试",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/DsG8ZR7WCNXBsj6Nk59P9A",
+ "digest": "第 01 篇 · GPT-1 → GPT-2：预训练范式的确立与规模化初试",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：OpenAI GPT 家族系列第 01 篇——GPT-1 与 GPT-2：预训练范式如何被一家公司确立，并第一次验证「规模 = 能力」。与 llm-基础理论第 01 篇（三大预训练范式）衔接。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 01 篇 · GPT-1 → GPT-2：预训练范式的确立与规模化初试"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "2018 年的选择题只有两个阵营：BERT 走「双向编码器看懂」，GPT 走「单向解码器会写」。当时没人押 GPT 会赢。本篇讲 GPT-1 如何证明「预训练 + 微调」可行，GPT-2 又如何用「更大 = 更强」的简单事实，把 OpenAI 推向 2020 年的豪赌。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、GPT-1（2018）：预训练 + 微调的一次性示范"
+  },
+  {
+   "type": "p",
+   "text": "1.1 定位与规模"
+  },
+  {
+   "type": "p",
+   "text": "•论文：Improving Language Understanding by Generative Pre-Training；"
+  },
+  {
+   "type": "p",
+   "text": "•规模：1.17 亿参数、12 层解码器（比同期 BERT 还小一半）；"
+  },
+  {
+   "type": "p",
+   "text": "•做法：先在无标注语料上做自回归语言模型预训练（预测下一个词），再在下游任务上轻量微调。"
+  },
+  {
+   "type": "p",
+   "text": "1.2 为什么值得记住"
+  },
+  {
+   "type": "p",
+   "text": "1证明了「预训练」的通用性：一个模型，微调后能在 12 类 NLP 任务上多数达到 SOTA（分类/问答/推理等）；"
+  },
+  {
+   "type": "p",
+   "text": "2选择了「生成式」路线：与 BERT 的「掩码 + 双向」相反，GPT 坚持「自回归 + 单向」——这个选择十年后成为唯一赢家（因为能生成、易规模化）；"
+  },
+  {
+   "type": "p",
+   "text": "3范式名句：「生成式预训练」成为 OpenAI 一切后续工作的地基。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：GPT-1 不是最强的，但选对了路2018 年它打不过 BERT（理解类任务）；但「单向 + 自回归」让训练目标 = 生成目标，这条路后来碾压一切。路线选择 > 当下性能——这是 GPT 系列的基因。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、GPT-2（2019）：规模开始说话"
+  },
+  {
+   "type": "p",
+   "text": "2.1 关键数字"
+  },
+  {
+   "type": "p",
+   "text": "•规模：15 亿参数（GPT-1 的 13 倍）；数据：WebText（从 Reddit 高赞链接爬取的 800 万网页，约 40GB）；"
+  },
+  {
+   "type": "p",
+   "text": "•目标：证明「只要语言模型够大，无需任何任务专用训练就能完成任务」——零样本（zero-shot）。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 三个突破"
+  },
+  {
+   "type": "p",
+   "text": "1零样本能力：不给微调、不给示例，直接让模型续写/翻译/问答——远超预期；"
+  },
+  {
+   "type": "p",
+   "text": "2生成质量跃升：长文连贯、可生成虚构新闻（当时因「太逼真」推迟发布，引发社会关注 AI 造假）；"
+  },
+  {
+   "type": "p",
+   "text": "3规模曲线初现：论文给出「性能随参数平滑上升」的证据——为 2020 年缩放定律系统化埋下伏笔。"
+  },
+  {
+   "type": "p",
+   "text": "2.3 GPT-2 的局限（为什么还不够）"
+  },
+  {
+   "type": "p",
+   "text": "•8 岁小孩式的事实错误、重复啰嗦；"
+  },
+  {
+   "type": "p",
+   "text": "•复杂推理（数学、多步逻辑）几乎为零；"
+  },
+  {
+   "type": "p",
+   "text": "•不会「听话」：给指令它继续自说自话——对齐（第 03 篇）还没出现。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：GPT-2 证明「规模」是真变量没有改架构、没有改任务，只放大参数和数据，能力就稳定上涨。这就是缩放定律的前奏——下一篇 GPT-3 把它推到极致。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、与理论线的对照"
+  },
+  {
+   "type": "p",
+   "text": "理论篇"
+  },
+  {
+   "type": "p",
+   "text": "对照点"
+  },
+  {
+   "type": "p",
+   "text": "llm-基础理论 00"
+  },
+  {
+   "type": "p",
+   "text": "词表示/序列建模 → GPT 直接用「预测下一个词」统一了一切"
+  },
+  {
+   "type": "p",
+   "text": "llm-基础理论 01"
+  },
+  {
+   "type": "p",
+   "text": "Transformer 解码器 = GPT 的架构；GPT 是「三大预训练范式」的胜出方"
+  },
+  {
+   "type": "p",
+   "text": "llm-基础理论 02"
+  },
+  {
+   "type": "p",
+   "text": "GPT-2 的规模曲线 → GPT-3 的缩放定律实证（下一站）"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1GPT-1（2018）：1.17 亿参数，证明「预训练 + 微调」通用可行，押注自回归生成路线。"
+  },
+  {
+   "type": "p",
+   "text": "2GPT-2（2019）：15 亿参数，零样本能力 + 高质量生成，规模曲线初现。"
+  },
+  {
+   "type": "p",
+   "text": "3核心教训：架构不变、任务不变，只放大规模 → 能力稳定上涨（缩放前奏）。"
+  },
+  {
+   "type": "p",
+   "text": "4历史地位：GPT 系列自此确立「生成式预训练」DNA，并绑定「规模信仰」。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 02 篇：GPT-3（2020）——1750 亿参数的豪赌。一个比前代大 100 倍的模型，带来两个现象级发现：少样本上下文学习（不给训练，只给几个示例）和能力涌现（跨过阈值突然变强）。同时，它把「大力出奇迹」推上神坛——也把「胡说八道、有害输出」的问题推到台前，为对齐时代（第 03 篇）埋下导火索。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] GPT-1：Improving Language Understanding by Generative Pre-Training（2018）：https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] GPT-2：Language Models are Unsupervised Multitask Learners（2019）：https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方技术报告。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:56+0800"
+}

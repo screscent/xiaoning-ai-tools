@@ -1,0 +1,255 @@
+{
+ "slug": "vPDt8RL4bZYXwLup1nsX2A",
+ "title": "第 03 篇 · Gemini 3：推理巅峰、Deep Think 与生态",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/vPDt8RL4bZYXwLup1nsX2A",
+ "digest": "第 03 篇 · Gemini 3：推理巅峰、Deep Think 与生态",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Google Gemini 家族系列第 03 篇（收尾）——Gemini 3 与 Deep Think：推理巅峰、搜索生态接入与 2026 高频迭代（3.1~3.8 Flash 系）。与 llm-基础理论第 05 篇（推理时代）衔接。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方发布说明为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 03 篇 · Gemini 3：推理巅峰、Deep Think 与生态"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "2025 年 11 月，Gemini 3 Pro 发布——CEO 亲自定性为「迈向 AGI 的又一大步」。它带了三件里程碑：1501 Elo 登顶 LMArena（人类盲评史上最高分）、发布当日接入 Google 搜索（AI Mode，首次模型与搜索 day-one 绑定）、以及 Deep Think 超深度思考模式。此后 Flash 系以「月更」节奏迭代到 3.8——Google 把「模型迭代」变成了「日常运营」。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、Gemini 3 Pro（2025-11-18）：三件里程碑"
+  },
+  {
+   "type": "p",
+   "text": "1.1 1501 Elo（LMArena 榜首）"
+  },
+  {
+   "type": "p",
+   "text": "•全面超越前霸主 Gemini 2.5 Pro（霸榜 6 个月）与同期竞品；"
+  },
+  {
+   "type": "p",
+   "text": "•强项：深度推理、多模态理解、意图与上下文捕捉（更少 prompt 就能理解需求）；"
+  },
+  {
+   "type": "p",
+   "text": "•定位语：「best model in the world for multimodal understanding」+ 最强 agentic / vibe coding 模型。"
+  },
+  {
+   "type": "p",
+   "text": "1.2 Deep Think 模式"
+  },
+  {
+   "type": "p",
+   "text": "•比标准思考更深一档的推理：面对「多层层叠的难题」，拆解 + 规划 + 校验更彻底；"
+  },
+  {
+   "type": "p",
+   "text": "•面向 Ultra 订阅用户（旗舰付费档）——「深度思考」成为高价值差异化卖点；"
+  },
+  {
+   "type": "p",
+   "text": "•技术同源：推理深度档位化（对应 llm-理论 05 的测试时扩展 + 融合趋势）。"
+  },
+  {
+   "type": "p",
+   "text": "1.3 搜索生态 day-one"
+  },
+  {
+   "type": "p",
+   "text": "•首次在模型发布当日接入 Search AI Mode：搜索 = 实时检索 + 模型深度推理；"
+  },
+  {
+   "type": "p",
+   "text": "•Google Antigravity：新的 agentic 开发平台（模型 + 工具 + 部署一体）；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：Google 把「模型 + 搜索 + 安卓 + 云端」叠成护城河——生态绑定是 Gemini 独有的牌。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：Gemini 3 =「推理能力 × 生态入口」单看模型它强，但真正的护城河是：全球最大的搜索入口当天就装上这颗大脑。模型公司拼算力，Google 拼「模型 × 入口」。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、2026 高频迭代：3.1 → 3.8 Flash 系"
+  },
+  {
+   "type": "p",
+   "text": "版本（稳定）"
+  },
+  {
+   "type": "p",
+   "text": "定位"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 3.1 Flash-Lite"
+  },
+  {
+   "type": "p",
+   "text": "极轻量低成本（高吞吐）"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 3.5 Flash / Flash-Lite"
+  },
+  {
+   "type": "p",
+   "text": "例行工作负载主力"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 3.6 Flash"
+  },
+  {
+   "type": "p",
+   "text": "通用 Agent 日常任务"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 3.7 Flash"
+  },
+  {
+   "type": "p",
+   "text": "复杂编程 + 多步 Agent 工作流"
+  },
+  {
+   "type": "p",
+   "text": "Gemini 3.8 Flash / Live"
+  },
+  {
+   "type": "p",
+   "text": "长程软件工程 + 自主 Agent + 实时语音（Live/TTS 系）"
+  },
+  {
+   "type": "p",
+   "text": "Nano Banana（3.1 Flash Image 等）"
+  },
+  {
+   "type": "p",
+   "text": "图像生成/编辑旗舰系"
+  },
+  {
+   "type": "p",
+   "text": "•特点：稳定版高频更替（3.5→3.8 半年内）+ 语音/图像/实时交互全家桶；"
+  },
+  {
+   "type": "p",
+   "text": "•产品哲学：「档位矩阵」——Flash 系（快/便宜）+ Pro 系（深）+ Live 系（实时语音）+ Image 系（图像）——覆盖一切场景与价位。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1Gemini 3 Pro（2025-11）：1501 Elo 登顶；Deep Think 深思考；发布当日接 Search。"
+  },
+  {
+   "type": "p",
+   "text": "2生态护城河：模型 × 搜索 × 安卓 × Antigravity = Google 独有打法。"
+  },
+  {
+   "type": "p",
+   "text": "3档位矩阵：Flash（快）/ Pro（深）/ Live（实时）/ Image（图像）——全场景覆盖。"
+  },
+  {
+   "type": "p",
+   "text": "4高频迭代：3.1→3.8 半年迭代，稳定版常换常新——模型迭代运营化。"
+  },
+  {
+   "type": "p",
+   "text": "5与理论线对照：Deep Think = 测试时扩展；3.8 Live/TTS = 多模态 + 实时交互（llm-理论 05/06）。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、系列收尾：Gemini 四篇地图"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "01 Gemini 1/1.5（原生多模态 + 百万上下文）→ 02 Gemini 2（思考 + Agent）"
+  },
+  {
+   "type": "p",
+   "text": "→ 03 Gemini 3（推理巅峰 + 生态） （前身：BERT/T5/PaLM 血统见总览）"
+  },
+  {
+   "type": "p",
+   "text": "对照理论线：原生多模态 = llm-理论 06；百万上下文 = 04（效率/长上下文）；Thinking/Deep Think = 05（推理时代）。Gemini 家族 = 「原生多模态 + 生态入口」路线的完整标本——与 OpenAI（产品生态）、Claude（对齐优先）、DeepSeek（效率开源）形成四极对照。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] A new era of intelligence with Gemini 3（2025-11）：https://blog.google/products/gemini/gemini-3/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Gemini API 模型文档（3.1~3.8）：https://ai.google.dev/gemini-api/docs/models"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Gemini 3 for developers：https://blog.google/technology/developers/gemini-3-developers/"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方发布说明。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:38+0800"
+}

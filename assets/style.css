@@ -50,4 +50,8 @@ table ul{margin:0;padding-left:18px}
 .foot{border-top:1px solid var(--line);background:var(--bg);padding:22px 0;color:var(--muted);font-size:13px}
 .sig{color:#4a4a4f}
 .meta{margin-top:6px}
+.cards.one{grid-template-columns:1fr}
+.post-body p{margin:12px 0;line-height:1.9;color:#2b2b2f}
+.post-body img{max-width:100%;border-radius:8px;margin:10px 0;display:block}
+.meta-line{color:var(--muted);font-size:13px;margin:0 0 8px}
 @media (max-width:640px){.cards{grid-template-columns:1fr}h1{font-size:24px}.rows li{flex-direction:column;gap:2px}.rows a{min-width:0}}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 01 篇 · Transformer 革命 + 三大预训练范式 | 小凝 AI 工具集</title>
+<meta name="description" content="第 01 篇 · Transformer 革命 + 三大预训练范式">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/kb_osPy-3dzC4edlIxi-Gw.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 01 篇 · Transformer 革命 + 三大预训练范式 | 小凝 AI 工具集">
+<meta property="og:description" content="第 01 篇 · Transformer 革命 + 三大预训练范式">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/kb_osPy-3dzC4edlIxi-Gw.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 01 篇 · Transformer 革命 + 三大预训练范式", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/kb_osPy-3dzC4edlIxi-Gw.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 01 篇 · Transformer 革命 + 三大预训练范式"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 01 篇 · Transformer 革命 + 三大预训练范式</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 01 篇 · Transformer 革命 + 三大预训练范式</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：LLM 基础理论发展系列第 01 篇——Transformer 革命与三大预训练范式。本系列最重要的里程碑：一个 2017 年的架构如何统治一切，以及它开启的「预训练」范式如何定义今天的 LLM。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以原论文为准。</p>
+<p>01SECTION</p>
+<p>第 01 篇 · Transformer 革命 + 三大预训练范式</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>2017 年《Attention Is All You Need》用一个大胆主张终结了 RNN 时代：不要循环，只要注意力。紧接着 2018-2019 年，ELMo/BERT/GPT 把「预训练」变成新范式——先在海量文本上学通用表示，再微调。这两件事合起来 = 今天所有 LLM 的 DNA。</p>
+<p>03SECTION</p>
+<p>一、Transformer：Attention Is All You Need（2017）</p>
+<p>1.1 三个关键设计（对照 RNN 的痛点）</p>
+<p>RNN 痛点</p>
+<p>Transformer 解法</p>
+<p>串行无法并行</p>
+<p>Self-Attention</p>
+<p>：所有位置同时计算，天然可并行</p>
+<p>长程依赖弱</p>
+<p>注意力直接建立任意两位置的连接，距离=1</p>
+<p>无法看后文</p>
+<p>双向/多头注意力</p>
+<p>（编码器可看全文）</p>
+<p>1.2 核心组件</p>
+<p>1Self-Attention（自注意力）：每个词与所有词算相关性后加权融合——Attention(Q,K,V) = softmax(QKᵀ/√d)·V。</p>
+<p>2多头注意力（Multi-Head）：多个注意力「头」并行，各自关注不同子空间（语法关系/指代/语义）。</p>
+<p>3位置编码（Positional Encoding）：注意力本身无序，需注入位置信息（原始用三角函数；后来的 RoPE 是升级版——DeepSeek 系列第 3 篇讲过）。</p>
+<p>4FFN + 残差 + LayerNorm：每个位置过前馈网络，残差连接保训练稳定。</p>
+<p>1.3 意义</p>
+<p>•并行 → 训练规模可以暴力放大（GPU 越多越快）；</p>
+<p>•通用 → 可平移去做文本/图像/音频（后来都被 Transformer 统一）。</p>
+<p>💡 学习要点：为什么说「Attention 即一切」不是注意力取代了所有结构，而是「按相关性加权读取」这一机制被证明足以承载语言理解的核心。Transformer = 注意力 × 位置 × 前馈 × 深度。</p>
+<p>04SECTION</p>
+<p>二、预训练范式：ELMo / BERT / GPT 三足鼎立</p>
+<p>2.1 共同思想：先在无标注海量文本上「预训练」，再「微调/适配」</p>
+<p>•无标注文本几乎无限 → 语言模型目标（预测下一个词 / 预测被掩码的词）自动提供监督信号；</p>
+<p>•学到的表示是通用的 → 下游任务只需轻量微调。</p>
+<p>2.2 三家的路线分歧（决定今天的格局）</p>
+<p>模型（年份）</p>
+<p>预训练目标</p>
+<p>方向性</p>
+<p>架构</p>
+<p>命运</p>
+<p>ELMo</p>
+<p>（2018）</p>
+<p>前向+后向语言模型拼接</p>
+<p>双向但浅层</p>
+<p>双向 LSTM</p>
+<p>被 BERT 取代（教训：拼接≠融合）</p>
+<p>BERT</p>
+<p>（2018）</p>
+<p>掩码语言模型（MLM）</p>
+<p>：随机盖词预测</p>
+<p>双向（编码器）</p>
+<p>Transformer 编码器</p>
+<p>统治 NLU（理解类任务）</p>
+<p>GPT</p>
+<p>（2018）</p>
+<p>自回归</p>
+<p>：预测下一个词</p>
+<p>单向（解码器）</p>
+<p>Transformer 解码器</p>
+<p>统治生成式 LLM（今天的赢家）</p>
+<p>2.3 为什么最后是「GPT 路线」赢了</p>
+<p>•生成天然兼容：预测下一个词 = 生成；对话/写作/代码直接可用；</p>
+<p>•规模化友好：自回归目标简单稳定，容易扩到千亿参数；</p>
+<p>•能力涌现：规模上去后，推理/指令遵循等能力自发出现（第 02 篇的缩放定律解释）。</p>
+<p>💡 学习要点：BERT 双向 vs GPT 单向——「看懂」与「会写」BERT 能「看懂」句子（双向上下文），但不会生成；GPT 会「续写」（单向），但能生成。今天的 LLM 全部是 GPT 式自回归解码器——包括 DeepSeek、Claude、Gemini。方向性选择决定了模型是「理解工具」还是「生成引擎」。</p>
+<p>05SECTION</p>
+<p>三、本篇要点（复习卡片）</p>
+<p>1Transformer 三大件：Self-Attention（并行+长程）+ 多头（多视角）+ 位置编码（注入顺序）。</p>
+<p>2预训练范式：无标注文本自动监督 → 通用表示 → 微调适配。</p>
+<p>3三范式：ELMo（浅双向）/ BERT（深双向编码器）/ GPT（单向解码器）。</p>
+<p>4赢家：GPT 式自回归——因为它能生成、易规模化、可涌现。</p>
+<p>5与 DeepSeek 系列衔接：DeepSeek 初始版就是 GPT 式解码器架构的工程化（第 1 篇）。</p>
+<p>06SECTION</p>
+<p>四、下一篇预告</p>
+<p>第 02 篇：缩放定律（Scaling Laws）——为什么「更大的模型 + 更多的数据」会稳定地变强？Kaplan 2020 与 Chinchilla 2022 给出两套结论，GPT-3 用 1750 亿参数验证了「大力出奇迹」，而 DeepSeek 在自家缩放定律研究上给出了「偏模型侧」的第三条路（第 1 篇）。</p>
+<p>07SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Attention Is All You Need（Vaswani et al., 2017）：https://arxiv.org/abs/1706.03762</p>
+<p>•[官方] ELMo（Peters et al., 2018）：https://arxiv.org/abs/1802.05365</p>
+<p>•[官方] BERT（Devlin et al., 2018）：https://arxiv.org/abs/1810.04805</p>
+<p>•[官方] GPT-1（Radford et al., 2018）：https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf</p>
+<p>整理：2026-10-01 月绡凝 · 依据原论文。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/kb_osPy-3dzC4edlIxi-Gw" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

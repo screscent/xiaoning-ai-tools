@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent 的推理系统：分解、规划与反思 | 小凝 AI 工具集</title>
+<meta name="description" content="Agent 的推理系统：分解、规划与反思">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/EsnkuxSdbhEjlqpRY-XhTw.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agent 的推理系统：分解、规划与反思 | 小凝 AI 工具集">
+<meta property="og:description" content="Agent 的推理系统：分解、规划与反思">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/EsnkuxSdbhEjlqpRY-XhTw.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agent 的推理系统：分解、规划与反思", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/EsnkuxSdbhEjlqpRY-XhTw.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "Agent 的推理系统：分解、规划与反思"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>Agent 的推理系统：分解、规划与反思</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">Agent 的推理系统：分解、规划与反思</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 原理系列板块一·构成第 02 篇——推理系统（Reasoning）。Agent 的「大脑」：任务分解、规划、反思三大机制，以及推理模型（o1/R1）成为 Agent 大脑后的变化。衔接 llm-基础理论 05（推理时代）。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方论文为准。</p>
+<p>01SECTION</p>
+<p>第 02 篇 · Agent 的推理系统：分解、规划与反思</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>感知让 Agent「看见」，推理让 Agent「想清楚怎么做」。一个复杂任务（「整理一份行业调研报告」）无法一次生成——必须拆成子步骤 → 规划顺序 → 执行中反思纠错。本篇讲 Agent 推理的三板斧：任务分解、规划与反思，以及推理模型如何把这套能力内化。</p>
+<p>03SECTION</p>
+<p>一、三大机制</p>
+<p>1. 任务分解（Decomposition）</p>
+<p>•把大目标拆成可执行的子任务序列（plan-and-execute 模式）：调研报告 → ①定大纲 ②分头查资料 ③分节撰写 ④汇总校对；</p>
+<p>•技术：CoT（一步步想）、ToT（树状分支探索）、分解器+执行器分离（planner-executor）；</p>
+<p>•意义：长任务的「可执行性」来自分解——模型上下文有限，拆开才能做完。</p>
+<p>2. 规划（Planning）</p>
+<p>•不只「拆」，还要「选」：生成多个备选方案 → 评估 → 选优（多计划生成与选择）；</p>
+<p>•框架化：LangGraph 把规划变成显式图（节点=步骤、边=顺序/分支/重试）——规划从 prompt 变成可控制的程序结构；</p>
+<p>•进阶：带反馈的规划——执行一步后根据 Observation 修订后续计划（ReAct 的自然延伸）。</p>
+<p>3. 反思（Reflection）</p>
+<p>•行动失败/结果不如预期后，生成自然语言反思（错在哪、怎么改），存进记忆供下次参考；</p>
+<p>•Reflexion（2023）：反思 + 情景记忆 = 「无语义梯度的 RL」（verbal RL）；</p>
+<p>•MIRROR（2025）：反思不只在行动后（inter-reflection），也能在行动前（intra-reflection 预判不良结果）——双记忆（短时+长时）；</p>
+<p>•意义：Agent 从「做完拉倒」到「越做越会」——错误成为学习素材。</p>
+<p>💡 学习要点：分解 × 规划 × 反思 = 完整推理环分解解决「怎么做完」，规划解决「怎么做对」，反思解决「错了怎么改」。三者配合才是 Agent 的推理系统——只有分解没有反思的 Agent，会在同一个坑里反复掉。</p>
+<p>04SECTION</p>
+<p>二、推理模型（Reasoning Models）成为 Agent 大脑</p>
+<p>2.1 发生了什么</p>
+<p>•通用模型时代：推理靠外层 prompt 工程（CoT/ReAct 都是「话术引导」）；</p>
+<p>•o1/R1 时代：模型本身被 RL 训练出「先想后答」——思考链成为模型的内部能力（llm-理论 05）；</p>
+<p>•GPT-5 时代：推理与工具链合一——模型「边想边调工具」，长程任务几十次工具调用不迷路。</p>
+<p>2.2 对 Agent 的三层影响</p>
+<p>影响</p>
+<p>说明</p>
+<p>规划变深</p>
+<p>推理模型能生成更长、更可靠的执行计划（o3 的「边想边用工具」）</p>
+<p>反思变内化</p>
+<p>模型在思考链里自我校验，外层 Reflexion 变成「第二道保险」而非必需</p>
+<p>测试时扩展</p>
+<p>想越久干越好——「思考预算」成为 Agent 的可调资源（成本换质量）</p>
+<p>2.3 注意：推理模型 ≠ 万能</p>
+<p>•思考链变长 → 延迟与成本上升（长任务要平衡）；</p>
+<p>•推理强但「环境感知/工具操作」仍需感知与行动系统配合——推理只是大脑，不是全部。</p>
+<p>05SECTION</p>
+<p>三、推理系统的工程实践要点</p>
+<p>1分层：粗规划（模型）→ 细执行（确定性流程/脚本）——能确定的部分别让模型「自由发挥」；</p>
+<p>2失败回退：每步执行留校验点，失败 → 反思 → 重试（上限控制，防死循环）；</p>
+<p>3人机分工：关键决策交人工（HITL），机械步骤交给流程（衔接板块二 07 篇）；</p>
+<p>4预算管理：思考预算（reasoning effort）与执行预算（max steps）双控——成本与可靠性的平衡。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1三机制：分解（怎么做完）/ 规划（怎么做对）/ 反思（错了怎么改）——完整推理环。</p>
+<p>2Reflexion：反思 + 情景记忆 = verbal RL——不调权重，靠长记性变强。</p>
+<p>3MIRROR：行动前反思（预判）+ 行动后反思（纠错）——双记忆双通道。</p>
+<p>4推理模型当大脑：o1/R1/GPT-5 内化「先想后干」；思考预算成为可调资源。</p>
+<p>5边界：推理只是大脑——感知、行动、记忆仍需配套；成本与延迟要控。</p>
+<p>07SECTION</p>
+<p>五、下一篇预告</p>
+<p>第 03 篇：Agent 的记忆系统——推理要想得对，还得「记得住」。短时记忆（对话上下文）、长时记忆（跨会话持久化）、情景记忆（Reflexion 的经验）、以及上下文工程（Context Engineering）如何对抗上下文窗口的物理限制。记忆 = Agent 从「一次性工具」到「越用越懂你」的关键。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Reflexion（Shinn et al., 2023）：https://arxiv.org/abs/2303.11366</p>
+<p>•[官方] Tree of Thoughts（ToT, 2023）：https://arxiv.org/abs/2305.10601</p>
+<p>•[官方] MIRROR（2025）：https://arxiv.org/abs/2505.20670</p>
+<p>•[官方] Plan-and-Solve（2023）：https://arxiv.org/abs/2305.04091</p>
+<p>•[参考] Fundamentals of Building Autonomous LLM Agents（2510.09244）</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方论文。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/EsnkuxSdbhEjlqpRY-XhTw" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

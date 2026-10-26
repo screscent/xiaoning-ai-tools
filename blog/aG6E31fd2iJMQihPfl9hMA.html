@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>00 开篇 · Agent 范式全景：工程、研究与应用的三种视角 | 小凝 AI 工具集</title>
+<meta name="description" content="00 开篇 · Agent 范式全景：工程、研究与应用的三种视角">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/aG6E31fd2iJMQihPfl9hMA.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="00 开篇 · Agent 范式全景：工程、研究与应用的三种视角 | 小凝 AI 工具集">
+<meta property="og:description" content="00 开篇 · Agent 范式全景：工程、研究与应用的三种视角">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/aG6E31fd2iJMQihPfl9hMA.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "00 开篇 · Agent 范式全景：工程、研究与应用的三种视角", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/aG6E31fd2iJMQihPfl9hMA.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "00 开篇 · Agent 范式全景：工程、研究与应用的三种视角"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>00 开篇 · Agent 范式全景：工程、研究与应用的三种视角</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">00 开篇 · Agent 范式全景：工程、研究与应用的三种视角</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 范式系列的开篇——从工程/研究/应用三视角给 Agent 范式画全景图，并梳理发展路线。供主人先建立「范式地图」，再进入各板块分篇。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方论文与综述为准。</p>
+<p>01SECTION</p>
+<p>00 开篇 · Agent 范式全景：工程、研究与应用的三种视角</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>agent-系列回答「Agent 由什么组成」，本篇回答「Agent 有哪些范式、它们从哪来、往哪去」。同一件事有三个视角：工程（怎么搭——设计模式）、研究（为什么对——路线之争）、应用（拿来干嘛——产品形态）。一张地图看懂三视角，再逐板块深入。</p>
+<p>03SECTION</p>
+<p>一、三视角全景</p>
+<p>视角 1：工程范式（怎么搭）</p>
+<p>看 Agent 的控制结构演化——从「一个提示技巧」到「一套工程体系」：</p>
+<p>code</p>
+<p>CoT（2022 提示）→ ReAct（2022 循环）→ Plan-and-Execute（2023 分离）</p>
+<p>→ Reflexion（2023 反思）→ Multi-Agent（2023 分工）→ Workflow 编排（2024-25 平台化）</p>
+<p>•核心张力：确定性 vs 灵活性——流水线越确定越稳，循环越自由越灵活；生产选型就是在这条轴上找平衡点。</p>
+<p>视角 2：研究范式（为什么对）</p>
+<p>看 Agent 背后的学术路线之争——两种血统的碰撞与融合：</p>
+<p>血统</p>
+<p>基础</p>
+<p>优点</p>
+<p>缺点</p>
+<p>Agent 中的角色</p>
+<p>符号派</p>
+<p>MDP/POMDP、BDI、SOAR、规划器</p>
+<p>确定性、可验证、可解释</p>
+<p>僵化、需人工规则</p>
+<p>约束层、校验层、规划器</p>
+<p>神经派</p>
+<p>深度强化学习、LLM</p>
+<p>泛化、自适应、理解自然语言</p>
+<p>幻觉、不可审计、易注入</p>
+<p>感知层、决策层、生成层</p>
+<p>•2025-2026 的共识不是「谁取代谁」，而是混合（神经符号）：神经管流畅、符号管严谨（ATA 框架等）。</p>
+<p>视角 3：应用范式（拿来干嘛）</p>
+<p>看 Agent 在产品里的定位演化：</p>
+<p>code</p>
+<p>对话助手 → Copilot（人主 Agent 辅）→ 自主 Agent（Agent 主 人监督）→ Autopilot（全自动+熔断）</p>
+<p>工作流（确定流水线）→ Agent（动态决策）→ 两者混合（2026 主流）</p>
+<p>•2026 被定义为 Agent 商用元年：MCP/A2A 标准化、行业落地（研发评审/质检/办公/编码全流程）规模化。</p>
+<p>04SECTION</p>
+<p>二、发展路线时间线</p>
+<p>时间</p>
+<p>范式事件</p>
+<p>视角</p>
+<p>2022</p>
+<p>CoT（提示思考）/ ReAct（推理行动交错）</p>
+<p>工程</p>
+<p>2023</p>
+<p>Toolformer / Reflexion / Plan-and-Execute / AutoGPT / MetaGPT / Generative Agents</p>
+<p>工程 + 研究</p>
+<p>2024</p>
+<p>Function Calling 标准化 / o1（推理模型）/ MCP 开源 / Computer Use</p>
+<p>工程 + 应用</p>
+<p>2025</p>
+<p>双血统综述、自进化综述（SWE-RL）/ 神经符号成熟 / LangGraph 1.0 / GPT-5</p>
+<p>研究 + 工程</p>
+<p>2026</p>
+<p>MCP 无状态化（AAIF）/ 商用元年 / 混合架构成主流</p>
+<p>应用 + 研究</p>
+<p>05SECTION</p>
+<p>三、三个关键范式命题（贯穿全系列）</p>
+<p>1推理和行动要不要分开？ ReAct 说「交错」，Plan-and-Execute 说「先全盘规划再执行」——两者对成本、可预测性、出错恢复的取舍完全不同（01-02 篇）；</p>
+<p>2符号和神经要不要结合？ 纯 LLM 流畅但不可靠，纯符号严谨但僵化——神经符号怎么分工（04-06 篇）；</p>
+<p>3人应该在哪？ Copilot（人在主导）→ Autopilot（机器主导）——自主度怎么渐进（07-08 篇）。</p>
+<p>06SECTION</p>
+<p>四、本篇要点（复习卡片）</p>
+<p>1三视角：工程（怎么搭）/ 研究（为什么对）/ 应用（拿来干嘛）——同一范式三张脸。</p>
+<p>2工程谱系：CoT→ReAct→P&amp;E→Reflexion→Multi-Agent→Workflow；主轴 = 确定性 vs 灵活性。</p>
+<p>3研究双血统：符号（可验证）vs 神经（泛化）→ 混合（神经符号）是 2025-2026 共识。</p>
+<p>4应用谱系：对话→Copilot→自主 Agent→Autopilot；工作流→Agent→混合。</p>
+<p>5三命题：分不分开（推理/行动）、结不结合（符号/神经）、人在哪（Copilot/Autopilot）。</p>
+<p>62026 定位：Agent 商用元年——标准化 + 行业落地。</p>
+<p>07SECTION</p>
+<p>五、下一篇预告</p>
+<p>第 01 篇（板块一·工程）：推理-行动交错范式——从 CoT 的「只动脑」到 ReAct 的「边想边做」：ReAct 为什么成为 Agent 范式原点，它和 CoT/Self-Ask/ToT 的谱系关系，以及 ReAct 的局限（为什么后来要 Plan-and-Execute）。</p>
+<p>08SECTION</p>
+<p>参考资料</p>
+<p>•[官方] ReAct（2022）：https://arxiv.org/abs/2210.03629</p>
+<p>•[官方] Agentic AI: A Comprehensive Survey（双血统，2510.25445）：https://arxiv.org/abs/2510.25445</p>
+<p>•[官方] A Survey of Self-Evolving Agents（2507.21046）：https://arxiv.org/abs/2507.21046</p>
+<p>•[官方] A Survey on Agent Workflow（2508.01186）：https://arxiv.org/abs/2508.01186</p>
+<p>•[官方] General Framework of AI Agents（李航, JCST 2026）：https://jcst.ict.ac.cn/</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方论文与综述。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/aG6E31fd2iJMQihPfl9hMA" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

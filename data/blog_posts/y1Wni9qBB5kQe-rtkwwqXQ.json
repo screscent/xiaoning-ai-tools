@@ -1,0 +1,407 @@
+{
+ "slug": "y1Wni9qBB5kQe-rtkwwqXQ",
+ "title": "OpenAI GPT 模型原理进化史",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/y1Wni9qBB5kQe-rtkwwqXQ",
+ "digest": "OpenAI GPT 模型原理进化史",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：OpenAI GPT 家族的开篇总览——从 GPT-1 到 GPT-5.6 的演进时间线、关键技术点详解与进化逻辑总结。供主人先建立「一张图」再深入各分篇。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告与发布说明为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "OpenAI GPT 模型原理进化史"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、演进时间线总览"
+  },
+  {
+   "type": "p",
+   "text": "时间"
+  },
+  {
+   "type": "p",
+   "text": "模型"
+  },
+  {
+   "type": "p",
+   "text": "核心变化"
+  },
+  {
+   "type": "p",
+   "text": "2018-06"
+  },
+  {
+   "type": "p",
+   "text": "GPT-1（1.17 亿参数）"
+  },
+  {
+   "type": "p",
+   "text": "首个开源实践「预训练 + 微调」；押注自回归解码器路线"
+  },
+  {
+   "type": "p",
+   "text": "2019-02"
+  },
+  {
+   "type": "p",
+   "text": "GPT-2（15 亿参数）"
+  },
+  {
+   "type": "p",
+   "text": "零样本能力；规模曲线初现；因生成质量引发关注"
+  },
+  {
+   "type": "p",
+   "text": "2020-05"
+  },
+  {
+   "type": "p",
+   "text": "GPT-3（1750 亿参数）"
+  },
+  {
+   "type": "p",
+   "text": "规模化豪赌"
+  },
+  {
+   "type": "p",
+   "text": "：少样本上下文学习 + 能力涌现"
+  },
+  {
+   "type": "p",
+   "text": "2022-03"
+  },
+  {
+   "type": "p",
+   "text": "InstructGPT（13 亿参数）"
+  },
+  {
+   "type": "p",
+   "text": "RLHF 三步对齐"
+  },
+  {
+   "type": "p",
+   "text": "；对齐 = 能力放大器（小胜大）"
+  },
+  {
+   "type": "p",
+   "text": "2022-11"
+  },
+  {
+   "type": "p",
+   "text": "ChatGPT（GPT-3.5 + RLHF）"
+  },
+  {
+   "type": "p",
+   "text": "对话式 AI 引爆全球；产品形态定型"
+  },
+  {
+   "type": "p",
+   "text": "2023-03"
+  },
+  {
+   "type": "p",
+   "text": "GPT-4"
+  },
+  {
+   "type": "p",
+   "text": "多模态（文+图）；系统卡 + 红队制度化；行业「智能基线」"
+  },
+  {
+   "type": "p",
+   "text": "2024-05"
+  },
+  {
+   "type": "p",
+   "text": "GPT-4o"
+  },
+  {
+   "type": "p",
+   "text": "原生多模态"
+  },
+  {
+   "type": "p",
+   "text": "（文/图/音端到端）；实时语音；成本大降"
+  },
+  {
+   "type": "p",
+   "text": "2024-09"
+  },
+  {
+   "type": "p",
+   "text": "o1"
+  },
+  {
+   "type": "p",
+   "text": "测试时扩展"
+  },
+  {
+   "type": "p",
+   "text": "：RL 训练长思考，思考时间换精度"
+  },
+  {
+   "type": "p",
+   "text": "2025-04"
+  },
+  {
+   "type": "p",
+   "text": "o3 / o4-mini"
+  },
+  {
+   "type": "p",
+   "text": "推理 + 全工具 Agent（自主搜索/Python/图像）"
+  },
+  {
+   "type": "p",
+   "text": "2025-08"
+  },
+  {
+   "type": "p",
+   "text": "GPT-5"
+  },
+  {
+   "type": "p",
+   "text": "推理与对话大一统"
+  },
+  {
+   "type": "p",
+   "text": "：SWE-bench 74.9%，编码/Agent 任务 SOTA"
+  },
+  {
+   "type": "p",
+   "text": "2025-11~2026-03"
+  },
+  {
+   "type": "p",
+   "text": "GPT-5.1 → 5.4"
+  },
+  {
+   "type": "p",
+   "text": "Codex 编码系 + Thinking 思考系 + 档位分化"
+  },
+  {
+   "type": "p",
+   "text": "2026-07"
+  },
+  {
+   "type": "p",
+   "text": "GPT-5.6 Sol/Luna/Terra"
+  },
+  {
+   "type": "p",
+   "text": "旗舰推理系列：编码/研究/科学/网安/计算机使用"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、三条主线：规模 · 对齐 · 能力"
+  },
+  {
+   "type": "p",
+   "text": "OpenAI 的进化围绕三条主线交叉推进："
+  },
+  {
+   "type": "p",
+   "text": "1规模线（GPT-1→3）：架构不变只放大——1750 亿参数实证缩放定律，「大力出奇迹」成为行业共识。"
+  },
+  {
+   "type": "p",
+   "text": "2对齐线（InstructGPT→GPT-4→o/GPT-5）：从 RLHF 手工对齐，到系统卡/红队/分级评估的制度化对齐。"
+  },
+  {
+   "type": "p",
+   "text": "3能力线（ChatGPT→4o→o1→GPT-5）：会续写 → 会对话 → 会看图听音 → 会思考 → 会调用工具干活（Agent）。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、关键技术点详解"
+  },
+  {
+   "type": "p",
+   "text": "1. 自回归解码器（GPT-1 定型的 DNA）"
+  },
+  {
+   "type": "p",
+   "text": "•单向预测下一个词，训练目标 = 生成目标——能生成、易规模化、可涌现；"
+  },
+  {
+   "type": "p",
+   "text": "•与 BERT 双向编码器分道扬镳，十年后成为唯一赢家（DeepSeek/Claude/Gemini 同路线）。"
+  },
+  {
+   "type": "p",
+   "text": "2. 少样本上下文学习（GPT-3）"
+  },
+  {
+   "type": "p",
+   "text": "•不微调、只给 prompt 示例即「学会」新任务；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：能力从「训练时固定」变「使用时装配」——Prompt 工程与 Agent 玩法之根。"
+  },
+  {
+   "type": "p",
+   "text": "3. 能力涌现（GPT-3）"
+  },
+  {
+   "type": "p",
+   "text": "•部分任务跨过规模阈值后性能突然跳到可用水平；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：规模带来质变；无法从小模型外推。"
+  },
+  {
+   "type": "p",
+   "text": "4. RLHF 三步对齐（InstructGPT）"
+  },
+  {
+   "type": "p",
+   "text": "•SFT → 奖励模型 RM（人类排序打分）→ PPO 强化学习（+KL 约束）；"
+  },
+  {
+   "type": "p",
+   "text": "•关键实验：13 亿 InstructGPT 胜 1750 亿 GPT-3——对齐是能力放大器。"
+  },
+  {
+   "type": "p",
+   "text": "5. 系统卡与红队（GPT-4 制度化）"
+  },
+  {
+   "type": "p",
+   "text": "•公开能力/风险/评估/红队结果；按风险分级发布；"
+  },
+  {
+   "type": "p",
+   "text": "•意义：大模型第一次有「说明书」，成为行业事实标准。"
+  },
+  {
+   "type": "p",
+   "text": "6. 原生多模态（GPT-4o）"
+  },
+  {
+   "type": "p",
+   "text": "•文本/图像/音频端到端同一网络，实时语音 232ms 级；"
+  },
+  {
+   "type": "p",
+   "text": "•模态融合度越高交互越自然——后续各家旗舰同路线。"
+  },
+  {
+   "type": "p",
+   "text": "7. 测试时扩展（o1）"
+  },
+  {
+   "type": "p",
+   "text": "•算力新维度：推理时给更多思考 token 也变强；"
+  },
+  {
+   "type": "p",
+   "text": "•RL 训练隐藏思维链；思考深度可调（o3/o4-mini 分档）。"
+  },
+  {
+   "type": "p",
+   "text": "8. 推理 + Agent 统一（o3 / GPT-5）"
+  },
+  {
+   "type": "p",
+   "text": "•o3：推理模型第一次自主组合全工具（搜索/Python/图像）；"
+  },
+  {
+   "type": "p",
+   "text": "•GPT-5：推理与对话大一统 + reasoning effort 可调 + 长程工具链稳定执行；"
+  },
+  {
+   "type": "p",
+   "text": "•趋势：「默认会想、按需深想」成为旗舰默认行为（GPT-5.4 思考计划可中途调整）。"
+  },
+  {
+   "type": "p",
+   "text": "∞CONCLUSION"
+  },
+  {
+   "type": "p",
+   "text": "四、进化逻辑总结（学习重点）"
+  },
+  {
+   "type": "p",
+   "text": "1架构做「减法」：始终解码器不换赛道——把创新全押在数据、对齐、推理、系统上。"
+  },
+  {
+   "type": "p",
+   "text": "2规模做「加法」：参数与数据滚雪球——缩放定律（llm-理论 02）的产业验证。"
+  },
+  {
+   "type": "p",
+   "text": "3对齐做「制度化」：RLHF（手工）→ 系统卡/红队/分级（制度）——从「能对齐」到「可审计」。"
+  },
+  {
+   "type": "p",
+   "text": "4能力做「乘法」：多模态 × 思考 × 工具 = Agent——从「语言模型」到「数字员工」。"
+  },
+  {
+   "type": "p",
+   "text": "5产品做「档位」：nano/mini/标准/Pro/Codex/Thinking——同一技术按成本分档（llm-理论 04）。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、资料源（供深入阅读）"
+  },
+  {
+   "type": "p",
+   "text": "•OpenAI 官方发布页：https://openai.com/index/"
+  },
+  {
+   "type": "p",
+   "text": "•OpenAI 模型发布说明（持续更新）：https://help.openai.com/articles/9624314"
+  },
+  {
+   "type": "p",
+   "text": "•GPT-1/2/3/InstructGPT/o1/GPT-5 各代技术报告（见本系列各分篇参考资料）"
+  },
+  {
+   "type": "p",
+   "text": "•学习路径：本开篇 → 01~05 分篇 → 对照 llm-基础理论 02/03/05/06"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方发布说明。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:58+0800"
+}

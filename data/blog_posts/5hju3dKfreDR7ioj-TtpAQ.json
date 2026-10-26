@@ -1,0 +1,235 @@
+{
+ "slug": "5hju3dKfreDR7ioj-TtpAQ",
+ "title": "第 04 篇 · Sonnet 4.5 与 Opus 4.5：对齐巅峰与长程 Agent",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/5hju3dKfreDR7ioj-TtpAQ",
+ "digest": "第 04 篇 · Sonnet 4.5 与 Opus 4.5：对齐巅峰与长程 Agent",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Anthropic Claude 家族系列第 04 篇（收尾）——Sonnet 4.5 与 Opus 4.5：2025 下半年的「对齐巅峰」与「长程 Agent 旗舰」，以及 2026 年新系列（Fable 5.1 / Opus 5.5 / Sonnet 5.5）。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方技术报告/系统卡为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 04 篇 · Sonnet 4.5 与 Opus 4.5：对齐巅峰与长程 Agent"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "2025 年下半年，Anthropic 密集放出三代更新：Sonnet 4.5（9 月）、Haiku 4.5（10 月）、Opus 4.5（11 月）。这一波的关键词不是「更大」，而是：最对齐、最会干活、旗舰变便宜。到 2026 年新系列（Fable/Opus/Sonnet 5.x）更是把上下文推到 1M、思考改为「自适应常开」。Claude 系列就此锁定「安全 + Agent 能力」的双旗舰地位。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、Claude Sonnet 4.5（2025-09-29）：最对齐模型"
+  },
+  {
+   "type": "p",
+   "text": "1.1 核心事实"
+  },
+  {
+   "type": "p",
+   "text": "•官方定位：「best coding model in the world」「most aligned frontier model we've ever released」；"
+  },
+  {
+   "type": "p",
+   "text": "•关键成绩：SWE-bench Verified 领先（真实软件工程编码）；OSWorld（计算机使用）61.4%（四个月前 Sonnet 4 是 42.2%）；长程自主任务：实测连续工作 30+ 小时保持专注（编码/多步任务）；定价不变：3/15（与 Sonnet 4 同价，性能大涨）；"
+  },
+  {
+   "type": "p",
+   "text": "•技术形态：混合推理（hybrid reasoning）——默认会想，按需深想；系统卡 100+ 页公开安全评估。"
+  },
+  {
+   "type": "p",
+   "text": "1.2 为什么值得单独一篇"
+  },
+  {
+   "type": "p",
+   "text": "•「对齐」第一次成为可量化的卖点：系统卡里专门评测了奖励黑客（reward hacking）、诚实度、agentic 安全、模型福祉等前沿议题；"
+  },
+  {
+   "type": "p",
+   "text": "•计算机使用达到「可用」拐点：61.4% 意味着「让它操作电脑完成真实任务」从玩具变成工具；"
+  },
+  {
+   "type": "p",
+   "text": "•价格不动性能暴涨：效率革命（llm-理论 04）的产品化——「同价更高能」。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：Sonnet 4.5 =「对齐与能力不再二选一」早期 Claude「谨慎到啰嗦」，4.5 是「该拒的拒、该干的干」——对齐成熟 = 拒绝精度 + 干活的自由度同时到位。这是安全路线的成年礼。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、Claude Opus 4.5（2025-11-24）：长程 Agent 旗舰"
+  },
+  {
+   "type": "p",
+   "text": "2.1 核心事实"
+  },
+  {
+   "type": "p",
+   "text": "•定价 25（Opus 历史上第一次平民价；对照此前 Opus 级 75 档）；"
+  },
+  {
+   "type": "p",
+   "text": "•优势场景：长程自主任务、复杂多系统排错、跨代码库重构——官方称「Satellite 级难题也能自己想明白」；"
+  },
+  {
+   "type": "p",
+   "text": "•配套：Claude Code 升级（checkpoints 断点/回滚）、Agent SDK 开放、Excel/Chrome/桌面集成；"
+  },
+  {
+   "type": "p",
+   "text": "•与 Sonnet 4.5 的分工：Sonnet 4.5 = 日常 Agent 主力；Opus 4.5 = 高难度长程任务。"
+  },
+  {
+   "type": "p",
+   "text": "2.2 意义"
+  },
+  {
+   "type": "p",
+   "text": "•旗舰能力平民化：25 让「Opus 级」成为大众可选项——价格战从中间档打到旗舰档；"
+  },
+  {
+   "type": "p",
+   "text": "•Agent 工作流标准件：断点保存/回滚 = 长任务可「断点续跑」，Agent 从「demo」变「生产工具」。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、2026 新系列：Fable 5.1 / Opus 5.5 / Sonnet 5.5"
+  },
+  {
+   "type": "p",
+   "text": "•1M 上下文（全家标准）；"
+  },
+  {
+   "type": "p",
+   "text": "•自适应思考（adaptive thinking, always on）：不再手动开关思考，模型自己判断「该多想还是快答」；"
+  },
+  {
+   "type": "p",
+   "text": "•分档：Sonnet 5.5（10，快）/ Opus 5.5（20，均衡）/ Fable 5.1（50，最强）——档位下探到 $2，能力上探到 Fable；"
+  },
+  {
+   "type": "p",
+   "text": "•趋势：「默认会想、自动调速」成为新一代旗舰默认（与 GPT-5 系列、Gemini 3 系列同频）。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1Sonnet 4.5（2025-09）：最对齐 + SWE-bench/OSWorld 双第一；30h 长程任务；同价更高能。"
+  },
+  {
+   "type": "p",
+   "text": "2Opus 4.5（2025-11）：25 旗舰平民化；长程 Agent / 跨代码库重构王者。"
+  },
+  {
+   "type": "p",
+   "text": "3对齐成熟：从「谨慎啰嗦」到「该拒则拒、该干则干」——拒绝精度 + 干活自由度。"
+  },
+  {
+   "type": "p",
+   "text": "42026 新系：1M 上下文 + 自适应思考常开；分档下探（Sonnet $2）。"
+  },
+  {
+   "type": "p",
+   "text": "5总路线：安全优先 → 会干活 → 旗舰便宜 → 自动思考——Claude 用「对齐 + Agent」定义旗舰。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、系列收尾：Claude 四篇地图"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "01 宪法 AI（对齐原点）→ 02 Claude 3/3.5（三档与口碑）→ 03 Claude 4（混合推理+计算机使用）"
+  },
+  {
+   "type": "p",
+   "text": "→ 04 Sonnet/Opus 4.5（对齐巅峰+长程 Agent）"
+  },
+  {
+   "type": "p",
+   "text": "对照理论线：宪法 AI 对应 llm-理论 03（对齐的另一条路线）；混合推理对应 05（推理时代）；Computer Use/Claude Code 对应 06（多模态与 Agent）。Claude 家族 = 「对齐优先」路线的完整标本。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Introducing Claude Sonnet 4.5（2025-09）：https://www.anthropic.com/news/claude-sonnet-4-5"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Claude Sonnet 4.5 System Card：https://www.anthropic.com/claude-sonnet-4-5-system-card"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Introducing Claude Opus 4.5（2025-11）：https://www.anthropic.com/news/claude-opus-4-5"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Claude Haiku 4.5（2025-10）：https://www.anthropic.com/news/claude-haiku-4-5"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方发布说明。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:25+0800"
+}

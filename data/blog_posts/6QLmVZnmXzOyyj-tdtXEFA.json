@@ -1,0 +1,327 @@
+{
+ "slug": "6QLmVZnmXzOyyj-tdtXEFA",
+ "title": "第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强",
+ "author": "月牙寂",
+ "publish_time": "2026-10-02",
+ "source_url": "https://mp.weixin.qq.com/s/6QLmVZnmXzOyyj-tdtXEFA",
+ "digest": "第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 范式系列板块二·研究第 05 篇——自进化 Agent 范式（Self-Evolving）：从「一次执行」到「持续成长」。what/when/how 三问框架，SWE-RL 自博弈、Voyager 技能库、EvolveR 经验蒸馏。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以官方论文为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "前面的范式都是「静态」的：部署即定型，执行完拉倒。自进化（Self-Evolving）范式回答一个新问题：Agent 能不能把执行结果变成学习信号，持续自我改进？ 2025-2026 年这个方向从理论进入实证（SWE-RL 自博弈 +10.4pp），是当前研究范式的最前沿。本篇用「what/when/how」三问拆解。"
+  },
+  {
+   "type": "p",
+   "text": "03WHY"
+  },
+  {
+   "type": "p",
+   "text": "一、为什么需要自进化"
+  },
+  {
+   "type": "p",
+   "text": "•传统模式：「一次执行」——任务完成就完，下次同类任务从零开始；"
+  },
+  {
+   "type": "p",
+   "text": "•现实世界的三个特征让这不够用：开放性：环境在变（API 升级、界面改版、数据漂移）；长程性：任务跨会话、需要跨会话积累；重复性：用户反复做相似任务——每次都重新发明轮子太浪费；"
+  },
+  {
+   "type": "p",
+   "text": "•核心思想：把执行结果变成学习信号，让系统修改自己的组件。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、三问框架（What / When / How）"
+  },
+  {
+   "type": "p",
+   "text": "2.1 What to Evolve（进化什么——四个层）"
+  },
+  {
+   "type": "p",
+   "text": "层"
+  },
+  {
+   "type": "p",
+   "text": "进化对象"
+  },
+  {
+   "type": "p",
+   "text": "代表"
+  },
+  {
+   "type": "p",
+   "text": "模型层"
+  },
+  {
+   "type": "p",
+   "text": "权重/策略：自我生成 SFT、交互反馈 RL、自博弈"
+  },
+  {
+   "type": "p",
+   "text": "SWE-RL（自博弈，SWE-bench +10.4pp）、STaR"
+  },
+  {
+   "type": "p",
+   "text": "上下文层"
+  },
+  {
+   "type": "p",
+   "text": "记忆 + 提示词：记忆流、经验蒸馏、Prompt 优化"
+  },
+  {
+   "type": "p",
+   "text": "Voyager 技能库、EvolveR、OPRO、Self-Refine"
+  },
+  {
+   "type": "p",
+   "text": "工具层"
+  },
+  {
+   "type": "p",
+   "text": "工具：自主发现、创造、改进工具"
+  },
+  {
+   "type": "p",
+   "text": "Voyager（写技能进库）、RoboPhD"
+  },
+  {
+   "type": "p",
+   "text": "架构层"
+  },
+  {
+   "type": "p",
+   "text": "系统结构：单 Agent/多 Agent 流程优化"
+  },
+  {
+   "type": "p",
+   "text": "HyperAgents、Agentic Workflow 优化"
+  },
+  {
+   "type": "p",
+   "text": "2.2 When to Evolve（何时进化）"
+  },
+  {
+   "type": "p",
+   "text": "•测试内（Intra-test-time）：单任务执行中，靠上下文学习/反思即时调整（最便宜）；"
+  },
+  {
+   "type": "p",
+   "text": "•测试间（Inter-test-time）：跨任务/会话，积累经验持久化（Reflexion 的延伸——从「本次长记性」到「永久长记性」）；"
+  },
+  {
+   "type": "p",
+   "text": "•越靠后越「贵」但越「持久」——演进时机的选择 = 成本与持久性的权衡。"
+  },
+  {
+   "type": "p",
+   "text": "2.3 How to Evolve（怎么进化——三条路径）"
+  },
+  {
+   "type": "p",
+   "text": "路径"
+  },
+  {
+   "type": "p",
+   "text": "机制"
+  },
+  {
+   "type": "p",
+   "text": "代表"
+  },
+  {
+   "type": "p",
+   "text": "基于奖励"
+  },
+  {
+   "type": "p",
+   "text": "文本反馈/内部奖励/外部奖励 + RL"
+  },
+  {
+   "type": "p",
+   "text": "SWE-RL、R1 系"
+  },
+  {
+   "type": "p",
+   "text": "示范学习"
+  },
+  {
+   "type": "p",
+   "text": "自生成示范 / 跨 Agent 示范 / 混合"
+  },
+  {
+   "type": "p",
+   "text": "STaR（自己生成→筛选→微调）"
+  },
+  {
+   "type": "p",
+   "text": "群体演化"
+  },
+  {
+   "type": "p",
+   "text": "单 Agent 进化 / 多 Agent 群体选择"
+  },
+  {
+   "type": "p",
+   "text": "类遗传算法式 Agent 进化"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、三个标志性系统（2025-2026）"
+  },
+  {
+   "type": "p",
+   "text": "3.1 SWE-RL（Meta Superintelligence Labs，2025-12）"
+  },
+  {
+   "type": "p",
+   "text": "•自博弈：一个 Agent 同时扮演「注入 bug 者」和「修 bug 者」——先造 bug 再训练自己修；"
+  },
+  {
+   "type": "p",
+   "text": "•结果：SWE-bench Verified +10.4pp，不依赖任何外部数据——纯自博弈驱动的自我改进。"
+  },
+  {
+   "type": "p",
+   "text": "3.2 Voyager（2023，里程碑）"
+  },
+  {
+   "type": "p",
+   "text": "•Minecraft 中：Agent 把学到的技能写成可执行代码存入技能库，下次任务直接调用；"
+  },
+  {
+   "type": "p",
+   "text": "•效果：解锁物品 3.3×、科技树推进 15.3×——「会做事」被沉淀为「可复用技能」。"
+  },
+  {
+   "type": "p",
+   "text": "3.3 EvolveR（2026）"
+  },
+  {
+   "type": "p",
+   "text": "•离线自蒸馏：把交互轨迹提炼成可复用的抽象策略原则；"
+  },
+  {
+   "type": "p",
+   "text": "•在线交互：检索原则指导决策 + 策略强化迭代更新——从「重放解决方案」到「提炼可泛化的策略」。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：自进化 =「从执行到学习」的闭环静态 Agent：执行 → 输出 → 完。自进化 Agent：执行 → 提取经验（反思/技能/策略） → 存储 → 下次调用。递归自我改进 2026 已从理论进入实证——这是 Agent 范式最重要的前沿信号。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1动机三特征：开放性 / 长程性 / 重复性——「一次执行」不够用。"
+  },
+  {
+   "type": "p",
+   "text": "2What 四层：模型（权重）/ 上下文（记忆+提示）/ 工具（创造技能）/ 架构（流程）。"
+  },
+  {
+   "type": "p",
+   "text": "3When 两时机：测试内（即时调整，便宜）/ 测试间（持久积累，贵但持久）。"
+  },
+  {
+   "type": "p",
+   "text": "4How 三路径：奖励（RL）/ 示范（STaR）/ 群体演化。"
+  },
+  {
+   "type": "p",
+   "text": "5三标杆：SWE-RL（自博弈 +10.4pp）/ Voyager（技能库 3.3×）/ EvolveR（经验蒸馏）。"
+  },
+  {
+   "type": "p",
+   "text": "6核心闭环：执行 → 提取经验 → 存储 → 复用——递归自我改进已实证。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 06 篇（板块二收尾）：神经符号结合与通用框架——04 讲双血统趋势、05 讲自进化，最后收束：神经符号的具体结合模式，以及「一个 Agent 的通用框架」长什么样（李航 JCST 2026：任务导向 × 多模态 × LLM 推理 × RL 构建 × 工具记忆）。研究板块三篇 = 路线之争 + 演进前沿 + 统一框架。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] A Survey of Self-Evolving Agents（2507.21046）：https://arxiv.org/abs/2507.21046"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Voyager（2023）：https://arxiv.org/abs/2305.16291"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] STaR（2022）：https://arxiv.org/abs/2203.14465"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] SWE-RL 发布（Meta，2025-12）｜ EvolveR（2026）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据官方论文。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:27+0800"
+}

@@ -1,0 +1,295 @@
+{
+ "slug": "FjC9tNVlNqguQkgx8i4aUw",
+ "title": "第 05 篇 · 多 Agent 团队实战：竞品调研系统",
+ "author": "月牙寂",
+ "publish_time": "2026-10-02",
+ "source_url": "https://mp.weixin.qq.com/s/FjC9tNVlNqguQkgx8i4aUw",
+ "digest": "第 05 篇 · 多 Agent 团队实战：竞品调研系统",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：Agent 实战系列板块二·通用第 05 篇——多 Agent 团队实战：从零搭「竞品调研系统」（Claude Agent Teams），含分工设计、token 成本模型与选型判断。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，代码示意基于官方 SDK 用法。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 05 篇 · 多 Agent 团队实战：竞品调研系统"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "04 篇教会单 Agent。但「调研 5 个竞品写对比报告」这种任务，一个 Agent 串行要半天、一个窗口装不下——需要团队。本篇照 Claude Agent Teams 的实战手册，搭一个「搜索 + 分析 + 汇总」三 Agent 竞品调研系统：分工设计、代码骨架、以及最关键的成本账（多 Agent token ≈ 15 倍，值不值怎么算）。"
+  },
+  {
+   "type": "p",
+   "text": "03WHY"
+  },
+  {
+   "type": "p",
+   "text": "一、为什么「多」Agent"
+  },
+  {
+   "type": "p",
+   "text": "原因"
+  },
+  {
+   "type": "p",
+   "text": "解释"
+  },
+  {
+   "type": "p",
+   "text": "专业化分工"
+  },
+  {
+   "type": "p",
+   "text": "所有工具塞给一个 Agent = 让一个人同时当搜索/分析师/写手——都不精；拆开每个 Prompt 更短、工具更少、输出更稳"
+  },
+  {
+   "type": "p",
+   "text": "并行效率"
+  },
+  {
+   "type": "p",
+   "text": "搜 5 个竞品：一个 Agent 串行 5 次，五个并行 Agent 一次完成"
+  },
+  {
+   "type": "p",
+   "text": "证据"
+  },
+  {
+   "type": "p",
+   "text": "Anthropic：Opus 4 编排 + Sonnet 4 子 Agent 比单 Opus 4 提升 ~90%（其中 80% 由 Token 用量解释——用更多计算换更好结果）"
+  },
+  {
+   "type": "p",
+   "text": "•代价：单 Agent token ≈ 聊天 4 倍，多 Agent ≈ 15 倍——只适合高价值复杂任务。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、选型判断（什么时候该上多 Agent）"
+  },
+  {
+   "type": "p",
+   "text": "•✅ 任务能拆成 2 个以上独立子任务，且子任务间不需要频繁交换中间状态 → 多 Agent；"
+  },
+  {
+   "type": "p",
+   "text": "•❌ 任务简单、一个 Prompt 搞定 → 单 Agent 够；"
+  },
+  {
+   "type": "p",
+   "text": "•❌ 所有子任务必须共享同一份上下文 → 不适合多 Agent（隔离反而丢上下文）。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、实战：竞品调研系统骨架"
+  },
+  {
+   "type": "p",
+   "text": "python"
+  },
+  {
+   "type": "p",
+   "text": "import anthropic, json"
+  },
+  {
+   "type": "p",
+   "text": "client = anthropic.Anthropic()"
+  },
+  {
+   "type": "p",
+   "text": "# ① 搜索 Agent：只负责查资料"
+  },
+  {
+   "type": "p",
+   "text": "def search_agent(product):"
+  },
+  {
+   "type": "p",
+   "text": "# 调搜索工具 → 返回该竞品的功能/价格/评价摘要"
+  },
+  {
+   "type": "p",
+   "text": "return f\"{product} 的调研摘要：功能/价格/用户评价……\""
+  },
+  {
+   "type": "p",
+   "text": "# ② 分析 Agent：只负责比较"
+  },
+  {
+   "type": "p",
+   "text": "def analyst_agent(data_list):"
+  },
+  {
+   "type": "p",
+   "text": "# 输入多份摘要 → 输出对比分析"
+  },
+  {
+   "type": "p",
+   "text": "return \"对比分析：A 在价格上有优势，B 在功能上领先……\""
+  },
+  {
+   "type": "p",
+   "text": "# ③ 汇总 Agent：只负责成文"
+  },
+  {
+   "type": "p",
+   "text": "def writer_agent(analysis):"
+  },
+  {
+   "type": "p",
+   "text": "return f\"# 竞品对比报告\\n{analysis}\\n（附来源链接）\""
+  },
+  {
+   "type": "p",
+   "text": "# ④ 编排：主控串起团队（可换成真实搜索 API 即投产）"
+  },
+  {
+   "type": "p",
+   "text": "def competitor_report(products):"
+  },
+  {
+   "type": "p",
+   "text": "raw = [search_agent(p) for p in products] # 可并行"
+  },
+  {
+   "type": "p",
+   "text": "analysis = analyst_agent(raw)"
+  },
+  {
+   "type": "p",
+   "text": "return writer_agent(analysis)"
+  },
+  {
+   "type": "p",
+   "text": "print(competitor_report([\"竞品A\", \"竞品B\", \"竞品C\"]))"
+  },
+  {
+   "type": "p",
+   "text": "•要点：每个 Agent 一个职责、一份上下文——搜索 Agent 不带「写报告」的 prompt，汇总 Agent 不背搜索工具；骨架清晰，换成真实 API/多 Agent 框架（LangGraph/ADK）即可投产。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：多 Agent 的价值 = 上下文隔离 + 职责单一一个 Agent 只带自己那部分上下文、只做一类事——Prompt 更短、工具更少、输出更稳。编排层（谁先谁后、谁汇总）才是多 Agent 系统的灵魂。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、成本与避坑（官方生产数据）"
+  },
+  {
+   "type": "p",
+   "text": "1Token 账：聊天 1× → 单 Agent 4× → 多 Agent 15×——先算任务价值再决定是否上多 Agent；"
+  },
+  {
+   "type": "p",
+   "text": "2上下文污染：子 Agent 输出不要全塞进父 Agent——只传「结构化摘要」（对应 MetaGPT 的 SOP 产物思想）；"
+  },
+  {
+   "type": "p",
+   "text": "3失败归属：哪个子 Agent 出错要能定位——每步输出留 trace；"
+  },
+  {
+   "type": "p",
+   "text": "4并行注意限流：多个子 Agent 同时调 API，注意速率限制与配额。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1为什么多：分工（专）+ 并行（快）+ 证据（编排+子 Agent 提升 ~90%，80% 由 token 解释）。"
+  },
+  {
+   "type": "p",
+   "text": "2选型三问：能拆独立子任务？少交换中间状态？→ 是才上多 Agent。"
+  },
+  {
+   "type": "p",
+   "text": "3骨架：搜索 Agent → 分析 Agent → 汇总 Agent——每 Agent 一职责一上下文。"
+  },
+  {
+   "type": "p",
+   "text": "4成本账：单 Agent 4×、多 Agent 15× 聊天——先算价值再上。"
+  },
+  {
+   "type": "p",
+   "text": "5避坑：传摘要不传全量、失败可归属、注意限流。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 06 篇（板块二·通用）：MCP 实战——工具接入的行业标准：写一个 MCP Server（JSON-RPC 定义 Tools/Resources/Prompts），一次开发、Claude/ChatGPT/Gemini 处处可用。从「给单个模型写工具」到「给所有 Agent 写工具」。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Anthropic 多 Agent 研究（Opus 编排 vs 单模型）：https://www.anthropic.com/"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Claude API / Agent SDK：https://docs.anthropic.com/"
+  },
+  {
+   "type": "p",
+   "text": "•[参考] Claude Agent Teams 实战手册（社区）"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-02 月绡凝 · 依据官方发布。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:15:08+0800"
+}

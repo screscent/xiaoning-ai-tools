@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepSeek 模型原理进化史 | 小凝 AI 工具集</title>
+<meta name="description" content="DeepSeek 模型原理进化史">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/hihifqp8i6WmmgfEmVESHg.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DeepSeek 模型原理进化史 | 小凝 AI 工具集">
+<meta property="og:description" content="DeepSeek 模型原理进化史">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/hihifqp8i6WmmgfEmVESHg.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "DeepSeek 模型原理进化史", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/hihifqp8i6WmmgfEmVESHg.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "DeepSeek 模型原理进化史"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>DeepSeek 模型原理进化史</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">DeepSeek 模型原理进化史</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：主人学习 LLM 的入门资料——DeepSeek 从最早公开模型到最新版本的原理演进整理（主人 10572 指令，2026-10-01）。以官方技术报告与论文为准。</p>
+<p>01SECTION</p>
+<p>DeepSeek 模型原理进化史</p>
+<p>02SECTION</p>
+<p>一、演进时间线总览</p>
+<p>时间</p>
+<p>模型</p>
+<p>核心变化</p>
+<p>2024-01</p>
+<p>DeepSeek LLM（2B/7B/67B）</p>
+<p>首个开源 LLM，打基础</p>
+<p>2024-02</p>
+<p>DeepSeekMath（7B）</p>
+<p>数学推理专项</p>
+<p>2024-05</p>
+<p>DeepSeek-V2（236B，21B 激活）</p>
+<p>架构转折</p>
+<p>：引入 MLA + DeepSeekMoE</p>
+<p>2024-09</p>
+<p>DeepSeek-V2.5</p>
+<p>V2 加固</p>
+<p>2024-11</p>
+<p>DeepSeek-R1-Lite-Preview</p>
+<p>推理链预览</p>
+<p>2024-12</p>
+<p>DeepSeek-V3（671B，37B 激活）</p>
+<p>效率巅峰</p>
+<p>：MLA+MoE+MTP+无辅助损失负载均衡+FP8</p>
+<p>2025-01</p>
+<p>DeepSeek-R1（660B）</p>
+<p>推理突破</p>
+<p>：GRPO 强化学习，纯 RL 涌现推理（R1-Zero）</p>
+<p>2025-02</p>
+<p>DeepSeek-V3-0324</p>
+<p>V3 更新</p>
+<p>2025-05</p>
+<p>DeepSeek-R1-0528</p>
+<p>R1 更新</p>
+<p>2025-06</p>
+<p>DeepSeek-V3.1（Terminus）</p>
+<p>缓解中英混杂，优化 Code/Search Agent</p>
+<p>2025-09</p>
+<p>DeepSeek-V3.2-Exp</p>
+<p>引入 DeepSeek Sparse Attention 稀疏注意力，API 降价 50%+</p>
+<p>2025-12</p>
+<p>DeepSeek-V3.2 正式版</p>
+<p>Agent 强化</p>
+<p>：首个将思考融入工具使用的模型，IMO/CMO/ICPC/IOI 金牌</p>
+<p>2026-01</p>
+<p>mHC 架构</p>
+<p>流形约束超连接，万亿参数训练稳定</p>
+<p>2026-04</p>
+<p>DeepSeek-V4 预览版</p>
+<p>百万上下文普惠</p>
+<p>：开源、超长上下文</p>
+<p>2026-06</p>
+<p>DeepSeek-V4 论文</p>
+<p>Towards Highly Efficient Million-Token Context Intelligence</p>
+<p>2026-09</p>
+<p>DeepSeek-V4.1 Flash</p>
+<p>原生多模态</p>
+<p>：视觉理解，非对称结构，更快更省</p>
+<p>03SECTION</p>
+<p>二、两大主线：效率架构 + 推理强化</p>
+<p>DeepSeek 的进化围绕两条主线交叉推进：</p>
+<p>1效率架构线（V1→V2→V3→V4）：如何在有限算力下逼近顶级闭源模型——MoE 稀疏激活、MLA 压缩注意力、长上下文。</p>
+<p>2推理强化线（R1→R1 蒸馏→V3.2→V4）：如何让模型「真正会思考」——强化学习、测试时扩展、Agent 能力。</p>
+<p>04SECTION</p>
+<p>三、关键技术点详解</p>
+<p>1. DeepSeekMoE（混合专家架构 · V2 引入，V3 定型）</p>
+<p>•核心思想：总参数储备知识上限，激活参数决定推理成本。</p>
+<p>•V3：总参数 6710 亿，单次推理仅激活约 370 亿（激活率约 5.5%）。256 个路由专家 + 1 个共享专家，每个 Token 仅激活 8 个专家。</p>
+<p>•无辅助损失负载均衡（V3 首创）：传统 MoE 需 aux-loss 防止专家闲置，DeepSeek 改用偏置项动态调节，训练更干净稳定。</p>
+<p>•V4：总参数 1.6 万亿（V4-Pro），激活 490 亿；V4-Flash 总参 2840 亿、激活 130 亿。每层 384 专家，激活 6 个。</p>
+<p>2. MLA（Multi-head Latent Attention · 多头潜在注意力 · V2 引入）</p>
+<p>•核心思想：对注意力键值（K/V）做低秩联合压缩，KV 缓存大幅缩小。</p>
+<p>•效果：KV 缓存压缩至传统 Transformer 的 1/8，显存占用减少约 93%。</p>
+<p>•意义：让长上下文推理从「不可能」变「标配」，是 V2→V3→V4 一路沿用的基础。</p>
+<p>3. MTP（Multi-Token Prediction · 多 Token 预测 · V3）</p>
+<p>•每次前向同时预测多个 Token，而非只预测下一个。</p>
+<p>•加速训练收敛、提升生成流畅度与质量。</p>
+<p>4. FP8 混合精度训练（V3）</p>
+<p>•训练用 FP8 低精度，配合块级量化与高精度乘法累积。</p>
+<p>•关键贡献之一：V3 全量训练仅 2.788M H800 GPU 小时（约 557.6 万美元），以极低成本对齐闭源顶级。</p>
+<p>5. GRPO（Group Relative Policy Optimization · R1）</p>
+<p>•R1 的核心：纯强化学习（无 SFT 起步）——R1-Zero 直接从基座模型用 RL 训出推理能力。</p>
+<p>•GRPO 替代 PPO：不训练 Critic 模型，用组内相对奖励做策略优化，省一半显存、更稳。</p>
+<p>•奖励设计：规则可验证任务（数学/代码）用确定性正确性奖励；开放任务用模型做奖励。</p>
+<p>•涌现现象：RL 中「Aha Moment」——模型自发产生反思、验证等长思维链行为。</p>
+<p>6. R1 蒸馏（2025-01）</p>
+<p>•用 R1（660B）的输出蒸馏出 6 个小模型（1.5B~70B），其中 32B/70B 多项能力对标 OpenAI o1-mini。</p>
+<p>•启示：推理能力可通过蒸馏「教」给更小模型，无需从头 RL。</p>
+<p>7. 稀疏注意力（Sparse Attention · V3.2-Exp 引入）</p>
+<p>•引入 DeepSeek Sparse Attention，长上下文注意力更省，API 价格降 50% 以上。</p>
+<p>•V4 升级为 CSA + HCA：CSA（压缩稀疏注意力）：连续 4 Token 的 KV 缓存合并为 1 个聚合单元，过滤局部冗余。HCA（重度压缩注意力）：远距离 Token 128 倍高压缩二次聚合，仅对核心摘要做全局注意力。效果：100 万 Token 上下文下，单 Token 推理 FLOPs 降至 V3.2 的 27%，KV 缓存占用降至 10%。对比：同样 100 万字上下文，Llama3.1 需 274GB KV 缓存，GLM-5 需 60GB，DeepSeek V4 仅 5.48GB。</p>
+<p>8. Engram 条件记忆引擎（V4）</p>
+<p>•存算解耦：模拟海马体，「书桌」（GPU）只放当前思考用的知识，「书架」（CPU/SSD）放静态知识。</p>
+<p>•通过 N-gram 哈希 + 近似最近邻检索实现 O(1) 级召回。</p>
+<p>•效果：Multi-Query NIAH 从 84.2% → 97.0%，静态知识查询快 100 倍，能耗降 90%。</p>
+<p>9. mHC（Manifold-Constrained Hyper-Connections · 2026-01）</p>
+<p>•解决万亿参数深网络的训练稳定性（信号爆炸/消失）。</p>
+<p>•核心：信息混合的可学习矩阵强制投影到双随机矩阵流形（每行每列和为 1），信号增益从 3000 倍压到 1.6 倍以内。</p>
+<p>•效果：1.6T 模型训练收敛稳定性提升 3.2 倍，额外开销仅 6.7%。</p>
+<p>10. 训练/推理系统工程（V3 起）</p>
+<p>•DualPipe：计算与通信重叠，减少流水线气泡。</p>
+<p>•跨节点 All-to-All 通信优化：优化 MoE 的专家分发网络开销。</p>
+<p>•FP8 低精度存储与通信：进一步压内存与带宽。</p>
+<p>∞CONCLUSION</p>
+<p>四、进化逻辑总结（学习重点）</p>
+<p>1参数做「加法」，激活做「减法」：MoE 让总参量能大就大、激活量能省就省——智能上限与推理成本解耦。</p>
+<p>2注意力做「压缩」：MLA 压 KV 缓存、Sparse/CSA/HCA 压长上下文算力——长上下文从奢侈品变标配。</p>
+<p>3训练做「省钱」：FP8 + DualPipe + 无 aux-loss，让前沿模型训练成本降两个数量级。</p>
+<p>4推理做「强化」：GRPO 纯 RL 让模型自发「想」——推理不是 SFT 教出来的，是 RL 涌现的。</p>
+<p>5能力做「多模态 + Agent」：V3.2 思考融入工具，V4.1 原生视觉——从「会说话」到「会做事、会看」。</p>
+<p>06SECTION</p>
+<p>五、资料源（供深入阅读）</p>
+<p>•DeepSeek 官方动态：https://www.deepseek.com/news/</p>
+<p>•DeepSeek-V3 技术报告（arXiv 2412.19437）</p>
+<p>•DeepSeek-V3.2 论文（arXiv 2512.02556）</p>
+<p>•DeepSeek-V4 论文（arXiv 2606.19348）</p>
+<p>•DeepSeek-R1 发布说明（api-docs.deepseek.com/news250120）</p>
+<p>•综述：DeepSeek: Paradigm Shifts and Technical Evolution（arXiv 2507.09955）</p>
+<p>•中文架构分析：腾讯云开发者社区《DeepSeek大模型：从&quot;效率颠覆者&quot;到&quot;规模追赶者&quot;的架构演进》</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方动态与技术报告；个别第三方文章数据以官方为准。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/hihifqp8i6WmmgfEmVESHg" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

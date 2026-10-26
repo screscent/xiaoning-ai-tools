@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架 | 小凝 AI 工具集</title>
+<meta name="description" content="第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/FLOwlRBpX0YKw6vH3xMO1w.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架 | 小凝 AI 工具集">
+<meta property="og:description" content="第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/FLOwlRBpX0YKw6vH3xMO1w.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架", "datePublished": "2026-10-02", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/FLOwlRBpX0YKw6vH3xMO1w.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架</h1>
+  <p class="meta-line">发布于 2026-10-02 · 作者 月牙寂</p>
+  <p class="hook">第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 实战系列板块二·通用第 04 篇——从零搭单 Agent：不依赖框架，用 Python + 一个 API Key 手写工具调用 + ReAct 循环，看清「裸骨架」再理解框架价值。</p>
+<p>免责声明：本文为学习与技术分享用途，代码示意基于官方 SDK 用法。</p>
+<p>01SECTION</p>
+<p>第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>Eino（01-03 篇）把 Agent 封装得很好，但先手写一次，你才知道框架替你干了什么。本篇不依赖任何框架，用 Python + Anthropic SDK 搭一个能自主调用搜索工具的单 Agent——代码只有几十行，却完整包含 ReAct 循环的三拍子（推理→行动→观察）。</p>
+<p>03SECTION</p>
+<p>一、Agent vs 普通 LLM 调用</p>
+<p>普通 LLM 调用</p>
+<p>Agent</p>
+<p>交互</p>
+<p>一问一答</p>
+<p>多轮自主决策</p>
+<p>工具</p>
+<p>人写代码串联</p>
+<p>自己决定调哪个</p>
+<p>任务</p>
+<p>单步</p>
+<p>多步</p>
+<p>决策权</p>
+<p>人定每步</p>
+<p>AI 定下一步</p>
+<p>•一句话：Agent = 能自己调工具的 AI。核心循环就是 ReAct（agent-范式 01 篇）。</p>
+<p>04SECTION</p>
+<p>二、最小实战：带搜索工具的 ReAct Agent</p>
+<p>python</p>
+<p>import anthropic, json</p>
+<p>client = anthropic.Anthropic() # 需设 ANTHROPIC_API_KEY</p>
+<p># 1. 定义工具：让模型知道「有搜索能力可用」</p>
+<p>tools = [{</p>
+<p>&quot;name&quot;: &quot;web_search&quot;,</p>
+<p>&quot;description&quot;: &quot;搜索网页并返回相关结果摘要&quot;,</p>
+<p>&quot;input_schema&quot;: {</p>
+<p>&quot;type&quot;: &quot;object&quot;,</p>
+<p>&quot;properties&quot;: {&quot;query&quot;: {&quot;type&quot;: &quot;string&quot;}},</p>
+<p>&quot;required&quot;: [&quot;query&quot;],</p>
+<p>},</p>
+<p>}]</p>
+<p>def web_search(query):</p>
+<p># 真实接入搜索 API（如 Tavily/Serper）；此处为示意</p>
+<p>return f&quot;关于「{query}」的模拟搜索结果……&quot;</p>
+<p># 2. ReAct 循环：推理 → 工具调用 → 观察 → 再推理</p>
+<p>def run_agent(user_query):</p>
+<p>messages = [{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: user_query}]</p>
+<p>for step in range(5): # 最大步数护栏</p>
+<p>resp = client.messages.create(</p>
+<p>model=&quot;claude-sonnet-4-5&quot;, max_tokens=2048,</p>
+<p>messages=messages, tools=tools,</p>
+<p>)</p>
+<p># 检查模型是否请求调用工具</p>
+<p>tool_call = next((b for b in resp.content if b.type == &quot;tool_use&quot;), None)</p>
+<p>if tool_call is None:</p>
+<p>return resp.content[-1].text # 无工具调用 → 输出最终答案</p>
+<p># 3. 执行工具，把结果回喂给模型（Observation）</p>
+<p>result = web_search(tool_call.input[&quot;query&quot;])</p>
+<p>messages.append({&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: resp.content})</p>
+<p>messages.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: [</p>
+<p>{&quot;type&quot;: &quot;tool_result&quot;, &quot;tool_use_id&quot;: tool_call.id, &quot;content&quot;: result},</p>
+<p>])</p>
+<p>return &quot;达到最大步数，任务未完成。&quot;</p>
+<p>print(run_agent(&quot;帮我查一下 Agent 最新的开源框架&quot;))</p>
+<p>•五步解析（对照 agent-范式 01 篇）：工具定义：JSON Schema 告诉模型「有什么能力、参数是什么」；推理：模型决定「该查一下」并输出 tool_use；行动：你执行工具（这里是 web_search）；观察：把 tool_result 回喂；循环：模型看到结果再推理，直到不调工具直接回答。</p>
+<p>💡 学习要点：裸骨架 = 一个 while 循环 + 工具回喂Agent 的本质不是魔法：「模型输出 tool_use → 你执行 → 结果回喂 → 模型再想」。框架（Eino/LangGraph）干的是把这个循环工程化（状态、重试、流式、追踪）。</p>
+<p>05SECTION</p>
+<p>三、实战避坑（官方/社区共识）</p>
+<p>1Token 消耗爆炸：单 Agent 一次任务 token ≈ 普通聊天的 4 倍（每次循环都重发全部消息）——所以要有 max_steps 护栏和上下文管理；</p>
+<p>2上下文污染：中间结果全塞进 messages，长任务会爆窗口——需要摘要/压缩（agent-系列 03 篇上下文工程）；</p>
+<p>3工具描述即一切：description 写不好，模型就不会用或乱用——工具是「说明书」，不是「开关」；</p>
+<p>4流式 tool_use 拼接：流式输出时 tool_use 参数可能分片，要攒齐再执行（与 Eino 踩坑同源）。</p>
+<p>06WHY</p>
+<p>四、从裸骨架到框架（为什么要用 Eino/LangGraph）</p>
+<p>裸骨架（本篇）</p>
+<p>框架版（01-03 篇）</p>
+<p>手写循环</p>
+<p>react.NewAgent(...)</p>
+<p>一行</p>
+<p>手写上下文管理</p>
+<p>MessageModifier / checkpoint</p>
+<p>无流式支持</p>
+<p>StreamReader 原生流式</p>
+<p>无追踪</p>
+<p>Callback / LangSmith 自动埋点</p>
+<p>单 Agent 到头</p>
+<p>ADK 多 Agent + HITL</p>
+<p>07SECTION</p>
+<p>五、本篇要点（复习卡片）</p>
+<p>1Agent 定义：能自己调工具的 AI；核心 = ReAct 循环。</p>
+<p>2五步骨架：定义工具 → 模型出 tool_use → 执行 → 结果回喂 → 循环。</p>
+<p>3工具描述 = 说明书：description 决定模型用不用、用得对不对。</p>
+<p>4两大坑：token 4 倍成本（要护栏）、上下文污染（要压缩）。</p>
+<p>5框架价值：把循环工程化——流式、状态、追踪、多 Agent。</p>
+<p>08SECTION</p>
+<p>六、下一篇预告</p>
+<p>第 05 篇（板块二·通用）：多 Agent 团队实战——单 Agent 会了，怎么组队：Claude Agent Teams 从零搭「竞品调研系统」（搜索 Agent + 分析 Agent + 汇总 Agent 分工协作），附选型判断（什么时候该多 Agent、token 15 倍代价怎么算）。</p>
+<p>09SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Anthropic Claude API / Tool Use：https://docs.anthropic.com/</p>
+<p>•[参考] Claude Agent Teams 实战手册（从零搭多 Agent，社区）</p>
+<p>整理：2026-10-02 月绡凝 · 依据官方 SDK 用法。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/FLOwlRBpX0YKw6vH3xMO1w" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

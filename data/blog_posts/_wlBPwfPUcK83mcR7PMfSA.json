@@ -1,0 +1,523 @@
+{
+ "slug": "_wlBPwfPUcK83mcR7PMfSA",
+ "title": "其他家族概览：GLM · Kimi · MiniMax · Mistral",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/_wlBPwfPUcK83mcR7PMfSA",
+ "digest": "其他家族概览：GLM · Kimi · MiniMax · Mistral",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：LLM 家族概览——GLM / Kimi / MiniMax / Mistral 四家「小而强」玩家的版本迭代一览。主系列之外的补充视野：看差异化打法（长上下文 / MoE 开源 / 线性注意力 / 欧洲效率派）。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以各官方发布为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "其他家族概览：GLM · Kimi · MiniMax · Mistral"
+  },
+  {
+   "type": "p",
+   "text": "02SECTION"
+  },
+  {
+   "type": "p",
+   "text": "导读"
+  },
+  {
+   "type": "p",
+   "text": "四大主系列（GPT/Claude/Gemini/开源三强）之外，还有一批「小而强」的玩家，各自押中了一个差异化方向：GLM 押中文全栈 + Agent、Kimi 押长上下文、MiniMax 押线性注意力效率、Mistral 押小模型效率 + MoE 开源。它们规模不如巨头，但在特定战场上多次领先（甚至定义范式）。本篇做一张「四家一页纸」地图，作为后续深入学习的入口。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、智谱 GLM：中文全栈 + Agent"
+  },
+  {
+   "type": "p",
+   "text": "版本"
+  },
+  {
+   "type": "p",
+   "text": "时间"
+  },
+  {
+   "type": "p",
+   "text": "亮点"
+  },
+  {
+   "type": "p",
+   "text": "GLM-130B"
+  },
+  {
+   "type": "p",
+   "text": "2022"
+  },
+  {
+   "type": "p",
+   "text": "千亿级中文基座（当时国产稀缺）"
+  },
+  {
+   "type": "p",
+   "text": "ChatGLM / GLM-2"
+  },
+  {
+   "type": "p",
+   "text": "2023"
+  },
+  {
+   "type": "p",
+   "text": "6B 级中文对话开源——「平民 ChatGPT」"
+  },
+  {
+   "type": "p",
+   "text": "GLM-4"
+  },
+  {
+   "type": "p",
+   "text": "2024-01"
+  },
+  {
+   "type": "p",
+   "text": "多模态 + 长上下文；对标 GPT-4 系"
+  },
+  {
+   "type": "p",
+   "text": "GLM-4.5 / 4.6"
+  },
+  {
+   "type": "p",
+   "text": "2025"
+  },
+  {
+   "type": "p",
+   "text": "Agent 强化（AutoGLM 手机操作、浏览器操作）"
+  },
+  {
+   "type": "p",
+   "text": "•差异化：中文基座 + 全栈（代码 CodeGeeX / 语音 / Agent 手机操作 AutoGLM）；"
+  },
+  {
+   "type": "p",
+   "text": "•路线：少参数打多能力 + Agent 先发（手机 GUI 操作与 Claude Computer Use 同赛道）。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、月之暗面 Kimi：长上下文杀手"
+  },
+  {
+   "type": "p",
+   "text": "版本"
+  },
+  {
+   "type": "p",
+   "text": "时间"
+  },
+  {
+   "type": "p",
+   "text": "亮点"
+  },
+  {
+   "type": "p",
+   "text": "Kimi（初代）"
+  },
+  {
+   "type": "p",
+   "text": "2023-10"
+  },
+  {
+   "type": "p",
+   "text": "20 万字上下文破圈——「长文本」成为中文用户心智"
+  },
+  {
+   "type": "p",
+   "text": "Kimi-Moonshot 系列"
+  },
+  {
+   "type": "p",
+   "text": "2024"
+  },
+  {
+   "type": "p",
+   "text": "长上下文持续升级 + 智能搜索"
+  },
+  {
+   "type": "p",
+   "text": "Kimi K2"
+  },
+  {
+   "type": "p",
+   "text": "2025-07"
+  },
+  {
+   "type": "p",
+   "text": "MoE 开源"
+  },
+  {
+   "type": "p",
+   "text": "（1T 总 / 32B 激活）——国产开源推理/Agent 强将"
+  },
+  {
+   "type": "p",
+   "text": "Kimi K2 Thinking"
+  },
+  {
+   "type": "p",
+   "text": "2025-11"
+  },
+  {
+   "type": "p",
+   "text": "推理增强（Thinking 版）"
+  },
+  {
+   "type": "p",
+   "text": "•差异化：长上下文 + Agent（多工具调用、浏览器操作）；"
+  },
+  {
+   "type": "p",
+   "text": "•路线：从「长文本产品」到「MoE 开源 + 推理」——产品立身，开源扩张。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、MiniMax：线性注意力效率派"
+  },
+  {
+   "type": "p",
+   "text": "版本"
+  },
+  {
+   "type": "p",
+   "text": "时间"
+  },
+  {
+   "type": "p",
+   "text": "亮点"
+  },
+  {
+   "type": "p",
+   "text": "MiniMax-Text-01"
+  },
+  {
+   "type": "p",
+   "text": "2025-01"
+  },
+  {
+   "type": "p",
+   "text": "456B / 45.9B 激活 MoE 开源 + Lightning Attention（线性注意力）"
+  },
+  {
+   "type": "p",
+   "text": "MiniMax-M1"
+  },
+  {
+   "type": "p",
+   "text": "2025-03"
+  },
+  {
+   "type": "p",
+   "text": "推理模型（RL 训练，对标 R1 路线）"
+  },
+  {
+   "type": "p",
+   "text": "MiniMax-M2"
+  },
+  {
+   "type": "p",
+   "text": "2025-08"
+  },
+  {
+   "type": "p",
+   "text": "推理强化迭代"
+  },
+  {
+   "type": "p",
+   "text": "•差异化：线性注意力替代标准自注意力——长上下文算力成本从 O(n²) 压到近线性（llm-理论 04 的前沿方向）；"
+  },
+  {
+   "type": "p",
+   "text": "•路线：效率架构 + 推理 + 语音（海螺语音也是招牌）——用架构创新打效率战。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、Mistral：欧洲小模型效率派"
+  },
+  {
+   "type": "p",
+   "text": "版本"
+  },
+  {
+   "type": "p",
+   "text": "时间"
+  },
+  {
+   "type": "p",
+   "text": "亮点"
+  },
+  {
+   "type": "p",
+   "text": "Mistral 7B"
+  },
+  {
+   "type": "p",
+   "text": "2023-09"
+  },
+  {
+   "type": "p",
+   "text": "7B 打 13B——「小模型效率」标签"
+  },
+  {
+   "type": "p",
+   "text": "Mixtral 8x7B"
+  },
+  {
+   "type": "p",
+   "text": "2023-12"
+  },
+  {
+   "type": "p",
+   "text": "首个大众熟知的开源 MoE"
+  },
+  {
+   "type": "p",
+   "text": "——把「专家混合」普及"
+  },
+  {
+   "type": "p",
+   "text": "Mistral Large / Medium"
+  },
+  {
+   "type": "p",
+   "text": "2024"
+  },
+  {
+   "type": "p",
+   "text": "闭源旗舰 + 开放策略"
+  },
+  {
+   "type": "p",
+   "text": "Codestral / Nemo"
+  },
+  {
+   "type": "p",
+   "text": "2024"
+  },
+  {
+   "type": "p",
+   "text": "编程专精（与 NVIDIA 合作的 12B Nemo）"
+  },
+  {
+   "type": "p",
+   "text": "Mistral 3"
+  },
+  {
+   "type": "p",
+   "text": "2025"
+  },
+  {
+   "type": "p",
+   "text": "MoE 迭代（24B 级）"
+  },
+  {
+   "type": "p",
+   "text": "•差异化：欧洲立场 + 小模型效率 + MoE 启蒙者；"
+  },
+  {
+   "type": "p",
+   "text": "•路线：用「小、快、省」打产品，用开源打生态——欧洲唯一的前沿玩家。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、四家一页纸对比"
+  },
+  {
+   "type": "p",
+   "text": "家族"
+  },
+  {
+   "type": "p",
+   "text": "国家"
+  },
+  {
+   "type": "p",
+   "text": "招牌能力"
+  },
+  {
+   "type": "p",
+   "text": "代表版本"
+  },
+  {
+   "type": "p",
+   "text": "一句话"
+  },
+  {
+   "type": "p",
+   "text": "GLM"
+  },
+  {
+   "type": "p",
+   "text": "中国"
+  },
+  {
+   "type": "p",
+   "text": "中文全栈 + 手机 Agent"
+  },
+  {
+   "type": "p",
+   "text": "GLM-4.6 / AutoGLM"
+  },
+  {
+   "type": "p",
+   "text": "中文平民 ChatGPT → 手机操作 Agent"
+  },
+  {
+   "type": "p",
+   "text": "Kimi"
+  },
+  {
+   "type": "p",
+   "text": "中国"
+  },
+  {
+   "type": "p",
+   "text": "长上下文"
+  },
+  {
+   "type": "p",
+   "text": "K2（1T MoE）"
+  },
+  {
+   "type": "p",
+   "text": "长文本杀手 → MoE 开源 + 推理"
+  },
+  {
+   "type": "p",
+   "text": "MiniMax"
+  },
+  {
+   "type": "p",
+   "text": "中国"
+  },
+  {
+   "type": "p",
+   "text": "线性注意力效率"
+  },
+  {
+   "type": "p",
+   "text": "M2 / Text-01"
+  },
+  {
+   "type": "p",
+   "text": "用注意力架构创新打成本战"
+  },
+  {
+   "type": "p",
+   "text": "Mistral"
+  },
+  {
+   "type": "p",
+   "text": "法国"
+  },
+  {
+   "type": "p",
+   "text": "小模型效率 + MoE 启蒙"
+  },
+  {
+   "type": "p",
+   "text": "Mixtral / Mistral 3"
+  },
+  {
+   "type": "p",
+   "text": "欧洲效率派，MoE 的普及者"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "六、与主系列的衔接"
+  },
+  {
+   "type": "p",
+   "text": "•长上下文：Kimi / MiniMax ↔ Gemini 1.5、DeepSeek-V4（llm-理论 04）；"
+  },
+  {
+   "type": "p",
+   "text": "•MoE：Mixtral → DeepSeek-V2/V3、LLaMA 4、Qwen3（llm-理论 04）；"
+  },
+  {
+   "type": "p",
+   "text": "•Agent：AutoGLM ↔ Claude Computer Use、Gemini 2.0（llm-理论 06）；"
+  },
+  {
+   "type": "p",
+   "text": "•推理：M1/K2 Thinking ↔ o1/R1（llm-理论 05）。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：四家启示 =「不拼全面，拼单点」巨头拼「全都能打」，这四家拼「某一维做到极致」（长文/效率/Agent/多语言）。差异化是中小玩家在 LLM 战场生存的唯一路径。"
+  },
+  {
+   "type": "p",
+   "text": "09SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] GLM-4 技术报告（智谱）：https://arxiv.org/abs/2406.12793"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Kimi K2（月之暗面，2025）：https://www.moonshot.cn/kimi-k2"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] MiniMax-Text-01（2025）：https://arxiv.org/abs/2501.08313"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Mixtral of Experts（Mistral，2024）：https://arxiv.org/abs/2401.04088"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据各官方发布。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:16:06+0800"
+}

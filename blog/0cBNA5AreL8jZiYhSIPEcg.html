@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 01 篇 · Eino 定位与组件：认识「队员」 | 小凝 AI 工具集</title>
+<meta name="description" content="第 01 篇 · Eino 定位与组件：认识「队员」">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/0cBNA5AreL8jZiYhSIPEcg.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 01 篇 · Eino 定位与组件：认识「队员」 | 小凝 AI 工具集">
+<meta property="og:description" content="第 01 篇 · Eino 定位与组件：认识「队员」">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/0cBNA5AreL8jZiYhSIPEcg.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 01 篇 · Eino 定位与组件：认识「队员」", "datePublished": "2026-10-02", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/0cBNA5AreL8jZiYhSIPEcg.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 01 篇 · Eino 定位与组件：认识「队员」"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 01 篇 · Eino 定位与组件：认识「队员」</h1>
+  <p class="meta-line">发布于 2026-10-02 · 作者 月牙寂</p>
+  <p class="hook">第 01 篇 · Eino 定位与组件：认识「队员」</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 实战系列板块一·框架第 01 篇——Eino 定位与组件：为什么 Go 项目选 Eino、9 类组件抽象与官方实现、组件单独用 vs 编排用的区别。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方文档为准。</p>
+<p>01SECTION</p>
+<p>第 01 篇 · Eino 定位与组件：认识「队员」</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>实战地图（00 篇）把 Eino 列为 Go 专线主角。本篇「认识队员」：Eino 是什么、为什么 Go 项目值得选它、它的 9 类组件抽象长什么样、组件单独用与编排用的差别。跑通一个最小 ChatModel 调用，你就站在起跑线上了。</p>
+<p>03SECTION</p>
+<p>一、Eino 是什么（官方定位）</p>
+<p>•一句话：字节跳动开源的 Go 语言 LLM 应用开发框架（CloudWeGo 旗下，Apache-2.0，当前 v0.8.0）——覆盖 LLM 应用 DevOps 全流程（开发/调试/追踪/评测）；</p>
+<p>•血统：借鉴 LangChain/LlamaIndex/Google ADK 的设计，但按 Go 惯例重做——强类型、可读、可靠；</p>
+<p>•背书：豆包、抖音、扣子等多业务线、数百服务内部接入，内外用一套代码。</p>
+<p>1.1 为什么 Go 项目选 Eino（对照 Python 框架）</p>
+<p>维度</p>
+<p>Python 系（LangChain 等）</p>
+<p>Eino（Go）</p>
+<p>类型</p>
+<p>动态类型，重构易错</p>
+<p>强类型</p>
+<p>：接口/泛型，编译期查错</p>
+<p>性能/部署</p>
+<p>解释型、需 Python 运行时</p>
+<p>编译型、单二进制、适合高并发服务</p>
+<p>流式</p>
+<p>需额外库</p>
+<p>一等公民</p>
+<p>：StreamReader 原生流处理</p>
+<p>生态</p>
+<p>最广</p>
+<p>字节系（豆包 Ark）深度集成，社区增长中</p>
+<p>适用</p>
+<p>快速原型/研究</p>
+<p>生产服务接入</p>
+<p>（Go 存量项目、性能敏感）</p>
+<p>💡 学习要点：Eino =「把 LLM 应用工程的坑，用强类型堵住」Go 的接口 + 泛型让「组件输入输出是什么」编译期就明确——代码即文档。Python 拼起来快，Go 改起来稳。选型：快原型用 Python，上生产服务用 Go。</p>
+<p>04SECTION</p>
+<p>二、9 类组件抽象（队员清单）</p>
+<p>Eino 的每个组件是 Go 接口：固定输入输出类型 + Option + 方法签名。官方实现覆盖主流：</p>
+<p>组件</p>
+<p>职责</p>
+<p>官方实现</p>
+<p>ChatModel</p>
+<p>与大模型交互：Message[] → Message</p>
+<p>OpenAI、Claude、Gemini、豆包 Ark、Ollama</p>
+<p>Tool</p>
+<p>与世界交互：模型输出 → 执行动作</p>
+<p>Google Search、DuckDuckGo 等</p>
+<p>Retriever</p>
+<p>检索相关上下文（接地事实）</p>
+<p>ElasticSearch、Volc VikingDB</p>
+<p>ChatTemplate</p>
+<p>外部输入 → 预设格式 prompt</p>
+<p>DefaultChatTemplate</p>
+<p>Document Loader</p>
+<p>加载文本</p>
+<p>WebURL、Amazon S3、File</p>
+<p>Document Transformer</p>
+<p>按规则转换文本（切分/重排）</p>
+<p>HTMLSplitter、ScoreReranker</p>
+<p>Indexer</p>
+<p>存储并建索引（供 Retriever）</p>
+<p>ElasticSearch、VikingDB</p>
+<p>Embedding</p>
+<p>文本 → 向量（Retriever/Indexer 依赖）</p>
+<p>OpenAI、Ark</p>
+<p>Lambda</p>
+<p>用户定制函数</p>
+<p>JSONMessageParser 等</p>
+<p>•使用范式：先决定「要哪个组件抽象」（我需要一个前锋），再选「哪个实现」（谁当前锋）——抽象与实现分离。</p>
+<p>05SECTION</p>
+<p>三、最小实战：单独用 ChatModel</p>
+<p>go</p>
+<p>import (</p>
+<p>&quot;github.com/cloudwego/eino-ext/components/model/openai&quot;</p>
+<p>)</p>
+<p>func main() {</p>
+<p>// 创建一个可调用的 LLM 实例（OpenAI 实现）</p>
+<p>model, _ := openai.NewChatModel(ctx, &amp;openai.Config{</p>
+<p>APIKey: os.Getenv(&quot;OPENAI_API_KEY&quot;),</p>
+<p>Model: &quot;gpt-4o&quot;,</p>
+<p>})</p>
+<p>// 直接调用：输入消息数组，得到模型输出</p>
+<p>message, _ := model.Generate(ctx, []*schema.Message{</p>
+<p>schema.SystemMessage(&quot;you are a helpful assistant.&quot;),</p>
+<p>schema.UserMessage(&quot;what does the future AI App look like?&quot;),</p>
+<p>})</p>
+<p>println(message.Content)</p>
+<p>}</p>
+<p>•关键：Generate（一次性）/ Stream（流式，返回 StreamReader[*Message]）/ BindTools（绑定工具）三个方法——单组件就能跑通 LLM 调用。</p>
+<p>💡 学习要点：先跑通「组件单独用」，再学「编排」单独用 = 一个 ChatModel 一个调用；编排 = 多个组件连成图。别跳过第一步——先确认「队员能踢」，再谈「阵型」。</p>
+<p>06SECTION</p>
+<p>四、单独用 vs 编排用的本质区别</p>
+<p>单独用组件</p>
+<p>编排（Chain/Graph）</p>
+<p>场景</p>
+<p>一次模型调用</p>
+<p>多组件协同（检索→提示→模型→工具）</p>
+<p>流式</p>
+<p>自己处理</p>
+<p>框架处理流的复制/合并/拼接</p>
+<p>类型检查</p>
+<p>手动</p>
+<p>编译期图类型检查</p>
+<p>并发</p>
+<p>手动</p>
+<p>框架管理扇入扇出</p>
+<p>收益</p>
+<p>简单</p>
+<p>复杂业务逻辑的「骨架」（下一章）</p>
+<p>07SECTION</p>
+<p>五、本篇要点（复习卡片）</p>
+<p>1Eino：字节 Go LLM 框架（Apache-2.0，v0.8.0）——豆包/抖音在用，覆盖 DevOps 全流程。</p>
+<p>2为什么 Go：强类型（代码即文档）/ 性能单二进制 / 流式一等公民 / 生产服务友好。</p>
+<p>39 组件：ChatModel/Tool/Retriever/ChatTemplate/Loader/Transformer/Indexer/Embedding/Lambda——抽象与实现分离。</p>
+<p>4三方法：Generate（一次）/ Stream（流式 StreamReader）/ BindTools（绑工具）。</p>
+<p>5路径：先单独用跑通，再学编排（下一篇）。</p>
+<p>08SECTION</p>
+<p>六、下一篇预告</p>
+<p>第 02 篇（板块一·框架）：Eino 编排实战——Chain（单向链）/ Graph（有向图 + Branch）/ Workflow（字段级映射 DAG）三种编排怎么选，以及官方预构建的 ReAct Agent（给模型+工具即跑推理行动循环）。从「单个队员」到「排兵布阵」。</p>
+<p>09SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Eino 开源公告：https://www.cloudwego.io/zh/docs/eino/overview/eino_open_source/</p>
+<p>•[官方] Eino 文档总览（组件/编排）：https://www.cloudwego.io/docs/eino/overview/</p>
+<p>•[官方] Eino GitHub：https://github.com/cloudwego/eino ｜ eino-ext：https://github.com/cloudwego/eino-ext</p>
+<p>•[官方] Eino 实践（豆包实战）：https://www.cloudwego.io/docs/eino/overview/bytedance_eino_practice/</p>
+<p>整理：2026-10-02 月绡凝 · 依据官方文档。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/0cBNA5AreL8jZiYhSIPEcg" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

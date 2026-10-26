@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 02 篇 · 缩放定律：为什么「更大 + 更多」会稳定变强 | 小凝 AI 工具集</title>
+<meta name="description" content="第 02 篇 · 缩放定律：为什么「更大 + 更多」会稳定变强">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/PQB4SBTS2U_G3ByGgavElQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 02 篇 · 缩放定律：为什么「更大 + 更多」会稳定变强 | 小凝 AI 工具集">
+<meta property="og:description" content="第 02 篇 · 缩放定律：为什么「更大 + 更多」会稳定变强">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/PQB4SBTS2U_G3ByGgavElQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 02 篇 · 缩放定律：为什么「更大 + 更多」会稳定变强", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/PQB4SBTS2U_G3ByGgavElQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 02 篇 · 缩放定律：为什么「更大 + 更多」会稳定变强"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 02 篇 · 缩放定律：为什么「更大 + 更多」会稳定变强</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 02 篇 · 缩放定律：为什么「更大 + 更多」会稳定变强</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：LLM 基础理论发展系列第 02 篇——缩放定律与规模化。回答「为什么大力出奇迹」：Kaplan 2020 与 Chinchilla 2022 两套结论，GPT-3 的 1750 亿参数验证，以及 DeepSeek 偏模型侧的第三条路。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以原论文为准。</p>
+<p>01WHY</p>
+<p>第 02 篇 · 缩放定律：为什么「更大 + 更多」会稳定变强</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>第 01 篇确定了架构（Transformer 解码器）和范式（预训练）。但有一个朴素问题：把模型做大、数据加多，会发生什么？ 2018-2020 年的人们没有答案——直到 OpenAI 用系统实验给出了一个惊人的「工程公式」：损失随规模幂律下降。这条规律定义了今天所有大模型公司的军备竞赛路线，也是理解 DeepSeek 系列「效率至上」路线的最好参照系。</p>
+<p>03SECTION</p>
+<p>一、什么是缩放定律（Scaling Laws）</p>
+<p>1.1 一句话</p>
+<p>模型性能（用损失 loss 衡量）与三个量存在稳定的幂律关系：参数量 N、数据量 D、计算量 C。</p>
+<p>code</p>
+<p>loss ≈ a / N^α + b / D^β + 常数</p>
+<p>•幂律（power law）：每翻倍参数，损失按固定比例下降——不是「越小越好」，而是「越大越好，且可预测」；</p>
+<p>•关键在于可预测：有了公式，就能在 1/1000 规模上测出曲线，外推出千亿级模型的表现——省下巨额试错成本。</p>
+<p>1.2 两个被「经验」取代的旧观念</p>
+<p>旧观念</p>
+<p>缩放定律打破</p>
+<p>模型过大过拟合</p>
+<p>只要数据同比例跟上，更大模型反而更稳（正则化被数据稀释）</p>
+<p>架构决定上限</p>
+<p>同样的架构，规模直接决定能力水位（涌现的前提）</p>
+<p>💡 学习要点：缩放定律 = LLM 时代的「摩尔定律」深度学习之前，大家拼算法创新；缩放定律之后，数据与算力的量级本身就是能力。这是 2020 年后的行业主线。</p>
+<p>04SECTION</p>
+<p>二、两套结论：Kaplan 2020 vs Chinchilla 2022</p>
+<p>2.1 Kaplan 2020（OpenAI）：「参数优先」</p>
+<p>•实验对象：Transformer 语言模型，参数 7 千万 ~ 85 亿；</p>
+<p>•核心结论：在固定算力下，模型越大越好——训练更多的步数不如把模型做得更大，数据量可以适当放宽；</p>
+<p>•影响：行业「贪参数」——GPT-3 一口气做到 175B，LLaMA 一代也是参数至上。</p>
+<p>2.2 Chinchilla 2022（DeepMind）：「数据与参数同比例」</p>
+<p>•关键修正：Kaplan 的结论建立在算力受限、数据近乎无限的假设上；</p>
+<p>•新结论：计算最优的配置是「参数与训练 token 约 1:20 同比例增长」（20 token/参数）；</p>
+<p>•直接后果：「70B 用 1.4T token」被推翻为浪费——应该用小得多的模型（Chinchilla 70B vs Gopher 280B），用同样的算力训练更长；</p>
+<p>•行业转向：GPT-4 一代开始「模型变小、数据变多」；LLaMA 2 也把数据提到 2T token。</p>
+<p>2.3 为什么两套结论不矛盾</p>
+<p>维度</p>
+<p>Kaplan（参数优先）</p>
+<p>Chinchilla（计算最优）</p>
+<p>假设</p>
+<p>算力固定、数据充足</p>
+<p>算力与数据都有限</p>
+<p>追求</p>
+<p>给定算力，最小 loss</p>
+<p>给定算力，性价比最优</p>
+<p>适用</p>
+<p>探索能力上限（GPT-3）</p>
+<p>工程落地（今天的主流）</p>
+<p>💡 学习要点：缩放定律也要分「目标」看想冲最强 → Kaplan 式超配参数；想商用省钱 → Chinchilla 式计算最优。DeepSeek 系列的核心叙事，就是在 Chinchilla 基础上再进一步：连数据都不全给，靠架构效率省出来（第 4 篇效率革命详讲）。</p>
+<p>05SECTION</p>
+<p>三、GPT-3：1750 亿参数的「大力出奇迹」</p>
+<p>3.1 规模数字（2020）</p>
+<p>•参数：1750 亿（前代 GPT-2 的 100 倍以上）；</p>
+<p>•训练数据：约 3000 亿 token（Common Crawl + 书籍 + 维基等）；</p>
+<p>•训练算力：数千 petaflop/s-day（当时的天文数字）。</p>
+<p>3.2 规模带来什么</p>
+<p>1零样本/少样本能力：不给任何微调，只靠 prompt 给几个示例（in-context learning），就能做翻译、问答、算术；</p>
+<p>2涌现现象（emergent abilities）：某些任务在小模型上几乎为 0，跨过规模阈值后突然跳到可用水平——这是「能力涌现」最早的实证；</p>
+<p>3暴露短板：事实错误、偏见、有害输出——为第 03 篇「对齐时代」埋下伏笔。</p>
+<p>3.3 缩放定律的「规模陷阱」</p>
+<p>•单纯放大有收益递减：GPT-3 的数学/推理仍弱；</p>
+<p>•数据质量成为瓶颈：文本总量有限，垃圾数据稀释信号；</p>
+<p>•结论：规模是必要条件，不是充分条件——之后所有改进都是「在缩放这条主线上叠加结构优化」（MoE、稀疏注意力、对齐、推理训练）。</p>
+<p>💡 学习要点：涌现 = 缩放的红利也是风险涌现让「测试集里看不到的能力」出现——好处是惊喜，风险是不可控。这让「对齐」（第 03 篇）从道德问题变成技术必需。</p>
+<p>06SECTION</p>
+<p>四、与 DeepSeek 系列的衔接：第三条路</p>
+<p>•DeepSeek 第一代即验证自家缩放规律：token 数并非越多越好，存在收益递减点（官方报告给出「偏模型侧」的缩放策略）；</p>
+<p>•DeepSeek-V2 后走「架构换效率」：MLA（注意力压缩）+ MoE 稀疏化，让同样算力下参数量与能力都能更大（第 04 篇效率革命）；</p>
+<p>•DeepSeek-R1 证明：推理能力也可以被「训练 + 规模」稳定复现（第 05 篇推理时代）。</p>
+<p>07SECTION</p>
+<p>五、本篇要点（复习卡片）</p>
+<p>1缩放定律：loss 与参数 N / 数据 D / 算力 C 呈幂律——大即变强，且可预测。</p>
+<p>2Kaplan 2020：算力固定下参数优先（贪参数）。</p>
+<p>3Chinchilla 2022：计算最优 = 参数与数据 1:20 同比例（当前主流）。</p>
+<p>4GPT-3：175B 参数实证「大力出奇迹」+ 涌现 + 少样本能力。</p>
+<p>5规模陷阱：放大有收益递减，质量与架构同样关键。</p>
+<p>6DeepSeek 路：在缩放主线上用架构效率（MLA/MoE）换更大能力——效率革命的引子。</p>
+<p>08SECTION</p>
+<p>六、下一篇预告</p>
+<p>第 03 篇：对齐时代——GPT-3 会说话但不可控：胡说八道、有害、偏执。2022 年 OpenAI 的 InstructGPT 给出第一套系统解法（RLHF 人类反馈强化学习），Anthropic 用宪法 AI 走另一条路，2023 年 DPO 又把流程简化到「一步到位」。对齐是「能力」与「可用」之间的那道闸门。</p>
+<p>09SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Scaling Laws for Neural Language Models（Kaplan et al., 2020）：https://arxiv.org/abs/2001.08361</p>
+<p>•[官方] Training Compute-Optimal Large Language Models（Chinchilla, Hoffmann et al., 2022）：https://arxiv.org/abs/2203.15556</p>
+<p>•[官方] Language Models are Few-Shot Learners（GPT-3, Brown et al., 2020）：https://arxiv.org/abs/2005.14165</p>
+<p>•[官方] Emergent Abilities of Large Language Models（Wei et al., 2022）：https://arxiv.org/abs/2206.07682</p>
+<p>整理：2026-10-01 月绡凝 · 依据原论文。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/PQB4SBTS2U_G3ByGgavElQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

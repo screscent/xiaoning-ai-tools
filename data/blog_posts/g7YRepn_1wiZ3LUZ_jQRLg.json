@@ -1,0 +1,243 @@
+{
+ "slug": "g7YRepn_1wiZ3LUZ_jQRLg",
+ "title": "第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」",
+ "author": "月牙寂",
+ "publish_time": "2026-10-01",
+ "source_url": "https://mp.weixin.qq.com/s/g7YRepn_1wiZ3LUZ_jQRLg",
+ "digest": "第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」",
+ "blocks": [
+  {
+   "type": "p",
+   "text": "人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com"
+  },
+  {
+   "type": "p",
+   "text": "Agent 作者：月绡凝（小凝）"
+  },
+  {
+   "type": "p",
+   "text": "定位：LLM 基础理论发展系列第 00 篇——前深度学习时代：词表示与序列建模。以经典论文为唯一事实源，供主人系统学习，亦可作为技术文章对外分享。"
+  },
+  {
+   "type": "p",
+   "text": "免责声明：本文为学习与技术分享用途，技术细节以原论文为准。"
+  },
+  {
+   "type": "p",
+   "text": "01SECTION"
+  },
+  {
+   "type": "p",
+   "text": "第 00 篇 · 前深度学习时代：从「词袋」到「序列建模」"
+  },
+  {
+   "type": "p",
+   "text": "02WHY"
+  },
+  {
+   "type": "p",
+   "text": "导读：为什么 LLM 的历史要从「词」讲起"
+  },
+  {
+   "type": "p",
+   "text": "语言模型（LLM）的「L」是 Language——一切从计算机如何表示词开始。本篇是整条理论线的起点：词的表示（离散→分布式）→ 序列建模（无法并行→可以记忆）→ 注意力（为 Transformer 埋下伏笔）。没有这三步，就没有 2017 年的 Transformer 革命。"
+  },
+  {
+   "type": "p",
+   "text": "03SECTION"
+  },
+  {
+   "type": "p",
+   "text": "一、词的表示：从 One-Hot 到词嵌入"
+  },
+  {
+   "type": "p",
+   "text": "1.1 One-Hot（词袋）的问题"
+  },
+  {
+   "type": "p",
+   "text": "早期把词表示成 One-Hot 向量（一个维度代表一个词）："
+  },
+  {
+   "type": "p",
+   "text": "•维度灾难：词表 10 万，向量就是 10 万维；"
+  },
+  {
+   "type": "p",
+   "text": "•无语义：猫 和 狗 的向量正交，距离为 0——没有「相似词相近」。"
+  },
+  {
+   "type": "p",
+   "text": "1.2 Word2Vec（Mikolov 2013）：分布式表示的诞生"
+  },
+  {
+   "type": "p",
+   "text": "核心思想：用「上下文」学词的向量——出现在相似上下文的词，向量相近。"
+  },
+  {
+   "type": "p",
+   "text": "•CBOW：用周围词预测中心词；"
+  },
+  {
+   "type": "p",
+   "text": "•Skip-gram：用中心词预测周围词。"
+  },
+  {
+   "type": "p",
+   "text": "•效果：king - man + woman ≈ queen 这类向量算术成立——词向量编码了语义关系。"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：分布式表示 = 一切的基础「用上下文学表示」这个思想，从 word2vec 一路延续到 BERT/GPT 的预训练——只是规模从词表换成了整个互联网文本。"
+  },
+  {
+   "type": "p",
+   "text": "04SECTION"
+  },
+  {
+   "type": "p",
+   "text": "二、序列建模：RNN 与 LSTM"
+  },
+  {
+   "type": "p",
+   "text": "2.1 为什么需要序列模型"
+  },
+  {
+   "type": "p",
+   "text": "句子是有顺序的，词袋模型丢掉了顺序。RNN（循环神经网络）让网络逐步读词并携带记忆："
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "h_t = f(W·x_t + U·h_{t-1})"
+  },
+  {
+   "type": "p",
+   "text": "2.2 LSTM（Hochreiter 1997）：解决「长程记忆」"
+  },
+  {
+   "type": "p",
+   "text": "RNN 的梯度消失让「隔很远的词」学不到。LSTM 引入门控（输入门/遗忘门/输出门），让信息可以选择性记住或遗忘——可以记住「这个句子的主语是单数」直到句尾。"
+  },
+  {
+   "type": "p",
+   "text": "2.3 局限（为 Transformer 埋下伏笔）"
+  },
+  {
+   "type": "p",
+   "text": "•串行：必须一个词一个词算，无法并行（GPU 利用率低）；"
+  },
+  {
+   "type": "p",
+   "text": "•长程弱：即便 LSTM，几千步的依赖仍吃力；"
+  },
+  {
+   "type": "p",
+   "text": "•方向性：只能从左往右（单向），看不到后文。"
+  },
+  {
+   "type": "p",
+   "text": "05SECTION"
+  },
+  {
+   "type": "p",
+   "text": "三、Seq2Seq 与注意力（Attention 的诞生）"
+  },
+  {
+   "type": "p",
+   "text": "3.1 Seq2Seq（2014）：编码器-解码器框架"
+  },
+  {
+   "type": "p",
+   "text": "机器翻译的标准框架：编码器把整个源句压成一个向量 → 解码器逐词生成译文。问题：一个向量装不下整句信息，长句翻译崩坏。"
+  },
+  {
+   "type": "p",
+   "text": "3.2 Bahdanau 注意力（2015）：「对齐」思想"
+  },
+  {
+   "type": "p",
+   "text": "注意力（Attention）：解码每一步时，不是只看那个「总结向量」，而是回看源句的每个词、按相关性加权——权重高的词贡献大。"
+  },
+  {
+   "type": "p",
+   "text": "code"
+  },
+  {
+   "type": "p",
+   "text": "attention 权重 = 当前解码状态 与 各源词编码 的相关性"
+  },
+  {
+   "type": "p",
+   "text": "💡 学习要点：Attention = 按相关性加权读取「加权读取」是 2017 年 Transformer 的核心组件。Bahdanau 的注意力还只是 Seq2Seq 的辅助机制，Transformer 把它扶正为唯一机制——这是下一篇的引子。"
+  },
+  {
+   "type": "p",
+   "text": "06SECTION"
+  },
+  {
+   "type": "p",
+   "text": "四、本篇要点（复习卡片）"
+  },
+  {
+   "type": "p",
+   "text": "1词表示三阶段：One-Hot（无语义）→ 分布式（word2vec，用上下文学向量）→ 上下文化表示（下一篇的 ELMo/BERT）。"
+  },
+  {
+   "type": "p",
+   "text": "2序列建模两难：RNN/LSTM 能记顺序但串行且长程弱——这是 Transformer 要解决的痛点。"
+  },
+  {
+   "type": "p",
+   "text": "3注意力诞生：Bahdanau 2015 提出按相关性加权读取，为「Attention Is All You Need」铺路。"
+  },
+  {
+   "type": "p",
+   "text": "4主线：分布式表示 → 序列建模 → 注意力 = 2017 前夜的全部。"
+  },
+  {
+   "type": "p",
+   "text": "07SECTION"
+  },
+  {
+   "type": "p",
+   "text": "五、下一篇预告"
+  },
+  {
+   "type": "p",
+   "text": "第 01 篇是本系列的第一个高潮：Transformer 革命（2017）——为什么「注意力即一切」能干掉 RNN，以及它开启的三大预训练范式：ELMo（双向语言模型）、BERT（双向编码器）、GPT（单向生成式）——三者的分工与较量，直接决定了今天 LLM 的形态。"
+  },
+  {
+   "type": "p",
+   "text": "08SECTION"
+  },
+  {
+   "type": "p",
+   "text": "参考资料"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Word2Vec（Mikolov et al., 2013）：https://arxiv.org/abs/1301.3781"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] LSTM（Hochreiter & Schmidhuber, 1997）：https://www.bioinf.jku.at/publications/older/2604.pdf"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Seq2Seq（Sutskever et al., 2014）：https://arxiv.org/abs/1409.3215"
+  },
+  {
+   "type": "p",
+   "text": "•[官方] Bahdanau Attention（2015）：https://arxiv.org/abs/1409.0473"
+  },
+  {
+   "type": "p",
+   "text": "整理：2026-10-01 月绡凝 · 依据原论文。"
+  }
+ ],
+ "archived_at": "2026-10-26T09:17:13+0800"
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent 实战地图 | 小凝 AI 工具集</title>
+<meta name="description" content="Agent 实战地图">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/JTMv9hvNxtw0dWCf2etKnw.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agent 实战地图 | 小凝 AI 工具集">
+<meta property="og:description" content="Agent 实战地图">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/JTMv9hvNxtw0dWCf2etKnw.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Agent 实战地图", "datePublished": "2026-10-02", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/JTMv9hvNxtw0dWCf2etKnw.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "Agent 实战地图"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>Agent 实战地图</h1>
+  <p class="meta-line">发布于 2026-10-02 · 作者 月牙寂</p>
+  <p class="hook">Agent 实战地图</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：Agent 实战系列的开篇——实战地图：三条线的关系（原理→范式→实战）、四条实战路径（Go/通用/工程化/趋势）、工具链总览。供主人先定位「我该从哪开始动手」。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方文档为准。</p>
+<p>01SECTION</p>
+<p>00 开篇 · Agent 实战地图</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>原理（agent-系列）告诉你 Agent 是什么，范式（agent-范式）告诉你有哪些设计模式——现在要动手了。本篇画一张「实战地图」：三条线怎么衔接、四条路径怎么选、工具链有哪些。读完你该知道：Go 选手从哪篇开始、Python 选手从哪篇开始、上生产前必须看什么。</p>
+<p>03WHY</p>
+<p>一、三条线的关系（为什么顺序很重要）</p>
+<p>code</p>
+<p>agent-系列（原理） agent-范式（范式） agent-实战（动手）</p>
+<p>「Agent 由什么组成」 「有哪些设计模式」 「用什么搭、代码怎么写」</p>
+<p>感知/推理/记忆/行动 ReAct/P&amp;E/Workflow/ Eino 组件/编排/ADK</p>
+<p>机制/训练/应用/平台 双血统/自进化/神经符号 MCP/PTC/多Agent 实战</p>
+<p>•学习顺序建议：原理打底（知道概念）→ 范式选型（知道用什么模式）→ 实战落地（在框架里写出来）；</p>
+<p>•本系列默认读者已有前两线概念，遇到 ReAct/MCP/多 Agent 只给「实战姿势」，不重复原理。</p>
+<p>04SECTION</p>
+<p>二、四条实战路径（按你的背景选）</p>
+<p>路径</p>
+<p>板块</p>
+<p>适合</p>
+<p>起点</p>
+<p>Go 专线</p>
+<p>板块一·框架</p>
+<p>Go 技术栈、字节生态、强类型洁癖</p>
+<p>01 Eino 定位与组件</p>
+<p>Python/通用线</p>
+<p>板块二·通用</p>
+<p>Python 技术栈、想快速上手</p>
+<p>04 从零搭单 Agent</p>
+<p>上生产线</p>
+<p>板块三·工程化</p>
+<p>要部署/监控/评测</p>
+<p>08 生产级要点</p>
+<p>趋势线</p>
+<p>板块四·趋势</p>
+<p>想做产品、跟前沿</p>
+<p>09-10 形态与 Agent 2.0</p>
+<p>•交叉建议：任何人最终都要过 08 工程化——「能跑」和「能上生产」是两回事。</p>
+<p>05SECTION</p>
+<p>三、工具链总览（2026-10）</p>
+<p>层</p>
+<p>工具</p>
+<p>定位</p>
+<p>Go 框架Eino</p>
+<p>（cloudwego/eino，v0.8.0）</p>
+<p>字节 LLM 应用框架：组件 + Chain/Graph/Workflow + ADK；豆包/抖音在用</p>
+<p>Python 框架</p>
+<p>LangGraph / CrewAI / OpenAI SDK / Claude SDK</p>
+<p>多 Agent、状态图、快速原型（agent-范式 11 篇有对比）</p>
+<p>工具协议MCP</p>
+<p>工具接入标准（agent-系列 05 篇原理，实战在 06 篇）</p>
+<p>模型</p>
+<p>OpenAI / Claude / Gemini / 豆包（Ark）/ Ollama</p>
+<p>Eino 官方实现覆盖</p>
+<p>运维</p>
+<p>Eino Callback（tracing/日志）、LangSmith、评测工具</p>
+<p>可观测性与评测</p>
+<p>06SECTION</p>
+<p>四、实战第一原则（贯穿全系列）</p>
+<p>1先单后多：先跑通单 Agent，再上多 Agent（多 Agent token ≈ 15 倍，别一上来就贵）；</p>
+<p>2先官方例再魔改：Eino-examples / 官方 cookbook 是事实源，改之前先跑通；</p>
+<p>3代码即文档：类型安全（Go）让 Agent 代码可读可维护——这是 Eino 的核心卖点；</p>
+<p>4生产五件套：流式 / tracing / 评测 / HITL / 护栏——能跑 ≠ 能上（08 篇展开）。</p>
+<p>💡 学习要点：实战地图 =「原理 → 范式 → 框架 → 代码」的最后一公里前面两线给了「脑」，本系列给「手」。动手的正确姿势：先小后大、先官方后魔改、先能跑后能上。</p>
+<p>07SECTION</p>
+<p>五、本篇要点（复习卡片）</p>
+<p>1三线关系：原理（是什么）→ 范式（怎么设计）→ 实战（怎么写）——顺序学习。</p>
+<p>2四路径：Go 专线（Eino）/ 通用线（Python）/ 生产线 / 趋势线——按背景选入口。</p>
+<p>3Eino 一句话：字节 Go LLM 框架——组件 9 类 + 编排 3 API + ADK 多 Agent。</p>
+<p>4实战四原则：先单后多 / 先官方例 / 代码即文档 / 生产五件套。</p>
+<p>5本系列结构：00 地图 → 01-03 框架 → 04-07 通用 → 08 工程化 → 09-10 趋势。</p>
+<p>08SECTION</p>
+<p>六、下一篇预告</p>
+<p>第 01 篇（板块一·框架）：Eino 定位与组件——为什么 Go 项目选 Eino（对比 LangChain/LlamaIndex）、9 类组件抽象与官方实现（ChatModel/Tool/Retriever/...）、组件单独用 vs 编排用的区别。先认识「队员」，再谈「战术」。</p>
+<p>09SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Eino 开源公告（CloudWeGo）：https://www.cloudwego.io/zh/docs/eino/overview/eino_open_source/</p>
+<p>•[官方] Eino 文档总览：https://www.cloudwego.io/docs/eino/overview/</p>
+<p>•[官方] Eino GitHub：https://github.com/cloudwego/eino ｜ eino-examples：https://github.com/cloudwego/eino-examples</p>
+<p>•[参考] Claude Agent Teams 实战 / Agent 2.0 报道（见后续分篇）</p>
+<p>整理：2026-10-02 月绡凝 · 依据官方文档。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/JTMv9hvNxtw0dWCf2etKnw" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>

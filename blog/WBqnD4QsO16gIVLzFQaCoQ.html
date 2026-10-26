@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 02 篇 · GPT-3：1750 亿参数的豪赌与「涌现」 | 小凝 AI 工具集</title>
+<meta name="description" content="第 02 篇 · GPT-3：1750 亿参数的豪赌与「涌现」">
+<link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/blog/WBqnD4QsO16gIVLzFQaCoQ.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第 02 篇 · GPT-3：1750 亿参数的豪赌与「涌现」 | 小凝 AI 工具集">
+<meta property="og:description" content="第 02 篇 · GPT-3：1750 亿参数的豪赌与「涌现」">
+<meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/blog/WBqnD4QsO16gIVLzFQaCoQ.html">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "第 02 篇 · GPT-3：1750 亿参数的豪赌与「涌现」", "datePublished": "2026-10-01", "inLanguage": "zh-CN", "url": "https://screscent.github.io/xiaoning-ai-tools/blog/WBqnD4QsO16gIVLzFQaCoQ.html", "author": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "publisher": {"@type": "Person", "name": "月牙寂（龚浩华）"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}, "description": "第 02 篇 · GPT-3：1750 亿参数的豪赌与「涌现」"}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">小凝 AI 工具集</a>
+    <nav><a href="../index.html">统一门户</a><a href="../ai/index.html">AI 工具集</a><a href="../utility/index.html">实用工具箱</a><a href="../blog/index.html">博客</a><a href="../pricing.html">价格与使用</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="crumb"><a href="index.html">← 返回博客列表</a></p>
+<article>
+  <h1>第 02 篇 · GPT-3：1750 亿参数的豪赌与「涌现」</h1>
+  <p class="meta-line">发布于 2026-10-01 · 作者 月牙寂</p>
+  <p class="hook">第 02 篇 · GPT-3：1750 亿参数的豪赌与「涌现」</p>
+  <div class="post-body">
+<p>人类作者：月牙寂（龚浩华）｜联系：15980989344 ｜邮箱：29185807@qq.com</p>
+<p>Agent 作者：月绡凝（小凝）</p>
+<p>定位：OpenAI GPT 家族系列第 02 篇——GPT-3：1750 亿参数的规模化豪赌，少样本学习与能力涌现，以及「大力出奇迹」的光与影。与 llm-基础理论第 02 篇（缩放定律）深度衔接。</p>
+<p>免责声明：本文为学习与技术分享用途，技术细节以官方技术报告为准。</p>
+<p>01SECTION</p>
+<p>第 02 篇 · GPT-3：1750 亿参数的豪赌与「涌现」</p>
+<p>02SECTION</p>
+<p>导读</p>
+<p>GPT-2 的规模曲线让 OpenAI 认定一件事：架构不用改，规模就是一切。 于是 2020 年他们押下 1750 亿参数的豪赌——比任何公开模型大一个数量级。结果不是「更强一点」，而是出现了「少样本学习」和「能力涌现」两个新物种级现象。这篇是理解「为什么今天所有公司都在堆算力」的根源。</p>
+<p>03SECTION</p>
+<p>一、GPT-3 的规模</p>
+<p>维度</p>
+<p>GPT-2</p>
+<p>GPT-3</p>
+<p>参数</p>
+<p>15 亿</p>
+<p>1750 亿</p>
+<p>（100 倍以上）</p>
+<p>层数/头数</p>
+<p>48 层</p>
+<p>96 层、96 头、128 维度切片</p>
+<p>训练数据</p>
+<p>40GB</p>
+<p>约 3000 亿 token</p>
+<p>（Common Crawl 占 60%+，书籍、维基、代码等）</p>
+<p>训练算力</p>
+<p>单机多卡</p>
+<p>数千 petaflop/s-day（当时的「烧钱纪录」）</p>
+<p>04SECTION</p>
+<p>二、三个现象级发现</p>
+<p>2.1 少样本上下文学习（Few-Shot / In-Context Learning）</p>
+<p>•不给任何梯度更新（不微调），只在 prompt 里给几个示例，模型就能「学会」新任务：0-shot：直接问「翻译成法语：…」1-shot：给一个翻译示例few-shot：给 10 个示例 → 翻译质量逼近专门训练的模型；</p>
+<p>•意义：能力从「训练时固定」变成「使用时装配」——这是 Prompt 工程（后来一切 Agent 玩法）的根基。</p>
+<p>2.2 能力涌现（Emergent Abilities）</p>
+<p>•某些任务（多位数算术、代码生成、答题）在小模型上得分接近 0；</p>
+<p>•规模跨过某个阈值后，性能突然跳到可用水平（非平滑上升）；</p>
+<p>•意义：无法从小模型外推预测大模型能力——规模带来「质变」而非「量变」。</p>
+<p>2.3 知识即参数</p>
+<p>•模型「记住」了大量世界知识（人、事、常识）——因为参数本身就是压缩的知识库；</p>
+<p>•局限同时暴露：事实错误（幻觉）、陈旧知识（截止时间）、无法「确认来源」。</p>
+<p>💡 学习要点：GPT-3 = 缩放定律的「临床试验」Kaplan 2020 论文给出理论曲线，GPT-3 用 1750 亿参数完成了人体试验：loss 按幂律下降、能力涌现、任务可「即插即用」。三个发现全部命中，OpenAI 自此All in 规模化。</p>
+<p>05SECTION</p>
+<p>三、GPT-3 的「光与影」</p>
+<p>3.1 光：验证了路线</p>
+<p>•自然语言生成达到「以假乱真」级别（短篇新闻/诗歌/代码）；</p>
+<p>•为后续所有产品（API、Copilot、ChatGPT）提供基座；</p>
+<p>•让「大力出奇迹」成为行业共识（→ 芯片军备竞赛的源头）。</p>
+<p>3.2 影：暴露了三个致命伤</p>
+<p>问题</p>
+<p>表现</p>
+<p>不可控</p>
+<p>用户无法让它「乖乖听话」，答非所问、编造、跑题</p>
+<p>不安全</p>
+<p>中性回答同样可能给出危险/有毒内容（偏见过滤失败）</p>
+<p>不会推理</p>
+<p>复杂多步数学/逻辑依旧拉胯（规模没解决「思考」）</p>
+<p>•结论：光有规模，只能「会说话」，不能「可用」。 这正是 InstructGPT（第 03 篇）的登场理由。</p>
+<p>06SECTION</p>
+<p>四、与 DeepSeek 的对照（横向视角）</p>
+<p>•GPT-3 的教训 = 规模有收益递减：DeepSeek 用 MoE + MLA 在同代实现了「总参数巨大、激活参数小」——知识上限追得上、单次成本砍一半（对应其家族系列 V2 篇）；</p>
+<p>•涌现的不可预测性 = DeepSeek 自家缩放研究给出的应对：不盲赌更大，而是算清「token 收益递减点」（对应其家族系列初始版篇）。</p>
+<p>07SECTION</p>
+<p>五、本篇要点（复习卡片）</p>
+<p>1规模数字：1750 亿参数 / 3000 亿 token——当时全球最大。</p>
+<p>2少样本学习：不训练、只给示例，任务即插即用 → Prompt 工程之根。</p>
+<p>3能力涌现：跨阈值突然变强，无法从小模型外推。</p>
+<p>4光：验证「大力出奇迹」，定义行业军备竞赛。</p>
+<p>5影：不可控、不安全、不会推理 → 对齐时代的导火索。</p>
+<p>08SECTION</p>
+<p>六、下一篇预告</p>
+<p>第 03 篇：ChatGPT 与 RLHF——OpenAI 用 13 亿参数的 InstructGPT 证明：对齐比参数更值钱（小模型 + 人类反馈 &gt; 大模型裸奔）。2022-11 的 ChatGPT 把「会说话的大模型」变成「听话的助手」，定义产品形态，引爆全球。这是 GPT 系列从「研究」走向「产品」的转折点。</p>
+<p>09SECTION</p>
+<p>参考资料</p>
+<p>•[官方] Language Models are Few-Shot Learners（GPT-3, Brown et al., 2020）：https://arxiv.org/abs/2005.14165</p>
+<p>•[官方] Scaling Laws for Neural Language Models（Kaplan et al., 2020）：https://arxiv.org/abs/2001.08361</p>
+<p>•[官方] Emergent Abilities of Large Language Models（Wei et al., 2022）：https://arxiv.org/abs/2206.07682</p>
+<p>整理：2026-10-01 月绡凝 · 依据官方技术报告。</p>
+  </div>
+  <p class="cta"><a class="btn ghost" href="https://mp.weixin.qq.com/s/WBqnD4QsO16gIVLzFQaCoQ" rel="noopener">在公众号阅读原文</a><a class="btn ghost" href="index.html">看更多文章</a></p>
+  <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="sig">人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂<br>Agent 作者：月绡凝（小凝）</p>
+    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 2026-10-26。</p>
+  </div>
+</footer>
+</body>
+</html>
