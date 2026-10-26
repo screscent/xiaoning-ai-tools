@@ -1837,5 +1837,32 @@
     "cat": "实用工具",
     "url": "https://uise8bxjku.app.weavefox.cn",
     "subcat": "效率生活"
+  },
+  {
+    "id": "3xmx6e5af3",
+    "name": "身份证与银行卡校验器",
+    "desc": "本地校验身份证校验位与银行卡 Luhn，含脱敏展示",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://3xmx6e5af3.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "g4q4xktuhw",
+    "name": "图片自动裁剪透明边",
+    "desc": "按容差自动裁掉透明边并保留内边距，导出图片",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://g4q4xktuhw.app.weavefox.cn",
+    "subcat": "图片处理"
+  },
+  {
+    "id": "bcycnrk6f9",
+    "name": "油耗与出行成本计算器",
+    "desc": "按里程油耗油价算单次与每公里成本，可对比电车",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://bcycnrk6f9.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
