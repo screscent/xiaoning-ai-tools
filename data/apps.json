@@ -2035,5 +2035,35 @@
     "cat": "实用工具",
     "url": "https://rdqjpm4t4r.app.weavefox.cn",
     "subcat": "计算换算"
+  },
+  {
+    "id": "rdqkfj4t4r",
+    "name": "Base32 编解码器",
+    "desc": "RFC 4648 Base32 编解码，支持中文与填充校验",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://rdqkfj4t4r.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "lyrudrjxel",
+    "name": "中文标点全半角转换器",
+    "desc": "全角半角互转，按标点/数字/空格分范围处理",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://lyrudrjxel.app.weavefox.cn",
+    "subcat": "文本处理"
+  },
+  {
+    "id": "urkuxmdyk8",
+    "name": "AA 账单分摊计算器",
+    "desc": "明细+小费+人数算人均，尾差记第一人",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://urkuxmdyk8.app.weavefox.cn",
+    "subcat": "效率生活"
   }
 ]
