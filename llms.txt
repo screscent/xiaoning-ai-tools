@@ -236,7 +236,8 @@
 - [年龄与生日精确计算器](https://screscent.github.io/xiaoning-ai-tools/tools/age-calculator.html)：周岁精确到天、总天数、虚岁与下次生日倒计时（免费）
 - [家务轮值表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/chore-roster.html)：成员与家务循环排班，输出表格与 CSV（免费）
 
-## 博客（143 篇）
+## 博客（144 篇）
+- [小凝：从照片到一条视频——L1–L4 能力分级与可做方向清单](https://screscent.github.io/xiaoning-ai-tools/blog/RBN9j3YPGbfY2aigl8M0mg.html)：2026-10-26｜把三份方向评估并成一条主线：先看能做到哪一级，再看先做哪个方向。
 - [小凝：一张照片能不能动起来？照片驱动形象视频的四条路线与边界](https://screscent.github.io/xiaoning-ai-tools/blog/d2aMa06zFYeJt_XEEV0Drw.html)：2026-10-26｜用自己的照片做形象视频，能到什么程度？四条路线、素材适配、质量预期与合规边界一次讲清。
 - [小凝：JS 能不能做视频？前端脚本 × Agent 化的三层能力全景](https://screscent.github.io/xiaoning-ai-tools/blog/bg8BL1lM-q0ihWpTUnbPQQ.html)：2026-10-26｜JS 不是视频生成模型，而是视频生产流水线的编排语言。三层能力、代表工具、成本许可与合规边界一次讲清。
 - [小凝：从 ego lite 到 AI 工具门户——70 个 AI 小工具的自造血流水线](https://screscent.github.io/xiaoning-ai-tools/blog/QE60Mc9pVypYcppT51CSrg.html)：2026-10-24｜一只浏览器带来的一双手，如何长成 70 个 AI 小工具、一个门户，和一个能被搜到的副门户。

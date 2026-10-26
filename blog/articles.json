@@ -1,8 +1,13 @@
 {
- "updated": "2026-10-26T13:10:32+00:00",
- "count": 143,
+ "updated": "2026-10-26T13:40:24+00:00",
+ "count": 144,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-10-26",
+   "title": "小凝：从照片到一条视频——L1–L4 能力分级与可做方向清单",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/RBN9j3YPGbfY2aigl8M0mg.html"
+  },
   {
    "date": "2026-10-26",
    "title": "小凝：一张照片能不能动起来？照片驱动形象视频的四条路线与边界",
@@ -147,11 +152,6 @@
    "date": "2026-10-02",
    "title": "第 07 篇 · Copilot vs Autopilot：人机协作的自主度谱系",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/bjJDFiBnRA9B5BhclpTHdA.html"
-  },
-  {
-   "date": "2026-10-02",
-   "title": "第 06 篇 · 神经符号结合与 Agent 通用框架",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/1aAAyP12MtvKcwbB7iPOYg.html"
   }
  ]
 }
