@@ -1675,5 +1675,32 @@
     "cat": "实用工具",
     "url": "https://uidaynxjku.app.weavefox.cn",
     "subcat": "效率生活"
+  },
+  {
+    "id": "2qcjfcqqxb",
+    "name": "UUID 与随机密钥生成器",
+    "desc": "UUID v4 / Token / API Key 批量生成，含熵值与导出",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://2qcjfcqqxb.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "k64e8lftrk",
+    "name": "跨时区会议时间换算器",
+    "desc": "一个时间换算多时区本地时刻与时差，夏令时自动",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://k64e8lftrk.app.weavefox.cn",
+    "subcat": "时间日期"
+  },
+  {
+    "id": "jarc8vkp5e",
+    "name": "CSS 玻璃拟态生成器",
+    "desc": "滑杆调模糊/透明度/圆角，实时预览并复制 CSS",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://jarc8vkp5e.app.weavefox.cn",
+    "subcat": "设计绘图"
   }
 ]
