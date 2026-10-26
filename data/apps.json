@@ -1783,5 +1783,32 @@
     "cat": "实用工具",
     "url": "https://qseqsqnhme.app.weavefox.cn",
     "subcat": "计算换算"
+  },
+  {
+    "id": "wn5xhmj8gw",
+    "name": "隐私政策生成器",
+    "desc": "按信息类型与法规模板生成隐私政策，可导出 Markdown",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://wn5xhmj8gw.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "z5wpwyaahj",
+    "name": "JWT 解码查看器",
+    "desc": "本地解析 JWT Header/Payload，标准声明转时间与过期判断",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://z5wpwyaahj.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "5cuungt6g5",
+    "name": "CSS 加载动画生成器",
+    "desc": "四种加载动画调参生成纯 CSS，可复制或下载 HTML",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://5cuungt6g5.app.weavefox.cn",
+    "subcat": "设计绘图"
   }
 ]
