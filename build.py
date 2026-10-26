@@ -560,13 +560,17 @@ def blog_list_page(blog):
         if note:
             out.append(f'<p class="lede">{esc(note)}</p>')
         for key in order:
-            rows = "".join(
-                f'<li><a href="{esc(a["slug"])}.html"><strong>{esc(a["title"])}</strong>'
-                f'<span>{esc((a.get("digest") or "")[:110])}</span>'
-                f'<em>{esc(a.get("publish_time") or "")}</em></a></li>'
+            cards = "".join(
+                f'<li><div class="post-card">'
+                f'<a class="post-title" href="{esc(a["slug"])}.html"><strong>{esc(a["title"])}</strong></a>'
+                f'<span class="post-digest">{esc((a.get("digest") or "")[:110])}</span>'
+                f'<em class="post-date">{esc(a.get("publish_time") or "")}</em>'
+                f'<p class="more"><a href="{esc(a["slug"])}.html">阅读全文</a>'
+                + (f'<a href="{esc(a["url"])}" rel="noopener">去公众号阅读原文 →</a>' if a.get("url") else "")
+                + '</p></div></li>'
                 for a in groups[key]
             )
-            out.append(f'<section class="group"><h3>{esc(key)}<small>{len(groups[key])} 篇</small></h3><ul class="cards one">{rows}</ul></section>')
+            out.append(f'<section class="group"><h3>{esc(key)}<small>{len(groups[key])} 篇</small></h3><ul class="cards one">{cards}</ul></section>')
         return "\n".join(out)
 
     body = f"""
@@ -590,25 +594,37 @@ def blog_list_page(blog):
 
 def blog_post_page(art, post):
     canon = f"{BASE_URL}/blog/{art['slug']}.html"
-    parts = []
-    for b in post.get("blocks", []):
-        if b.get("type") == "img":
-            parts.append(f'<p><img src="{esc(b["src"])}" alt="{esc(art["title"])}" loading="lazy"></p>')
-        else:
-            t = esc(b.get("text", ""))
-            if t:
-                parts.append(f"<p>{t}</p>")
     src = post.get("source_url") or art.get("url", "")
+    # 优先用公众号原文富文本（inline style，1:1 还原公众号排版）；缺失则回退纯段落
+    content_html = post.get("content_html") or ""
+    if content_html:
+        body_html = f'<div class="post-body wx-content">{content_html}</div>'
+    else:
+        parts = []
+        for b in post.get("blocks", []):
+            if b.get("type") == "img":
+                parts.append(f'<p><img src="{esc(b["src"])}" alt="{esc(art["title"])}" loading="lazy"></p>')
+            else:
+                t = esc(b.get("text", ""))
+                if t:
+                    parts.append(f"<p>{t}</p>")
+        body_html = f'<div class="post-body">{"".join(parts)}</div>'
+
+    top_actions = (
+        f'<p class="cta post-actions">'
+        f'{f"<a class=\'btn\' href=\'{esc(src)}\' rel=\'noopener\'>去公众号阅读原文</a>" if src else ""}'
+        f'<a class="btn ghost" href="index.html">看更多文章</a></p>'
+    )
     body = f"""
 <p class="crumb"><a href="index.html">← 返回博客列表</a></p>
 <article>
   <h1>{esc(post.get('title') or art['title'])}</h1>
   <p class="meta-line">发布于 {esc(post.get('publish_time') or art.get('publish_time') or '')} · 作者 {esc(post.get('author') or OWNER)}</p>
-  <p class="hook">{esc(post.get('digest') or '')}</p>
-  <div class="post-body">
-{chr(10).join(parts)}
-  </div>
-  <p class="cta">{f'<a class="btn ghost" href="{esc(src)}" rel="noopener">在公众号阅读原文</a>' if src else ''}<a class="btn ghost" href="index.html">看更多文章</a></p>
+  {top_actions}
+  <div class="post-divider"></div>
+  {body_html}
+  <div class="post-divider"></div>
+  {top_actions}
   <p class="sig">人类作者：{OWNER}｜联系：{PHONE}｜邮箱：{MAIL}｜微信公众号：{WECHAT_MP}<br>Agent 作者：{AGENT}</p>
 </article>
 """
@@ -768,9 +784,22 @@ table ul{margin:0;padding-left:18px}
 .sig{color:#4a4a4f}
 .meta{margin-top:6px}
 .cards.one{grid-template-columns:1fr}
+.post-card{border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.post-title{color:var(--fg);text-decoration:none}
+.post-title:hover{color:var(--accent)}
+.post-digest{display:block;color:var(--muted);font-size:14px;margin-top:6px}
+.post-date{display:block;color:var(--accent);font-style:normal;font-size:13px;margin-top:8px}
+.more{margin:10px 0 0;display:flex;gap:14px;flex-wrap:wrap}
+.more a{font-size:14px;color:var(--accent);text-decoration:none;font-weight:600}
+.more a:hover{text-decoration:underline}
 .post-body p{margin:12px 0;line-height:1.9;color:#2b2b2f}
 .post-body img{max-width:100%;border-radius:8px;margin:10px 0;display:block}
 .meta-line{color:var(--muted);font-size:13px;margin:0 0 8px}
+.post-actions{margin:14px 0}
+.post-divider{border-top:1px solid var(--line);margin:22px 0}
+.wx-content{font-size:16px;line-height:1.75;color:rgb(38,38,38);word-break:break-word}
+.wx-content h1,.wx-content h2,.wx-content h3,.wx-content h4{font-size:inherit;margin:0;padding:0;font-weight:inherit;border:0}
+.wx-content img{max-width:100%;height:auto}
 @media (max-width:640px){.cards{grid-template-columns:1fr}h1{font-size:24px}.rows li{flex-direction:column;gap:2px}.rows a{min-width:0}}
 """
 

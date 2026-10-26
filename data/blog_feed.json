@@ -1,7 +1,7 @@
 {
  "updated": "2026-10-26T02:01:49+00:00",
  "source": "wechat-mp",
- "count": 141,
+ "count": 140,
  "articles": [
   {
    "slug": "QE60Mc9pVypYcppT51CSrg",
@@ -796,14 +796,6 @@
    "archived": true
   },
   {
-   "slug": "VU0vSk7sgoAQwk56rxmL-A",
-   "title": "一个常驻 Agent 怎么证明自己扛得住故障：混沌测试与状态层的三道防线",
-   "url": "https://mp.weixin.qq.com/s/VU0vSk7sgoAQwk56rxmL-A",
-   "publish_time": "2026-09-22",
-   "status": "published",
-   "archived": true
-  },
-  {
    "slug": "B6ewGH1bNpCwwcbzzrepyQ",
    "title": "小凝的社交部分-零成本常驻的被动感知 Agent",
    "url": "https://mp.weixin.qq.com/s/B6ewGH1bNpCwwcbzzrepyQ",
@@ -1130,6 +1122,17 @@
    "publish_time": "2026-09-03",
    "status": "published",
    "archived": true
+  }
+ ],
+ "excluded": [
+  {
+   "slug": "VU0vSk7sgoAQwk56rxmL-A",
+   "title": "一个常驻 Agent 怎么证明自己扛得住故障：混沌测试与状态层的三道防线",
+   "url": "https://mp.weixin.qq.com/s/VU0vSk7sgoAQwk56rxmL-A",
+   "publish_time": "2026-09-22",
+   "status": "published",
+   "archived": true,
+   "note": "公众号公开页不可访问，未收录"
   }
  ]
 }
