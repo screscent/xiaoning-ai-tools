@@ -1702,5 +1702,32 @@
     "cat": "实用工具",
     "url": "https://jarc8vkp5e.app.weavefox.cn",
     "subcat": "设计绘图"
+  },
+  {
+    "id": "sfwn9wy97s",
+    "name": "贷款还款方式对比计算器",
+    "desc": "等额本息与等额本金月供/总利息对比，含逐月明细",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://sfwn9wy97s.app.weavefox.cn",
+    "subcat": "计算换算"
+  },
+  {
+    "id": "j258a6xyyi",
+    "name": "中英混排空格格式化工具",
+    "desc": "中英文/数字之间自动加空格，全角转半角",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://j258a6xyyi.app.weavefox.cn",
+    "subcat": "文本处理"
+  },
+  {
+    "id": "ewrulmixkx",
+    "name": "条形码生成器 Code128",
+    "desc": "Code128B/C 与 EAN-13 条码绘制，含校验与导 PNG",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ewrulmixkx.app.weavefox.cn",
+    "subcat": "编码转换"
   }
 ]
