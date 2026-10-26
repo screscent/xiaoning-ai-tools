@@ -1756,5 +1756,32 @@
     "cat": "实用工具",
     "url": "https://nyi2whpkdd.app.weavefox.cn",
     "subcat": "效率生活"
+  },
+  {
+    "id": "r3ar3ezjyr",
+    "name": "图片转 ICO 图标生成器",
+    "desc": "多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://r3ar3ezjyr.app.weavefox.cn",
+    "subcat": "图片处理"
+  },
+  {
+    "id": "frnfr2gsra",
+    "name": "SVG 波浪分割线生成器",
+    "desc": "调波高波峰生成 SVG 波浪分割线，复制或下载",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://frnfr2gsra.app.weavefox.cn",
+    "subcat": "设计绘图"
+  },
+  {
+    "id": "qseqsqnhme",
+    "name": "阶梯水电费计算器",
+    "desc": "阶梯电价水价分段计费，含分段明细与平均单价",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qseqsqnhme.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
