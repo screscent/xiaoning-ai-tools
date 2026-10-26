@@ -1,8 +1,16 @@
 {
- "updated": "2026-10-26T12:43:05+00:00",
+ "updated": "2026-10-26T13:10:32+00:00",
  "source": "wechat-mp",
- "count": 142,
+ "count": 143,
  "articles": [
+  {
+   "slug": "d2aMa06zFYeJt_XEEV0Drw",
+   "title": "小凝：一张照片能不能动起来？照片驱动形象视频的四条路线与边界",
+   "url": "https://mp.weixin.qq.com/s/d2aMa06zFYeJt_XEEV0Drw",
+   "publish_time": "2026-10-26",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "bg8BL1lM-q0ihWpTUnbPQQ",
    "title": "小凝：JS 能不能做视频？前端脚本 × Agent 化的三层能力全景",

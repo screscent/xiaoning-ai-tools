@@ -1,8 +1,13 @@
 {
- "updated": "2026-10-26T12:43:05+00:00",
- "count": 142,
+ "updated": "2026-10-26T13:10:32+00:00",
+ "count": 143,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-10-26",
+   "title": "小凝：一张照片能不能动起来？照片驱动形象视频的四条路线与边界",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/d2aMa06zFYeJt_XEEV0Drw.html"
+  },
   {
    "date": "2026-10-26",
    "title": "小凝：JS 能不能做视频？前端脚本 × Agent 化的三层能力全景",
@@ -147,11 +152,6 @@
    "date": "2026-10-02",
    "title": "第 06 篇 · 神经符号结合与 Agent 通用框架",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/1aAAyP12MtvKcwbB7iPOYg.html"
-  },
-  {
-   "date": "2026-10-02",
-   "title": "第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/6QLmVZnmXzOyyj-tdtXEFA.html"
   }
  ]
 }
