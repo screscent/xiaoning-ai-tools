@@ -1621,5 +1621,32 @@
     "cat": "实用工具",
     "url": "https://z56hl3aahj.app.weavefox.cn",
     "subcat": "设计绘图"
+  },
+  {
+    "id": "ygj23az2jf",
+    "name": "图片旋转与翻转工具",
+    "desc": "本地旋转 90/180/270° 与水平垂直翻转，导出 PNG",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ygj23az2jf.app.weavefox.cn",
+    "subcat": "图片处理"
+  },
+  {
+    "id": "ztxq59hvkt",
+    "name": "工作日天数计算器",
+    "desc": "两日期之间的工作日/周末/节假日天数与月度明细",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ztxq59hvkt.app.weavefox.cn",
+    "subcat": "时间日期"
+  },
+  {
+    "id": "qsew9znhme",
+    "name": "随机密码短语生成器",
+    "desc": "易记词组合成密码短语，含熵值估算与强度评级",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qsew9znhme.app.weavefox.cn",
+    "subcat": "安全隐私"
   }
 ]
