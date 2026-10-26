@@ -1,6 +1,6 @@
 # 小凝 AI 工具集 · 工具介绍站
 
-180 个即开即用的 AI 小工具，按场景分类的公开介绍页，用于搜索与 AI 检索可见性。
+183 个即开即用的 AI 小工具，按场景分类的公开介绍页，用于搜索与 AI 检索可见性。
 
 - 在线站点：https://screscent.github.io/xiaoning-ai-tools/
 - 工具入口：https://rdndxd4t4r.app.weavefox.cn

@@ -1486,5 +1486,32 @@
     "cat": "实用工具",
     "url": "https://frn8jngsra.app.weavefox.cn",
     "subcat": "图片处理"
+  },
+  {
+    "id": "puva8i3a4t",
+    "name": "摩斯电码转换器",
+    "desc": "文本与摩斯电码双向转换，支持点划样式与音频播放",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://puva8i3a4t.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "safluw9xrs",
+    "name": "复利与定投收益计算器",
+    "desc": "本金/定投/年化/年限 → 期末总额、收益与逐年明细，可导出 CSV",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://safluw9xrs.app.weavefox.cn",
+    "subcat": "计算换算"
+  },
+  {
+    "id": "9pyjxqr8kd",
+    "name": "CSS 渐变生成器",
+    "desc": "线性/径向/圆锥渐变，实时预览并复制或下载 CSS",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://9pyjxqr8kd.app.weavefox.cn",
+    "subcat": "设计绘图"
   }
 ]
