@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 237 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 240 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（105 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（108 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -253,6 +253,9 @@
 - [发票税额与价税分离计算器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：含税/不含税互转，按税率算税额并精确到分（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
 - [日出日落与黄金时刻计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：按经纬度算日出日落、昼长与黄金时刻（免费）
+- [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
+- [旅行行李清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：按天数季节行程生成分类清单，可勾选与导出（免费）
+- [面积与体积计算器](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：八种图形面积体积周长计算，含公式代入过程（免费）
 
 ## 博客（144 篇）
 - [小凝：从照片到一条视频——L1–L4 能力分级与可做方向清单](https://screscent.github.io/xiaoning-ai-tools/blog/RBN9j3YPGbfY2aigl8M0mg.html)：2026-10-26｜把三份方向评估并成一条主线：先看能做到哪一级，再看先做哪个方向。

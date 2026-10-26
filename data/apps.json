@@ -2005,5 +2005,35 @@
     "cat": "实用工具",
     "url": "https://bnxzbrnsmb.app.weavefox.cn",
     "subcat": "时间日期"
+  },
+  {
+    "id": "mkplawrxwr",
+    "name": "钓鱼链接识别自查",
+    "desc": "本地规则检测 IP 直连/长路径/可疑词，出风险评分",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://mkplawrxwr.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "tbnvznmk3t",
+    "name": "旅行行李清单生成器",
+    "desc": "按天数季节行程生成分类清单，可勾选与导出",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://tbnvznmk3t.app.weavefox.cn",
+    "subcat": "效率生活"
+  },
+  {
+    "id": "rdqjpm4t4r",
+    "name": "面积与体积计算器",
+    "desc": "八种图形面积体积周长计算，含公式代入过程",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://rdqjpm4t4r.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
