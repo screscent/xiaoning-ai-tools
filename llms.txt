@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 249 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 252 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（117 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（120 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -265,6 +265,9 @@
 - [装修材料用量计算器](https://screscent.github.io/xiaoning-ai-tools/tools/material-estimate.html)：按面积与损耗算涂料/瓷砖/地板/壁纸用量（免费）
 - [文章字数与稿费计算器](https://screscent.github.io/xiaoning-ai-tools/tools/word-fee.html)：按字数千字单价算稿费，含加急倍数与阅读时长（免费）
 - [Unicode 码点与 UTF-8 字节查询器](https://screscent.github.io/xiaoning-ai-tools/tools/unicode-codepoint.html)：逐字查码点/UTF-8 字节，正确处理 emoji 代理对（免费）
+- [敏感词本地过滤检测器](https://screscent.github.io/xiaoning-ai-tools/tools/sensitive-filter.html)：内置 80 条分类词库+自定义词，本地过滤并统计（免费）
+- [每日饮水与作息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/daily-plan.html)：按体重活动量算饮水量并生成分时作息表（免费）
+- [法定节假日与调休日历生成器](https://screscent.github.io/xiaoning-ai-tools/tools/holiday-calendar.html)：2025~2027 节假日与调休日历，含天数统计（免费）
 
 ## 博客（144 篇）
 - [小凝：从照片到一条视频——L1–L4 能力分级与可做方向清单](https://screscent.github.io/xiaoning-ai-tools/blog/RBN9j3YPGbfY2aigl8M0mg.html)：2026-10-26｜把三份方向评估并成一条主线：先看能做到哪一级，再看先做哪个方向。

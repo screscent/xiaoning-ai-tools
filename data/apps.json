@@ -2125,5 +2125,35 @@
     "cat": "实用工具",
     "url": "https://kezwhcdudk.app.weavefox.cn",
     "subcat": "编码转换"
+  },
+  {
+    "id": "uisqu2xjku",
+    "name": "敏感词本地过滤检测器",
+    "desc": "内置 80 条分类词库+自定义词，本地过滤并统计",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://uisqu2xjku.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "vfmdv3lsqf",
+    "name": "每日饮水与作息计划生成器",
+    "desc": "按体重活动量算饮水量并生成分时作息表",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://vfmdv3lsqf.app.weavefox.cn",
+    "subcat": "效率生活"
+  },
+  {
+    "id": "fwkzfxyqkh",
+    "name": "法定节假日与调休日历生成器",
+    "desc": "2025~2027 节假日与调休日历，含天数统计",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://fwkzfxyqkh.app.weavefox.cn",
+    "subcat": "时间日期"
   }
 ]
