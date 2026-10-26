@@ -1594,5 +1594,32 @@
     "cat": "实用工具",
     "url": "https://qse8urnhme.app.weavefox.cn",
     "subcat": "编码转换"
+  },
+  {
+    "id": "qse7ptnhme",
+    "name": "Markdown 转纯文本",
+    "desc": "Markdown → 纯文本，可去列表符号/代码块并下载 txt",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qse7ptnhme.app.weavefox.cn",
+    "subcat": "文本处理"
+  },
+  {
+    "id": "npxiz82aq6",
+    "name": "敏感信息脱敏工具",
+    "desc": "手机号/身份证/邮箱/银行卡本地脱敏，含命中统计",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://npxiz82aq6.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "z56hl3aahj",
+    "name": "颜色名称查询",
+    "desc": "HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://z56hl3aahj.app.weavefox.cn",
+    "subcat": "设计绘图"
   }
 ]
