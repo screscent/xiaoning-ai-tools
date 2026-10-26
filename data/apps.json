@@ -1945,5 +1945,35 @@
     "cat": "实用工具",
     "url": "https://2qezkyqqxb.app.weavefox.cn",
     "subcat": "效率生活"
+  },
+  {
+    "id": "atverkpmpa",
+    "name": "子网掩码与网段计算器",
+    "desc": "按 IP 与前缀算网络/广播/主机范围，含二进制对照",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://atverkpmpa.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "dzf5haslwd",
+    "name": "农历与节气查询器",
+    "desc": "公历转农历，生肖干支与全年二十四节气表",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://dzf5haslwd.app.weavefox.cn",
+    "subcat": "时间日期"
+  },
+  {
+    "id": "ny8guqpkdd",
+    "name": "文本词频统计与关键词提取",
+    "desc": "分词统计词频与 Top20 关键词，含标签词云",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ny8guqpkdd.app.weavefox.cn",
+    "subcat": "文本处理"
   }
 ]
