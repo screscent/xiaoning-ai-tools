@@ -1540,5 +1540,32 @@
     "cat": "实用工具",
     "url": "https://safjgk9xrs.app.weavefox.cn",
     "subcat": "编码转换"
+  },
+  {
+    "id": "frn2l7gsra",
+    "name": "图片拼接长图",
+    "desc": "多图纵向/横向拼接，可调间距与背景，导出 PNG",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://frn2l7gsra.app.weavefox.cn",
+    "subcat": "图片处理"
+  },
+  {
+    "id": "dzkfeyslwd",
+    "name": "HTML 实体编解码器",
+    "desc": "HTML 特殊字符实体编码/解码，支持引号与换行",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://dzkfeyslwd.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "r3a6wazjyr",
+    "name": "单位价格比较器",
+    "desc": "不同规格商品按每 100g/500g 折算单价，比出更划算",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://r3a6wazjyr.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
