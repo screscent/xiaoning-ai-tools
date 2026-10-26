@@ -2185,5 +2185,35 @@
     "cat": "实用工具",
     "url": "https://qsikgrnhme.app.weavefox.cn",
     "subcat": "计算换算"
+  },
+  {
+    "id": "vfmrjplsqf",
+    "name": "会议排期冲突检测器",
+    "desc": "多会议区间重叠检测，算出时长与空闲时段",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://vfmrjplsqf.app.weavefox.cn",
+    "subcat": "时间日期"
+  },
+  {
+    "id": "fwk3ajyqkh",
+    "name": "CSS 徽章与标签样式生成器",
+    "desc": "四种徽章样式实时预览并生成 CSS/HTML",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://fwk3ajyqkh.app.weavefox.cn",
+    "subcat": "设计绘图"
+  },
+  {
+    "id": "x89sejcakb",
+    "name": "HTTP 安全响应头检查器",
+    "desc": "粘贴响应头本地判定 6 项安全头并评分",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://x89sejcakb.app.weavefox.cn",
+    "subcat": "安全隐私"
   }
 ]
