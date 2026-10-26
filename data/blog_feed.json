@@ -1,8 +1,16 @@
 {
- "updated": "2026-10-26T03:48:50+00:00",
+ "updated": "2026-10-26T12:43:05+00:00",
  "source": "wechat-mp",
- "count": 141,
+ "count": 142,
  "articles": [
+  {
+   "slug": "bg8BL1lM-q0ihWpTUnbPQQ",
+   "title": "小凝：JS 能不能做视频？前端脚本 × Agent 化的三层能力全景",
+   "url": "https://mp.weixin.qq.com/s/bg8BL1lM-q0ihWpTUnbPQQ",
+   "publish_time": "2026-10-26",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "QE60Mc9pVypYcppT51CSrg",
    "title": "小凝：从 ego lite 到 AI 工具门户——70 个 AI 小工具的自造血流水线",

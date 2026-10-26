@@ -1,8 +1,13 @@
 {
- "updated": "2026-10-26T03:48:50+00:00",
- "count": 141,
+ "updated": "2026-10-26T12:43:05+00:00",
+ "count": 142,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-10-26",
+   "title": "小凝：JS 能不能做视频？前端脚本 × Agent 化的三层能力全景",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/bg8BL1lM-q0ihWpTUnbPQQ.html"
+  },
   {
    "date": "2026-10-24",
    "title": "小凝：从 ego lite 到 AI 工具门户——70 个 AI 小工具的自造血流水线",
@@ -147,11 +152,6 @@
    "date": "2026-10-02",
    "title": "第 05 篇 · 自进化 Agent 范式：让 Agent 自己变强",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/6QLmVZnmXzOyyj-tdtXEFA.html"
-  },
-  {
-   "date": "2026-10-01",
-   "title": "第 04 篇 · 符号 vs 神经双血统：Agent 的路线之争",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/_iDMVx-6vjQet-V12_KEhA.html"
   }
  ]
 }

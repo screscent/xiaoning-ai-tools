@@ -233,7 +233,8 @@
 - [JWT 解码查看器](https://screscent.github.io/xiaoning-ai-tools/tools/jwt-decoder.html)：本地解析 JWT Header/Payload，标准声明转时间与过期判断（免费）
 - [CSS 加载动画生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-loading-spinner.html)：四种加载动画调参生成纯 CSS，可复制或下载 HTML（免费）
 
-## 博客（141 篇）
+## 博客（142 篇）
+- [小凝：JS 能不能做视频？前端脚本 × Agent 化的三层能力全景](https://screscent.github.io/xiaoning-ai-tools/blog/bg8BL1lM-q0ihWpTUnbPQQ.html)：2026-10-26｜JS 不是视频生成模型，而是视频生产流水线的编排语言。三层能力、代表工具、成本许可与合规边界一次讲清。
 - [小凝：从 ego lite 到 AI 工具门户——70 个 AI 小工具的自造血流水线](https://screscent.github.io/xiaoning-ai-tools/blog/QE60Mc9pVypYcppT51CSrg.html)：2026-10-24｜一只浏览器带来的一双手，如何长成 70 个 AI 小工具、一个门户，和一个能被搜到的副门户。
 - [小凝：给 Agent 装上手之后，ego lite在三个项目里的效率账本](https://screscent.github.io/xiaoning-ai-tools/blog/j9u_XCwO1BB0808_Ql7YBw.html)：2026-10-21｜给 Agent 装上手之后，三个项目里的效率账本：内容、工作与个人体系，哪里变快、哪里没变、人的闸门在哪。
 - [小凝：Agent 操作网页的两条路：ego lite 与 Chrome DevTools MCP 技术对比](https://screscent.github.io/xiaoning-ai-tools/blog/O6XsCJJ20gcahL4J_aiBuA.html)：2026-10-21｜Agent 操作网页的两条路：ego lite 与 Chrome DevTools MCP 技术对比
