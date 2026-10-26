@@ -2065,5 +2065,35 @@
     "cat": "实用工具",
     "url": "https://urkuxmdyk8.app.weavefox.cn",
     "subcat": "效率生活"
+  },
+  {
+    "id": "3xmx4f5af3",
+    "name": "ICS 日历文件生成器",
+    "desc": "多行事件生成标准 iCalendar，可导入手机日历",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://3xmx4f5af3.app.weavefox.cn",
+    "subcat": "时间日期"
+  },
+  {
+    "id": "tbnjpnmk3t",
+    "name": "SVG 图表生成器",
+    "desc": "柱状/折线/面积图纯 SVG 生成，可下载源码",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://tbnjpnmk3t.app.weavefox.cn",
+    "subcat": "设计绘图"
+  },
+  {
+    "id": "bcyaubk6f9",
+    "name": "批量序列号生成器",
+    "desc": "前缀+位数批量生成唯一序列号，含校验位",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://bcyaubk6f9.app.weavefox.cn",
+    "subcat": "安全隐私"
   }
 ]
