@@ -1864,5 +1864,32 @@
     "cat": "实用工具",
     "url": "https://bcycnrk6f9.app.weavefox.cn",
     "subcat": "计算换算"
+  },
+  {
+    "id": "ja46pmkp5e",
+    "name": "CSS Flex 与 Grid 布局生成器",
+    "desc": "切换 Flex/Grid 调间距对齐，实时预览并复制 CSS",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ja46pmkp5e.app.weavefox.cn",
+    "subcat": "设计绘图"
+  },
+  {
+    "id": "2qes9dqqxb",
+    "name": "文本行去重与排序工具",
+    "desc": "按行去重排序并统计重复次数，可忽略大小写",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://2qes9dqqxb.app.weavefox.cn",
+    "subcat": "文本处理"
+  },
+  {
+    "id": "7b3nvgweb7",
+    "name": "菜谱份量换算器",
+    "desc": "按份数比例换算食材用量，导出清单与 CSV",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://7b3nvgweb7.app.weavefox.cn",
+    "subcat": "效率生活"
   }
 ]
