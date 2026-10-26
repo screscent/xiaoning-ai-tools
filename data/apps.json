@@ -1567,5 +1567,32 @@
     "cat": "实用工具",
     "url": "https://r3a6wazjyr.app.weavefox.cn",
     "subcat": "计算换算"
+  },
+  {
+    "id": "ygjbzyz2jf",
+    "name": "图片圆角与边框生成器",
+    "desc": "本地给图片加圆角与边框，可调半径/颜色并导出 PNG",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ygjbzyz2jf.app.weavefox.cn",
+    "subcat": "图片处理"
+  },
+  {
+    "id": "ztxnashvkt",
+    "name": "CSS 阴影生成器",
+    "desc": "滑块调偏移/模糊/扩散，实时预览并复制 box-shadow",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ztxnashvkt.app.weavefox.cn",
+    "subcat": "设计绘图"
+  },
+  {
+    "id": "qse8urnhme",
+    "name": "文本转 Unicode 转义",
+    "desc": "文本 ⇄ \\uXXXX 转义，支持三种格式与码点统计",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qse8urnhme.app.weavefox.cn",
+    "subcat": "编码转换"
   }
 ]
