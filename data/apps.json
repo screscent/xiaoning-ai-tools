@@ -2095,5 +2095,35 @@
     "cat": "实用工具",
     "url": "https://bcyaubk6f9.app.weavefox.cn",
     "subcat": "安全隐私"
+  },
+  {
+    "id": "z5wwxxaahj",
+    "name": "装修材料用量计算器",
+    "desc": "按面积与损耗算涂料/瓷砖/地板/壁纸用量",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://z5wwxxaahj.app.weavefox.cn",
+    "subcat": "计算换算"
+  },
+  {
+    "id": "5cunqft6g5",
+    "name": "文章字数与稿费计算器",
+    "desc": "按字数千字单价算稿费，含加急倍数与阅读时长",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://5cunqft6g5.app.weavefox.cn",
+    "subcat": "文本处理"
+  },
+  {
+    "id": "kezwhcdudk",
+    "name": "Unicode 码点与 UTF-8 字节查询器",
+    "desc": "逐字查码点/UTF-8 字节，正确处理 emoji 代理对",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://kezwhcdudk.app.weavefox.cn",
+    "subcat": "编码转换"
   }
 ]
