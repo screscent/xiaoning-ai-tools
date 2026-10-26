@@ -2155,5 +2155,35 @@
     "cat": "实用工具",
     "url": "https://fwkzfxyqkh.app.weavefox.cn",
     "subcat": "时间日期"
+  },
+  {
+    "id": "c7rsb3egmi",
+    "name": "CSS 表格样式生成器",
+    "desc": "调色圆角斑马纹实时生成表格 CSS/HTML",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://c7rsb3egmi.app.weavefox.cn",
+    "subcat": "设计绘图"
+  },
+  {
+    "id": "4gswjgbtnf",
+    "name": "文章同义词替换与降重助手",
+    "desc": "内置同义词库+自定义替换对，按强度改写",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://4gswjgbtnf.app.weavefox.cn",
+    "subcat": "文本处理"
+  },
+  {
+    "id": "qsikgrnhme",
+    "name": "工资薪金个税计算器",
+    "desc": "按七档税率算个税与到手，含逐档明细",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qsikgrnhme.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
