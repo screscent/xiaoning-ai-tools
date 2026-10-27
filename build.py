@@ -23,11 +23,21 @@ PORTAL = "https://rdndxd4t4r.app.weavefox.cn"
 UNIFIED = "https://screscent.app.weavefox.cn"
 TOOLBOX = "https://7bpgquweb7.app.weavefox.cn"
 
-# 实用工具子分类（SSOT：apps.json 每条 cat=实用工具 必须带 subcat；顺序即门户分组顺序）
+# 实用工具子分类（SSOT：apps.json 每条 cat=实用工具 必须带 subcat）
+# 已知类仅决定「优先展示顺序」；apps.json 出现的新 subcat 自动追加到末尾，不再硬拦截。
 UTIL_SUBCAT_ORDER = [
     "图片处理", "文本处理", "编码转换", "时间日期",
     "计算换算", "安全隐私", "设计绘图", "效率生活",
 ]
+
+
+def util_subcat_order(apps):
+    """从 apps.json 动态推导分组顺序：已知类按默认顺序，新类按首次出现顺序追加。"""
+    seen = []
+    for a in apps:
+        if a.get("cat") == "实用工具" and a.get("subcat") and a["subcat"] not in seen:
+            seen.append(a["subcat"])
+    return [c for c in UTIL_SUBCAT_ORDER if c in seen] + [c for c in seen if c not in UTIL_SUBCAT_ORDER]
 OWNER = "月牙寂（龚浩华）"
 AGENT = "月绡凝（小凝）"
 PHONE = "15980989344"
@@ -320,6 +330,8 @@ UTIL_SUBCAT_LEADS = {
     "安全隐私": "密码生成、文本加解密与强度检测，全部在浏览器本地完成。",
     "设计绘图": "颜色与对比度、配色方案、画板与思维导图。",
     "效率生活": "二维码、随机抽签、待办、打字测试、记账与生活查询。",
+    "生活健康": "药品保质期、饮水作息与健康自查，数据只在本机计算。",
+    "出行旅行": "行李清单、预算估算与行程准备，出门前一次配齐。",
 }
 
 
@@ -344,11 +356,12 @@ def _uni_groups(apps, cats, pre, medium, subcat=False):
 
 
 def _util_cat_cards(util):
-    counts = {c: len([a for a in util if a.get("subcat") == c]) for c in UTIL_SUBCAT_ORDER}
+    order = util_subcat_order(util)
+    counts = {c: len([a for a in util if a.get("subcat") == c]) for c in order}
     return "".join(
         f'<li><a href="#g-{esc(c)}"><strong>{esc(c)}</strong>'
-        f'<span>{esc(UTIL_SUBCAT_LEADS[c])}</span><em>{counts[c]} 个</em></a></li>'
-        for c in UTIL_SUBCAT_ORDER if counts[c]
+        f'<span>{esc(UTIL_SUBCAT_LEADS.get(c, "本地处理 · 免费使用"))}</span><em>{counts[c]} 个</em></a></li>'
+        for c in order if counts[c]
     )
 
 
@@ -452,9 +465,9 @@ def utility_portal_page(apps):
         "url": canon, "inLanguage": "zh-CN",
         "description": "纯前端免费工具：图片压缩改尺寸、房贷提前还款计算器、二维码生成器；本地处理，数据不上传。",
     }, ensure_ascii=False)
-    missing = [a["name"] for a in util if a.get("subcat") not in UTIL_SUBCAT_ORDER]
+    missing = [a["name"] for a in util if not a.get("subcat")]
     if missing:
-        print(f"FAIL: 实用工具缺少合法 subcat（须属 {UTIL_SUBCAT_ORDER}）：{missing}")
+        print(f"FAIL: 实用工具缺少 subcat 字段（新分类可直接使用新名称，不再限枚举）：{missing}")
         sys.exit(1)
     body = f"""
 <p class="crumb"><a href="{BASE_URL}/">← 返回统一门户</a></p>
@@ -468,7 +481,7 @@ def utility_portal_page(apps):
 <ul class="cards">{_util_cat_cards(util)}</ul>
 
 <h2>全部实用工具</h2>
-{_uni_groups(util, UTIL_SUBCAT_ORDER, "../", "utility", subcat=True)}
+{_uni_groups(util, util_subcat_order(util), "../", "utility", subcat=True)}
 
 <h2>怎么用</h2>
 <ol class="steps">
