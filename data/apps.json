@@ -2215,5 +2215,35 @@
     "cat": "实用工具",
     "url": "https://x89sejcakb.app.weavefox.cn",
     "subcat": "安全隐私"
+  },
+  {
+    "id": "qsiducnhme",
+    "name": "十六进制文件查看器",
+    "desc": "本地读文件或粘贴文本转十六进制转储与 ASCII",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qsiducnhme.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "dzf7vmslwd",
+    "name": "家庭药品与保质期提醒表",
+    "desc": "按有效期分级正常/临期/过期并算剩余天数",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://dzf7vmslwd.app.weavefox.cn",
+    "subcat": "效率生活"
+  },
+  {
+    "id": "r36xfxzjyr",
+    "name": "旅行费用预算计算器",
+    "desc": "交通住宿餐饮分项占比与人均、每日预算",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://r36xfxzjyr.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
