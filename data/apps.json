@@ -2465,5 +2465,35 @@
     "cat": "实用工具",
     "url": "https://7b3ecrweb7.app.weavefox.cn",
     "subcat": "设计绘图"
+  },
+  {
+    "id": "2qe6kzqqxb",
+    "name": "CSV 合并与拆分工具",
+    "desc": "多份 CSV 按表头合并，按行数或列值拆分后导出",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://2qe6kzqqxb.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "qhwm67stfq",
+    "name": "CSS 文字描边生成器",
+    "desc": "描边颜色/宽度/方式可调，实时预览并生成 CSS",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qhwm67stfq.app.weavefox.cn",
+    "subcat": "设计绘图"
+  },
+  {
+    "id": "9pahqsr8kd",
+    "name": "YAML 与 JSON 双向转换器",
+    "desc": "YAML ⇄ JSON 双向转换，缩进可调并定位错误行号",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://9pahqsr8kd.app.weavefox.cn",
+    "subcat": "编码转换"
   }
 ]
