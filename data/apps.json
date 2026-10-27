@@ -2405,5 +2405,35 @@
     "cat": "实用工具",
     "url": "https://9paqwhr8kd.app.weavefox.cn",
     "subcat": "编码转换"
+  },
+  {
+    "id": "2qeyylqqxb",
+    "name": "JSON Schema 生成器",
+    "desc": "从示例 JSON 推断 draft-07 Schema，含必填与数组项",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://2qeyylqqxb.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "qhwvgdstfq",
+    "name": "颜色混合与透明度计算器",
+    "desc": "两色按比例混合并叠加背景，输出 HEX/RGB",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qhwvgdstfq.app.weavefox.cn",
+    "subcat": "设计绘图"
+  },
+  {
+    "id": "c7rkj6egmi",
+    "name": "数字转英文读法",
+    "desc": "整数转英文单词，支持英式 and 与序数词",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://c7rkj6egmi.app.weavefox.cn",
+    "subcat": "文本处理"
   }
 ]
