@@ -2735,5 +2735,35 @@
     "cat": "实用工具",
     "url": "https://atvvufpmpa.app.weavefox.cn",
     "subcat": "计算换算"
+  },
+  {
+    "id": "qsiaupnhme",
+    "name": "屏幕使用与护眼休息计划生成器",
+    "desc": "按屏幕时长与间隔生成 20-20-20 休息提醒时间表",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qsiaupnhme.app.weavefox.cn",
+    "subcat": "生活健康"
+  },
+  {
+    "id": "npcr5f2aq6",
+    "name": "CSS 骨架屏占位生成器",
+    "desc": "块数/高度/圆角/颜色可调，实时预览并导出骨架屏 CSS",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://npcr5f2aq6.app.weavefox.cn",
+    "subcat": "设计绘图"
+  },
+  {
+    "id": "z5wef2aahj",
+    "name": "环境噪音分贝对照与听力保护提示",
+    "desc": "按分贝与暴露时长算安全时长、风险等级与防护建议",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://z5wef2aahj.app.weavefox.cn",
+    "subcat": "安全隐私"
   }
 ]
