@@ -2555,5 +2555,35 @@
     "cat": "实用工具",
     "url": "https://vfmbddlsqf.app.weavefox.cn",
     "subcat": "生活健康"
+  },
+  {
+    "id": "dzfmynslwd",
+    "name": "家庭用药提醒清单生成器",
+    "desc": "按频次与开始时间生成每日服药时间点、日程表与累计次数",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://dzfmynslwd.app.weavefox.cn",
+    "subcat": "生活健康"
+  },
+  {
+    "id": "ny89vhpkdd",
+    "name": "会议议程与时间分配生成器",
+    "desc": "按议题分钟数排时间表，算占比并校验是否超时",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ny89vhpkdd.app.weavefox.cn",
+    "subcat": "效率生活"
+  },
+  {
+    "id": "fr2tregsra",
+    "name": "CSS 轮播图样式生成器",
+    "desc": "宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://fr2tregsra.app.weavefox.cn",
+    "subcat": "设计绘图"
   }
 ]
