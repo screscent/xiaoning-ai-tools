@@ -2615,5 +2615,35 @@
     "cat": "实用工具",
     "url": "https://say4uq9xrs.app.weavefox.cn",
     "subcat": "文本处理"
+  },
+  {
+    "id": "qhwajtstfq",
+    "name": "时差调整作息计划生成器",
+    "desc": "按两地时差生成逐日就寝与起床调整表，判断提前或推迟",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qhwajtstfq.app.weavefox.cn",
+    "subcat": "出行旅行"
+  },
+  {
+    "id": "c7rfzsegmi",
+    "name": "久坐提醒与拉伸计划生成器",
+    "desc": "按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://c7rfzsegmi.app.weavefox.cn",
+    "subcat": "生活健康"
+  },
+  {
+    "id": "4gs8yrbtnf",
+    "name": "待办四象限优先级整理器",
+    "desc": "按重要度与紧急度阈值分区待办，给出处理顺序与时间分配",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://4gs8yrbtnf.app.weavefox.cn",
+    "subcat": "效率生活"
   }
 ]
