@@ -2885,5 +2885,35 @@
   "cat": "实用工具",
   "url": "https://dzfc3aslwd.app.weavefox.cn",
   "subcat": "出行旅行"
+ },
+ {
+  "id": "puhfd93a4t",
+  "name": "步数与活动量目标计算器",
+  "desc": "按身高体重估算步幅里程、额外步数与消耗热量",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puhfd93a4t.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "sayevp9xrs",
+  "name": "字体搭配与排版比例生成器",
+  "desc": "按基准字号与字阶比例生成六级字号行高与字体栈",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://sayevp9xrs.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "9pavh8r8kd",
+  "name": "色盲友好配色检查器",
+  "desc": "模拟四类色觉障碍并重算 WCAG 对比度是否达标",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://9pavh8r8kd.app.weavefox.cn",
+  "subcat": "设计绘图"
  }
 ]
