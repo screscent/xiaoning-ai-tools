@@ -3005,5 +3005,35 @@
   "cat": "实用工具",
   "url": "https://k6bmafftrk.app.weavefox.cn",
   "subcat": "设计绘图"
+ },
+ {
+  "id": "qsixiqnhme",
+  "name": "睡眠债务与补觉计划计算器",
+  "desc": "按工作日周末睡眠差算累计债务，给出补觉天数与风险提示",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsixiqnhme.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "npcteh2aq6",
+  "name": "景点门票与通行预算计算器",
+  "desc": "分人群算单景点与多景点门票，含讲解与观光车附加费",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npcteh2aq6.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "z5wyvnaahj",
+  "name": "随机用户名与昵称生成器",
+  "desc": "本地词库随机组合中文/英文昵称，带去重与长度统计",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z5wyvnaahj.app.weavefox.cn",
+  "subcat": "效率生活"
  }
 ]
