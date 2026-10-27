@@ -2345,5 +2345,35 @@
     "cat": "实用工具",
     "url": "https://m9jbktue9a.app.weavefox.cn",
     "subcat": "图片处理"
+  },
+  {
+    "id": "tbndpgmk3t",
+    "name": "XML 格式化与压缩器",
+    "desc": "XML 逐层缩进美化与单行压缩，含统计与错误提示",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://tbndpgmk3t.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "rdq9yv4t4r",
+    "name": "Markdown 目录 TOC 生成器",
+    "desc": "按标题层级生成带锚点缩进的 Markdown 目录",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://rdq9yv4t4r.app.weavefox.cn",
+    "subcat": "文本处理"
+  },
+  {
+    "id": "lyrxbzjxel",
+    "name": "手动汇率换算器",
+    "desc": "手动汇率双向换算，含手续费与到手金额",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://lyrxbzjxel.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
