@@ -2645,5 +2645,35 @@
     "cat": "实用工具",
     "url": "https://4gs8yrbtnf.app.weavefox.cn",
     "subcat": "效率生活"
+  },
+  {
+    "id": "npcsur2aq6",
+    "name": "停车费与停车时长计算器",
+    "desc": "按入场出场时间与首小时/后续单价算停车时长与费用",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://npcsur2aq6.app.weavefox.cn",
+    "subcat": "出行旅行"
+  },
+  {
+    "id": "z5wgaqaahj",
+    "name": "快递运费估算器",
+    "desc": "按重量首重续重与区域系数估算运费，支持保价费",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://z5wgaqaahj.app.weavefox.cn",
+    "subcat": "计算换算"
+  },
+  {
+    "id": "5culhkt6g5",
+    "name": "文件大小与下载时间估算器",
+    "desc": "按大小与带宽效率折算下载耗时，给出理论/实际对比",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://5culhkt6g5.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
