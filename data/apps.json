@@ -2275,5 +2275,35 @@
     "cat": "实用工具",
     "url": "https://mkpwgxrxwr.app.weavefox.cn",
     "subcat": "设计绘图"
+  },
+  {
+    "id": "ja45jzkp5e",
+    "name": "JSON 转 TypeScript 接口生成器",
+    "desc": "粘贴 JSON 自动推导类型并生成 TypeScript interface",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ja45jzkp5e.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "pz7jntqyzx",
+    "name": "增长率与 CAGR 计算器",
+    "desc": "算总增长率、年均复合增长率与 72 法则翻倍年数",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://pz7jntqyzx.app.weavefox.cn",
+    "subcat": "计算换算"
+  },
+  {
+    "id": "qhwjqsstfq",
+    "name": "文字与 Emoji 转 Favicon 生成器",
+    "desc": "文字或 Emoji 一键生成多尺寸 PNG 站点图标",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qhwjqsstfq.app.weavefox.cn",
+    "subcat": "设计绘图"
   }
 ]
