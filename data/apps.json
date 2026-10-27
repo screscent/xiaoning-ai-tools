@@ -2855,5 +2855,35 @@
   "cat": "实用工具",
   "url": "https://urkdhldyk8.app.weavefox.cn",
   "subcat": "出行旅行"
+ },
+ {
+  "id": "hmn8b3fxk9",
+  "name": "心率区间与运动强度计算器",
+  "desc": "按年龄与静息心率算五档心率区间，给出燃脂推荐范围",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://hmn8b3fxk9.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "atvkckpmpa",
+  "name": "食物热量与运动消耗换算器",
+  "desc": "按 MET 与体重换算消耗某份热量需要的运动分钟数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://atvkckpmpa.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "dzfc3aslwd",
+  "name": "签证类型与材料清单生成器",
+  "desc": "按目的地与出行目的生成签证类型、材料清单与办理周期",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzfc3aslwd.app.weavefox.cn",
+  "subcat": "出行旅行"
  }
 ]
