@@ -2915,5 +2915,35 @@
   "cat": "实用工具",
   "url": "https://9pavh8r8kd.app.weavefox.cn",
   "subcat": "设计绘图"
+ },
+ {
+  "id": "r36jfpzjyr",
+  "name": "实际时薪与通勤成本计算器",
+  "desc": "扣除通勤时间与支出，算出真实时薪与年等效小时",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://r36jfpzjyr.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "puhymr3a4t",
+  "name": "通胀购买力换算计算器",
+  "desc": "按通胀率推算未来等值金额、购买力缩水与实际收益率",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puhymr3a4t.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "sayvzk9xrs",
+  "name": "邮箱签名与名片信息生成器",
+  "desc": "一键生成纯文本与 HTML 邮箱签名，附脱敏预览",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://sayvzk9xrs.app.weavefox.cn",
+  "subcat": "效率生活"
  }
 ]
