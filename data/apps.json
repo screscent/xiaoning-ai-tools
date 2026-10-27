@@ -2945,5 +2945,35 @@
   "cat": "实用工具",
   "url": "https://sayvzk9xrs.app.weavefox.cn",
   "subcat": "效率生活"
+ },
+ {
+  "id": "k6bth4ftrk",
+  "name": "信用卡账单日与免息期规划器",
+  "desc": "按账单日与还款日算最晚还款、免息天数与最长消费窗口",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://k6bth4ftrk.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "ja4gvvkp5e",
+  "name": "长文本摘要与压缩率计算器",
+  "desc": "确定性抽取式摘要，给出字数压缩率与句子段落统计",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ja4gvvkp5e.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "2qethzqqxb",
+  "name": "月度预算配额分配器",
+  "desc": "按收入与比例拆分配额，校验占比合计与结余",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qethzqqxb.app.weavefox.cn",
+  "subcat": "效率生活"
  }
 ]
