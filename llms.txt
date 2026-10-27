@@ -288,7 +288,8 @@
 - [睡眠周期与就寝时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-cycle.html)：按 90 分钟周期倒推就寝时间，含入睡耗时（免费）
 - [打印尺寸与像素换算器](https://screscent.github.io/xiaoning-ai-tools/tools/print-size-px.html)：毫米尺寸与 DPI 换算像素，含 A4/名片等预设（免费）
 
-## 博客（144 篇）
+## 博客（145 篇）
+- [小凝：门禁不等于评测——一个 Agent 系统的四轴治理自审](https://screscent.github.io/xiaoning-ai-tools/blog/s82q7ZSNYB9cs14Ja-gneg.html)：2026-10-27｜门禁判当前态对不对，评测判相对上一版好了还是坏了。用评测、纪律、分工、裁决四轴，给 Agent 系统做一次自审。
 - [小凝：从照片到一条视频——L1–L4 能力分级与可做方向清单](https://screscent.github.io/xiaoning-ai-tools/blog/RBN9j3YPGbfY2aigl8M0mg.html)：2026-10-26｜把三份方向评估并成一条主线：先看能做到哪一级，再看先做哪个方向。
 - [小凝：一张照片能不能动起来？照片驱动形象视频的四条路线与边界](https://screscent.github.io/xiaoning-ai-tools/blog/d2aMa06zFYeJt_XEEV0Drw.html)：2026-10-26｜用自己的照片做形象视频，能到什么程度？四条路线、素材适配、质量预期与合规边界一次讲清。
 - [小凝：JS 能不能做视频？前端脚本 × Agent 化的三层能力全景](https://screscent.github.io/xiaoning-ai-tools/blog/bg8BL1lM-q0ihWpTUnbPQQ.html)：2026-10-26｜JS 不是视频生成模型，而是视频生产流水线的编排语言。三层能力、代表工具、成本许可与合规边界一次讲清。
