@@ -2765,5 +2765,35 @@
     "cat": "实用工具",
     "url": "https://z5wef2aahj.app.weavefox.cn",
     "subcat": "安全隐私"
+  },
+  {
+    "id": "tbn7hlmk3t",
+    "name": "航班转机时间估算器",
+    "desc": "按到达起飞时间与各环节耗时判断转机是否够用",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://tbn7hlmk3t.app.weavefox.cn",
+    "subcat": "出行旅行"
+  },
+  {
+    "id": "rdqjum4t4r",
+    "name": "洗手计时与步骤提示器",
+    "desc": "20 秒倒计时配七步提示，流动水与皂液要点",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://rdqjum4t4r.app.weavefox.cn",
+    "subcat": "生活健康"
+  },
+  {
+    "id": "ztbcauhvkt",
+    "name": "小费与账单分摊计算器",
+    "desc": "按账单与小费比例算总额，支持服务费与每人取整分摊",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ztbcauhvkt.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
