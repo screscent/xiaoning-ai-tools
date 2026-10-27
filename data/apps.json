@@ -2705,5 +2705,35 @@
     "cat": "实用工具",
     "url": "https://g4qemytuhw.app.weavefox.cn",
     "subcat": "出行旅行"
+  },
+  {
+    "id": "9pag3yr8kd",
+    "name": "证件照尺寸与背景要求查询器",
+    "desc": "查常用证件照尺寸、像素与背景色，算相纸可排张数",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://9pag3yr8kd.app.weavefox.cn",
+    "subcat": "效率生活"
+  },
+  {
+    "id": "hmncr5fxk9",
+    "name": "家电保养与滤芯更换提醒表",
+    "desc": "按家电类型与上次保养日推算下次保养与耗材更换",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://hmncr5fxk9.app.weavefox.cn",
+    "subcat": "效率生活"
+  },
+  {
+    "id": "atvvufpmpa",
+    "name": "房租押金与水电结算计算器",
+    "desc": "按租金押金月数水电与违约扣款算应退押金与清单",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://atvvufpmpa.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
