@@ -2305,5 +2305,15 @@
     "cat": "实用工具",
     "url": "https://qhwjqsstfq.app.weavefox.cn",
     "subcat": "设计绘图"
+  },
+  {
+    "id": "tbnh7qmk3t",
+    "name": "满减凑单计算器",
+    "desc": "按满减规则枚举组合，算出实付最低的最优凑单方案",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://tbnh7qmk3t.app.weavefox.cn",
+    "subcat": "计算换算"
   }
 ]
