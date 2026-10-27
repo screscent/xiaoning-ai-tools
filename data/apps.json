@@ -2585,5 +2585,35 @@
     "cat": "实用工具",
     "url": "https://fr2tregsra.app.weavefox.cn",
     "subcat": "设计绘图"
+  },
+  {
+    "id": "ny8rttpkdd",
+    "name": "呼吸放松计时器",
+    "desc": "4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ny8rttpkdd.app.weavefox.cn",
+    "subcat": "生活健康"
+  },
+  {
+    "id": "puhc8q3a4t",
+    "name": "汽车保养与年检提醒表",
+    "desc": "按里程与间隔算下次保养，按购车日期推算年检到期",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://puhc8q3a4t.app.weavefox.cn",
+    "subcat": "出行旅行"
+  },
+  {
+    "id": "say4uq9xrs",
+    "name": "文本空行清理与重复行统计器",
+    "desc": "清理空行、去重并统计重复行次数，保留首次出现顺序",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://say4uq9xrs.app.weavefox.cn",
+    "subcat": "文本处理"
   }
 ]
