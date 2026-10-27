@@ -2245,5 +2245,35 @@
     "cat": "实用工具",
     "url": "https://r36xfxzjyr.app.weavefox.cn",
     "subcat": "计算换算"
+  },
+  {
+    "id": "ygxjqkz2jf",
+    "name": "每周菜单与采购清单生成器",
+    "desc": "按人数天数口味生成七日菜单与分类采购清单",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ygxjqkz2jf.app.weavefox.cn",
+    "subcat": "效率生活"
+  },
+  {
+    "id": "ztbksuhvkt",
+    "name": "URL 追踪参数清理器",
+    "desc": "批量移除 utm/fbclid/gclid 等追踪参数保留有效参数",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ztbksuhvkt.app.weavefox.cn",
+    "subcat": "安全隐私"
+  },
+  {
+    "id": "mkpwgxrxwr",
+    "name": "CSS 开关切换组件生成器",
+    "desc": "纯 CSS 开关实时预览，生成含 checked 状态代码",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://mkpwgxrxwr.app.weavefox.cn",
+    "subcat": "设计绘图"
   }
 ]
