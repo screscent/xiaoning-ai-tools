@@ -334,7 +334,7 @@
 - [小费与账单分摊计算器](https://screscent.github.io/xiaoning-ai-tools/tools/tip-split.html)：按账单与小费比例算总额，支持服务费与每人取整分摊（免费）
 - [文件批量重命名规则生成器](https://screscent.github.io/xiaoning-ai-tools/tools/batch-rename.html)：按前缀编号统一改名，保留扩展名并检测重名冲突（免费）
 - [每周时间块日程生成器](https://screscent.github.io/xiaoning-ai-tools/tools/time-block-week.html)：按上下班时间自动排出专注块与休息，支持多工作日（免费）
-- [行李打包清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：按天数季节与出行类型生成分类打包清单，可勾选核对（免费）
+- [行李打包清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/travel-packing-list.html)：按天数季节与出行类型生成分类打包清单，可勾选核对（免费）
 
 ## 博客（145 篇）
 - [小凝：门禁不等于评测——一个 Agent 系统的四轴治理自审](https://screscent.github.io/xiaoning-ai-tools/blog/s82q7ZSNYB9cs14Ja-gneg.html)：2026-10-27｜门禁判当前态对不对，评测判相对上一版好了还是坏了。用评测、纪律、分工、裁决四轴，给 Agent 系统做一次自审。
