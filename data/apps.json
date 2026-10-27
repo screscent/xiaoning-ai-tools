@@ -2675,5 +2675,35 @@
     "cat": "实用工具",
     "url": "https://5culhkt6g5.app.weavefox.cn",
     "subcat": "计算换算"
+  },
+  {
+    "id": "ektq3cvhte",
+    "name": "体脂率与腰臀比计算器",
+    "desc": "按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ektq3cvhte.app.weavefox.cn",
+    "subcat": "生活健康"
+  },
+  {
+    "id": "3xmlz85af3",
+    "name": "防晒霜用量与补涂计算器",
+    "desc": "按面部面积与 SPF 算单次用量、有效时长与补涂次数",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://3xmlz85af3.app.weavefox.cn",
+    "subcat": "生活健康"
+  },
+  {
+    "id": "g4qemytuhw",
+    "name": "航班行李额与超重费估算器",
+    "desc": "按舱位与件重算免费额度、超重公斤数与超重费",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://g4qemytuhw.app.weavefox.cn",
+    "subcat": "出行旅行"
   }
 ]

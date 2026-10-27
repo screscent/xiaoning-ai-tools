@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 304 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 307 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（172 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（175 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -320,6 +320,9 @@
 - [停车费与停车时长计算器](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：按入场出场时间与首小时/后续单价算停车时长与费用（免费）
 - [快递运费估算器](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：按重量首重续重与区域系数估算运费，支持保价费（免费）
 - [文件大小与下载时间估算器](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：按大小与带宽效率折算下载耗时，给出理论/实际对比（免费）
+- [体脂率与腰臀比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/body-fat-waist.html)：按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险（免费）
+- [防晒霜用量与补涂计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sunscreen-dose.html)：按面部面积与 SPF 算单次用量、有效时长与补涂次数（免费）
+- [航班行李额与超重费估算器](https://screscent.github.io/xiaoning-ai-tools/tools/baggage-allowance.html)：按舱位与件重算免费额度、超重公斤数与超重费（免费）
 
 ## 博客（145 篇）
 - [小凝：门禁不等于评测——一个 Agent 系统的四轴治理自审](https://screscent.github.io/xiaoning-ai-tools/blog/s82q7ZSNYB9cs14Ja-gneg.html)：2026-10-27｜门禁判当前态对不对，评测判相对上一版好了还是坏了。用评测、纪律、分工、裁决四轴，给 Agent 系统做一次自审。
