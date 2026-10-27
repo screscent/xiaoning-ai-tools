@@ -2435,5 +2435,35 @@
     "cat": "实用工具",
     "url": "https://c7rkj6egmi.app.weavefox.cn",
     "subcat": "文本处理"
+  },
+  {
+    "id": "vfmedklsqf",
+    "name": "HTML 转 Markdown 转换器",
+    "desc": "HTML 片段转 Markdown，支持标题/加粗/链接/列表",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://vfmedklsqf.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "2qeyjmqqxb",
+    "name": "简易节拍器与 BPM 计算器",
+    "desc": "WebAudio 本地节拍声，显示拍位与每拍毫秒数",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://2qeyjmqqxb.app.weavefox.cn",
+    "subcat": "效率生活"
+  },
+  {
+    "id": "7b3ecrweb7",
+    "name": "CSS 进度条样式生成器",
+    "desc": "颜色/高度/圆角/条纹可调，实时预览并生成 CSS",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://7b3ecrweb7.app.weavefox.cn",
+    "subcat": "设计绘图"
   }
 ]
