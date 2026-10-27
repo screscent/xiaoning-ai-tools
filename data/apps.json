@@ -2375,5 +2375,35 @@
     "cat": "实用工具",
     "url": "https://lyrxbzjxel.app.weavefox.cn",
     "subcat": "计算换算"
+  },
+  {
+    "id": "puhhuj3a4t",
+    "name": "GPA 与成绩换算器",
+    "desc": "百分制与 4.0/5.0 制互转，按学分加权算 GPA",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://puhhuj3a4t.app.weavefox.cn",
+    "subcat": "计算换算"
+  },
+  {
+    "id": "sayp6n9xrs",
+    "name": "跑步配速与完赛时间计算器",
+    "desc": "距离时间互算配速、速度与每公里分段",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://sayp6n9xrs.app.weavefox.cn",
+    "subcat": "生活健康"
+  },
+  {
+    "id": "9paqwhr8kd",
+    "name": "JSONPath 提取器",
+    "desc": "用 $.a.b[0] 路径提取 JSON 字段，支持全部匹配",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://9paqwhr8kd.app.weavefox.cn",
+    "subcat": "编码转换"
   }
 ]

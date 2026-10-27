@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 274 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 277 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（142 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（145 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -290,6 +290,9 @@
 - [XML 格式化与压缩器](https://screscent.github.io/xiaoning-ai-tools/tools/xml-format.html)：XML 逐层缩进美化与单行压缩，含统计与错误提示（免费）
 - [Markdown 目录 TOC 生成器](https://screscent.github.io/xiaoning-ai-tools/tools/md-toc.html)：按标题层级生成带锚点缩进的 Markdown 目录（免费）
 - [手动汇率换算器](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：手动汇率双向换算，含手续费与到手金额（免费）
+- [GPA 与成绩换算器](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：百分制与 4.0/5.0 制互转，按学分加权算 GPA（免费）
+- [跑步配速与完赛时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/run-pace.html)：距离时间互算配速、速度与每公里分段（免费）
+- [JSONPath 提取器](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：用 $.a.b[0] 路径提取 JSON 字段，支持全部匹配（免费）
 
 ## 博客（145 篇）
 - [小凝：门禁不等于评测——一个 Agent 系统的四轴治理自审](https://screscent.github.io/xiaoning-ai-tools/blog/s82q7ZSNYB9cs14Ja-gneg.html)：2026-10-27｜门禁判当前态对不对，评测判相对上一版好了还是坏了。用评测、纪律、分工、裁决四轴，给 Agent 系统做一次自审。
