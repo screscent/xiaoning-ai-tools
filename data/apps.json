@@ -2495,5 +2495,35 @@
     "cat": "实用工具",
     "url": "https://9pahqsr8kd.app.weavefox.cn",
     "subcat": "编码转换"
+  },
+  {
+    "id": "rdqxau4t4r",
+    "name": "TOML 与 JSON 双向转换器",
+    "desc": "TOML 与 JSON 互转，支持表/数组表并定位错误行号",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://rdqxau4t4r.app.weavefox.cn",
+    "subcat": "编码转换"
+  },
+  {
+    "id": "ztbavdhvkt",
+    "name": "时长加减与工时计算器",
+    "desc": "多行时长累加求合计与分钟数，按 8 小时折算并算金额",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ztbavdhvkt.app.weavefox.cn",
+    "subcat": "计算换算"
+  },
+  {
+    "id": "qsiub9nhme",
+    "name": "文本大小写批量转换器",
+    "desc": "五种大小写模式逐行批量转换，含空格归并与自定义替换",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qsiub9nhme.app.weavefox.cn",
+    "subcat": "文本处理"
   }
 ]
