@@ -2825,5 +2825,35 @@
   "cat": "实用工具",
   "url": "https://ny83nwpkdd.app.weavefox.cn",
   "subcat": "出行旅行"
+ },
+ {
+  "id": "rdqxu54t4r",
+  "name": "手机电池充电时间估算器",
+  "desc": "按容量与充电功率估算充满用时，含三段慢充分段",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdqxu54t4r.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "lyryxpjxel",
+  "name": "合同到期与续签提醒表",
+  "desc": "按生效日与年限算到期日、剩余天数与提前提醒日",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://lyryxpjxel.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "urkdhldyk8",
+  "name": "护照有效期与入境余量检查器",
+  "desc": "对比入境日与护照到期日，判断是否满足 6 个月余量",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://urkdhldyk8.app.weavefox.cn",
+  "subcat": "出行旅行"
  }
 ]
