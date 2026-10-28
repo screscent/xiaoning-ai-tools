@@ -3311,5 +3311,35 @@
     "title": "工具F 单位换算"
    }
   ]
+ },
+ {
+  "id": "g42maetuhw",
+  "name": "参考文献引用格式生成器",
+  "desc": "GB/T 7714 / APA / MLA 一键生成，含字段提示与常见错误",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://g42maetuhw.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "keygufdudk",
+  "name": "嘌呤与尿酸饮食速查器",
+  "desc": "按人群算每日嘌呤上限，四档食物清单 + 替换建议",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://keygufdudk.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "dvzcccgy5d",
+  "name": "食物升糖指数与血糖负荷计算器",
+  "desc": "算 GI/GL 与分级，给同类替换与三餐搭配",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dvzcccgy5d.app.weavefox.cn",
+  "subcat": "生活健康"
  }
 ]
