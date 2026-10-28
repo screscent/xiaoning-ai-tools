@@ -3245,5 +3245,35 @@
     "cat": "实用工具",
     "url": "https://dzfwjnslwd.app.weavefox.cn",
     "subcat": "图片处理"
+  },
+  {
+    "id": "atvsvxpmpa",
+    "name": "航班值机与登机时间倒推器",
+    "desc": "按起飞时间倒推出门到登机的七个节点，并评估时间松紧",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://atvsvxpmpa.app.weavefox.cn",
+    "subcat": "出行旅行"
+  },
+  {
+    "id": "dzfvf2slwd",
+    "name": "钙与维生素 D 摄入计算器",
+    "desc": "按年龄性别算每日钙目标，估算奶豆摄入缺口与补充份数",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://dzfvf2slwd.app.weavefox.cn",
+    "subcat": "生活健康"
+  },
+  {
+    "id": "ja4c4jkp5e",
+    "name": "Wi-Fi 与路由器安全自查清单生成器",
+    "desc": "按加密方式与六项配置打分，给出扣分项与整改路径",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ja4c4jkp5e.app.weavefox.cn",
+    "subcat": "安全隐私"
   }
 ]
