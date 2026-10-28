@@ -3341,5 +3341,45 @@
   "cat": "实用工具",
   "url": "https://dvzcccgy5d.app.weavefox.cn",
   "subcat": "生活健康"
+ },
+ {
+  "id": "ekgaqhvhte",
+  "name": "家庭应急物品清单生成器",
+  "desc": "按人数与场景生成应急清单，含保质期、预算与采购优先级",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ekgaqhvhte.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "npxsuh2aq6",
+  "name": "海淘行邮税与到手价估算器",
+  "desc": "行邮税/跨境电商综合税二选一，算税费、免征额与到手价",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npxsuh2aq6.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "keyyhvdudk",
+  "name": "合同签署前必查清单生成器",
+  "desc": "按合同类型给主体、核心条款、风险条款与红线提示",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://keyyhvdudk.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "dzkttqslwd",
+  "name": "二手交易交接单生成器",
+  "desc": "面交/邮寄两套流程，生成交接单、验收清单与纠纷预防",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzkttqslwd.app.weavefox.cn",
+  "subcat": "效率生活"
  }
 ]
