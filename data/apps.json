@@ -3035,5 +3035,35 @@
   "cat": "实用工具",
   "url": "https://z5wyvnaahj.app.weavefox.cn",
   "subcat": "效率生活"
+ },
+ {
+  "id": "c7rsghegmi",
+  "name": "凯撒密码与 ROT13 转换器",
+  "desc": "按位移量加密解密字母与数字，含映射表与字符统计",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7rsghegmi.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "2qex6iqqxb",
+  "name": "甘特图任务排期生成器",
+  "desc": "按任务工期自动串联排期并输出 ASCII 甘特条与里程碑",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qex6iqqxb.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "m9jvqmue9a",
+  "name": "空状态与错误页文案生成器",
+  "desc": "五种场景三套语气生成标题说明与可粘贴 HTML 片段",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://m9jvqmue9a.app.weavefox.cn",
+  "subcat": "设计绘图"
  }
 ]
