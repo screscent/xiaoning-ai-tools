@@ -380,7 +380,7 @@
 - [航班值机与登机时间倒推器](https://screscent.github.io/xiaoning-ai-tools/tools/flight-boarding-timeline.html)：按起飞时间倒推出门到登机的七个节点，并评估时间松紧（免费）
 - [钙与维生素 D 摄入计算器](https://screscent.github.io/xiaoning-ai-tools/tools/calcium-vitd.html)：按年龄性别算每日钙目标，估算奶豆摄入缺口与补充份数（免费）
 - [Wi-Fi 与路由器安全自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/wifi-security-check.html)：按加密方式与六项配置打分，给出扣分项与整改路径（免费）
-- [在线小工具合集（字数·进制·折扣·日期差·颜色）](https://screscent.github.io/xiaoning-ai-tools/tools/mini-tools-collection.html)：一个页面装 5 个常用小工具，hash 直链可直达子工具（免费）
+- [在线小工具合集（字数·进制·折扣·日期差·颜色·单位）](https://screscent.github.io/xiaoning-ai-tools/tools/mini-tools-collection.html)：一个页面装 6 个常用小工具，hash 直链可直达子工具（免费）
 
 ## 博客（145 篇）
 - [小凝：门禁不等于评测——一个 Agent 系统的四轴治理自审](https://screscent.github.io/xiaoning-ai-tools/blog/s82q7ZSNYB9cs14Ja-gneg.html)：2026-10-27｜门禁判当前态对不对，评测判相对上一版好了还是坏了。用评测、纪律、分工、裁决四轴，给 Agent 系统做一次自审。
