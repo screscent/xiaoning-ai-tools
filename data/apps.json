@@ -3095,5 +3095,35 @@
   "cat": "实用工具",
   "url": "https://kezy8adudk.app.weavefox.cn",
   "subcat": "文本处理"
+ },
+ {
+  "id": "dzff47slwd",
+  "name": "相机曝光与景深换算器",
+  "desc": "按光圈快门 ISO 算 EV，并估算景深边界与超焦距",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzff47slwd.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "ny88zypkdd",
+  "name": "租车费用与押金估算器",
+  "desc": "按天数与车型估算租金保险异地费，押金单列",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ny88zypkdd.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "puhhek3a4t",
+  "name": "体温与血压记录趋势计算器",
+  "desc": "解析记录行给出均值极值异常次数与趋势判断",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puhhek3a4t.app.weavefox.cn",
+  "subcat": "生活健康"
  }
 ]
