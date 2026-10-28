@@ -3215,5 +3215,35 @@
     "cat": "实用工具",
     "url": "https://glfmcmcqng.app.weavefox.cn",
     "subcat": "安全隐私"
+  },
+  {
+    "id": "fr2qywgsra",
+    "name": "新能源车续航与充电费用估算器",
+    "desc": "按气温空调折损算真实续航与电费，判断行程是否需补能",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://fr2qywgsra.app.weavefox.cn",
+    "subcat": "出行旅行"
+  },
+  {
+    "id": "pz7bebqyzx",
+    "name": "膳食纤维与蔬果份量计算器",
+    "desc": "按年龄性别算每日纤维目标，拆成蔬菜水果份数并给食物对照",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://pz7bebqyzx.app.weavefox.cn",
+    "subcat": "生活健康"
+  },
+  {
+    "id": "dzfwjnslwd",
+    "name": "平台图片尺寸与规格速查器",
+    "desc": "七类用途的推荐尺寸、高清倍数、体积上限与安全区一次查清",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://dzfwjnslwd.app.weavefox.cn",
+    "subcat": "图片处理"
   }
 ]
