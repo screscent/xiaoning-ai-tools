@@ -3065,5 +3065,35 @@
   "cat": "实用工具",
   "url": "https://m9jvqmue9a.app.weavefox.cn",
   "subcat": "设计绘图"
+ },
+ {
+  "id": "ewzrj3ixkx",
+  "name": "图片宽高比与等比缩放计算器",
+  "desc": "按目标宽度或百分比等比缩放，给出比例化简与面积变化",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ewzrj3ixkx.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "glfhwvcqng",
+  "name": "手机 App 权限自查清单生成器",
+  "desc": "按设备与场景生成权限自查清单，标出高风险与设置路径",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://glfhwvcqng.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "kezy8adudk",
+  "name": "数字编号与缩进批量整理器",
+  "desc": "批量去掉原有编号并按指定格式与缩进重新编号",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://kezy8adudk.app.weavefox.cn",
+  "subcat": "文本处理"
  }
 ]
