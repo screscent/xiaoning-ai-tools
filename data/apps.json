@@ -3125,5 +3125,35 @@
   "cat": "实用工具",
   "url": "https://puhhek3a4t.app.weavefox.cn",
   "subcat": "生活健康"
+ },
+ {
+  "id": "ijapvv8zig",
+  "name": "日期区间与工作日统计器",
+  "desc": "统计区间自然日与工作日，给出月度分布与周末天数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ijapvv8zig.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "ewzae9ixkx",
+  "name": "图片位深与文件体积估算器",
+  "desc": "按位深通道压缩比估算像素体积颜色数与 4K 对照",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ewzae9ixkx.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "glfgebcqng",
+  "name": "二次验证恢复码生成器",
+  "desc": "本地随机生成分组恢复码，附熵估算与重复检测",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://glfgebcqng.app.weavefox.cn",
+  "subcat": "安全隐私"
  }
 ]
