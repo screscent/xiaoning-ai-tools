@@ -3155,5 +3155,35 @@
   "cat": "实用工具",
   "url": "https://glfgebcqng.app.weavefox.cn",
   "subcat": "安全隐私"
+ },
+ {
+  "id": "rdqya64t4r",
+  "name": "繁简转换与用词对照器",
+  "desc": "繁简互转并对照用词与单字变化，附字数统计",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdqya64t4r.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "ztb2uwhvkt",
+  "name": "Base64URL 编解码器",
+  "desc": "URL 安全 Base64 编解码，可去填充与加 data 前缀",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ztb2uwhvkt.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "urkyphdyk8",
+  "name": "数据备份 3-2-1 自查清单生成器",
+  "desc": "按备份份数异地离线校验四项打分并给出改进动作",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://urkyphdyk8.app.weavefox.cn",
+  "subcat": "安全隐私"
  }
 ]
