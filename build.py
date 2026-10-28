@@ -28,6 +28,7 @@ TOOLBOX = "https://7bpgquweb7.app.weavefox.cn"
 UTIL_SUBCAT_ORDER = [
     "图片处理", "文本处理", "编码转换", "时间日期",
     "计算换算", "安全隐私", "设计绘图", "效率生活",
+    "出行旅行", "生活健康",
 ]
 
 

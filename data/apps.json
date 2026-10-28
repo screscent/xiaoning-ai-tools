@@ -3275,5 +3275,33 @@
     "cat": "实用工具",
     "url": "https://ja4c4jkp5e.app.weavefox.cn",
     "subcat": "安全隐私"
+  },
+  {
+    "id": "rdqhhg4t4r",
+    "name": "在线小工具合集（字数·进制·折扣·日期差）",
+    "desc": "一个页面装 4 个常用小工具，hash 直链可直达子工具",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://rdqhhg4t4r.app.weavefox.cn",
+    "subcat": "效率生活",
+    "subapps": [
+      {
+        "key": "word",
+        "title": "工具A 字数统计"
+      },
+      {
+        "key": "base",
+        "title": "工具B 进制转换"
+      },
+      {
+        "key": "percent",
+        "title": "工具C 折扣计算"
+      },
+      {
+        "key": "date",
+        "title": "工具D 日期差"
+      }
+    ]
   }
 ]
