@@ -1858,12 +1858,30 @@
  },
  {
   "id": "bcycnrk6f9",
-  "name": "油耗与出行成本计算器",
-  "desc": "按里程油耗油价算单次与每公里成本，可对比电车",
+  "name": "出行成本计算合集",
+  "desc": "4 个出行计算器同页：油耗与单次成本、油车与电车年度对比、停车费与过路费、通勤月度总成本，算清一趟出行和整月通勤到底花多少钱",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bcycnrk6f9.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "fuel",
+    "title": "工具A 油耗与单次成本"
+   },
+   {
+    "key": "ev",
+    "title": "工具B 油车与电车对比"
+   },
+   {
+    "key": "parking",
+    "title": "工具C 停车费与过路费"
+   },
+   {
+    "key": "commute",
+    "title": "工具D 通勤月度成本"
+   }
+  ]
  },
  {
   "id": "ja46pmkp5e",
