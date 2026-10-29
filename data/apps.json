@@ -3557,5 +3557,33 @@
     "title": "工具D 搬家费用估算"
    }
   ]
+ },
+ {
+  "id": "3xumgz5af3",
+  "name": "家居清洗与家电维护计算合集",
+  "desc": "4 个家务计算器同页：滤芯更换周期、洗衣机筒清洁、空调清洗费用、以旧换新残值，hash 直链可直达",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "subcat": "生活健康",
+  "url": "https://3xumgz5af3.app.weavefox.cn",
+  "subapps": [
+   {
+    "key": "filter",
+    "title": "工具A 滤芯更换周期"
+   },
+   {
+    "key": "washer",
+    "title": "工具B 洗衣机筒清洁"
+   },
+   {
+    "key": "ac",
+    "title": "工具C 空调清洗费用"
+   },
+   {
+    "key": "tradein",
+    "title": "工具D 以旧换新残值"
+   }
+  ]
  }
 ]
