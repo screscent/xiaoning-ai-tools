@@ -1,3449 +1,3477 @@
 [
-  {
-    "id": "keqhxldudk",
-    "name": "GEO 体检小工具",
-    "desc": "品牌 AI 可见性自查评分与优化建议",
-    "price": 1,
-    "cat": "研发效率",
-    "url": "https://keqhxldudk.app.weavefox.cn"
-  },
-  {
-    "id": "bcphhgk6f9",
-    "name": "SEO 体检小工具",
-    "desc": "网址 6 项基础检查与修复建议",
-    "price": 1,
-    "cat": "研发效率",
-    "url": "https://bcphhgk6f9.app.weavefox.cn"
-  },
-  {
-    "id": "m9efxgue9a",
-    "name": "测试用例生成器",
-    "desc": "一句话生成测试用例，含优先级与导出",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://m9efxgue9a.app.weavefox.cn"
-  },
-  {
-    "id": "3xvqjf5af3",
-    "name": "产品需求文档PRD生成器",
-    "desc": "结构化 PRD：背景、画像、优先级、验收",
-    "price": 3,
-    "cat": "研发效率",
-    "url": "https://3xvqjf5af3.app.weavefox.cn"
-  },
-  {
-    "id": "4gntg6btnf",
-    "name": "简历塑",
-    "desc": "简历 × 岗位 → 匹配度评分与修改建议",
-    "price": 2,
-    "cat": "求职面试",
-    "url": "https://4gntg6btnf.app.weavefox.cn"
-  },
-  {
-    "id": "ata9acpmpa",
-    "name": "面试题预测",
-    "desc": "按 JD 生成 10 道高频题与回答框架",
-    "price": 3,
-    "cat": "求职面试",
-    "url": "https://ata9acpmpa.app.weavefox.cn"
-  },
-  {
-    "id": "sakxhy9xrs",
-    "name": "求职信生成器",
-    "desc": "岗位与经历 → 3 版求职信",
-    "price": 1,
-    "cat": "求职面试",
-    "url": "https://sakxhy9xrs.app.weavefox.cn"
-  },
-  {
-    "id": "m9ewusue9a",
-    "name": "轻编好文案",
-    "desc": "商品信息 → 标题、卖点、详情与问答",
-    "price": 1,
-    "cat": "电商客服",
-    "url": "https://m9ewusue9a.app.weavefox.cn"
-  },
-  {
-    "id": "mkqfxqrxwr",
-    "name": "客服话术生成器",
-    "desc": "场景与情绪 → 3 套可用话术",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://mkqfxqrxwr.app.weavefox.cn"
-  },
-  {
-    "id": "vffcejlsqf",
-    "name": "小红书笔记生成器",
-    "desc": "主题 → 5 标题 + 正文 + 标签 + 封面文案",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://vffcejlsqf.app.weavefox.cn"
-  },
-  {
-    "id": "cjhrbfe3pc",
-    "name": "公众号推文生成器",
-    "desc": "主题与读者 → 标题、摘要、正文与配图建议",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://cjhrbfe3pc.app.weavefox.cn"
-  },
-  {
-    "id": "ewsct8ixkx",
-    "name": "短视频脚本生成器",
-    "desc": "主题与时长 → 钩子 + 分镜 + 标签",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://ewsct8ixkx.app.weavefox.cn"
-  },
-  {
-    "id": "cjhzq7e3pc",
-    "name": "短视频选题生成器",
-    "desc": "领域与平台 → 20 个可拍选题",
-    "price": 1,
-    "cat": "自媒体运营",
-    "url": "https://cjhzq7e3pc.app.weavefox.cn"
-  },
-  {
-    "id": "jatvexkp5e",
-    "name": "朋友圈文案生成器",
-    "desc": "场景 → 10 条朋友圈文案 + 配图建议",
-    "price": 1,
-    "cat": "自媒体运营",
-    "url": "https://jatvexkp5e.app.weavefox.cn"
-  },
-  {
-    "id": "r3fstczjyr",
-    "name": "PPT大纲生成器",
-    "desc": "主题与页数 → 每页要点 + 演讲备注",
-    "price": 3,
-    "cat": "职场办公",
-    "url": "https://r3fstczjyr.app.weavefox.cn"
-  },
-  {
-    "id": "keqbgpdudk",
-    "name": "会议纪要整理器",
-    "desc": "会议文字 → 摘要、决议、待办与风险",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://keqbgpdudk.app.weavefox.cn"
-  },
-  {
-    "id": "cjzg8se3pc",
-    "name": "年终总结述职生成器",
-    "desc": "岗位与年度工作 → 总结 + 述职口播稿",
-    "price": 3,
-    "cat": "职场办公",
-    "url": "https://cjzg8se3pc.app.weavefox.cn"
-  },
-  {
-    "id": "keqksvdudk",
-    "name": "演讲稿生成器",
-    "desc": "场合与主题 → 完整讲稿 + 提词卡",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://keqksvdudk.app.weavefox.cn"
-  },
-  {
-    "id": "dzj9zsslwd",
-    "name": "招聘JD生成器",
-    "desc": "岗位信息 → 职责、要求与面试题",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://dzj9zsslwd.app.weavefox.cn"
-  },
-  {
-    "id": "glzhcecqng",
-    "name": "周报生成器",
-    "desc": "本周事项 → 结构化周报四段",
-    "price": 1,
-    "cat": "职场办公",
-    "url": "https://glzhcecqng.app.weavefox.cn"
-  },
-  {
-    "id": "bnt4btnsmb",
-    "name": "报销清单整理器",
-    "desc": "粘贴费用记录 → 规范报销清单与提醒",
-    "price": 1,
-    "cat": "职场办公",
-    "url": "https://bnt4btnsmb.app.weavefox.cn"
-  },
-  {
-    "id": "g4n6jdtuhw",
-    "name": "商务邮件生成器",
-    "desc": "对象与目的 → 3 版商务邮件",
-    "price": 1,
-    "cat": "职场办公",
-    "url": "https://g4n6jdtuhw.app.weavefox.cn"
-  },
-  {
-    "id": "kes9usdudk",
-    "name": "职场文书生成器",
-    "desc": "辞职/请假/调岗/证明 → 3 版规范文书",
-    "price": 1,
-    "cat": "职场办公",
-    "url": "https://kes9usdudk.app.weavefox.cn"
-  },
-  {
-    "id": "bcqhbxk6f9",
-    "name": "英语作文批改器",
-    "desc": "作文 → 总分、四维评分、逐句改错与示范",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://bcqhbxk6f9.app.weavefox.cn"
-  },
-  {
-    "id": "jamztqkp5e",
-    "name": "学习计划生成器",
-    "desc": "目标与剩余天数 → 倒排周计划",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://jamztqkp5e.app.weavefox.cn"
-  },
-  {
-    "id": "bcqu6hk6f9",
-    "name": "读书笔记生成器",
-    "desc": "书名与要点 → 结构化笔记 + 书评",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://bcqu6hk6f9.app.weavefox.cn"
-  },
-  {
-    "id": "dvyrdugy5d",
-    "name": "教师评语生成器",
-    "desc": "学生特点 → 5 条期末评语",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://dvyrdugy5d.app.weavefox.cn"
-  },
-  {
-    "id": "sf7cpby97s",
-    "name": "节日祝福生成器",
-    "desc": "节日与对象 → 10 条可直接发送的祝福",
-    "price": 1,
-    "cat": "生活家庭",
-    "url": "https://sf7cpby97s.app.weavefox.cn"
-  },
-  {
-    "id": "npurza2aq6",
-    "name": "取名生成器",
-    "desc": "姓氏与期望 → 20 个带寓意与音律的名字",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://npurza2aq6.app.weavefox.cn"
-  },
-  {
-    "id": "jamrzfkp5e",
-    "name": "旅行行程规划器",
-    "desc": "城市与天数 → 逐日行程与预算分配",
-    "price": 3,
-    "cat": "生活家庭",
-    "url": "https://jamrzfkp5e.app.weavefox.cn"
-  },
-  {
-    "id": "at6bpspmpa",
-    "name": "菜谱生成器",
-    "desc": "现有食材 → 3 道菜与分步做法",
-    "price": 1,
-    "cat": "生活家庭",
-    "url": "https://at6bpspmpa.app.weavefox.cn"
-  },
-  {
-    "id": "k6rauxftrk",
-    "name": "健身计划生成器",
-    "desc": "目标与器械 → 4 周训练 + 饮食建议",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://k6rauxftrk.app.weavefox.cn"
-  },
-  {
-    "id": "ekf9edvhte",
-    "name": "一周买菜清单",
-    "desc": "7 天三餐菜单 + 分区采购清单",
-    "price": 1,
-    "cat": "生活家庭",
-    "url": "https://ekf9edvhte.app.weavefox.cn"
-  },
-  {
-    "id": "g4nwintuhw",
-    "name": "家庭月度预算表",
-    "desc": "收入与支出 → 预算表 + 超支预警",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://g4nwintuhw.app.weavefox.cn"
-  },
-  {
-    "id": "g4nvaxtuhw",
-    "name": "婚礼流程策划器",
-    "desc": "婚期与预算 → 流程、分工与物品清单",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://g4nvaxtuhw.app.weavefox.cn"
-  },
-  {
-    "id": "rdnuhb4t4r",
-    "name": "装修预算清单",
-    "desc": "面积与档次 → 分项预算与超支预警",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://rdnuhb4t4r.app.weavefox.cn"
-  },
-  {
-    "id": "at6pdhpmpa",
-    "name": "送礼推荐器",
-    "desc": "对象与预算 → 10 个礼物建议",
-    "price": 1,
-    "cat": "生活家庭",
-    "url": "https://at6pdhpmpa.app.weavefox.cn"
-  },
-  {
-    "id": "x8dznvcakb",
-    "name": "宝宝辅食食谱",
-    "desc": "月龄与忌口 → 7 天辅食与做法",
-    "price": 1,
-    "cat": "亲子宠物",
-    "url": "https://x8dznvcakb.app.weavefox.cn"
-  },
-  {
-    "id": "mkqvhgrxwr",
-    "name": "儿童睡前故事",
-    "desc": "年龄与主题 → 3 篇完整睡前故事",
-    "price": 1,
-    "cat": "亲子宠物",
-    "url": "https://mkqvhgrxwr.app.weavefox.cn"
-  },
-  {
-    "id": "kes9mgdudk",
-    "name": "宠物喂养计划",
-    "desc": "猫狗信息 → 每日喂食 + 每周护理",
-    "price": 1,
-    "cat": "亲子宠物",
-    "url": "https://kes9mgdudk.app.weavefox.cn"
-  },
-  {
-    "id": "mkqsmfrxwr",
-    "name": "搬家清单生成器",
-    "desc": "填入住信息 → 分场景搬迁清单与时间倒排",
-    "price": 1,
-    "cat": "生活家庭",
-    "url": "https://mkqsmfrxwr.app.weavefox.cn"
-  },
-  {
-    "id": "xq5vvhbndh",
-    "name": "月度复盘生成器",
-    "desc": "本月工作 → 结构化复盘与可视化总结",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://xq5vvhbndh.app.weavefox.cn"
-  },
-  {
-    "id": "frbu59gsra",
-    "name": "旅行攻略生成器",
-    "desc": "目的地与偏好 → 每日行程与美食指南",
-    "price": 3,
-    "cat": "生活家庭",
-    "url": "https://frbu59gsra.app.weavefox.cn"
-  },
-  {
-    "id": "g4nm82tuhw",
-    "name": "二手转卖文案生成器",
-    "desc": "物品信息 → 3 版转卖文案（标题/正文/议价/标签）",
-    "price": 1,
-    "cat": "电商客服",
-    "url": "https://g4nm82tuhw.app.weavefox.cn"
-  },
-  {
-    "id": "bcqrbrk6f9",
-    "name": "自由职业报价单生成器",
-    "desc": "服务与工时 → 规范报价单（分项/付款节点/不含项）",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://bcqrbrk6f9.app.weavefox.cn"
-  },
-  {
-    "id": "sf7axmy97s",
-    "name": "生日纪念日策划器",
-    "desc": "对象与预算 → 当日流程、礼物布置与预算分配",
-    "price": 1,
-    "cat": "生活家庭",
-    "url": "https://sf7axmy97s.app.weavefox.cn"
-  },
-  {
-    "id": "mkqcf3rxwr",
-    "name": "谈薪话术生成器",
-    "desc": "岗位与期望薪资 → 3 套话术与让步底线",
-    "price": 3,
-    "cat": "求职面试",
-    "url": "https://mkqcf3rxwr.app.weavefox.cn"
-  },
-  {
-    "id": "xq5hgdbndh",
-    "name": "差评回复生成器",
-    "desc": "差评原文 → 公开回复、安抚与申诉要点",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://xq5hgdbndh.app.weavefox.cn"
-  },
-  {
-    "id": "rdneyn4t4r",
-    "name": "宠物行为纠正方案",
-    "desc": "行为问题 → 分周训练与环境改造",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://rdneyn4t4r.app.weavefox.cn"
-  },
-  {
-    "id": "jamnflkp5e",
-    "name": "错题讲解生成器",
-    "desc": "错题原文 → 错因诊断、分步讲解与同类变式题",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://jamnflkp5e.app.weavefox.cn"
-  },
-  {
-    "id": "fw4q6myqkh",
-    "name": "SQL 优化建议生成器",
-    "desc": "慢 SQL → 问题定位、改写语句与索引建议",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://fw4q6myqkh.app.weavefox.cn"
-  },
-  {
-    "id": "qh8azestfq",
-    "name": "亲子沟通话术生成器",
-    "desc": "孩子年龄与场景 → 3 套可照读话术与习惯计划",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://qh8azestfq.app.weavefox.cn"
-  },
-  {
-    "id": "r3ykcgzjyr",
-    "name": "offer 对比决策助手",
-    "desc": "多个 offer → 五维打分、风险提示与决策清单",
-    "price": 2,
-    "cat": "求职面试",
-    "url": "https://r3ykcgzjyr.app.weavefox.cn"
-  },
-  {
-    "id": "frbuebgsra",
-    "name": "退款纠纷处理话术",
-    "desc": "平台与纠纷类型 → 首轮回复、让步阶梯与规则要点",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://frbuebgsra.app.weavefox.cn"
-  },
-  {
-    "id": "mkqe7frxwr",
-    "name": "直播带货话术生成器",
-    "desc": "平台品类阶段 → 开场、憋单逼单与违规词替换",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://mkqe7frxwr.app.weavefox.cn"
-  },
-  {
-    "id": "ztjtinhvkt",
-    "name": "正则表达式生成器",
-    "desc": "场景与样例 → 正则、测试表与可用代码",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://ztjtinhvkt.app.weavefox.cn"
-  },
-  {
-    "id": "qscr5qnhme",
-    "name": "英语单词记忆计划生成器",
-    "desc": "考试与天数 → 每日任务、复习节奏与词表",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://qscr5qnhme.app.weavefox.cn"
-  },
-  {
-    "id": "npus3h2aq6",
-    "name": "儿童兴趣班选择助手",
-    "desc": "孩子特点与预算 → 兴趣班推荐与避坑清单",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://npus3h2aq6.app.weavefox.cn"
-  },
-  {
-    "id": "wnpm4rj8gw",
-    "name": "商品定价建议生成器",
-    "desc": "成本与竞品价 → 三档定价、毛利测算与调价节奏",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://wnpm4rj8gw.app.weavefox.cn"
-  },
-  {
-    "id": "z5acqhaahj",
-    "name": "面试复盘分析器",
-    "desc": "面试问答 → 逐题评分、优化回答与备战清单",
-    "price": 2,
-    "cat": "求职面试",
-    "url": "https://z5acqhaahj.app.weavefox.cn"
-  },
-  {
-    "id": "5chjyut6g5",
-    "name": "作文素材生成器",
-    "desc": "主题学段 → 开头结尾、事例素材与结构提纲",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://5chjyut6g5.app.weavefox.cn"
-  },
-  {
-    "id": "url4vxdyk8",
-    "name": "社群运营SOP生成器",
-    "desc": "社群类型与周期 → 每日节奏、话术与活动",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://url4vxdyk8.app.weavefox.cn"
-  },
-  {
-    "id": "wnpmibj8gw",
-    "name": "API 接口文档生成器",
-    "desc": "接口用途与技术栈 → 接口定义、示例与错误码",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://wnpmibj8gw.app.weavefox.cn"
-  },
-  {
-    "id": "cjh2kee3pc",
-    "name": "阅读理解出题器",
-    "desc": "文章与学段 → 5 道题、答案与逐题解析",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://cjh2kee3pc.app.weavefox.cn"
-  },
-  {
-    "id": "sf7x93y97s",
-    "name": "自我介绍生成器",
-    "desc": "场景与时长 → 3 版自我介绍、追问预案与口播提示",
-    "price": 2,
-    "cat": "求职面试",
-    "url": "https://sf7x93y97s.app.weavefox.cn"
-  },
-  {
-    "id": "j239apxyyi",
-    "name": "宝宝作息表生成器",
-    "desc": "月龄与困扰 → 作息表、哄睡流程与调整节奏",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://j239apxyyi.app.weavefox.cn"
-  },
-  {
-    "id": "ew9hluixkx",
-    "name": "订单催付话术生成器",
-    "desc": "平台与阶段 → 3 版催付话术、节奏与合规红线",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://ew9hluixkx.app.weavefox.cn"
-  },
-  {
-    "id": "glzpvpcqng",
-    "name": "公众号选题生成器",
-    "desc": "领域与读者 → 20 个选题、钩子与排期",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://glzpvpcqng.app.weavefox.cn"
-  },
-  {
-    "id": "kesq6fdudk",
-    "name": "文言文实词卡片生成器",
-    "desc": "学段与词量 → 实词卡片、辨析与自测",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://kesq6fdudk.app.weavefox.cn"
-  },
-  {
-    "id": "dvynvcgy5d",
-    "name": "旧物断舍离清单生成器",
-    "desc": "空间与偏好 → 分类清单、执行表与防反弹",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://dvynvcgy5d.app.weavefox.cn"
-  },
-  {
-    "id": "2qx5klqqxb",
-    "name": "技术方案评审清单生成器",
-    "desc": "项目类型与关切 → 评审清单、风险与上线检查",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://2qx5klqqxb.app.weavefox.cn"
-  },
-  {
-    "id": "qh8c6dstfq",
-    "name": "亲子游戏活动生成器",
-    "desc": "年龄场地时长 → 5 个游戏、流程与安全提示",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://qh8c6dstfq.app.weavefox.cn"
-  },
-  {
-    "id": "c7sm46egmi",
-    "name": "电商大促备货清单",
-    "desc": "活动品类单量 → 备货测算、物料与倒排表",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://c7sm46egmi.app.weavefox.cn"
-  },
-  {
-    "id": "npu54v2aq6",
-    "name": "英文面试问答生成器",
-    "desc": "岗位与轮次 → 高频英文问题、回答框架与救场句",
-    "price": 2,
-    "cat": "求职面试",
-    "url": "https://npu54v2aq6.app.weavefox.cn"
-  },
-  {
-    "id": "z5afxvaahj",
-    "name": "语文作文批改器",
-    "desc": "学段文体与原文 → 四维评分、逐段点评与升格",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://z5afxvaahj.app.weavefox.cn"
-  },
-  {
-    "id": "5chwqut6g5",
-    "name": "日志排查助手",
-    "desc": "日志片段与现象 → 线索、成因排序与验证步骤",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://5chwqut6g5.app.weavefox.cn"
-  },
-  {
-    "id": "ew9sndixkx",
-    "name": "客服排班表生成器",
-    "desc": "人手与高峰 → 一周排班、SLA 与交接清单",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://ew9sndixkx.app.weavefox.cn"
-  },
-  {
-    "id": "m9veptue9a",
-    "name": "儿童零花钱计划生成器",
-    "desc": "年龄与目标 → 规则、家务奖励与记账模板",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://m9veptue9a.app.weavefox.cn"
-  },
-  {
-    "id": "uiumjhxjku",
-    "name": "小红书封面文案生成器",
-    "desc": "类型人群 → 10 条封面大字、配色与 A/B",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://uiumjhxjku.app.weavefox.cn"
-  },
-  {
-    "id": "ygw7xuz2jf",
-    "name": "无领导小组讨论话术",
-    "desc": "方向与角色 → 开场破冰、观点输出与总结模板",
-    "price": 2,
-    "cat": "求职面试",
-    "url": "https://ygw7xuz2jf.app.weavefox.cn"
-  },
-  {
-    "id": "ztjwbxhvkt",
-    "name": "技术债清单生成器",
-    "desc": "项目与痛点 → 债务清单、优先级与偿还计划",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://ztjwbxhvkt.app.weavefox.cn"
-  },
-  {
-    "id": "qscxinnhme",
-    "name": "阳台种植计划生成器",
-    "desc": "朝向季节 → 6 种植物、配土与养护卡",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://qscxinnhme.app.weavefox.cn"
-  },
-  {
-    "id": "frbb5agsra",
-    "name": "包裹异常件处理清单",
-    "desc": "异常类型 → 处理流程、沟通话术与赔付划分",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://frbb5agsra.app.weavefox.cn"
-  },
-  {
-    "id": "mkqqx7rxwr",
-    "name": "小学生作业陪伴计划",
-    "desc": "年级与弱项 → 作业节奏、检查清单与话术",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://mkqqx7rxwr.app.weavefox.cn"
-  },
-  {
-    "id": "9pffrfr8kd",
-    "name": "公众号排版检查清单",
-    "desc": "文章类型 → 排版模板、配图节奏与自检",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://9pffrfr8kd.app.weavefox.cn"
-  },
-  {
-    "id": "ygwjhez2jf",
-    "name": "求职跟进邮件生成器",
-    "desc": "场景与公司类型 → 3 版邮件、中英对照与时机",
-    "price": 1,
-    "cat": "求职面试",
-    "url": "https://ygwjhez2jf.app.weavefox.cn"
-  },
-  {
-    "id": "ztjxmwhvkt",
-    "name": "物理公式速查卡生成器",
-    "desc": "学段章节 → 公式卡、推导与易错点",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://ztjxmwhvkt.app.weavefox.cn"
-  },
-  {
-    "id": "qsceyhnhme",
-    "name": "家用电器选购指南",
-    "desc": "电器预算户型 → 参数、配置与避坑",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://qsceyhnhme.app.weavefox.cn"
-  },
-  {
-    "id": "sakyi79xrs",
-    "name": "Git 提交信息生成器",
-    "desc": "改动描述 → 3 版提交信息 + 拆分建议 + PR 草稿",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://sakyi79xrs.app.weavefox.cn"
-  },
-  {
-    "id": "9pfa8pr8kd",
-    "name": "跨部门沟通话术生成器",
-    "desc": "对象与诉求 → 3 版开场 + IM/邮件正文 + 应对",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://9pfa8pr8kd.app.weavefox.cn"
-  },
-  {
-    "id": "hmxnvafxk9",
-    "name": "幼儿园入园准备清单",
-    "desc": "年龄园所 → 物品清单 + 作息表 + 沟通清单",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://hmxnvafxk9.app.weavefox.cn"
-  },
-  {
-    "id": "pziwayqyzx",
-    "name": "商品问答预埋清单",
-    "desc": "品类价格带 → 20 条预埋问答 + 客服模板",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://pziwayqyzx.app.weavefox.cn"
-  },
-  {
-    "id": "ygwbvdz2jf",
-    "name": "转行可行性评估器",
-    "desc": "现岗与目标 → 能力映射 + 四维评分 + 3 个月路线",
-    "price": 2,
-    "cat": "求职面试",
-    "url": "https://ygwbvdz2jf.app.weavefox.cn"
-  },
-  {
-    "id": "ztjnhyhvkt",
-    "name": "播客节目策划器",
-    "desc": "节目类型时长 → 单集大纲 + 提问 + 上线包",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://ztjnhyhvkt.app.weavefox.cn"
-  },
-  {
-    "id": "m9vf5hue9a",
-    "name": "绩效自评撰写器",
-    "desc": "岗位周期 → 自评结构 + 量化写法 + 面谈问答",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://m9vf5hue9a.app.weavefox.cn"
-  },
-  {
-    "id": "uiurb6xjku",
-    "name": "化学方程式配平练习生成器",
-    "desc": "学段题型 → 20 道题 + 步骤 + 口诀",
-    "price": 1,
-    "cat": "学生教育",
-    "url": "https://uiurb6xjku.app.weavefox.cn"
-  },
-  {
-    "id": "jamkukkp5e",
-    "name": "家庭药箱清单生成器",
-    "desc": "成员季节 → 分类清单 + 分区 + 就医信号",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://jamkukkp5e.app.weavefox.cn"
-  },
-  {
-    "id": "nyewxrpkdd",
-    "name": "客服质检评分表生成器",
-    "desc": "渠道品类 → 10 项质检指标 + 抽检规则 + 报告",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://nyewxrpkdd.app.weavefox.cn"
-  },
-  {
-    "id": "puwusa3a4t",
-    "name": "代码评审清单生成器",
-    "desc": "语言改动 → 15 项检查点 + 评论模板 + 门禁",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://puwusa3a4t.app.weavefox.cn"
-  },
-  {
-    "id": "sak6vv9xrs",
-    "name": "小红书评论区运营话术",
-    "desc": "笔记类型目标 → 10 条引导 + 差评应对 + 私信承接",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://sak6vv9xrs.app.weavefox.cn"
-  },
-  {
-    "id": "r3yheqzjyr",
-    "name": "校招网申填写助手",
-    "desc": "行业岗位 → 网申要点 + 经历改写 + 自查清单",
-    "price": 2,
-    "cat": "求职面试",
-    "url": "https://r3yheqzjyr.app.weavefox.cn"
-  },
-  {
-    "id": "puwdj43a4t",
-    "name": "英语听力精听计划生成器",
-    "desc": "考试水平 → 21 天计划 + 五步法 + 专项",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://puwdj43a4t.app.weavefox.cn"
-  },
-  {
-    "id": "mkqywwrxwr",
-    "name": "儿童疫苗接种记录整理器",
-    "desc": "月龄地区 → 接种时间轴 + 补种对照",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://mkqywwrxwr.app.weavefox.cn"
-  },
-  {
-    "id": "qh824gstfq",
-    "name": "商品标题优化器",
-    "desc": "品类平台 → 10 条标题 + 关键词分层 + 违禁词检查",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://qh824gstfq.app.weavefox.cn"
-  },
-  {
-    "id": "c7s52qegmi",
-    "name": "账号定位诊断器",
-    "desc": "平台赛道 → 定位诊断 + 人设 + 30 天计划",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://c7s52qegmi.app.weavefox.cn"
-  },
-  {
-    "id": "4gpgk9btnf",
-    "name": "接口联调排错清单",
-    "desc": "协议现象 → 排查顺序 + 原因对照 + 验证",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://4gpgk9btnf.app.weavefox.cn"
-  },
-  {
-    "id": "uiu5naxjku",
-    "name": "实习经历挖掘助手",
-    "desc": "专业目标 → 经历清单 + STAR 改写 + 投递话术",
-    "price": 2,
-    "cat": "求职面试",
-    "url": "https://uiu5naxjku.app.weavefox.cn"
-  },
-  {
-    "id": "vfgcsmlsqf",
-    "name": "实验报告撰写助手",
-    "desc": "学科类型 → 报告结构 + 数据处理 + 讨论",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://vfgcsmlsqf.app.weavefox.cn"
-  },
-  {
-    "id": "fw4jakyqkh",
-    "name": "家庭收纳分区方案生成器",
-    "desc": "房型难点 → 分区方案 + 清单 + 预算",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://fw4jakyqkh.app.weavefox.cn"
-  },
-  {
-    "id": "cjhgj9e3pc",
-    "name": "店铺售后数据周报表",
-    "desc": "平台品类 → 周报模板 + 归因 + 改进动作",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://cjhgj9e3pc.app.weavefox.cn"
-  },
-  {
-    "id": "mkqtkrrxwr",
-    "name": "短视频开头钩子生成器",
-    "desc": "赛道受众 → 10 条钩子 + 句式 + 避坑",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://mkqtkrrxwr.app.weavefox.cn"
-  },
-  {
-    "id": "tb2gbumk3t",
-    "name": "会议发言提纲生成器",
-    "desc": "会议角色 → 发言结构 + 开场 + 应答",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://tb2gbumk3t.app.weavefox.cn"
-  },
-  {
-    "id": "r3yrpgzjyr",
-    "name": "数据库表设计评审清单",
-    "desc": "场景规模 → 评审清单 + 索引建议 + 回滚表",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://r3yrpgzjyr.app.weavefox.cn"
-  },
-  {
-    "id": "frbfmbgsra",
-    "name": "考研复试准备计划",
-    "desc": "专业院校 → 复试流程 + 问题清单 + 应答",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://frbfmbgsra.app.weavefox.cn"
-  },
-  {
-    "id": "sakszh9xrs",
-    "name": "儿童家务分工表生成器",
-    "desc": "年龄结构 → 家务清单 + 分工表 + 激励",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://sakszh9xrs.app.weavefox.cn"
-  },
-  {
-    "id": "g42mpvtuhw",
-    "name": "商品评价管理清单",
-    "desc": "品类平台 → 评价获取 + 差评处理 + 周检查表",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://g42mpvtuhw.app.weavefox.cn"
-  },
-  {
-    "id": "7bpjk4web7",
-    "name": "代码注释规范检查器",
-    "desc": "语言团队 → 注释规范 + 检查清单 + 改写示例",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://7bpjk4web7.app.weavefox.cn"
-  },
-  {
-    "id": "rdpbtj4t4r",
-    "name": "家庭保险配置清单",
-    "desc": "家庭结构收入 → 险种优先级 + 保额 + 避坑",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://rdpbtj4t4r.app.weavefox.cn"
-  },
-  {
-    "id": "mknbacrxwr",
-    "name": "简历投递跟踪表",
-    "desc": "阶段行业 → 跟踪表 + 跟进话术 + 止损规则",
-    "price": 2,
-    "cat": "求职面试",
-    "url": "https://mknbacrxwr.app.weavefox.cn"
-  },
-  {
-    "id": "xqt2mmbndh",
-    "name": "历史时间轴记忆卡生成器",
-    "desc": "学段范围 → 时间轴 + 因果链 + 口诀",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://xqt2mmbndh.app.weavefox.cn"
-  },
-  {
-    "id": "rdpk694t4r",
-    "name": "汇报图表选型助手",
-    "desc": "数据类型 → 图表选型 + 结构 + 讲解话术",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://rdpk694t4r.app.weavefox.cn"
-  },
-  {
-    "id": "pz8zhnqyzx",
-    "name": "直播场控清单",
-    "desc": "平台品类 → 场控时间轴 + 口令表 + 复盘",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://pz8zhnqyzx.app.weavefox.cn"
-  },
-  {
-    "id": "ygjgstz2jf",
-    "name": "英语语法错题诊断器",
-    "desc": "板块错因 → 规则讲解 + 练习 + 训练",
-    "price": 2,
-    "cat": "学生教育",
-    "url": "https://ygjgstz2jf.app.weavefox.cn"
-  },
-  {
-    "id": "frnrzvgsra",
-    "name": "儿童视力保护计划",
-    "desc": "年龄场景 → 用眼规则 + 户外安排 + 提醒",
-    "price": 2,
-    "cat": "亲子宠物",
-    "url": "https://frnrzvgsra.app.weavefox.cn"
-  },
-  {
-    "id": "c79wcbegmi",
-    "name": "远程协作规则清单",
-    "desc": "团队分布规模 → 协作规则 + 会议 + 文档",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://c79wcbegmi.app.weavefox.cn"
-  },
-  {
-    "id": "4gqctebtnf",
-    "name": "发布上线检查清单",
-    "desc": "应用类型 → 上线检查 + 回滚 + 验证",
-    "price": 2,
-    "cat": "研发效率",
-    "url": "https://4gqctebtnf.app.weavefox.cn"
-  },
-  {
-    "id": "qseyv5nhme",
-    "name": "家庭年度体检计划",
-    "desc": "成员年龄 → 项目清单 + 频次 + 记录",
-    "price": 2,
-    "cat": "生活家庭",
-    "url": "https://qseyv5nhme.app.weavefox.cn"
-  },
-  {
-    "id": "rdpcej4t4r",
-    "name": "小学数学口算题卡生成器",
-    "desc": "年级题型 → 题卡 + 答案 + 计时表",
-    "price": 1,
-    "cat": "学生教育",
-    "url": "https://rdpcej4t4r.app.weavefox.cn"
-  },
-  {
-    "id": "5cmiedt6g5",
-    "name": "OKR 对齐检查器",
-    "desc": "团队周期 → 写法判定 + 对齐 + 复盘",
-    "price": 2,
-    "cat": "职场办公",
-    "url": "https://5cmiedt6g5.app.weavefox.cn"
-  },
-  {
-    "id": "j25pukxyyi",
-    "name": "商品上架审核清单",
-    "desc": "平台品类 → 资质图文 + 违禁词 + 观察项",
-    "price": 2,
-    "cat": "电商客服",
-    "url": "https://j25pukxyyi.app.weavefox.cn"
-  },
-  {
-    "id": "bnussdnsmb",
-    "name": "古诗词默写检测器",
-    "desc": "学段篇目 → 题卡 + 答案 + 复习安排",
-    "price": 1,
-    "cat": "学生教育",
-    "url": "https://bnussdnsmb.app.weavefox.cn"
-  },
-  {
-    "id": "nyitt9pkdd",
-    "name": "内容选题日历生成器",
-    "desc": "平台赛道 → 30天选题 + 标题模板",
-    "price": 2,
-    "cat": "自媒体运营",
-    "url": "https://nyitt9pkdd.app.weavefox.cn"
-  },
-  {
-    "id": "ekgs3pvhte",
-    "name": "图片压缩改尺寸",
-    "desc": "本地批量压缩 → 指定 KB/像素，免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ekgs3pvhte.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "3xh2yr5af3",
-    "name": "房贷提前还款计算器",
-    "desc": "等额本息对比 + 提前还款两方案，免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://3xh2yr5af3.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "g42fhctuhw",
-    "name": "二维码生成器",
-    "desc": "文本网址 → 本地生成 PNG，免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://g42fhctuhw.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "m9lqr6ue9a",
-    "name": "JSON 格式化校验器",
-    "desc": "粘贴 JSON 即格式化、校验并统计结构，本地处理",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://m9lqr6ue9a.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "j25vhrxyyi",
-    "name": "CSV ↔ JSON 转换器",
-    "desc": "CSV 与 JSON 双向转换，支持分隔符/表头/美化",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://j25vhrxyyi.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "urjnzsdyk8",
-    "name": "文本批量处理",
-    "desc": "批量去重、查找替换、排序与前后缀，本地处理",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://urjnzsdyk8.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "keye5ddudk",
-    "name": "Base64 编解码器",
-    "desc": "文本与 Base64 双向转换，支持 UTF-8/URL 安全",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://keye5ddudk.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "frnp3wgsra",
-    "name": "URL 编解码与参数解析器",
-    "desc": "URL 编码/解码 + 查询参数解析与地址分解",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://frnp3wgsra.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "urjhfedyk8",
-    "name": "时间戳转换器",
-    "desc": "时间戳与日期互转，秒/毫秒/多时区/多格式",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://urjhfedyk8.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "dvz878gy5d",
-    "name": "图片格式转换器",
-    "desc": "PNG/JPG/WebP 互转，质量/尺寸可调，本地处理",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dvz878gy5d.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "wn3a9fj8gw",
-    "name": "文本 Diff 对比器",
-    "desc": "逐行/逐词/逐字符对比，标注新增删除与相似度",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://wn3a9fj8gw.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "7bpyp2web7",
-    "name": "颜色转换与对比度检测器",
-    "desc": "HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://7bpyp2web7.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "x8slbmcakb",
-    "name": "Markdown 表格生成器",
-    "desc": "CSV/TSV/竖线文本转标准 Markdown 表格，支持对齐",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://x8slbmcakb.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "fwbncxyqkh",
-    "name": "数字进制转换器",
-    "desc": "二/八/十/十六进制互转，位宽与位模式展示",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://fwbncxyqkh.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "uidvbyxjku",
-    "name": "命名风格转换器",
-    "desc": "camel/snake/kebab/Pascal/常量/中文标题互转",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://uidvbyxjku.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "lymnmkjxel",
-    "name": "日期计算器",
-    "desc": "相差天数、日期加减与工作日计算，本地秒算",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://lymnmkjxel.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "urjgjtdyk8",
-    "name": "文本统计与阅读时间",
-    "desc": "字符/词/行统计、阅读与演讲时长、词频 Top10",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://urjgjtdyk8.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "wn363rj8gw",
-    "name": "图片裁剪器",
-    "desc": "本地裁剪头像/封面/商品图，比例尺寸自选可下载",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://wn363rj8gw.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "uidlsfxjku",
-    "name": "密码生成器",
-    "desc": "本地生成高强度密码，长度字符集可选，含强度评估",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://uidlsfxjku.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "vftnmglsqf",
-    "name": "随机分组抽签器",
-    "desc": "名单随机分组与单人抽签，加密随机公平不重复",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://vftnmglsqf.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "g42uqytuhw",
-    "name": "BMI 与热量计算器",
-    "desc": "BMI 分级、基础代谢、每日消耗与目标热量计算",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://g42uqytuhw.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "keyw5ddudk",
-    "name": "单位换算器",
-    "desc": "长度/重量/面积/体积/温度/数据六类单位互转",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://keyw5ddudk.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "r3akzzzjyr",
-    "name": "哈希校验工具",
-    "desc": "本地计算 SHA-256/384/512，文本与文件校验对比",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://r3akzzzjyr.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "frnustgsra",
-    "name": "番茄钟与倒计时",
-    "desc": "专注/休息轮次计时，进度环与今日完成统计",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://frnustgsra.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "bnudn6nsmb",
-    "name": "科学计算器",
-    "desc": "四则与科学函数计算，角度模式、记忆键与历史",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://bnudn6nsmb.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "ekg2knvhte",
-    "name": "Markdown 实时预览器",
-    "desc": "本地实时渲染 Markdown，支持主题/导出 HTML",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ekg2knvhte.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "3xhvxh5af3",
-    "name": "人民币大写金额转换器",
-    "desc": "数字金额转中文大写，支持角分与银行汇款式",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://3xhvxh5af3.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "mknibarxwr",
-    "name": "图片加水印",
-    "desc": "本地给图片加水印，文字/字号/透明度/位置可调",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://mknibarxwr.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "tbqexcmk3t",
-    "name": "打字速度测试",
-    "desc": "实时高亮比对，测 WPM/CPM 与正确率",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://tbqexcmk3t.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "rdp8n24t4r",
-    "name": "本地待办便签",
-    "desc": "本地保存的待办清单，优先级/截止日/导出 JSON",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://rdp8n24t4r.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "sfw5ysy97s",
-    "name": "文本加密解密",
-    "desc": "本地 AES-GCM 加解密文本，口令派生密钥",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://sfw5ysy97s.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "j25uddxyyi",
-    "name": "图片取色器",
-    "desc": "上传图片点击取色，HEX/RGB/HSL + 历史调色板",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://j25uddxyyi.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "bnuscunsmb",
-    "name": "简易记账本",
-    "desc": "本地记账，收支汇总、分类占比与导出 CSV",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://bnuscunsmb.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "j25db4xyyi",
-    "name": "简易画板",
-    "desc": "本地涂鸦画板，颜色/粗细/橡皮，导出 PNG",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://j25db4xyyi.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "bnu92knsmb",
-    "name": "九宫格切图器",
-    "desc": "图片一键切 3×3/2×2 等，逐张下载",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://bnu92knsmb.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "ekgnlbvhte",
-    "name": "星座与生肖查询器",
-    "desc": "生日查星座/生肖/年龄/下次生日倒计时",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ekgnlbvhte.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "glh2nmcqng",
-    "name": "图片滤镜与灰度",
-    "desc": "本地滤镜/黑白/亮度对比度饱和度，导出图片",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://glh2nmcqng.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "keybxzdudk",
-    "name": "数字转罗马与中文数字",
-    "desc": "阿拉伯/罗马/中文数字双向转换，含对照表",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://keybxzdudk.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "dvznbegy5d",
-    "name": "随机决定器",
-    "desc": "转盘/骰子/硬币随机决定，带历史记录",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dvznbegy5d.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "fwbhjxyqkh",
-    "name": "图片转 DataURL",
-    "desc": "图片转 DataURL/Base64/HTML/Markdown，可压缩",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://fwbhjxyqkh.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "x8s6kkcakb",
-    "name": "秒表与分段计时",
-    "desc": "毫秒级秒表 + 计次分段 + 导出 CSV",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://x8s6kkcakb.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "bcsb5nk6f9",
-    "name": "配色方案生成器",
-    "desc": "互补/邻近/三角等配色规则，一键复制色卡",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://bcsb5nk6f9.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "qse3gvnhme",
-    "name": "图片前后对比器",
-    "desc": "两张图滑块/并排/叠影对比，导出对比图",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qse3gvnhme.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "npxak92aq6",
-    "name": "月历生成器",
-    "desc": "按月/全年生成可打印月历，高亮今天与周数",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://npxak92aq6.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "z56lnaaahj",
-    "name": "密码强度检测器",
-    "desc": "本地评估密码强度、熵值与改进建议",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://z56lnaaahj.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "key2pcdudk",
-    "name": "思维导图生成器",
-    "desc": "输入主题与分支，生成可导出 SVG/PNG 的导图",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://key2pcdudk.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "r3avkczjyr",
-    "name": "世界时钟",
-    "desc": "多时区对照时钟，显示日期与时差",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://r3avkczjyr.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "frn8jngsra",
-    "name": "图片马赛克打码器",
-    "desc": "本地涂抹马赛克/模糊/黑块，保护隐私后下载",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://frn8jngsra.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "puva8i3a4t",
-    "name": "摩斯电码转换器",
-    "desc": "文本与摩斯电码双向转换，支持点划样式与音频播放",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://puva8i3a4t.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "safluw9xrs",
-    "name": "复利与定投收益计算器",
-    "desc": "本金/定投/年化/年限 → 期末总额、收益与逐年明细，可导出 CSV",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://safluw9xrs.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "9pyjxqr8kd",
-    "name": "CSS 渐变生成器",
-    "desc": "线性/径向/圆锥渐变，实时预览并复制或下载 CSS",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://9pyjxqr8kd.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "qsexkmnhme",
-    "name": "HTTP 状态码速查表",
-    "desc": "30+ 常见状态码速查，支持搜索/分类/排查建议与复制",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qsexkmnhme.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "z56yswaahj",
-    "name": "折扣与百分比计算器",
-    "desc": "折扣/满减/税率 → 折后价、节省与实付，含计算过程",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://z56yswaahj.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "safjgk9xrs",
-    "name": "Cron 表达式解释器",
-    "desc": "cron 五段 → 中文解释、字段含义与未来执行时间",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://safjgk9xrs.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "frn2l7gsra",
-    "name": "图片拼接长图",
-    "desc": "多图纵向/横向拼接，可调间距与背景，导出 PNG",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://frn2l7gsra.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "dzkfeyslwd",
-    "name": "HTML 实体编解码器",
-    "desc": "HTML 特殊字符实体编码/解码，支持引号与换行",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzkfeyslwd.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "r3a6wazjyr",
-    "name": "单位价格比较器",
-    "desc": "不同规格商品按每 100g/500g 折算单价，比出更划算",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://r3a6wazjyr.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "ygjbzyz2jf",
-    "name": "图片圆角与边框生成器",
-    "desc": "本地给图片加圆角与边框，可调半径/颜色并导出 PNG",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ygjbzyz2jf.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "ztxnashvkt",
-    "name": "CSS 阴影生成器",
-    "desc": "滑块调偏移/模糊/扩散，实时预览并复制 box-shadow",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ztxnashvkt.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "qse8urnhme",
-    "name": "文本转 Unicode 转义",
-    "desc": "文本 ⇄ \\uXXXX 转义，支持三种格式与码点统计",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qse8urnhme.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "qse7ptnhme",
-    "name": "Markdown 转纯文本",
-    "desc": "Markdown → 纯文本，可去列表符号/代码块并下载 txt",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qse7ptnhme.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "npxiz82aq6",
-    "name": "敏感信息脱敏工具",
-    "desc": "手机号/身份证/邮箱/银行卡本地脱敏，含命中统计",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://npxiz82aq6.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "z56hl3aahj",
-    "name": "颜色名称查询",
-    "desc": "HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://z56hl3aahj.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "ygj23az2jf",
-    "name": "图片旋转与翻转工具",
-    "desc": "本地旋转 90/180/270° 与水平垂直翻转，导出 PNG",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ygj23az2jf.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "ztxq59hvkt",
-    "name": "工作日天数计算器",
-    "desc": "两日期之间的工作日/周末/节假日天数与月度明细",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ztxq59hvkt.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "qsew9znhme",
-    "name": "随机密码短语生成器",
-    "desc": "易记词组合成密码短语，含熵值估算与强度评级",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qsew9znhme.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "2qcwr7qqxb",
-    "name": "图片 EXIF 信息查看与清除",
-    "desc": "本地读取照片 EXIF（设备/时间/GPS）并重绘清除元数据",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qcwr7qqxb.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "m9la4sue9a",
-    "name": "正则表达式测试器",
-    "desc": "正则实时匹配高亮、捕获组列表与替换预览",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://m9la4sue9a.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "uidaynxjku",
-    "name": "习惯打卡追踪器",
-    "desc": "习惯打卡日历网格 + 完成率与连续天数，本地保存",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://uidaynxjku.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "2qcjfcqqxb",
-    "name": "UUID 与随机密钥生成器",
-    "desc": "UUID v4 / Token / API Key 批量生成，含熵值与导出",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qcjfcqqxb.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "k64e8lftrk",
-    "name": "跨时区会议时间换算器",
-    "desc": "一个时间换算多时区本地时刻与时差，夏令时自动",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://k64e8lftrk.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "jarc8vkp5e",
-    "name": "CSS 玻璃拟态生成器",
-    "desc": "滑杆调模糊/透明度/圆角，实时预览并复制 CSS",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://jarc8vkp5e.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "sfwn9wy97s",
-    "name": "贷款还款方式对比计算器",
-    "desc": "等额本息与等额本金月供/总利息对比，含逐月明细",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://sfwn9wy97s.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "j258a6xyyi",
-    "name": "中英混排空格格式化工具",
-    "desc": "中英文/数字之间自动加空格，全角转半角",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://j258a6xyyi.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "ewrulmixkx",
-    "name": "条形码生成器 Code128",
-    "desc": "Code128B/C 与 EAN-13 条码绘制，含校验与导 PNG",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ewrulmixkx.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "atwrmjpmpa",
-    "name": "TOTP 动态验证码生成器",
-    "desc": "本地计算 2FA 动态验证码，Base32 解码与倒计时",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://atwrmjpmpa.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "dzkmanslwd",
-    "name": "三班倒排班表生成器",
-    "desc": "按人员名单循环排早中晚班，导出表格与 CSV",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzkmanslwd.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "nyi2whpkdd",
-    "name": "生日与纪念日提醒清单",
-    "desc": "生日纪念日倒数与提醒天数，本地保存并导出",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://nyi2whpkdd.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "r3ar3ezjyr",
-    "name": "图片转 ICO 图标生成器",
-    "desc": "多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://r3ar3ezjyr.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "frnfr2gsra",
-    "name": "SVG 波浪分割线生成器",
-    "desc": "调波高波峰生成 SVG 波浪分割线，复制或下载",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://frnfr2gsra.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "qseqsqnhme",
-    "name": "阶梯水电费计算器",
-    "desc": "阶梯电价水价分段计费，含分段明细与平均单价",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qseqsqnhme.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "wn5xhmj8gw",
-    "name": "隐私政策生成器",
-    "desc": "按信息类型与法规模板生成隐私政策，可导出 Markdown",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://wn5xhmj8gw.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "z5wpwyaahj",
-    "name": "JWT 解码查看器",
-    "desc": "本地解析 JWT Header/Payload，标准声明转时间与过期判断",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://z5wpwyaahj.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "5cuungt6g5",
-    "name": "CSS 加载动画生成器",
-    "desc": "四种加载动画调参生成纯 CSS，可复制或下载 HTML",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://5cuungt6g5.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "2qepstqqxb",
-    "name": "中文简繁转换器",
-    "desc": "简繁双向逐字转换，含对照表与未收录提示",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qepstqqxb.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "m9jsrwue9a",
-    "name": "年龄与生日精确计算器",
-    "desc": "周岁精确到天、总天数、虚岁与下次生日倒计时",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://m9jsrwue9a.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "uise8bxjku",
-    "name": "家务轮值表生成器",
-    "desc": "成员与家务循环排班，输出表格与 CSV",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://uise8bxjku.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "3xmx6e5af3",
-    "name": "身份证与银行卡校验器",
-    "desc": "本地校验身份证校验位与银行卡 Luhn，含脱敏展示",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://3xmx6e5af3.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "g4q4xktuhw",
-    "name": "图片自动裁剪透明边",
-    "desc": "按容差自动裁掉透明边并保留内边距，导出图片",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://g4q4xktuhw.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "bcycnrk6f9",
-    "name": "油耗与出行成本计算器",
-    "desc": "按里程油耗油价算单次与每公里成本，可对比电车",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://bcycnrk6f9.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "ja46pmkp5e",
-    "name": "CSS Flex 与 Grid 布局生成器",
-    "desc": "切换 Flex/Grid 调间距对齐，实时预览并复制 CSS",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ja46pmkp5e.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "2qes9dqqxb",
-    "name": "文本行去重与排序工具",
-    "desc": "按行去重排序并统计重复次数，可忽略大小写",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qes9dqqxb.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "7b3nvgweb7",
-    "name": "菜谱份量换算器",
-    "desc": "按份数比例换算食材用量，导出清单与 CSV",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://7b3nvgweb7.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "j2tnfgxyyi",
-    "name": "ISO 周数与日期查询器",
-    "desc": "查询 ISO 周数、周起止日期与年内第几天",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://j2tnfgxyyi.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "bnxqa6nsmb",
-    "name": "图片转 ASCII 艺术",
-    "desc": "图片转字符画，可选字符集与彩色 HTML 输出",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://bnxqa6nsmb.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "atvxmfpmpa",
-    "name": "CSS 霓虹文字效果生成器",
-    "desc": "调色与发光强度生成霓虹 text-shadow，可复制下载",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://atvxmfpmpa.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "7b3qgqweb7",
-    "name": "中文转拼音工具",
-    "desc": "中文转带调/无调/首字母拼音，含逐字对照",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://7b3qgqweb7.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "ijankg8zig",
-    "name": "隐私设置自查清单",
-    "desc": "按场景生成隐私自查项与整改建议，本地记进度",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ijankg8zig.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "2qezkyqqxb",
-    "name": "书签整理与导出 HTML",
-    "desc": "校验去重书签并导出可导入浏览器的 bookmarks.html",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qezkyqqxb.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "atverkpmpa",
-    "name": "子网掩码与网段计算器",
-    "desc": "按 IP 与前缀算网络/广播/主机范围，含二进制对照",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://atverkpmpa.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "dzf5haslwd",
-    "name": "农历与节气查询器",
-    "desc": "公历转农历，生肖干支与全年二十四节气表",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzf5haslwd.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "ny8guqpkdd",
-    "name": "文本词频统计与关键词提取",
-    "desc": "分词统计词频与 Top20 关键词，含标签词云",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ny8guqpkdd.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "x89bsucakb",
-    "name": "发票税额与价税分离计算器",
-    "desc": "含税/不含税互转，按税率算税额并精确到分",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://x89bsucakb.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "bcykmjk6f9",
-    "name": "CSS 按钮样式生成器",
-    "desc": "调色与圆角实时生成按钮 CSS/HTML，含 hover",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://bcykmjk6f9.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "bnxzbrnsmb",
-    "name": "日出日落与黄金时刻计算器",
-    "desc": "按经纬度算日出日落、昼长与黄金时刻",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://bnxzbrnsmb.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "mkplawrxwr",
-    "name": "钓鱼链接识别自查",
-    "desc": "本地规则检测 IP 直连/长路径/可疑词，出风险评分",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://mkplawrxwr.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "tbnvznmk3t",
-    "name": "旅行行李清单生成器",
-    "desc": "按天数季节行程生成分类清单，可勾选与导出",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://tbnvznmk3t.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "rdqjpm4t4r",
-    "name": "面积与体积计算器",
-    "desc": "八种图形面积体积周长计算，含公式代入过程",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://rdqjpm4t4r.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "rdqkfj4t4r",
-    "name": "Base32 编解码器",
-    "desc": "RFC 4648 Base32 编解码，支持中文与填充校验",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://rdqkfj4t4r.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "lyrudrjxel",
-    "name": "中文标点全半角转换器",
-    "desc": "全角半角互转，按标点/数字/空格分范围处理",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://lyrudrjxel.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "urkuxmdyk8",
-    "name": "AA 账单分摊计算器",
-    "desc": "明细+小费+人数算人均，尾差记第一人",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://urkuxmdyk8.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "3xmx4f5af3",
-    "name": "ICS 日历文件生成器",
-    "desc": "多行事件生成标准 iCalendar，可导入手机日历",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://3xmx4f5af3.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "tbnjpnmk3t",
-    "name": "SVG 图表生成器",
-    "desc": "柱状/折线/面积图纯 SVG 生成，可下载源码",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://tbnjpnmk3t.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "bcyaubk6f9",
-    "name": "批量序列号生成器",
-    "desc": "前缀+位数批量生成唯一序列号，含校验位",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://bcyaubk6f9.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "z5wwxxaahj",
-    "name": "装修材料用量计算器",
-    "desc": "按面积与损耗算涂料/瓷砖/地板/壁纸用量",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://z5wwxxaahj.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "5cunqft6g5",
-    "name": "文章字数与稿费计算器",
-    "desc": "按字数千字单价算稿费，含加急倍数与阅读时长",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://5cunqft6g5.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "kezwhcdudk",
-    "name": "Unicode 码点与 UTF-8 字节查询器",
-    "desc": "逐字查码点/UTF-8 字节，正确处理 emoji 代理对",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://kezwhcdudk.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "uisqu2xjku",
-    "name": "敏感词本地过滤检测器",
-    "desc": "内置 80 条分类词库+自定义词，本地过滤并统计",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://uisqu2xjku.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "vfmdv3lsqf",
-    "name": "每日饮水与作息计划生成器",
-    "desc": "按体重活动量算饮水量并生成分时作息表",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://vfmdv3lsqf.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "fwkzfxyqkh",
-    "name": "法定节假日与调休日历生成器",
-    "desc": "2025~2027 节假日与调休日历，含天数统计",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://fwkzfxyqkh.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "c7rsb3egmi",
-    "name": "CSS 表格样式生成器",
-    "desc": "调色圆角斑马纹实时生成表格 CSS/HTML",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://c7rsb3egmi.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "4gswjgbtnf",
-    "name": "文章同义词替换与降重助手",
-    "desc": "内置同义词库+自定义替换对，按强度改写",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://4gswjgbtnf.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "qsikgrnhme",
-    "name": "工资薪金个税计算器",
-    "desc": "按七档税率算个税与到手，含逐档明细",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qsikgrnhme.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "vfmrjplsqf",
-    "name": "会议排期冲突检测器",
-    "desc": "多会议区间重叠检测，算出时长与空闲时段",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://vfmrjplsqf.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "fwk3ajyqkh",
-    "name": "CSS 徽章与标签样式生成器",
-    "desc": "四种徽章样式实时预览并生成 CSS/HTML",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://fwk3ajyqkh.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "x89sejcakb",
-    "name": "HTTP 安全响应头检查器",
-    "desc": "粘贴响应头本地判定 6 项安全头并评分",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://x89sejcakb.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "qsiducnhme",
-    "name": "十六进制文件查看器",
-    "desc": "本地读文件或粘贴文本转十六进制转储与 ASCII",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qsiducnhme.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "dzf7vmslwd",
-    "name": "家庭药品与保质期提醒表",
-    "desc": "按有效期分级正常/临期/过期并算剩余天数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzf7vmslwd.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "r36xfxzjyr",
-    "name": "旅行费用预算计算器",
-    "desc": "交通住宿餐饮分项占比与人均、每日预算",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://r36xfxzjyr.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "ygxjqkz2jf",
-    "name": "每周菜单与采购清单生成器",
-    "desc": "按人数天数口味生成七日菜单与分类采购清单",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ygxjqkz2jf.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "ztbksuhvkt",
-    "name": "URL 追踪参数清理器",
-    "desc": "批量移除 utm/fbclid/gclid 等追踪参数保留有效参数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ztbksuhvkt.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "mkpwgxrxwr",
-    "name": "CSS 开关切换组件生成器",
-    "desc": "纯 CSS 开关实时预览，生成含 checked 状态代码",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://mkpwgxrxwr.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "ja45jzkp5e",
-    "name": "JSON 转 TypeScript 接口生成器",
-    "desc": "粘贴 JSON 自动推导类型并生成 TypeScript interface",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ja45jzkp5e.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "pz7jntqyzx",
-    "name": "增长率与 CAGR 计算器",
-    "desc": "算总增长率、年均复合增长率与 72 法则翻倍年数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://pz7jntqyzx.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "qhwjqsstfq",
-    "name": "文字与 Emoji 转 Favicon 生成器",
-    "desc": "文字或 Emoji 一键生成多尺寸 PNG 站点图标",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qhwjqsstfq.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "tbnh7qmk3t",
-    "name": "满减凑单计算器",
-    "desc": "按满减规则枚举组合，算出实付最低的最优凑单方案",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://tbnh7qmk3t.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "ija4mt8zig",
-    "name": "SQL 格式化与美化器",
-    "desc": "SQL 关键字换行缩进美化，支持大小写与逗号换行",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ija4mt8zig.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "2qelpaqqxb",
-    "name": "睡眠周期与就寝时间计算器",
-    "desc": "按 90 分钟周期倒推就寝时间，含入睡耗时",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qelpaqqxb.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "m9jbktue9a",
-    "name": "打印尺寸与像素换算器",
-    "desc": "毫米尺寸与 DPI 换算像素，含 A4/名片等预设",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://m9jbktue9a.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "tbndpgmk3t",
-    "name": "XML 格式化与压缩器",
-    "desc": "XML 逐层缩进美化与单行压缩，含统计与错误提示",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://tbndpgmk3t.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "rdq9yv4t4r",
-    "name": "Markdown 目录 TOC 生成器",
-    "desc": "按标题层级生成带锚点缩进的 Markdown 目录",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://rdq9yv4t4r.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "lyrxbzjxel",
-    "name": "手动汇率换算器",
-    "desc": "手动汇率双向换算，含手续费与到手金额",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://lyrxbzjxel.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "puhhuj3a4t",
-    "name": "GPA 与成绩换算器",
-    "desc": "百分制与 4.0/5.0 制互转，按学分加权算 GPA",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://puhhuj3a4t.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "sayp6n9xrs",
-    "name": "跑步配速与完赛时间计算器",
-    "desc": "距离时间互算配速、速度与每公里分段",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://sayp6n9xrs.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "9paqwhr8kd",
-    "name": "JSONPath 提取器",
-    "desc": "用 $.a.b[0] 路径提取 JSON 字段，支持全部匹配",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://9paqwhr8kd.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "2qeyylqqxb",
-    "name": "JSON Schema 生成器",
-    "desc": "从示例 JSON 推断 draft-07 Schema，含必填与数组项",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qeyylqqxb.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "qhwvgdstfq",
-    "name": "颜色混合与透明度计算器",
-    "desc": "两色按比例混合并叠加背景，输出 HEX/RGB",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qhwvgdstfq.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "c7rkj6egmi",
-    "name": "数字转英文读法",
-    "desc": "整数转英文单词，支持英式 and 与序数词",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://c7rkj6egmi.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "vfmedklsqf",
-    "name": "HTML 转 Markdown 转换器",
-    "desc": "HTML 片段转 Markdown，支持标题/加粗/链接/列表",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://vfmedklsqf.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "2qeyjmqqxb",
-    "name": "简易节拍器与 BPM 计算器",
-    "desc": "WebAudio 本地节拍声，显示拍位与每拍毫秒数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qeyjmqqxb.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "7b3ecrweb7",
-    "name": "CSS 进度条样式生成器",
-    "desc": "颜色/高度/圆角/条纹可调，实时预览并生成 CSS",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://7b3ecrweb7.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "2qe6kzqqxb",
-    "name": "CSV 合并与拆分工具",
-    "desc": "多份 CSV 按表头合并，按行数或列值拆分后导出",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qe6kzqqxb.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "qhwm67stfq",
-    "name": "CSS 文字描边生成器",
-    "desc": "描边颜色/宽度/方式可调，实时预览并生成 CSS",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qhwm67stfq.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "9pahqsr8kd",
-    "name": "YAML 与 JSON 双向转换器",
-    "desc": "YAML ⇄ JSON 双向转换，缩进可调并定位错误行号",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://9pahqsr8kd.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "rdqxau4t4r",
-    "name": "TOML 与 JSON 双向转换器",
-    "desc": "TOML 与 JSON 互转，支持表/数组表并定位错误行号",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://rdqxau4t4r.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "ztbavdhvkt",
-    "name": "时长加减与工时计算器",
-    "desc": "多行时长累加求合计与分钟数，按 8 小时折算并算金额",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ztbavdhvkt.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "qsiub9nhme",
-    "name": "文本大小写批量转换器",
-    "desc": "五种大小写模式逐行批量转换，含空格归并与自定义替换",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qsiub9nhme.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "m9jfu6ue9a",
-    "name": "CSS 动画缓动曲线生成器",
-    "desc": "调节四个控制点生成 cubic-bezier，实时预览并导出 CSS",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://m9jfu6ue9a.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "uisvq8xjku",
-    "name": "加班费与调休计算器",
-    "desc": "按月薪与三类加班时长算加班费、合计与调休天数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://uisvq8xjku.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "vfmbddlsqf",
-    "name": "咖啡因摄入与代谢计算器",
-    "desc": "按半衰期算 4/8/12 小时残留与建议就寝时间",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://vfmbddlsqf.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "dzfmynslwd",
-    "name": "家庭用药提醒清单生成器",
-    "desc": "按频次与开始时间生成每日服药时间点、日程表与累计次数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzfmynslwd.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "ny89vhpkdd",
-    "name": "会议议程与时间分配生成器",
-    "desc": "按议题分钟数排时间表，算占比并校验是否超时",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ny89vhpkdd.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "fr2tregsra",
-    "name": "CSS 轮播图样式生成器",
-    "desc": "宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://fr2tregsra.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "ny8rttpkdd",
-    "name": "呼吸放松计时器",
-    "desc": "4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ny8rttpkdd.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "puhc8q3a4t",
-    "name": "汽车保养与年检提醒表",
-    "desc": "按里程与间隔算下次保养，按购车日期推算年检到期",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://puhc8q3a4t.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "say4uq9xrs",
-    "name": "文本空行清理与重复行统计器",
-    "desc": "清理空行、去重并统计重复行次数，保留首次出现顺序",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://say4uq9xrs.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "qhwajtstfq",
-    "name": "时差调整作息计划生成器",
-    "desc": "按两地时差生成逐日就寝与起床调整表，判断提前或推迟",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qhwajtstfq.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "c7rfzsegmi",
-    "name": "久坐提醒与拉伸计划生成器",
-    "desc": "按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://c7rfzsegmi.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "4gs8yrbtnf",
-    "name": "待办四象限优先级整理器",
-    "desc": "按重要度与紧急度阈值分区待办，给出处理顺序与时间分配",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://4gs8yrbtnf.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "npcsur2aq6",
-    "name": "停车费与停车时长计算器",
-    "desc": "按入场出场时间与首小时/后续单价算停车时长与费用",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://npcsur2aq6.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "z5wgaqaahj",
-    "name": "快递运费估算器",
-    "desc": "按重量首重续重与区域系数估算运费，支持保价费",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://z5wgaqaahj.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "5culhkt6g5",
-    "name": "文件大小与下载时间估算器",
-    "desc": "按大小与带宽效率折算下载耗时，给出理论/实际对比",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://5culhkt6g5.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "ektq3cvhte",
-    "name": "体脂率与腰臀比计算器",
-    "desc": "按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ektq3cvhte.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "3xmlz85af3",
-    "name": "防晒霜用量与补涂计算器",
-    "desc": "按面部面积与 SPF 算单次用量、有效时长与补涂次数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://3xmlz85af3.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "g4qemytuhw",
-    "name": "航班行李额与超重费估算器",
-    "desc": "按舱位与件重算免费额度、超重公斤数与超重费",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://g4qemytuhw.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "9pag3yr8kd",
-    "name": "证件照尺寸与背景要求查询器",
-    "desc": "查常用证件照尺寸、像素与背景色，算相纸可排张数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://9pag3yr8kd.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "hmncr5fxk9",
-    "name": "家电保养与滤芯更换提醒表",
-    "desc": "按家电类型与上次保养日推算下次保养与耗材更换",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://hmncr5fxk9.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "atvvufpmpa",
-    "name": "房租押金与水电结算计算器",
-    "desc": "按租金押金月数水电与违约扣款算应退押金与清单",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://atvvufpmpa.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "qsiaupnhme",
-    "name": "屏幕使用与护眼休息计划生成器",
-    "desc": "按屏幕时长与间隔生成 20-20-20 休息提醒时间表",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qsiaupnhme.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "npcr5f2aq6",
-    "name": "CSS 骨架屏占位生成器",
-    "desc": "块数/高度/圆角/颜色可调，实时预览并导出骨架屏 CSS",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://npcr5f2aq6.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "z5wef2aahj",
-    "name": "环境噪音分贝对照与听力保护提示",
-    "desc": "按分贝与暴露时长算安全时长、风险等级与防护建议",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://z5wef2aahj.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "tbn7hlmk3t",
-    "name": "航班转机时间估算器",
-    "desc": "按到达起飞时间与各环节耗时判断转机是否够用",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://tbn7hlmk3t.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "rdqjum4t4r",
-    "name": "洗手计时与步骤提示器",
-    "desc": "20 秒倒计时配七步提示，流动水与皂液要点",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://rdqjum4t4r.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "ztbcauhvkt",
-    "name": "小费与账单分摊计算器",
-    "desc": "按账单与小费比例算总额，支持服务费与每人取整分摊",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ztbcauhvkt.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "atvl9kpmpa",
-    "name": "文件批量重命名规则生成器",
-    "desc": "按前缀编号统一改名，保留扩展名并检测重名冲突",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://atvl9kpmpa.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "dzfdhcslwd",
-    "name": "每周时间块日程生成器",
-    "desc": "按上下班时间自动排出专注块与休息，支持多工作日",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzfdhcslwd.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "ny83nwpkdd",
-    "name": "行李打包清单生成器",
-    "desc": "按天数季节与出行类型生成分类打包清单，可勾选核对",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ny83nwpkdd.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "rdqxu54t4r",
-    "name": "手机电池充电时间估算器",
-    "desc": "按容量与充电功率估算充满用时，含三段慢充分段",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://rdqxu54t4r.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "lyryxpjxel",
-    "name": "合同到期与续签提醒表",
-    "desc": "按生效日与年限算到期日、剩余天数与提前提醒日",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://lyryxpjxel.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "urkdhldyk8",
-    "name": "护照有效期与入境余量检查器",
-    "desc": "对比入境日与护照到期日，判断是否满足 6 个月余量",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://urkdhldyk8.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "hmn8b3fxk9",
-    "name": "心率区间与运动强度计算器",
-    "desc": "按年龄与静息心率算五档心率区间，给出燃脂推荐范围",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://hmn8b3fxk9.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "atvkckpmpa",
-    "name": "食物热量与运动消耗换算器",
-    "desc": "按 MET 与体重换算消耗某份热量需要的运动分钟数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://atvkckpmpa.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "dzfc3aslwd",
-    "name": "签证类型与材料清单生成器",
-    "desc": "按目的地与出行目的生成签证类型、材料清单与办理周期",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzfc3aslwd.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "puhfd93a4t",
-    "name": "步数与活动量目标计算器",
-    "desc": "按身高体重估算步幅里程、额外步数与消耗热量",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://puhfd93a4t.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "sayevp9xrs",
-    "name": "字体搭配与排版比例生成器",
-    "desc": "按基准字号与字阶比例生成六级字号行高与字体栈",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://sayevp9xrs.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "9pavh8r8kd",
-    "name": "色盲友好配色检查器",
-    "desc": "模拟四类色觉障碍并重算 WCAG 对比度是否达标",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://9pavh8r8kd.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "r36jfpzjyr",
-    "name": "实际时薪与通勤成本计算器",
-    "desc": "扣除通勤时间与支出，算出真实时薪与年等效小时",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://r36jfpzjyr.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "puhymr3a4t",
-    "name": "通胀购买力换算计算器",
-    "desc": "按通胀率推算未来等值金额、购买力缩水与实际收益率",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://puhymr3a4t.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "sayvzk9xrs",
-    "name": "邮箱签名与名片信息生成器",
-    "desc": "一键生成纯文本与 HTML 邮箱签名，附脱敏预览",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://sayvzk9xrs.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "k6bth4ftrk",
-    "name": "信用卡账单日与免息期规划器",
-    "desc": "按账单日与还款日算最晚还款、免息天数与最长消费窗口",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://k6bth4ftrk.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "ja4gvvkp5e",
-    "name": "长文本摘要与压缩率计算器",
-    "desc": "确定性抽取式摘要，给出字数压缩率与句子段落统计",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ja4gvvkp5e.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "2qethzqqxb",
-    "name": "月度预算配额分配器",
-    "desc": "按收入与比例拆分配额，校验占比合计与结余",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qethzqqxb.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "4gsndabtnf",
-    "name": "预产期与孕周计算器",
-    "desc": "按末次月经与周期算预产期、孕周天数与进度百分比",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://4gsndabtnf.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "qsixqdnhme",
-    "name": "储蓄目标达成时间计算器",
-    "desc": "按月复利推演攒到目标金额所需月数与利息结构",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qsixqdnhme.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "k6bmafftrk",
-    "name": "CSS 分隔线与点阵背景生成器",
-    "desc": "四种分隔线/背景样式生成可复制的 CSS 与 HTML 示例",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://k6bmafftrk.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "qsixiqnhme",
-    "name": "睡眠债务与补觉计划计算器",
-    "desc": "按工作日周末睡眠差算累计债务，给出补觉天数与风险提示",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://qsixiqnhme.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "npcteh2aq6",
-    "name": "景点门票与通行预算计算器",
-    "desc": "分人群算单景点与多景点门票，含讲解与观光车附加费",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://npcteh2aq6.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "z5wyvnaahj",
-    "name": "随机用户名与昵称生成器",
-    "desc": "本地词库随机组合中文/英文昵称，带去重与长度统计",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://z5wyvnaahj.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "c7rsghegmi",
-    "name": "凯撒密码与 ROT13 转换器",
-    "desc": "按位移量加密解密字母与数字，含映射表与字符统计",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://c7rsghegmi.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "2qex6iqqxb",
-    "name": "甘特图任务排期生成器",
-    "desc": "按任务工期自动串联排期并输出 ASCII 甘特条与里程碑",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://2qex6iqqxb.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "m9jvqmue9a",
-    "name": "空状态与错误页文案生成器",
-    "desc": "五种场景三套语气生成标题说明与可粘贴 HTML 片段",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://m9jvqmue9a.app.weavefox.cn",
-    "subcat": "设计绘图"
-  },
-  {
-    "id": "ewzrj3ixkx",
-    "name": "图片宽高比与等比缩放计算器",
-    "desc": "按目标宽度或百分比等比缩放，给出比例化简与面积变化",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ewzrj3ixkx.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "glfhwvcqng",
-    "name": "手机 App 权限自查清单生成器",
-    "desc": "按设备与场景生成权限自查清单，标出高风险与设置路径",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://glfhwvcqng.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "kezy8adudk",
-    "name": "数字编号与缩进批量整理器",
-    "desc": "批量去掉原有编号并按指定格式与缩进重新编号",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://kezy8adudk.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "dzff47slwd",
-    "name": "相机曝光与景深换算器",
-    "desc": "按光圈快门 ISO 算 EV，并估算景深边界与超焦距",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzff47slwd.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "ny88zypkdd",
-    "name": "租车费用与押金估算器",
-    "desc": "按天数与车型估算租金保险异地费，押金单列",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ny88zypkdd.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "puhhek3a4t",
-    "name": "体温与血压记录趋势计算器",
-    "desc": "解析记录行给出均值极值异常次数与趋势判断",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://puhhek3a4t.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "ijapvv8zig",
-    "name": "日期区间与工作日统计器",
-    "desc": "统计区间自然日与工作日，给出月度分布与周末天数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ijapvv8zig.app.weavefox.cn",
-    "subcat": "时间日期"
-  },
-  {
-    "id": "ewzae9ixkx",
-    "name": "图片位深与文件体积估算器",
-    "desc": "按位深通道压缩比估算像素体积颜色数与 4K 对照",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ewzae9ixkx.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "glfgebcqng",
-    "name": "二次验证恢复码生成器",
-    "desc": "本地随机生成分组恢复码，附熵估算与重复检测",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://glfgebcqng.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "rdqya64t4r",
-    "name": "繁简转换与用词对照器",
-    "desc": "繁简互转并对照用词与单字变化，附字数统计",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://rdqya64t4r.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "ztb2uwhvkt",
-    "name": "Base64URL 编解码器",
-    "desc": "URL 安全 Base64 编解码，可去填充与加 data 前缀",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ztb2uwhvkt.app.weavefox.cn",
-    "subcat": "编码转换"
-  },
-  {
-    "id": "urkyphdyk8",
-    "name": "数据备份 3-2-1 自查清单生成器",
-    "desc": "按备份份数异地离线校验四项打分并给出改进动作",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://urkyphdyk8.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "c7rpgyegmi",
-    "name": "网约车与出租车费用对比估算器",
-    "desc": "起步价+里程+等待费拆分，三方案比价并给出最省选择",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://c7rpgyegmi.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "ewz3cuixkx",
-    "name": "蛋白质摄入与三餐分配计算器",
-    "desc": "按体重目标活动量算每日蛋白并均分到每餐，附食物等量对照",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ewz3cuixkx.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "glfmcmcqng",
-    "name": "浏览器指纹与隐私暴露自查器",
-    "desc": "本地读取时区语言屏幕硬件Canvas九项，算熵值并给加固建议",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://glfmcmcqng.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "fr2qywgsra",
-    "name": "新能源车续航与充电费用估算器",
-    "desc": "按气温空调折损算真实续航与电费，判断行程是否需补能",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://fr2qywgsra.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "pz7bebqyzx",
-    "name": "膳食纤维与蔬果份量计算器",
-    "desc": "按年龄性别算每日纤维目标，拆成蔬菜水果份数并给食物对照",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://pz7bebqyzx.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "dzfwjnslwd",
-    "name": "平台图片尺寸与规格速查器",
-    "desc": "七类用途的推荐尺寸、高清倍数、体积上限与安全区一次查清",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzfwjnslwd.app.weavefox.cn",
-    "subcat": "图片处理"
-  },
-  {
-    "id": "atvsvxpmpa",
-    "name": "航班值机与登机时间倒推器",
-    "desc": "按起飞时间倒推出门到登机的七个节点，并评估时间松紧",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://atvsvxpmpa.app.weavefox.cn",
-    "subcat": "出行旅行"
-  },
-  {
-    "id": "dzfvf2slwd",
-    "name": "钙与维生素 D 摄入计算器",
-    "desc": "按年龄性别算每日钙目标，估算奶豆摄入缺口与补充份数",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzfvf2slwd.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "ja4c4jkp5e",
-    "name": "Wi-Fi 与路由器安全自查清单生成器",
-    "desc": "按加密方式与六项配置打分，给出扣分项与整改路径",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ja4c4jkp5e.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "rdqhhg4t4r",
-    "name": "在线小工具合集（字数·进制·折扣·日期差·颜色·单位）",
-    "desc": "一个页面装 6 个常用小工具，hash 直链可直达子工具",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://rdqhhg4t4r.app.weavefox.cn",
-    "subcat": "效率生活",
-    "subapps": [
-      {
-        "key": "word",
-        "title": "工具A 字数统计"
-      },
-      {
-        "key": "base",
-        "title": "工具B 进制转换"
-      },
-      {
-        "key": "percent",
-        "title": "工具C 折扣计算"
-      },
-      {
-        "key": "date",
-        "title": "工具D 日期差"
-      },
-      {
-        "key": "color",
-        "title": "工具E 颜色格式"
-      },
-      {
-        "key": "unit",
-        "title": "工具F 单位换算"
-      }
-    ]
-  },
-  {
-    "id": "g42maetuhw",
-    "name": "参考文献引用格式生成器",
-    "desc": "GB/T 7714 / APA / MLA 一键生成，含字段提示与常见错误",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://g42maetuhw.app.weavefox.cn",
-    "subcat": "文本处理"
-  },
-  {
-    "id": "keygufdudk",
-    "name": "嘌呤与尿酸饮食速查器",
-    "desc": "按人群算每日嘌呤上限，四档食物清单 + 替换建议",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://keygufdudk.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "dvzcccgy5d",
-    "name": "食物升糖指数与血糖负荷计算器",
-    "desc": "算 GI/GL 与分级，给同类替换与三餐搭配",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dvzcccgy5d.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "ekgaqhvhte",
-    "name": "家庭应急物品清单生成器",
-    "desc": "按人数与场景生成应急清单，含保质期、预算与采购优先级",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://ekgaqhvhte.app.weavefox.cn",
-    "subcat": "生活健康"
-  },
-  {
-    "id": "npxsuh2aq6",
-    "name": "海淘行邮税与到手价估算器",
-    "desc": "行邮税/跨境电商综合税二选一，算税费、免征额与到手价",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://npxsuh2aq6.app.weavefox.cn",
-    "subcat": "计算换算"
-  },
-  {
-    "id": "keyyhvdudk",
-    "name": "合同签署前必查清单生成器",
-    "desc": "按合同类型给主体、核心条款、风险条款与红线提示",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://keyyhvdudk.app.weavefox.cn",
-    "subcat": "安全隐私"
-  },
-  {
-    "id": "dzkttqslwd",
-    "name": "二手交易交接单生成器",
-    "desc": "面交/邮寄两套流程，生成交接单、验收清单与纠纷预防",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "url": "https://dzkttqslwd.app.weavefox.cn",
-    "subcat": "效率生活"
-  },
-  {
-    "id": "c7zfn5egmi",
-    "name": "家用电器选购计算合集（空调·冰箱·洗衣机·电视·热水器·净水）",
-    "desc": "一个页面装 6 个家电选购计算器，按面积/人数/距离算清该买多大，hash 直链可直达",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "subcat": "生活健康",
-    "url": "https://c7zfn5egmi.app.weavefox.cn",
-    "subapps": [
-      {
-        "key": "ac",
-        "title": "工具A 空调匹数与制冷量"
-      },
-      {
-        "key": "fridge",
-        "title": "工具B 冰箱容积选型"
-      },
-      {
-        "key": "washer",
-        "title": "工具C 洗衣机容量选型"
-      },
-      {
-        "key": "tv",
-        "title": "工具D 电视尺寸与观看距离"
-      },
-      {
-        "key": "heater",
-        "title": "工具E 电热水器升数选型"
-      },
-      {
-        "key": "water",
-        "title": "工具F 净水器通量与滤芯成本"
-      }
-    ]
-  },
-  {
-    "id": "qs8lbinhme",
-    "name": "职场权益与离职计算合集（补偿·试用期·竞业·年假）",
-    "desc": "4 个职场计算器同页：离职补偿 N/N+1/2N、试用期合规、竞业补偿、年假折算，hash 直链可直达",
-    "tag": "免费",
-    "price": 0,
-    "cat": "实用工具",
-    "subcat": "效率生活",
-    "url": "https://qs8lbinhme.app.weavefox.cn",
-    "subapps": [
-      {
-        "key": "severance",
-        "title": "工具A 离职补偿金"
-      },
-      {
-        "key": "probation",
-        "title": "工具B 试用期权益"
-      },
-      {
-        "key": "noncompete",
-        "title": "工具C 竞业限制补偿"
-      },
-      {
-        "key": "annualleave",
-        "title": "工具D 年假与未休折算"
-      }
-    ]
-  }
+ {
+  "id": "keqhxldudk",
+  "name": "GEO 体检小工具",
+  "desc": "品牌 AI 可见性自查评分与优化建议",
+  "price": 1,
+  "cat": "研发效率",
+  "url": "https://keqhxldudk.app.weavefox.cn"
+ },
+ {
+  "id": "bcphhgk6f9",
+  "name": "SEO 体检小工具",
+  "desc": "网址 6 项基础检查与修复建议",
+  "price": 1,
+  "cat": "研发效率",
+  "url": "https://bcphhgk6f9.app.weavefox.cn"
+ },
+ {
+  "id": "m9efxgue9a",
+  "name": "测试用例生成器",
+  "desc": "一句话生成测试用例，含优先级与导出",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://m9efxgue9a.app.weavefox.cn"
+ },
+ {
+  "id": "3xvqjf5af3",
+  "name": "产品需求文档PRD生成器",
+  "desc": "结构化 PRD：背景、画像、优先级、验收",
+  "price": 3,
+  "cat": "研发效率",
+  "url": "https://3xvqjf5af3.app.weavefox.cn"
+ },
+ {
+  "id": "4gntg6btnf",
+  "name": "简历塑",
+  "desc": "简历 × 岗位 → 匹配度评分与修改建议",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://4gntg6btnf.app.weavefox.cn"
+ },
+ {
+  "id": "ata9acpmpa",
+  "name": "面试题预测",
+  "desc": "按 JD 生成 10 道高频题与回答框架",
+  "price": 3,
+  "cat": "求职面试",
+  "url": "https://ata9acpmpa.app.weavefox.cn"
+ },
+ {
+  "id": "sakxhy9xrs",
+  "name": "求职信生成器",
+  "desc": "岗位与经历 → 3 版求职信",
+  "price": 1,
+  "cat": "求职面试",
+  "url": "https://sakxhy9xrs.app.weavefox.cn"
+ },
+ {
+  "id": "m9ewusue9a",
+  "name": "轻编好文案",
+  "desc": "商品信息 → 标题、卖点、详情与问答",
+  "price": 1,
+  "cat": "电商客服",
+  "url": "https://m9ewusue9a.app.weavefox.cn"
+ },
+ {
+  "id": "mkqfxqrxwr",
+  "name": "客服话术生成器",
+  "desc": "场景与情绪 → 3 套可用话术",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://mkqfxqrxwr.app.weavefox.cn"
+ },
+ {
+  "id": "vffcejlsqf",
+  "name": "小红书笔记生成器",
+  "desc": "主题 → 5 标题 + 正文 + 标签 + 封面文案",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://vffcejlsqf.app.weavefox.cn"
+ },
+ {
+  "id": "cjhrbfe3pc",
+  "name": "公众号推文生成器",
+  "desc": "主题与读者 → 标题、摘要、正文与配图建议",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://cjhrbfe3pc.app.weavefox.cn"
+ },
+ {
+  "id": "ewsct8ixkx",
+  "name": "短视频脚本生成器",
+  "desc": "主题与时长 → 钩子 + 分镜 + 标签",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://ewsct8ixkx.app.weavefox.cn"
+ },
+ {
+  "id": "cjhzq7e3pc",
+  "name": "短视频选题生成器",
+  "desc": "领域与平台 → 20 个可拍选题",
+  "price": 1,
+  "cat": "自媒体运营",
+  "url": "https://cjhzq7e3pc.app.weavefox.cn"
+ },
+ {
+  "id": "jatvexkp5e",
+  "name": "朋友圈文案生成器",
+  "desc": "场景 → 10 条朋友圈文案 + 配图建议",
+  "price": 1,
+  "cat": "自媒体运营",
+  "url": "https://jatvexkp5e.app.weavefox.cn"
+ },
+ {
+  "id": "r3fstczjyr",
+  "name": "PPT大纲生成器",
+  "desc": "主题与页数 → 每页要点 + 演讲备注",
+  "price": 3,
+  "cat": "职场办公",
+  "url": "https://r3fstczjyr.app.weavefox.cn"
+ },
+ {
+  "id": "keqbgpdudk",
+  "name": "会议纪要整理器",
+  "desc": "会议文字 → 摘要、决议、待办与风险",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://keqbgpdudk.app.weavefox.cn"
+ },
+ {
+  "id": "cjzg8se3pc",
+  "name": "年终总结述职生成器",
+  "desc": "岗位与年度工作 → 总结 + 述职口播稿",
+  "price": 3,
+  "cat": "职场办公",
+  "url": "https://cjzg8se3pc.app.weavefox.cn"
+ },
+ {
+  "id": "keqksvdudk",
+  "name": "演讲稿生成器",
+  "desc": "场合与主题 → 完整讲稿 + 提词卡",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://keqksvdudk.app.weavefox.cn"
+ },
+ {
+  "id": "dzj9zsslwd",
+  "name": "招聘JD生成器",
+  "desc": "岗位信息 → 职责、要求与面试题",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://dzj9zsslwd.app.weavefox.cn"
+ },
+ {
+  "id": "glzhcecqng",
+  "name": "周报生成器",
+  "desc": "本周事项 → 结构化周报四段",
+  "price": 1,
+  "cat": "职场办公",
+  "url": "https://glzhcecqng.app.weavefox.cn"
+ },
+ {
+  "id": "bnt4btnsmb",
+  "name": "报销清单整理器",
+  "desc": "粘贴费用记录 → 规范报销清单与提醒",
+  "price": 1,
+  "cat": "职场办公",
+  "url": "https://bnt4btnsmb.app.weavefox.cn"
+ },
+ {
+  "id": "g4n6jdtuhw",
+  "name": "商务邮件生成器",
+  "desc": "对象与目的 → 3 版商务邮件",
+  "price": 1,
+  "cat": "职场办公",
+  "url": "https://g4n6jdtuhw.app.weavefox.cn"
+ },
+ {
+  "id": "kes9usdudk",
+  "name": "职场文书生成器",
+  "desc": "辞职/请假/调岗/证明 → 3 版规范文书",
+  "price": 1,
+  "cat": "职场办公",
+  "url": "https://kes9usdudk.app.weavefox.cn"
+ },
+ {
+  "id": "bcqhbxk6f9",
+  "name": "英语作文批改器",
+  "desc": "作文 → 总分、四维评分、逐句改错与示范",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://bcqhbxk6f9.app.weavefox.cn"
+ },
+ {
+  "id": "jamztqkp5e",
+  "name": "学习计划生成器",
+  "desc": "目标与剩余天数 → 倒排周计划",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://jamztqkp5e.app.weavefox.cn"
+ },
+ {
+  "id": "bcqu6hk6f9",
+  "name": "读书笔记生成器",
+  "desc": "书名与要点 → 结构化笔记 + 书评",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://bcqu6hk6f9.app.weavefox.cn"
+ },
+ {
+  "id": "dvyrdugy5d",
+  "name": "教师评语生成器",
+  "desc": "学生特点 → 5 条期末评语",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://dvyrdugy5d.app.weavefox.cn"
+ },
+ {
+  "id": "sf7cpby97s",
+  "name": "节日祝福生成器",
+  "desc": "节日与对象 → 10 条可直接发送的祝福",
+  "price": 1,
+  "cat": "生活家庭",
+  "url": "https://sf7cpby97s.app.weavefox.cn"
+ },
+ {
+  "id": "npurza2aq6",
+  "name": "取名生成器",
+  "desc": "姓氏与期望 → 20 个带寓意与音律的名字",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://npurza2aq6.app.weavefox.cn"
+ },
+ {
+  "id": "jamrzfkp5e",
+  "name": "旅行行程规划器",
+  "desc": "城市与天数 → 逐日行程与预算分配",
+  "price": 3,
+  "cat": "生活家庭",
+  "url": "https://jamrzfkp5e.app.weavefox.cn"
+ },
+ {
+  "id": "at6bpspmpa",
+  "name": "菜谱生成器",
+  "desc": "现有食材 → 3 道菜与分步做法",
+  "price": 1,
+  "cat": "生活家庭",
+  "url": "https://at6bpspmpa.app.weavefox.cn"
+ },
+ {
+  "id": "k6rauxftrk",
+  "name": "健身计划生成器",
+  "desc": "目标与器械 → 4 周训练 + 饮食建议",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://k6rauxftrk.app.weavefox.cn"
+ },
+ {
+  "id": "ekf9edvhte",
+  "name": "一周买菜清单",
+  "desc": "7 天三餐菜单 + 分区采购清单",
+  "price": 1,
+  "cat": "生活家庭",
+  "url": "https://ekf9edvhte.app.weavefox.cn"
+ },
+ {
+  "id": "g4nwintuhw",
+  "name": "家庭月度预算表",
+  "desc": "收入与支出 → 预算表 + 超支预警",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://g4nwintuhw.app.weavefox.cn"
+ },
+ {
+  "id": "g4nvaxtuhw",
+  "name": "婚礼流程策划器",
+  "desc": "婚期与预算 → 流程、分工与物品清单",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://g4nvaxtuhw.app.weavefox.cn"
+ },
+ {
+  "id": "rdnuhb4t4r",
+  "name": "装修预算清单",
+  "desc": "面积与档次 → 分项预算与超支预警",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://rdnuhb4t4r.app.weavefox.cn"
+ },
+ {
+  "id": "at6pdhpmpa",
+  "name": "送礼推荐器",
+  "desc": "对象与预算 → 10 个礼物建议",
+  "price": 1,
+  "cat": "生活家庭",
+  "url": "https://at6pdhpmpa.app.weavefox.cn"
+ },
+ {
+  "id": "x8dznvcakb",
+  "name": "宝宝辅食食谱",
+  "desc": "月龄与忌口 → 7 天辅食与做法",
+  "price": 1,
+  "cat": "亲子宠物",
+  "url": "https://x8dznvcakb.app.weavefox.cn"
+ },
+ {
+  "id": "mkqvhgrxwr",
+  "name": "儿童睡前故事",
+  "desc": "年龄与主题 → 3 篇完整睡前故事",
+  "price": 1,
+  "cat": "亲子宠物",
+  "url": "https://mkqvhgrxwr.app.weavefox.cn"
+ },
+ {
+  "id": "kes9mgdudk",
+  "name": "宠物喂养计划",
+  "desc": "猫狗信息 → 每日喂食 + 每周护理",
+  "price": 1,
+  "cat": "亲子宠物",
+  "url": "https://kes9mgdudk.app.weavefox.cn"
+ },
+ {
+  "id": "mkqsmfrxwr",
+  "name": "搬家清单生成器",
+  "desc": "填入住信息 → 分场景搬迁清单与时间倒排",
+  "price": 1,
+  "cat": "生活家庭",
+  "url": "https://mkqsmfrxwr.app.weavefox.cn"
+ },
+ {
+  "id": "xq5vvhbndh",
+  "name": "月度复盘生成器",
+  "desc": "本月工作 → 结构化复盘与可视化总结",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://xq5vvhbndh.app.weavefox.cn"
+ },
+ {
+  "id": "frbu59gsra",
+  "name": "旅行攻略生成器",
+  "desc": "目的地与偏好 → 每日行程与美食指南",
+  "price": 3,
+  "cat": "生活家庭",
+  "url": "https://frbu59gsra.app.weavefox.cn"
+ },
+ {
+  "id": "g4nm82tuhw",
+  "name": "二手转卖文案生成器",
+  "desc": "物品信息 → 3 版转卖文案（标题/正文/议价/标签）",
+  "price": 1,
+  "cat": "电商客服",
+  "url": "https://g4nm82tuhw.app.weavefox.cn"
+ },
+ {
+  "id": "bcqrbrk6f9",
+  "name": "自由职业报价单生成器",
+  "desc": "服务与工时 → 规范报价单（分项/付款节点/不含项）",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://bcqrbrk6f9.app.weavefox.cn"
+ },
+ {
+  "id": "sf7axmy97s",
+  "name": "生日纪念日策划器",
+  "desc": "对象与预算 → 当日流程、礼物布置与预算分配",
+  "price": 1,
+  "cat": "生活家庭",
+  "url": "https://sf7axmy97s.app.weavefox.cn"
+ },
+ {
+  "id": "mkqcf3rxwr",
+  "name": "谈薪话术生成器",
+  "desc": "岗位与期望薪资 → 3 套话术与让步底线",
+  "price": 3,
+  "cat": "求职面试",
+  "url": "https://mkqcf3rxwr.app.weavefox.cn"
+ },
+ {
+  "id": "xq5hgdbndh",
+  "name": "差评回复生成器",
+  "desc": "差评原文 → 公开回复、安抚与申诉要点",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://xq5hgdbndh.app.weavefox.cn"
+ },
+ {
+  "id": "rdneyn4t4r",
+  "name": "宠物行为纠正方案",
+  "desc": "行为问题 → 分周训练与环境改造",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://rdneyn4t4r.app.weavefox.cn"
+ },
+ {
+  "id": "jamnflkp5e",
+  "name": "错题讲解生成器",
+  "desc": "错题原文 → 错因诊断、分步讲解与同类变式题",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://jamnflkp5e.app.weavefox.cn"
+ },
+ {
+  "id": "fw4q6myqkh",
+  "name": "SQL 优化建议生成器",
+  "desc": "慢 SQL → 问题定位、改写语句与索引建议",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://fw4q6myqkh.app.weavefox.cn"
+ },
+ {
+  "id": "qh8azestfq",
+  "name": "亲子沟通话术生成器",
+  "desc": "孩子年龄与场景 → 3 套可照读话术与习惯计划",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://qh8azestfq.app.weavefox.cn"
+ },
+ {
+  "id": "r3ykcgzjyr",
+  "name": "offer 对比决策助手",
+  "desc": "多个 offer → 五维打分、风险提示与决策清单",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://r3ykcgzjyr.app.weavefox.cn"
+ },
+ {
+  "id": "frbuebgsra",
+  "name": "退款纠纷处理话术",
+  "desc": "平台与纠纷类型 → 首轮回复、让步阶梯与规则要点",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://frbuebgsra.app.weavefox.cn"
+ },
+ {
+  "id": "mkqe7frxwr",
+  "name": "直播带货话术生成器",
+  "desc": "平台品类阶段 → 开场、憋单逼单与违规词替换",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://mkqe7frxwr.app.weavefox.cn"
+ },
+ {
+  "id": "ztjtinhvkt",
+  "name": "正则表达式生成器",
+  "desc": "场景与样例 → 正则、测试表与可用代码",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://ztjtinhvkt.app.weavefox.cn"
+ },
+ {
+  "id": "qscr5qnhme",
+  "name": "英语单词记忆计划生成器",
+  "desc": "考试与天数 → 每日任务、复习节奏与词表",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://qscr5qnhme.app.weavefox.cn"
+ },
+ {
+  "id": "npus3h2aq6",
+  "name": "儿童兴趣班选择助手",
+  "desc": "孩子特点与预算 → 兴趣班推荐与避坑清单",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://npus3h2aq6.app.weavefox.cn"
+ },
+ {
+  "id": "wnpm4rj8gw",
+  "name": "商品定价建议生成器",
+  "desc": "成本与竞品价 → 三档定价、毛利测算与调价节奏",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://wnpm4rj8gw.app.weavefox.cn"
+ },
+ {
+  "id": "z5acqhaahj",
+  "name": "面试复盘分析器",
+  "desc": "面试问答 → 逐题评分、优化回答与备战清单",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://z5acqhaahj.app.weavefox.cn"
+ },
+ {
+  "id": "5chjyut6g5",
+  "name": "作文素材生成器",
+  "desc": "主题学段 → 开头结尾、事例素材与结构提纲",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://5chjyut6g5.app.weavefox.cn"
+ },
+ {
+  "id": "url4vxdyk8",
+  "name": "社群运营SOP生成器",
+  "desc": "社群类型与周期 → 每日节奏、话术与活动",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://url4vxdyk8.app.weavefox.cn"
+ },
+ {
+  "id": "wnpmibj8gw",
+  "name": "API 接口文档生成器",
+  "desc": "接口用途与技术栈 → 接口定义、示例与错误码",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://wnpmibj8gw.app.weavefox.cn"
+ },
+ {
+  "id": "cjh2kee3pc",
+  "name": "阅读理解出题器",
+  "desc": "文章与学段 → 5 道题、答案与逐题解析",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://cjh2kee3pc.app.weavefox.cn"
+ },
+ {
+  "id": "sf7x93y97s",
+  "name": "自我介绍生成器",
+  "desc": "场景与时长 → 3 版自我介绍、追问预案与口播提示",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://sf7x93y97s.app.weavefox.cn"
+ },
+ {
+  "id": "j239apxyyi",
+  "name": "宝宝作息表生成器",
+  "desc": "月龄与困扰 → 作息表、哄睡流程与调整节奏",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://j239apxyyi.app.weavefox.cn"
+ },
+ {
+  "id": "ew9hluixkx",
+  "name": "订单催付话术生成器",
+  "desc": "平台与阶段 → 3 版催付话术、节奏与合规红线",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://ew9hluixkx.app.weavefox.cn"
+ },
+ {
+  "id": "glzpvpcqng",
+  "name": "公众号选题生成器",
+  "desc": "领域与读者 → 20 个选题、钩子与排期",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://glzpvpcqng.app.weavefox.cn"
+ },
+ {
+  "id": "kesq6fdudk",
+  "name": "文言文实词卡片生成器",
+  "desc": "学段与词量 → 实词卡片、辨析与自测",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://kesq6fdudk.app.weavefox.cn"
+ },
+ {
+  "id": "dvynvcgy5d",
+  "name": "旧物断舍离清单生成器",
+  "desc": "空间与偏好 → 分类清单、执行表与防反弹",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://dvynvcgy5d.app.weavefox.cn"
+ },
+ {
+  "id": "2qx5klqqxb",
+  "name": "技术方案评审清单生成器",
+  "desc": "项目类型与关切 → 评审清单、风险与上线检查",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://2qx5klqqxb.app.weavefox.cn"
+ },
+ {
+  "id": "qh8c6dstfq",
+  "name": "亲子游戏活动生成器",
+  "desc": "年龄场地时长 → 5 个游戏、流程与安全提示",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://qh8c6dstfq.app.weavefox.cn"
+ },
+ {
+  "id": "c7sm46egmi",
+  "name": "电商大促备货清单",
+  "desc": "活动品类单量 → 备货测算、物料与倒排表",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://c7sm46egmi.app.weavefox.cn"
+ },
+ {
+  "id": "npu54v2aq6",
+  "name": "英文面试问答生成器",
+  "desc": "岗位与轮次 → 高频英文问题、回答框架与救场句",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://npu54v2aq6.app.weavefox.cn"
+ },
+ {
+  "id": "z5afxvaahj",
+  "name": "语文作文批改器",
+  "desc": "学段文体与原文 → 四维评分、逐段点评与升格",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://z5afxvaahj.app.weavefox.cn"
+ },
+ {
+  "id": "5chwqut6g5",
+  "name": "日志排查助手",
+  "desc": "日志片段与现象 → 线索、成因排序与验证步骤",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://5chwqut6g5.app.weavefox.cn"
+ },
+ {
+  "id": "ew9sndixkx",
+  "name": "客服排班表生成器",
+  "desc": "人手与高峰 → 一周排班、SLA 与交接清单",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://ew9sndixkx.app.weavefox.cn"
+ },
+ {
+  "id": "m9veptue9a",
+  "name": "儿童零花钱计划生成器",
+  "desc": "年龄与目标 → 规则、家务奖励与记账模板",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://m9veptue9a.app.weavefox.cn"
+ },
+ {
+  "id": "uiumjhxjku",
+  "name": "小红书封面文案生成器",
+  "desc": "类型人群 → 10 条封面大字、配色与 A/B",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://uiumjhxjku.app.weavefox.cn"
+ },
+ {
+  "id": "ygw7xuz2jf",
+  "name": "无领导小组讨论话术",
+  "desc": "方向与角色 → 开场破冰、观点输出与总结模板",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://ygw7xuz2jf.app.weavefox.cn"
+ },
+ {
+  "id": "ztjwbxhvkt",
+  "name": "技术债清单生成器",
+  "desc": "项目与痛点 → 债务清单、优先级与偿还计划",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://ztjwbxhvkt.app.weavefox.cn"
+ },
+ {
+  "id": "qscxinnhme",
+  "name": "阳台种植计划生成器",
+  "desc": "朝向季节 → 6 种植物、配土与养护卡",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://qscxinnhme.app.weavefox.cn"
+ },
+ {
+  "id": "frbb5agsra",
+  "name": "包裹异常件处理清单",
+  "desc": "异常类型 → 处理流程、沟通话术与赔付划分",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://frbb5agsra.app.weavefox.cn"
+ },
+ {
+  "id": "mkqqx7rxwr",
+  "name": "小学生作业陪伴计划",
+  "desc": "年级与弱项 → 作业节奏、检查清单与话术",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://mkqqx7rxwr.app.weavefox.cn"
+ },
+ {
+  "id": "9pffrfr8kd",
+  "name": "公众号排版检查清单",
+  "desc": "文章类型 → 排版模板、配图节奏与自检",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://9pffrfr8kd.app.weavefox.cn"
+ },
+ {
+  "id": "ygwjhez2jf",
+  "name": "求职跟进邮件生成器",
+  "desc": "场景与公司类型 → 3 版邮件、中英对照与时机",
+  "price": 1,
+  "cat": "求职面试",
+  "url": "https://ygwjhez2jf.app.weavefox.cn"
+ },
+ {
+  "id": "ztjxmwhvkt",
+  "name": "物理公式速查卡生成器",
+  "desc": "学段章节 → 公式卡、推导与易错点",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://ztjxmwhvkt.app.weavefox.cn"
+ },
+ {
+  "id": "qsceyhnhme",
+  "name": "家用电器选购指南",
+  "desc": "电器预算户型 → 参数、配置与避坑",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://qsceyhnhme.app.weavefox.cn"
+ },
+ {
+  "id": "sakyi79xrs",
+  "name": "Git 提交信息生成器",
+  "desc": "改动描述 → 3 版提交信息 + 拆分建议 + PR 草稿",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://sakyi79xrs.app.weavefox.cn"
+ },
+ {
+  "id": "9pfa8pr8kd",
+  "name": "跨部门沟通话术生成器",
+  "desc": "对象与诉求 → 3 版开场 + IM/邮件正文 + 应对",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://9pfa8pr8kd.app.weavefox.cn"
+ },
+ {
+  "id": "hmxnvafxk9",
+  "name": "幼儿园入园准备清单",
+  "desc": "年龄园所 → 物品清单 + 作息表 + 沟通清单",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://hmxnvafxk9.app.weavefox.cn"
+ },
+ {
+  "id": "pziwayqyzx",
+  "name": "商品问答预埋清单",
+  "desc": "品类价格带 → 20 条预埋问答 + 客服模板",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://pziwayqyzx.app.weavefox.cn"
+ },
+ {
+  "id": "ygwbvdz2jf",
+  "name": "转行可行性评估器",
+  "desc": "现岗与目标 → 能力映射 + 四维评分 + 3 个月路线",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://ygwbvdz2jf.app.weavefox.cn"
+ },
+ {
+  "id": "ztjnhyhvkt",
+  "name": "播客节目策划器",
+  "desc": "节目类型时长 → 单集大纲 + 提问 + 上线包",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://ztjnhyhvkt.app.weavefox.cn"
+ },
+ {
+  "id": "m9vf5hue9a",
+  "name": "绩效自评撰写器",
+  "desc": "岗位周期 → 自评结构 + 量化写法 + 面谈问答",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://m9vf5hue9a.app.weavefox.cn"
+ },
+ {
+  "id": "uiurb6xjku",
+  "name": "化学方程式配平练习生成器",
+  "desc": "学段题型 → 20 道题 + 步骤 + 口诀",
+  "price": 1,
+  "cat": "学生教育",
+  "url": "https://uiurb6xjku.app.weavefox.cn"
+ },
+ {
+  "id": "jamkukkp5e",
+  "name": "家庭药箱清单生成器",
+  "desc": "成员季节 → 分类清单 + 分区 + 就医信号",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://jamkukkp5e.app.weavefox.cn"
+ },
+ {
+  "id": "nyewxrpkdd",
+  "name": "客服质检评分表生成器",
+  "desc": "渠道品类 → 10 项质检指标 + 抽检规则 + 报告",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://nyewxrpkdd.app.weavefox.cn"
+ },
+ {
+  "id": "puwusa3a4t",
+  "name": "代码评审清单生成器",
+  "desc": "语言改动 → 15 项检查点 + 评论模板 + 门禁",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://puwusa3a4t.app.weavefox.cn"
+ },
+ {
+  "id": "sak6vv9xrs",
+  "name": "小红书评论区运营话术",
+  "desc": "笔记类型目标 → 10 条引导 + 差评应对 + 私信承接",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://sak6vv9xrs.app.weavefox.cn"
+ },
+ {
+  "id": "r3yheqzjyr",
+  "name": "校招网申填写助手",
+  "desc": "行业岗位 → 网申要点 + 经历改写 + 自查清单",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://r3yheqzjyr.app.weavefox.cn"
+ },
+ {
+  "id": "puwdj43a4t",
+  "name": "英语听力精听计划生成器",
+  "desc": "考试水平 → 21 天计划 + 五步法 + 专项",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://puwdj43a4t.app.weavefox.cn"
+ },
+ {
+  "id": "mkqywwrxwr",
+  "name": "儿童疫苗接种记录整理器",
+  "desc": "月龄地区 → 接种时间轴 + 补种对照",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://mkqywwrxwr.app.weavefox.cn"
+ },
+ {
+  "id": "qh824gstfq",
+  "name": "商品标题优化器",
+  "desc": "品类平台 → 10 条标题 + 关键词分层 + 违禁词检查",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://qh824gstfq.app.weavefox.cn"
+ },
+ {
+  "id": "c7s52qegmi",
+  "name": "账号定位诊断器",
+  "desc": "平台赛道 → 定位诊断 + 人设 + 30 天计划",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://c7s52qegmi.app.weavefox.cn"
+ },
+ {
+  "id": "4gpgk9btnf",
+  "name": "接口联调排错清单",
+  "desc": "协议现象 → 排查顺序 + 原因对照 + 验证",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://4gpgk9btnf.app.weavefox.cn"
+ },
+ {
+  "id": "uiu5naxjku",
+  "name": "实习经历挖掘助手",
+  "desc": "专业目标 → 经历清单 + STAR 改写 + 投递话术",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://uiu5naxjku.app.weavefox.cn"
+ },
+ {
+  "id": "vfgcsmlsqf",
+  "name": "实验报告撰写助手",
+  "desc": "学科类型 → 报告结构 + 数据处理 + 讨论",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://vfgcsmlsqf.app.weavefox.cn"
+ },
+ {
+  "id": "fw4jakyqkh",
+  "name": "家庭收纳分区方案生成器",
+  "desc": "房型难点 → 分区方案 + 清单 + 预算",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://fw4jakyqkh.app.weavefox.cn"
+ },
+ {
+  "id": "cjhgj9e3pc",
+  "name": "店铺售后数据周报表",
+  "desc": "平台品类 → 周报模板 + 归因 + 改进动作",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://cjhgj9e3pc.app.weavefox.cn"
+ },
+ {
+  "id": "mkqtkrrxwr",
+  "name": "短视频开头钩子生成器",
+  "desc": "赛道受众 → 10 条钩子 + 句式 + 避坑",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://mkqtkrrxwr.app.weavefox.cn"
+ },
+ {
+  "id": "tb2gbumk3t",
+  "name": "会议发言提纲生成器",
+  "desc": "会议角色 → 发言结构 + 开场 + 应答",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://tb2gbumk3t.app.weavefox.cn"
+ },
+ {
+  "id": "r3yrpgzjyr",
+  "name": "数据库表设计评审清单",
+  "desc": "场景规模 → 评审清单 + 索引建议 + 回滚表",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://r3yrpgzjyr.app.weavefox.cn"
+ },
+ {
+  "id": "frbfmbgsra",
+  "name": "考研复试准备计划",
+  "desc": "专业院校 → 复试流程 + 问题清单 + 应答",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://frbfmbgsra.app.weavefox.cn"
+ },
+ {
+  "id": "sakszh9xrs",
+  "name": "儿童家务分工表生成器",
+  "desc": "年龄结构 → 家务清单 + 分工表 + 激励",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://sakszh9xrs.app.weavefox.cn"
+ },
+ {
+  "id": "g42mpvtuhw",
+  "name": "商品评价管理清单",
+  "desc": "品类平台 → 评价获取 + 差评处理 + 周检查表",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://g42mpvtuhw.app.weavefox.cn"
+ },
+ {
+  "id": "7bpjk4web7",
+  "name": "代码注释规范检查器",
+  "desc": "语言团队 → 注释规范 + 检查清单 + 改写示例",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://7bpjk4web7.app.weavefox.cn"
+ },
+ {
+  "id": "rdpbtj4t4r",
+  "name": "家庭保险配置清单",
+  "desc": "家庭结构收入 → 险种优先级 + 保额 + 避坑",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://rdpbtj4t4r.app.weavefox.cn"
+ },
+ {
+  "id": "mknbacrxwr",
+  "name": "简历投递跟踪表",
+  "desc": "阶段行业 → 跟踪表 + 跟进话术 + 止损规则",
+  "price": 2,
+  "cat": "求职面试",
+  "url": "https://mknbacrxwr.app.weavefox.cn"
+ },
+ {
+  "id": "xqt2mmbndh",
+  "name": "历史时间轴记忆卡生成器",
+  "desc": "学段范围 → 时间轴 + 因果链 + 口诀",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://xqt2mmbndh.app.weavefox.cn"
+ },
+ {
+  "id": "rdpk694t4r",
+  "name": "汇报图表选型助手",
+  "desc": "数据类型 → 图表选型 + 结构 + 讲解话术",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://rdpk694t4r.app.weavefox.cn"
+ },
+ {
+  "id": "pz8zhnqyzx",
+  "name": "直播场控清单",
+  "desc": "平台品类 → 场控时间轴 + 口令表 + 复盘",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://pz8zhnqyzx.app.weavefox.cn"
+ },
+ {
+  "id": "ygjgstz2jf",
+  "name": "英语语法错题诊断器",
+  "desc": "板块错因 → 规则讲解 + 练习 + 训练",
+  "price": 2,
+  "cat": "学生教育",
+  "url": "https://ygjgstz2jf.app.weavefox.cn"
+ },
+ {
+  "id": "frnrzvgsra",
+  "name": "儿童视力保护计划",
+  "desc": "年龄场景 → 用眼规则 + 户外安排 + 提醒",
+  "price": 2,
+  "cat": "亲子宠物",
+  "url": "https://frnrzvgsra.app.weavefox.cn"
+ },
+ {
+  "id": "c79wcbegmi",
+  "name": "远程协作规则清单",
+  "desc": "团队分布规模 → 协作规则 + 会议 + 文档",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://c79wcbegmi.app.weavefox.cn"
+ },
+ {
+  "id": "4gqctebtnf",
+  "name": "发布上线检查清单",
+  "desc": "应用类型 → 上线检查 + 回滚 + 验证",
+  "price": 2,
+  "cat": "研发效率",
+  "url": "https://4gqctebtnf.app.weavefox.cn"
+ },
+ {
+  "id": "qseyv5nhme",
+  "name": "家庭年度体检计划",
+  "desc": "成员年龄 → 项目清单 + 频次 + 记录",
+  "price": 2,
+  "cat": "生活家庭",
+  "url": "https://qseyv5nhme.app.weavefox.cn"
+ },
+ {
+  "id": "rdpcej4t4r",
+  "name": "小学数学口算题卡生成器",
+  "desc": "年级题型 → 题卡 + 答案 + 计时表",
+  "price": 1,
+  "cat": "学生教育",
+  "url": "https://rdpcej4t4r.app.weavefox.cn"
+ },
+ {
+  "id": "5cmiedt6g5",
+  "name": "OKR 对齐检查器",
+  "desc": "团队周期 → 写法判定 + 对齐 + 复盘",
+  "price": 2,
+  "cat": "职场办公",
+  "url": "https://5cmiedt6g5.app.weavefox.cn"
+ },
+ {
+  "id": "j25pukxyyi",
+  "name": "商品上架审核清单",
+  "desc": "平台品类 → 资质图文 + 违禁词 + 观察项",
+  "price": 2,
+  "cat": "电商客服",
+  "url": "https://j25pukxyyi.app.weavefox.cn"
+ },
+ {
+  "id": "bnussdnsmb",
+  "name": "古诗词默写检测器",
+  "desc": "学段篇目 → 题卡 + 答案 + 复习安排",
+  "price": 1,
+  "cat": "学生教育",
+  "url": "https://bnussdnsmb.app.weavefox.cn"
+ },
+ {
+  "id": "nyitt9pkdd",
+  "name": "内容选题日历生成器",
+  "desc": "平台赛道 → 30天选题 + 标题模板",
+  "price": 2,
+  "cat": "自媒体运营",
+  "url": "https://nyitt9pkdd.app.weavefox.cn"
+ },
+ {
+  "id": "ekgs3pvhte",
+  "name": "图片压缩改尺寸",
+  "desc": "本地批量压缩 → 指定 KB/像素，免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ekgs3pvhte.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "3xh2yr5af3",
+  "name": "房贷提前还款计算器",
+  "desc": "等额本息对比 + 提前还款两方案，免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://3xh2yr5af3.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "g42fhctuhw",
+  "name": "二维码生成器",
+  "desc": "文本网址 → 本地生成 PNG，免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://g42fhctuhw.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "m9lqr6ue9a",
+  "name": "JSON 格式化校验器",
+  "desc": "粘贴 JSON 即格式化、校验并统计结构，本地处理",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://m9lqr6ue9a.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "j25vhrxyyi",
+  "name": "CSV ↔ JSON 转换器",
+  "desc": "CSV 与 JSON 双向转换，支持分隔符/表头/美化",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://j25vhrxyyi.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "urjnzsdyk8",
+  "name": "文本批量处理",
+  "desc": "批量去重、查找替换、排序与前后缀，本地处理",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://urjnzsdyk8.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "keye5ddudk",
+  "name": "Base64 编解码器",
+  "desc": "文本与 Base64 双向转换，支持 UTF-8/URL 安全",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://keye5ddudk.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "frnp3wgsra",
+  "name": "URL 编解码与参数解析器",
+  "desc": "URL 编码/解码 + 查询参数解析与地址分解",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://frnp3wgsra.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "urjhfedyk8",
+  "name": "时间戳转换器",
+  "desc": "时间戳与日期互转，秒/毫秒/多时区/多格式",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://urjhfedyk8.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "dvz878gy5d",
+  "name": "图片格式转换器",
+  "desc": "PNG/JPG/WebP 互转，质量/尺寸可调，本地处理",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dvz878gy5d.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "wn3a9fj8gw",
+  "name": "文本 Diff 对比器",
+  "desc": "逐行/逐词/逐字符对比，标注新增删除与相似度",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://wn3a9fj8gw.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "7bpyp2web7",
+  "name": "颜色转换与对比度检测器",
+  "desc": "HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://7bpyp2web7.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "x8slbmcakb",
+  "name": "Markdown 表格生成器",
+  "desc": "CSV/TSV/竖线文本转标准 Markdown 表格，支持对齐",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://x8slbmcakb.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "fwbncxyqkh",
+  "name": "数字进制转换器",
+  "desc": "二/八/十/十六进制互转，位宽与位模式展示",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://fwbncxyqkh.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "uidvbyxjku",
+  "name": "命名风格转换器",
+  "desc": "camel/snake/kebab/Pascal/常量/中文标题互转",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://uidvbyxjku.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "lymnmkjxel",
+  "name": "日期计算器",
+  "desc": "相差天数、日期加减与工作日计算，本地秒算",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://lymnmkjxel.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "urjgjtdyk8",
+  "name": "文本统计与阅读时间",
+  "desc": "字符/词/行统计、阅读与演讲时长、词频 Top10",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://urjgjtdyk8.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "wn363rj8gw",
+  "name": "图片裁剪器",
+  "desc": "本地裁剪头像/封面/商品图，比例尺寸自选可下载",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://wn363rj8gw.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "uidlsfxjku",
+  "name": "密码生成器",
+  "desc": "本地生成高强度密码，长度字符集可选，含强度评估",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://uidlsfxjku.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "vftnmglsqf",
+  "name": "随机分组抽签器",
+  "desc": "名单随机分组与单人抽签，加密随机公平不重复",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://vftnmglsqf.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "g42uqytuhw",
+  "name": "BMI 与热量计算器",
+  "desc": "BMI 分级、基础代谢、每日消耗与目标热量计算",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://g42uqytuhw.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "keyw5ddudk",
+  "name": "单位换算器",
+  "desc": "长度/重量/面积/体积/温度/数据六类单位互转",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://keyw5ddudk.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "r3akzzzjyr",
+  "name": "哈希校验工具",
+  "desc": "本地计算 SHA-256/384/512，文本与文件校验对比",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://r3akzzzjyr.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "frnustgsra",
+  "name": "番茄钟与倒计时",
+  "desc": "专注/休息轮次计时，进度环与今日完成统计",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://frnustgsra.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "bnudn6nsmb",
+  "name": "科学计算器",
+  "desc": "四则与科学函数计算，角度模式、记忆键与历史",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bnudn6nsmb.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "ekg2knvhte",
+  "name": "Markdown 实时预览器",
+  "desc": "本地实时渲染 Markdown，支持主题/导出 HTML",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ekg2knvhte.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "3xhvxh5af3",
+  "name": "人民币大写金额转换器",
+  "desc": "数字金额转中文大写，支持角分与银行汇款式",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://3xhvxh5af3.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "mknibarxwr",
+  "name": "图片加水印",
+  "desc": "本地给图片加水印，文字/字号/透明度/位置可调",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://mknibarxwr.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "tbqexcmk3t",
+  "name": "打字速度测试",
+  "desc": "实时高亮比对，测 WPM/CPM 与正确率",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://tbqexcmk3t.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "rdp8n24t4r",
+  "name": "本地待办便签",
+  "desc": "本地保存的待办清单，优先级/截止日/导出 JSON",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdp8n24t4r.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "sfw5ysy97s",
+  "name": "文本加密解密",
+  "desc": "本地 AES-GCM 加解密文本，口令派生密钥",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://sfw5ysy97s.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "j25uddxyyi",
+  "name": "图片取色器",
+  "desc": "上传图片点击取色，HEX/RGB/HSL + 历史调色板",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://j25uddxyyi.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "bnuscunsmb",
+  "name": "简易记账本",
+  "desc": "本地记账，收支汇总、分类占比与导出 CSV",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bnuscunsmb.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "j25db4xyyi",
+  "name": "简易画板",
+  "desc": "本地涂鸦画板，颜色/粗细/橡皮，导出 PNG",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://j25db4xyyi.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "bnu92knsmb",
+  "name": "九宫格切图器",
+  "desc": "图片一键切 3×3/2×2 等，逐张下载",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bnu92knsmb.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "ekgnlbvhte",
+  "name": "星座与生肖查询器",
+  "desc": "生日查星座/生肖/年龄/下次生日倒计时",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ekgnlbvhte.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "glh2nmcqng",
+  "name": "图片滤镜与灰度",
+  "desc": "本地滤镜/黑白/亮度对比度饱和度，导出图片",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://glh2nmcqng.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "keybxzdudk",
+  "name": "数字转罗马与中文数字",
+  "desc": "阿拉伯/罗马/中文数字双向转换，含对照表",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://keybxzdudk.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "dvznbegy5d",
+  "name": "随机决定器",
+  "desc": "转盘/骰子/硬币随机决定，带历史记录",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dvznbegy5d.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "fwbhjxyqkh",
+  "name": "图片转 DataURL",
+  "desc": "图片转 DataURL/Base64/HTML/Markdown，可压缩",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://fwbhjxyqkh.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "x8s6kkcakb",
+  "name": "秒表与分段计时",
+  "desc": "毫秒级秒表 + 计次分段 + 导出 CSV",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://x8s6kkcakb.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "bcsb5nk6f9",
+  "name": "配色方案生成器",
+  "desc": "互补/邻近/三角等配色规则，一键复制色卡",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bcsb5nk6f9.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "qse3gvnhme",
+  "name": "图片前后对比器",
+  "desc": "两张图滑块/并排/叠影对比，导出对比图",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qse3gvnhme.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "npxak92aq6",
+  "name": "月历生成器",
+  "desc": "按月/全年生成可打印月历，高亮今天与周数",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npxak92aq6.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "z56lnaaahj",
+  "name": "密码强度检测器",
+  "desc": "本地评估密码强度、熵值与改进建议",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z56lnaaahj.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "key2pcdudk",
+  "name": "思维导图生成器",
+  "desc": "输入主题与分支，生成可导出 SVG/PNG 的导图",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://key2pcdudk.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "r3avkczjyr",
+  "name": "世界时钟",
+  "desc": "多时区对照时钟，显示日期与时差",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://r3avkczjyr.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "frn8jngsra",
+  "name": "图片马赛克打码器",
+  "desc": "本地涂抹马赛克/模糊/黑块，保护隐私后下载",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://frn8jngsra.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "puva8i3a4t",
+  "name": "摩斯电码转换器",
+  "desc": "文本与摩斯电码双向转换，支持点划样式与音频播放",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puva8i3a4t.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "safluw9xrs",
+  "name": "复利与定投收益计算器",
+  "desc": "本金/定投/年化/年限 → 期末总额、收益与逐年明细，可导出 CSV",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://safluw9xrs.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "9pyjxqr8kd",
+  "name": "CSS 渐变生成器",
+  "desc": "线性/径向/圆锥渐变，实时预览并复制或下载 CSS",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://9pyjxqr8kd.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "qsexkmnhme",
+  "name": "HTTP 状态码速查表",
+  "desc": "30+ 常见状态码速查，支持搜索/分类/排查建议与复制",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsexkmnhme.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "z56yswaahj",
+  "name": "折扣与百分比计算器",
+  "desc": "折扣/满减/税率 → 折后价、节省与实付，含计算过程",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z56yswaahj.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "safjgk9xrs",
+  "name": "Cron 表达式解释器",
+  "desc": "cron 五段 → 中文解释、字段含义与未来执行时间",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://safjgk9xrs.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "frn2l7gsra",
+  "name": "图片拼接长图",
+  "desc": "多图纵向/横向拼接，可调间距与背景，导出 PNG",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://frn2l7gsra.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "dzkfeyslwd",
+  "name": "HTML 实体编解码器",
+  "desc": "HTML 特殊字符实体编码/解码，支持引号与换行",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzkfeyslwd.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "r3a6wazjyr",
+  "name": "单位价格比较器",
+  "desc": "不同规格商品按每 100g/500g 折算单价，比出更划算",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://r3a6wazjyr.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "ygjbzyz2jf",
+  "name": "图片圆角与边框生成器",
+  "desc": "本地给图片加圆角与边框，可调半径/颜色并导出 PNG",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ygjbzyz2jf.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "ztxnashvkt",
+  "name": "CSS 阴影生成器",
+  "desc": "滑块调偏移/模糊/扩散，实时预览并复制 box-shadow",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ztxnashvkt.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "qse8urnhme",
+  "name": "文本转 Unicode 转义",
+  "desc": "文本 ⇄ \\uXXXX 转义，支持三种格式与码点统计",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qse8urnhme.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "qse7ptnhme",
+  "name": "Markdown 转纯文本",
+  "desc": "Markdown → 纯文本，可去列表符号/代码块并下载 txt",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qse7ptnhme.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "npxiz82aq6",
+  "name": "敏感信息脱敏工具",
+  "desc": "手机号/身份证/邮箱/银行卡本地脱敏，含命中统计",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npxiz82aq6.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "z56hl3aahj",
+  "name": "颜色名称查询",
+  "desc": "HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z56hl3aahj.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "ygj23az2jf",
+  "name": "图片旋转与翻转工具",
+  "desc": "本地旋转 90/180/270° 与水平垂直翻转，导出 PNG",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ygj23az2jf.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "ztxq59hvkt",
+  "name": "工作日天数计算器",
+  "desc": "两日期之间的工作日/周末/节假日天数与月度明细",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ztxq59hvkt.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "qsew9znhme",
+  "name": "随机密码短语生成器",
+  "desc": "易记词组合成密码短语，含熵值估算与强度评级",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsew9znhme.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "2qcwr7qqxb",
+  "name": "图片 EXIF 信息查看与清除",
+  "desc": "本地读取照片 EXIF（设备/时间/GPS）并重绘清除元数据",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qcwr7qqxb.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "m9la4sue9a",
+  "name": "正则表达式测试器",
+  "desc": "正则实时匹配高亮、捕获组列表与替换预览",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://m9la4sue9a.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "uidaynxjku",
+  "name": "习惯打卡追踪器",
+  "desc": "习惯打卡日历网格 + 完成率与连续天数，本地保存",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://uidaynxjku.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "2qcjfcqqxb",
+  "name": "UUID 与随机密钥生成器",
+  "desc": "UUID v4 / Token / API Key 批量生成，含熵值与导出",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qcjfcqqxb.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "k64e8lftrk",
+  "name": "跨时区会议时间换算器",
+  "desc": "一个时间换算多时区本地时刻与时差，夏令时自动",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://k64e8lftrk.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "jarc8vkp5e",
+  "name": "CSS 玻璃拟态生成器",
+  "desc": "滑杆调模糊/透明度/圆角，实时预览并复制 CSS",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://jarc8vkp5e.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "sfwn9wy97s",
+  "name": "贷款还款方式对比计算器",
+  "desc": "等额本息与等额本金月供/总利息对比，含逐月明细",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://sfwn9wy97s.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "j258a6xyyi",
+  "name": "中英混排空格格式化工具",
+  "desc": "中英文/数字之间自动加空格，全角转半角",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://j258a6xyyi.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "ewrulmixkx",
+  "name": "条形码生成器 Code128",
+  "desc": "Code128B/C 与 EAN-13 条码绘制，含校验与导 PNG",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ewrulmixkx.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "atwrmjpmpa",
+  "name": "TOTP 动态验证码生成器",
+  "desc": "本地计算 2FA 动态验证码，Base32 解码与倒计时",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://atwrmjpmpa.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "dzkmanslwd",
+  "name": "三班倒排班表生成器",
+  "desc": "按人员名单循环排早中晚班，导出表格与 CSV",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzkmanslwd.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "nyi2whpkdd",
+  "name": "生日与纪念日提醒清单",
+  "desc": "生日纪念日倒数与提醒天数，本地保存并导出",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://nyi2whpkdd.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "r3ar3ezjyr",
+  "name": "图片转 ICO 图标生成器",
+  "desc": "多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://r3ar3ezjyr.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "frnfr2gsra",
+  "name": "SVG 波浪分割线生成器",
+  "desc": "调波高波峰生成 SVG 波浪分割线，复制或下载",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://frnfr2gsra.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "qseqsqnhme",
+  "name": "阶梯水电费计算器",
+  "desc": "阶梯电价水价分段计费，含分段明细与平均单价",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qseqsqnhme.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "wn5xhmj8gw",
+  "name": "隐私政策生成器",
+  "desc": "按信息类型与法规模板生成隐私政策，可导出 Markdown",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://wn5xhmj8gw.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "z5wpwyaahj",
+  "name": "JWT 解码查看器",
+  "desc": "本地解析 JWT Header/Payload，标准声明转时间与过期判断",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z5wpwyaahj.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "5cuungt6g5",
+  "name": "CSS 加载动画生成器",
+  "desc": "四种加载动画调参生成纯 CSS，可复制或下载 HTML",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://5cuungt6g5.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "2qepstqqxb",
+  "name": "中文简繁转换器",
+  "desc": "简繁双向逐字转换，含对照表与未收录提示",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qepstqqxb.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "m9jsrwue9a",
+  "name": "年龄与生日精确计算器",
+  "desc": "周岁精确到天、总天数、虚岁与下次生日倒计时",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://m9jsrwue9a.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "uise8bxjku",
+  "name": "家务轮值表生成器",
+  "desc": "成员与家务循环排班，输出表格与 CSV",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://uise8bxjku.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "3xmx6e5af3",
+  "name": "身份证与银行卡校验器",
+  "desc": "本地校验身份证校验位与银行卡 Luhn，含脱敏展示",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://3xmx6e5af3.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "g4q4xktuhw",
+  "name": "图片自动裁剪透明边",
+  "desc": "按容差自动裁掉透明边并保留内边距，导出图片",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://g4q4xktuhw.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "bcycnrk6f9",
+  "name": "油耗与出行成本计算器",
+  "desc": "按里程油耗油价算单次与每公里成本，可对比电车",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bcycnrk6f9.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "ja46pmkp5e",
+  "name": "CSS Flex 与 Grid 布局生成器",
+  "desc": "切换 Flex/Grid 调间距对齐，实时预览并复制 CSS",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ja46pmkp5e.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "2qes9dqqxb",
+  "name": "文本行去重与排序工具",
+  "desc": "按行去重排序并统计重复次数，可忽略大小写",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qes9dqqxb.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "7b3nvgweb7",
+  "name": "菜谱份量换算器",
+  "desc": "按份数比例换算食材用量，导出清单与 CSV",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://7b3nvgweb7.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "j2tnfgxyyi",
+  "name": "ISO 周数与日期查询器",
+  "desc": "查询 ISO 周数、周起止日期与年内第几天",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://j2tnfgxyyi.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "bnxqa6nsmb",
+  "name": "图片转 ASCII 艺术",
+  "desc": "图片转字符画，可选字符集与彩色 HTML 输出",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bnxqa6nsmb.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "atvxmfpmpa",
+  "name": "CSS 霓虹文字效果生成器",
+  "desc": "调色与发光强度生成霓虹 text-shadow，可复制下载",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://atvxmfpmpa.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "7b3qgqweb7",
+  "name": "中文转拼音工具",
+  "desc": "中文转带调/无调/首字母拼音，含逐字对照",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://7b3qgqweb7.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "ijankg8zig",
+  "name": "隐私设置自查清单",
+  "desc": "按场景生成隐私自查项与整改建议，本地记进度",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ijankg8zig.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "2qezkyqqxb",
+  "name": "书签整理与导出 HTML",
+  "desc": "校验去重书签并导出可导入浏览器的 bookmarks.html",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qezkyqqxb.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "atverkpmpa",
+  "name": "子网掩码与网段计算器",
+  "desc": "按 IP 与前缀算网络/广播/主机范围，含二进制对照",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://atverkpmpa.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "dzf5haslwd",
+  "name": "农历与节气查询器",
+  "desc": "公历转农历，生肖干支与全年二十四节气表",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzf5haslwd.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "ny8guqpkdd",
+  "name": "文本词频统计与关键词提取",
+  "desc": "分词统计词频与 Top20 关键词，含标签词云",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ny8guqpkdd.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "x89bsucakb",
+  "name": "发票税额与价税分离计算器",
+  "desc": "含税/不含税互转，按税率算税额并精确到分",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://x89bsucakb.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "bcykmjk6f9",
+  "name": "CSS 按钮样式生成器",
+  "desc": "调色与圆角实时生成按钮 CSS/HTML，含 hover",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bcykmjk6f9.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "bnxzbrnsmb",
+  "name": "日出日落与黄金时刻计算器",
+  "desc": "按经纬度算日出日落、昼长与黄金时刻",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bnxzbrnsmb.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "mkplawrxwr",
+  "name": "钓鱼链接识别自查",
+  "desc": "本地规则检测 IP 直连/长路径/可疑词，出风险评分",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://mkplawrxwr.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "tbnvznmk3t",
+  "name": "旅行行李清单生成器",
+  "desc": "按天数季节行程生成分类清单，可勾选与导出",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://tbnvznmk3t.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "rdqjpm4t4r",
+  "name": "面积与体积计算器",
+  "desc": "八种图形面积体积周长计算，含公式代入过程",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdqjpm4t4r.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "rdqkfj4t4r",
+  "name": "Base32 编解码器",
+  "desc": "RFC 4648 Base32 编解码，支持中文与填充校验",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdqkfj4t4r.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "lyrudrjxel",
+  "name": "中文标点全半角转换器",
+  "desc": "全角半角互转，按标点/数字/空格分范围处理",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://lyrudrjxel.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "urkuxmdyk8",
+  "name": "AA 账单分摊计算器",
+  "desc": "明细+小费+人数算人均，尾差记第一人",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://urkuxmdyk8.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "3xmx4f5af3",
+  "name": "ICS 日历文件生成器",
+  "desc": "多行事件生成标准 iCalendar，可导入手机日历",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://3xmx4f5af3.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "tbnjpnmk3t",
+  "name": "SVG 图表生成器",
+  "desc": "柱状/折线/面积图纯 SVG 生成，可下载源码",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://tbnjpnmk3t.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "bcyaubk6f9",
+  "name": "批量序列号生成器",
+  "desc": "前缀+位数批量生成唯一序列号，含校验位",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bcyaubk6f9.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "z5wwxxaahj",
+  "name": "装修材料用量计算器",
+  "desc": "按面积与损耗算涂料/瓷砖/地板/壁纸用量",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z5wwxxaahj.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "5cunqft6g5",
+  "name": "文章字数与稿费计算器",
+  "desc": "按字数千字单价算稿费，含加急倍数与阅读时长",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://5cunqft6g5.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "kezwhcdudk",
+  "name": "Unicode 码点与 UTF-8 字节查询器",
+  "desc": "逐字查码点/UTF-8 字节，正确处理 emoji 代理对",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://kezwhcdudk.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "uisqu2xjku",
+  "name": "敏感词本地过滤检测器",
+  "desc": "内置 80 条分类词库+自定义词，本地过滤并统计",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://uisqu2xjku.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "vfmdv3lsqf",
+  "name": "每日饮水与作息计划生成器",
+  "desc": "按体重活动量算饮水量并生成分时作息表",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://vfmdv3lsqf.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "fwkzfxyqkh",
+  "name": "法定节假日与调休日历生成器",
+  "desc": "2025~2027 节假日与调休日历，含天数统计",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://fwkzfxyqkh.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "c7rsb3egmi",
+  "name": "CSS 表格样式生成器",
+  "desc": "调色圆角斑马纹实时生成表格 CSS/HTML",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7rsb3egmi.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "4gswjgbtnf",
+  "name": "文章同义词替换与降重助手",
+  "desc": "内置同义词库+自定义替换对，按强度改写",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://4gswjgbtnf.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "qsikgrnhme",
+  "name": "工资薪金个税计算器",
+  "desc": "按七档税率算个税与到手，含逐档明细",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsikgrnhme.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "vfmrjplsqf",
+  "name": "会议排期冲突检测器",
+  "desc": "多会议区间重叠检测，算出时长与空闲时段",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://vfmrjplsqf.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "fwk3ajyqkh",
+  "name": "CSS 徽章与标签样式生成器",
+  "desc": "四种徽章样式实时预览并生成 CSS/HTML",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://fwk3ajyqkh.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "x89sejcakb",
+  "name": "HTTP 安全响应头检查器",
+  "desc": "粘贴响应头本地判定 6 项安全头并评分",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://x89sejcakb.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "qsiducnhme",
+  "name": "十六进制文件查看器",
+  "desc": "本地读文件或粘贴文本转十六进制转储与 ASCII",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsiducnhme.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "dzf7vmslwd",
+  "name": "家庭药品与保质期提醒表",
+  "desc": "按有效期分级正常/临期/过期并算剩余天数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzf7vmslwd.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "r36xfxzjyr",
+  "name": "旅行费用预算计算器",
+  "desc": "交通住宿餐饮分项占比与人均、每日预算",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://r36xfxzjyr.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "ygxjqkz2jf",
+  "name": "每周菜单与采购清单生成器",
+  "desc": "按人数天数口味生成七日菜单与分类采购清单",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ygxjqkz2jf.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "ztbksuhvkt",
+  "name": "URL 追踪参数清理器",
+  "desc": "批量移除 utm/fbclid/gclid 等追踪参数保留有效参数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ztbksuhvkt.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "mkpwgxrxwr",
+  "name": "CSS 开关切换组件生成器",
+  "desc": "纯 CSS 开关实时预览，生成含 checked 状态代码",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://mkpwgxrxwr.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "ja45jzkp5e",
+  "name": "JSON 转 TypeScript 接口生成器",
+  "desc": "粘贴 JSON 自动推导类型并生成 TypeScript interface",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ja45jzkp5e.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "pz7jntqyzx",
+  "name": "增长率与 CAGR 计算器",
+  "desc": "算总增长率、年均复合增长率与 72 法则翻倍年数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://pz7jntqyzx.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "qhwjqsstfq",
+  "name": "文字与 Emoji 转 Favicon 生成器",
+  "desc": "文字或 Emoji 一键生成多尺寸 PNG 站点图标",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qhwjqsstfq.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "tbnh7qmk3t",
+  "name": "满减凑单计算器",
+  "desc": "按满减规则枚举组合，算出实付最低的最优凑单方案",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://tbnh7qmk3t.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "ija4mt8zig",
+  "name": "SQL 格式化与美化器",
+  "desc": "SQL 关键字换行缩进美化，支持大小写与逗号换行",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ija4mt8zig.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "2qelpaqqxb",
+  "name": "睡眠周期与就寝时间计算器",
+  "desc": "按 90 分钟周期倒推就寝时间，含入睡耗时",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qelpaqqxb.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "m9jbktue9a",
+  "name": "打印尺寸与像素换算器",
+  "desc": "毫米尺寸与 DPI 换算像素，含 A4/名片等预设",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://m9jbktue9a.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "tbndpgmk3t",
+  "name": "XML 格式化与压缩器",
+  "desc": "XML 逐层缩进美化与单行压缩，含统计与错误提示",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://tbndpgmk3t.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "rdq9yv4t4r",
+  "name": "Markdown 目录 TOC 生成器",
+  "desc": "按标题层级生成带锚点缩进的 Markdown 目录",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdq9yv4t4r.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "lyrxbzjxel",
+  "name": "手动汇率换算器",
+  "desc": "手动汇率双向换算，含手续费与到手金额",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://lyrxbzjxel.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "puhhuj3a4t",
+  "name": "GPA 与成绩换算器",
+  "desc": "百分制与 4.0/5.0 制互转，按学分加权算 GPA",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puhhuj3a4t.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "sayp6n9xrs",
+  "name": "跑步配速与完赛时间计算器",
+  "desc": "距离时间互算配速、速度与每公里分段",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://sayp6n9xrs.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "9paqwhr8kd",
+  "name": "JSONPath 提取器",
+  "desc": "用 $.a.b[0] 路径提取 JSON 字段，支持全部匹配",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://9paqwhr8kd.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "2qeyylqqxb",
+  "name": "JSON Schema 生成器",
+  "desc": "从示例 JSON 推断 draft-07 Schema，含必填与数组项",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qeyylqqxb.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "qhwvgdstfq",
+  "name": "颜色混合与透明度计算器",
+  "desc": "两色按比例混合并叠加背景，输出 HEX/RGB",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qhwvgdstfq.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "c7rkj6egmi",
+  "name": "数字转英文读法",
+  "desc": "整数转英文单词，支持英式 and 与序数词",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7rkj6egmi.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "vfmedklsqf",
+  "name": "HTML 转 Markdown 转换器",
+  "desc": "HTML 片段转 Markdown，支持标题/加粗/链接/列表",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://vfmedklsqf.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "2qeyjmqqxb",
+  "name": "简易节拍器与 BPM 计算器",
+  "desc": "WebAudio 本地节拍声，显示拍位与每拍毫秒数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qeyjmqqxb.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "7b3ecrweb7",
+  "name": "CSS 进度条样式生成器",
+  "desc": "颜色/高度/圆角/条纹可调，实时预览并生成 CSS",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://7b3ecrweb7.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "2qe6kzqqxb",
+  "name": "CSV 合并与拆分工具",
+  "desc": "多份 CSV 按表头合并，按行数或列值拆分后导出",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qe6kzqqxb.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "qhwm67stfq",
+  "name": "CSS 文字描边生成器",
+  "desc": "描边颜色/宽度/方式可调，实时预览并生成 CSS",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qhwm67stfq.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "9pahqsr8kd",
+  "name": "YAML 与 JSON 双向转换器",
+  "desc": "YAML ⇄ JSON 双向转换，缩进可调并定位错误行号",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://9pahqsr8kd.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "rdqxau4t4r",
+  "name": "TOML 与 JSON 双向转换器",
+  "desc": "TOML 与 JSON 互转，支持表/数组表并定位错误行号",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdqxau4t4r.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "ztbavdhvkt",
+  "name": "时长加减与工时计算器",
+  "desc": "多行时长累加求合计与分钟数，按 8 小时折算并算金额",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ztbavdhvkt.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "qsiub9nhme",
+  "name": "文本大小写批量转换器",
+  "desc": "五种大小写模式逐行批量转换，含空格归并与自定义替换",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsiub9nhme.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "m9jfu6ue9a",
+  "name": "CSS 动画缓动曲线生成器",
+  "desc": "调节四个控制点生成 cubic-bezier，实时预览并导出 CSS",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://m9jfu6ue9a.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "uisvq8xjku",
+  "name": "加班费与调休计算器",
+  "desc": "按月薪与三类加班时长算加班费、合计与调休天数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://uisvq8xjku.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "vfmbddlsqf",
+  "name": "咖啡因摄入与代谢计算器",
+  "desc": "按半衰期算 4/8/12 小时残留与建议就寝时间",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://vfmbddlsqf.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "dzfmynslwd",
+  "name": "家庭用药提醒清单生成器",
+  "desc": "按频次与开始时间生成每日服药时间点、日程表与累计次数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzfmynslwd.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "ny89vhpkdd",
+  "name": "会议议程与时间分配生成器",
+  "desc": "按议题分钟数排时间表，算占比并校验是否超时",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ny89vhpkdd.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "fr2tregsra",
+  "name": "CSS 轮播图样式生成器",
+  "desc": "宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://fr2tregsra.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "ny8rttpkdd",
+  "name": "呼吸放松计时器",
+  "desc": "4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ny8rttpkdd.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "puhc8q3a4t",
+  "name": "汽车保养与年检提醒表",
+  "desc": "按里程与间隔算下次保养，按购车日期推算年检到期",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puhc8q3a4t.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "say4uq9xrs",
+  "name": "文本空行清理与重复行统计器",
+  "desc": "清理空行、去重并统计重复行次数，保留首次出现顺序",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://say4uq9xrs.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "qhwajtstfq",
+  "name": "时差调整作息计划生成器",
+  "desc": "按两地时差生成逐日就寝与起床调整表，判断提前或推迟",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qhwajtstfq.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "c7rfzsegmi",
+  "name": "久坐提醒与拉伸计划生成器",
+  "desc": "按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7rfzsegmi.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "4gs8yrbtnf",
+  "name": "待办四象限优先级整理器",
+  "desc": "按重要度与紧急度阈值分区待办，给出处理顺序与时间分配",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://4gs8yrbtnf.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "npcsur2aq6",
+  "name": "停车费与停车时长计算器",
+  "desc": "按入场出场时间与首小时/后续单价算停车时长与费用",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npcsur2aq6.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "z5wgaqaahj",
+  "name": "快递运费估算器",
+  "desc": "按重量首重续重与区域系数估算运费，支持保价费",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z5wgaqaahj.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "5culhkt6g5",
+  "name": "文件大小与下载时间估算器",
+  "desc": "按大小与带宽效率折算下载耗时，给出理论/实际对比",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://5culhkt6g5.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "ektq3cvhte",
+  "name": "体脂率与腰臀比计算器",
+  "desc": "按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ektq3cvhte.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "3xmlz85af3",
+  "name": "防晒霜用量与补涂计算器",
+  "desc": "按面部面积与 SPF 算单次用量、有效时长与补涂次数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://3xmlz85af3.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "g4qemytuhw",
+  "name": "航班行李额与超重费估算器",
+  "desc": "按舱位与件重算免费额度、超重公斤数与超重费",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://g4qemytuhw.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "9pag3yr8kd",
+  "name": "证件照尺寸与背景要求查询器",
+  "desc": "查常用证件照尺寸、像素与背景色，算相纸可排张数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://9pag3yr8kd.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "hmncr5fxk9",
+  "name": "家电保养与滤芯更换提醒表",
+  "desc": "按家电类型与上次保养日推算下次保养与耗材更换",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://hmncr5fxk9.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "atvvufpmpa",
+  "name": "房租押金与水电结算计算器",
+  "desc": "按租金押金月数水电与违约扣款算应退押金与清单",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://atvvufpmpa.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "qsiaupnhme",
+  "name": "屏幕使用与护眼休息计划生成器",
+  "desc": "按屏幕时长与间隔生成 20-20-20 休息提醒时间表",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsiaupnhme.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "npcr5f2aq6",
+  "name": "CSS 骨架屏占位生成器",
+  "desc": "块数/高度/圆角/颜色可调，实时预览并导出骨架屏 CSS",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npcr5f2aq6.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "z5wef2aahj",
+  "name": "环境噪音分贝对照与听力保护提示",
+  "desc": "按分贝与暴露时长算安全时长、风险等级与防护建议",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z5wef2aahj.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "tbn7hlmk3t",
+  "name": "航班转机时间估算器",
+  "desc": "按到达起飞时间与各环节耗时判断转机是否够用",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://tbn7hlmk3t.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "rdqjum4t4r",
+  "name": "洗手计时与步骤提示器",
+  "desc": "20 秒倒计时配七步提示，流动水与皂液要点",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdqjum4t4r.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "ztbcauhvkt",
+  "name": "小费与账单分摊计算器",
+  "desc": "按账单与小费比例算总额，支持服务费与每人取整分摊",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ztbcauhvkt.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "atvl9kpmpa",
+  "name": "文件批量重命名规则生成器",
+  "desc": "按前缀编号统一改名，保留扩展名并检测重名冲突",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://atvl9kpmpa.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "dzfdhcslwd",
+  "name": "每周时间块日程生成器",
+  "desc": "按上下班时间自动排出专注块与休息，支持多工作日",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzfdhcslwd.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "ny83nwpkdd",
+  "name": "行李打包清单生成器",
+  "desc": "按天数季节与出行类型生成分类打包清单，可勾选核对",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ny83nwpkdd.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "rdqxu54t4r",
+  "name": "手机电池充电时间估算器",
+  "desc": "按容量与充电功率估算充满用时，含三段慢充分段",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdqxu54t4r.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "lyryxpjxel",
+  "name": "合同到期与续签提醒表",
+  "desc": "按生效日与年限算到期日、剩余天数与提前提醒日",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://lyryxpjxel.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "urkdhldyk8",
+  "name": "护照有效期与入境余量检查器",
+  "desc": "对比入境日与护照到期日，判断是否满足 6 个月余量",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://urkdhldyk8.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "hmn8b3fxk9",
+  "name": "心率区间与运动强度计算器",
+  "desc": "按年龄与静息心率算五档心率区间，给出燃脂推荐范围",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://hmn8b3fxk9.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "atvkckpmpa",
+  "name": "食物热量与运动消耗换算器",
+  "desc": "按 MET 与体重换算消耗某份热量需要的运动分钟数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://atvkckpmpa.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "dzfc3aslwd",
+  "name": "签证类型与材料清单生成器",
+  "desc": "按目的地与出行目的生成签证类型、材料清单与办理周期",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzfc3aslwd.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "puhfd93a4t",
+  "name": "步数与活动量目标计算器",
+  "desc": "按身高体重估算步幅里程、额外步数与消耗热量",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puhfd93a4t.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "sayevp9xrs",
+  "name": "字体搭配与排版比例生成器",
+  "desc": "按基准字号与字阶比例生成六级字号行高与字体栈",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://sayevp9xrs.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "9pavh8r8kd",
+  "name": "色盲友好配色检查器",
+  "desc": "模拟四类色觉障碍并重算 WCAG 对比度是否达标",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://9pavh8r8kd.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "r36jfpzjyr",
+  "name": "实际时薪与通勤成本计算器",
+  "desc": "扣除通勤时间与支出，算出真实时薪与年等效小时",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://r36jfpzjyr.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "puhymr3a4t",
+  "name": "通胀购买力换算计算器",
+  "desc": "按通胀率推算未来等值金额、购买力缩水与实际收益率",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puhymr3a4t.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "sayvzk9xrs",
+  "name": "邮箱签名与名片信息生成器",
+  "desc": "一键生成纯文本与 HTML 邮箱签名，附脱敏预览",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://sayvzk9xrs.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "k6bth4ftrk",
+  "name": "信用卡账单日与免息期规划器",
+  "desc": "按账单日与还款日算最晚还款、免息天数与最长消费窗口",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://k6bth4ftrk.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "ja4gvvkp5e",
+  "name": "长文本摘要与压缩率计算器",
+  "desc": "确定性抽取式摘要，给出字数压缩率与句子段落统计",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ja4gvvkp5e.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "2qethzqqxb",
+  "name": "月度预算配额分配器",
+  "desc": "按收入与比例拆分配额，校验占比合计与结余",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qethzqqxb.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "4gsndabtnf",
+  "name": "预产期与孕周计算器",
+  "desc": "按末次月经与周期算预产期、孕周天数与进度百分比",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://4gsndabtnf.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "qsixqdnhme",
+  "name": "储蓄目标达成时间计算器",
+  "desc": "按月复利推演攒到目标金额所需月数与利息结构",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsixqdnhme.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "k6bmafftrk",
+  "name": "CSS 分隔线与点阵背景生成器",
+  "desc": "四种分隔线/背景样式生成可复制的 CSS 与 HTML 示例",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://k6bmafftrk.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "qsixiqnhme",
+  "name": "睡眠债务与补觉计划计算器",
+  "desc": "按工作日周末睡眠差算累计债务，给出补觉天数与风险提示",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsixiqnhme.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "npcteh2aq6",
+  "name": "景点门票与通行预算计算器",
+  "desc": "分人群算单景点与多景点门票，含讲解与观光车附加费",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npcteh2aq6.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "z5wyvnaahj",
+  "name": "随机用户名与昵称生成器",
+  "desc": "本地词库随机组合中文/英文昵称，带去重与长度统计",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z5wyvnaahj.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "c7rsghegmi",
+  "name": "凯撒密码与 ROT13 转换器",
+  "desc": "按位移量加密解密字母与数字，含映射表与字符统计",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7rsghegmi.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "2qex6iqqxb",
+  "name": "甘特图任务排期生成器",
+  "desc": "按任务工期自动串联排期并输出 ASCII 甘特条与里程碑",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qex6iqqxb.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "m9jvqmue9a",
+  "name": "空状态与错误页文案生成器",
+  "desc": "五种场景三套语气生成标题说明与可粘贴 HTML 片段",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://m9jvqmue9a.app.weavefox.cn",
+  "subcat": "设计绘图"
+ },
+ {
+  "id": "ewzrj3ixkx",
+  "name": "图片宽高比与等比缩放计算器",
+  "desc": "按目标宽度或百分比等比缩放，给出比例化简与面积变化",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ewzrj3ixkx.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "glfhwvcqng",
+  "name": "手机 App 权限自查清单生成器",
+  "desc": "按设备与场景生成权限自查清单，标出高风险与设置路径",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://glfhwvcqng.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "kezy8adudk",
+  "name": "数字编号与缩进批量整理器",
+  "desc": "批量去掉原有编号并按指定格式与缩进重新编号",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://kezy8adudk.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "dzff47slwd",
+  "name": "相机曝光与景深换算器",
+  "desc": "按光圈快门 ISO 算 EV，并估算景深边界与超焦距",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzff47slwd.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "ny88zypkdd",
+  "name": "租车费用与押金估算器",
+  "desc": "按天数与车型估算租金保险异地费，押金单列",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ny88zypkdd.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "puhhek3a4t",
+  "name": "体温与血压记录趋势计算器",
+  "desc": "解析记录行给出均值极值异常次数与趋势判断",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puhhek3a4t.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "ijapvv8zig",
+  "name": "日期区间与工作日统计器",
+  "desc": "统计区间自然日与工作日，给出月度分布与周末天数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ijapvv8zig.app.weavefox.cn",
+  "subcat": "时间日期"
+ },
+ {
+  "id": "ewzae9ixkx",
+  "name": "图片位深与文件体积估算器",
+  "desc": "按位深通道压缩比估算像素体积颜色数与 4K 对照",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ewzae9ixkx.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "glfgebcqng",
+  "name": "二次验证恢复码生成器",
+  "desc": "本地随机生成分组恢复码，附熵估算与重复检测",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://glfgebcqng.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "rdqya64t4r",
+  "name": "繁简转换与用词对照器",
+  "desc": "繁简互转并对照用词与单字变化，附字数统计",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdqya64t4r.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "ztb2uwhvkt",
+  "name": "Base64URL 编解码器",
+  "desc": "URL 安全 Base64 编解码，可去填充与加 data 前缀",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ztb2uwhvkt.app.weavefox.cn",
+  "subcat": "编码转换"
+ },
+ {
+  "id": "urkyphdyk8",
+  "name": "数据备份 3-2-1 自查清单生成器",
+  "desc": "按备份份数异地离线校验四项打分并给出改进动作",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://urkyphdyk8.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "c7rpgyegmi",
+  "name": "网约车与出租车费用对比估算器",
+  "desc": "起步价+里程+等待费拆分，三方案比价并给出最省选择",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7rpgyegmi.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "ewz3cuixkx",
+  "name": "蛋白质摄入与三餐分配计算器",
+  "desc": "按体重目标活动量算每日蛋白并均分到每餐，附食物等量对照",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ewz3cuixkx.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "glfmcmcqng",
+  "name": "浏览器指纹与隐私暴露自查器",
+  "desc": "本地读取时区语言屏幕硬件Canvas九项，算熵值并给加固建议",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://glfmcmcqng.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "fr2qywgsra",
+  "name": "新能源车续航与充电费用估算器",
+  "desc": "按气温空调折损算真实续航与电费，判断行程是否需补能",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://fr2qywgsra.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "pz7bebqyzx",
+  "name": "膳食纤维与蔬果份量计算器",
+  "desc": "按年龄性别算每日纤维目标，拆成蔬菜水果份数并给食物对照",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://pz7bebqyzx.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "dzfwjnslwd",
+  "name": "平台图片尺寸与规格速查器",
+  "desc": "七类用途的推荐尺寸、高清倍数、体积上限与安全区一次查清",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzfwjnslwd.app.weavefox.cn",
+  "subcat": "图片处理"
+ },
+ {
+  "id": "atvsvxpmpa",
+  "name": "航班值机与登机时间倒推器",
+  "desc": "按起飞时间倒推出门到登机的七个节点，并评估时间松紧",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://atvsvxpmpa.app.weavefox.cn",
+  "subcat": "出行旅行"
+ },
+ {
+  "id": "dzfvf2slwd",
+  "name": "钙与维生素 D 摄入计算器",
+  "desc": "按年龄性别算每日钙目标，估算奶豆摄入缺口与补充份数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzfvf2slwd.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "ja4c4jkp5e",
+  "name": "Wi-Fi 与路由器安全自查清单生成器",
+  "desc": "按加密方式与六项配置打分，给出扣分项与整改路径",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ja4c4jkp5e.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "rdqhhg4t4r",
+  "name": "在线小工具合集（字数·进制·折扣·日期差·颜色·单位）",
+  "desc": "一个页面装 6 个常用小工具，hash 直链可直达子工具",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdqhhg4t4r.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "word",
+    "title": "工具A 字数统计"
+   },
+   {
+    "key": "base",
+    "title": "工具B 进制转换"
+   },
+   {
+    "key": "percent",
+    "title": "工具C 折扣计算"
+   },
+   {
+    "key": "date",
+    "title": "工具D 日期差"
+   },
+   {
+    "key": "color",
+    "title": "工具E 颜色格式"
+   },
+   {
+    "key": "unit",
+    "title": "工具F 单位换算"
+   }
+  ]
+ },
+ {
+  "id": "g42maetuhw",
+  "name": "参考文献引用格式生成器",
+  "desc": "GB/T 7714 / APA / MLA 一键生成，含字段提示与常见错误",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://g42maetuhw.app.weavefox.cn",
+  "subcat": "文本处理"
+ },
+ {
+  "id": "keygufdudk",
+  "name": "嘌呤与尿酸饮食速查器",
+  "desc": "按人群算每日嘌呤上限，四档食物清单 + 替换建议",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://keygufdudk.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "dvzcccgy5d",
+  "name": "食物升糖指数与血糖负荷计算器",
+  "desc": "算 GI/GL 与分级，给同类替换与三餐搭配",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dvzcccgy5d.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "ekgaqhvhte",
+  "name": "家庭应急物品清单生成器",
+  "desc": "按人数与场景生成应急清单，含保质期、预算与采购优先级",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ekgaqhvhte.app.weavefox.cn",
+  "subcat": "生活健康"
+ },
+ {
+  "id": "npxsuh2aq6",
+  "name": "海淘行邮税与到手价估算器",
+  "desc": "行邮税/跨境电商综合税二选一，算税费、免征额与到手价",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npxsuh2aq6.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "keyyhvdudk",
+  "name": "合同签署前必查清单生成器",
+  "desc": "按合同类型给主体、核心条款、风险条款与红线提示",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://keyyhvdudk.app.weavefox.cn",
+  "subcat": "安全隐私"
+ },
+ {
+  "id": "dzkttqslwd",
+  "name": "二手交易交接单生成器",
+  "desc": "面交/邮寄两套流程，生成交接单、验收清单与纠纷预防",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzkttqslwd.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "c7zfn5egmi",
+  "name": "家用电器选购计算合集（空调·冰箱·洗衣机·电视·热水器·净水）",
+  "desc": "一个页面装 6 个家电选购计算器，按面积/人数/距离算清该买多大，hash 直链可直达",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "subcat": "生活健康",
+  "url": "https://c7zfn5egmi.app.weavefox.cn",
+  "subapps": [
+   {
+    "key": "ac",
+    "title": "工具A 空调匹数与制冷量"
+   },
+   {
+    "key": "fridge",
+    "title": "工具B 冰箱容积选型"
+   },
+   {
+    "key": "washer",
+    "title": "工具C 洗衣机容量选型"
+   },
+   {
+    "key": "tv",
+    "title": "工具D 电视尺寸与观看距离"
+   },
+   {
+    "key": "heater",
+    "title": "工具E 电热水器升数选型"
+   },
+   {
+    "key": "water",
+    "title": "工具F 净水器通量与滤芯成本"
+   }
+  ]
+ },
+ {
+  "id": "qs8lbinhme",
+  "name": "职场权益与离职计算合集（补偿·试用期·竞业·年假）",
+  "desc": "4 个职场计算器同页：离职补偿 N/N+1/2N、试用期合规、竞业补偿、年假折算，hash 直链可直达",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "subcat": "效率生活",
+  "url": "https://qs8lbinhme.app.weavefox.cn",
+  "subapps": [
+   {
+    "key": "severance",
+    "title": "工具A 离职补偿金"
+   },
+   {
+    "key": "probation",
+    "title": "工具B 试用期权益"
+   },
+   {
+    "key": "noncompete",
+    "title": "工具C 竞业限制补偿"
+   },
+   {
+    "key": "annualleave",
+    "title": "工具D 年假与未休折算"
+   }
+  ]
+ },
+ {
+  "id": "m9knpbue9a",
+  "name": "车主用车成本与合规计算合集",
+  "desc": "4 个车主计算器同页：车险保费估算、违章罚款记分、年检与保险到期、用车成本，hash 直链可直达",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "subcat": "出行旅行",
+  "url": "https://m9knpbue9a.app.weavefox.cn",
+  "subapps": [
+   {
+    "key": "insurance",
+    "title": "工具A 车险保费估算"
+   },
+   {
+    "key": "penalty",
+    "title": "工具B 违章罚款记分"
+   },
+   {
+    "key": "inspection",
+    "title": "工具C 年检与保险到期"
+   },
+   {
+    "key": "cost",
+    "title": "工具D 用车成本估算"
+   }
+  ]
+ }
 ]
