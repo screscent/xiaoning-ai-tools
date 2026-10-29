@@ -394,7 +394,7 @@
 - [宠物健康与护理计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/pet-health-collection.html)：5 个养宠工具同页：年龄寿命、每日喂食量、疫苗驱虫、年度花费、饮食禁忌与安全食物速查（免费）
 - [育儿喂养与成长计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/parenting-collection.html)：5 个育儿工具同页：奶粉冲调、辅食添加、生长发育、睡眠作息、喂养与采购清单（免费）
 - [租房居住成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/rent-cost-collection.html)：6 个租房工具同页：押金退还、水电分摊、通勤成本、搬家费用、退租交接清单、合租费用分摊（免费）
-- [家居清洗与家电维护计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/homecare-collection.html)：5 个家务工具同页：滤芯更换、洗衣机清洁、空调清洗、以旧换新、家电寿命与更换年限（免费）
+- [家居清洗与家电维护计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/homecare-collection.html)：6 个家务工具同页：滤芯更换、洗衣机清洁、空调清洗、以旧换新、家电寿命、家电耗电（免费）
 - [文字转语音朗读器](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长（免费）
 
 ## 博客（145 篇）
