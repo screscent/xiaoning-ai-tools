@@ -2892,13 +2892,31 @@
  },
  {
   "id": "lyryxpjxel",
-  "name": "合同到期与续签提醒表",
-  "desc": "按生效日与年限算到期日、剩余天数与提前提醒日",
+  "name": "到期管理合集",
+  "desc": "4 个到期计算器同页：合同续签、证件换发、保险续保、车辆年检，一次算清到期日、剩余天数、提前提醒日与逾期后果",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://lyryxpjxel.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "contract",
+    "title": "工具A 合同续签"
+   },
+   {
+    "key": "idcard",
+    "title": "工具B 证件换发"
+   },
+   {
+    "key": "insurance",
+    "title": "工具C 保险续保"
+   },
+   {
+    "key": "inspection",
+    "title": "工具D 年检提醒"
+   }
+  ]
  },
  {
   "id": "urkdhldyk8",

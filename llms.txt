@@ -336,7 +336,7 @@
 - [每周时间块日程生成器](https://screscent.github.io/xiaoning-ai-tools/tools/time-block-week.html)：按上下班时间自动排出专注块与休息，支持多工作日（免费）
 - [行李打包清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/travel-packing-list.html)：按天数季节与出行类型生成分类打包清单，可勾选核对（免费）
 - [数码续航与充电合集](https://screscent.github.io/xiaoning-ai-tools/tools/battery-charge-time.html)：4 个数码计算器同页：充电用时估算、充电宝容量与可用次数、笔记本续航、电池健康与更换判断，充满要多久、充电宝能充几次、电池该不该换一目了然（免费）
-- [合同到期与续签提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/contract-renewal.html)：按生效日与年限算到期日、剩余天数与提前提醒日（免费）
+- [到期管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/contract-renewal.html)：4 个到期计算器同页：合同续签、证件换发、保险续保、车辆年检，一次算清到期日、剩余天数、提前提醒日与逾期后果（免费）
 - [护照有效期与入境余量检查器](https://screscent.github.io/xiaoning-ai-tools/tools/passport-validity.html)：对比入境日与护照到期日，判断是否满足 6 个月余量（免费）
 - [心率区间与运动强度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：按年龄与静息心率算五档心率区间，给出燃脂推荐范围（免费）
 - [食物热量与运动消耗换算器](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：按 MET 与体重换算消耗某份热量需要的运动分钟数（免费）
