@@ -3585,5 +3585,15 @@
     "title": "工具D 以旧换新残值"
    }
   ]
+ },
+ {
+  "id": "wn3agsj8gw",
+  "name": "文字转语音朗读器",
+  "desc": "粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "subcat": "效率生活",
+  "url": "https://wn3agsj8gw.app.weavefox.cn"
  }
 ]
