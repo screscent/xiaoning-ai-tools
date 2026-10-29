@@ -1093,15 +1093,15 @@
   "subapps": [
    {
     "key": "format",
-    "title": "工具A 格式化与校验"
+    "title": "工具A 格式化校验"
    },
    {
     "key": "minify",
-    "title": "工具B 压缩与转义"
+    "title": "工具B 压缩转义"
    },
    {
     "key": "yaml",
-    "title": "工具C JSON 与 YAML"
+    "title": "工具C JSON-YAML"
    },
    {
     "key": "stats",
@@ -1129,12 +1129,30 @@
  },
  {
   "id": "keye5ddudk",
-  "name": "Base64 编解码器",
-  "desc": "文本与 Base64 双向转换，支持 UTF-8/URL 安全",
+  "name": "编码转换工具合集",
+  "desc": "4 个编码工具同页：Base64 编解码、URL 编解码与参数表、二/八/十/十六进制互转、SHA-256/384/512 哈希校验，调试接口与排链接问题一个页面全搞定",
   "price": 0,
   "cat": "实用工具",
   "url": "https://keye5ddudk.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "base64",
+    "title": "工具A Base64编解码"
+   },
+   {
+    "key": "url",
+    "title": "工具B URL编解码"
+   },
+   {
+    "key": "radix",
+    "title": "工具C 进制转换"
+   },
+   {
+    "key": "hash",
+    "title": "工具D 哈希校验"
+   }
+  ]
  },
  {
   "id": "frnp3wgsra",
