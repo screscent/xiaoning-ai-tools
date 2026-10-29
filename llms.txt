@@ -306,7 +306,7 @@
 - [时长加减与工时计算器](https://screscent.github.io/xiaoning-ai-tools/tools/duration-hours.html)：多行时长累加求合计与分钟数，按 8 小时折算并算金额（免费）
 - [文本大小写批量转换器](https://screscent.github.io/xiaoning-ai-tools/tools/text-case-convert.html)：五种大小写模式逐行批量转换，含空格归并与自定义替换（免费）
 - [CSS 动画缓动曲线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-easing.html)：调节四个控制点生成 cubic-bezier，实时预览并导出 CSS（免费）
-- [工资与加班费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/overtime-pay.html)：4 个工资计算器同页：加班费与调休折算、法定节假日三倍工资、夜班与值班津贴、加班上限合规自查，一个页面算清这个月加班该拿多少钱、调休能折几天、排班是否合规（免费）
+- [工资与加班费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/overtime-pay.html)：4 个工资计算器同页：加班费与调休折算、法定节假日三倍工资、夜班与值班津贴、加班上限合规自查，一个页面算清这个月加班该拿多少钱、调休能折几天、排班是否合规，全部本地计算（免费）
 - [咖啡因摄入与代谢计算器](https://screscent.github.io/xiaoning-ai-tools/tools/caffeine-metabolism.html)：按半衰期算 4/8/12 小时残留与建议就寝时间（免费）
 - [家庭用药提醒清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/med-reminder.html)：按频次与开始时间生成每日服药时间点、日程表与累计次数（免费）
 - [会议议程与时间分配生成器](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：按议题分钟数排时间表，算占比并校验是否超时（免费）
