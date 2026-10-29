@@ -1309,12 +1309,30 @@
  },
  {
   "id": "urjgjtdyk8",
-  "name": "文本统计与阅读时间",
-  "desc": "字符/词/行统计、阅读与演讲时长、词频 Top10",
+  "name": "文本统计与阅读时长合集",
+  "desc": "4 个文本工具同页：字符/词/句与中文字数统计、阅读与演讲时长估算、词频 Top10 与不同词数、总行数/非空行/段落/最长行，发布前自查稿子一个页面全搞定",
   "price": 0,
   "cat": "实用工具",
   "url": "https://urjgjtdyk8.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "count",
+    "title": "工具A 字符统计"
+   },
+   {
+    "key": "time",
+    "title": "工具B 阅读时长"
+   },
+   {
+    "key": "freq",
+    "title": "工具C 词频Top10"
+   },
+   {
+    "key": "para",
+    "title": "工具D 行与段落"
+   }
+  ]
  },
  {
   "id": "wn363rj8gw",
