@@ -1219,12 +1219,30 @@
  },
  {
   "id": "uidlsfxjku",
-  "name": "密码生成器",
-  "desc": "本地生成高强度密码，长度字符集可选，含强度评估",
+  "name": "密码与账号安全合集",
+  "desc": "4 个安全工具同页：随机密码生成、密码强度与熵值评估、PIN 与备份码、助记口令，全部在浏览器本地生成不联网，够不够安全一眼看懂",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uidlsfxjku.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "password",
+    "title": "工具A 随机密码生成"
+   },
+   {
+    "key": "strength",
+    "title": "工具B 强度与熵值评估"
+   },
+   {
+    "key": "pin",
+    "title": "工具C PIN 与备份码"
+   },
+   {
+    "key": "passphrase",
+    "title": "工具D 助记口令"
+   }
+  ]
  },
  {
   "id": "vftnmglsqf",

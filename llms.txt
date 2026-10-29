@@ -166,7 +166,7 @@
 - [日期计算器](https://screscent.github.io/xiaoning-ai-tools/tools/date-calculator.html)：相差天数、日期加减与工作日计算，本地秒算（免费）
 - [文本统计与阅读时间](https://screscent.github.io/xiaoning-ai-tools/tools/text-stats.html)：字符/词/行统计、阅读与演讲时长、词频 Top10（免费）
 - [图片裁剪器](https://screscent.github.io/xiaoning-ai-tools/tools/image-cropper.html)：本地裁剪头像/封面/商品图，比例尺寸自选可下载（免费）
-- [密码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/password-generator.html)：本地生成高强度密码，长度字符集可选，含强度评估（免费）
+- [密码与账号安全合集](https://screscent.github.io/xiaoning-ai-tools/tools/password-generator.html)：4 个安全工具同页：随机密码生成、密码强度与熵值评估、PIN 与备份码、助记口令，全部在浏览器本地生成不联网，够不够安全一眼看懂（免费）
 - [随机分组抽签器](https://screscent.github.io/xiaoning-ai-tools/tools/random-group-picker.html)：名单随机分组与单人抽签，加密随机公平不重复（免费）
 - [BMI 与热量计算器](https://screscent.github.io/xiaoning-ai-tools/tools/bmi-calorie-calculator.html)：BMI 分级、基础代谢、每日消耗与目标热量计算（免费）
 - [单位换算器](https://screscent.github.io/xiaoning-ai-tools/tools/unit-converter.html)：长度/重量/面积/体积/温度/数据六类单位互转（免费）
