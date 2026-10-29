@@ -200,6 +200,21 @@ def cat_slug(cat):
     return CAT_SLUGS[cat]
 
 
+def seo_desc(a, output):
+    """SEO 描述：80~160 字符；不足自动补全句，超长按句号/分号收尾。"""
+    free = a.get("price", 0) == 0
+    s = f"{a['desc']}。{a['name']}：{output}。" + ("完全免费，浏览器即开即用。" if free else f"¥{a['price']} 解锁，浏览器即开即用。")
+    for extra in ["支持手机与电脑浏览器，无需安装；结果可一键复制，数据本地处理。", "打开网页即可使用，不占内存。"]:
+        if len(s) >= 80:
+            break
+        s += extra
+    if len(s) > 160:
+        cut = s[:160]
+        pos = max(cut.rfind("。"), cut.rfind("；"))
+        s = cut[:pos + 1] if pos > 60 else cut[:159] + "。"
+    return s
+
+
 def tool_page(a, apps):
     c = C.APPS[a["id"]]
     _, hook, w1, w2, w3, inputs, output, example, fq, fa = c
@@ -213,6 +228,14 @@ def tool_page(a, apps):
         f'<li><a href="{x["slug"]}.html">{esc(x["name"])}</a><span>{esc(x["desc"])}</span></li>'
         for x in peers
     )
+    subs_section = ""
+    if a.get("subapps"):
+        subs_html = "".join(
+            f'<li><a href="{esc(a["url"])}#/{esc(s["key"])}" rel="noopener">{esc(s["title"])}</a>'
+            f'<span>直接打开该子工具（hash 深链）</span></li>'
+            for s in a["subapps"]
+        )
+        subs_section = f'<h2>这个合集包含 {len(a["subapps"])} 个工具</h2>\n  <ul class="peers">{subs_html}</ul>\n\n  '
     faq_html = "".join(
         f'<details><summary>{esc(q)}</summary><p>{esc(ans)}</p></details>'
         for q, ans in (C.COMMON_FAQ + [(fq, fa)])
@@ -249,13 +272,13 @@ def tool_page(a, apps):
   <h2>常见问题</h2>
   <div class="faq">{faq_html}</div>
 
-  <h2>同分类的其他工具</h2>
+{subs_section}  <h2>同分类的其他工具</h2>
   <ul class="peers">{peers_html}</ul>
 </article>
 """
     return page_shell(
         f"{a['name']} - {label} {'免费工具' if is_util else 'AI 工具'} | {SITE_NAME}",
-        f"{a['desc']}。{a['name']}：{output}" + ("，完全免费，浏览器即开即用。" if a.get("price",0)==0 else f"，¥{a['price']} 解锁，浏览器即开即用。"),
+        seo_desc(a, output),
         canon, body,
         extra_jsonld=app_jsonld(a, canon),
         depth=1,
