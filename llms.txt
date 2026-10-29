@@ -392,7 +392,7 @@
 - [职场权益与离职计算合集（补偿·试用期·竞业·年假）](https://screscent.github.io/xiaoning-ai-tools/tools/workrights-collection.html)：4 个职场计算器同页：离职补偿 N/N+1/2N、试用期合规、竞业补偿、年假折算，hash 直链可直达（免费）
 - [车主用车成本与合规计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-cost-collection.html)：6 个车主工具同页：车险保费、违章记分、年检到期、用车成本、保养周期与费用、洗车与美容花费，hash 直链可直达（免费）
 - [宠物健康与护理计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/pet-health-collection.html)：6 个养宠工具同页：年龄寿命、喂食量、疫苗驱虫、年度花费、饮食禁忌、出行托运（免费）
-- [育儿喂养与成长计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/parenting-collection.html)：5 个育儿工具同页：奶粉冲调、辅食添加、生长发育、睡眠作息、喂养与采购清单（免费）
+- [育儿喂养与成长计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/parenting-collection.html)：6 个育儿工具同页：奶粉冲调、辅食添加、生长发育、睡眠作息、喂养与采购清单、入园与托育准备，hash 直链可直达（免费）
 - [租房居住成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/rent-cost-collection.html)：6 个租房工具同页：押金退还、水电分摊、通勤成本、搬家费用、退租交接清单、合租费用分摊（免费）
 - [家居清洗与家电维护计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/homecare-collection.html)：6 个家务工具同页：滤芯更换、洗衣机清洁、空调清洗、以旧换新、家电寿命、家电耗电（免费）
 - [文字转语音朗读器](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长（免费）
