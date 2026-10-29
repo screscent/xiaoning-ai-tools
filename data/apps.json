@@ -3529,5 +3529,33 @@
     "title": "工具D 睡眠时长与作息"
    }
   ]
+ },
+ {
+  "id": "glgtbzcqng",
+  "name": "租房居住成本计算合集",
+  "desc": "4 个租房计算器同页：押金退还与违约、水电燃气分摊、通勤成本、搬家费用，hash 直链可直达",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "subcat": "效率生活",
+  "url": "https://glgtbzcqng.app.weavefox.cn",
+  "subapps": [
+   {
+    "key": "deposit",
+    "title": "工具A 押金退还与违约"
+   },
+   {
+    "key": "utility",
+    "title": "工具B 水电燃气分摊"
+   },
+   {
+    "key": "commute",
+    "title": "工具C 通勤成本估算"
+   },
+   {
+    "key": "move",
+    "title": "工具D 搬家费用估算"
+   }
+  ]
  }
 ]
