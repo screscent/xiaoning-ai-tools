@@ -2864,13 +2864,31 @@
  },
  {
   "id": "rdqxu54t4r",
-  "name": "手机电池充电时间估算器",
-  "desc": "按容量与充电功率估算充满用时，含三段慢充分段",
+  "name": "数码续航与充电合集",
+  "desc": "4 个数码计算器同页：充电用时估算、充电宝容量与可用次数、笔记本续航、电池健康与更换判断，充满要多久、充电宝能充几次、电池该不该换一目了然",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://rdqxu54t4r.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "charge",
+    "title": "工具A 充电用时估算"
+   },
+   {
+    "key": "bank",
+    "title": "工具B 充电宝容量与次数"
+   },
+   {
+    "key": "laptop",
+    "title": "工具C 笔记本续航"
+   },
+   {
+    "key": "battery",
+    "title": "工具D 电池健康与更换"
+   }
+  ]
  },
  {
   "id": "lyryxpjxel",
