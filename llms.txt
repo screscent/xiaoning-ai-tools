@@ -152,7 +152,7 @@
 - [房贷提前还款计算器](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：等额本息对比 + 提前还款两方案，免费（免费）
 - [二维码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：文本网址 → 本地生成 PNG，免费（免费）
 - [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：4 个 JSON 工具同页：格式化与合法性校验、压缩与转义、JSON 与 YAML 互转、结构统计，调接口、贴配置、查层级一个页面全搞定（免费）
-- [CSV ↔ JSON 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：CSV 与 JSON 双向转换，支持分隔符/表头/美化（免费）
+- [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：4 个数据工具同页：CSV 转 JSON 数组、JSON 数组转 CSV、前 5 行表格预览与行列统计、逗号/制表符/分号自动检测，导表与调接口一个页面全搞定（免费）
 - [文本批量处理](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：批量去重、查找替换、排序与前后缀，本地处理（免费）
 - [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：4 个编码工具同页：Base64 编解码、URL 编解码与参数表、二/八/十/十六进制互转、SHA-256/384/512 哈希校验，调试接口与排链接问题一个页面全搞定（免费）
 - [URL 编解码与参数解析器](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：URL 编码/解码 + 查询参数解析与地址分解（免费）

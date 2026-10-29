@@ -1111,12 +1111,30 @@
  },
  {
   "id": "j25vhrxyyi",
-  "name": "CSV ↔ JSON 转换器",
-  "desc": "CSV 与 JSON 双向转换，支持分隔符/表头/美化",
+  "name": "CSV 与 JSON 转换合集",
+  "desc": "4 个数据工具同页：CSV 转 JSON 数组、JSON 数组转 CSV、前 5 行表格预览与行列统计、逗号/制表符/分号自动检测，导表与调接口一个页面全搞定",
   "price": 0,
   "cat": "实用工具",
   "url": "https://j25vhrxyyi.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "c2j",
+    "title": "工具A CSV转JSON"
+   },
+   {
+    "key": "j2c",
+    "title": "工具B JSON转CSV"
+   },
+   {
+    "key": "preview",
+    "title": "工具C 表格预览"
+   },
+   {
+    "key": "delim",
+    "title": "工具D 分隔符检测"
+   }
+  ]
  },
  {
   "id": "urjnzsdyk8",
