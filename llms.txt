@@ -151,7 +151,7 @@
 - [图片压缩改尺寸](https://screscent.github.io/xiaoning-ai-tools/tools/image-compressor.html)：本地批量压缩 → 指定 KB/像素，免费（免费）
 - [房贷提前还款计算器](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：等额本息对比 + 提前还款两方案，免费（免费）
 - [二维码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：文本网址 → 本地生成 PNG，免费（免费）
-- [JSON 格式化校验器](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：粘贴 JSON 即格式化、校验并统计结构，本地处理（免费）
+- [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：4 个 JSON 工具同页：格式化与合法性校验、压缩与转义、JSON 与 YAML 互转、结构统计，调接口、贴配置、查层级一个页面全搞定（免费）
 - [CSV ↔ JSON 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：CSV 与 JSON 双向转换，支持分隔符/表头/美化（免费）
 - [文本批量处理](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：批量去重、查找替换、排序与前后缀，本地处理（免费）
 - [Base64 编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：文本与 Base64 双向转换，支持 UTF-8/URL 安全（免费）

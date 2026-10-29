@@ -1084,12 +1084,30 @@
  },
  {
   "id": "m9lqr6ue9a",
-  "name": "JSON 格式化校验器",
-  "desc": "粘贴 JSON 即格式化、校验并统计结构，本地处理",
+  "name": "JSON 工具合集",
+  "desc": "4 个 JSON 工具同页：格式化与合法性校验、压缩与转义、JSON 与 YAML 互转、结构统计，调接口、贴配置、查层级一个页面全搞定",
   "price": 0,
   "cat": "实用工具",
   "url": "https://m9lqr6ue9a.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "format",
+    "title": "工具A 格式化与校验"
+   },
+   {
+    "key": "minify",
+    "title": "工具B 压缩与转义"
+   },
+   {
+    "key": "yaml",
+    "title": "工具C JSON 与 YAML"
+   },
+   {
+    "key": "stats",
+    "title": "工具D 结构统计"
+   }
+  ]
  },
  {
   "id": "j25vhrxyyi",
