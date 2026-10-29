@@ -1129,12 +1129,30 @@
  },
  {
   "id": "urjhfedyk8",
-  "name": "时间戳转换器",
-  "desc": "时间戳与日期互转，秒/毫秒/多时区/多格式",
+  "name": "时间戳与日期工具合集",
+  "desc": "4 个时间工具同页：时间戳转换、时区换算、ISO 周数与季节、Cron 表达式解析，日志时间戳、跨时区排期、定时任务一次算清",
   "price": 0,
   "cat": "实用工具",
   "url": "https://urjhfedyk8.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {
+    "key": "timestamp",
+    "title": "工具A 时间戳转换"
+   },
+   {
+    "key": "timezone",
+    "title": "工具B 时区换算"
+   },
+   {
+    "key": "week",
+    "title": "工具C 周数与季节"
+   },
+   {
+    "key": "cron",
+    "title": "工具D Cron 解析"
+   }
+  ]
  },
  {
   "id": "dvz878gy5d",
