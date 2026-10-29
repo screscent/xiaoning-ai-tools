@@ -3501,5 +3501,33 @@
     "title": "工具D 年度养宠花费"
    }
   ]
+ },
+ {
+  "id": "pzw6beqyzx",
+  "name": "育儿喂养与成长计算合集",
+  "desc": "4 个育儿计算器同页：奶粉冲调用量、辅食添加清单、生长发育参考、睡眠作息，hash 直链可直达",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "subcat": "生活健康",
+  "url": "https://pzw6beqyzx.app.weavefox.cn",
+  "subapps": [
+   {
+    "key": "formula",
+    "title": "工具A 奶粉用量与冲调"
+   },
+   {
+    "key": "solid",
+    "title": "工具B 辅食添加清单"
+   },
+   {
+    "key": "growth",
+    "title": "工具C 生长发育参考"
+   },
+   {
+    "key": "sleep",
+    "title": "工具D 睡眠时长与作息"
+   }
+  ]
  }
 ]
