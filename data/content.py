@@ -1346,13 +1346,13 @@ APPS = {
         "支持有符号补码显示，可切换位宽检查溢出。"),
 
     "uidvbyxjku": ("naming-converter",
-        "同一个名字要在变量、常量、文件名、类名之间换写法，手改容易漏。",
+        "同一个名字要在变量、常量、文件名、类名之间换写法，还要拆词、转 slug、改大小写，来回切工具容易漏。",
         "研发", "设计", "文档",
-        ['输入风格', '输出风格', '保留数字', '输出格式'],
-        "转换结果 + 风格对照表 + 命名建议 + 使用建议 + 一键复制",
-        "输入「user name」，一次得到 camel/snake/kebab/Pascal/常量/中文标题。",
+        ['任意文本', '转换模式', '拆词方式', '文件名上限'],
+        "4 个工具同页：五种命名风格互转 + 四种大小写 + 拆词与首字母缩写 + URL slug 与安全文件名，hash 直链可直达",
+        "user login name → userLoginName / user_login_name / user-login-name / UserLoginName / USER_LOGIN_NAME；拆词 3 个、缩写 ULN；slug user-login-name、长度 15。",
         "支持混合写法吗？",
-        "支持 user name / user_name / userName / user-name 自动识别。"),
+        "支持大写文本混写，输入 USER_LOGIN_NAME 也能正确拆词并转成其他风格。"),
 
     "lymnmkjxel": ("date-calculator",
         "算相差天数、加几个月、排工作日，手翻日历容易错一天。",

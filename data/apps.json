@@ -1237,12 +1237,30 @@
  },
  {
   "id": "uidvbyxjku",
-  "name": "命名风格转换器",
-  "desc": "camel/snake/kebab/Pascal/常量/中文标题互转",
+  "name": "命名与大小写转换合集",
+  "desc": "4 个文本工具同页：五种命名风格互转、四种大小写、拆词与首字母缩写、URL slug 与安全文件名，变量/常量/文件名一次转到位",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uidvbyxjku.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "case",
+    "title": "工具A 命名风格"
+   },
+   {
+    "key": "upper",
+    "title": "工具B 大小写"
+   },
+   {
+    "key": "split",
+    "title": "工具C 拆词缩写"
+   },
+   {
+    "key": "slug",
+    "title": "工具D Slug文件名"
+   }
+  ]
  },
  {
   "id": "lymnmkjxel",

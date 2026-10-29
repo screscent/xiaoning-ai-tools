@@ -162,7 +162,7 @@
 - [颜色转换与对比度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/color-contrast.html)：HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测（免费）
 - [Markdown 表格生成器](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-table.html)：CSV/TSV/竖线文本转标准 Markdown 表格，支持对齐（免费）
 - [数字进制转换器](https://screscent.github.io/xiaoning-ai-tools/tools/number-base-converter.html)：二/八/十/十六进制互转，位宽与位模式展示（免费）
-- [命名风格转换器](https://screscent.github.io/xiaoning-ai-tools/tools/naming-converter.html)：camel/snake/kebab/Pascal/常量/中文标题互转（免费）
+- [命名与大小写转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/naming-converter.html)：4 个文本工具同页：五种命名风格互转、四种大小写、拆词与首字母缩写、URL slug 与安全文件名，变量/常量/文件名一次转到位（免费）
 - [日期计算器](https://screscent.github.io/xiaoning-ai-tools/tools/date-calculator.html)：相差天数、日期加减与工作日计算，本地秒算（免费）
 - [文本统计与阅读时间](https://screscent.github.io/xiaoning-ai-tools/tools/text-stats.html)：字符/词/行统计、阅读与演讲时长、词频 Top10（免费）
 - [图片裁剪器](https://screscent.github.io/xiaoning-ai-tools/tools/image-cropper.html)：本地裁剪头像/封面/商品图，比例尺寸自选可下载（免费）
