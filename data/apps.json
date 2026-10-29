@@ -2538,13 +2538,31 @@
  },
  {
   "id": "uisvq8xjku",
-  "name": "加班费与调休计算器",
-  "desc": "按月薪与三类加班时长算加班费、合计与调休天数",
+  "name": "工资与加班费计算合集",
+  "desc": "4 个工资计算器同页：加班费与调休折算、法定节假日三倍工资、夜班与值班津贴、加班上限合规自查，一个页面算清这个月加班该拿多少钱、调休能折几天、排班是否合规",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uisvq8xjku.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "overtime",
+    "title": "工具A 加班费与调休折算"
+   },
+   {
+    "key": "holiday",
+    "title": "工具B 法定节假日三倍"
+   },
+   {
+    "key": "nightshift",
+    "title": "工具C 夜班与值班津贴"
+   },
+   {
+    "key": "cap",
+    "title": "工具D 加班上限合规"
+   }
+  ]
  },
  {
   "id": "vfmbddlsqf",
