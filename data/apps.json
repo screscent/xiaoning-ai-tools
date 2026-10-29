@@ -1237,12 +1237,30 @@
  },
  {
   "id": "x8slbmcakb",
-  "name": "Markdown 表格生成器",
-  "desc": "CSV/TSV/竖线文本转标准 Markdown 表格，支持对齐",
+  "name": "Markdown 表格排版合集",
+  "desc": "4 个表格工具同页：CSV/TSV 转 Markdown 表格、每行一条文本转表格、表格转 HTML 代码、已有表格统一左中右对齐并给出最大列宽，写文档再不用手敲竖线",
   "price": 0,
   "cat": "实用工具",
   "url": "https://x8slbmcakb.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "csv",
+    "title": "工具A CSV转表格"
+   },
+   {
+    "key": "text",
+    "title": "工具B 文本转表格"
+   },
+   {
+    "key": "html",
+    "title": "工具C 表格转HTML"
+   },
+   {
+    "key": "align",
+    "title": "工具D 对齐调整"
+   }
+  ]
  },
  {
   "id": "fwbncxyqkh",
