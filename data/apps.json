@@ -1255,12 +1255,30 @@
  },
  {
   "id": "g42uqytuhw",
-  "name": "BMI 与热量计算器",
-  "desc": "BMI 分级、基础代谢、每日消耗与目标热量计算",
+  "name": "健康指标计算合集",
+  "desc": "4 个健康计算器同页：BMI 与理想体重、基础代谢与每日热量、体脂率估算、每日饮水建议，一个页面看懂体重、热量与补水是否合适",
   "price": 0,
   "cat": "实用工具",
   "url": "https://g42uqytuhw.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "bmi",
+    "title": "工具A BMI 与理想体重"
+   },
+   {
+    "key": "bmr",
+    "title": "工具B 基础代谢与热量"
+   },
+   {
+    "key": "bodyfat",
+    "title": "工具C 体脂率估算"
+   },
+   {
+    "key": "water",
+    "title": "工具D 每日饮水"
+   }
+  ]
  },
  {
   "id": "keyw5ddudk",
