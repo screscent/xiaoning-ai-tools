@@ -3473,5 +3473,33 @@
     "title": "工具D 用车成本估算"
    }
   ]
+ },
+ {
+  "id": "pumhgv3a4t",
+  "name": "宠物健康与护理计算合集",
+  "desc": "4 个养宠计算器同页：年龄寿命换算、每日喂食量、疫苗驱虫日程、年度养宠花费，hash 直链可直达",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "subcat": "生活健康",
+  "url": "https://pumhgv3a4t.app.weavefox.cn",
+  "subapps": [
+   {
+    "key": "age",
+    "title": "工具A 年龄与寿命换算"
+   },
+   {
+    "key": "feed",
+    "title": "工具B 每日喂食量"
+   },
+   {
+    "key": "vaccine",
+    "title": "工具C 疫苗驱虫日程"
+   },
+   {
+    "key": "cost",
+    "title": "工具D 年度养宠花费"
+   }
+  ]
  }
 ]
