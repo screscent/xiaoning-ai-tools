@@ -1148,7 +1148,7 @@
  {
   "id": "keye5ddudk",
   "name": "编码转换工具合集",
-  "desc": "5 个编码工具同页：Base64、URL 与参数表、二/八/十/十六进制、SHA-256/384/512 哈希、Base58，调试接口与排链接问题一页搞定",
+  "desc": "6 个编码工具同页：Base64、URL 与参数表、进制转换、SHA-256/384/512 哈希、Base58、cURL 转代码，调试接口一页搞定",
   "price": 0,
   "cat": "实用工具",
   "url": "https://keye5ddudk.app.weavefox.cn",
@@ -1173,6 +1173,10 @@
    {
     "key": "base58",
     "title": "工具E Base58编解码"
+   },
+   {
+    "key": "curl",
+    "title": "工具F cURL转代码"
    }
   ]
  },
@@ -3938,7 +3942,7 @@
  {
   "id": "frngkxgsra",
   "name": "有氧能力与训练强度合集",
-  "desc": "3 个运动工具同页：静息心率与有氧能力分级、最大摄氧量 VO2max 估算、五档心率区间与配速，训练强度一次算清",
+  "desc": "4 个运动工具同页：静息心率有氧分级、VO2max 估算、五档心率区间、训练负荷比 ACWR，训练强度一次算清",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frngkxgsra.app.weavefox.cn",
@@ -3955,6 +3959,10 @@
    {
     "key": "zone",
     "title": "工具C 心率区间"
+   },
+   {
+    "key": "acwr",
+    "title": "工具D 训练负荷比"
    }
   ]
  },

@@ -154,7 +154,7 @@
 - [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：4 个 JSON 工具同页：格式化与合法性校验、压缩与转义、JSON 与 YAML 互转、结构统计，调接口、贴配置、查层级一个页面全搞定（免费）
 - [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：4 个数据工具同页：CSV 转 JSON 数组、JSON 数组转 CSV、前 5 行表格预览与行列统计、逗号/制表符/分号自动检测，导表与调接口一个页面全搞定（免费）
 - [文本批量处理](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：批量去重、查找替换、排序与前后缀，本地处理（免费）
-- [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：5 个编码工具同页：Base64、URL 与参数表、二/八/十/十六进制、SHA-256/384/512 哈希、Base58，调试接口与排链接问题一页搞定（免费）
+- [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：6 个编码工具同页：Base64、URL 与参数表、进制转换、SHA-256/384/512 哈希、Base58、cURL 转代码，调试接口一页搞定（免费）
 - [URL 编解码与参数解析器](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：URL 编码/解码 + 查询参数解析与地址分解（免费）
 - [时间戳与日期工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/timestamp-converter.html)：6 个时间工具同页：时间戳转换、时区换算、时区缩写与 UTC 偏移、ISO·RFC 格式、ISO 周数与季节、Cron 解析，排期与对时一个页面搞定（免费）
 - [图片格式转换器](https://screscent.github.io/xiaoning-ai-tools/tools/image-format-converter.html)：PNG/JPG/WebP 互转，质量/尺寸可调，本地处理（免费）
@@ -397,7 +397,7 @@
 - [家居清洗与家电维护计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/homecare-collection.html)：6 个家务工具同页：滤芯更换、洗衣机清洁、空调清洗、以旧换新、家电寿命、家电耗电（免费）
 - [文字转语音朗读器](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长（免费）
 - [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：3 个扫码工具同页：二维码解码、条形码解码、条码校验位计算，图片只在浏览器本地处理不上传，扫码查链接一个页面全搞定（免费）
-- [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：3 个运动工具同页：静息心率与有氧能力分级、最大摄氧量 VO2max 估算、五档心率区间与配速，训练强度一次算清（免费）
+- [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：4 个运动工具同页：静息心率有氧分级、VO2max 估算、五档心率区间、训练负荷比 ACWR，训练强度一次算清（免费）
 - [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：3 个数据工具同页：JSON 转 SQL INSERT、INSERT 转 JSON、字段类型推断，接口联调与造数据一个页面搞定（免费）
 - [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
 - [Git 场景命令速查](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：按局面查该用哪条 git 命令：撤销提交、丢弃改动、找回分支、合并冲突，附风险等级与更安全的替代做法（免费）
