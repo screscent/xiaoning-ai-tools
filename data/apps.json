@@ -1116,7 +1116,7 @@
  {
   "id": "j25vhrxyyi",
   "name": "CSV 与 JSON 转换合集",
-  "desc": "4 个数据工具同页：CSV 转 JSON 数组、JSON 数组转 CSV、前 5 行表格预览与行列统计、逗号/制表符/分号自动检测，导表与调接口一个页面全搞定",
+  "desc": "5 个 CSV 工具同页：CSV→JSON、JSON→CSV、表格预览、分隔符检测、列筛选与重排，字段多时先挑列再转换",
   "price": 0,
   "cat": "实用工具",
   "url": "https://j25vhrxyyi.app.weavefox.cn",
@@ -1137,6 +1137,10 @@
    {
     "key": "delim",
     "title": "工具D 分隔符检测"
+   },
+   {
+    "key": "columns",
+    "title": "工具E 列筛选"
    }
   ]
  },
@@ -3962,7 +3966,7 @@
  {
   "id": "frngkxgsra",
   "name": "有氧能力与训练强度合集",
-  "desc": "4 个运动工具同页：静息心率有氧分级、VO2max 估算、五档心率区间、训练负荷比 ACWR，训练强度一次算清",
+  "desc": "5 个运动工具同页：静息心率分级、VO2max 估算、五档心率区间、训练负荷比 ACWR、跨项目等效时长",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frngkxgsra.app.weavefox.cn",
@@ -3983,6 +3987,10 @@
    {
     "key": "acwr",
     "title": "工具D 训练负荷比"
+   },
+   {
+    "key": "equiv",
+    "title": "工具E 等效时长"
    }
   ]
  },
