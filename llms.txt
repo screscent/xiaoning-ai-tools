@@ -151,7 +151,7 @@
 - [图片压缩改尺寸](https://screscent.github.io/xiaoning-ai-tools/tools/image-compressor.html)：本地批量压缩 → 指定 KB/像素，免费（免费）
 - [房贷提前还款计算器](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：等额本息对比 + 提前还款两方案，免费（免费）
 - [二维码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：文本网址 → 本地生成 PNG，免费（免费）
-- [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：5 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、结构统计、两段 JSON 差异对比，键路径级定位改动（免费）
+- [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：6 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、JSON 与 XML、结构统计、两段差异对比，键路径级定位（免费）
 - [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：5 个 CSV 工具同页：CSV→JSON、JSON→CSV、表格预览、分隔符检测、列筛选与重排，字段多时先挑列再转换（免费）
 - [文本批量处理](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：批量去重、查找替换、排序与前后缀，本地处理（免费）
 - [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：6 个编码工具同页：Base64、URL 与参数表、进制转换、SHA-256/384/512 哈希、Base58、cURL 转代码，调试接口一页搞定（免费）
@@ -162,7 +162,7 @@
 - [颜色转换与对比度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/color-contrast.html)：HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测（免费）
 - [Markdown 表格排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-table.html)：4 个表格工具同页：CSV/TSV 转 Markdown 表格、每行一条文本转表格、表格转 HTML 代码、已有表格统一左中右对齐并给出最大列宽，写文档再不用手敲竖线（免费）
 - [数字进制转换器](https://screscent.github.io/xiaoning-ai-tools/tools/number-base-converter.html)：二/八/十/十六进制互转，位宽与位模式展示（免费）
-- [命名与大小写转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/naming-converter.html)：4 个文本工具同页：五种命名风格互转、四种大小写、拆词与首字母缩写、URL slug 与安全文件名，变量/常量/文件名一次转到位（免费）
+- [命名与大小写转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/naming-converter.html)：5 个文本工具同页：五种命名风格、四种大小写、拆词与缩写、URL slug 与安全文件名、批量命名转换，一次转到位（免费）
 - [日期计算器](https://screscent.github.io/xiaoning-ai-tools/tools/date-calculator.html)：相差天数、日期加减与工作日计算，本地秒算（免费）
 - [文本统计与阅读时长合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-stats.html)：5 个文本工具同页：字符/词/句与中文字数统计、阅读与演讲时长估算、阅读进度与剩余时长、词频 Top10 与不同词数、总行数/非空行/段落/最长行，发布前自查稿子一个页面全搞定（免费）
 - [图片裁剪器](https://screscent.github.io/xiaoning-ai-tools/tools/image-cropper.html)：本地裁剪头像/封面/商品图，比例尺寸自选可下载（免费）

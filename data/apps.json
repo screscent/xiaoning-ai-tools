@@ -1085,7 +1085,7 @@
  {
   "id": "m9lqr6ue9a",
   "name": "JSON 工具合集",
-  "desc": "5 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、结构统计、两段 JSON 差异对比，键路径级定位改动",
+  "desc": "6 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、JSON 与 XML、结构统计、两段差异对比，键路径级定位",
   "price": 0,
   "cat": "实用工具",
   "url": "https://m9lqr6ue9a.app.weavefox.cn",
@@ -1110,6 +1110,10 @@
    {
     "key": "diff",
     "title": "工具E 差异对比"
+   },
+   {
+    "key": "xml",
+    "title": "工具F JSON-XML"
    }
   ]
  },
@@ -1298,7 +1302,7 @@
  {
   "id": "uidvbyxjku",
   "name": "命名与大小写转换合集",
-  "desc": "4 个文本工具同页：五种命名风格互转、四种大小写、拆词与首字母缩写、URL slug 与安全文件名，变量/常量/文件名一次转到位",
+  "desc": "5 个文本工具同页：五种命名风格、四种大小写、拆词与缩写、URL slug 与安全文件名、批量命名转换，一次转到位",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uidvbyxjku.app.weavefox.cn",
@@ -1319,6 +1323,10 @@
    {
     "key": "slug",
     "title": "工具D Slug文件名"
+   },
+   {
+    "key": "batch",
+    "title": "工具E 批量转换"
    }
   ]
  },
