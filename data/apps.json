@@ -3934,5 +3934,87 @@
     "title": "工具C 校验位计算"
    }
   ]
+ },
+ {
+  "id": "frngkxgsra",
+  "name": "有氧能力与训练强度合集",
+  "desc": "3 个运动工具同页：静息心率与有氧能力分级、最大摄氧量 VO2max 估算、五档心率区间与配速，训练强度一次算清",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://frngkxgsra.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "rhr",
+    "title": "工具A 有氧分级"
+   },
+   {
+    "key": "vo2",
+    "title": "工具B VO2max估算"
+   },
+   {
+    "key": "zone",
+    "title": "工具C 心率区间"
+   }
+  ]
+ },
+ {
+  "id": "npihhy2aq6",
+  "name": "JSON 与 SQL 互转合集",
+  "desc": "3 个数据工具同页：JSON 转 SQL INSERT、INSERT 转 JSON、字段类型推断，接口联调与造数据一个页面搞定",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npihhy2aq6.app.weavefox.cn",
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "j2sql",
+    "title": "工具A JSON转SQL"
+   },
+   {
+    "key": "sql2j",
+    "title": "工具B SQL转JSON"
+   },
+   {
+    "key": "types",
+    "title": "工具C 类型推断"
+   }
+  ]
+ },
+ {
+  "id": "r3vc8lzjyr",
+  "name": "发票抬头与税号校验器",
+  "desc": "校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://r3vc8lzjyr.app.weavefox.cn",
+  "subcat": "计算换算"
+ },
+ {
+  "id": "ury5ezdyk8",
+  "name": "Git 场景命令速查",
+  "desc": "按局面查该用哪条 git 命令：撤销提交、丢弃改动、找回分支、合并冲突，附风险等级与更安全的替代做法",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ury5ezdyk8.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "ekrwstvhte",
+  "name": "Docker 命令速查表",
+  "desc": "容器 / 镜像 / 日志 / 卷 / 清理 / compose 常用命令速查，危险命令单独标注，新人上手与排障都用得上",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ekrwstvhte.app.weavefox.cn",
+  "subcat": "效率生活"
+ },
+ {
+  "id": "sfb4eqy97s",
+  "name": "Nginx 配置片段速查",
+  "desc": "反向代理 / HTTPS / gzip / 缓存 / 限流 / 跨域常用配置片段，直接复制并附常见坑提示",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://sfb4eqy97s.app.weavefox.cn",
+  "subcat": "效率生活"
  }
 ]
