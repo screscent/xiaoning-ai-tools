@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 380 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 381 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（248 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（249 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -154,7 +154,7 @@
 - [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：4 个 JSON 工具同页：格式化与合法性校验、压缩与转义、JSON 与 YAML 互转、结构统计，调接口、贴配置、查层级一个页面全搞定（免费）
 - [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：4 个数据工具同页：CSV 转 JSON 数组、JSON 数组转 CSV、前 5 行表格预览与行列统计、逗号/制表符/分号自动检测，导表与调接口一个页面全搞定（免费）
 - [文本批量处理](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：批量去重、查找替换、排序与前后缀，本地处理（免费）
-- [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：4 个编码工具同页：Base64 编解码、URL 编解码与参数表、二/八/十/十六进制互转、SHA-256/384/512 哈希校验，调试接口与排链接问题一个页面全搞定（免费）
+- [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：5 个编码工具同页：Base64 编解码、URL 编解码与参数表、二/八/十/十六进制互转、SHA-256/384/512 哈希校验、Base58 编解码，调试接口与排链接问题一个页面全搞定（免费）
 - [URL 编解码与参数解析器](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：URL 编码/解码 + 查询参数解析与地址分解（免费）
 - [时间戳与日期工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/timestamp-converter.html)：4 个时间工具同页：时间戳转换、时区换算、ISO 周数与季节、Cron 表达式解析，日志时间戳、跨时区排期、定时任务一次算清（免费）
 - [图片格式转换器](https://screscent.github.io/xiaoning-ai-tools/tools/image-format-converter.html)：PNG/JPG/WebP 互转，质量/尺寸可调，本地处理（免费）
@@ -396,6 +396,7 @@
 - [租房居住成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/rent-cost-collection.html)：6 个租房工具同页：押金退还、水电分摊、通勤成本、搬家费用、退租交接清单、合租费用分摊（免费）
 - [家居清洗与家电维护计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/homecare-collection.html)：6 个家务工具同页：滤芯更换、洗衣机清洁、空调清洗、以旧换新、家电寿命、家电耗电（免费）
 - [文字转语音朗读器](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长（免费）
+- [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：2 个识别工具同页：二维码解码、条形码解码，图片只在浏览器本地处理不上传，扫码查链接一个页面全搞定（免费）
 
 ## 博客（145 篇）
 - [小凝：门禁不等于评测——一个 Agent 系统的四轴治理自审](https://screscent.github.io/xiaoning-ai-tools/blog/s82q7ZSNYB9cs14Ja-gneg.html)：2026-10-27｜门禁判当前态对不对，评测判相对上一版好了还是坏了。用评测、纪律、分工、裁决四轴，给 Agent 系统做一次自审。

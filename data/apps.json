@@ -1148,7 +1148,7 @@
  {
   "id": "keye5ddudk",
   "name": "编码转换工具合集",
-  "desc": "4 个编码工具同页：Base64 编解码、URL 编解码与参数表、二/八/十/十六进制互转、SHA-256/384/512 哈希校验，调试接口与排链接问题一个页面全搞定",
+  "desc": "5 个编码工具同页：Base64 编解码、URL 编解码与参数表、二/八/十/十六进制互转、SHA-256/384/512 哈希校验、Base58 编解码，调试接口与排链接问题一个页面全搞定",
   "price": 0,
   "cat": "实用工具",
   "url": "https://keye5ddudk.app.weavefox.cn",
@@ -1169,6 +1169,10 @@
    {
     "key": "hash",
     "title": "工具D 哈希校验"
+   },
+   {
+    "key": "base58",
+    "title": "工具E Base58编解码"
    }
   ]
  },
@@ -3895,5 +3899,24 @@
   "cat": "实用工具",
   "subcat": "效率生活",
   "url": "https://wn3agsj8gw.app.weavefox.cn"
+ },
+ {
+  "id": "z5hujmaahj",
+  "name": "二维码与条形码识别合集",
+  "desc": "2 个识别工具同页：二维码解码、条形码解码，图片只在浏览器本地处理不上传，扫码查链接一个页面全搞定",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z5hujmaahj.app.weavefox.cn",
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "qr",
+    "title": "工具A 二维码识别"
+   },
+   {
+    "key": "barcode",
+    "title": "工具B 条形码识别"
+   }
+  ]
  }
 ]
