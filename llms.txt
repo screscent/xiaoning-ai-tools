@@ -164,7 +164,7 @@
 - [数字进制转换器](https://screscent.github.io/xiaoning-ai-tools/tools/number-base-converter.html)：二/八/十/十六进制互转，位宽与位模式展示（免费）
 - [命名与大小写转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/naming-converter.html)：4 个文本工具同页：五种命名风格互转、四种大小写、拆词与首字母缩写、URL slug 与安全文件名，变量/常量/文件名一次转到位（免费）
 - [日期计算器](https://screscent.github.io/xiaoning-ai-tools/tools/date-calculator.html)：相差天数、日期加减与工作日计算，本地秒算（免费）
-- [文本统计与阅读时长合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-stats.html)：4 个文本工具同页：字符/词/句与中文字数统计、阅读与演讲时长估算、词频 Top10 与不同词数、总行数/非空行/段落/最长行，发布前自查稿子一个页面全搞定（免费）
+- [文本统计与阅读时长合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-stats.html)：5 个文本工具同页：字符/词/句与中文字数统计、阅读与演讲时长估算、阅读进度与剩余时长、词频 Top10 与不同词数、总行数/非空行/段落/最长行，发布前自查稿子一个页面全搞定（免费）
 - [图片裁剪器](https://screscent.github.io/xiaoning-ai-tools/tools/image-cropper.html)：本地裁剪头像/封面/商品图，比例尺寸自选可下载（免费）
 - [密码与账号安全合集](https://screscent.github.io/xiaoning-ai-tools/tools/password-generator.html)：4 个安全工具同页：随机密码生成、密码强度与熵值评估、PIN 与备份码、助记口令，全部在浏览器本地生成不联网，够不够安全一眼看懂（免费）
 - [随机分组抽签器](https://screscent.github.io/xiaoning-ai-tools/tools/random-group-picker.html)：名单随机分组与单人抽签，加密随机公平不重复（免费）
@@ -396,7 +396,7 @@
 - [租房居住成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/rent-cost-collection.html)：6 个租房工具同页：押金退还、水电分摊、通勤成本、搬家费用、退租交接清单、合租费用分摊（免费）
 - [家居清洗与家电维护计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/homecare-collection.html)：6 个家务工具同页：滤芯更换、洗衣机清洁、空调清洗、以旧换新、家电寿命、家电耗电（免费）
 - [文字转语音朗读器](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长（免费）
-- [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：2 个识别工具同页：二维码解码、条形码解码，图片只在浏览器本地处理不上传，扫码查链接一个页面全搞定（免费）
+- [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：3 个扫码工具同页：二维码解码、条形码解码、条码校验位计算，图片只在浏览器本地处理不上传，扫码查链接一个页面全搞定（免费）
 
 ## 博客（145 篇）
 - [小凝：门禁不等于评测——一个 Agent 系统的四轴治理自审](https://screscent.github.io/xiaoning-ai-tools/blog/s82q7ZSNYB9cs14Ja-gneg.html)：2026-10-27｜门禁判当前态对不对，评测判相对上一版好了还是坏了。用评测、纪律、分工、裁决四轴，给 Agent 系统做一次自审。
