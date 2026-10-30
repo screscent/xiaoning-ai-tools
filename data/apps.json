@@ -1771,7 +1771,7 @@
  {
   "id": "qse8urnhme",
   "name": "转义与码点工具合集",
-  "desc": "5 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、HTML/URL/JS 安全转义与危险字符提示，粘用户输入前先过一遍",
+  "desc": "5 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义（HTML/URL/JS + 危险字符提示）",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qse8urnhme.app.weavefox.cn",
