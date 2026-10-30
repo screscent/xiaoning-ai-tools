@@ -207,7 +207,7 @@
 - [单位价格比较器](https://screscent.github.io/xiaoning-ai-tools/tools/unit-price-comparator.html)：不同规格商品按每 100g/500g 折算单价，比出更划算（免费）
 - [图片圆角与边框生成器](https://screscent.github.io/xiaoning-ai-tools/tools/image-round-corner.html)：本地给图片加圆角与边框，可调半径/颜色并导出 PNG（免费）
 - [CSS 阴影生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-shadow-generator.html)：滑块调偏移/模糊/扩散，实时预览并复制 box-shadow（免费）
-- [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：4 个编码工具同页：文本转 Unicode 转义（三种格式）、转义串还原、HTML 实体编码解码、字符与码点统计，排查乱码、贴转义串、调接口一个页面全搞定（免费）
+- [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：4 个编码工具同页：文本转 Unicode 转义（三种格式）、转义串一键还原、HTML 实体编码与解码、字符与码点统计，排查乱码、贴转义串、调接口一个页面全搞定（免费）
 - [Markdown 转纯文本](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：Markdown → 纯文本，可去列表符号/代码块并下载 txt（免费）
 - [敏感信息脱敏工具](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：手机号/身份证/邮箱/银行卡本地脱敏，含命中统计（免费）
 - [颜色名称查询](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色（免费）
