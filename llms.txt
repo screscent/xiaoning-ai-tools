@@ -336,7 +336,7 @@
 - [每周时间块日程生成器](https://screscent.github.io/xiaoning-ai-tools/tools/time-block-week.html)：按上下班时间自动排出专注块与休息，支持多工作日（免费）
 - [行李打包清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/travel-packing-list.html)：按天数季节与出行类型生成分类打包清单，可勾选核对（免费）
 - [数码续航与充电合集](https://screscent.github.io/xiaoning-ai-tools/tools/battery-charge-time.html)：4 个数码计算器同页：充电用时估算、充电宝容量与可用次数、笔记本续航、电池健康与更换判断，充满要多久、充电宝能充几次、电池该不该换一目了然（免费）
-- [到期管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/contract-renewal.html)：5 个到期工具同页：合同续签、证件换发、保险续保、车辆年检、驾驶证记分周期与换证，到期前该办什么一页算清（免费）
+- [到期管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/contract-renewal.html)：6 个到期工具同页：合同续签、证件换发、保险续保、车辆年检、驾驶证记分换证、会员订阅，到期前该办什么一页算清（免费）
 - [护照有效期与入境余量检查器](https://screscent.github.io/xiaoning-ai-tools/tools/passport-validity.html)：对比入境日与护照到期日，判断是否满足 6 个月余量（免费）
 - [心率区间与运动强度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：按年龄与静息心率算五档心率区间，给出燃脂推荐范围（免费）
 - [食物热量与运动消耗换算器](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：按 MET 与体重换算消耗某份热量需要的运动分钟数（免费）
@@ -398,7 +398,7 @@
 - [文字转语音朗读器](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长（免费）
 - [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：3 个扫码工具同页：二维码解码、条形码解码、条码校验位计算，图片只在浏览器本地处理不上传，扫码查链接一个页面全搞定（免费）
 - [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：4 个运动工具同页：静息心率有氧分级、VO2max 估算、五档心率区间、训练负荷比 ACWR，训练强度一次算清（免费）
-- [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：3 个数据工具同页：JSON 转 SQL INSERT、INSERT 转 JSON、字段类型推断，接口联调与造数据一个页面搞定（免费）
+- [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：4 个数据工具同页：JSON 转 INSERT、INSERT 转 JSON、字段类型推断、SQL 关键字与 EXPLAIN 速查（免费）
 - [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
 - [Git 场景命令速查](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：按局面查该用哪条 git 命令：撤销提交、丢弃改动、找回分支、合并冲突，附风险等级与更安全的替代做法（免费）
 - [Docker 命令速查表](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：容器 / 镜像 / 日志 / 卷 / 清理 / compose 常用命令速查，危险命令单独标注，新人上手与排障都用得上（免费）

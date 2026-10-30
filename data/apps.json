@@ -3105,7 +3105,7 @@
  {
   "id": "lyryxpjxel",
   "name": "到期管理合集",
-  "desc": "5 个到期工具同页：合同续签、证件换发、保险续保、车辆年检、驾驶证记分周期与换证，到期前该办什么一页算清",
+  "desc": "6 个到期工具同页：合同续签、证件换发、保险续保、车辆年检、驾驶证记分换证、会员订阅，到期前该办什么一页算清",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -3131,6 +3131,10 @@
    {
     "key": "license",
     "title": "工具E 驾驶证记分换证"
+   },
+   {
+    "key": "subscription",
+    "title": "工具F 会员订阅"
    }
   ]
  },
@@ -3985,7 +3989,7 @@
  {
   "id": "npihhy2aq6",
   "name": "JSON 与 SQL 互转合集",
-  "desc": "3 个数据工具同页：JSON 转 SQL INSERT、INSERT 转 JSON、字段类型推断，接口联调与造数据一个页面搞定",
+  "desc": "4 个数据工具同页：JSON 转 INSERT、INSERT 转 JSON、字段类型推断、SQL 关键字与 EXPLAIN 速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npihhy2aq6.app.weavefox.cn",
@@ -4002,6 +4006,10 @@
    {
     "key": "types",
     "title": "工具C 类型推断"
+   },
+   {
+    "key": "quickref",
+    "title": "工具D SQL速查"
    }
   ]
  },
