@@ -156,7 +156,7 @@
 - [文本批量处理](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：批量去重、查找替换、排序与前后缀，本地处理（免费）
 - [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：5 个编码工具同页：Base64、URL 与参数表、二/八/十/十六进制、SHA-256/384/512 哈希、Base58，调试接口与排链接问题一页搞定（免费）
 - [URL 编解码与参数解析器](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：URL 编码/解码 + 查询参数解析与地址分解（免费）
-- [时间戳与日期工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/timestamp-converter.html)：4 个时间工具同页：时间戳转换、时区换算、ISO 周数与季节、Cron 表达式解析，日志时间戳、跨时区排期、定时任务一次算清（免费）
+- [时间戳与日期工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/timestamp-converter.html)：6 个时间工具同页：时间戳转换、时区换算、时区缩写与 UTC 偏移、ISO·RFC 格式、ISO 周数与季节、Cron 解析，排期与对时一个页面搞定（免费）
 - [图片格式转换器](https://screscent.github.io/xiaoning-ai-tools/tools/image-format-converter.html)：PNG/JPG/WebP 互转，质量/尺寸可调，本地处理（免费）
 - [文本 Diff 对比器](https://screscent.github.io/xiaoning-ai-tools/tools/text-diff.html)：逐行/逐词/逐字符对比，标注新增删除与相似度（免费）
 - [颜色转换与对比度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/color-contrast.html)：HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测（免费）

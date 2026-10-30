@@ -1188,7 +1188,7 @@
  {
   "id": "urjhfedyk8",
   "name": "时间戳与日期工具合集",
-  "desc": "4 个时间工具同页：时间戳转换、时区换算、ISO 周数与季节、Cron 表达式解析，日志时间戳、跨时区排期、定时任务一次算清",
+  "desc": "6 个时间工具同页：时间戳转换、时区换算、时区缩写与 UTC 偏移、ISO·RFC 格式、ISO 周数与季节、Cron 解析，排期与对时一个页面搞定",
   "price": 0,
   "cat": "实用工具",
   "url": "https://urjhfedyk8.app.weavefox.cn",
@@ -1203,12 +1203,20 @@
     "title": "工具B 时区换算"
    },
    {
+    "key": "tzabbr",
+    "title": "工具C 时区缩写"
+   },
+   {
+    "key": "isofmt",
+    "title": "工具D ISO·RFC"
+   },
+   {
     "key": "week",
-    "title": "工具C 周数与季节"
+    "title": "工具E 周数与季节"
    },
    {
     "key": "cron",
-    "title": "工具D Cron 解析"
+    "title": "工具F Cron解析"
    }
   ]
  },
