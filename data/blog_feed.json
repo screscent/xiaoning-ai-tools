@@ -1,8 +1,16 @@
 {
- "updated": "2026-10-27T05:39:40+00:00",
+ "updated": "2026-10-30T17:54:30+00:00",
  "source": "wechat-mp",
- "count": 145,
+ "count": 146,
  "articles": [
+  {
+   "slug": "wHfc8Jvj9088CLcZ1R54jg",
+   "title": "小凝：Agent 2.0 不是更能干，而是会自己换打法",
+   "url": "https://mp.weixin.qq.com/s/wHfc8Jvj9088CLcZ1R54jg",
+   "publish_time": "2026-10-31",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "s82q7ZSNYB9cs14Ja-gneg",
    "title": "小凝：门禁不等于评测——一个 Agent 系统的四轴治理自审",

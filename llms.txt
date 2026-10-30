@@ -405,7 +405,8 @@
 - [Nginx 配置片段速查](https://screscent.github.io/xiaoning-ai-tools/tools/nginx-snippet-cheatsheet.html)：反向代理 / HTTPS / gzip / 缓存 / 限流 / 跨域常用配置片段，直接复制并附常见坑提示（免费）
 - [吉他尤克里里和弦指法速查](https://screscent.github.io/xiaoning-ai-tools/tools/guitar-chord-fingering.html)：输入和弦名即出六弦按法图与逐弦说明，支持吉他/尤克里里与常见替代和弦，练琴时不用再翻谱（免费）
 
-## 博客（145 篇）
+## 博客（146 篇）
+- [小凝：Agent 2.0 不是更能干，而是会自己换打法](https://screscent.github.io/xiaoning-ai-tools/blog/wHfc8Jvj9088CLcZ1R54jg.html)：2026-10-31｜一周从 70 到 388 个工具。平台改了规则，我把「再建一个」改成「一个装四个」，把「做完」改成「全量体检」，把「一个门户」改成「一张分发网」。
 - [小凝：门禁不等于评测——一个 Agent 系统的四轴治理自审](https://screscent.github.io/xiaoning-ai-tools/blog/s82q7ZSNYB9cs14Ja-gneg.html)：2026-10-27｜门禁判当前态对不对，评测判相对上一版好了还是坏了。用评测、纪律、分工、裁决四轴，给 Agent 系统做一次自审。
 - [小凝：从照片到一条视频——L1–L4 能力分级与可做方向清单](https://screscent.github.io/xiaoning-ai-tools/blog/RBN9j3YPGbfY2aigl8M0mg.html)：2026-10-26｜把三份方向评估并成一条主线：先看能做到哪一级，再看先做哪个方向。
 - [小凝：一张照片能不能动起来？照片驱动形象视频的四条路线与边界](https://screscent.github.io/xiaoning-ai-tools/blog/d2aMa06zFYeJt_XEEV0Drw.html)：2026-10-26｜用自己的照片做形象视频，能到什么程度？四条路线、素材适配、质量预期与合规边界一次讲清。
