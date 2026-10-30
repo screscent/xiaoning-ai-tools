@@ -151,7 +151,7 @@
 - [图片压缩改尺寸](https://screscent.github.io/xiaoning-ai-tools/tools/image-compressor.html)：本地批量压缩 → 指定 KB/像素，免费（免费）
 - [房贷提前还款计算器](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：等额本息对比 + 提前还款两方案，免费（免费）
 - [二维码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：文本网址 → 本地生成 PNG，免费（免费）
-- [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：4 个 JSON 工具同页：格式化与合法性校验、压缩与转义、JSON 与 YAML 互转、结构统计，调接口、贴配置、查层级一个页面全搞定（免费）
+- [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：5 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、结构统计、两段 JSON 差异对比，键路径级定位改动（免费）
 - [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：4 个数据工具同页：CSV 转 JSON 数组、JSON 数组转 CSV、前 5 行表格预览与行列统计、逗号/制表符/分号自动检测，导表与调接口一个页面全搞定（免费）
 - [文本批量处理](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：批量去重、查找替换、排序与前后缀，本地处理（免费）
 - [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：6 个编码工具同页：Base64、URL 与参数表、进制转换、SHA-256/384/512 哈希、Base58、cURL 转代码，调试接口一页搞定（免费）
@@ -237,7 +237,7 @@
 - [家务轮值表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/chore-roster.html)：成员与家务循环排班，输出表格与 CSV（免费）
 - [身份证与银行卡校验器](https://screscent.github.io/xiaoning-ai-tools/tools/id-card-validator.html)：本地校验身份证校验位与银行卡 Luhn，含脱敏展示（免费）
 - [图片自动裁剪透明边](https://screscent.github.io/xiaoning-ai-tools/tools/trim-transparent.html)：按容差自动裁掉透明边并保留内边距，导出图片（免费）
-- [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：4 个出行计算器同页：油耗与单次成本、油车与电车年度对比、停车费与过路费、通勤月度总成本，算清一趟出行和整月通勤到底花多少钱（免费）
+- [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：5 个出行成本工具同页：油耗成本、油车与电车年度对比、停车与过路费、通勤月成本、公交地铁月票对比，通勤怎么走更省一页算清（免费）
 - [CSS Flex 与 Grid 布局生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：切换 Flex/Grid 调间距对齐，实时预览并复制 CSS（免费）
 - [文本行去重与排序工具](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：按行去重排序并统计重复次数，可忽略大小写（免费）
 - [菜谱份量换算器](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：按份数比例换算食材用量，导出清单与 CSV（免费）
