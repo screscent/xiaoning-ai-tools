@@ -1750,12 +1750,30 @@
  },
  {
   "id": "qse8urnhme",
-  "name": "文本转 Unicode 转义",
-  "desc": "文本 ⇄ \\uXXXX 转义，支持三种格式与码点统计",
+  "name": "转义与码点工具合集",
+  "desc": "4 个编码工具同页：文本转 Unicode 转义（三种格式）、转义串还原、HTML 实体编码解码、字符与码点统计，排查乱码与转义问题一个页面全搞定",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qse8urnhme.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "escape",
+    "title": "工具A Unicode转义"
+   },
+   {
+    "key": "unescape",
+    "title": "工具B 反转义"
+   },
+   {
+    "key": "entity",
+    "title": "工具C HTML实体"
+   },
+   {
+    "key": "codepoint",
+    "title": "工具D 码点统计"
+   }
+  ]
  },
  {
   "id": "qse7ptnhme",
