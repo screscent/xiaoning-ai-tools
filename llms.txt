@@ -160,7 +160,7 @@
 - [图片格式转换器](https://screscent.github.io/xiaoning-ai-tools/tools/image-format-converter.html)：PNG/JPG/WebP 互转，质量/尺寸可调，本地处理（免费）
 - [文本 Diff 对比器](https://screscent.github.io/xiaoning-ai-tools/tools/text-diff.html)：逐行/逐词/逐字符对比，标注新增删除与相似度（免费）
 - [颜色转换与对比度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/color-contrast.html)：HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测（免费）
-- [Markdown 表格排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-table.html)：4 个表格工具同页：CSV/TSV 转 Markdown 表格、每行一条文本转表格、表格转 HTML 代码、已有表格统一左中右对齐并给出最大列宽，写文档再不用手敲竖线（免费）
+- [Markdown 表格排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-table.html)：5 个表格工具同页：CSV 转表格、文本转表格、表格转 HTML、对齐调整、表格转 JSON，列多也不乱（免费）
 - [数字进制转换器](https://screscent.github.io/xiaoning-ai-tools/tools/number-base-converter.html)：二/八/十/十六进制互转，位宽与位模式展示（免费）
 - [命名与大小写转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/naming-converter.html)：5 个文本工具同页：五种命名风格、四种大小写、拆词与缩写、URL slug 与安全文件名、批量命名转换，一次转到位（免费）
 - [日期计算器](https://screscent.github.io/xiaoning-ai-tools/tools/date-calculator.html)：相差天数、日期加减与工作日计算，本地秒算（免费）
@@ -398,7 +398,7 @@
 - [文字转语音朗读器](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长（免费）
 - [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：3 个扫码工具同页：二维码解码、条形码解码、条码校验位计算，图片只在浏览器本地处理不上传，扫码查链接一个页面全搞定（免费）
 - [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：5 个运动工具同页：静息心率分级、VO2max 估算、五档心率区间、训练负荷比 ACWR、跨项目等效时长（免费）
-- [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：4 个数据工具同页：JSON 转 INSERT、INSERT 转 JSON、字段类型推断、SQL 关键字与 EXPLAIN 速查（免费）
+- [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：5 个 SQL 工具同页：JSON→INSERT、INSERT→JSON、类型推断、关键字与 EXPLAIN 速查、SQL 格式化，数据与语句一次转通（免费）
 - [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
 - [Git 场景命令速查](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：按局面查该用哪条 git 命令：撤销提交、丢弃改动、找回分支、合并冲突，附风险等级与更安全的替代做法（免费）
 - [Docker 命令速查表](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：容器 / 镜像 / 日志 / 卷 / 清理 / compose 常用命令速查，危险命令单独标注，新人上手与排障都用得上（免费）

@@ -1266,7 +1266,7 @@
  {
   "id": "x8slbmcakb",
   "name": "Markdown 表格排版合集",
-  "desc": "4 个表格工具同页：CSV/TSV 转 Markdown 表格、每行一条文本转表格、表格转 HTML 代码、已有表格统一左中右对齐并给出最大列宽，写文档再不用手敲竖线",
+  "desc": "5 个表格工具同页：CSV 转表格、文本转表格、表格转 HTML、对齐调整、表格转 JSON，列多也不乱",
   "price": 0,
   "cat": "实用工具",
   "url": "https://x8slbmcakb.app.weavefox.cn",
@@ -1287,6 +1287,10 @@
    {
     "key": "align",
     "title": "工具D 对齐调整"
+   },
+   {
+    "key": "t2json",
+    "title": "工具E 表格转JSON"
    }
   ]
  },
@@ -4005,7 +4009,7 @@
  {
   "id": "npihhy2aq6",
   "name": "JSON 与 SQL 互转合集",
-  "desc": "4 个数据工具同页：JSON 转 INSERT、INSERT 转 JSON、字段类型推断、SQL 关键字与 EXPLAIN 速查",
+  "desc": "5 个 SQL 工具同页：JSON→INSERT、INSERT→JSON、类型推断、关键字与 EXPLAIN 速查、SQL 格式化，数据与语句一次转通",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npihhy2aq6.app.weavefox.cn",
@@ -4026,6 +4030,10 @@
    {
     "key": "quickref",
     "title": "工具D SQL速查"
+   },
+   {
+    "key": "sqlfmt",
+    "title": "工具E SQL格式化"
    }
   ]
  },
