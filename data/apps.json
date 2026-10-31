@@ -4255,7 +4255,7 @@
  {
   "id": "puudfv3a4t",
   "name": "GitHub 协作与 Actions 速查合集",
-  "desc": "3 个 GitHub 工具同页：PR 与 Review、Actions 工作流、Issue 模板，协作速查",
+  "desc": "4 个 GitHub 工具同页：PR 与 Review、Actions 工作流、Issue 模板、发布与回滚，协作速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://puudfv3a4t.app.weavefox.cn",
@@ -4272,6 +4272,10 @@
    {
     "key": "issue",
     "title": "工具C Issue模板"
+   },
+   {
+    "key": "release",
+    "title": "工具D 发布与回滚"
    }
   ]
  },
@@ -4305,7 +4309,7 @@
  {
   "id": "dvgx7igy5d",
   "name": "API 设计与 OpenAPI 速查合集",
-  "desc": "3 个接口工具同页：REST 命名、OpenAPI 片段、错误码与分页，接口设计速查",
+  "desc": "4 个接口工具同页：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容，接口设计速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dvgx7igy5d.app.weavefox.cn",
@@ -4322,13 +4326,17 @@
    {
     "key": "error",
     "title": "工具C 错误码与分页"
+   },
+   {
+    "key": "version",
+    "title": "工具D 版本与兼容"
    }
   ]
  },
  {
   "id": "m9fmg8ue9a",
   "name": "测试与质量速查合集",
-  "desc": "3 个测试工具同页：用例设计、Mock 与夹具、质量门禁清单，测试速查",
+  "desc": "4 个测试工具同页：用例设计、Mock 与夹具、质量门禁、覆盖率与回归，测试速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://m9fmg8ue9a.app.weavefox.cn",
@@ -4345,6 +4353,10 @@
    {
     "key": "gate",
     "title": "工具C 质量门禁"
+   },
+   {
+    "key": "coverage",
+    "title": "工具D 覆盖率与回归"
    }
   ]
  }

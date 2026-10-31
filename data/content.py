@@ -1394,8 +1394,8 @@ APPS = {
         "开 PR、写 Actions、建 Issue 模板全靠抄旧仓库，规范不统一。",
         "后端", "前端", "测试",
         ['关键词', '场景'],
-        "3 个 GitHub 工具同页：PR 与 Review + Actions 工作流 + Issue 模板，hash 直链可直达",
-        "定时任务 → on: schedule: cron \"0 3 * * *\"；矩阵构建 → strategy.matrix.node [16, 18, 20]；开 PR → gh pr create --fill。",
+        "4 个 GitHub 工具同页：PR 与 Review + Actions 工作流 + Issue 模板 + 发布与回滚，hash 直链可直达",
+        "定时任务 → on: schedule: cron \"0 3 * * *\"；矩阵构建 → strategy.matrix.node [16, 18, 20]；开 PR → gh pr create --fill；打 tag → git tag -a v1.2.0 -m \"release\" && git push --tags，回滚优先 git revert。",
         "会联网访问 GitHub 吗？",
         "不会。全部内置在本页，纯前端关键词匹配，不调用任何 API。"),
 
@@ -1412,8 +1412,8 @@ APPS = {
         "接口命名、错误码、分页与 OpenAPI 片段每次都要翻旧项目，规范不统一。",
         "后端", "前端", "测试",
         ['资源名', '场景'],
-        "3 个接口工具同页：REST 命名 + OpenAPI 3 片段 + 错误码与分页，hash 直链可直达",
-        "订单 → GET/POST /orders、GET /orders/{id}；分页 → page/size + total + has_more 或 cursor + limit；错误码 → {code,message,details,traceId}。",
+        "4 个接口工具同页：REST 命名 + OpenAPI 3 片段 + 错误码与分页 + 版本与兼容，hash 直链可直达",
+        "订单 → GET/POST /orders、GET /orders/{id}；分页 → page/size + total + has_more 或 cursor + limit；错误码 → {code,message,details,traceId}；版本 → /v1 与 /v2 并行 + Deprecation/Sunset 头。",
         "会调用我的接口吗？",
         "不会。全部内置在本页，只给规范与片段，不发起任何请求。"),
 
@@ -1421,8 +1421,8 @@ APPS = {
         "用例写不全、Mock 数据和夹具散落、发版前检查清单靠记忆。",
         "测试", "后端", "前端",
         ['功能点', '场景'],
-        "3 个测试工具同页：用例设计 + Mock 与夹具 + 质量门禁清单，hash 直链可直达",
-        "登录 → 正常/密码错/账号锁/超长输入 4 类用例；发版前 → lint 0 + 单测全绿 + 覆盖率 ≥70% + 冒烟 3 条。",
+        "4 个测试工具同页：用例设计 + Mock 与夹具 + 质量门禁清单 + 覆盖率与回归，hash 直链可直达",
+        "登录 → 正常/密码错/账号锁/超长输入 4 类用例；发版前 → lint 0 + 单测全绿 + 覆盖率 ≥70% + 冒烟 3 条；回归 → 改动函数 + 调用方 + 关联接口 3 层。",
         "会跑我的测试吗？",
         "不会。只给用例清单与检查项，纯前端，不执行任何测试。"),
 
