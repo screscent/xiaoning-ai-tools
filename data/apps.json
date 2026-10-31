@@ -1266,7 +1266,7 @@
  {
   "id": "x8slbmcakb",
   "name": "Markdown 表格排版合集",
-  "desc": "5 个表格工具同页：CSV 转表格、文本转表格、表格转 HTML、对齐调整、表格转 JSON，列多也不乱",
+  "desc": "6 个表格工具同页：CSV 转表格、文本转表格、表格转 HTML、对齐调整、表格转 JSON、列表与嵌套，列多也不乱",
   "price": 0,
   "cat": "实用工具",
   "url": "https://x8slbmcakb.app.weavefox.cn",
@@ -1291,6 +1291,10 @@
    {
     "key": "t2json",
     "title": "工具E 表格转JSON"
+   },
+   {
+    "key": "list",
+    "title": "工具F 列表与嵌套"
    }
   ]
  },
@@ -1306,7 +1310,7 @@
  {
   "id": "uidvbyxjku",
   "name": "命名与大小写转换合集",
-  "desc": "5 个文本工具同页：五种命名风格、四种大小写、拆词与缩写、URL slug 与安全文件名、批量命名转换，一次转到位",
+  "desc": "6 个文本工具同页：五种命名风格、四种大小写、拆词与缩写、URL slug 与安全文件名、批量转换、常量与配置命名",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uidvbyxjku.app.weavefox.cn",
@@ -1331,6 +1335,10 @@
    {
     "key": "batch",
     "title": "工具E 批量转换"
+   },
+   {
+    "key": "code",
+    "title": "工具F 常量与配置"
    }
   ]
  },
@@ -1799,7 +1807,7 @@
  {
   "id": "qse8urnhme",
   "name": "转义与码点工具合集",
-  "desc": "5 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义（HTML/URL/JS + 危险字符提示）",
+  "desc": "6 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义、正则转义与常用式",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qse8urnhme.app.weavefox.cn",
@@ -1824,6 +1832,10 @@
    {
     "key": "xss",
     "title": "工具E 安全转义"
+   },
+   {
+    "key": "regex",
+    "title": "工具F 正则转义"
    }
   ]
  },
