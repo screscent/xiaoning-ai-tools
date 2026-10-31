@@ -405,8 +405,8 @@
 - [Nginx 配置片段速查](https://screscent.github.io/xiaoning-ai-tools/tools/nginx-snippet-cheatsheet.html)：反向代理 / HTTPS / gzip / 缓存 / 限流 / 跨域常用配置片段，直接复制并附常见坑提示（免费）
 - [吉他尤克里里和弦指法速查](https://screscent.github.io/xiaoning-ai-tools/tools/guitar-chord-fingering.html)：输入和弦名即出六弦按法图与逐弦说明，支持吉他/尤克里里与常见替代和弦，练琴时不用再翻谱（免费）
 - [HTTP 接口调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-debug.html)：5 个接口工具同页：状态码速查、Mock JSON 生成、UA 解析、缓存头、CORS 与安全头，调接口本地自查（免费）
-- [Linux 运维速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/linux-ops.html)：4 个 Linux 工具同页：常用命令速查、chmod 权限计算、端口与服务速查、磁盘与 IO 排查，运维排查本地速查（免费）
-- [服务器排障速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/server-ops.html)：4 个运维工具同页：SSH 连接与密钥、systemd 服务管理、日志排查命令、Nginx 5xx 排查，排障本地速查（免费）
+- [Linux 运维速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/linux-ops.html)：5 个 Linux 工具同页：常用命令速查、chmod 权限计算、端口与服务速查、磁盘与 IO 排查、进程与资源排查（免费）
+- [服务器排障速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/server-ops.html)：5 个运维工具同页：SSH 连接与密钥、systemd 服务管理、日志排查命令、Nginx 5xx 排查、DNS 与网络排查（免费）
 - [Excel 公式速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/excel-formula.html)：3 个表格工具同页：常用函数速查、条件格式与数据验证、Windows/Mac 快捷键对照，做表随手查（免费）
 - [浏览器调试速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/devtools-cheatsheet.html)：3 个前端工具同页：面板速查、快捷键对照、常见报错排查，找回问题入口更快（免费）
 - [Git 分支与冲突处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-branch.html)：3 个 Git 工具同页：分支操作、冲突解决、变基与合并策略，本地速查（免费）
