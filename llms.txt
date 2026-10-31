@@ -396,7 +396,7 @@
 - [租房居住成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/rent-cost-collection.html)：6 个租房工具同页：押金退还、水电分摊、通勤成本、搬家费用、退租交接清单、合租费用分摊（免费）
 - [家居清洗与家电维护计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/homecare-collection.html)：6 个家务工具同页：滤芯更换、洗衣机清洁、空调清洗、以旧换新、家电寿命、家电耗电（免费）
 - [文字转语音朗读器](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长（免费）
-- [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：3 个扫码工具同页：二维码解码、条形码解码、条码校验位计算，图片只在浏览器本地处理不上传，扫码查链接一个页面全搞定（免费）
+- [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：4 个编码工具同页：二维码内容、条形码校验、校验位查询、vCard 名片，编码速查（免费）
 - [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：5 个运动工具同页：静息心率分级、VO2max 估算、五档心率区间、训练负荷比 ACWR、跨项目等效时长（免费）
 - [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：5 个 SQL 工具同页：JSON→INSERT、INSERT→JSON、类型推断、关键字与 EXPLAIN 速查、SQL 格式化，数据与语句一次转通（免费）
 - [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
@@ -407,9 +407,9 @@
 - [HTTP 接口调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-debug.html)：5 个接口工具同页：状态码速查、Mock JSON 生成、UA 解析、缓存头、CORS 与安全头，调接口本地自查（免费）
 - [Linux 运维速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/linux-ops.html)：5 个 Linux 工具同页：常用命令速查、chmod 权限计算、端口与服务速查、磁盘与 IO 排查、进程与资源排查（免费）
 - [服务器排障速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/server-ops.html)：5 个运维工具同页：SSH 连接与密钥、systemd 服务管理、日志排查命令、Nginx 5xx 排查、DNS 与网络排查（免费）
-- [Excel 公式速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/excel-formula.html)：3 个表格工具同页：常用函数速查、条件格式与数据验证、Windows/Mac 快捷键对照，做表随手查（免费）
+- [Excel 公式速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/excel-formula.html)：4 个表格工具同页：常用函数、条件格式与数据验证、快捷键对照、透视与筛选，Excel 速查（免费）
 - [浏览器调试速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/devtools-cheatsheet.html)：5 个前端工具同页：面板速查、快捷键对照、常见报错排查、网络请求排查、性能剖析，找回问题入口更快（免费）
-- [Git 分支与冲突处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-branch.html)：4 个 Git 工具同页：分支操作、冲突解决、变基与合并策略、拣选与回滚，本地速查（免费）
+- [Git 分支与冲突处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-branch.html)：5 个 Git 工具同页：分支操作、冲突解决、变基策略、拣选与回滚、Worktree 并行，本地速查（免费）
 - [GitHub 协作与 Actions 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/github-actions.html)：4 个 GitHub 工具同页：PR 与 Review、Actions 工作流、Issue 模板、发布与回滚，协作速查（免费）
 - [前端性能与 Core Web Vitals 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/web-perf.html)：5 个前端性能工具同页：CWV 指标、打包体积、缓存与加载、图片与资源优化、交互与 INP，优化速查（免费）
 - [API 设计与 OpenAPI 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/api-design.html)：4 个接口工具同页：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容，接口设计速查（免费）

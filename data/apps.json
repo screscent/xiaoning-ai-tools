@@ -3955,7 +3955,7 @@
  {
   "id": "z5hujmaahj",
   "name": "二维码与条形码识别合集",
-  "desc": "3 个扫码工具同页：二维码解码、条形码解码、条码校验位计算，图片只在浏览器本地处理不上传，扫码查链接一个页面全搞定",
+  "desc": "4 个编码工具同页：二维码内容、条形码校验、校验位查询、vCard 名片，编码速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5hujmaahj.app.weavefox.cn",
@@ -3972,6 +3972,10 @@
    {
     "key": "checksum",
     "title": "工具C 校验位计算"
+   },
+   {
+    "key": "vcard",
+    "title": "工具D vCard名片"
    }
   ]
  },
@@ -4178,7 +4182,7 @@
  {
   "id": "rdy3af4t4r",
   "name": "Excel 公式速查合集",
-  "desc": "3 个表格工具同页：常用函数速查、条件格式与数据验证、Windows/Mac 快捷键对照，做表随手查",
+  "desc": "4 个表格工具同页：常用函数、条件格式与数据验证、快捷键对照、透视与筛选，Excel 速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://rdy3af4t4r.app.weavefox.cn",
@@ -4195,6 +4199,10 @@
    {
     "key": "keys",
     "title": "工具C 快捷键"
+   },
+   {
+    "key": "pivot",
+    "title": "工具D 透视与筛选"
    }
   ]
  },
@@ -4232,7 +4240,7 @@
  {
   "id": "ij3fk58zig",
   "name": "Git 分支与冲突处理合集",
-  "desc": "4 个 Git 工具同页：分支操作、冲突解决、变基与合并策略、拣选与回滚，本地速查",
+  "desc": "5 个 Git 工具同页：分支操作、冲突解决、变基策略、拣选与回滚、Worktree 并行，本地速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ij3fk58zig.app.weavefox.cn",
@@ -4253,6 +4261,10 @@
    {
     "key": "cherry",
     "title": "工具D 拣选与回滚"
+   },
+   {
+    "key": "worktree",
+    "title": "工具E Worktree并行"
    }
   ]
  },
