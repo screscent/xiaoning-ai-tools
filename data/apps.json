@@ -4104,5 +4104,28 @@
     "title": "工具C UA解析"
    }
   ]
+ },
+ {
+  "id": "z5hsacaahj",
+  "name": "Linux 运维速查合集",
+  "desc": "3 个 Linux 工具同页：常用命令速查、chmod 权限计算、端口与服务速查，运维排查本地速查",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z5hsacaahj.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "cmd",
+    "title": "工具A 常用命令"
+   },
+   {
+    "key": "chmod",
+    "title": "工具B 权限计算"
+   },
+   {
+    "key": "port",
+    "title": "工具C 端口服务"
+   }
+  ]
  }
 ]
