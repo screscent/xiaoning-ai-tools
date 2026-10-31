@@ -4289,5 +4289,51 @@
     "title": "工具C 缓存与加载"
    }
   ]
+ },
+ {
+  "id": "dvgx7igy5d",
+  "name": "API 设计与 OpenAPI 速查合集",
+  "desc": "3 个接口工具同页：REST 命名、OpenAPI 片段、错误码与分页，接口设计速查",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dvgx7igy5d.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "rest",
+    "title": "工具A REST命名"
+   },
+   {
+    "key": "openapi",
+    "title": "工具B OpenAPI片段"
+   },
+   {
+    "key": "error",
+    "title": "工具C 错误码与分页"
+   }
+  ]
+ },
+ {
+  "id": "m9fmg8ue9a",
+  "name": "测试与质量速查合集",
+  "desc": "3 个测试工具同页：用例设计、Mock 与夹具、质量门禁清单，测试速查",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://m9fmg8ue9a.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "case",
+    "title": "工具A 用例设计"
+   },
+   {
+    "key": "mock",
+    "title": "工具B Mock与夹具"
+   },
+   {
+    "key": "gate",
+    "title": "工具C 质量门禁"
+   }
+  ]
  }
 ]
