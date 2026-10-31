@@ -4127,5 +4127,28 @@
     "title": "工具C 端口服务"
    }
   ]
+ },
+ {
+  "id": "frndhjgsra",
+  "name": "服务器排障速查合集",
+  "desc": "3 个运维工具同页：SSH 连接与密钥、systemd 服务管理、日志排查命令，排障本地速查",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://frndhjgsra.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "ssh",
+    "title": "工具A SSH连接"
+   },
+   {
+    "key": "systemd",
+    "title": "工具B 服务管理"
+   },
+   {
+    "key": "log",
+    "title": "工具C 日志排查"
+   }
+  ]
  }
 ]
