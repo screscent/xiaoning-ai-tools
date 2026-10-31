@@ -4212,5 +4212,51 @@
     "title": "工具C 报错排查"
    }
   ]
+ },
+ {
+  "id": "ij3fk58zig",
+  "name": "Git 分支与冲突处理合集",
+  "desc": "3 个 Git 工具同页：分支操作、冲突解决、变基与合并策略，本地速查",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ij3fk58zig.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "branch",
+    "title": "工具A 分支操作"
+   },
+   {
+    "key": "conflict",
+    "title": "工具B 冲突解决"
+   },
+   {
+    "key": "rebase",
+    "title": "工具C 变基策略"
+   }
+  ]
+ },
+ {
+  "id": "puudfv3a4t",
+  "name": "GitHub 协作与 Actions 速查合集",
+  "desc": "3 个 GitHub 工具同页：PR 与 Review、Actions 工作流、Issue 模板，协作速查",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puudfv3a4t.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "pr",
+    "title": "工具A PR与Review"
+   },
+   {
+    "key": "actions",
+    "title": "工具B Actions"
+   },
+   {
+    "key": "issue",
+    "title": "工具C Issue模板"
+   }
+  ]
  }
 ]
