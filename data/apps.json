@@ -2083,7 +2083,7 @@
  {
   "id": "bcycnrk6f9",
   "name": "出行成本计算合集",
-  "desc": "5 个出行成本工具同页：油耗成本、油车与电车年度对比、停车与过路费、通勤月成本、公交地铁月票对比，通勤怎么走更省一页算清",
+  "desc": "6 个出行工具同页：油耗、油电对比、停车过路、通勤月成本、公交月票、五年总持有",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bcycnrk6f9.app.weavefox.cn",
@@ -2108,6 +2108,10 @@
    {
     "key": "transit",
     "title": "工具E 公交月票"
+   },
+   {
+    "key": "tco",
+    "title": "工具F 五年总持有"
    }
   ]
  },
@@ -4260,7 +4264,7 @@
  {
   "id": "ij3fk58zig",
   "name": "Git 分支与冲突处理合集",
-  "desc": "5 个 Git 工具同页：分支操作、冲突解决、变基策略、拣选与回滚、Worktree 并行，本地速查",
+  "desc": "6 个 Git 工具同页：分支、冲突、变基、拣选回滚、Worktree 并行、暂存与找回",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ij3fk58zig.app.weavefox.cn",
@@ -4285,6 +4289,10 @@
    {
     "key": "worktree",
     "title": "工具E Worktree并行"
+   },
+   {
+    "key": "stash",
+    "title": "工具F 暂存与找回"
    }
   ]
  },
@@ -4318,7 +4326,7 @@
  {
   "id": "sfbarjy97s",
   "name": "前端性能与 Core Web Vitals 速查合集",
-  "desc": "5 个前端性能工具同页：CWV 指标、打包体积、缓存与加载、图片与资源优化、交互与 INP，优化速查",
+  "desc": "6 个性能工具同页：CWV、打包体积、缓存与加载、图片与资源、交互与 INP、渲染与 SSR",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sfbarjy97s.app.weavefox.cn",
@@ -4343,6 +4351,10 @@
    {
     "key": "interact",
     "title": "工具E 交互与 INP"
+   },
+   {
+    "key": "ssr",
+    "title": "工具F 渲染与SSR"
    }
   ]
  },

@@ -237,7 +237,7 @@
 - [家务轮值表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/chore-roster.html)：成员与家务循环排班，输出表格与 CSV（免费）
 - [身份证与银行卡校验器](https://screscent.github.io/xiaoning-ai-tools/tools/id-card-validator.html)：本地校验身份证校验位与银行卡 Luhn，含脱敏展示（免费）
 - [图片自动裁剪透明边](https://screscent.github.io/xiaoning-ai-tools/tools/trim-transparent.html)：按容差自动裁掉透明边并保留内边距，导出图片（免费）
-- [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：5 个出行成本工具同页：油耗成本、油车与电车年度对比、停车与过路费、通勤月成本、公交地铁月票对比，通勤怎么走更省一页算清（免费）
+- [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：6 个出行工具同页：油耗、油电对比、停车过路、通勤月成本、公交月票、五年总持有（免费）
 - [CSS Flex 与 Grid 布局生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：切换 Flex/Grid 调间距对齐，实时预览并复制 CSS（免费）
 - [文本行去重与排序工具](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：按行去重排序并统计重复次数，可忽略大小写（免费）
 - [菜谱份量换算器](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：按份数比例换算食材用量，导出清单与 CSV（免费）
@@ -409,9 +409,9 @@
 - [服务器排障速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/server-ops.html)：6 个工具：SSH、systemd、日志、Nginx 5xx、DNS、CPU 内存（免费）
 - [Excel 公式速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/excel-formula.html)：4 个表格工具同页：常用函数、条件格式与数据验证、快捷键对照、透视与筛选，Excel 速查（免费）
 - [浏览器调试速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/devtools-cheatsheet.html)：6 个前端工具同页：面板、快捷键、报错、网络请求、性能剖析、内存与泄漏（免费）
-- [Git 分支与冲突处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-branch.html)：5 个 Git 工具同页：分支操作、冲突解决、变基策略、拣选与回滚、Worktree 并行，本地速查（免费）
+- [Git 分支与冲突处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-branch.html)：6 个 Git 工具同页：分支、冲突、变基、拣选回滚、Worktree 并行、暂存与找回（免费）
 - [GitHub 协作与 Actions 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/github-actions.html)：4 个 GitHub 工具同页：PR 与 Review、Actions 工作流、Issue 模板、发布与回滚，协作速查（免费）
-- [前端性能与 Core Web Vitals 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/web-perf.html)：5 个前端性能工具同页：CWV 指标、打包体积、缓存与加载、图片与资源优化、交互与 INP，优化速查（免费）
+- [前端性能与 Core Web Vitals 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/web-perf.html)：6 个性能工具同页：CWV、打包体积、缓存与加载、图片与资源、交互与 INP、渲染与 SSR（免费）
 - [API 设计与 OpenAPI 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/api-design.html)：4 个接口工具同页：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容，接口设计速查（免费）
 - [测试与质量速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/test-quality.html)：6 个测试工具同页：用例、Mock、质量门禁、覆盖率、不稳定测试、E2E 与自动化（免费）
 
