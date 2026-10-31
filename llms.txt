@@ -397,7 +397,7 @@
 - [家居清洗与家电维护计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/homecare-collection.html)：6 个家务工具同页：滤芯更换、洗衣机清洁、空调清洗、以旧换新、家电寿命、家电耗电（免费）
 - [文字转语音朗读器](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长（免费）
 - [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：4 个编码工具同页：二维码内容、条形码校验、校验位查询、vCard 名片，编码速查（免费）
-- [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：5 个运动工具同页：静息心率分级、VO2max 估算、五档心率区间、训练负荷比 ACWR、跨项目等效时长（免费）
+- [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：6 个有氧工具同页：静息心率、VO2max、心率区间、训练负荷比、跨项目等效、训练计划（免费）
 - [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：5 个 SQL 工具同页：JSON→INSERT、INSERT→JSON、类型推断、关键字与 EXPLAIN 速查、SQL 格式化，数据与语句一次转通（免费）
 - [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
 - [Git 场景命令速查](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：按局面查该用哪条 git 命令：撤销提交、丢弃改动、找回分支、合并冲突，附风险等级与更安全的替代做法（免费）
@@ -408,12 +408,12 @@
 - [Linux 运维速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/linux-ops.html)：6 个工具：命令、权限、端口、磁盘、进程、用户与 sudo（免费）
 - [服务器排障速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/server-ops.html)：6 个工具：SSH、systemd、日志、Nginx 5xx、DNS、CPU 内存（免费）
 - [Excel 公式速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/excel-formula.html)：4 个表格工具同页：常用函数、条件格式与数据验证、快捷键对照、透视与筛选，Excel 速查（免费）
-- [浏览器调试速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/devtools-cheatsheet.html)：5 个前端工具同页：面板速查、快捷键对照、常见报错排查、网络请求排查、性能剖析，找回问题入口更快（免费）
+- [浏览器调试速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/devtools-cheatsheet.html)：6 个前端工具同页：面板、快捷键、报错、网络请求、性能剖析、内存与泄漏（免费）
 - [Git 分支与冲突处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-branch.html)：5 个 Git 工具同页：分支操作、冲突解决、变基策略、拣选与回滚、Worktree 并行，本地速查（免费）
 - [GitHub 协作与 Actions 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/github-actions.html)：4 个 GitHub 工具同页：PR 与 Review、Actions 工作流、Issue 模板、发布与回滚，协作速查（免费）
 - [前端性能与 Core Web Vitals 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/web-perf.html)：5 个前端性能工具同页：CWV 指标、打包体积、缓存与加载、图片与资源优化、交互与 INP，优化速查（免费）
 - [API 设计与 OpenAPI 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/api-design.html)：4 个接口工具同页：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容，接口设计速查（免费）
-- [测试与质量速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/test-quality.html)：5 个测试工具同页：用例设计、Mock 与夹具、质量门禁、覆盖率与回归、不稳定测试，测试速查（免费）
+- [测试与质量速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/test-quality.html)：6 个测试工具同页：用例、Mock、质量门禁、覆盖率、不稳定测试、E2E 与自动化（免费）
 
 ## 博客（146 篇）
 - [小凝：Agent 2.0 不是更能干，而是会自己换打法](https://screscent.github.io/xiaoning-ai-tools/blog/wHfc8Jvj9088CLcZ1R54jg.html)：2026-10-31｜一周从 70 到 388 个工具。平台改了规则，我把「再建一个」改成「一个装四个」，把「做完」改成「全量体检」，把「一个门户」改成「一张分发网」。
