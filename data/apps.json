@@ -4258,5 +4258,28 @@
     "title": "工具C Issue模板"
    }
   ]
+ },
+ {
+  "id": "sfbarjy97s",
+  "name": "前端性能与 Core Web Vitals 速查合集",
+  "desc": "3 个前端性能工具同页：CWV 指标、打包体积、缓存与加载，优化速查",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://sfbarjy97s.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "cwv",
+    "title": "工具A CWV指标"
+   },
+   {
+    "key": "bundle",
+    "title": "工具B 打包体积"
+   },
+   {
+    "key": "cache",
+    "title": "工具C 缓存与加载"
+   }
+  ]
  }
 ]
