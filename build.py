@@ -392,6 +392,8 @@ def _util_cat_cards(util):
 def unified_page(apps, blog=None):
     n_util = len([a for a in apps if a["cat"] == "实用工具"])
     n_ai = len(apps) - n_util
+    n_coll = len([a for a in apps if a.get("subapps")])
+    n_sub = sum(len(a.get("subapps") or []) for a in apps)
     canon = BASE_URL + "/"
     latest = (blog or {}).get("articles", [])[:5]
     latest_html = ""
@@ -410,13 +412,13 @@ def unified_page(apps, blog=None):
     body = f"""
 <section class="hero">
   <h1>{SITE_NAME} · 统一入口</h1>
-  <p class="lede">两类工具，一个入口：<strong>AI 工具集</strong>负责把材料变成可直接使用的结果；<strong>实用工具箱</strong>用纯前端完成转换与计算，完全免费、数据不上传。</p>
+  <p class="lede">三类内容，一个入口：<strong>AI 工具集</strong>（{n_ai} 个生成类）负责把材料变成可直接使用的结果；<strong>实用工具箱</strong>（{n_util} 个免费纯前端 · {n_coll} 个合集 / {n_sub} 个子工具）用纯前端完成转换与计算；<strong>博客</strong>归档方法与复盘。</p>
 </section>
 
 <h2>选择工具集</h2>
 <ul class="cards">
-  <li><a href="ai/index.html"><strong>AI 工具集</strong><span>简历匹配、面试题、周报、会议纪要、PPT 大纲、小红书文案、SQL 优化等，生成类工具，单个 ¥1–¥3 解锁。</span><em>进入 →</em></a></li>
-  <li><a href="utility/index.html"><strong>实用工具箱 · 免费</strong><span>图片压缩改尺寸、房贷提前还款计算器、二维码生成器——浏览器本地处理，数据不上传，完全免费。</span><em>进入 →</em></a></li>
+  <li><a href="ai/index.html"><strong>AI 工具集</strong><span>{n_ai} 个生成类工具：简历匹配、面试题、周报、会议纪要、PPT 大纲、小红书文案、SQL 优化等，单个 ¥1–¥3 解锁。</span><em>进入 →</em></a></li>
+  <li><a href="utility/index.html"><strong>实用工具箱 · 免费</strong><span>{n_util} 个免费纯前端工具（{n_coll} 个合集 / {n_sub} 个子工具）：JSON·SQL 互转、HTTP 接口调试、CSV 与 JSON、Markdown 表格、编码转换、命名转换、Linux 运维、服务器排障等；本地处理，数据不上传。</span><em>进入 →</em></a></li>
   <li><a href="blog/index.html"><strong>博客</strong><span>公众号文章全文归档 + 独立博客：记录一个 AI 体系怎么被赋予行动能力、怎么在真实项目里交付。</span><em>进入 →</em></a></li>
 </ul>
 
@@ -431,7 +433,7 @@ def unified_page(apps, blog=None):
 """
     return page_shell(
         f"{SITE_NAME} - 统一入口（AI 工具集 + 实用工具箱 + 博客）",
-        "统一入口：AI 工具集（单个 ¥1–¥3 解锁）、免费实用工具箱（图片压缩、房贷计算、二维码）与博客，浏览器即开即用。",
+        "统一入口：AI 工具集（" + str(n_ai) + " 个，单个 ¥1–¥3 解锁）、免费实用工具箱（" + str(n_util) + " 个纯前端工具 / " + str(n_coll) + " 个合集）与博客，浏览器即开即用。",
         canon, body,
         extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>',
         depth=0,
@@ -483,11 +485,13 @@ def ai_portal_page(apps):
 
 def utility_portal_page(apps):
     util = [a for a in apps if a["cat"] == "实用工具"]
+    n_coll_u = len([a for a in util if a.get("subapps")])
+    n_sub_u = sum(len(a.get("subapps") or []) for a in util)
     canon = f"{BASE_URL}/utility/"
     jsonld = json.dumps({
         "@context": "https://schema.org", "@type": "CollectionPage", "name": f"实用工具箱（{len(util)} 个 · 免费）",
         "url": canon, "inLanguage": "zh-CN",
-        "description": "纯前端免费工具：图片压缩改尺寸、房贷提前还款计算器、二维码生成器；本地处理，数据不上传。",
+        "description": f"纯前端免费工具 {len(util)} 个（{n_coll_u} 个合集 / {n_sub_u} 个子工具）：JSON·SQL 互转、HTTP 接口调试、CSV 与 JSON、Markdown 表格、编码转换、命名转换、Linux 运维、服务器排障等；本地处理，数据不上传。",
     }, ensure_ascii=False)
     missing = [a["name"] for a in util if not a.get("subcat")]
     if missing:
@@ -517,7 +521,7 @@ def utility_portal_page(apps):
 """
     return page_shell(
         f"实用工具箱（{len(util)} 个免费纯前端工具）| {SITE_NAME}",
-        "免费纯前端工具：图片压缩改尺寸、房贷提前还款计算器、二维码生成器；浏览器本地处理，数据不上传，无需注册与支付。",
+        "免费纯前端工具 " + str(len(util)) + " 个（" + str(n_coll_u) + " 个合集 / " + str(n_sub_u) + " 个子工具）：JSON·SQL 互转、HTTP 接口调试、CSV 与 JSON、Markdown 表格、编码转换、命名转换、Linux 运维、服务器排障等；本地处理，数据不上传，无需注册与支付。",
         canon, body,
         extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>',
         depth=1,
