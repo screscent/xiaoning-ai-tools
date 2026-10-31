@@ -4081,5 +4081,28 @@
   "cat": "实用工具",
   "url": "https://mksvlrrxwr.app.weavefox.cn",
   "subcat": "效率生活"
+ },
+ {
+  "id": "puusba3a4t",
+  "name": "HTTP 接口调试合集",
+  "desc": "3 个接口工具同页：状态码速查、Mock JSON 生成、UA 解析，调接口本地自查不走外网",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puusba3a4t.app.weavefox.cn",
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "status",
+    "title": "工具A 状态码速查"
+   },
+   {
+    "key": "mock",
+    "title": "工具B Mock数据"
+   },
+   {
+    "key": "ua",
+    "title": "工具C UA解析"
+   }
+  ]
  }
 ]
