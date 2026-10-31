@@ -1367,8 +1367,8 @@ APPS = {
         "前端出问题要在 Elements/Network/Performance 之间来回找入口，快捷键记不全，报错原因还得猜。",
         "前端", "研发", "测试",
         ['关键词或报错'],
-        "3 个前端工具同页：面板速查 + Windows/Mac 快捷键对照 + 常见报错排查（CORS / Mixed Content / CSP 等），hash 直链可直达",
-        "Network → 保留日志 + 禁用缓存 + 筛选 XHR；快捷键 → Ctrl+Shift+I（Mac ⌘⌥I）；Mixed Content → 页面 https 而资源 http，改 https 或走同源代理。",
+        "4 个前端工具同页：面板速查 + Windows/Mac 快捷键对照 + 常见报错排查（CORS / Mixed Content / CSP 等）+ 网络请求排查（状态码 / 缓存 / CORS / 慢请求），hash 直链可直达",
+        "Network → 保留日志 + 禁用缓存 + 筛选 XHR；快捷键 → Ctrl+Shift+I（Mac ⌘⌥I）；Mixed Content → 页面 https 而资源 http，改 https 或走同源代理；缓存 → 200 from disk cache 与 Cache-Control 对照。",
         "会抓取我的网站吗？",
         "不会。全部内置在本页，纯前端关键词匹配，不发起任何请求。"),
 
@@ -1385,8 +1385,8 @@ APPS = {
         "分支切换、合并冲突、rebase 记不清，破坏性命令不敢乱敲，翻文档又慢。",
         "运维", "后端", "学生",
         ['关键词', '场景'],
-        "3 个 Git 工具同页：分支操作 + 冲突解决 + 变基与合并策略，hash 直链可直达",
-        "合并冲突 → git status 看 both modified → 去冲突标记 → git add → git commit；rebase 冲突 → git rebase --continue / --abort；压缩提交 → git rebase -i HEAD~3。",
+        "4 个 Git 工具同页：分支操作 + 冲突解决 + 变基与合并策略 + 拣选与回滚，hash 直链可直达",
+        "合并冲突 → git status 看 both modified → 去冲突标记 → git add → git commit；rebase 冲突 → git rebase --continue / --abort；压缩提交 → git rebase -i HEAD~3；挑单个提交 → git cherry-pick <sha>，回滚用 git revert <sha>。",
         "会执行命令吗？",
         "不会。只给命令与步骤，纯前端匹配，不连接任何仓库。"),
 
@@ -1403,8 +1403,8 @@ APPS = {
         "首屏慢、LCP 不达标，指标阈值和优化清单记不牢，翻文档最费时间。",
         "前端", "研发", "测试",
         ['指标名', '关键词或场景'],
-        "3 个前端性能工具同页：Core Web Vitals 指标速查 + 打包体积定位 + 缓存与加载策略，hash 直链可直达",
-        "LCP → 好 ≤2.5s / 需改进 2.5~4s / 差 >4s；体积大 → bundle analyzer + 动态 import；首屏慢 → 减少首屏 JS + 骨架屏 + preload 关键资源。",
+        "4 个前端性能工具同页：Core Web Vitals 指标速查 + 打包体积定位 + 缓存与加载策略 + 图片与资源优化，hash 直链可直达",
+        "LCP → 好 ≤2.5s / 需改进 2.5~4s / 差 >4s；体积大 → bundle analyzer + 动态 import；首屏慢 → 减少首屏 JS + 骨架屏 + preload 关键资源；图片 → WebP/AVIF + srcset 多尺寸 + loading=lazy。",
         "会联网测我的网站吗？",
         "不会。全部内置在本页，只给阈值与优化建议，不发起任何请求。"),
 
