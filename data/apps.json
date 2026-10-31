@@ -3093,7 +3093,7 @@
  {
   "id": "rdqxu54t4r",
   "name": "数码续航与充电合集",
-  "desc": "4 个数码计算器同页：充电用时估算、充电宝容量与可用次数、笔记本续航、电池健康与更换判断，充满要多久、充电宝能充几次、电池该不该换一目了然",
+  "desc": "5 个数码工具同页：充电用时、充电宝容量、笔记本续航、电池健康、快充协议，续航充电速查",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -3115,6 +3115,10 @@
    {
     "key": "battery",
     "title": "工具D 电池健康与更换"
+   },
+   {
+    "key": "protocol",
+    "title": "工具E 快充协议"
    }
   ]
  },
@@ -4120,7 +4124,7 @@
  {
   "id": "z5hsacaahj",
   "name": "Linux 运维速查合集",
-  "desc": "5 个 Linux 工具同页：常用命令速查、chmod 权限计算、端口与服务速查、磁盘与 IO 排查、进程与资源排查",
+  "desc": "6 个 Linux 工具同页：常用命令、chmod 权限、端口服务、磁盘与 IO、进程资源、用户与 sudo，Linux 运维速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5hsacaahj.app.weavefox.cn",
@@ -4145,13 +4149,17 @@
    {
     "key": "process",
     "title": "工具E 进程排查"
+   },
+   {
+    "key": "user",
+    "title": "工具F 用户与sudo"
    }
   ]
  },
  {
   "id": "frndhjgsra",
   "name": "服务器排障速查合集",
-  "desc": "5 个运维工具同页：SSH 连接与密钥、systemd 服务管理、日志排查命令、Nginx 5xx 排查、DNS 与网络排查",
+  "desc": "6 个运维工具同页：SSH 连接、systemd、日志排查、Nginx 5xx、DNS 网络、CPU 内存负载，服务器排障速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frndhjgsra.app.weavefox.cn",
@@ -4176,6 +4184,10 @@
    {
     "key": "dns",
     "title": "工具E DNS排查"
+   },
+   {
+    "key": "cpu",
+    "title": "工具F CPU内存负载"
    }
   ]
  },
