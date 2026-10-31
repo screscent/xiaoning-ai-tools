@@ -4124,7 +4124,7 @@
  {
   "id": "z5hsacaahj",
   "name": "Linux 运维速查合集",
-  "desc": "6 个 Linux 工具同页：常用命令、chmod 权限、端口服务、磁盘与 IO、进程资源、用户与 sudo，Linux 运维速查",
+  "desc": "6 个工具：命令、权限、端口、磁盘、进程、用户与 sudo",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5hsacaahj.app.weavefox.cn",
@@ -4159,7 +4159,7 @@
  {
   "id": "frndhjgsra",
   "name": "服务器排障速查合集",
-  "desc": "6 个运维工具同页：SSH 连接、systemd、日志排查、Nginx 5xx、DNS 网络、CPU 内存负载，服务器排障速查",
+  "desc": "6 个工具：SSH、systemd、日志、Nginx 5xx、DNS、CPU 内存",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frndhjgsra.app.weavefox.cn",
