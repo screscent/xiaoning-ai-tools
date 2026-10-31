@@ -4201,7 +4201,7 @@
  {
   "id": "dzazvvslwd",
   "name": "浏览器调试速查合集",
-  "desc": "4 个前端工具同页：面板速查、快捷键对照、常见报错排查、网络请求排查，找回问题入口更快",
+  "desc": "5 个前端工具同页：面板速查、快捷键对照、常见报错排查、网络请求排查、性能剖析，找回问题入口更快",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzazvvslwd.app.weavefox.cn",
@@ -4222,6 +4222,10 @@
    {
     "key": "network",
     "title": "工具D 网络请求排查"
+   },
+   {
+    "key": "perf",
+    "title": "工具E 性能剖析"
    }
   ]
  },
@@ -4282,7 +4286,7 @@
  {
   "id": "sfbarjy97s",
   "name": "前端性能与 Core Web Vitals 速查合集",
-  "desc": "4 个前端性能工具同页：CWV 指标、打包体积、缓存与加载、图片与资源优化，优化速查",
+  "desc": "5 个前端性能工具同页：CWV 指标、打包体积、缓存与加载、图片与资源优化、交互与 INP，优化速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sfbarjy97s.app.weavefox.cn",
@@ -4303,6 +4307,10 @@
    {
     "key": "image",
     "title": "工具D 图片与资源优化"
+   },
+   {
+    "key": "interact",
+    "title": "工具E 交互与 INP"
    }
   ]
  },
@@ -4336,7 +4344,7 @@
  {
   "id": "m9fmg8ue9a",
   "name": "测试与质量速查合集",
-  "desc": "4 个测试工具同页：用例设计、Mock 与夹具、质量门禁、覆盖率与回归，测试速查",
+  "desc": "5 个测试工具同页：用例设计、Mock 与夹具、质量门禁、覆盖率与回归、不稳定测试，测试速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://m9fmg8ue9a.app.weavefox.cn",
@@ -4357,6 +4365,10 @@
    {
     "key": "coverage",
     "title": "工具D 覆盖率与回归"
+   },
+   {
+    "key": "flaky",
+    "title": "工具E 不稳定测试"
    }
   ]
  }

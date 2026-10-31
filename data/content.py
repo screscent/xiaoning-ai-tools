@@ -1367,8 +1367,8 @@ APPS = {
         "前端出问题要在 Elements/Network/Performance 之间来回找入口，快捷键记不全，报错原因还得猜。",
         "前端", "研发", "测试",
         ['关键词或报错'],
-        "4 个前端工具同页：面板速查 + Windows/Mac 快捷键对照 + 常见报错排查（CORS / Mixed Content / CSP 等）+ 网络请求排查（状态码 / 缓存 / CORS / 慢请求），hash 直链可直达",
-        "Network → 保留日志 + 禁用缓存 + 筛选 XHR；快捷键 → Ctrl+Shift+I（Mac ⌘⌥I）；Mixed Content → 页面 https 而资源 http，改 https 或走同源代理；缓存 → 200 from disk cache 与 Cache-Control 对照。",
+        "5 个前端工具同页：面板速查 + Windows/Mac 快捷键对照 + 常见报错排查（CORS / Mixed Content / CSP 等）+ 网络请求排查（状态码 / 缓存 / CORS / 慢请求）+ 性能剖析（Performance 面板），hash 直链可直达",
+        "Network → 保留日志 + 禁用缓存 + 筛选 XHR；快捷键 → Ctrl+Shift+I（Mac ⌘⌥I）；Mixed Content → 页面 https 而资源 http，改 https 或走同源代理；缓存 → 200 from disk cache 与 Cache-Control 对照；长任务 → Performance 录制看 Main 线程 Long Task。",
         "会抓取我的网站吗？",
         "不会。全部内置在本页，纯前端关键词匹配，不发起任何请求。"),
 
@@ -1403,8 +1403,8 @@ APPS = {
         "首屏慢、LCP 不达标，指标阈值和优化清单记不牢，翻文档最费时间。",
         "前端", "研发", "测试",
         ['指标名', '关键词或场景'],
-        "4 个前端性能工具同页：Core Web Vitals 指标速查 + 打包体积定位 + 缓存与加载策略 + 图片与资源优化，hash 直链可直达",
-        "LCP → 好 ≤2.5s / 需改进 2.5~4s / 差 >4s；体积大 → bundle analyzer + 动态 import；首屏慢 → 减少首屏 JS + 骨架屏 + preload 关键资源；图片 → WebP/AVIF + srcset 多尺寸 + loading=lazy。",
+        "5 个前端性能工具同页：Core Web Vitals 指标速查 + 打包体积定位 + 缓存与加载策略 + 图片与资源优化 + 交互与 INP，hash 直链可直达",
+        "LCP → 好 ≤2.5s / 需改进 2.5~4s / 差 >4s；体积大 → bundle analyzer + 动态 import；首屏慢 → 减少首屏 JS + 骨架屏 + preload 关键资源；图片 → WebP/AVIF + srcset 多尺寸 + loading=lazy；INP → 好 ≤200ms，点击慢拆长任务 + 让出主线程。",
         "会联网测我的网站吗？",
         "不会。全部内置在本页，只给阈值与优化建议，不发起任何请求。"),
 
@@ -1421,8 +1421,8 @@ APPS = {
         "用例写不全、Mock 数据和夹具散落、发版前检查清单靠记忆。",
         "测试", "后端", "前端",
         ['功能点', '场景'],
-        "4 个测试工具同页：用例设计 + Mock 与夹具 + 质量门禁清单 + 覆盖率与回归，hash 直链可直达",
-        "登录 → 正常/密码错/账号锁/超长输入 4 类用例；发版前 → lint 0 + 单测全绿 + 覆盖率 ≥70% + 冒烟 3 条；回归 → 改动函数 + 调用方 + 关联接口 3 层。",
+        "5 个测试工具同页：用例设计 + Mock 与夹具 + 质量门禁清单 + 覆盖率与回归 + 不稳定测试，hash 直链可直达",
+        "登录 → 正常/密码错/账号锁/超长输入 4 类用例；发版前 → lint 0 + 单测全绿 + 覆盖率 ≥70% + 冒烟 3 条；回归 → 改动函数 + 调用方 + 关联接口 3 层；偶发失败 → 固定随机种子 + 冻结时间 + 隔离网络。",
         "会跑我的测试吗？",
         "不会。只给用例清单与检查项，纯前端，不执行任何测试。"),
 

@@ -408,12 +408,12 @@
 - [Linux 运维速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/linux-ops.html)：5 个 Linux 工具同页：常用命令速查、chmod 权限计算、端口与服务速查、磁盘与 IO 排查、进程与资源排查（免费）
 - [服务器排障速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/server-ops.html)：5 个运维工具同页：SSH 连接与密钥、systemd 服务管理、日志排查命令、Nginx 5xx 排查、DNS 与网络排查（免费）
 - [Excel 公式速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/excel-formula.html)：3 个表格工具同页：常用函数速查、条件格式与数据验证、Windows/Mac 快捷键对照，做表随手查（免费）
-- [浏览器调试速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/devtools-cheatsheet.html)：4 个前端工具同页：面板速查、快捷键对照、常见报错排查、网络请求排查，找回问题入口更快（免费）
+- [浏览器调试速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/devtools-cheatsheet.html)：5 个前端工具同页：面板速查、快捷键对照、常见报错排查、网络请求排查、性能剖析，找回问题入口更快（免费）
 - [Git 分支与冲突处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-branch.html)：4 个 Git 工具同页：分支操作、冲突解决、变基与合并策略、拣选与回滚，本地速查（免费）
 - [GitHub 协作与 Actions 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/github-actions.html)：4 个 GitHub 工具同页：PR 与 Review、Actions 工作流、Issue 模板、发布与回滚，协作速查（免费）
-- [前端性能与 Core Web Vitals 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/web-perf.html)：4 个前端性能工具同页：CWV 指标、打包体积、缓存与加载、图片与资源优化，优化速查（免费）
+- [前端性能与 Core Web Vitals 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/web-perf.html)：5 个前端性能工具同页：CWV 指标、打包体积、缓存与加载、图片与资源优化、交互与 INP，优化速查（免费）
 - [API 设计与 OpenAPI 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/api-design.html)：4 个接口工具同页：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容，接口设计速查（免费）
-- [测试与质量速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/test-quality.html)：4 个测试工具同页：用例设计、Mock 与夹具、质量门禁、覆盖率与回归，测试速查（免费）
+- [测试与质量速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/test-quality.html)：5 个测试工具同页：用例设计、Mock 与夹具、质量门禁、覆盖率与回归、不稳定测试，测试速查（免费）
 
 ## 博客（146 篇）
 - [小凝：Agent 2.0 不是更能干，而是会自己换打法](https://screscent.github.io/xiaoning-ai-tools/blog/wHfc8Jvj9088CLcZ1R54jg.html)：2026-10-31｜一周从 70 到 388 个工具。平台改了规则，我把「再建一个」改成「一个装四个」，把「做完」改成「全量体检」，把「一个门户」改成「一张分发网」。
