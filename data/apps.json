@@ -4181,5 +4181,28 @@
     "title": "工具C 快捷键"
    }
   ]
+ },
+ {
+  "id": "dzazvvslwd",
+  "name": "浏览器调试速查合集",
+  "desc": "3 个前端工具同页：面板速查、快捷键对照、常见报错排查，找回问题入口更快",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzazvvslwd.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "panel",
+    "title": "工具A 面板速查"
+   },
+   {
+    "key": "keys",
+    "title": "工具B 快捷键"
+   },
+   {
+    "key": "errors",
+    "title": "工具C 报错排查"
+   }
+  ]
  }
 ]

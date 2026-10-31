@@ -1363,6 +1363,15 @@ APPS = {
         "会真的执行命令吗？",
         "不会。只给命令与排查步骤，全部内置在本页，不连接任何服务器。"),
 
+    "dzazvvslwd": ("devtools-cheatsheet",
+        "前端出问题要在 Elements/Network/Performance 之间来回找入口，快捷键记不全，报错原因还得猜。",
+        "前端", "研发", "测试",
+        ['关键词或报错'],
+        "3 个前端工具同页：面板速查 + Windows/Mac 快捷键对照 + 常见报错排查（CORS / Mixed Content / CSP 等），hash 直链可直达",
+        "Network → 保留日志 + 禁用缓存 + 筛选 XHR；快捷键 → Ctrl+Shift+I（Mac ⌘⌥I）；Mixed Content → 页面 https 而资源 http，改 https 或走同源代理。",
+        "会抓取我的网站吗？",
+        "不会。全部内置在本页，纯前端关键词匹配，不发起任何请求。"),
+
     "rdy3af4t4r": ("excel-formula",
         "做表格时函数名记不全、条件格式入口找不到、快捷键总忘，边做边搜最打断节奏。",
         "办公", "学生", "运营",
