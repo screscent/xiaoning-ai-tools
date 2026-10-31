@@ -1348,9 +1348,9 @@ APPS = {
     "z5hsacaahj": ("linux-ops",
         "登录服务器要查命令、算权限、核端口，全靠脑子记，翻文档又慢；想在本机先自查还找不到一站式页面。",
         "运维", "后端", "学生",
-        ['关键词', '权限值或 rwx', '端口或服务名'],
-        "3 个 Linux 工具同页：常用命令速查 + chmod 权限计算 + 端口与服务速查，hash 直链可直达",
-        "755 → rwxr-xr-x（属主读写执行）；端口 3306 → MySQL 默认端口 + ss/lsof/netstat 排查命令；关键词「进程」→ ps aux / top / kill 及说明。",
+        ['关键词', '权限值或 rwx', '端口或服务名', '排查场景'],
+        "4 个 Linux 工具同页：常用命令速查 + chmod 权限计算 + 端口与服务速查 + 磁盘与 IO 排查，hash 直链可直达",
+        "755 → rwxr-xr-x（属主读写执行）；端口 3306 → MySQL 默认端口 + ss/lsof/netstat 排查命令；关键词「进程」→ ps aux / top / kill 及说明；磁盘满 → df -h 定位分区 + du -sh * | sort -rh | head 找大目录。",
         "会联网查询吗？",
         "不会。全部内置在本页，纯前端匹配，不发送请求。"),
 
@@ -1358,8 +1358,8 @@ APPS = {
         "远程登录、服务起不来、日志找不到，命令散在笔记里；排障时翻文档最费时间。",
         "运维", "后端", "测试",
         ['场景或关键词', '需求类型'],
-        "3 个运维工具同页：SSH 连接与密钥 + systemd 服务管理 + 日志排查命令，hash 直链可直达",
-        "新机免密 → ssh-keygen -t ed25519 + ssh-copy-id；自启 → systemctl enable 服务名；实时跟踪 → journalctl -u 服务名 -f。",
+        "4 个运维工具同页：SSH 连接与密钥 + systemd 服务管理 + 日志排查命令 + Nginx 5xx 排查，hash 直链可直达",
+        "新机免密 → ssh-keygen -t ed25519 + ssh-copy-id；自启 → systemctl enable 服务名；实时跟踪 → journalctl -u 服务名 -f；502 → 查 error.log 的 connect() failed 与 upstream 端口。",
         "会真的执行命令吗？",
         "不会。只给命令与排查步骤，全部内置在本页，不连接任何服务器。"),
 

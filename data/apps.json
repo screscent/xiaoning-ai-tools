@@ -4116,7 +4116,7 @@
  {
   "id": "z5hsacaahj",
   "name": "Linux 运维速查合集",
-  "desc": "3 个 Linux 工具同页：常用命令速查、chmod 权限计算、端口与服务速查，运维排查本地速查",
+  "desc": "4 个 Linux 工具同页：常用命令速查、chmod 权限计算、端口与服务速查、磁盘与 IO 排查，运维排查本地速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5hsacaahj.app.weavefox.cn",
@@ -4133,13 +4133,17 @@
    {
     "key": "port",
     "title": "工具C 端口服务"
+   },
+   {
+    "key": "disk",
+    "title": "工具D 磁盘排查"
    }
   ]
  },
  {
   "id": "frndhjgsra",
   "name": "服务器排障速查合集",
-  "desc": "3 个运维工具同页：SSH 连接与密钥、systemd 服务管理、日志排查命令，排障本地速查",
+  "desc": "4 个运维工具同页：SSH 连接与密钥、systemd 服务管理、日志排查命令、Nginx 5xx 排查，排障本地速查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frndhjgsra.app.weavefox.cn",
@@ -4156,6 +4160,10 @@
    {
     "key": "log",
     "title": "工具C 日志排查"
+   },
+   {
+    "key": "nginx",
+    "title": "工具D Nginx排查"
    }
   ]
  },
