@@ -4158,5 +4158,28 @@
     "title": "工具C 日志排查"
    }
   ]
+ },
+ {
+  "id": "rdy3af4t4r",
+  "name": "Excel 公式速查合集",
+  "desc": "3 个表格工具同页：常用函数速查、条件格式与数据验证、Windows/Mac 快捷键对照，做表随手查",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdy3af4t4r.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "func",
+    "title": "工具A 常用函数"
+   },
+   {
+    "key": "format",
+    "title": "工具B 格式与验证"
+   },
+   {
+    "key": "keys",
+    "title": "工具C 快捷键"
+   }
+  ]
  }
 ]
