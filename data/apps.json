@@ -4085,7 +4085,7 @@
  {
   "id": "puusba3a4t",
   "name": "HTTP 接口调试合集",
-  "desc": "3 个接口工具同页：状态码速查、Mock JSON 生成、UA 解析，调接口本地自查不走外网",
+  "desc": "5 个接口工具同页：状态码速查、Mock JSON 生成、UA 解析、缓存头、CORS 与安全头，调接口本地自查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://puusba3a4t.app.weavefox.cn",
@@ -4102,6 +4102,14 @@
    {
     "key": "ua",
     "title": "工具C UA解析"
+   },
+   {
+    "key": "cache",
+    "title": "工具D 缓存头"
+   },
+   {
+    "key": "cors",
+    "title": "工具E CORS"
    }
   ]
  },

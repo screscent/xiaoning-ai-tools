@@ -1337,11 +1337,11 @@ APPS = {
         "支持逗号、制表符和竖线三种分隔符，自动转义内容中的竖线。"),
 
     "puusba3a4t": ("http-debug",
-        "调接口时状态码记不住、造测试数据要手写 JSON、拿到 UA 串还得猜浏览器版本，三个网站来回切还怕泄露。",
+        "调接口时状态码记不住、造测试数据要手写 JSON、缓存与跨域头配错还查半天，三个网站来回切还怕泄露。",
         "前端", "后端", "测试",
-        ['状态码', '字段规则', '条数', 'User-Agent'],
-        "3 个接口工具同页：状态码速查 + Mock JSON 生成 + UA 解析，hash 直链可直达",
-        "404 → Not Found、资源不存在、检查路径与拼写；id:int, name:name + 5 条 → JSON 数组（id 递增、name 随机中文）；Chrome/120 的 UA → Chrome 120 / macOS / 桌面端 / 非移动端。",
+        ['状态码', '字段规则', '条数', 'User-Agent', '缓存或跨域场景'],
+        "5 个接口工具同页：状态码速查 + Mock JSON 生成 + UA 解析 + 缓存与协商头 + CORS 与安全头，hash 直链可直达",
+        "404 → Not Found、资源不存在、检查路径与拼写；id:int, name:name + 5 条 → JSON 数组；Chrome/120 的 UA → Chrome 120 / macOS / 桌面端；协商缓存 → Cache-Control: no-cache + ETag 与 If-None-Match；带 Cookie 跨域 → Allow-Origin 具体域名 + Allow-Credentials: true（不可用 *）。",
         "会联网请求接口吗？",
         "不会。全部在浏览器本地计算，不发送任何请求，数据也不上传。"),
 
