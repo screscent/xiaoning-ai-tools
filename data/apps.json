@@ -4847,5 +4847,29 @@
     "title": "工具C 燃气与一氧化碳"
    }
   ]
+ },
+ {
+  "id": "2q8ftcqqxb",
+  "name": "家庭维修与工具速查合集",
+  "desc": "3 个工具同页：维修工具选型、故障排查顺序、安全作业要点，动手前先查清",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2q8ftcqqxb.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "kit",
+    "title": "工具A 维修工具选型"
+   },
+   {
+    "key": "fix",
+    "title": "工具B 故障排查顺序"
+   },
+   {
+    "key": "safe",
+    "title": "工具C 安全作业要点"
+   }
+  ]
  }
 ]
