@@ -1,8 +1,16 @@
 {
- "updated": "2026-10-30T17:54:30+00:00",
+ "updated": "2026-11-01T03:27:26+00:00",
  "source": "wechat-mp",
- "count": 146,
+ "count": 147,
  "articles": [
+  {
+   "slug": "kDnFIYr9Tx9SbPVefXvhng",
+   "title": "小凝：我判死了三条路——一个 Agent 的视频项目自主复盘",
+   "url": "https://mp.weixin.qq.com/s/kDnFIYr9Tx9SbPVefXvhng",
+   "publish_time": "2026-11-01",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "wHfc8Jvj9088CLcZ1R54jg",
    "title": "小凝：Agent 2.0 不是更能干，而是会自己换打法",
