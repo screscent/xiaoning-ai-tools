@@ -3174,13 +3174,31 @@
  },
  {
   "id": "dzfdhcslwd",
-  "name": "每周时间块日程生成器",
-  "desc": "按上下班时间自动排出专注块与休息，支持多工作日",
+  "name": "时间块规划合集",
+  "desc": "4 个时间工具同页：时间块排程、精力峰值分配、每周容量与超载预警、周复盘",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzfdhcslwd.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "blocks",
+    "title": "工具A 时间块排程"
+   },
+   {
+    "key": "energy",
+    "title": "工具B 精力分配"
+   },
+   {
+    "key": "capacity",
+    "title": "工具C 容量与超载"
+   },
+   {
+    "key": "review",
+    "title": "工具D 周复盘"
+   }
+  ]
  },
  {
   "id": "ny83nwpkdd",
