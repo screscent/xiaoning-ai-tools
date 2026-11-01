@@ -2118,12 +2118,30 @@
  },
  {
   "id": "wn5xhmj8gw",
-  "name": "隐私政策生成器",
-  "desc": "按信息类型与法规模板生成隐私政策，可导出 Markdown",
+  "name": "隐私与合规文档合集",
+  "desc": "4 个合规工具同页：隐私政策、服务条款、Cookie 同意文案、数据处理与共享说明",
   "price": 0,
   "cat": "实用工具",
   "url": "https://wn5xhmj8gw.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "policy",
+    "title": "工具A 隐私政策"
+   },
+   {
+    "key": "terms",
+    "title": "工具B 服务条款"
+   },
+   {
+    "key": "cookie",
+    "title": "工具C Cookie 文案"
+   },
+   {
+    "key": "dpa",
+    "title": "工具D 数据处理"
+   }
+  ]
  },
  {
   "id": "z5wpwyaahj",

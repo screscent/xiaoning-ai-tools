@@ -229,7 +229,7 @@
 - [图片转 ICO 图标生成器](https://screscent.github.io/xiaoning-ai-tools/tools/ico-generator.html)：多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载（免费）
 - [SVG 波浪分割线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-wave-divider.html)：调波高波峰生成 SVG 波浪分割线，复制或下载（免费）
 - [阶梯水电费计算器](https://screscent.github.io/xiaoning-ai-tools/tools/utility-tier-calculator.html)：阶梯电价水价分段计费，含分段明细与平均单价（免费）
-- [隐私政策生成器](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-policy-generator.html)：按信息类型与法规模板生成隐私政策，可导出 Markdown（免费）
+- [隐私与合规文档合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-policy-generator.html)：4 个合规工具同页：隐私政策、服务条款、Cookie 同意文案、数据处理与共享说明（免费）
 - [JWT 解码查看器](https://screscent.github.io/xiaoning-ai-tools/tools/jwt-decoder.html)：本地解析 JWT Header/Payload，标准声明转时间与过期判断（免费）
 - [CSS 加载动画生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-loading-spinner.html)：四种加载动画调参生成纯 CSS，可复制或下载 HTML（免费）
 - [中文简繁转换器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-converter.html)：简繁双向逐字转换，含对照表与未收录提示（免费）
