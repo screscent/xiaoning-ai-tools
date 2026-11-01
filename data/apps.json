@@ -4595,5 +4595,29 @@
     "title": "工具C 视频编码"
    }
   ]
+ },
+ {
+  "id": "c7aunsegmi",
+  "name": "签证与出入境速查合集",
+  "desc": "3 个出行工具同页：签证类型与材料、护照有效期、海关禁带与退税，出发前一页核对",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7aunsegmi.app.weavefox.cn",
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "visa",
+    "title": "工具A 签证类型与材料"
+   },
+   {
+    "key": "passport",
+    "title": "工具B 护照有效期"
+   },
+   {
+    "key": "customs",
+    "title": "工具C 海关与禁带"
+   }
+  ]
  }
 ]
