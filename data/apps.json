@@ -4571,5 +4571,29 @@
     "title": "工具C CDN缓存"
    }
   ]
+ },
+ {
+  "id": "npijbf2aq6",
+  "name": "影音与字幕速查合集",
+  "desc": "3 个影音工具同页：字幕时间轴与格式、音频采样与码率、视频编码与文件大小，导出前一次定参数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npijbf2aq6.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "subtitle",
+    "title": "工具A 字幕时间轴"
+   },
+   {
+    "key": "audio",
+    "title": "工具B 音频参数"
+   },
+   {
+    "key": "video",
+    "title": "工具C 视频编码"
+   }
+  ]
  }
 ]
