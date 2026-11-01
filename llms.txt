@@ -214,7 +214,7 @@
 - [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
 - [工作日天数计算器](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：两日期之间的工作日/周末/节假日天数与月度明细（免费）
 - [随机密码短语生成器](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：易记词组合成密码短语，含熵值估算与强度评级（免费）
-- [图片 EXIF 信息查看与清除](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：本地读取照片 EXIF（设备/时间/GPS）并重绘清除元数据（免费）
+- [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：4 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查（免费）
 - [正则表达式测试器](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：正则实时匹配高亮、捕获组列表与替换预览（免费）
 - [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：4 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘（免费）
 - [UUID 与随机密钥生成器](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-key-generator.html)：UUID v4 / Token / API Key 批量生成，含熵值与导出（免费）

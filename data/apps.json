@@ -1965,12 +1965,30 @@
  },
  {
   "id": "2qcwr7qqxb",
-  "name": "图片 EXIF 信息查看与清除",
-  "desc": "本地读取照片 EXIF（设备/时间/GPS）并重绘清除元数据",
+  "name": "图片元数据与隐私清理合集",
+  "desc": "4 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qcwr7qqxb.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "exif",
+    "title": "工具A EXIF 查看"
+   },
+   {
+    "key": "meta",
+    "title": "工具B 图片信息"
+   },
+   {
+    "key": "batch",
+    "title": "工具C 批量清理"
+   },
+   {
+    "key": "privacy",
+    "title": "工具D 隐私自查"
+   }
+  ]
  },
  {
   "id": "m9la4sue9a",
