@@ -1251,12 +1251,30 @@
  },
  {
   "id": "wn3a9fj8gw",
-  "name": "文本 Diff 对比器",
-  "desc": "逐行/逐词/逐字符对比，标注新增删除与相似度",
+  "name": "文本差异与合并合集",
+  "desc": "4 个文本工具同页：逐行逐词对比、三路合并与冲突标记、unified diff 补丁、增删改统计",
   "price": 0,
   "cat": "实用工具",
   "url": "https://wn3a9fj8gw.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "diff",
+    "title": "工具A 文本对比"
+   },
+   {
+    "key": "merge",
+    "title": "工具B 三路合并"
+   },
+   {
+    "key": "patch",
+    "title": "工具C 补丁导出"
+   },
+   {
+    "key": "stats",
+    "title": "工具D 差异统计"
+   }
+  ]
  },
  {
   "id": "7bpyp2web7",
