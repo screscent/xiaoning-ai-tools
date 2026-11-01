@@ -1057,12 +1057,30 @@
  },
  {
   "id": "ekgs3pvhte",
-  "name": "图片压缩改尺寸",
-  "desc": "本地批量压缩 → 指定 KB/像素，免费",
+  "name": "图片压缩与批量处理合集",
+  "desc": "4 个图片工具同页：单图压缩、批量统一压缩、压缩前后对比、画质档位建议",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ekgs3pvhte.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "compress",
+    "title": "工具A 单图压缩"
+   },
+   {
+    "key": "batch",
+    "title": "工具B 批量压缩"
+   },
+   {
+    "key": "compare",
+    "title": "工具C 前后对比"
+   },
+   {
+    "key": "quality",
+    "title": "工具D 画质档位"
+   }
+  ]
  },
  {
   "id": "3xh2yr5af3",

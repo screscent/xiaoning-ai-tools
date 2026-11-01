@@ -148,7 +148,7 @@
 - [商品上架审核清单](https://screscent.github.io/xiaoning-ai-tools/tools/listing-audit.html)：平台品类 → 资质图文 + 违禁词 + 观察项（¥2）
 - [古诗词默写检测器](https://screscent.github.io/xiaoning-ai-tools/tools/poem-dictation.html)：学段篇目 → 题卡 + 答案 + 复习安排（¥1）
 - [内容选题日历生成器](https://screscent.github.io/xiaoning-ai-tools/tools/content-calendar.html)：平台赛道 → 30天选题 + 标题模板（¥2）
-- [图片压缩改尺寸](https://screscent.github.io/xiaoning-ai-tools/tools/image-compressor.html)：本地批量压缩 → 指定 KB/像素，免费（免费）
+- [图片压缩与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-compressor.html)：4 个图片工具同页：单图压缩、批量统一压缩、压缩前后对比、画质档位建议（免费）
 - [房贷提前还款计算器](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：等额本息对比 + 提前还款两方案，免费（免费）
 - [二维码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：文本网址 → 本地生成 PNG，免费（免费）
 - [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：6 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、JSON 与 XML、结构统计、两段差异对比，键路径级定位（免费）
