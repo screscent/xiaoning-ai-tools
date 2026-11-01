@@ -2243,12 +2243,30 @@
  },
  {
   "id": "7b3nvgweb7",
-  "name": "菜谱份量换算器",
-  "desc": "按份数比例换算食材用量，导出清单与 CSV",
+  "name": "菜谱份量与备餐换算合集",
+  "desc": "4 个备餐工具同页：份量换算、批量备餐总量、器具尺寸换算、采购清单合并",
   "price": 0,
   "cat": "实用工具",
   "url": "https://7b3nvgweb7.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "scale",
+    "title": "工具A 份量换算"
+   },
+   {
+    "key": "batch",
+    "title": "工具B 批量备餐"
+   },
+   {
+    "key": "cookware",
+    "title": "工具C 器具尺寸"
+   },
+   {
+    "key": "shopping",
+    "title": "工具D 采购清单"
+   }
+  ]
  },
  {
   "id": "j2tnfgxyyi",
