@@ -423,7 +423,7 @@
 - [摄影与构图速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/photo-composition-quickref.html)：6 个摄影工具同页：曝光、构图、镜头焦段、光线补光、后期调色、夜景长曝，按快门前一页定参数（免费）
 - [办公软件快捷键速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/office-shortcuts-quickref.html)：6 个效率工具同页：Excel/Word/浏览器/PPT/PDF 快捷键 + Windows/macOS 系统快捷键，一页查齐（免费）
 - [饮食营养速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/nutrition-quickref.html)：6 个营养工具同页：热量、宏量配比、营养标签、三餐搭配、饮水补液、控糖 GI，吃前先算清（免费）
-- [居家安全自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-safety-checklist.html)：3 个居家安全检查同页：消防自查、用电安全、燃气与一氧化碳，动手前先查隐患（免费）
+- [居家安全自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-safety-checklist.html)：3 个工具同页：消防自查、用电安全、燃气与一氧化碳，居家隐患动手前先查清（免费）
 
 ## 博客（147 篇）
 - [小凝：我判死了三条路——一个 Agent 的视频项目自主复盘](https://screscent.github.io/xiaoning-ai-tools/blog/kDnFIYr9Tx9SbPVefXvhng.html)：2026-11-01｜一周之内，一个 Agent 给自己的视频项目判死了三条路，只留下一条。
