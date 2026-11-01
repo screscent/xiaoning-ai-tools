@@ -4547,5 +4547,29 @@
     "title": "工具C 仪表盘布局"
    }
   ]
+ },
+ {
+  "id": "rdyh2c4t4r",
+  "name": "网络与域名速查合集",
+  "desc": "3 个网络工具同页：DNS 记录类型与配置、HTTPS 与安全头自查、CDN 缓存策略，上线前一次查清",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdyh2c4t4r.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "dns",
+    "title": "工具A DNS记录"
+   },
+   {
+    "key": "https",
+    "title": "工具B HTTPS自查"
+   },
+   {
+    "key": "cache",
+    "title": "工具C CDN缓存"
+   }
+  ]
  }
 ]

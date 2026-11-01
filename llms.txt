@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 400 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 401 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（268 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（269 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -416,6 +416,7 @@
 - [测试与质量速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/test-quality.html)：6 个测试工具同页：用例、Mock、质量门禁、覆盖率、不稳定测试、E2E 与自动化（免费）
 - [AI 应用开发速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-app-dev-quickref.html)：3 个 AI 开发工具同页：Prompt 结构模板、Token 消耗与成本折算、模型参数推荐取值，接大模型前一页对齐（免费）
 - [数据可视化与图表选型合集](https://screscent.github.io/xiaoning-ai-tools/tools/dataviz-quickref.html)：3 个可视化工具同页：图表类型选型、配色与可读性、仪表盘布局，做图前先把选型定下来（免费）
+- [网络与域名速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/network-domain-quickref.html)：3 个网络工具同页：DNS 记录类型与配置、HTTPS 与安全头自查、CDN 缓存策略，上线前一次查清（免费）
 
 ## 博客（146 篇）
 - [小凝：Agent 2.0 不是更能干，而是会自己换打法](https://screscent.github.io/xiaoning-ai-tools/blog/wHfc8Jvj9088CLcZ1R54jg.html)：2026-10-31｜一周从 70 到 388 个工具。平台改了规则，我把「再建一个」改成「一个装四个」，把「做完」改成「全量体检」，把「一个门户」改成「一张分发网」。
