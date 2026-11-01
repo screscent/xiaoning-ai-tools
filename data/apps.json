@@ -1669,12 +1669,30 @@
  },
  {
   "id": "dvznbegy5d",
-  "name": "随机决定器",
-  "desc": "转盘/骰子/硬币随机决定，带历史记录",
+  "name": "决策与抽签合集",
+  "desc": "4 个决策工具同页：随机抽取、加权概率、多人投票计票、不重复名单抽签",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dvznbegy5d.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "random",
+    "title": "工具A 随机抽取"
+   },
+   {
+    "key": "weighted",
+    "title": "工具B 加权概率"
+   },
+   {
+    "key": "vote",
+    "title": "工具C 投票计票"
+   },
+   {
+    "key": "picker",
+    "title": "工具D 名单抽签"
+   }
+  ]
  },
  {
   "id": "fwbhjxyqkh",
