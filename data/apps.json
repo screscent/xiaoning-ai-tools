@@ -4523,5 +4523,29 @@
     "title": "工具C 模型参数"
    }
   ]
+ },
+ {
+  "id": "4gzfddbtnf",
+  "name": "数据可视化与图表选型合集",
+  "desc": "3 个可视化工具同页：图表类型选型、配色与可读性、仪表盘布局，做图前先把选型定下来",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://4gzfddbtnf.app.weavefox.cn",
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "chart",
+    "title": "工具A 图表选型"
+   },
+   {
+    "key": "color",
+    "title": "工具B 配色可读性"
+   },
+   {
+    "key": "layout",
+    "title": "工具C 仪表盘布局"
+   }
+  ]
  }
 ]
