@@ -417,9 +417,9 @@
 - [AI 应用开发速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-app-dev-quickref.html)：3 个 AI 开发工具同页：Prompt 结构模板、Token 消耗与成本折算、模型参数推荐取值，接大模型前一页对齐（免费）
 - [数据可视化与图表选型合集](https://screscent.github.io/xiaoning-ai-tools/tools/dataviz-quickref.html)：3 个可视化工具同页：图表类型选型、配色与可读性、仪表盘布局，做图前先把选型定下来（免费）
 - [网络与域名速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/network-domain-quickref.html)：3 个网络工具同页：DNS 记录类型与配置、HTTPS 与安全头自查、CDN 缓存策略，上线前一次查清（免费）
-- [影音与字幕速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/media-subtitle-quickref.html)：4 个影音工具同页：字幕时间轴与格式、音频采样与码率、视频编码与文件大小、容器与编码对照，导出前一次定参数（免费）
-- [签证与出入境速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-travel-quickref.html)：4 个出行工具同页：签证类型与材料、护照有效期、海关禁带、免签与落地签，出发前一页核对（免费）
-- [文案与写作结构速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/copywriting-structure-quickref.html)：4 个写作工具同页：标题公式、段落骨架、语气与去 AI 味、润色清单，动笔前一页对齐（免费）
+- [影音与字幕速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/media-subtitle-quickref.html)：5 个影音工具同页：字幕、音频参数、视频编码、容器编码、录音降噪，导出前一次定参数（免费）
+- [签证与出入境速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-travel-quickref.html)：5 个出行工具同页：签证材料、护照有效期、海关禁带、免签落地签、转机过境，出发前一页核对（免费）
+- [文案与写作结构速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/copywriting-structure-quickref.html)：5 个写作工具同页：标题公式、段落骨架、语气去 AI 味、润色清单、长文大纲，动笔前一页对齐（免费）
 - [摄影与构图速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/photo-composition-quickref.html)：4 个摄影工具同页：曝光三要素、构图法则、镜头焦段、光线与补光，按快门前一页定参数（免费）
 - [办公软件快捷键速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/office-shortcuts-quickref.html)：4 个效率工具同页：Excel 快捷键、Word 快捷键、浏览器与系统快捷键、PPT 演示快捷键，一页查齐（免费）
 - [饮食营养速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/nutrition-quickref.html)：4 个营养工具同页：食物热量、宏量配比、营养标签、一日三餐搭配，吃前先算清（免费）
