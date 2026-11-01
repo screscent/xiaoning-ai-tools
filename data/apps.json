@@ -4499,5 +4499,29 @@
     "title": "工具F E2E与自动化"
    }
   ]
+ },
+ {
+  "id": "z5hmrdaahj",
+  "name": "AI 应用开发速查合集",
+  "desc": "3 个 AI 开发工具同页：Prompt 结构模板、Token 消耗与成本折算、模型参数推荐取值，接大模型前一页对齐",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://z5hmrdaahj.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "prompt",
+    "title": "工具A Prompt结构"
+   },
+   {
+    "key": "token",
+    "title": "工具B Token与成本"
+   },
+   {
+    "key": "model",
+    "title": "工具C 模型参数"
+   }
+  ]
  }
 ]
