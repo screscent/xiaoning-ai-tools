@@ -4691,5 +4691,29 @@
     "title": "工具C 浏览器快捷键"
    }
   ]
+ },
+ {
+  "id": "2q82y7qqxb",
+  "name": "饮食营养速查合集",
+  "desc": "3 个营养工具同页：食物热量、宏量配比、营养标签，吃前先算清",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2q82y7qqxb.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "calorie",
+    "title": "工具A 食物热量"
+   },
+   {
+    "key": "macro",
+    "title": "工具B 宏量配比"
+   },
+   {
+    "key": "label",
+    "title": "工具C 营养标签"
+   }
+  ]
  }
 ]
