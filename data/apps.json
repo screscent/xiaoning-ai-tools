@@ -2398,13 +2398,31 @@
  },
  {
   "id": "urkuxmdyk8",
-  "name": "AA 账单分摊计算器",
-  "desc": "明细+小费+人数算人均，尾差记第一人",
+  "name": "AA 分摊与结算合集",
+  "desc": "4 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://urkuxmdyk8.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "split",
+    "title": "工具A AA 均分"
+   },
+   {
+    "key": "items",
+    "title": "工具B 按项分摊"
+   },
+   {
+    "key": "settle",
+    "title": "工具C 转账结算"
+   },
+   {
+    "key": "history",
+    "title": "工具D 历史记录"
+   }
+  ]
  },
  {
   "id": "3xmx4f5af3",
