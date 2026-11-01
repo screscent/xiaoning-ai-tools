@@ -4619,5 +4619,29 @@
     "title": "工具C 海关与禁带"
    }
   ]
+ },
+ {
+  "id": "ekrgskvhte",
+  "name": "文案与写作结构速查合集",
+  "desc": "3 个写作工具同页：标题公式、段落骨架、语气与去 AI 味，动笔前一页对齐",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ekrgskvhte.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "headline",
+    "title": "工具A 标题公式"
+   },
+   {
+    "key": "struct",
+    "title": "工具B 段落骨架"
+   },
+   {
+    "key": "tone",
+    "title": "工具C 语气与去 AI 味"
+   }
+  ]
  }
 ]
