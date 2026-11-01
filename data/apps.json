@@ -1804,12 +1804,30 @@
  },
  {
   "id": "key2pcdudk",
-  "name": "思维导图生成器",
-  "desc": "输入主题与分支，生成可导出 SVG/PNG 的导图",
+  "name": "思维导图与大纲合集",
+  "desc": "4 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出",
   "price": 0,
   "cat": "实用工具",
   "url": "https://key2pcdudk.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "map",
+    "title": "工具A 导图生成"
+   },
+   {
+    "key": "outline",
+    "title": "工具B 大纲转导图"
+   },
+   {
+    "key": "templates",
+    "title": "工具C 场景模板"
+   },
+   {
+    "key": "export",
+    "title": "工具D 导出"
+   }
+  ]
  },
  {
   "id": "r3avkczjyr",
