@@ -1402,7 +1402,7 @@
  {
   "id": "uidlsfxjku",
   "name": "密码与账号安全合集",
-  "desc": "5 个安全工具同页：密码生成、强度检测、PIN 码、口令短语、两步验证与恢复码，账号安全速查",
+  "desc": "6 个安全工具同页：密码生成、强度检测、PIN 码、口令短语、两步验证与恢复码、泄露自查与应急",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uidlsfxjku.app.weavefox.cn",
@@ -1427,6 +1427,10 @@
    {
     "key": "2fa",
     "title": "工具E 两步验证"
+   },
+   {
+    "key": "breach",
+    "title": "工具F 泄露自查"
    }
   ]
  },
@@ -4367,7 +4371,7 @@
  {
   "id": "puudfv3a4t",
   "name": "GitHub 协作与 Actions 速查合集",
-  "desc": "5 个 GitHub 协作工具同页：PR 与 Review 流程、Actions 工作流与矩阵构建、Issue 模板、发布与回滚、分支保护与合并策略，团队规范一次对齐",
+  "desc": "6 个协作工具同页：PR 与 Review、Actions 工作流、Issue 模板、发布与回滚、分支保护、模板与提交规范",
   "price": 0,
   "cat": "实用工具",
   "url": "https://puudfv3a4t.app.weavefox.cn",
@@ -4392,6 +4396,10 @@
    {
     "key": "branch",
     "title": "工具E 分支保护"
+   },
+   {
+    "key": "template",
+    "title": "工具F 模板规范"
    }
   ]
  },
