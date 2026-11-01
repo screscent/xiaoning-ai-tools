@@ -180,7 +180,7 @@
 - [待办与任务管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/local-todo.html)：4 个任务工具同页：待办清单、例行任务、日周回顾、归档导入导出（免费）
 - [文本加密解密](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：本地 AES-GCM 加解密文本，口令派生密钥（免费）
 - [图片取色器](https://screscent.github.io/xiaoning-ai-tools/tools/image-color-picker.html)：上传图片点击取色，HEX/RGB/HSL + 历史调色板（免费）
-- [简易记账本](https://screscent.github.io/xiaoning-ai-tools/tools/simple-ledger.html)：本地记账，收支汇总、分类占比与导出 CSV（免费）
+- [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：4 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出（免费）
 - [简易画板](https://screscent.github.io/xiaoning-ai-tools/tools/simple-whiteboard.html)：本地涂鸦画板，颜色/粗细/橡皮，导出 PNG（免费）
 - [九宫格切图器](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：图片一键切 3×3/2×2 等，逐张下载（免费）
 - [星座与生肖查询器](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：生日查星座/生肖/年龄/下次生日倒计时（免费）

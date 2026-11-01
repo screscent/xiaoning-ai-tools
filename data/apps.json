@@ -1597,12 +1597,30 @@
  },
  {
   "id": "bnuscunsmb",
-  "name": "简易记账本",
-  "desc": "本地记账，收支汇总、分类占比与导出 CSV",
+  "name": "记账与月度分析合集",
+  "desc": "4 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bnuscunsmb.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "ledger",
+    "title": "工具A 流水记账"
+   },
+   {
+    "key": "category",
+    "title": "工具B 分类与预算"
+   },
+   {
+    "key": "monthly",
+    "title": "工具C 月度对比"
+   },
+   {
+    "key": "export",
+    "title": "工具D CSV 报表"
+   }
+  ]
  },
  {
   "id": "j25db4xyyi",
