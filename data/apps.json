@@ -4643,5 +4643,29 @@
     "title": "工具C 语气与去 AI 味"
    }
   ]
+ },
+ {
+  "id": "2q8ndyqqxb",
+  "name": "摄影与构图速查合集",
+  "desc": "3 个摄影工具同页：曝光三要素、构图法则、镜头焦段，按快门前一页定参数",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2q8ndyqqxb.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "exposure",
+    "title": "工具A 曝光三要素"
+   },
+   {
+    "key": "compose",
+    "title": "工具B 构图法则"
+   },
+   {
+    "key": "lens",
+    "title": "工具C 镜头与焦段"
+   }
+  ]
  }
 ]

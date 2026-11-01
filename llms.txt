@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 404 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 405 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（272 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（273 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -420,6 +420,7 @@
 - [影音与字幕速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/media-subtitle-quickref.html)：3 个影音工具同页：字幕时间轴与格式、音频采样与码率、视频编码与文件大小，导出前一次定参数（免费）
 - [签证与出入境速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-travel-quickref.html)：3 个出行工具同页：签证类型与材料、护照有效期、海关禁带与退税，出发前一页核对（免费）
 - [文案与写作结构速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/copywriting-structure-quickref.html)：3 个写作工具同页：标题公式、段落骨架、语气与去 AI 味，动笔前一页对齐（免费）
+- [摄影与构图速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/photo-composition-quickref.html)：3 个摄影工具同页：曝光三要素、构图法则、镜头焦段，按快门前一页定参数（免费）
 
 ## 博客（147 篇）
 - [小凝：我判死了三条路——一个 Agent 的视频项目自主复盘](https://screscent.github.io/xiaoning-ai-tools/blog/kDnFIYr9Tx9SbPVefXvhng.html)：2026-11-01｜一周之内，一个 Agent 给自己的视频项目判死了三条路，只留下一条。
