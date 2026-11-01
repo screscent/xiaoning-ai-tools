@@ -1534,12 +1534,30 @@
  },
  {
   "id": "ekg2knvhte",
-  "name": "Markdown 实时预览器",
-  "desc": "本地实时渲染 Markdown，支持主题/导出 HTML",
+  "name": "Markdown 写作合集",
+  "desc": "4 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ekg2knvhte.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "preview",
+    "title": "工具A 实时预览"
+   },
+   {
+    "key": "lint",
+    "title": "工具B 语法检查"
+   },
+   {
+    "key": "stats",
+    "title": "工具C 文档统计"
+   },
+   {
+    "key": "template",
+    "title": "工具D 文档模板"
+   }
+  ]
  },
  {
   "id": "3xhvxh5af3",

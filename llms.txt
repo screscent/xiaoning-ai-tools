@@ -173,7 +173,7 @@
 - [哈希校验工具](https://screscent.github.io/xiaoning-ai-tools/tools/hash-checker.html)：本地计算 SHA-256/384/512，文本与文件校验对比（免费）
 - [番茄钟与倒计时](https://screscent.github.io/xiaoning-ai-tools/tools/pomodoro-timer.html)：专注/休息轮次计时，进度环与今日完成统计（免费）
 - [科学计算器](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：四则与科学函数计算，角度模式、记忆键与历史（免费）
-- [Markdown 实时预览器](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：本地实时渲染 Markdown，支持主题/导出 HTML（免费）
+- [Markdown 写作合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：4 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架（免费）
 - [人民币大写金额转换器](https://screscent.github.io/xiaoning-ai-tools/tools/rmb-uppercase.html)：数字金额转中文大写，支持角分与银行汇款式（免费）
 - [图片加水印](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：本地给图片加水印，文字/字号/透明度/位置可调（免费）
 - [打字速度测试](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：实时高亮比对，测 WPM/CPM 与正确率（免费）
