@@ -309,7 +309,7 @@
 - [工资与加班费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/overtime-pay.html)：6 个工资工具同页：加班费、节假日加班、夜班津贴、加班上限、个税与到手工资、请假与缺勤扣款（免费）
 - [咖啡因摄入与代谢计算器](https://screscent.github.io/xiaoning-ai-tools/tools/caffeine-metabolism.html)：按半衰期算 4/8/12 小时残留与建议就寝时间（免费）
 - [家庭用药提醒清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/med-reminder.html)：按频次与开始时间生成每日服药时间点、日程表与累计次数（免费）
-- [会议议程与时间分配生成器](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：按议题分钟数排时间表，算占比并校验是否超时（免费）
+- [会议议程与控场合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：4 个开会工具同页：议程时间表、发言分配、主持人控场话术、分段计时提醒（免费）
 - [CSS 轮播图样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-carousel.html)：宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML（免费）
 - [呼吸放松计时器](https://screscent.github.io/xiaoning-ai-tools/tools/breathing-timer.html)：4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进（免费）
 - [汽车保养与年检提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/car-maintenance.html)：按里程与间隔算下次保养，按购车日期推算年检到期（免费）

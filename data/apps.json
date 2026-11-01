@@ -3006,13 +3006,31 @@
  },
  {
   "id": "ny89vhpkdd",
-  "name": "会议议程与时间分配生成器",
-  "desc": "按议题分钟数排时间表，算占比并校验是否超时",
+  "name": "会议议程与控场合集",
+  "desc": "4 个开会工具同页：议程时间表、发言分配、主持人控场话术、分段计时提醒",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ny89vhpkdd.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "agenda",
+    "title": "工具A 议程时间表"
+   },
+   {
+    "key": "roles",
+    "title": "工具B 发言分配"
+   },
+   {
+    "key": "host",
+    "title": "工具C 控场话术"
+   },
+   {
+    "key": "timer",
+    "title": "工具D 分段计时"
+   }
+  ]
  },
  {
   "id": "fr2tregsra",
