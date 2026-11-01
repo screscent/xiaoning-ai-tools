@@ -28,6 +28,15 @@ CATEGORIES = [
 
 # id: (slug, hook, who1, who2, who3, [输入1,输入2,输入3], 输出, 示例, 专属FAQ问, 专属FAQ答)
 APPS = {
+    "c7axmregmi": ("office-shortcuts-quickref",
+        "做表格时总要翻菜单、写文档排版慢、浏览器操作靠鼠标点，快捷键记不住又懒得背。",
+        "办公", "效率", "职场",
+        ['操作类型', '文档场景', '浏览器操作'],
+        "3 个效率工具同页：Excel 快捷键 + Word 快捷键 + 浏览器与系统快捷键，按场景筛选、结果可复制",
+        "Excel 选中区域按 Ctrl+Shift+方向键扩展选区、Ctrl+T 建表；Word Ctrl+Shift+C/V 复制段落格式；浏览器 Ctrl+Shift+T 恢复刚关的标签、Ctrl+L 定位地址栏。",
+        "会记录我的操作吗？",
+        "不会。纯前端本地筛选，不上传任何输入。"),
+
     "2q8ndyqqxb": ("photo-composition-quickref",
         "白天拍人像总糊、夜景一片噪点、构图全靠站中间，参数和取景每次都在试错。",
         "摄影", "出行", "内容",

@@ -4667,5 +4667,29 @@
     "title": "工具C 镜头与焦段"
    }
   ]
+ },
+ {
+  "id": "c7axmregmi",
+  "name": "办公软件快捷键速查合集",
+  "desc": "3 个效率工具同页：Excel 快捷键、Word 快捷键、浏览器与系统快捷键，一页查齐",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7axmregmi.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "excel",
+    "title": "工具A Excel 快捷键"
+   },
+   {
+    "key": "word",
+    "title": "工具B Word 快捷键"
+   },
+   {
+    "key": "browser",
+    "title": "工具C 浏览器快捷键"
+   }
+  ]
  }
 ]
