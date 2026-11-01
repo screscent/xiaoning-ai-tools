@@ -1552,12 +1552,30 @@
  },
  {
   "id": "rdp8n24t4r",
-  "name": "本地待办便签",
-  "desc": "本地保存的待办清单，优先级/截止日/导出 JSON",
+  "name": "待办与任务管理合集",
+  "desc": "4 个任务工具同页：待办清单、例行任务、日周回顾、归档导入导出",
   "price": 0,
   "cat": "实用工具",
   "url": "https://rdp8n24t4r.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "todo",
+    "title": "工具A 待办清单"
+   },
+   {
+    "key": "routine",
+    "title": "工具B 例行任务"
+   },
+   {
+    "key": "review",
+    "title": "工具C 日周回顾"
+   },
+   {
+    "key": "archive",
+    "title": "工具D 归档与导出"
+   }
+  ]
  },
  {
   "id": "sfw5ysy97s",
