@@ -2190,12 +2190,30 @@
  },
  {
   "id": "3xmx6e5af3",
-  "name": "身份证与银行卡校验器",
-  "desc": "本地校验身份证校验位与银行卡 Luhn，含脱敏展示",
+  "name": "证件与卡号校验合集",
+  "desc": "4 个校验工具同页：身份证校验、银行卡 Luhn、统一社会信用代码、手机号邮箱格式",
   "price": 0,
   "cat": "实用工具",
   "url": "https://3xmx6e5af3.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "idcard",
+    "title": "工具A 身份证校验"
+   },
+   {
+    "key": "bank",
+    "title": "工具B 银行卡校验"
+   },
+   {
+    "key": "uscc",
+    "title": "工具C 信用代码"
+   },
+   {
+    "key": "contact",
+    "title": "工具D 手机与邮箱"
+   }
+  ]
  },
  {
   "id": "g4q4xktuhw",
