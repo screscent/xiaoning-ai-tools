@@ -1929,12 +1929,30 @@
  },
  {
   "id": "uidaynxjku",
-  "name": "习惯打卡追踪器",
-  "desc": "习惯打卡日历网格 + 完成率与连续天数，本地保存",
+  "name": "习惯养成与打卡合集",
+  "desc": "4 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uidaynxjku.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "habit",
+    "title": "工具A 习惯打卡日历"
+   },
+   {
+    "key": "streak",
+    "title": "工具B 连续与断签"
+   },
+   {
+    "key": "challenge",
+    "title": "工具C 21/30 天挑战"
+   },
+   {
+    "key": "review",
+    "title": "工具D 周月复盘"
+   }
+  ]
  },
  {
   "id": "2qcjfcqqxb",
