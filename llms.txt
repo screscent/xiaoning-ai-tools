@@ -410,7 +410,7 @@
 - [Excel 公式速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/excel-formula.html)：6 个表格工具同页：常用函数、条件格式与数据验证、快捷键对照、透视与筛选、文本函数与分列、公式报错排查（免费）
 - [浏览器调试速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/devtools-cheatsheet.html)：6 个前端工具同页：面板、快捷键、报错、网络请求、性能剖析、内存与泄漏（免费）
 - [Git 分支与冲突处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-branch.html)：6 个 Git 工具同页：分支、冲突、变基、拣选回滚、Worktree 并行、暂存与找回（免费）
-- [GitHub 协作与 Actions 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/github-actions.html)：6 个 GitHub 协作工具同页：PR 与 Review 流程、Actions 工作流与矩阵构建、Issue 模板、发布与回滚、分支保护与合并策略、模板与提交规范，团队协作一页对齐（免费）
+- [GitHub 协作与 Actions 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/github-actions.html)：6 个 GitHub 协作工具同页：PR 与 Review 流程、Actions 工作流与矩阵构建、Issue 模板、发布与回滚、分支保护与合并策略、模板与提交规范，团队协作对齐（免费）
 - [前端性能与 Core Web Vitals 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/web-perf.html)：6 个性能工具同页：CWV、打包体积、缓存与加载、图片与资源、交互与 INP、渲染与 SSR（免费）
 - [API 设计与 OpenAPI 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/api-design.html)：4 个接口工具同页：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容，接口设计速查（免费）
 - [测试与质量速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/test-quality.html)：6 个测试工具同页：用例、Mock、质量门禁、覆盖率、不稳定测试、E2E 与自动化（免费）
