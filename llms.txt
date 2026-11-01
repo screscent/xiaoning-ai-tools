@@ -414,9 +414,9 @@
 - [前端性能与 Core Web Vitals 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/web-perf.html)：6 个性能工具同页：CWV、打包体积、缓存与加载、图片与资源、交互与 INP、渲染与 SSR（免费）
 - [API 设计与 OpenAPI 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/api-design.html)：4 个接口工具同页：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容，接口设计速查（免费）
 - [测试与质量速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/test-quality.html)：6 个测试工具同页：用例、Mock、质量门禁、覆盖率、不稳定测试、E2E 与自动化（免费）
-- [AI 应用开发速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-app-dev-quickref.html)：5 个 AI 开发工具同页：Prompt、Token 成本、模型参数、RAG 知识库、向量与相似度，接大模型前一页对齐（免费）
-- [数据可视化与图表选型合集](https://screscent.github.io/xiaoning-ai-tools/tools/dataviz-quickref.html)：5 个可视化工具同页：图表选型、配色、布局、可访问性、表格数字展示，做图前先定选型（免费）
-- [网络与域名速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/network-domain-quickref.html)：5 个网络工具同页：DNS、HTTPS、CDN 缓存、邮件反垃圾、域名与 whois，上线前一次查清（免费）
+- [AI 应用开发速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-app-dev-quickref.html)：6 个 AI 开发工具同页：Prompt、Token 成本、模型参数、RAG、向量相似度、输出校验，接大模型前一页对齐（免费）
+- [数据可视化与图表选型合集](https://screscent.github.io/xiaoning-ai-tools/tools/dataviz-quickref.html)：6 个可视化工具同页：图表选型、配色、布局、可访问性、表格数字、数据口径，做图前先定选型（免费）
+- [网络与域名速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/network-domain-quickref.html)：6 个网络工具同页：DNS、HTTPS、CDN 缓存、邮件反垃圾、域名 whois、DNSSEC 排查，上线前一次查清（免费）
 - [影音与字幕速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/media-subtitle-quickref.html)：6 个影音工具同页：字幕、音频参数、视频编码、容器编码、录音降噪、响度标准，导出前一次定参数（免费）
 - [签证与出入境速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-travel-quickref.html)：6 个出行工具同页：签证材料、护照有效期、海关禁带、免签落地签、转机过境、入境流程，出发前一页核对（免费）
 - [文案与写作结构速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/copywriting-structure-quickref.html)：6 个写作工具同页：标题公式、段落骨架、语气去 AI 味、润色清单、长文大纲、关键词自检，动笔前一页对齐（免费）

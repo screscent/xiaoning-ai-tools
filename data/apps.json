@@ -4503,7 +4503,7 @@
  {
   "id": "z5hmrdaahj",
   "name": "AI 应用开发速查合集",
-  "desc": "5 个 AI 开发工具同页：Prompt、Token 成本、模型参数、RAG 知识库、向量与相似度，接大模型前一页对齐",
+  "desc": "6 个 AI 开发工具同页：Prompt、Token 成本、模型参数、RAG、向量相似度、输出校验，接大模型前一页对齐",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -4529,13 +4529,17 @@
    {
     "key": "embed",
     "title": "工具E 向量化与相似度"
+   },
+   {
+    "key": "guard",
+    "title": "工具F 输出校验"
    }
   ]
  },
  {
   "id": "4gzfddbtnf",
   "name": "数据可视化与图表选型合集",
-  "desc": "5 个可视化工具同页：图表选型、配色、布局、可访问性、表格数字展示，做图前先定选型",
+  "desc": "6 个可视化工具同页：图表选型、配色、布局、可访问性、表格数字、数据口径，做图前先定选型",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -4561,13 +4565,17 @@
    {
     "key": "table",
     "title": "工具E 表格与数字展示"
+   },
+   {
+    "key": "clean",
+    "title": "工具F 数据口径"
    }
   ]
  },
  {
   "id": "rdyh2c4t4r",
   "name": "网络与域名速查合集",
-  "desc": "5 个网络工具同页：DNS、HTTPS、CDN 缓存、邮件反垃圾、域名与 whois，上线前一次查清",
+  "desc": "6 个网络工具同页：DNS、HTTPS、CDN 缓存、邮件反垃圾、域名 whois、DNSSEC 排查，上线前一次查清",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -4592,7 +4600,11 @@
    },
    {
     "key": "whois",
-    "title": "工具E 域名注册与 whois"
+    "title": "工具E 域名与 whois"
+   },
+   {
+    "key": "dnssec",
+    "title": "工具F DNSSEC 排查"
    }
   ]
  },

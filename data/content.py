@@ -86,7 +86,7 @@ APPS = {
         "新站解析该配哪些记录、HTTPS 上线前该查什么、静态资源缓存怎么设，全靠翻旧项目，容易漏。",
         "研发", "运维", "运营",
         ['解析场景', '域名用途与证书类型', '资源类型与更新频率'],
-        "5 个网络工具同页：DNS + HTTPS 安全头 + CDN 缓存 + 邮件 SPF/DKIM/DMARC + 域名与 whois，hash 直链可直达",
+        "6 个网络工具同页：DNS + HTTPS 安全头 + CDN 缓存 + 邮件 SPF/DKIM/DMARC + whois + DNSSEC，hash 直链可直达",
         "新站解析 → A/AAAA + CNAME + TTL 600，邮件域名加 MX + SPF/DKIM TXT；官网 + DV 证书 → 证书链完整、HSTS 一年、CSP 限制脚本源、无混合内容；图片资源 → Cache-Control: max-age=31536000, immutable + ETag，HTML 用 no-cache。",
         "会发起网络探测吗？",
         "不会。只给配置建议与自查清单，本页不联网、不发起任何请求。"),
