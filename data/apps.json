@@ -1384,12 +1384,18 @@
  },
  {
   "id": "lymnmkjxel",
-  "name": "日期计算器",
-  "desc": "相差天数、日期加减与工作日计算，本地秒算",
+  "name": "日期计算与间隔合集",
+  "desc": "4 个日期工具：间隔计算、日期推算、星期推算、日期比较",
   "price": 0,
   "cat": "实用工具",
   "url": "https://lymnmkjxel.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "diff", "title": "工具A 日期间隔"},
+   {"key": "add", "title": "工具B 日期推算"},
+   {"key": "weekday", "title": "工具C 星期推算"},
+   {"key": "compare", "title": "工具D 日期比较"}
+  ]
  },
  {
   "id": "urjgjtdyk8",

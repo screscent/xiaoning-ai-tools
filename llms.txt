@@ -163,7 +163,7 @@
 - [Markdown 表格排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-table.html)：6 个表格工具同页：CSV 转表格、文本转表格、表格转 HTML、对齐调整、表格转 JSON、列表与嵌套，列多也不乱（免费）
 - [数字进制转换器](https://screscent.github.io/xiaoning-ai-tools/tools/number-base-converter.html)：二/八/十/十六进制互转，位宽与位模式展示（免费）
 - [命名与大小写转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/naming-converter.html)：6 个文本工具同页：五种命名风格、四种大小写、拆词与缩写、URL slug 与安全文件名、批量转换、常量与配置命名（免费）
-- [日期计算器](https://screscent.github.io/xiaoning-ai-tools/tools/date-calculator.html)：相差天数、日期加减与工作日计算，本地秒算（免费）
+- [日期计算与间隔合集](https://screscent.github.io/xiaoning-ai-tools/tools/date-calculator.html)：4 个日期工具：间隔计算、日期推算、星期推算、日期比较（免费）
 - [文本统计与阅读时长合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-stats.html)：6 个文本工具同页：字符与字数统计、阅读与演讲时长、阅读进度、词频 Top10、段落与最长行、重复行与相似句（免费）
 - [图片裁剪器](https://screscent.github.io/xiaoning-ai-tools/tools/image-cropper.html)：本地裁剪头像/封面/商品图，比例尺寸自选可下载（免费）
 - [密码与账号安全合集](https://screscent.github.io/xiaoning-ai-tools/tools/password-generator.html)：6 个安全工具同页：密码生成、强度检测、PIN 码、口令短语、两步验证与恢复码、泄露自查与应急（免费）
