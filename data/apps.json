@@ -1597,12 +1597,30 @@
  },
  {
   "id": "tbqexcmk3t",
-  "name": "打字速度测试",
-  "desc": "实时高亮比对，测 WPM/CPM 与正确率",
+  "name": "打字练习与速度合集",
+  "desc": "4 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势",
   "price": 0,
   "cat": "实用工具",
   "url": "https://tbqexcmk3t.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "speed",
+    "title": "工具A 速度测试"
+   },
+   {
+    "key": "accuracy",
+    "title": "工具B 错键分析"
+   },
+   {
+    "key": "drill",
+    "title": "工具C 专项练习"
+   },
+   {
+    "key": "progress",
+    "title": "工具D 成绩趋势"
+   }
+  ]
  },
  {
   "id": "rdp8n24t4r",

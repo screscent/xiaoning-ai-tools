@@ -176,7 +176,7 @@
 - [Markdown 写作合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：4 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架（免费）
 - [人民币大写金额转换器](https://screscent.github.io/xiaoning-ai-tools/tools/rmb-uppercase.html)：数字金额转中文大写，支持角分与银行汇款式（免费）
 - [图片加水印](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：本地给图片加水印，文字/字号/透明度/位置可调（免费）
-- [打字速度测试](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：实时高亮比对，测 WPM/CPM 与正确率（免费）
+- [打字练习与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：4 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势（免费）
 - [待办与任务管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/local-todo.html)：4 个任务工具同页：待办清单、例行任务、日周回顾、归档导入导出（免费）
 - [文本加密解密](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：本地 AES-GCM 加解密文本，口令派生密钥（免费）
 - [图片取色器](https://screscent.github.io/xiaoning-ai-tools/tools/image-color-picker.html)：上传图片点击取色，HEX/RGB/HSL + 历史调色板（免费）
