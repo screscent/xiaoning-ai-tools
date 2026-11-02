@@ -385,7 +385,7 @@
 - [嘌呤与尿酸饮食速查器](https://screscent.github.io/xiaoning-ai-tools/tools/purine-uric.html)：按人群算每日嘌呤上限，四档食物清单 + 替换建议（免费）
 - [食物升糖指数与血糖负荷计算器](https://screscent.github.io/xiaoning-ai-tools/tools/glycemic-load.html)：算 GI/GL 与分级，给同类替换与三餐搭配（免费）
 - [家庭应急物品清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/family-emergency-kit.html)：按人数与场景生成应急清单，含保质期、预算与采购优先级（免费）
-- [海淘行邮税与到手价估算器](https://screscent.github.io/xiaoning-ai-tools/tools/parcel-tax-calc.html)：行邮税/跨境电商综合税二选一，算税费、免征额与到手价（免费）
+- [海淘税费与禁限速查](https://screscent.github.io/xiaoning-ai-tools/tools/parcel-tax-calc.html)：4 个海淘工具同页：行邮税与到手价、国际运费与包裹限制、禁限物品与申报、退换与售后税费（免费）
 - [合同签署前必查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/contract-precheck.html)：按合同类型给主体、核心条款、风险条款与红线提示（免费）
 - [二手交易交接单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/secondhand-handover.html)：面交/邮寄两套流程，生成交接单、验收清单与纠纷预防（免费）
 - [家用电器选购计算合集（空调·冰箱·洗衣机·电视·热水器·净水）](https://screscent.github.io/xiaoning-ai-tools/tools/home-appliance-picker.html)：一个页面装 6 个家电选购计算器，按面积/人数/距离算清该买多大，hash 直链可直达（免费）

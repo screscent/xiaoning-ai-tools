@@ -4042,13 +4042,31 @@
  },
  {
   "id": "npxsuh2aq6",
-  "name": "海淘行邮税与到手价估算器",
-  "desc": "行邮税/跨境电商综合税二选一，算税费、免征额与到手价",
+  "name": "海淘税费与禁限速查",
+  "desc": "4 个海淘工具同页：行邮税与到手价、国际运费与包裹限制、禁限物品与申报、退换与售后税费",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npxsuh2aq6.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "tariff",
+    "title": "工具A 行邮税与到手价"
+   },
+   {
+    "key": "parcel",
+    "title": "工具B 运费与包裹"
+   },
+   {
+    "key": "restricted",
+    "title": "工具C 禁限与申报"
+   },
+   {
+    "key": "return",
+    "title": "工具D 退换与售后"
+   }
+  ]
  },
  {
   "id": "keyyhvdudk",
