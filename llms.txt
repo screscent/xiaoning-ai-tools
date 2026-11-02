@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 413 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 414 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（281 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（282 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -429,6 +429,7 @@
 - [旅行装备与打包速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-gear-kit.html)：3 个出行工具同页：分场景打包清单、装备必买/可租/可省、季节衣物组合（免费）
 - [开源素材与授权速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/open-assets-license.html)：3 个素材工具同页：免费字体授权速查、免费图标来源与署名、音效与音乐授权类型（免费）
 - [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：3 个户外工具同页：营地选址要点、户外风险现场处置、饮食饮水补给估算（免费）
+- [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：3 个饮品工具同页：手冲与意式参数、茶叶冲泡参数、粉水比与咖啡因估算（免费）
 
 ## 博客（147 篇）
 - [小凝：我判死了三条路——一个 Agent 的视频项目自主复盘](https://screscent.github.io/xiaoning-ai-tools/blog/kDnFIYr9Tx9SbPVefXvhng.html)：2026-11-01｜一周之内，一个 Agent 给自己的视频项目判死了三条路，只留下一条。

@@ -5311,5 +5311,28 @@
     "title": "工具C 补给计算"
    }
   ]
+ },
+ {
+  "id": "nyjwtlpkdd",
+  "name": "咖啡与茶饮冲煮速查合集",
+  "desc": "3 个饮品工具同页：手冲与意式参数、茶叶冲泡参数、粉水比与咖啡因估算",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://nyjwtlpkdd.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "brew",
+    "title": "工具A 手冲与意式"
+   },
+   {
+    "key": "tea",
+    "title": "工具B 茶叶冲泡"
+   },
+   {
+    "key": "ratio",
+    "title": "工具C 粉水比"
+   }
+  ]
  }
 ]
