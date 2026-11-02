@@ -2289,12 +2289,18 @@
  },
  {
   "id": "dzkmanslwd",
-  "name": "三班倒排班表生成器",
-  "desc": "按人员名单循环排早中晚班，导出表格与 CSV",
+  "name": "倒班排班与作息合集",
+  "desc": "4 个排班工具：三班倒、四班两倒、夜班作息、换班记录",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzkmanslwd.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "three", "title": "工具A 三班倒"},
+   {"key": "four", "title": "工具B 四班两倒"},
+   {"key": "night", "title": "工具C 夜班作息"},
+   {"key": "swap", "title": "工具D 换班记录"}
+  ]
  },
  {
   "id": "nyi2whpkdd",

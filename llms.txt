@@ -224,7 +224,7 @@
 - [中英混排空格格式化工具](https://screscent.github.io/xiaoning-ai-tools/tools/cjk-spacing.html)：中英文/数字之间自动加空格，全角转半角（免费）
 - [条形码生成器 Code128](https://screscent.github.io/xiaoning-ai-tools/tools/barcode-code128.html)：Code128B/C 与 EAN-13 条码绘制，含校验与导 PNG（免费）
 - [TOTP 动态验证码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：本地计算 2FA 动态验证码，Base32 解码与倒计时（免费）
-- [三班倒排班表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：按人员名单循环排早中晚班，导出表格与 CSV（免费）
+- [倒班排班与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：4 个排班工具：三班倒、四班两倒、夜班作息、换班记录（免费）
 - [生日与纪念日提醒清单](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：生日纪念日倒数与提醒天数，本地保存并导出（免费）
 - [图片转 ICO 图标生成器](https://screscent.github.io/xiaoning-ai-tools/tools/ico-generator.html)：多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载（免费）
 - [SVG 波浪分割线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-wave-divider.html)：调波高波峰生成 SVG 波浪分割线，复制或下载（免费）
