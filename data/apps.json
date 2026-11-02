@@ -2145,12 +2145,18 @@
  },
  {
   "id": "ztxq59hvkt",
-  "name": "工作日天数计算器",
-  "desc": "两日期之间的工作日/周末/节假日天数与月度明细",
+  "name": "工作日与假期天数合集",
+  "desc": "4 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ztxq59hvkt.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "count", "title": "工具A 工作日天数"},
+   {"key": "leave", "title": "工具B 假期余额"},
+   {"key": "deadline", "title": "工具C 截止日推算"},
+   {"key": "calendar", "title": "工具D 月度工作日"}
+  ]
  },
  {
   "id": "qsew9znhme",

@@ -212,7 +212,7 @@
 - [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：4 个本地脱敏工具：手机/身份证/银行卡/邮箱打码、批量处理与分享前自查（免费）
 - [颜色名称查询](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色（免费）
 - [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
-- [工作日天数计算器](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：两日期之间的工作日/周末/节假日天数与月度明细（免费）
+- [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：4 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日（免费）
 - [随机密码短语生成器](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：易记词组合成密码短语，含熵值估算与强度评级（免费）
 - [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：4 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查（免费）
 - [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：4 个正则工具同页：匹配测试、批量替换、捕获组、常用速查（免费）
