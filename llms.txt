@@ -248,7 +248,7 @@
 - [隐私设置自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：4 个隐私自查清单：社交平台、手机权限、浏览器、账号安全（免费）
 - [书签整理与导出 HTML](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：校验去重书签并导出可导入浏览器的 bookmarks.html（免费）
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：4 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查（免费）
-- [农历与节气查询器](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：公历转农历，生肖干支与全年二十四节气表（免费）
+- [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：4 个农历工具：农历转换、节气查询、月相查询、农历生日（免费）
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
 - [发票税额与价税分离计算器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：含税/不含税互转，按税率算税额并精确到分（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）

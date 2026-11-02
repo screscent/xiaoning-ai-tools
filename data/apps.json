@@ -2724,13 +2724,19 @@
  },
  {
   "id": "dzf5haslwd",
-  "name": "农历与节气查询器",
-  "desc": "公历转农历，生肖干支与全年二十四节气表",
+  "name": "农历与节气查询合集",
+  "desc": "4 个农历工具：农历转换、节气查询、月相查询、农历生日",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzf5haslwd.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "lunar", "title": "工具A 农历转换"},
+   {"key": "term", "title": "工具B 节气查询"},
+   {"key": "moon", "title": "工具C 月相查询"},
+   {"key": "birthday", "title": "工具D 农历生日"}
+  ]
  },
  {
   "id": "ny8guqpkdd",
