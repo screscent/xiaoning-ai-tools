@@ -1852,12 +1852,18 @@
  },
  {
   "id": "npxak92aq6",
-  "name": "月历生成器",
-  "desc": "按月/全年生成可打印月历，高亮今天与周数",
+  "name": "月历与年历合集",
+  "desc": "4 个月历工具：月历排布、年历总览、周数对照、打印版式",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npxak92aq6.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "month", "title": "工具A 月历排布"},
+   {"key": "year", "title": "工具B 年历总览"},
+   {"key": "week", "title": "工具C 周数对照"},
+   {"key": "print", "title": "工具D 打印版式"}
+  ]
  },
  {
   "id": "z56lnaaahj",

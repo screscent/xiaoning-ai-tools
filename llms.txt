@@ -191,7 +191,7 @@
 - [秒表与计时记录合集](https://screscent.github.io/xiaoning-ai-tools/tools/stopwatch-lap.html)：4 个计时工具同页：大字秒表、分段与圈速、两组对比、记录导出（免费）
 - [配色方案生成器](https://screscent.github.io/xiaoning-ai-tools/tools/color-palette-generator.html)：互补/邻近/三角等配色规则，一键复制色卡（免费）
 - [图片前后对比器](https://screscent.github.io/xiaoning-ai-tools/tools/image-ab-compare.html)：两张图滑块/并排/叠影对比，导出对比图（免费）
-- [月历生成器](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-calendar.html)：按月/全年生成可打印月历，高亮今天与周数（免费）
+- [月历与年历合集](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-calendar.html)：4 个月历工具：月历排布、年历总览、周数对照、打印版式（免费）
 - [密码强度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/password-strength.html)：本地评估密码强度、熵值与改进建议（免费）
 - [思维导图与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/mind-map-generator.html)：4 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出（免费）
 - [世界时钟](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：多时区对照时钟，显示日期与时差（免费）
