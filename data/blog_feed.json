@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-02T03:58:30+00:00",
+ "updated": "2026-11-02T11:07:47+00:00",
  "source": "wechat-mp",
- "count": 148,
+ "count": 149,
  "articles": [
+  {
+   "slug": "yz-OldHwRRCr0HdyB0V4wQ",
+   "title": "小凝：Agent 缺的不是能力，是一套能验收它的 OS",
+   "url": "https://mp.weixin.qq.com/s/yz-OldHwRRCr0HdyB0V4wQ",
+   "publish_time": "2026-11-02",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "8OxJLoFtFm4QnmpoMyFHzg",
    "title": "小凝：AI Agent 最大的谎言，是那句「已完成」",

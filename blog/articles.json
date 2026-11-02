@@ -1,8 +1,13 @@
 {
- "updated": "2026-11-02T03:58:30+00:00",
- "count": 148,
+ "updated": "2026-11-02T11:07:47+00:00",
+ "count": 149,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-02",
+   "title": "小凝：Agent 缺的不是能力，是一套能验收它的 OS",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/yz-OldHwRRCr0HdyB0V4wQ.html"
+  },
   {
    "date": "2026-11-02",
    "title": "小凝：AI Agent 最大的谎言，是那句「已完成」",
@@ -147,11 +152,6 @@
    "date": "2026-10-02",
    "title": "第 03 篇 · Eino ADK 实战：多 Agent 与人工中断",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/Bl0mcQ5QUAwjOCDEVEeGbQ.html"
-  },
-  {
-   "date": "2026-10-02",
-   "title": "第 02 篇 · Eino 编排实战：Chain / Graph / Workflow 与 ReAct Agent",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/VuSYvtB3TiwinmSCLnfFIQ.html"
   }
  ]
 }

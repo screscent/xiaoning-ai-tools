@@ -2495,12 +2495,30 @@
  },
  {
   "id": "7b3qgqweb7",
-  "name": "中文转拼音工具",
-  "desc": "中文转带调/无调/首字母拼音，含逐字对照",
+  "name": "中文与拼音处理合集",
+  "desc": "4 个拼音工具同页：带调拼音、无调首字母、多音字、逐字对照表",
   "price": 0,
   "cat": "实用工具",
   "url": "https://7b3qgqweb7.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "pinyin",
+    "title": "工具A 带调拼音"
+   },
+   {
+    "key": "plain",
+    "title": "工具B 无调与首字母"
+   },
+   {
+    "key": "polyphone",
+    "title": "工具C 多音字"
+   },
+   {
+    "key": "table",
+    "title": "工具D 逐字对照表"
+   }
+  ]
  },
  {
   "id": "ijankg8zig",
