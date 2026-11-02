@@ -4054,13 +4054,18 @@
  },
  {
   "id": "npcteh2aq6",
-  "name": "景点门票与通行预算计算器",
-  "desc": "分人群算单景点与多景点门票，含讲解与观光车附加费",
-  "tag": "免费",
+  "name": "门票与通行预算合集",
+  "desc": "4 个出游预算工具：单景点门票、多景点合计、城市通票、讲解观光车",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npcteh2aq6.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {"key": "single", "title": "工具A 单景点门票"},
+   {"key": "multi", "title": "工具B 多景点合计"},
+   {"key": "pass", "title": "工具C 城市通票"},
+   {"key": "extras", "title": "工具D 讲解观光车"}
+  ]
  },
  {
   "id": "z5wyvnaahj",

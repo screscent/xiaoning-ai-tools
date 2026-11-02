@@ -354,7 +354,7 @@
 - [储蓄目标达成时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/saving-goal.html)：按月复利推演攒到目标金额所需月数与利息结构（免费）
 - [CSS 分隔线与点阵背景生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-pattern.html)：四种分隔线/背景样式生成可复制的 CSS 与 HTML 示例（免费）
 - [睡眠债务与补觉计划计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-debt.html)：按工作日周末睡眠差算累计债务，给出补觉天数与风险提示（免费）
-- [景点门票与通行预算计算器](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：分人群算单景点与多景点门票，含讲解与观光车附加费（免费）
+- [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：4 个出游预算工具：单景点门票、多景点合计、城市通票、讲解观光车（免费）
 - [随机用户名与昵称生成器](https://screscent.github.io/xiaoning-ai-tools/tools/username-gen.html)：本地词库随机组合中文/英文昵称，带去重与长度统计（免费）
 - [凯撒密码与 ROT13 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：按位移量加密解密字母与数字，含映射表与字符统计（免费）
 - [甘特图任务排期生成器](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-plan.html)：按任务工期自动串联排期并输出 ASCII 甘特条与里程碑（免费）
