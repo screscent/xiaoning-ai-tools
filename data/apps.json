@@ -2978,13 +2978,31 @@
  },
  {
   "id": "lyrxbzjxel",
-  "name": "手动汇率换算器",
-  "desc": "手动汇率双向换算，含手续费与到手金额",
+  "name": "汇率换算与换汇成本合集",
+  "desc": "4 个换汇工具同页：双向换算、多币种折算、手续费到账、现钞对比",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://lyrxbzjxel.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "rate",
+    "title": "工具A 双向汇率换算"
+   },
+   {
+    "key": "multi",
+    "title": "工具B 多币种折算"
+   },
+   {
+    "key": "fee",
+    "title": "工具C 手续费与到账"
+   },
+   {
+    "key": "cash",
+    "title": "工具D 现钞与刷卡"
+   }
+  ]
  },
  {
   "id": "puhhuj3a4t",

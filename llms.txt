@@ -289,7 +289,7 @@
 - [打印尺寸与像素换算器](https://screscent.github.io/xiaoning-ai-tools/tools/print-size-px.html)：毫米尺寸与 DPI 换算像素，含 A4/名片等预设（免费）
 - [XML 格式化与压缩器](https://screscent.github.io/xiaoning-ai-tools/tools/xml-format.html)：XML 逐层缩进美化与单行压缩，含统计与错误提示（免费）
 - [Markdown 目录 TOC 生成器](https://screscent.github.io/xiaoning-ai-tools/tools/md-toc.html)：按标题层级生成带锚点缩进的 Markdown 目录（免费）
-- [手动汇率换算器](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：手动汇率双向换算，含手续费与到手金额（免费）
+- [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：4 个换汇工具同页：双向换算、多币种折算、手续费到账、现钞对比（免费）
 - [GPA 与成绩换算器](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：百分制与 4.0/5.0 制互转，按学分加权算 GPA（免费）
 - [跑步配速与完赛时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/run-pace.html)：距离时间互算配速、速度与每公里分段（免费）
 - [JSONPath 提取器](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：用 $.a.b[0] 路径提取 JSON 字段，支持全部匹配（免费）
