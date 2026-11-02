@@ -381,7 +381,7 @@
 - [钙与维生素 D 摄入计算器](https://screscent.github.io/xiaoning-ai-tools/tools/calcium-vitd.html)：按年龄性别算每日钙目标，估算奶豆摄入缺口与补充份数（免费）
 - [Wi-Fi 与路由器安全自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/wifi-security-check.html)：按加密方式与六项配置打分，给出扣分项与整改路径（免费）
 - [在线小工具合集（字数·进制·折扣·日期差·颜色·单位）](https://screscent.github.io/xiaoning-ai-tools/tools/mini-tools-collection.html)：一个页面装 6 个常用小工具，hash 直链可直达子工具（免费）
-- [参考文献引用格式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/ref-citation.html)：GB/T 7714 / APA / MLA 一键生成，含字段提示与常见错误（免费）
+- [引用格式与文献速查](https://screscent.github.io/xiaoning-ai-tools/tools/ref-citation.html)：4 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX 与文献管理要点（免费）
 - [嘌呤与尿酸饮食速查器](https://screscent.github.io/xiaoning-ai-tools/tools/purine-uric.html)：按人群算每日嘌呤上限，四档食物清单 + 替换建议（免费）
 - [食物升糖指数与血糖负荷计算器](https://screscent.github.io/xiaoning-ai-tools/tools/glycemic-load.html)：算 GI/GL 与分级，给同类替换与三餐搭配（免费）
 - [家庭应急物品清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/family-emergency-kit.html)：按人数与场景生成应急清单，含保质期、预算与采购优先级（免费）

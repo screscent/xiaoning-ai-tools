@@ -4002,13 +4002,31 @@
  },
  {
   "id": "g42maetuhw",
-  "name": "参考文献引用格式生成器",
-  "desc": "GB/T 7714 / APA / MLA 一键生成，含字段提示与常见错误",
+  "name": "引用格式与文献速查",
+  "desc": "4 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX 与文献管理要点",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://g42maetuhw.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "gb",
+    "title": "工具A GB/T 7714"
+   },
+   {
+    "key": "apa",
+    "title": "工具B APA 7"
+   },
+   {
+    "key": "mla",
+    "title": "工具C MLA 9"
+   },
+   {
+    "key": "bib",
+    "title": "工具D BibTeX"
+   }
+  ]
  },
  {
   "id": "keygufdudk",
