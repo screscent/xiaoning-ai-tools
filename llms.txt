@@ -371,7 +371,7 @@
 - [繁简转换与用词对照器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-tw-cn.html)：繁简互转并对照用词与单字变化，附字数统计（免费）
 - [Base64URL 编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/base64url-codec.html)：URL 安全 Base64 编解码，可去填充与加 data 前缀（免费）
 - [数据备份 3-2-1 自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/backup-321-check.html)：按备份份数异地离线校验四项打分并给出改进动作（免费）
-- [网约车与出租车费用对比估算器](https://screscent.github.io/xiaoning-ai-tools/tools/ride-fare-compare.html)：起步价+里程+等待费拆分，三方案比价并给出最省选择（免费）
+- [打车费用与通勤速查](https://screscent.github.io/xiaoning-ai-tools/tools/ride-fare-compare.html)：4 个出行工具同页：出租车计价、网约车对比、机场接送、通勤月成本（免费）
 - [蛋白质摄入与三餐分配计算器](https://screscent.github.io/xiaoning-ai-tools/tools/protein-split.html)：按体重目标活动量算每日蛋白并均分到每餐，附食物等量对照（免费）
 - [浏览器指纹与隐私暴露自查器](https://screscent.github.io/xiaoning-ai-tools/tools/browser-fingerprint-check.html)：本地读取时区语言屏幕硬件Canvas九项，算熵值并给加固建议（免费）
 - [新能源车续航与充电费用估算器](https://screscent.github.io/xiaoning-ai-tools/tools/ev-range-cost.html)：按气温空调折损算真实续航与电费，判断行程是否需补能（免费）

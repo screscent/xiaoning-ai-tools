@@ -3876,13 +3876,31 @@
  },
  {
   "id": "c7rpgyegmi",
-  "name": "网约车与出租车费用对比估算器",
-  "desc": "起步价+里程+等待费拆分，三方案比价并给出最省选择",
+  "name": "打车费用与通勤速查",
+  "desc": "4 个出行工具同页：出租车计价、网约车对比、机场接送、通勤月成本",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://c7rpgyegmi.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "taxi",
+    "title": "工具A 出租车计价"
+   },
+   {
+    "key": "ridehail",
+    "title": "工具B 网约车对比"
+   },
+   {
+    "key": "airport",
+    "title": "工具C 机场接送"
+   },
+   {
+    "key": "commute",
+    "title": "工具D 通勤月成本"
+   }
+  ]
  },
  {
   "id": "ewz3cuixkx",
