@@ -3729,13 +3729,18 @@
  },
  {
   "id": "tbn7hlmk3t",
-  "name": "航班转机时间估算器",
-  "desc": "按到达起飞时间与各环节耗时判断转机是否够用",
-  "tag": "免费",
+  "name": "转机时间与衔接合集",
+  "desc": "4 个航班转机工具：最短转机时间、转机够不够、行李直挂、过夜转机",
   "price": 0,
   "cat": "实用工具",
   "url": "https://tbn7hlmk3t.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {"key": "mct", "title": "工具A 最短转机时间"},
+   {"key": "check", "title": "工具B 转机够不够"},
+   {"key": "baggage", "title": "工具C 行李直挂"},
+   {"key": "overnight", "title": "工具D 过夜转机"}
+  ]
  },
  {
   "id": "rdqjum4t4r",
