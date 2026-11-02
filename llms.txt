@@ -267,7 +267,7 @@
 - [Unicode 码点与 UTF-8 字节查询器](https://screscent.github.io/xiaoning-ai-tools/tools/unicode-codepoint.html)：逐字查码点/UTF-8 字节，正确处理 emoji 代理对（免费）
 - [敏感词本地过滤检测器](https://screscent.github.io/xiaoning-ai-tools/tools/sensitive-filter.html)：内置 80 条分类词库+自定义词，本地过滤并统计（免费）
 - [每日饮水与作息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/daily-plan.html)：按体重活动量算饮水量并生成分时作息表（免费）
-- [法定节假日与调休日历生成器](https://screscent.github.io/xiaoning-ai-tools/tools/holiday-calendar.html)：2025~2027 节假日与调休日历，含天数统计（免费）
+- [节假日与调休合集](https://screscent.github.io/xiaoning-ai-tools/tools/holiday-calendar.html)：4 个假期工具：放假安排、调休标注、拼假规划、假期倒计时（免费）
 - [CSS 表格样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-table.html)：调色圆角斑马纹实时生成表格 CSS/HTML（免费）
 - [文章同义词替换与降重助手](https://screscent.github.io/xiaoning-ai-tools/tools/synonym-rewrite.html)：内置同义词库+自定义替换对，按强度改写（免费）
 - [工资薪金个税计算器](https://screscent.github.io/xiaoning-ai-tools/tools/salary-tax.html)：按七档税率算个税与到手，含逐档明细（免费）
