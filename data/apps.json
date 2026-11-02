@@ -2588,12 +2588,18 @@
  },
  {
   "id": "j2tnfgxyyi",
-  "name": "ISO 周数与日期查询器",
-  "desc": "查询 ISO 周数、周起止日期与年内第几天",
+  "name": "周数与周计划合集",
+  "desc": "4 个周数工具：ISO 周号、周范围、周计划、季度周数",
   "price": 0,
   "cat": "实用工具",
   "url": "https://j2tnfgxyyi.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "iso", "title": "工具A 周号查询"},
+   {"key": "weekinfo", "title": "工具B 周范围"},
+   {"key": "weekplan", "title": "工具C 周计划"},
+   {"key": "quarter", "title": "工具D 季度周数"}
+  ]
  },
  {
   "id": "bnxqa6nsmb",
