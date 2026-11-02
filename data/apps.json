@@ -1909,12 +1909,18 @@
  },
  {
   "id": "r3avkczjyr",
-  "name": "世界时钟",
-  "desc": "多时区对照时钟，显示日期与时差",
+  "name": "世界时钟与时区合集",
+  "desc": "4 个时区工具：多城时钟、时差计算、夏令时判断、会议对照",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r3avkczjyr.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "clock", "title": "工具A 多城时钟"},
+   {"key": "offset", "title": "工具B 时差计算"},
+   {"key": "dst", "title": "工具C 夏令时判断"},
+   {"key": "meet", "title": "工具D 会议对照"}
+  ]
  },
  {
   "id": "frn8jngsra",

@@ -194,7 +194,7 @@
 - [月历与年历合集](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-calendar.html)：4 个月历工具：月历排布、年历总览、周数对照、打印版式（免费）
 - [密码强度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/password-strength.html)：本地评估密码强度、熵值与改进建议（免费）
 - [思维导图与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/mind-map-generator.html)：4 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出（免费）
-- [世界时钟](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：多时区对照时钟，显示日期与时差（免费）
+- [世界时钟与时区合集](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：4 个时区工具：多城时钟、时差计算、夏令时判断、会议对照（免费）
 - [图片马赛克打码器](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：本地涂抹马赛克/模糊/黑块，保护隐私后下载（免费）
 - [摩斯电码转换器](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：文本与摩斯电码双向转换，支持点划样式与音频播放（免费）
 - [复利与定投收益计算器](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：本金/定投/年化/年限 → 期末总额、收益与逐年明细，可导出 CSV（免费）
