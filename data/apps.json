@@ -2762,13 +2762,31 @@
  },
  {
   "id": "z5wwxxaahj",
-  "name": "装修材料用量计算器",
-  "desc": "按面积与损耗算涂料/瓷砖/地板/壁纸用量",
+  "name": "装修材料用量合集",
+  "desc": "4 个装修工具同页：涂料用量、瓷砖块数、地板用量、壁纸卷数",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5wwxxaahj.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "paint",
+    "title": "工具A 涂料用量"
+   },
+   {
+    "key": "tile",
+    "title": "工具B 瓷砖块数"
+   },
+   {
+    "key": "floor",
+    "title": "工具C 地板用量"
+   },
+   {
+    "key": "wallpaper",
+    "title": "工具D 壁纸卷数"
+   }
+  ]
  },
  {
   "id": "5cunqft6g5",
