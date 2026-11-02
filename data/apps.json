@@ -3495,13 +3495,18 @@
  },
  {
   "id": "puhc8q3a4t",
-  "name": "汽车保养与年检提醒表",
-  "desc": "按里程与间隔算下次保养，按购车日期推算年检到期",
-  "tag": "免费",
+  "name": "保养与年检提醒合集",
+  "desc": "4 个车主提醒工具：保养周期、年检到期、保险到期、保养项目清单",
   "price": 0,
   "cat": "实用工具",
   "url": "https://puhc8q3a4t.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {"key": "maintenance", "title": "工具A 保养周期"},
+   {"key": "inspection", "title": "工具B 年检到期"},
+   {"key": "insurance", "title": "工具C 保险到期"},
+   {"key": "reminder", "title": "工具D 保养项目"}
+  ]
  },
  {
   "id": "say4uq9xrs",

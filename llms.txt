@@ -312,7 +312,7 @@
 - [会议议程与控场合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：4 个开会工具同页：议程时间表、发言分配、主持人控场话术、分段计时提醒（免费）
 - [CSS 轮播图样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-carousel.html)：宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML（免费）
 - [呼吸放松计时器](https://screscent.github.io/xiaoning-ai-tools/tools/breathing-timer.html)：4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进（免费）
-- [汽车保养与年检提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/car-maintenance.html)：按里程与间隔算下次保养，按购车日期推算年检到期（免费）
+- [保养与年检提醒合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-maintenance.html)：4 个车主提醒工具：保养周期、年检到期、保险到期、保养项目清单（免费）
 - [文本空行清理与重复行统计器](https://screscent.github.io/xiaoning-ai-tools/tools/text-lines-clean.html)：清理空行、去重并统计重复行次数，保留首次出现顺序（免费）
 - [时差调整与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/jetlag-plan.html)：4 个出行作息工具：向东倒时差、向西倒时差、作息调整表、落地建议（免费）
 - [久坐提醒与拉伸计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议（免费）
