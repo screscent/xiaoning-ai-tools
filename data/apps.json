@@ -3276,13 +3276,31 @@
  },
  {
   "id": "z5wgaqaahj",
-  "name": "快递运费估算器",
-  "desc": "按重量首重续重与区域系数估算运费，支持保价费",
+  "name": "快递运费与包裹成本合集",
+  "desc": "4 个物流工具同页：首重续重运费、体积重抛比、保价理赔、退换寄回成本",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5wgaqaahj.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "freight",
+    "title": "工具A 首重续重运费"
+   },
+   {
+    "key": "volumetric",
+    "title": "工具B 体积重与抛比"
+   },
+   {
+    "key": "insured",
+    "title": "工具C 保价与理赔"
+   },
+   {
+    "key": "return",
+    "title": "工具D 退换与寄回"
+   }
+  ]
  },
  {
   "id": "5culhkt6g5",

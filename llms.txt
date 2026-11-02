@@ -318,7 +318,7 @@
 - [久坐提醒与拉伸计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议（免费）
 - [待办四象限优先级整理器](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：按重要度与紧急度阈值分区待办，给出处理顺序与时间分配（免费）
 - [停车费与停车时长计算器](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：按入场出场时间与首小时/后续单价算停车时长与费用（免费）
-- [快递运费估算器](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：按重量首重续重与区域系数估算运费，支持保价费（免费）
+- [快递运费与包裹成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：4 个物流工具同页：首重续重运费、体积重抛比、保价理赔、退换寄回成本（免费）
 - [文件大小与下载时间估算器](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：按大小与带宽效率折算下载耗时，给出理论/实际对比（免费）
 - [体脂率与腰臀比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/body-fat-waist.html)：按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险（免费）
 - [防晒霜用量与补涂计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sunscreen-dose.html)：按面部面积与 SPF 算单次用量、有效时长与补涂次数（免费）
