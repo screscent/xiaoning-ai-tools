@@ -401,7 +401,7 @@
 - [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：6 个 SQL 工具同页：JSON→INSERT、INSERT→JSON、类型推断、关键字与 EXPLAIN 速查、SQL 格式化、连接与聚合，数据与语句一次转通（免费）
 - [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
 - [Git 场景命令速查](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：按局面查该用哪条 git 命令：撤销提交、丢弃改动、找回分支、合并冲突，附风险等级与更安全的替代做法（免费）
-- [Docker 命令速查表](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：容器 / 镜像 / 日志 / 卷 / 清理 / compose 常用命令速查，危险命令单独标注，新人上手与排障都用得上（免费）
+- [Docker 命令与实战速查](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：4 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份（免费）
 - [Nginx 配置片段速查](https://screscent.github.io/xiaoning-ai-tools/tools/nginx-snippet-cheatsheet.html)：反向代理 / HTTPS / gzip / 缓存 / 限流 / 跨域常用配置片段，直接复制并附常见坑提示（免费）
 - [吉他尤克里里和弦指法速查](https://screscent.github.io/xiaoning-ai-tools/tools/guitar-chord-fingering.html)：输入和弦名即出六弦按法图与逐弦说明，支持吉他/尤克里里与常见替代和弦，练琴时不用再翻谱（免费）
 - [HTTP 接口调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-debug.html)：6 个接口工具同页：状态码速查、Mock JSON 生成、UA 解析、缓存头、CORS 与安全头、重试与超时，调接口本地自查（免费）

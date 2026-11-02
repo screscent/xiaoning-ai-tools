@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Docker 命令速查表 - 效率生活 免费工具 | 小凝 AI 工具集</title>
-<meta name="description" content="容器 / 镜像 / 日志 / 卷 / 清理 / compose 常用命令速查，危险命令单独标注，新人上手与排障都用得上。Docker 命令速查表：≥20 条常用命令速查 + 危险命令标注（如 prune -a 会删未使用镜像）。完全免费，浏览器即开即用。">
+<title>Docker 命令与实战速查 - 效率生活 免费工具 | 小凝 AI 工具集</title>
+<meta name="description" content="4 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份。Docker 命令与实战速查：4 个 Docker 工具同页：容器运行与排障 + 镜像构建与清理 + 网络端口与连通 + 数据卷挂载与备份，危险命令单独标注。完全免费，浏览器即开即用。">
 <link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Docker 命令速查表 - 效率生活 免费工具 | 小凝 AI 工具集">
-<meta property="og:description" content="容器 / 镜像 / 日志 / 卷 / 清理 / compose 常用命令速查，危险命令单独标注，新人上手与排障都用得上。Docker 命令速查表：≥20 条常用命令速查 + 危险命令标注（如 prune -a 会删未使用镜像）。完全免费，浏览器即开即用。">
+<meta property="og:title" content="Docker 命令与实战速查 - 效率生活 免费工具 | 小凝 AI 工具集">
+<meta property="og:description" content="4 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份。Docker 命令与实战速查：4 个 Docker 工具同页：容器运行与排障 + 镜像构建与清理 + 网络端口与连通 + 数据卷挂载与备份，危险命令单独标注。完全免费，浏览器即开即用。">
 <meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="../assets/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Docker 命令速查表", "description": "容器 / 镜像 / 日志 / 卷 / 清理 / compose 常用命令速查，危险命令单独标注，新人上手与排障都用得上", "applicationCategory": "实用工具", "operatingSystem": "Web", "url": "https://ekrwstvhte.app.weavefox.cn", "inLanguage": "zh-CN", "offers": {"@type": "Offer", "price": 0, "priceCurrency": "CNY"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "工具怎么收费？", "acceptedAnswer": {"@type": "Answer", "text": "AI 工具在 WeaveFox 应用内按需解锁，单个 ¥1–¥3；「实用工具」里的纯前端工具完全免费。首次使用需手机号注册，注册免费。"}}, {"@type": "Question", "name": "需要安装 App 吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。浏览器打开链接即可使用，手机和电脑都能用。"}}, {"@type": "Question", "name": "我填写的内容会被保存吗？", "acceptedAnswer": {"@type": "Answer", "text": "内容仅用于本次生成。请不要填写身份证号、银行卡号、密码等敏感信息。"}}, {"@type": "Question", "name": "prune 会删掉正在用的镜像吗？", "acceptedAnswer": {"@type": "Answer", "text": "不会删运行中容器依赖的镜像，但会删未被使用的镜像与停止的容器、悬空卷，执行前建议先 docker ps -a 确认。"}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "小凝 AI 工具集", "item": "https://screscent.github.io/xiaoning-ai-tools/"}, {"@type": "ListItem", "position": 2, "name": "实用工具", "item": "https://screscent.github.io/xiaoning-ai-tools/categories/utility.html"}, {"@type": "ListItem", "position": 3, "name": "Docker 命令速查表", "item": "https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Docker 命令与实战速查", "description": "4 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份", "applicationCategory": "实用工具", "operatingSystem": "Web", "url": "https://ekrwstvhte.app.weavefox.cn", "inLanguage": "zh-CN", "offers": {"@type": "Offer", "price": 0, "priceCurrency": "CNY"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "工具怎么收费？", "acceptedAnswer": {"@type": "Answer", "text": "AI 工具在 WeaveFox 应用内按需解锁，单个 ¥1–¥3；「实用工具」里的纯前端工具完全免费。首次使用需手机号注册，注册免费。"}}, {"@type": "Question", "name": "需要安装 App 吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。浏览器打开链接即可使用，手机和电脑都能用。"}}, {"@type": "Question", "name": "我填写的内容会被保存吗？", "acceptedAnswer": {"@type": "Answer", "text": "内容仅用于本次生成。请不要填写身份证号、银行卡号、密码等敏感信息。"}}, {"@type": "Question", "name": "prune 会删掉正在用的镜像吗？", "acceptedAnswer": {"@type": "Answer", "text": "不会删运行中容器依赖的镜像，但会删未使用镜像、停止容器与悬空卷；执行前先 docker ps -a 确认，危险命令已标注。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "小凝 AI 工具集", "item": "https://screscent.github.io/xiaoning-ai-tools/"}, {"@type": "ListItem", "position": 2, "name": "实用工具", "item": "https://screscent.github.io/xiaoning-ai-tools/categories/utility.html"}, {"@type": "ListItem", "position": 3, "name": "Docker 命令与实战速查", "item": "https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html"}]}</script>
 </head>
 <body>
 <header class="top">
@@ -25,23 +25,23 @@
 </header>
 <main class="wrap">
 
-<nav class="crumb"><a href="../index.html">工具集</a> › <a href="../categories/utility.html">实用工具</a> › <span>Docker 命令速查表</span></nav>
+<nav class="crumb"><a href="../index.html">工具集</a> › <a href="../categories/utility.html">实用工具</a> › <span>Docker 命令与实战速查</span></nav>
 <article>
-  <h1>Docker 命令速查表<small>效率生活</small></h1>
-  <p class="hook">Docker 命令参数太多，看日志、清空间、进容器每次都要现查。</p>
-  <p class="lede"><strong>Docker 命令速查表</strong> 是一个即开即用的纯前端免费工具：容器 / 镜像 / 日志 / 卷 / 清理 / compose 常用命令速查，危险命令单独标注，新人上手与排障都用得上。不需要安装，浏览器打开就能用。</p>
+  <h1>Docker 命令与实战速查<small>效率生活</small></h1>
+  <p class="hook">Docker 命令参数太多，看日志、清空间、进容器、查网络、备份卷每次都要现查。</p>
+  <p class="lede"><strong>Docker 命令与实战速查</strong> 是一个即开即用的纯前端免费工具：4 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份。不需要安装，浏览器打开就能用。</p>
 
   <h2>谁需要它</h2>
   <ul class="who"><li>研发</li><li>运维</li><li>测试</li></ul>
 
   <h2>输入什么，得到什么</h2>
   <table class="io">
-    <tr><th>你需要填</th><td><ul><li>关键词</li><li>命令类别</li></ul></td></tr>
-    <tr><th>它会给你</th><td>≥20 条常用命令速查 + 危险命令标注（如 prune -a 会删未使用镜像）</td></tr>
+    <tr><th>你需要填</th><td><ul><li>场景（容器/镜像/网络/卷）</li><li>命令类别（查看/运行/清理）</li></ul></td></tr>
+    <tr><th>它会给你</th><td>4 个 Docker 工具同页：容器运行与排障 + 镜像构建与清理 + 网络端口与连通 + 数据卷挂载与备份，危险命令单独标注</td></tr>
   </table>
 
   <h2>一个具体例子</h2>
-  <p class="example">查看容器日志 → docker logs -f --tail 100 &lt;容器名&gt;；清理未使用资源 → docker system prune -a（危险，先确认）。</p>
+  <p class="example">查日志 → docker logs -f --tail 100 &lt;容器&gt;；清未用资源 → docker system prune -a（危险）；端口不通 → docker port / network inspect；备份卷 → docker run --rm -v vol:/data alpine tar czf - /data。</p>
 
   <h2>怎么用</h2>
   <ol class="steps">
@@ -50,12 +50,15 @@
     <li>复制或下载结果即可；本工具完全免费，无需解锁。</li>
   </ol>
 
-  <p class="cta"><a class="btn" href="https://ekrwstvhte.app.weavefox.cn?utm_source=xiaoning-site&amp;utm_medium=cta&amp;utm_campaign=docker-cheatsheet" rel="noopener">打开 Docker 命令速查表（免费）</a></p>
+  <p class="cta"><a class="btn" href="https://ekrwstvhte.app.weavefox.cn?utm_source=xiaoning-site&amp;utm_medium=cta&amp;utm_campaign=docker-cheatsheet" rel="noopener">打开 Docker 命令与实战速查（免费）</a></p>
 
   <h2>常见问题</h2>
-  <div class="faq"><details><summary>工具怎么收费？</summary><p>AI 工具在 WeaveFox 应用内按需解锁，单个 ¥1–¥3；「实用工具」里的纯前端工具完全免费。首次使用需手机号注册，注册免费。</p></details><details><summary>需要安装 App 吗？</summary><p>不需要。浏览器打开链接即可使用，手机和电脑都能用。</p></details><details><summary>我填写的内容会被保存吗？</summary><p>内容仅用于本次生成。请不要填写身份证号、银行卡号、密码等敏感信息。</p></details><details><summary>prune 会删掉正在用的镜像吗？</summary><p>不会删运行中容器依赖的镜像，但会删未被使用的镜像与停止的容器、悬空卷，执行前建议先 docker ps -a 确认。</p></details></div>
+  <div class="faq"><details><summary>工具怎么收费？</summary><p>AI 工具在 WeaveFox 应用内按需解锁，单个 ¥1–¥3；「实用工具」里的纯前端工具完全免费。首次使用需手机号注册，注册免费。</p></details><details><summary>需要安装 App 吗？</summary><p>不需要。浏览器打开链接即可使用，手机和电脑都能用。</p></details><details><summary>我填写的内容会被保存吗？</summary><p>内容仅用于本次生成。请不要填写身份证号、银行卡号、密码等敏感信息。</p></details><details><summary>prune 会删掉正在用的镜像吗？</summary><p>不会删运行中容器依赖的镜像，但会删未使用镜像、停止容器与悬空卷；执行前先 docker ps -a 确认，危险命令已标注。</p></details></div>
 
-  <h2>同分类的其他工具</h2>
+<h2>这个合集包含 4 个工具</h2>
+  <ul class="peers"><li><a href="https://ekrwstvhte.app.weavefox.cn#/container" rel="noopener">工具A 容器运行与排障</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/image" rel="noopener">工具B 镜像构建与清理</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/network" rel="noopener">工具C 网络端口与连通</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/volume" rel="noopener">工具D 数据卷与备份</a><span>直接打开该子工具（hash 深链）</span></li></ul>
+
+    <h2>同分类的其他工具</h2>
   <ul class="peers"><li><a href="random-group-picker.html">随机分组抽签器</a><span>名单随机分组与单人抽签，加密随机公平不重复</span></li><li><a href="typing-speed-test.html">打字练习与速度合集</a><span>4 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势</span></li><li><a href="local-todo.html">待办与任务管理合集</a><span>4 个任务工具同页：待办清单、例行任务、日周回顾、归档导入导出</span></li></ul>
 </article>
 

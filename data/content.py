@@ -3686,13 +3686,13 @@ APPS = {
         "每条都标了风险等级，标「不可逆」的会同时给出先备份或改用 stash 的安全路径。"),
 
     "ekrwstvhte": ("docker-cheatsheet",
-        "Docker 命令参数太多，看日志、清空间、进容器每次都要现查。",
+        "Docker 命令参数太多，看日志、清空间、进容器、查网络、备份卷每次都要现查。",
         "研发", "运维", "测试",
-        ['关键词', '命令类别'],
-        "≥20 条常用命令速查 + 危险命令标注（如 prune -a 会删未使用镜像）",
-        "查看容器日志 → docker logs -f --tail 100 <容器名>；清理未使用资源 → docker system prune -a（危险，先确认）。",
+        ['场景（容器/镜像/网络/卷）', '命令类别（查看/运行/清理）'],
+        "4 个 Docker 工具同页：容器运行与排障 + 镜像构建与清理 + 网络端口与连通 + 数据卷挂载与备份，危险命令单独标注",
+        "查日志 → docker logs -f --tail 100 <容器>；清未用资源 → docker system prune -a（危险）；端口不通 → docker port / network inspect；备份卷 → docker run --rm -v vol:/data alpine tar czf - /data。",
         "prune 会删掉正在用的镜像吗？",
-        "不会删运行中容器依赖的镜像，但会删未被使用的镜像与停止的容器、悬空卷，执行前建议先 docker ps -a 确认。"),
+        "不会删运行中容器依赖的镜像，但会删未使用镜像、停止容器与悬空卷；执行前先 docker ps -a 确认，危险命令已标注。"),
 
     "sfb4eqy97s": ("nginx-snippet-cheatsheet",
         "Nginx 配置片段记不住，反向代理少写两个 header 就丢 Cookie。",

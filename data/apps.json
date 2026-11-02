@@ -4475,12 +4475,30 @@
  },
  {
   "id": "ekrwstvhte",
-  "name": "Docker 命令速查表",
-  "desc": "容器 / 镜像 / 日志 / 卷 / 清理 / compose 常用命令速查，危险命令单独标注，新人上手与排障都用得上",
+  "name": "Docker 命令与实战速查",
+  "desc": "4 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ekrwstvhte.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "container",
+    "title": "工具A 容器运行与排障"
+   },
+   {
+    "key": "image",
+    "title": "工具B 镜像构建与清理"
+   },
+   {
+    "key": "network",
+    "title": "工具C 网络端口与连通"
+   },
+   {
+    "key": "volume",
+    "title": "工具D 数据卷与备份"
+   }
+  ]
  },
  {
   "id": "sfb4eqy97s",
