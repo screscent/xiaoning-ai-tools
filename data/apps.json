@@ -1777,12 +1777,30 @@
  },
  {
   "id": "x8s6kkcakb",
-  "name": "秒表与分段计时",
-  "desc": "毫秒级秒表 + 计次分段 + 导出 CSV",
+  "name": "秒表与计时记录合集",
+  "desc": "4 个计时工具同页：大字秒表、分段与圈速、两组对比、记录导出",
   "price": 0,
   "cat": "实用工具",
   "url": "https://x8s6kkcakb.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {
+    "key": "stopwatch",
+    "title": "工具A 大字秒表"
+   },
+   {
+    "key": "laps",
+    "title": "工具B 分段与圈速"
+   },
+   {
+    "key": "compare",
+    "title": "工具C 两组对比"
+   },
+   {
+    "key": "export",
+    "title": "工具D 记录导出"
+   }
+  ]
  },
  {
   "id": "bcsb5nk6f9",
