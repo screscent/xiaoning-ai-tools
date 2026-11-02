@@ -245,7 +245,7 @@
 - [图片转 ASCII 艺术](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：图片转字符画，可选字符集与彩色 HTML 输出（免费）
 - [CSS 霓虹文字效果生成器](https://screscent.github.io/xiaoning-ai-tools/tools/neon-text.html)：调色与发光强度生成霓虹 text-shadow，可复制下载（免费）
 - [中文与拼音处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-pinyin.html)：4 个拼音工具同页：带调拼音、无调首字母、多音字、逐字对照表（免费）
-- [隐私设置自查清单](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：按场景生成隐私自查项与整改建议，本地记进度（免费）
+- [隐私设置自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：4 个隐私自查清单：社交平台、手机权限、浏览器、账号安全（免费）
 - [书签整理与导出 HTML](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：校验去重书签并导出可导入浏览器的 bookmarks.html（免费）
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：4 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查（免费）
 - [农历与节气查询器](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：公历转农历，生肖干支与全年二十四节气表（免费）

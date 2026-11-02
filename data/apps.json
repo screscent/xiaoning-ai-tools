@@ -2624,12 +2624,18 @@
  },
  {
   "id": "ijankg8zig",
-  "name": "隐私设置自查清单",
-  "desc": "按场景生成隐私自查项与整改建议，本地记进度",
+  "name": "隐私设置自查合集",
+  "desc": "4 个隐私自查清单：社交平台、手机权限、浏览器、账号安全",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ijankg8zig.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {"key": "social", "title": "工具A 社交隐私"},
+   {"key": "phone", "title": "工具B 手机权限"},
+   {"key": "browser", "title": "工具C 浏览器隐私"},
+   {"key": "account", "title": "工具D 账号安全"}
+  ]
  },
  {
   "id": "2qezkyqqxb",
