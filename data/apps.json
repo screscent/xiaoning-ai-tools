@@ -2454,12 +2454,18 @@
  },
  {
   "id": "m9jsrwue9a",
-  "name": "年龄与生日精确计算器",
-  "desc": "周岁精确到天、总天数、虚岁与下次生日倒计时",
+  "name": "年龄与生日计算合集",
+  "desc": "4 个生日工具：精确年龄、生日倒计时、届龄提醒、年龄对比",
   "price": 0,
   "cat": "实用工具",
   "url": "https://m9jsrwue9a.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "age", "title": "工具A 精确年龄"},
+   {"key": "countdown", "title": "工具B 生日倒计时"},
+   {"key": "milestone", "title": "工具C 届龄提醒"},
+   {"key": "compare", "title": "工具D 年龄对比"}
+  ]
  },
  {
   "id": "uise8bxjku",
