@@ -3510,13 +3510,18 @@
  },
  {
   "id": "qhwajtstfq",
-  "name": "时差调整作息计划生成器",
-  "desc": "按两地时差生成逐日就寝与起床调整表，判断提前或推迟",
-  "tag": "免费",
+  "name": "时差调整与作息合集",
+  "desc": "4 个出行作息工具：向东倒时差、向西倒时差、作息调整表、落地建议",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qhwajtstfq.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {"key": "east", "title": "工具A 向东倒时差"},
+   {"key": "west", "title": "工具B 向西倒时差"},
+   {"key": "plan", "title": "工具C 作息调整表"},
+   {"key": "tips", "title": "工具D 落地建议"}
+  ]
  },
  {
   "id": "c7rfzsegmi",
