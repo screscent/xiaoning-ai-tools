@@ -4022,13 +4022,18 @@
  },
  {
   "id": "k6bth4ftrk",
-  "name": "信用卡账单日与免息期规划器",
-  "desc": "按账单日与还款日算最晚还款、免息天数与最长消费窗口",
-  "tag": "免费",
+  "name": "账单日与免息期合集",
+  "desc": "4 个信用卡工具：账单日规划、免息期计算、还款日提醒、分期成本",
   "price": 0,
   "cat": "实用工具",
   "url": "https://k6bth4ftrk.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "billing", "title": "工具A 账单日规划"},
+   {"key": "grace", "title": "工具B 免息期"},
+   {"key": "repay", "title": "工具C 还款日提醒"},
+   {"key": "installment", "title": "工具D 分期成本"}
+  ]
  },
  {
   "id": "ja4gvvkp5e",
