@@ -255,7 +255,7 @@
 - [日出日落与黄金时刻计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：按经纬度算日出日落、昼长与黄金时刻（免费）
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
 - [旅行行李清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：按天数季节行程生成分类清单，可勾选与导出（免费）
-- [面积与体积计算器](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：八种图形面积体积周长计算，含公式代入过程（免费）
+- [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：4 个几何工具同页：平面面积、立体体积、圆与角度、土方混凝土（免费）
 - [Base32 编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：RFC 4648 Base32 编解码，支持中文与填充校验（免费）
 - [中文标点全半角转换器](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：全角半角互转，按标点/数字/空格分范围处理（免费）
 - [AA 分摊与结算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bill-split.html)：4 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录（免费）

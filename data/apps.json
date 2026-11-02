@@ -2656,13 +2656,31 @@
  },
  {
   "id": "rdqjpm4t4r",
-  "name": "面积与体积计算器",
-  "desc": "八种图形面积体积周长计算，含公式代入过程",
+  "name": "面积体积与几何计算合集",
+  "desc": "4 个几何工具同页：平面面积、立体体积、圆与角度、土方混凝土",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://rdqjpm4t4r.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "area",
+    "title": "工具A 平面图形面积"
+   },
+   {
+    "key": "solid",
+    "title": "工具B 立体表面积与体积"
+   },
+   {
+    "key": "circle",
+    "title": "工具C 圆与角度"
+   },
+   {
+    "key": "concrete",
+    "title": "工具D 土方与混凝土"
+   }
+  ]
  },
  {
   "id": "rdqkfj4t4r",
