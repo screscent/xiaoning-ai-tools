@@ -2065,16 +2065,28 @@
  {
   "id": "npxiz82aq6",
   "name": "文本脱敏与分享自查合集",
-  "desc": "手机号/身份证/银行卡/邮箱本地脱敏，批量处理与分享前自查",
+  "desc": "4 个本地脱敏工具：手机/身份证/银行卡/邮箱打码、批量处理与分享前自查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npxiz82aq6.app.weavefox.cn",
   "subcat": "安全隐私",
   "subapps": [
-   {"key": "mask", "title": "工具A 手机脱敏"},
-   {"key": "batch", "title": "工具B 批量脱敏"},
-   {"key": "rules", "title": "工具C 日志模板"},
-   {"key": "share", "title": "工具D 分享自查"}
+   {
+    "key": "mask",
+    "title": "工具A 手机脱敏"
+   },
+   {
+    "key": "batch",
+    "title": "工具B 批量脱敏"
+   },
+   {
+    "key": "rules",
+    "title": "工具C 日志模板"
+   },
+   {
+    "key": "share",
+    "title": "工具D 分享自查"
+   }
   ]
  },
  {
