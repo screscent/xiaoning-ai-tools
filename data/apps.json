@@ -3376,13 +3376,31 @@
  },
  {
   "id": "z5wef2aahj",
-  "name": "环境噪音分贝对照与听力保护提示",
-  "desc": "按分贝与暴露时长算安全时长、风险等级与防护建议",
+  "name": "噪音分贝与听力保护速查",
+  "desc": "4 个噪音工具同页：分贝对照、听力安全时长、家电噪音对比、隔音与耳塞选型",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5wef2aahj.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "db",
+    "title": "工具A 分贝对照"
+   },
+   {
+    "key": "hearing",
+    "title": "工具B 听力安全时长"
+   },
+   {
+    "key": "appliance",
+    "title": "工具C 家电噪音"
+   },
+   {
+    "key": "insulate",
+    "title": "工具D 隔音与耳塞"
+   }
+  ]
  },
  {
   "id": "tbn7hlmk3t",

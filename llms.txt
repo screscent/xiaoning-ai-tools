@@ -328,7 +328,7 @@
 - [房租押金与水电结算计算器](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：按租金押金月数水电与违约扣款算应退押金与清单（免费）
 - [屏幕使用与护眼休息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/eye-break-plan.html)：按屏幕时长与间隔生成 20-20-20 休息提醒时间表（免费）
 - [CSS 骨架屏占位生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-skeleton.html)：块数/高度/圆角/颜色可调，实时预览并导出骨架屏 CSS（免费）
-- [环境噪音分贝对照与听力保护提示](https://screscent.github.io/xiaoning-ai-tools/tools/noise-hearing.html)：按分贝与暴露时长算安全时长、风险等级与防护建议（免费）
+- [噪音分贝与听力保护速查](https://screscent.github.io/xiaoning-ai-tools/tools/noise-hearing.html)：4 个噪音工具同页：分贝对照、听力安全时长、家电噪音对比、隔音与耳塞选型（免费）
 - [航班转机时间估算器](https://screscent.github.io/xiaoning-ai-tools/tools/transfer-time.html)：按到达起飞时间与各环节耗时判断转机是否够用（免费）
 - [洗手计时与步骤提示器](https://screscent.github.io/xiaoning-ai-tools/tools/handwash-timer.html)：20 秒倒计时配七步提示，流动水与皂液要点（免费）
 - [小费与账单分摊计算器](https://screscent.github.io/xiaoning-ai-tools/tools/tip-split.html)：按账单与小费比例算总额，支持服务费与每人取整分摊（免费）
