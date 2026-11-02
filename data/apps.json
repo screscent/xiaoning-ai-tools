@@ -2522,13 +2522,31 @@
  },
  {
   "id": "atverkpmpa",
-  "name": "子网掩码与网段计算器",
-  "desc": "按 IP 与前缀算网络/广播/主机范围，含二进制对照",
+  "name": "IP 与子网计算合集",
+  "desc": "4 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://atverkpmpa.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "subnet",
+    "title": "工具A 子网掩码与网段"
+   },
+   {
+    "key": "cidr",
+    "title": "工具B CIDR 与主机数"
+   },
+   {
+    "key": "private",
+    "title": "工具C 私网与保留地址"
+   },
+   {
+    "key": "health",
+    "title": "工具D 网关与配置自查"
+   }
+  ]
  },
  {
   "id": "dzf5haslwd",

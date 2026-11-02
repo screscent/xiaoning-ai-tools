@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>子网掩码与网段计算器 - 计算换算 免费工具 | 小凝 AI 工具集</title>
-<meta name="description" content="按 IP 与前缀算网络/广播/主机范围，含二进制对照。子网掩码与网段计算器：网络地址 / 广播地址 / 主机范围 + 掩码与二进制对照。完全免费，浏览器即开即用。">
+<title>IP 与子网计算合集 - 计算换算 免费工具 | 小凝 AI 工具集</title>
+<meta name="description" content="4 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查。IP 与子网计算合集：4 个网络工具同页：子网掩码与网段 + CIDR 与主机数 + 私网与保留地址 + 网关与配置自查，hash 直链可直达。完全免费，浏览器即开即用。">
 <link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="子网掩码与网段计算器 - 计算换算 免费工具 | 小凝 AI 工具集">
-<meta property="og:description" content="按 IP 与前缀算网络/广播/主机范围，含二进制对照。子网掩码与网段计算器：网络地址 / 广播地址 / 主机范围 + 掩码与二进制对照。完全免费，浏览器即开即用。">
+<meta property="og:title" content="IP 与子网计算合集 - 计算换算 免费工具 | 小凝 AI 工具集">
+<meta property="og:description" content="4 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查。IP 与子网计算合集：4 个网络工具同页：子网掩码与网段 + CIDR 与主机数 + 私网与保留地址 + 网关与配置自查，hash 直链可直达。完全免费，浏览器即开即用。">
 <meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="../assets/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "子网掩码与网段计算器", "description": "按 IP 与前缀算网络/广播/主机范围，含二进制对照", "applicationCategory": "实用工具", "operatingSystem": "Web", "url": "https://atverkpmpa.app.weavefox.cn", "inLanguage": "zh-CN", "offers": {"@type": "Offer", "price": 0, "priceCurrency": "CNY"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "工具怎么收费？", "acceptedAnswer": {"@type": "Answer", "text": "AI 工具在 WeaveFox 应用内按需解锁，单个 ¥1–¥3；「实用工具」里的纯前端工具完全免费。首次使用需手机号注册，注册免费。"}}, {"@type": "Question", "name": "需要安装 App 吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。浏览器打开链接即可使用，手机和电脑都能用。"}}, {"@type": "Question", "name": "我填写的内容会被保存吗？", "acceptedAnswer": {"@type": "Answer", "text": "内容仅用于本次生成。请不要填写身份证号、银行卡号、密码等敏感信息。"}}, {"@type": "Question", "name": "支持反推网段吗？", "acceptedAnswer": {"@type": "Answer", "text": "支持。选「按网段需求反推」，填入需要的可用主机数，工具会给出最合适的前缀长度。"}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "小凝 AI 工具集", "item": "https://screscent.github.io/xiaoning-ai-tools/"}, {"@type": "ListItem", "position": 2, "name": "实用工具", "item": "https://screscent.github.io/xiaoning-ai-tools/categories/utility.html"}, {"@type": "ListItem", "position": 3, "name": "子网掩码与网段计算器", "item": "https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "IP 与子网计算合集", "description": "4 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查", "applicationCategory": "实用工具", "operatingSystem": "Web", "url": "https://atverkpmpa.app.weavefox.cn", "inLanguage": "zh-CN", "offers": {"@type": "Offer", "price": 0, "priceCurrency": "CNY"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "工具怎么收费？", "acceptedAnswer": {"@type": "Answer", "text": "AI 工具在 WeaveFox 应用内按需解锁，单个 ¥1–¥3；「实用工具」里的纯前端工具完全免费。首次使用需手机号注册，注册免费。"}}, {"@type": "Question", "name": "需要安装 App 吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。浏览器打开链接即可使用，手机和电脑都能用。"}}, {"@type": "Question", "name": "我填写的内容会被保存吗？", "acceptedAnswer": {"@type": "Answer", "text": "内容仅用于本次生成。请不要填写身份证号、银行卡号、密码等敏感信息。"}}, {"@type": "Question", "name": "支持反推网段吗？", "acceptedAnswer": {"@type": "Answer", "text": "支持。输入需要的可用主机数，工具会给出最合适的前缀长度与示例网段。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "小凝 AI 工具集", "item": "https://screscent.github.io/xiaoning-ai-tools/"}, {"@type": "ListItem", "position": 2, "name": "实用工具", "item": "https://screscent.github.io/xiaoning-ai-tools/categories/utility.html"}, {"@type": "ListItem", "position": 3, "name": "IP 与子网计算合集", "item": "https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html"}]}</script>
 </head>
 <body>
 <header class="top">
@@ -25,23 +25,23 @@
 </header>
 <main class="wrap">
 
-<nav class="crumb"><a href="../index.html">工具集</a> › <a href="../categories/utility.html">实用工具</a> › <span>子网掩码与网段计算器</span></nav>
+<nav class="crumb"><a href="../index.html">工具集</a> › <a href="../categories/utility.html">实用工具</a> › <span>IP 与子网计算合集</span></nav>
 <article>
-  <h1>子网掩码与网段计算器<small>计算换算</small></h1>
-  <p class="hook">配网段时算不清网络地址和可用范围，改一个掩码就要重算一遍。</p>
-  <p class="lede"><strong>子网掩码与网段计算器</strong> 是一个即开即用的纯前端免费工具：按 IP 与前缀算网络/广播/主机范围，含二进制对照。不需要安装，浏览器打开就能用。</p>
+  <h1>IP 与子网计算合集<small>计算换算</small></h1>
+  <p class="hook">配网段时算不清网络地址和可用范围，改一个掩码就要重算，网关和 DNS 是否合理也没底。</p>
+  <p class="lede"><strong>IP 与子网计算合集</strong> 是一个即开即用的纯前端免费工具：4 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查。不需要安装，浏览器打开就能用。</p>
 
   <h2>谁需要它</h2>
   <ul class="who"><li>运维工程师</li><li>网络管理员</li><li>家庭组网用户</li></ul>
 
   <h2>输入什么，得到什么</h2>
   <table class="io">
-    <tr><th>你需要填</th><td><ul><li>IPv4 地址</li><li>前缀长度</li><li>计算模式</li><li>需要的可用主机数</li></ul></td></tr>
-    <tr><th>它会给你</th><td>网络地址 / 广播地址 / 主机范围 + 掩码与二进制对照</td></tr>
+    <tr><th>你需要填</th><td><ul><li>IPv4 地址与前缀</li><li>需要的可用主机数</li><li>地址段与 IP</li><li>网关与 DNS 配置</li></ul></td></tr>
+    <tr><th>它会给你</th><td>4 个网络工具同页：子网掩码与网段 + CIDR 与主机数 + 私网与保留地址 + 网关与配置自查，hash 直链可直达</td></tr>
   </table>
 
   <h2>一个具体例子</h2>
-  <p class="example">输入 192.168.1.10/24，得到网络地址 192.168.1.0、广播 192.168.1.255 与 254 个可用主机。</p>
+  <p class="example">192.168.1.10/24 → 网络 192.168.1.0、广播 192.168.1.255、254 个可用主机；需要 500 台 → 推荐 /23（510 台）；10.0.0.5 → 私网 A 类；网关 192.168.2.1 + 掩码 /24 → 不在同网段。</p>
 
   <h2>怎么用</h2>
   <ol class="steps">
@@ -50,12 +50,15 @@
     <li>复制或下载结果即可；本工具完全免费，无需解锁。</li>
   </ol>
 
-  <p class="cta"><a class="btn" href="https://atverkpmpa.app.weavefox.cn?utm_source=xiaoning-site&amp;utm_medium=cta&amp;utm_campaign=subnet-calculator" rel="noopener">打开 子网掩码与网段计算器（免费）</a></p>
+  <p class="cta"><a class="btn" href="https://atverkpmpa.app.weavefox.cn?utm_source=xiaoning-site&amp;utm_medium=cta&amp;utm_campaign=subnet-calculator" rel="noopener">打开 IP 与子网计算合集（免费）</a></p>
 
   <h2>常见问题</h2>
-  <div class="faq"><details><summary>工具怎么收费？</summary><p>AI 工具在 WeaveFox 应用内按需解锁，单个 ¥1–¥3；「实用工具」里的纯前端工具完全免费。首次使用需手机号注册，注册免费。</p></details><details><summary>需要安装 App 吗？</summary><p>不需要。浏览器打开链接即可使用，手机和电脑都能用。</p></details><details><summary>我填写的内容会被保存吗？</summary><p>内容仅用于本次生成。请不要填写身份证号、银行卡号、密码等敏感信息。</p></details><details><summary>支持反推网段吗？</summary><p>支持。选「按网段需求反推」，填入需要的可用主机数，工具会给出最合适的前缀长度。</p></details></div>
+  <div class="faq"><details><summary>工具怎么收费？</summary><p>AI 工具在 WeaveFox 应用内按需解锁，单个 ¥1–¥3；「实用工具」里的纯前端工具完全免费。首次使用需手机号注册，注册免费。</p></details><details><summary>需要安装 App 吗？</summary><p>不需要。浏览器打开链接即可使用，手机和电脑都能用。</p></details><details><summary>我填写的内容会被保存吗？</summary><p>内容仅用于本次生成。请不要填写身份证号、银行卡号、密码等敏感信息。</p></details><details><summary>支持反推网段吗？</summary><p>支持。输入需要的可用主机数，工具会给出最合适的前缀长度与示例网段。</p></details></div>
 
-  <h2>同分类的其他工具</h2>
+<h2>这个合集包含 4 个工具</h2>
+  <ul class="peers"><li><a href="https://atverkpmpa.app.weavefox.cn#/subnet" rel="noopener">工具A 子网掩码与网段</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://atverkpmpa.app.weavefox.cn#/cidr" rel="noopener">工具B CIDR 与主机数</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://atverkpmpa.app.weavefox.cn#/private" rel="noopener">工具C 私网与保留地址</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://atverkpmpa.app.weavefox.cn#/health" rel="noopener">工具D 网关与配置自查</a><span>直接打开该子工具（hash 深链）</span></li></ul>
+
+    <h2>同分类的其他工具</h2>
   <ul class="peers"><li><a href="mortgage-calculator.html">房贷提前还款计算器</a><span>等额本息对比 + 提前还款两方案，免费</span></li><li><a href="bmi-calorie-calculator.html">健康指标计算合集</a><span>6 个健康计算器同页：BMI 与理想体重、基础代谢与每日热量、体脂率估算、每日饮水建议、血压与心率解读、睡眠时长评估</span></li><li><a href="unit-converter.html">单位换算器</a><span>长度/重量/面积/体积/温度/数据六类单位互转</span></li></ul>
 </article>
 
