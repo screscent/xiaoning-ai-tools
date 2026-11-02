@@ -1478,12 +1478,18 @@
  },
  {
   "id": "vftnmglsqf",
-  "name": "随机分组抽签器",
-  "desc": "名单随机分组与单人抽签，加密随机公平不重复",
+  "name": "随机分组与抽签合集",
+  "desc": "4 个分组工具：随机分组、代表抽取、顺序排位、结果导出",
   "price": 0,
   "cat": "实用工具",
   "url": "https://vftnmglsqf.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {"key": "group", "title": "工具A 随机分组"},
+   {"key": "rep", "title": "工具B 代表抽取"},
+   {"key": "order", "title": "工具C 顺序排位"},
+   {"key": "export", "title": "工具D 结果导出"}
+  ]
  },
  {
   "id": "g42uqytuhw",
