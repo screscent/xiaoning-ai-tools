@@ -4149,13 +4149,18 @@
  },
  {
   "id": "ny88zypkdd",
-  "name": "租车费用与押金估算器",
-  "desc": "按天数与车型估算租金保险异地费，押金单列",
-  "tag": "免费",
+  "name": "租车费用与押金合集",
+  "desc": "4 个自驾租车工具：租金附加费、押金预授权、保险免赔、车型对比",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ny88zypkdd.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {"key": "cost", "title": "工具A 租金附加费"},
+   {"key": "deposit", "title": "工具B 押金预授权"},
+   {"key": "insurance", "title": "工具C 保险免赔"},
+   {"key": "compare", "title": "工具D 车型对比"}
+  ]
  },
  {
   "id": "puhhek3a4t",
