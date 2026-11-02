@@ -3006,13 +3006,31 @@
  },
  {
   "id": "puhhuj3a4t",
-  "name": "GPA 与成绩换算器",
-  "desc": "百分制与 4.0/5.0 制互转，按学分加权算 GPA",
+  "name": "成绩与 GPA 换算合集",
+  "desc": "4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://puhhuj3a4t.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "gpa",
+    "title": "工具A 百分制与 GPA"
+   },
+   {
+    "key": "weighted",
+    "title": "工具B 学分加权"
+   },
+   {
+    "key": "percentile",
+    "title": "工具C 排名百分位"
+   },
+   {
+    "key": "sheet",
+    "title": "工具D 成绩单换算表"
+   }
+  ]
  },
  {
   "id": "sayp6n9xrs",

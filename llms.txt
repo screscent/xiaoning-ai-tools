@@ -290,7 +290,7 @@
 - [XML 格式化与压缩器](https://screscent.github.io/xiaoning-ai-tools/tools/xml-format.html)：XML 逐层缩进美化与单行压缩，含统计与错误提示（免费）
 - [Markdown 目录 TOC 生成器](https://screscent.github.io/xiaoning-ai-tools/tools/md-toc.html)：按标题层级生成带锚点缩进的 Markdown 目录（免费）
 - [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：4 个换汇工具同页：双向换算、多币种折算、手续费到账、现钞对比（免费）
-- [GPA 与成绩换算器](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：百分制与 4.0/5.0 制互转，按学分加权算 GPA（免费）
+- [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算（免费）
 - [跑步配速与完赛时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/run-pace.html)：距离时间互算配速、速度与每公里分段（免费）
 - [JSONPath 提取器](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：用 $.a.b[0] 路径提取 JSON 字段，支持全部匹配（免费）
 - [JSON Schema 生成器](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema.html)：从示例 JSON 推断 draft-07 Schema，含必填与数组项（免费）
