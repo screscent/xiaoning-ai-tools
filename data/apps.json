@@ -3869,13 +3869,18 @@
  },
  {
   "id": "urkdhldyk8",
-  "name": "护照有效期与入境余量检查器",
-  "desc": "对比入境日与护照到期日，判断是否满足 6 个月余量",
-  "tag": "免费",
+  "name": "护照签证与入境合集",
+  "desc": "4 个出行有效期工具：护照余量、签证有效期、停留天数、换发提醒",
   "price": 0,
   "cat": "实用工具",
   "url": "https://urkdhldyk8.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {"key": "passport", "title": "工具A 护照余量"},
+   {"key": "visa", "title": "工具B 签证有效期"},
+   {"key": "stay", "title": "工具C 停留天数"},
+   {"key": "renew", "title": "工具D 换发提醒"}
+  ]
  },
  {
   "id": "hmn8b3fxk9",

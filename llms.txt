@@ -337,7 +337,7 @@
 - [行李打包清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/travel-packing-list.html)：按天数季节与出行类型生成分类打包清单，可勾选核对（免费）
 - [数码续航与充电合集](https://screscent.github.io/xiaoning-ai-tools/tools/battery-charge-time.html)：6 个数码工具同页：充电用时、充电宝容量、笔记本续航、电池健康、快充协议、充电器选型，续航充电速查（免费）
 - [到期管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/contract-renewal.html)：6 个到期工具同页：合同续签、证件换发、保险续保、车辆年检、驾驶证记分换证、会员订阅，到期前该办什么一页算清（免费）
-- [护照有效期与入境余量检查器](https://screscent.github.io/xiaoning-ai-tools/tools/passport-validity.html)：对比入境日与护照到期日，判断是否满足 6 个月余量（免费）
+- [护照签证与入境合集](https://screscent.github.io/xiaoning-ai-tools/tools/passport-validity.html)：4 个出行有效期工具：护照余量、签证有效期、停留天数、换发提醒（免费）
 - [心率区间与运动强度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：按年龄与静息心率算五档心率区间，给出燃脂推荐范围（免费）
 - [食物热量与运动消耗换算器](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：按 MET 与体重换算消耗某份热量需要的运动分钟数（免费）
 - [签证类型与材料清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/visa-checklist.html)：按目的地与出行目的生成签证类型、材料清单与办理周期（免费）
