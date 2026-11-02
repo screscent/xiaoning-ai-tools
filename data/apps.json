@@ -3304,13 +3304,31 @@
  },
  {
   "id": "5culhkt6g5",
-  "name": "文件大小与下载时间估算器",
-  "desc": "按大小与带宽效率折算下载耗时，给出理论/实际对比",
+  "name": "文件传输与带宽估算合集",
+  "desc": "4 个传输工具同页：下载耗时、上传耗时、带宽换算、体积与压缩",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://5culhkt6g5.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "download",
+    "title": "工具A 下载耗时"
+   },
+   {
+    "key": "upload",
+    "title": "工具B 上传耗时"
+   },
+   {
+    "key": "bandwidth",
+    "title": "工具C 带宽换算"
+   },
+   {
+    "key": "size",
+    "title": "工具D 体积与压缩"
+   }
+  ]
  },
  {
   "id": "ektq3cvhte",
