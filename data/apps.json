@@ -5242,5 +5242,28 @@
     "title": "工具C 采光与灯具"
    }
   ]
+ },
+ {
+  "id": "4ghafrbtnf",
+  "name": "旅行装备与打包速查合集",
+  "desc": "3 个出行工具同页：分场景打包清单、装备必买/可租/可省、季节衣物组合",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://4ghafrbtnf.app.weavefox.cn",
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "pack",
+    "title": "工具A 打包清单"
+   },
+   {
+    "key": "gear",
+    "title": "工具B 装备选型"
+   },
+   {
+    "key": "weather",
+    "title": "工具C 天气与衣物"
+   }
+  ]
  }
 ]
