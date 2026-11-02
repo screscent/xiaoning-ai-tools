@@ -2902,13 +2902,31 @@
  },
  {
   "id": "r36xfxzjyr",
-  "name": "旅行费用预算计算器",
-  "desc": "交通住宿餐饮分项占比与人均、每日预算",
+  "name": "旅行预算与花费合集",
+  "desc": "4 个旅行工具同页：总预算、每日预算、住宿分摊、省钱对比",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r36xfxzjyr.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "budget",
+    "title": "工具A 总预算与占比"
+   },
+   {
+    "key": "daily",
+    "title": "工具B 每日预算"
+   },
+   {
+    "key": "stay",
+    "title": "工具C 住宿分摊"
+   },
+   {
+    "key": "save",
+    "title": "工具D 省钱方案对比"
+   }
+  ]
  },
  {
   "id": "ygxjqkz2jf",
