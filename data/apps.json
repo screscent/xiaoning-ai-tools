@@ -5334,5 +5334,28 @@
     "title": "工具C 粉水比"
    }
   ]
+ },
+ {
+  "id": "pudtks3a4t",
+  "name": "口腔与牙齿护理速查合集",
+  "desc": "3 个口腔工具同页：刷牙方法与时长、牙线牙间清洁、症状护理与就诊信号",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://pudtks3a4t.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "brush",
+    "title": "工具A 刷牙方法"
+   },
+   {
+    "key": "floss",
+    "title": "工具B 牙线与邻面"
+   },
+   {
+    "key": "dental",
+    "title": "工具C 症状与就诊"
+   }
+  ]
  }
 ]
