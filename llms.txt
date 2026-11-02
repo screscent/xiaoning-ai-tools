@@ -376,7 +376,7 @@
 - [浏览器指纹与隐私暴露自查器](https://screscent.github.io/xiaoning-ai-tools/tools/browser-fingerprint-check.html)：本地读取时区语言屏幕硬件Canvas九项，算熵值并给加固建议（免费）
 - [新能源车续航与充电费用估算器](https://screscent.github.io/xiaoning-ai-tools/tools/ev-range-cost.html)：按气温空调折损算真实续航与电费，判断行程是否需补能（免费）
 - [膳食纤维与蔬果份量计算器](https://screscent.github.io/xiaoning-ai-tools/tools/fiber-veggie.html)：按年龄性别算每日纤维目标，拆成蔬菜水果份数并给食物对照（免费）
-- [平台图片尺寸与规格速查器](https://screscent.github.io/xiaoning-ai-tools/tools/image-spec-lookup.html)：七类用途的推荐尺寸、高清倍数、体积上限与安全区一次查清（免费）
+- [平台图片尺寸与规格速查](https://screscent.github.io/xiaoning-ai-tools/tools/image-spec-lookup.html)：4 个尺寸工具同页：社交头像与封面、电商主图与详情、视频封面与比例、网页 Banner 与响应式（免费）
 - [航班值机与登机时间倒推器](https://screscent.github.io/xiaoning-ai-tools/tools/flight-boarding-timeline.html)：按起飞时间倒推出门到登机的七个节点，并评估时间松紧（免费）
 - [钙与维生素 D 摄入计算器](https://screscent.github.io/xiaoning-ai-tools/tools/calcium-vitd.html)：按年龄性别算每日钙目标，估算奶豆摄入缺口与补充份数（免费）
 - [Wi-Fi 与路由器安全自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/wifi-security-check.html)：按加密方式与六项配置打分，给出扣分项与整改路径（免费）

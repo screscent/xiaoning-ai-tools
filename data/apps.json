@@ -3944,13 +3944,31 @@
  },
  {
   "id": "dzfwjnslwd",
-  "name": "平台图片尺寸与规格速查器",
-  "desc": "七类用途的推荐尺寸、高清倍数、体积上限与安全区一次查清",
+  "name": "平台图片尺寸与规格速查",
+  "desc": "4 个尺寸工具同页：社交头像与封面、电商主图与详情、视频封面与比例、网页 Banner 与响应式",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzfwjnslwd.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "social",
+    "title": "工具A 社交尺寸"
+   },
+   {
+    "key": "ecommerce",
+    "title": "工具B 电商主图"
+   },
+   {
+    "key": "video",
+    "title": "工具C 视频封面"
+   },
+   {
+    "key": "web",
+    "title": "工具D 网页 Banner"
+   }
+  ]
  },
  {
   "id": "atvsvxpmpa",
