@@ -5219,5 +5219,28 @@
     "title": "工具F 保养与收纳"
    }
   ]
+ },
+ {
+  "id": "g4qdkdtuhw",
+  "name": "家装尺寸与材料速查合集",
+  "desc": "3 个家装工具同页：空间尺寸与层高、材料用量估算、采光与灯具数量，装修前先量清",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://g4qdkdtuhw.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "size",
+    "title": "工具A 尺寸与层高"
+   },
+   {
+    "key": "material",
+    "title": "工具B 材料用量"
+   },
+   {
+    "key": "lighting",
+    "title": "工具C 采光与灯具"
+   }
+  ]
  }
 ]
