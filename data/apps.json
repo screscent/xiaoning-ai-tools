@@ -5288,5 +5288,28 @@
     "title": "工具C 音效授权"
    }
   ]
+ },
+ {
+  "id": "pzxwdjqyzx",
+  "name": "露营与户外安全速查合集",
+  "desc": "3 个户外工具同页：营地选址要点、户外风险现场处置、饮食饮水补给估算",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://pzxwdjqyzx.app.weavefox.cn",
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "camp",
+    "title": "工具A 营地选址"
+   },
+   {
+    "key": "safety",
+    "title": "工具B 安全处置"
+   },
+   {
+    "key": "food",
+    "title": "工具C 补给计算"
+   }
+  ]
  }
 ]
