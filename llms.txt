@@ -209,7 +209,7 @@
 - [CSS 阴影生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-shadow-generator.html)：滑块调偏移/模糊/扩散，实时预览并复制 box-shadow（免费）
 - [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：6 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义、正则转义与常用式（免费）
 - [Markdown 转纯文本](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：Markdown → 纯文本，可去列表符号/代码块并下载 txt（免费）
-- [敏感信息脱敏工具](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：手机号/身份证/邮箱/银行卡本地脱敏，含命中统计（免费）
+- [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：手机号/身份证/银行卡/邮箱本地脱敏，批量处理与分享前自查（免费）
 - [颜色名称查询](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色（免费）
 - [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
 - [工作日天数计算器](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：两日期之间的工作日/周末/节假日天数与月度明细（免费）
