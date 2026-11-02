@@ -2235,12 +2235,30 @@
  },
  {
   "id": "qseqsqnhme",
-  "name": "阶梯水电费计算器",
-  "desc": "阶梯电价水价分段计费，含分段明细与平均单价",
+  "name": "水电燃气账单计算合集",
+  "desc": "4 个账单工具同页：阶梯电价、阶梯水价、阶梯气价、峰谷电价",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qseqsqnhme.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "power",
+    "title": "工具A 阶梯电价"
+   },
+   {
+    "key": "water",
+    "title": "工具B 阶梯水价"
+   },
+   {
+    "key": "gas",
+    "title": "工具C 阶梯气价"
+   },
+   {
+    "key": "tou",
+    "title": "工具D 峰谷电价"
+   }
+  ]
  },
  {
   "id": "wn5xhmj8gw",
