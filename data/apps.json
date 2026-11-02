@@ -5380,5 +5380,28 @@
     "title": "工具C 烤箱温度"
    }
   ]
+ },
+ {
+  "id": "ij5ecw8zig",
+  "name": "绿植养护速查合集",
+  "desc": "3 个绿植工具同页：浇水频率与光照、配土与换盆、黄叶烂根病虫害排查",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ij5ecw8zig.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "water",
+    "title": "工具A 浇水与光照"
+   },
+   {
+    "key": "soil",
+    "title": "工具B 配土与换盆"
+   },
+   {
+    "key": "pest",
+    "title": "工具C 病虫排查"
+   }
+  ]
  }
 ]
