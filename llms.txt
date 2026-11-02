@@ -271,7 +271,7 @@
 - [CSS 表格样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-table.html)：调色圆角斑马纹实时生成表格 CSS/HTML（免费）
 - [文章同义词替换与降重助手](https://screscent.github.io/xiaoning-ai-tools/tools/synonym-rewrite.html)：内置同义词库+自定义替换对，按强度改写（免费）
 - [工资薪金个税计算器](https://screscent.github.io/xiaoning-ai-tools/tools/salary-tax.html)：按七档税率算个税与到手，含逐档明细（免费）
-- [会议排期冲突检测器](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-conflict.html)：多会议区间重叠检测，算出时长与空闲时段（免费）
+- [会议排期与时段合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-conflict.html)：4 个排期工具：冲突检测、空档查找、时段推荐、占用清单（免费）
 - [CSS 徽章与标签样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-badge.html)：四种徽章样式实时预览并生成 CSS/HTML（免费）
 - [Web 安全响应头合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-headers.html)：4 个 Web 安全工具：响应头检查、CSP 生成、Cookie 属性、HSTS 配置（免费）
 - [十六进制文件查看器](https://screscent.github.io/xiaoning-ai-tools/tools/hex-viewer.html)：本地读文件或粘贴文本转十六进制转储与 ASCII（免费）

@@ -3048,13 +3048,19 @@
  },
  {
   "id": "vfmrjplsqf",
-  "name": "会议排期冲突检测器",
-  "desc": "多会议区间重叠检测，算出时长与空闲时段",
+  "name": "会议排期与时段合集",
+  "desc": "4 个排期工具：冲突检测、空档查找、时段推荐、占用清单",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://vfmrjplsqf.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "overlap", "title": "工具A 冲突检测"},
+   {"key": "free", "title": "工具B 空档查找"},
+   {"key": "slot", "title": "工具C 时段推荐"},
+   {"key": "busy", "title": "工具D 占用清单"}
+  ]
  },
  {
   "id": "fwk3ajyqkh",
