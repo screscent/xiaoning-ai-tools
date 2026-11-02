@@ -2748,13 +2748,18 @@
  },
  {
   "id": "tbnvznmk3t",
-  "name": "旅行行李清单生成器",
-  "desc": "按天数季节行程生成分类清单，可勾选与导出",
-  "tag": "免费",
+  "name": "行李打包清单合集",
+  "desc": "4 个出行清单：商务出差、海岛度假、户外徒步、亲子出行",
   "price": 0,
   "cat": "实用工具",
   "url": "https://tbnvznmk3t.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {"key": "business", "title": "工具A 商务出差"},
+   {"key": "beach", "title": "工具B 海岛度假"},
+   {"key": "hiking", "title": "工具C 户外徒步"},
+   {"key": "family", "title": "工具D 亲子出行"}
+  ]
  },
  {
   "id": "rdqjpm4t4r",

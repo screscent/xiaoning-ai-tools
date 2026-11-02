@@ -254,7 +254,7 @@
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
 - [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：4 个光线工具同页：日出日落、黄金蓝调、昼长季节、拍摄规划（免费）
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
-- [旅行行李清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：按天数季节行程生成分类清单，可勾选与导出（免费）
+- [行李打包清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：4 个出行清单：商务出差、海岛度假、户外徒步、亲子出行（免费）
 - [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：4 个几何工具同页：平面面积、立体体积、圆与角度、土方混凝土（免费）
 - [Base32 编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：RFC 4648 Base32 编解码，支持中文与填充校验（免费）
 - [中文标点全半角转换器](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：全角半角互转，按标点/数字/空格分范围处理（免费）
