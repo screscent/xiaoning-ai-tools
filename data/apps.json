@@ -1732,12 +1732,18 @@
  },
  {
   "id": "ekgnlbvhte",
-  "name": "星座与生肖查询器",
-  "desc": "生日查星座/生肖/年龄/下次生日倒计时",
+  "name": "星座生肖与干支合集",
+  "desc": "4 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ekgnlbvhte.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "zodiac", "title": "工具A 星座速查"},
+   {"key": "shengxiao", "title": "工具B 生肖速查"},
+   {"key": "ganzhi", "title": "工具C 干支纪年"},
+   {"key": "pair", "title": "工具D 星座配对"}
+  ]
  },
  {
   "id": "glh2nmcqng",

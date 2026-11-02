@@ -183,7 +183,7 @@
 - [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：4 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出（免费）
 - [简易画板](https://screscent.github.io/xiaoning-ai-tools/tools/simple-whiteboard.html)：本地涂鸦画板，颜色/粗细/橡皮，导出 PNG（免费）
 - [社交图片切图与比例合集](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：4 个切图工具同页：九宫格、1:1 方图、9:16 竖版、16:9 横版（免费）
-- [星座与生肖查询器](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：生日查星座/生肖/年龄/下次生日倒计时（免费）
+- [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：4 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对（免费）
 - [图片滤镜与灰度](https://screscent.github.io/xiaoning-ai-tools/tools/image-filters.html)：本地滤镜/黑白/亮度对比度饱和度，导出图片（免费）
 - [数字转罗马与中文数字](https://screscent.github.io/xiaoning-ai-tools/tools/roman-chinese-numerals.html)：阿拉伯/罗马/中文数字双向转换，含对照表（免费）
 - [决策与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-decider.html)：4 个决策工具同页：随机抽取、加权概率、多人投票计票、不重复名单抽签（免费）
