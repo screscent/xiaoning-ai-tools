@@ -2986,13 +2986,18 @@
  },
  {
   "id": "x89sejcakb",
-  "name": "HTTP 安全响应头检查器",
-  "desc": "粘贴响应头本地判定 6 项安全头并评分",
-  "tag": "免费",
+  "name": "Web 安全响应头合集",
+  "desc": "4 个 Web 安全工具：响应头检查、CSP 生成、Cookie 属性、HSTS 配置",
   "price": 0,
   "cat": "实用工具",
   "url": "https://x89sejcakb.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {"key": "headers", "title": "工具A 响应头检查"},
+   {"key": "csp", "title": "工具B CSP 生成"},
+   {"key": "cookie", "title": "工具C Cookie 自查"},
+   {"key": "hsts", "title": "工具D HSTS 配置"}
+  ]
  },
  {
   "id": "qsiducnhme",
