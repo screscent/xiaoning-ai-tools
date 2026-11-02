@@ -2851,13 +2851,18 @@
  },
  {
   "id": "3xmx4f5af3",
-  "name": "ICS 日历文件生成器",
-  "desc": "多行事件生成标准 iCalendar，可导入手机日历",
-  "tag": "免费",
+  "name": "日历文件与订阅合集",
+  "desc": "4 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数",
   "price": 0,
   "cat": "实用工具",
   "url": "https://3xmx4f5af3.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {"key": "ics", "title": "工具A ICS 生成"},
+   {"key": "event", "title": "工具B 事件编辑"},
+   {"key": "subscribe", "title": "工具C 订阅说明"},
+   {"key": "reminder", "title": "工具D 提醒参数"}
+  ]
  },
  {
   "id": "tbnjpnmk3t",
