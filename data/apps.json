@@ -3636,13 +3636,18 @@
  },
  {
   "id": "g4qemytuhw",
-  "name": "航班行李额与超重费估算器",
-  "desc": "按舱位与件重算免费额度、超重公斤数与超重费",
-  "tag": "免费",
+  "name": "行李额与超重费合集",
+  "desc": "4 个航班行李工具：手提额度、托运额度、超重费、航司对比",
   "price": 0,
   "cat": "实用工具",
   "url": "https://g4qemytuhw.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {"key": "carry", "title": "工具A 手提额度"},
+   {"key": "checked", "title": "工具B 托运额度"},
+   {"key": "overweight", "title": "工具C 超重费"},
+   {"key": "compare", "title": "工具D 航司对比"}
+  ]
  },
  {
   "id": "9pag3yr8kd",
