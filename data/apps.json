@@ -1705,12 +1705,30 @@
  },
  {
   "id": "bnu92knsmb",
-  "name": "九宫格切图器",
-  "desc": "图片一键切 3×3/2×2 等，逐张下载",
+  "name": "社交图片切图与比例合集",
+  "desc": "4 个切图工具同页：九宫格、1:1 方图、9:16 竖版、16:9 横版",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bnu92knsmb.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "grid",
+    "title": "工具A 九宫格切图"
+   },
+   {
+    "key": "square",
+    "title": "工具B 1:1 方图"
+   },
+   {
+    "key": "story",
+    "title": "工具C 9:16 竖版"
+   },
+   {
+    "key": "cover",
+    "title": "工具D 16:9 横版"
+   }
+  ]
  },
  {
   "id": "ekgnlbvhte",
