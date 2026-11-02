@@ -2307,12 +2307,30 @@
  },
  {
   "id": "z5wpwyaahj",
-  "name": "JWT 解码查看器",
-  "desc": "本地解析 JWT Header/Payload，标准声明转时间与过期判断",
+  "name": "Token 与鉴权自查合集",
+  "desc": "4 个鉴权工具同页：JWT 解码、声明解释、Authorization 头、Cookie 自查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5wpwyaahj.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "jwt",
+    "title": "工具A JWT 解码"
+   },
+   {
+    "key": "claims",
+    "title": "工具B 标准声明解释"
+   },
+   {
+    "key": "headers",
+    "title": "工具C Authorization 头"
+   },
+   {
+    "key": "cookie",
+    "title": "工具D Cookie 属性自查"
+   }
+  ]
  },
  {
   "id": "5cuungt6g5",
