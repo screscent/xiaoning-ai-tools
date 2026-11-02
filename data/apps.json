@@ -2626,13 +2626,31 @@
  },
  {
   "id": "bnxzbrnsmb",
-  "name": "日出日落与黄金时刻计算器",
-  "desc": "按经纬度算日出日落、昼长与黄金时刻",
+  "name": "日出日落与光线时刻合集",
+  "desc": "4 个光线工具同页：日出日落、黄金蓝调、昼长季节、拍摄规划",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bnxzbrnsmb.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {
+    "key": "sun",
+    "title": "工具A 日出日落"
+   },
+   {
+    "key": "golden",
+    "title": "工具B 黄金与蓝调"
+   },
+   {
+    "key": "daylight",
+    "title": "工具C 昼长与季节"
+   },
+   {
+    "key": "plan",
+    "title": "工具D 拍摄时间规划"
+   }
+  ]
  },
  {
   "id": "mkplawrxwr",

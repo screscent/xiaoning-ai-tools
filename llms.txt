@@ -252,7 +252,7 @@
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
 - [发票税额与价税分离计算器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：含税/不含税互转，按税率算税额并精确到分（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
-- [日出日落与黄金时刻计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：按经纬度算日出日落、昼长与黄金时刻（免费）
+- [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：4 个光线工具同页：日出日落、黄金蓝调、昼长季节、拍摄规划（免费）
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
 - [旅行行李清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：按天数季节行程生成分类清单，可勾选与导出（免费）
 - [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：4 个几何工具同页：平面面积、立体体积、圆与角度、土方混凝土（免费）
