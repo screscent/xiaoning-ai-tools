@@ -3909,13 +3909,18 @@
  },
  {
   "id": "dzfc3aslwd",
-  "name": "签证类型与材料清单生成器",
-  "desc": "按目的地与出行目的生成签证类型、材料清单与办理周期",
-  "tag": "免费",
+  "name": "签证材料清单合集",
+  "desc": "4 个签证材料清单：旅游、商务、学生、探亲访友",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzfc3aslwd.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {"key": "tourist", "title": "工具A 旅游签证"},
+   {"key": "business", "title": "工具B 商务签证"},
+   {"key": "student", "title": "工具C 学生签证"},
+   {"key": "visit", "title": "工具D 探亲访友"}
+  ]
  },
  {
   "id": "puhfd93a4t",
