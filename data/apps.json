@@ -1957,12 +1957,30 @@
  },
  {
   "id": "r3a6wazjyr",
-  "name": "单位价格比较器",
-  "desc": "不同规格商品按每 100g/500g 折算单价，比出更划算",
+  "name": "单价与多规格比价合集",
+  "desc": "4 个比价工具同页：单位价格、多规格折算、多件优惠、会员价",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r3a6wazjyr.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "unit",
+    "title": "工具A 单位价格比较"
+   },
+   {
+    "key": "pack",
+    "title": "工具B 多规格折算"
+   },
+   {
+    "key": "bulk",
+    "title": "工具C 多件优惠单价"
+   },
+   {
+    "key": "member",
+    "title": "工具D 会员价对比"
+   }
+  ]
  },
  {
   "id": "ygjbzyz2jf",
