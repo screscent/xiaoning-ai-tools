@@ -1651,12 +1651,18 @@
  },
  {
   "id": "sfw5ysy97s",
-  "name": "文本加密解密",
-  "desc": "本地 AES-GCM 加解密文本，口令派生密钥",
+  "name": "文本加解密与哈希合集",
+  "desc": "4 个本地工具：AES 加密、AES 解密、哈希计算、校验对比，不上传",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sfw5ysy97s.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {"key": "encrypt", "title": "工具A AES 加密"},
+   {"key": "decrypt", "title": "工具B AES 解密"},
+   {"key": "hash", "title": "工具C 哈希计算"},
+   {"key": "verify", "title": "工具D 校验对比"}
+  ]
  },
  {
   "id": "j25uddxyyi",
