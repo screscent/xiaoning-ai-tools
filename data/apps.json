@@ -3065,13 +3065,18 @@
  },
  {
   "id": "ztbksuhvkt",
-  "name": "URL 追踪参数清理器",
-  "desc": "批量移除 utm/fbclid/gclid 等追踪参数保留有效参数",
-  "tag": "免费",
+  "name": "URL 清理与参数合集",
+  "desc": "4 个链接工具：追踪参数清理、参数解析、链接重建、分享前检查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ztbksuhvkt.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {"key": "clean", "title": "工具A 追踪清理"},
+   {"key": "parse", "title": "工具B 参数解析"},
+   {"key": "rebuild", "title": "工具C 链接重建"},
+   {"key": "check", "title": "工具D 分享检查"}
+  ]
  },
  {
   "id": "mkpwgxrxwr",
