@@ -6531,5 +6531,28 @@
     "title": "工具C 缺陷与整改跟踪"
    }
   ]
+ },
+ {
+  "id": "ygqfm7z2jf",
+  "name": "自行车骑行与维护合集",
+  "desc": "3 个骑行工具同页：配速里程、保养周期、装备清单",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ygqfm7z2jf.app.weavefox.cn",
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "pace",
+    "title": "工具A 骑行配速与里程"
+   },
+   {
+    "key": "maint",
+    "title": "工具B 自行车保养周期"
+   },
+   {
+    "key": "gear",
+    "title": "工具C 骑行装备与安全清单"
+   }
+  ]
  }
 ]
