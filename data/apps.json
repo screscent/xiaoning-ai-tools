@@ -6623,5 +6623,28 @@
     "title": "工具C 鼠标握姿与DPI"
    }
   ]
+ },
+ {
+  "id": "pusczi3a4t",
+  "name": "羽毛球入门与装备合集",
+  "desc": "3 个羽毛球工具同页：场地规则、球拍磅数、用球选择",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://pusczi3a4t.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "court",
+    "title": "工具A 场地与规则速查"
+   },
+   {
+    "key": "racket",
+    "title": "工具B 球拍磅数与手胶"
+   },
+   {
+    "key": "shuttle",
+    "title": "工具C 用球与耐打选择"
+   }
+  ]
  }
 ]
