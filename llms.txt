@@ -196,7 +196,7 @@
 - [思维导图与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/mind-map-generator.html)：4 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出（免费）
 - [世界时钟与时区合集](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：4 个时区工具：多城时钟、时差计算、夏令时判断、会议对照（免费）
 - [图片马赛克打码器](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：本地涂抹马赛克/模糊/黑块，保护隐私后下载（免费）
-- [摩斯电码转换器](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：文本与摩斯电码双向转换，支持点划样式与音频播放（免费）
+- [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：4 个摩斯工具同页：文本互转、音频播放、码表速查、练习测试（免费）
 - [复利与定投收益计算器](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：本金/定投/年化/年限 → 期末总额、收益与逐年明细，可导出 CSV（免费）
 - [CSS 渐变生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：线性/径向/圆锥渐变，实时预览并复制或下载 CSS（免费）
 - [HTTP 状态码速查表](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：30+ 常见状态码速查，支持搜索/分类/排查建议与复制（免费）

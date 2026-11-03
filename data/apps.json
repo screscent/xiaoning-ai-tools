@@ -2011,12 +2011,30 @@
  },
  {
   "id": "puva8i3a4t",
-  "name": "摩斯电码转换器",
-  "desc": "文本与摩斯电码双向转换，支持点划样式与音频播放",
+  "name": "摩斯电码与信号合集",
+  "desc": "4 个摩斯工具同页：文本互转、音频播放、码表速查、练习测试",
   "price": 0,
   "cat": "实用工具",
   "url": "https://puva8i3a4t.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "encode",
+    "title": "工具A 文本转摩斯"
+   },
+   {
+    "key": "decode",
+    "title": "工具B 摩斯转文本"
+   },
+   {
+    "key": "audio",
+    "title": "工具C 摩斯音频播放"
+   },
+   {
+    "key": "chart",
+    "title": "工具D 码表与练习"
+   }
+  ]
  },
  {
   "id": "safluw9xrs",
