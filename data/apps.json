@@ -1828,12 +1828,19 @@
  },
  {
   "id": "glh2nmcqng",
-  "name": "图片滤镜与灰度",
-  "desc": "本地滤镜/黑白/亮度对比度饱和度，导出图片",
+  "name": "图片滤镜与调色合集",
+  "desc": "4 个调色工具同页：灰度、模糊、复古、明暗调节",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://glh2nmcqng.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {"key": "gray", "title": "工具A 灰度与黑白"},
+   {"key": "blur", "title": "工具B 模糊与景深"},
+   {"key": "vintage", "title": "工具C 复古色调"},
+   {"key": "tone", "title": "工具D 明暗与色彩"}
+  ]
  },
  {
   "id": "keybxzdudk",
