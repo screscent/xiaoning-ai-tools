@@ -2334,12 +2334,18 @@
  },
  {
   "id": "nyi2whpkdd",
-  "name": "生日与纪念日提醒清单",
-  "desc": "生日纪念日倒数与提醒天数，本地保存并导出",
+  "name": "纪念日与提醒清单合集",
+  "desc": "4 个纪念日工具：倒计时清单、提醒设置、周年计算、礼物备忘",
   "price": 0,
   "cat": "实用工具",
   "url": "https://nyi2whpkdd.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {"key": "countdown", "title": "工具A 倒计时清单"},
+   {"key": "remind", "title": "工具B 提醒设置"},
+   {"key": "anniversary", "title": "工具C 周年计算"},
+   {"key": "gift", "title": "工具D 礼物备忘"}
+  ]
  },
  {
   "id": "r3ar3ezjyr",
