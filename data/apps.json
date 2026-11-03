@@ -3599,13 +3599,19 @@
  },
  {
   "id": "rdq9yv4t4r",
-  "name": "Markdown 目录 TOC 生成器",
-  "desc": "按标题层级生成带锚点缩进的 Markdown 目录",
+  "name": "Markdown 目录与锚点合集",
+  "desc": "4 个文档工具同页：目录生成、锚点提取、内链检查、大纲互转",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://rdq9yv4t4r.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {"key": "toc", "title": "工具A 目录生成"},
+   {"key": "anchor", "title": "工具B 锚点提取"},
+   {"key": "links", "title": "工具C 内链检查"},
+   {"key": "outline", "title": "工具D 大纲互转"}
+  ]
  },
  {
   "id": "lyrxbzjxel",

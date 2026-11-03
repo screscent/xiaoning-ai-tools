@@ -288,7 +288,7 @@
 - [睡眠周期与就寝时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-cycle.html)：按 90 分钟周期倒推就寝时间，含入睡耗时（免费）
 - [打印尺寸与像素换算器](https://screscent.github.io/xiaoning-ai-tools/tools/print-size-px.html)：毫米尺寸与 DPI 换算像素，含 A4/名片等预设（免费）
 - [XML 格式化与压缩器](https://screscent.github.io/xiaoning-ai-tools/tools/xml-format.html)：XML 逐层缩进美化与单行压缩，含统计与错误提示（免费）
-- [Markdown 目录 TOC 生成器](https://screscent.github.io/xiaoning-ai-tools/tools/md-toc.html)：按标题层级生成带锚点缩进的 Markdown 目录（免费）
+- [Markdown 目录与锚点合集](https://screscent.github.io/xiaoning-ai-tools/tools/md-toc-anchor.html)：4 个文档工具同页：目录生成、锚点提取、内链检查、大纲互转（免费）
 - [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：4 个换汇工具同页：双向换算、多币种折算、手续费到账、现钞对比（免费）
 - [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算（免费）
 - [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：4 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算（免费）
