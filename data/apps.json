@@ -1391,10 +1391,22 @@
   "url": "https://lymnmkjxel.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "diff", "title": "工具A 日期间隔"},
-   {"key": "add", "title": "工具B 日期推算"},
-   {"key": "weekday", "title": "工具C 星期推算"},
-   {"key": "compare", "title": "工具D 日期比较"}
+   {
+    "key": "diff",
+    "title": "工具A 日期间隔"
+   },
+   {
+    "key": "add",
+    "title": "工具B 日期推算"
+   },
+   {
+    "key": "weekday",
+    "title": "工具C 星期推算"
+   },
+   {
+    "key": "compare",
+    "title": "工具D 日期比较"
+   }
   ]
  },
  {
@@ -1485,10 +1497,22 @@
   "url": "https://vftnmglsqf.app.weavefox.cn",
   "subcat": "效率生活",
   "subapps": [
-   {"key": "group", "title": "工具A 随机分组"},
-   {"key": "rep", "title": "工具B 代表抽取"},
-   {"key": "order", "title": "工具C 顺序排位"},
-   {"key": "export", "title": "工具D 结果导出"}
+   {
+    "key": "group",
+    "title": "工具A 随机分组"
+   },
+   {
+    "key": "rep",
+    "title": "工具B 代表抽取"
+   },
+   {
+    "key": "order",
+    "title": "工具C 顺序排位"
+   },
+   {
+    "key": "export",
+    "title": "工具D 结果导出"
+   }
   ]
  },
  {
@@ -1670,10 +1694,22 @@
   "url": "https://sfw5ysy97s.app.weavefox.cn",
   "subcat": "安全隐私",
   "subapps": [
-   {"key": "encrypt", "title": "工具A AES 加密"},
-   {"key": "decrypt", "title": "工具B AES 解密"},
-   {"key": "hash", "title": "工具C 哈希计算"},
-   {"key": "verify", "title": "工具D 校验对比"}
+   {
+    "key": "encrypt",
+    "title": "工具A AES 加密"
+   },
+   {
+    "key": "decrypt",
+    "title": "工具B AES 解密"
+   },
+   {
+    "key": "hash",
+    "title": "工具C 哈希计算"
+   },
+   {
+    "key": "verify",
+    "title": "工具D 校验对比"
+   }
   ]
  },
  {
@@ -1757,10 +1793,22 @@
   "url": "https://ekgnlbvhte.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "zodiac", "title": "工具A 星座速查"},
-   {"key": "shengxiao", "title": "工具B 生肖速查"},
-   {"key": "ganzhi", "title": "工具C 干支纪年"},
-   {"key": "pair", "title": "工具D 星座配对"}
+   {
+    "key": "zodiac",
+    "title": "工具A 星座速查"
+   },
+   {
+    "key": "shengxiao",
+    "title": "工具B 生肖速查"
+   },
+   {
+    "key": "ganzhi",
+    "title": "工具C 干支纪年"
+   },
+   {
+    "key": "pair",
+    "title": "工具D 星座配对"
+   }
   ]
  },
  {
@@ -1871,10 +1919,22 @@
   "url": "https://npxak92aq6.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "month", "title": "工具A 月历排布"},
-   {"key": "year", "title": "工具B 年历总览"},
-   {"key": "week", "title": "工具C 周数对照"},
-   {"key": "print", "title": "工具D 打印版式"}
+   {
+    "key": "month",
+    "title": "工具A 月历排布"
+   },
+   {
+    "key": "year",
+    "title": "工具B 年历总览"
+   },
+   {
+    "key": "week",
+    "title": "工具C 周数对照"
+   },
+   {
+    "key": "print",
+    "title": "工具D 打印版式"
+   }
   ]
  },
  {
@@ -1922,10 +1982,22 @@
   "url": "https://r3avkczjyr.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "clock", "title": "工具A 多城时钟"},
-   {"key": "offset", "title": "工具B 时差计算"},
-   {"key": "dst", "title": "工具C 夏令时判断"},
-   {"key": "meet", "title": "工具D 会议对照"}
+   {
+    "key": "clock",
+    "title": "工具A 多城时钟"
+   },
+   {
+    "key": "offset",
+    "title": "工具B 时差计算"
+   },
+   {
+    "key": "dst",
+    "title": "工具C 夏令时判断"
+   },
+   {
+    "key": "meet",
+    "title": "工具D 会议对照"
+   }
   ]
  },
  {
@@ -1991,10 +2063,22 @@
   "url": "https://safjgk9xrs.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "parse", "title": "工具A Cron 解析"},
-   {"key": "build", "title": "工具B Cron 生成"},
-   {"key": "next", "title": "工具C 下次执行"},
-   {"key": "cheatsheet", "title": "工具D 常用速查"}
+   {
+    "key": "parse",
+    "title": "工具A Cron 解析"
+   },
+   {
+    "key": "build",
+    "title": "工具B Cron 生成"
+   },
+   {
+    "key": "next",
+    "title": "工具C 下次执行"
+   },
+   {
+    "key": "cheatsheet",
+    "title": "工具D 常用速查"
+   }
   ]
  },
  {
@@ -2158,10 +2242,22 @@
   "url": "https://ztxq59hvkt.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "count", "title": "工具A 工作日天数"},
-   {"key": "leave", "title": "工具B 假期余额"},
-   {"key": "deadline", "title": "工具C 截止日推算"},
-   {"key": "calendar", "title": "工具D 月度工作日"}
+   {
+    "key": "count",
+    "title": "工具A 工作日天数"
+   },
+   {
+    "key": "leave",
+    "title": "工具B 假期余额"
+   },
+   {
+    "key": "deadline",
+    "title": "工具C 截止日推算"
+   },
+   {
+    "key": "calendar",
+    "title": "工具D 月度工作日"
+   }
   ]
  },
  {
@@ -2326,10 +2422,22 @@
   "url": "https://dzkmanslwd.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "three", "title": "工具A 三班倒"},
-   {"key": "four", "title": "工具B 四班两倒"},
-   {"key": "night", "title": "工具C 夜班作息"},
-   {"key": "swap", "title": "工具D 换班记录"}
+   {
+    "key": "three",
+    "title": "工具A 三班倒"
+   },
+   {
+    "key": "four",
+    "title": "工具B 四班两倒"
+   },
+   {
+    "key": "night",
+    "title": "工具C 夜班作息"
+   },
+   {
+    "key": "swap",
+    "title": "工具D 换班记录"
+   }
   ]
  },
  {
@@ -2341,10 +2449,22 @@
   "url": "https://nyi2whpkdd.app.weavefox.cn",
   "subcat": "效率生活",
   "subapps": [
-   {"key": "countdown", "title": "工具A 倒计时清单"},
-   {"key": "remind", "title": "工具B 提醒设置"},
-   {"key": "anniversary", "title": "工具C 周年计算"},
-   {"key": "gift", "title": "工具D 礼物备忘"}
+   {
+    "key": "countdown",
+    "title": "工具A 倒计时清单"
+   },
+   {
+    "key": "remind",
+    "title": "工具B 提醒设置"
+   },
+   {
+    "key": "anniversary",
+    "title": "工具C 周年计算"
+   },
+   {
+    "key": "gift",
+    "title": "工具D 礼物备忘"
+   }
   ]
  },
  {
@@ -2473,10 +2593,22 @@
   "url": "https://m9jsrwue9a.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "age", "title": "工具A 精确年龄"},
-   {"key": "countdown", "title": "工具B 生日倒计时"},
-   {"key": "milestone", "title": "工具C 届龄提醒"},
-   {"key": "compare", "title": "工具D 年龄对比"}
+   {
+    "key": "age",
+    "title": "工具A 精确年龄"
+   },
+   {
+    "key": "countdown",
+    "title": "工具B 生日倒计时"
+   },
+   {
+    "key": "milestone",
+    "title": "工具C 届龄提醒"
+   },
+   {
+    "key": "compare",
+    "title": "工具D 年龄对比"
+   }
   ]
  },
  {
@@ -2631,10 +2763,22 @@
   "url": "https://j2tnfgxyyi.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "iso", "title": "工具A 周号查询"},
-   {"key": "weekinfo", "title": "工具B 周范围"},
-   {"key": "weekplan", "title": "工具C 周计划"},
-   {"key": "quarter", "title": "工具D 季度周数"}
+   {
+    "key": "iso",
+    "title": "工具A 周号查询"
+   },
+   {
+    "key": "weekinfo",
+    "title": "工具B 周范围"
+   },
+   {
+    "key": "weekplan",
+    "title": "工具C 周计划"
+   },
+   {
+    "key": "quarter",
+    "title": "工具D 季度周数"
+   }
   ]
  },
  {
@@ -2691,20 +2835,50 @@
   "url": "https://ijankg8zig.app.weavefox.cn",
   "subcat": "安全隐私",
   "subapps": [
-   {"key": "social", "title": "工具A 社交隐私"},
-   {"key": "phone", "title": "工具B 手机权限"},
-   {"key": "browser", "title": "工具C 浏览器隐私"},
-   {"key": "account", "title": "工具D 账号安全"}
+   {
+    "key": "social",
+    "title": "工具A 社交隐私"
+   },
+   {
+    "key": "phone",
+    "title": "工具B 手机权限"
+   },
+   {
+    "key": "browser",
+    "title": "工具C 浏览器隐私"
+   },
+   {
+    "key": "account",
+    "title": "工具D 账号安全"
+   }
   ]
  },
  {
   "id": "2qezkyqqxb",
-  "name": "书签整理与导出 HTML",
-  "desc": "校验去重书签并导出可导入浏览器的 bookmarks.html",
+  "name": "书签整理与导出合集",
+  "desc": "4 个书签工具同页：解析去重、域名分组、格式转换、浏览器导入导出",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qezkyqqxb.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "clean",
+    "title": "工具A 书签解析与去重"
+   },
+   {
+    "key": "group",
+    "title": "工具B 按域名分组"
+   },
+   {
+    "key": "convert",
+    "title": "工具C 转表格与 JSON"
+   },
+   {
+    "key": "export",
+    "title": "工具D 导出浏览器书签"
+   }
+  ]
  },
  {
   "id": "atverkpmpa",
@@ -2744,10 +2918,22 @@
   "url": "https://dzf5haslwd.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "lunar", "title": "工具A 农历转换"},
-   {"key": "term", "title": "工具B 节气查询"},
-   {"key": "moon", "title": "工具C 月相查询"},
-   {"key": "birthday", "title": "工具D 农历生日"}
+   {
+    "key": "lunar",
+    "title": "工具A 农历转换"
+   },
+   {
+    "key": "term",
+    "title": "工具B 节气查询"
+   },
+   {
+    "key": "moon",
+    "title": "工具C 月相查询"
+   },
+   {
+    "key": "birthday",
+    "title": "工具D 农历生日"
+   }
   ]
  },
  {
@@ -2827,10 +3013,22 @@
   "url": "https://tbnvznmk3t.app.weavefox.cn",
   "subcat": "出行旅行",
   "subapps": [
-   {"key": "business", "title": "工具A 商务出差"},
-   {"key": "beach", "title": "工具B 海岛度假"},
-   {"key": "hiking", "title": "工具C 户外徒步"},
-   {"key": "family", "title": "工具D 亲子出行"}
+   {
+    "key": "business",
+    "title": "工具A 商务出差"
+   },
+   {
+    "key": "beach",
+    "title": "工具B 海岛度假"
+   },
+   {
+    "key": "hiking",
+    "title": "工具C 户外徒步"
+   },
+   {
+    "key": "family",
+    "title": "工具D 亲子出行"
+   }
   ]
  },
  {
@@ -2918,10 +3116,22 @@
   "url": "https://3xmx4f5af3.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "ics", "title": "工具A ICS 生成"},
-   {"key": "event", "title": "工具B 事件编辑"},
-   {"key": "subscribe", "title": "工具C 订阅说明"},
-   {"key": "reminder", "title": "工具D 提醒参数"}
+   {
+    "key": "ics",
+    "title": "工具A ICS 生成"
+   },
+   {
+    "key": "event",
+    "title": "工具B 事件编辑"
+   },
+   {
+    "key": "subscribe",
+    "title": "工具C 订阅说明"
+   },
+   {
+    "key": "reminder",
+    "title": "工具D 提醒参数"
+   }
   ]
  },
  {
@@ -3022,10 +3232,22 @@
   "url": "https://fwkzfxyqkh.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "holiday", "title": "工具A 放假安排"},
-   {"key": "makeup", "title": "工具B 调休标注"},
-   {"key": "bridge", "title": "工具C 拼假规划"},
-   {"key": "countdown", "title": "工具D 假期倒计时"}
+   {
+    "key": "holiday",
+    "title": "工具A 放假安排"
+   },
+   {
+    "key": "makeup",
+    "title": "工具B 调休标注"
+   },
+   {
+    "key": "bridge",
+    "title": "工具C 拼假规划"
+   },
+   {
+    "key": "countdown",
+    "title": "工具D 假期倒计时"
+   }
   ]
  },
  {
@@ -3068,10 +3290,22 @@
   "url": "https://vfmrjplsqf.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "overlap", "title": "工具A 冲突检测"},
-   {"key": "free", "title": "工具B 空档查找"},
-   {"key": "slot", "title": "工具C 时段推荐"},
-   {"key": "busy", "title": "工具D 占用清单"}
+   {
+    "key": "overlap",
+    "title": "工具A 冲突检测"
+   },
+   {
+    "key": "free",
+    "title": "工具B 空档查找"
+   },
+   {
+    "key": "slot",
+    "title": "工具C 时段推荐"
+   },
+   {
+    "key": "busy",
+    "title": "工具D 占用清单"
+   }
   ]
  },
  {
@@ -3093,10 +3327,22 @@
   "url": "https://x89sejcakb.app.weavefox.cn",
   "subcat": "安全隐私",
   "subapps": [
-   {"key": "headers", "title": "工具A 响应头检查"},
-   {"key": "csp", "title": "工具B CSP 生成"},
-   {"key": "cookie", "title": "工具C Cookie 自查"},
-   {"key": "hsts", "title": "工具D HSTS 配置"}
+   {
+    "key": "headers",
+    "title": "工具A 响应头检查"
+   },
+   {
+    "key": "csp",
+    "title": "工具B CSP 生成"
+   },
+   {
+    "key": "cookie",
+    "title": "工具C Cookie 自查"
+   },
+   {
+    "key": "hsts",
+    "title": "工具D HSTS 配置"
+   }
   ]
  },
  {
@@ -3166,10 +3412,22 @@
   "url": "https://ztbksuhvkt.app.weavefox.cn",
   "subcat": "安全隐私",
   "subapps": [
-   {"key": "clean", "title": "工具A 追踪清理"},
-   {"key": "parse", "title": "工具B 参数解析"},
-   {"key": "rebuild", "title": "工具C 链接重建"},
-   {"key": "check", "title": "工具D 分享检查"}
+   {
+    "key": "clean",
+    "title": "工具A 追踪清理"
+   },
+   {
+    "key": "parse",
+    "title": "工具B 参数解析"
+   },
+   {
+    "key": "rebuild",
+    "title": "工具C 链接重建"
+   },
+   {
+    "key": "check",
+    "title": "工具D 分享检查"
+   }
   ]
  },
  {
@@ -3591,10 +3849,22 @@
   "url": "https://puhc8q3a4t.app.weavefox.cn",
   "subcat": "出行旅行",
   "subapps": [
-   {"key": "maintenance", "title": "工具A 保养周期"},
-   {"key": "inspection", "title": "工具B 年检到期"},
-   {"key": "insurance", "title": "工具C 保险到期"},
-   {"key": "reminder", "title": "工具D 保养项目"}
+   {
+    "key": "maintenance",
+    "title": "工具A 保养周期"
+   },
+   {
+    "key": "inspection",
+    "title": "工具B 年检到期"
+   },
+   {
+    "key": "insurance",
+    "title": "工具C 保险到期"
+   },
+   {
+    "key": "reminder",
+    "title": "工具D 保养项目"
+   }
   ]
  },
  {
@@ -3616,10 +3886,22 @@
   "url": "https://qhwajtstfq.app.weavefox.cn",
   "subcat": "出行旅行",
   "subapps": [
-   {"key": "east", "title": "工具A 向东倒时差"},
-   {"key": "west", "title": "工具B 向西倒时差"},
-   {"key": "plan", "title": "工具C 作息调整表"},
-   {"key": "tips", "title": "工具D 落地建议"}
+   {
+    "key": "east",
+    "title": "工具A 向东倒时差"
+   },
+   {
+    "key": "west",
+    "title": "工具B 向西倒时差"
+   },
+   {
+    "key": "plan",
+    "title": "工具C 作息调整表"
+   },
+   {
+    "key": "tips",
+    "title": "工具D 落地建议"
+   }
   ]
  },
  {
@@ -3737,10 +4019,22 @@
   "url": "https://g4qemytuhw.app.weavefox.cn",
   "subcat": "出行旅行",
   "subapps": [
-   {"key": "carry", "title": "工具A 手提额度"},
-   {"key": "checked", "title": "工具B 托运额度"},
-   {"key": "overweight", "title": "工具C 超重费"},
-   {"key": "compare", "title": "工具D 航司对比"}
+   {
+    "key": "carry",
+    "title": "工具A 手提额度"
+   },
+   {
+    "key": "checked",
+    "title": "工具B 托运额度"
+   },
+   {
+    "key": "overweight",
+    "title": "工具C 超重费"
+   },
+   {
+    "key": "compare",
+    "title": "工具D 航司对比"
+   }
   ]
  },
  {
@@ -3830,10 +4124,22 @@
   "url": "https://tbn7hlmk3t.app.weavefox.cn",
   "subcat": "出行旅行",
   "subapps": [
-   {"key": "mct", "title": "工具A 最短转机时间"},
-   {"key": "check", "title": "工具B 转机够不够"},
-   {"key": "baggage", "title": "工具C 行李直挂"},
-   {"key": "overnight", "title": "工具D 过夜转机"}
+   {
+    "key": "mct",
+    "title": "工具A 最短转机时间"
+   },
+   {
+    "key": "check",
+    "title": "工具B 转机够不够"
+   },
+   {
+    "key": "baggage",
+    "title": "工具C 行李直挂"
+   },
+   {
+    "key": "overnight",
+    "title": "工具D 过夜转机"
+   }
   ]
  },
  {
@@ -3985,10 +4291,22 @@
   "url": "https://urkdhldyk8.app.weavefox.cn",
   "subcat": "出行旅行",
   "subapps": [
-   {"key": "passport", "title": "工具A 护照余量"},
-   {"key": "visa", "title": "工具B 签证有效期"},
-   {"key": "stay", "title": "工具C 停留天数"},
-   {"key": "renew", "title": "工具D 换发提醒"}
+   {
+    "key": "passport",
+    "title": "工具A 护照余量"
+   },
+   {
+    "key": "visa",
+    "title": "工具B 签证有效期"
+   },
+   {
+    "key": "stay",
+    "title": "工具C 停留天数"
+   },
+   {
+    "key": "renew",
+    "title": "工具D 换发提醒"
+   }
   ]
  },
  {
@@ -4020,10 +4338,22 @@
   "url": "https://dzfc3aslwd.app.weavefox.cn",
   "subcat": "出行旅行",
   "subapps": [
-   {"key": "tourist", "title": "工具A 旅游签证"},
-   {"key": "business", "title": "工具B 商务签证"},
-   {"key": "student", "title": "工具C 学生签证"},
-   {"key": "visit", "title": "工具D 探亲访友"}
+   {
+    "key": "tourist",
+    "title": "工具A 旅游签证"
+   },
+   {
+    "key": "business",
+    "title": "工具B 商务签证"
+   },
+   {
+    "key": "student",
+    "title": "工具C 学生签证"
+   },
+   {
+    "key": "visit",
+    "title": "工具D 探亲访友"
+   }
   ]
  },
  {
@@ -4095,10 +4425,22 @@
   "url": "https://k6bth4ftrk.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "billing", "title": "工具A 账单日规划"},
-   {"key": "grace", "title": "工具B 免息期"},
-   {"key": "repay", "title": "工具C 还款日提醒"},
-   {"key": "installment", "title": "工具D 分期成本"}
+   {
+    "key": "billing",
+    "title": "工具A 账单日规划"
+   },
+   {
+    "key": "grace",
+    "title": "工具B 免息期"
+   },
+   {
+    "key": "repay",
+    "title": "工具C 还款日提醒"
+   },
+   {
+    "key": "installment",
+    "title": "工具D 分期成本"
+   }
   ]
  },
  {
@@ -4170,10 +4512,22 @@
   "url": "https://npcteh2aq6.app.weavefox.cn",
   "subcat": "出行旅行",
   "subapps": [
-   {"key": "single", "title": "工具A 单景点门票"},
-   {"key": "multi", "title": "工具B 多景点合计"},
-   {"key": "pass", "title": "工具C 城市通票"},
-   {"key": "extras", "title": "工具D 讲解观光车"}
+   {
+    "key": "single",
+    "title": "工具A 单景点门票"
+   },
+   {
+    "key": "multi",
+    "title": "工具B 多景点合计"
+   },
+   {
+    "key": "pass",
+    "title": "工具C 城市通票"
+   },
+   {
+    "key": "extras",
+    "title": "工具D 讲解观光车"
+   }
   ]
  },
  {
@@ -4265,10 +4619,22 @@
   "url": "https://ny88zypkdd.app.weavefox.cn",
   "subcat": "出行旅行",
   "subapps": [
-   {"key": "cost", "title": "工具A 租金附加费"},
-   {"key": "deposit", "title": "工具B 押金预授权"},
-   {"key": "insurance", "title": "工具C 保险免赔"},
-   {"key": "compare", "title": "工具D 车型对比"}
+   {
+    "key": "cost",
+    "title": "工具A 租金附加费"
+   },
+   {
+    "key": "deposit",
+    "title": "工具B 押金预授权"
+   },
+   {
+    "key": "insurance",
+    "title": "工具C 保险免赔"
+   },
+   {
+    "key": "compare",
+    "title": "工具D 车型对比"
+   }
   ]
  },
  {
@@ -4291,10 +4657,22 @@
   "url": "https://ijapvv8zig.app.weavefox.cn",
   "subcat": "时间日期",
   "subapps": [
-   {"key": "range", "title": "工具A 区间天数"},
-   {"key": "cycle", "title": "工具B 周期排期"},
-   {"key": "split", "title": "工具C 分段统计"},
-   {"key": "overlap", "title": "工具D 重叠判断"}
+   {
+    "key": "range",
+    "title": "工具A 区间天数"
+   },
+   {
+    "key": "cycle",
+    "title": "工具B 周期排期"
+   },
+   {
+    "key": "split",
+    "title": "工具C 分段统计"
+   },
+   {
+    "key": "overlap",
+    "title": "工具D 重叠判断"
+   }
   ]
  },
  {
