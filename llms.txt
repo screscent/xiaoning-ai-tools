@@ -282,7 +282,7 @@
 - [CSS 开关切换组件生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-switch.html)：纯 CSS 开关实时预览，生成含 checked 状态代码（免费）
 - [JSON 转 TypeScript 接口生成器](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-ts.html)：粘贴 JSON 自动推导类型并生成 TypeScript interface（免费）
 - [增长与经营指标合集](https://screscent.github.io/xiaoning-ai-tools/tools/growth-metrics.html)：4 个经营指标工具同页：CAGR、同比环比、72 法则、盈亏平衡（免费）
-- [文字与 Emoji 转 Favicon 生成器](https://screscent.github.io/xiaoning-ai-tools/tools/text-favicon.html)：文字或 Emoji 一键生成多尺寸 PNG 站点图标（免费）
+- [Favicon 与站点图标生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-favicon.html)：4 个图标工具同页：文字、Emoji、SVG 与 Manifest 配置，生成 favicon 可复制代码（免费）
 - [满减与优惠叠加合集](https://screscent.github.io/xiaoning-ai-tools/tools/coupon-stack.html)：4 个优惠工具同页：满减凑单、优惠券叠加、会员折上折、积分抵扣（免费）
 - [SQL 格式化与美化器](https://screscent.github.io/xiaoning-ai-tools/tools/sql-formatter.html)：SQL 关键字换行缩进美化，支持大小写与逗号换行（免费）
 - [睡眠周期与就寝时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-cycle.html)：按 90 分钟周期倒推就寝时间，含入睡耗时（免费）

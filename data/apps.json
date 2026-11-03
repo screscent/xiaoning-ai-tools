@@ -3631,13 +3631,31 @@
   },
   {
     "id": "qhwjqsstfq",
-    "name": "文字与 Emoji 转 Favicon 生成器",
-    "desc": "文字或 Emoji 一键生成多尺寸 PNG 站点图标",
+    "name": "Favicon 与站点图标生成合集",
+    "desc": "4 个图标工具同页：文字、Emoji、SVG 与 Manifest 配置，生成 favicon 可复制代码",
     "tag": "免费",
     "price": 0,
     "cat": "实用工具",
     "url": "https://qhwjqsstfq.app.weavefox.cn",
-    "subcat": "设计绘图"
+    "subcat": "设计绘图",
+    "subapps": [
+      {
+        "key": "text",
+        "title": "文字图标"
+      },
+      {
+        "key": "emoji",
+        "title": "Emoji 图标"
+      },
+      {
+        "key": "svg",
+        "title": "SVG 图标"
+      },
+      {
+        "key": "manifest",
+        "title": "Manifest 配置"
+      }
+    ]
   },
   {
     "id": "tbnh7qmk3t",
