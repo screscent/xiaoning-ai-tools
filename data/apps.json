@@ -6508,5 +6508,28 @@
     "title": "工具C 污渍处理"
    }
   ]
+ },
+ {
+  "id": "vfkjaglsqf",
+  "name": "验房与收房检查合集",
+  "desc": "3 个收房工具同页：验房清单、面积核对、整改跟踪",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://vfkjaglsqf.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "room",
+    "title": "工具A 验房检查清单"
+   },
+   {
+    "key": "measure",
+    "title": "工具B 面积与公摊核对"
+   },
+   {
+    "key": "defect",
+    "title": "工具C 缺陷与整改跟踪"
+   }
+  ]
  }
 ]
