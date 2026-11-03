@@ -6439,5 +6439,28 @@
     "title": "工具C 用眼与验光"
    }
   ]
+ },
+ {
+  "id": "rdzmkg4t4r",
+  "name": "居家除螨与过敏防护速查合集",
+  "desc": "3 个居家工具同页：除螨频率、过敏原排查、湿度与通风",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdzmkg4t4r.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "mite",
+    "title": "工具A 除螨频率与清洗"
+   },
+   {
+    "key": "allergen",
+    "title": "工具B 过敏原排查"
+   },
+   {
+    "key": "air",
+    "title": "工具C 湿度与通风"
+   }
+  ]
  }
 ]
