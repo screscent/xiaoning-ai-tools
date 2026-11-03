@@ -3659,13 +3659,19 @@
  },
  {
   "id": "sayp6n9xrs",
-  "name": "跑步配速与完赛时间计算器",
-  "desc": "距离时间互算配速、速度与每公里分段",
+  "name": "跑步配速与完赛预测合集",
+  "desc": "4 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sayp6n9xrs.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {"key": "pace", "title": "工具A 配速与速度换算"},
+   {"key": "finish", "title": "工具B 完赛时间预测"},
+   {"key": "split", "title": "工具C 分段配速表"},
+   {"key": "elevation", "title": "工具D 爬升折算"}
+  ]
  },
  {
   "id": "9paqwhr8kd",
