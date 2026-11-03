@@ -6600,5 +6600,28 @@
     "title": "工具C 老鼠封堵与捕鼠"
    }
   ]
+ },
+ {
+  "id": "np7qk62aq6",
+  "name": "数码外设选购合集",
+  "desc": "3 个数码工具同页：显示器选型、键盘轴体、鼠标握姿",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://np7qk62aq6.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "monitor",
+    "title": "工具A 显示器尺寸与视距"
+   },
+   {
+    "key": "keyboard",
+    "title": "工具B 键盘轴体与配列"
+   },
+   {
+    "key": "mouse",
+    "title": "工具C 鼠标握姿与DPI"
+   }
+  ]
  }
 ]
