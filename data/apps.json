@@ -6554,5 +6554,28 @@
     "title": "工具C 骑行装备与安全清单"
    }
   ]
+ },
+ {
+  "id": "uiaessxjku",
+  "name": "家居软装尺寸合集",
+  "desc": "3 个软装工具同页：窗帘尺寸、地毯选配、挂画高度",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://uiaessxjku.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "curtain",
+    "title": "工具A 窗帘尺寸与褶皱"
+   },
+   {
+    "key": "rug",
+    "title": "工具B 地毯尺寸选配"
+   },
+   {
+    "key": "art",
+    "title": "工具C 挂画高度定位"
+   }
+  ]
  }
 ]
