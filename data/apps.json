@@ -6577,5 +6577,28 @@
     "title": "工具C 挂画高度定位"
    }
   ]
+ },
+ {
+  "id": "mkzkx3rxwr",
+  "name": "家庭防虫与灭鼠合集",
+  "desc": "3 个防虫工具同页：蚊虫防治、蟑螂蚂蚁、老鼠封堵",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://mkzkx3rxwr.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "mosquito",
+    "title": "工具A 蚊虫防治要点"
+   },
+   {
+    "key": "roach",
+    "title": "工具B 蟑螂蚂蚁防治"
+   },
+   {
+    "key": "rat",
+    "title": "工具C 老鼠封堵与捕鼠"
+   }
+  ]
  }
 ]
