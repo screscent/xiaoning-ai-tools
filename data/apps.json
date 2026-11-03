@@ -6646,5 +6646,28 @@
     "title": "工具C 用球与耐打选择"
    }
   ]
+ },
+ {
+  "id": "glrfuqcqng",
+  "name": "家用打印机与耗材合集",
+  "desc": "3 个打印机工具同页：机型选型、耗材成本、纸张选择",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://glrfuqcqng.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "printer",
+    "title": "工具A 打印机选型建议"
+   },
+   {
+    "key": "cost",
+    "title": "工具B 耗材成本核算"
+   },
+   {
+    "key": "paper",
+    "title": "工具C 纸张与相纸选择"
+   }
+  ]
  }
 ]
