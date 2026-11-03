@@ -2116,12 +2116,19 @@
  },
  {
   "id": "frn2l7gsra",
-  "name": "图片拼接长图",
-  "desc": "多图纵向/横向拼接，可调间距与背景，导出 PNG",
+  "name": "图片拼接与拼图合集",
+  "desc": "4 个拼图工具同页：纵向拼接、横向拼接、宫格拼图、边框美化",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frn2l7gsra.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {"key": "vertical", "title": "工具A 纵向拼接"},
+   {"key": "horizontal", "title": "工具B 横向拼接"},
+   {"key": "grid", "title": "工具C 宫格拼图"},
+   {"key": "border", "title": "工具D 边框美化"}
+  ]
  },
  {
   "id": "dzkfeyslwd",

@@ -202,7 +202,7 @@
 - [HTTP 状态码速查表](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：30+ 常见状态码速查，支持搜索/分类/排查建议与复制（免费）
 - [折扣与百分比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/discount-calculator.html)：折扣/满减/税率 → 折后价、节省与实付，含计算过程（免费）
 - [Cron 表达式工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：4 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查（免费）
-- [图片拼接长图](https://screscent.github.io/xiaoning-ai-tools/tools/image-stitcher.html)：多图纵向/横向拼接，可调间距与背景，导出 PNG（免费）
+- [图片拼接与拼图合集](https://screscent.github.io/xiaoning-ai-tools/tools/stitch-grid.html)：4 个拼图工具同页：纵向拼接、横向拼接、宫格拼图、边框美化（免费）
 - [HTML 实体编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/html-entity-codec.html)：HTML 特殊字符实体编码/解码，支持引号与换行（免费）
 - [单价与多规格比价合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-price-comparator.html)：4 个比价工具同页：单位价格、多规格折算、多件优惠、会员价（免费）
 - [图片圆角与边框生成器](https://screscent.github.io/xiaoning-ai-tools/tools/image-round-corner.html)：本地给图片加圆角与边框，可调半径/颜色并导出 PNG（免费）
