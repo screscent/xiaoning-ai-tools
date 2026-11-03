@@ -387,7 +387,7 @@
 - [家庭应急物品清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/family-emergency-kit.html)：按人数与场景生成应急清单，含保质期、预算与采购优先级（免费）
 - [海淘税费与禁限速查](https://screscent.github.io/xiaoning-ai-tools/tools/parcel-tax-calc.html)：4 个海淘工具同页：行邮税与到手价、国际运费与包裹限制、禁限物品与申报、退换与售后税费（免费）
 - [合同签署前必查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/contract-precheck.html)：按合同类型给主体、核心条款、风险条款与红线提示（免费）
-- [二手交易交接单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/secondhand-handover.html)：面交/邮寄两套流程，生成交接单、验收清单与纠纷预防（免费）
+- [二手交易交接合集](https://screscent.github.io/xiaoning-ai-tools/tools/secondhand-handover.html)：4 个二手工具同页：交接单、验收清单、纠纷话术、面交邮寄流程（免费）
 - [家用电器选购计算合集（空调·冰箱·洗衣机·电视·热水器·净水）](https://screscent.github.io/xiaoning-ai-tools/tools/home-appliance-picker.html)：一个页面装 6 个家电选购计算器，按面积/人数/距离算清该买多大，hash 直链可直达（免费）
 - [职场权益与离职计算合集（补偿·试用期·竞业·年假）](https://screscent.github.io/xiaoning-ai-tools/tools/workrights-collection.html)：6 个职场计算器同页：离职补偿 N/N+1/2N、试用期合规自查、竞业限制补偿、年假与未休折算、社保公积金与到手工资、病假工资与医疗期，一个页面算清离职、每月到手和病假能拿多少（免费）
 - [车主用车成本与合规计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-cost-collection.html)：6 个车主工具同页：车险保费、违章记分、年检到期、用车成本、保养周期与费用、洗车与美容花费，hash 直链可直达（免费）

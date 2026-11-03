@@ -5074,13 +5074,30 @@
  },
  {
   "id": "dzkttqslwd",
-  "name": "二手交易交接单生成器",
-  "desc": "面交/邮寄两套流程，生成交接单、验收清单与纠纷预防",
-  "tag": "免费",
+  "name": "二手交易交接合集",
+  "desc": "4 个二手工具同页：交接单、验收清单、纠纷话术、面交邮寄流程",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzkttqslwd.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "handover",
+    "title": "工具A 交接单生成"
+   },
+   {
+    "key": "checklist",
+    "title": "工具B 验机与验收清单"
+   },
+   {
+    "key": "dispute",
+    "title": "工具C 纠纷应对话术"
+   },
+   {
+    "key": "process",
+    "title": "工具D 面交邮寄流程"
+   }
+  ]
  },
  {
   "id": "c7zfn5egmi",
