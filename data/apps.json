@@ -5025,13 +5025,31 @@
   },
   {
     "id": "ewzae9ixkx",
-    "name": "图片位深与文件体积估算器",
-    "desc": "按位深通道压缩比估算像素体积颜色数与 4K 对照",
+    "name": "图片体积与位深估算合集",
+    "desc": "4 个估算工具同页：位深体积、内存占用、压缩比与色彩数，输入参数即出结果",
     "tag": "免费",
     "price": 0,
     "cat": "实用工具",
     "url": "https://ewzae9ixkx.app.weavefox.cn",
-    "subcat": "图片处理"
+    "subcat": "图片处理",
+    "subapps": [
+      {
+        "key": "depth",
+        "title": "位深体积"
+      },
+      {
+        "key": "memory",
+        "title": "内存占用"
+      },
+      {
+        "key": "ratio",
+        "title": "压缩比估算"
+      },
+      {
+        "key": "colors",
+        "title": "色彩数"
+      }
+    ]
   },
   {
     "id": "glfgebcqng",
