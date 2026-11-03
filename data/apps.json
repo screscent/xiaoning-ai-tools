@@ -3543,13 +3543,19 @@
  },
  {
   "id": "tbnh7qmk3t",
-  "name": "满减凑单计算器",
-  "desc": "按满减规则枚举组合，算出实付最低的最优凑单方案",
+  "name": "满减与优惠叠加合集",
+  "desc": "4 个优惠工具同页：满减凑单、优惠券叠加、会员折上折、积分抵扣",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://tbnh7qmk3t.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {"key": "full", "title": "工具A 满减凑单"},
+   {"key": "coupon", "title": "工具B 优惠券叠加"},
+   {"key": "member", "title": "工具C 会员折上折"},
+   {"key": "points", "title": "工具D 积分抵扣"}
+  ]
  },
  {
   "id": "ija4mt8zig",
