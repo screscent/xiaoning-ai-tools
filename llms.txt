@@ -355,7 +355,7 @@
 - [CSS 分隔线与点阵背景生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-pattern.html)：四种分隔线/背景样式生成可复制的 CSS 与 HTML 示例（免费）
 - [睡眠债务与补觉计划计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-debt.html)：按工作日周末睡眠差算累计债务，给出补觉天数与风险提示（免费）
 - [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：4 个出游预算工具：单景点门票、多景点合计、城市通票、讲解观光车（免费）
-- [随机用户名与昵称生成器](https://screscent.github.io/xiaoning-ai-tools/tools/username-gen.html)：本地词库随机组合中文/英文昵称，带去重与长度统计（免费）
+- [昵称与英文名生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/nickname-name-gen.html)：4 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺（免费）
 - [凯撒密码与 ROT13 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：按位移量加密解密字母与数字，含映射表与字符统计（免费）
 - [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：4 个排期工具同页：甘特图、里程碑、关键路径、燃尽图（免费）
 - [空状态与错误页文案生成器](https://screscent.github.io/xiaoning-ai-tools/tools/empty-state.html)：五种场景三套语气生成标题说明与可粘贴 HTML 片段（免费）

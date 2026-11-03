@@ -4621,13 +4621,19 @@
  },
  {
   "id": "z5wyvnaahj",
-  "name": "随机用户名与昵称生成器",
-  "desc": "本地词库随机组合中文/英文昵称，带去重与长度统计",
+  "name": "昵称与英文名生成合集",
+  "desc": "4 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5wyvnaahj.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {"key": "nickname", "title": "工具A 中文昵称生成"},
+   {"key": "username", "title": "工具B 社交账号名生成"},
+   {"key": "english", "title": "工具C 英文名推荐"},
+   {"key": "brand", "title": "工具D 品牌与店铺名生成"}
+  ]
  },
  {
   "id": "c7rsghegmi",
