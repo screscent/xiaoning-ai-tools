@@ -281,7 +281,7 @@
 - [URL 清理与参数合集](https://screscent.github.io/xiaoning-ai-tools/tools/url-cleaner.html)：4 个链接工具：追踪参数清理、参数解析、链接重建、分享前检查（免费）
 - [CSS 开关切换组件生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-switch.html)：纯 CSS 开关实时预览，生成含 checked 状态代码（免费）
 - [JSON 转 TypeScript 接口生成器](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-ts.html)：粘贴 JSON 自动推导类型并生成 TypeScript interface（免费）
-- [增长率与 CAGR 计算器](https://screscent.github.io/xiaoning-ai-tools/tools/growth-cagr.html)：算总增长率、年均复合增长率与 72 法则翻倍年数（免费）
+- [增长与经营指标合集](https://screscent.github.io/xiaoning-ai-tools/tools/growth-metrics.html)：4 个经营指标工具同页：CAGR、同比环比、72 法则、盈亏平衡（免费）
 - [文字与 Emoji 转 Favicon 生成器](https://screscent.github.io/xiaoning-ai-tools/tools/text-favicon.html)：文字或 Emoji 一键生成多尺寸 PNG 站点图标（免费）
 - [满减凑单计算器](https://screscent.github.io/xiaoning-ai-tools/tools/discount-combo.html)：按满减规则枚举组合，算出实付最低的最优凑单方案（免费）
 - [SQL 格式化与美化器](https://screscent.github.io/xiaoning-ai-tools/tools/sql-formatter.html)：SQL 关键字换行缩进美化，支持大小写与逗号换行（免费）

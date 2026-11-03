@@ -3517,13 +3517,19 @@
  },
  {
   "id": "pz7jntqyzx",
-  "name": "增长率与 CAGR 计算器",
-  "desc": "算总增长率、年均复合增长率与 72 法则翻倍年数",
+  "name": "增长与经营指标合集",
+  "desc": "4 个经营指标工具同页：CAGR、同比环比、72 法则、盈亏平衡",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://pz7jntqyzx.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {"key": "cagr", "title": "工具A CAGR 复合增长率"},
+   {"key": "yoy", "title": "工具B 同比与环比"},
+   {"key": "rule72", "title": "工具C 72 法则"},
+   {"key": "breakeven", "title": "工具D 盈亏平衡"}
+  ]
  },
  {
   "id": "qhwjqsstfq",
