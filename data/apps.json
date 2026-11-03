@@ -3648,13 +3648,31 @@
  },
  {
   "id": "2qeyjmqqxb",
-  "name": "简易节拍器与 BPM 计算器",
-  "desc": "WebAudio 本地节拍声，显示拍位与每拍毫秒数",
+  "name": "节拍器与速度合集",
+  "desc": "4 个节拍工具同页：节拍器、毫秒换算、手动测速、速度术语",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qeyjmqqxb.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "metro",
+    "title": "工具A 节拍器与拍号"
+   },
+   {
+    "key": "ms",
+    "title": "工具B 每拍毫秒换算"
+   },
+   {
+    "key": "tap",
+    "title": "工具C 手动测速 BPM"
+   },
+   {
+    "key": "terms",
+    "title": "工具D 速度术语对照"
+   }
+  ]
  },
  {
   "id": "7b3ecrweb7",

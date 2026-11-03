@@ -297,7 +297,7 @@
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
 - [数字转英文读法](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：整数转英文单词，支持英式 and 与序数词（免费）
 - [HTML 转 Markdown 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/html-to-md.html)：HTML 片段转 Markdown，支持标题/加粗/链接/列表（免费）
-- [简易节拍器与 BPM 计算器](https://screscent.github.io/xiaoning-ai-tools/tools/metronome.html)：WebAudio 本地节拍声，显示拍位与每拍毫秒数（免费）
+- [节拍器与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/metronome.html)：4 个节拍工具同页：节拍器、毫秒换算、手动测速、速度术语（免费）
 - [CSS 进度条样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-progress.html)：颜色/高度/圆角/条纹可调，实时预览并生成 CSS（免费）
 - [CSV 合并与拆分工具](https://screscent.github.io/xiaoning-ai-tools/tools/csv-merge-split.html)：多份 CSV 按表头合并，按行数或列值拆分后导出（免费）
 - [CSS 文字描边生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-text-stroke.html)：描边颜色/宽度/方式可调，实时预览并生成 CSS（免费）
