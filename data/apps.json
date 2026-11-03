@@ -4236,13 +4236,30 @@
  },
  {
   "id": "atvl9kpmpa",
-  "name": "文件批量重命名规则生成器",
-  "desc": "按前缀编号统一改名，保留扩展名并检测重名冲突",
-  "tag": "免费",
+  "name": "文件批量重命名合集",
+  "desc": "4 个改名工具同页：规则模板、序号补零、批量替换、对照预览",
   "price": 0,
   "cat": "实用工具",
   "url": "https://atvl9kpmpa.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "rule",
+    "title": "工具A 命名规则模板"
+   },
+   {
+    "key": "seq",
+    "title": "工具B 序号与补零"
+   },
+   {
+    "key": "replace",
+    "title": "工具C 批量查找替换"
+   },
+   {
+    "key": "preview",
+    "title": "工具D 新旧名对照预览"
+   }
+  ]
  },
  {
   "id": "dzfdhcslwd",

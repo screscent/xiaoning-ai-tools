@@ -332,7 +332,7 @@
 - [转机时间与衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/transfer-time.html)：4 个航班转机工具：最短转机时间、转机够不够、行李直挂、过夜转机（免费）
 - [洗手计时与步骤提示器](https://screscent.github.io/xiaoning-ai-tools/tools/handwash-timer.html)：20 秒倒计时配七步提示，流动水与皂液要点（免费）
 - [小费与账单分摊计算器](https://screscent.github.io/xiaoning-ai-tools/tools/tip-split.html)：按账单与小费比例算总额，支持服务费与每人取整分摊（免费）
-- [文件批量重命名规则生成器](https://screscent.github.io/xiaoning-ai-tools/tools/batch-rename.html)：按前缀编号统一改名，保留扩展名并检测重名冲突（免费）
+- [文件批量重命名合集](https://screscent.github.io/xiaoning-ai-tools/tools/batch-rename.html)：4 个改名工具同页：规则模板、序号补零、批量替换、对照预览（免费）
 - [时间块规划合集](https://screscent.github.io/xiaoning-ai-tools/tools/time-block-week.html)：4 个时间工具同页：时间块排程、精力峰值分配、每周容量与超载预警、周复盘（免费）
 - [行李打包清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/travel-packing-list.html)：按天数季节与出行类型生成分类打包清单，可勾选核对（免费）
 - [数码续航与充电合集](https://screscent.github.io/xiaoning-ai-tools/tools/battery-charge-time.html)：6 个数码工具同页：充电用时、充电宝容量、笔记本续航、电池健康、快充协议、充电器选型，续航充电速查（免费）
