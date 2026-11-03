@@ -3395,13 +3395,31 @@
  },
  {
   "id": "ygxjqkz2jf",
-  "name": "每周菜单与采购清单生成器",
-  "desc": "按人数天数口味生成七日菜单与分类采购清单",
+  "name": "每周菜单与采购计划合集",
+  "desc": "4 个菜单工具同页：七天排菜、采购汇总、库存临期、花费估算",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ygxjqkz2jf.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "menu",
+    "title": "工具A 七天菜单排布"
+   },
+   {
+    "key": "shop",
+    "title": "工具B 分品类采购汇总"
+   },
+   {
+    "key": "stock",
+    "title": "工具C 库存与临期清单"
+   },
+   {
+    "key": "cost",
+    "title": "工具D 食材花费与人均"
+   }
+  ]
  },
  {
   "id": "ztbksuhvkt",

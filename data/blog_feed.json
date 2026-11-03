@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T11:07:47+00:00",
+ "updated": "2026-11-03T01:53:10+00:00",
  "source": "wechat-mp",
  "count": 149,
  "articles": [
@@ -1195,6 +1195,5 @@
    "status": "published",
    "archived": true
   }
- ],
- "excluded": []
+ ]
 }
