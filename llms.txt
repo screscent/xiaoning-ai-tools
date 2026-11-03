@@ -11,9 +11,9 @@
 - [自媒体运营](https://screscent.github.io/xiaoning-ai-tools/categories/media.html)：小红书笔记、公众号推文、短视频脚本与直播话术，从选题到成稿一次到位。（16 个）
 - [电商客服](https://screscent.github.io/xiaoning-ai-tools/categories/ecommerce.html)：商品文案、差评回复、退款纠纷与催付话术，把客服高频场景做成可复用的话术模板。（16 个）
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
-- [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（20 个）
+- [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（19 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（296 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（297 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -52,7 +52,7 @@
 - [家庭月度预算表](https://screscent.github.io/xiaoning-ai-tools/tools/family-budget.html)：收入与支出 → 预算表 + 超支预警（¥2）
 - [婚礼流程策划器](https://screscent.github.io/xiaoning-ai-tools/tools/wedding-planner.html)：婚期与预算 → 流程、分工与物品清单（¥2）
 - [装修预算清单](https://screscent.github.io/xiaoning-ai-tools/tools/renovation-budget.html)：面积与档次 → 分项预算与超支预警（¥2）
-- [送礼推荐器](https://screscent.github.io/xiaoning-ai-tools/tools/gift-picker.html)：对象与预算 → 10 个礼物建议（¥1）
+- [送礼与礼俗合集](https://screscent.github.io/xiaoning-ai-tools/tools/gift-taboo.html)：4 个送礼工具同页：礼物推荐、预算分配、贺卡文案、送礼禁忌（免费）
 - [宝宝辅食食谱](https://screscent.github.io/xiaoning-ai-tools/tools/baby-food.html)：月龄与忌口 → 7 天辅食与做法（¥1）
 - [儿童睡前故事](https://screscent.github.io/xiaoning-ai-tools/tools/bedtime-story.html)：年龄与主题 → 3 篇完整睡前故事（¥1）
 - [宠物喂养计划](https://screscent.github.io/xiaoning-ai-tools/tools/pet-feeding.html)：猫狗信息 → 每日喂食 + 每周护理（¥1）

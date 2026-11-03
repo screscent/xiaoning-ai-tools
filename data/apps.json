@@ -289,11 +289,19 @@
  },
  {
   "id": "at6pdhpmpa",
-  "name": "送礼推荐器",
-  "desc": "对象与预算 → 10 个礼物建议",
-  "price": 1,
-  "cat": "生活家庭",
-  "url": "https://at6pdhpmpa.app.weavefox.cn"
+  "name": "送礼与礼俗合集",
+  "desc": "4 个送礼工具同页：礼物推荐、预算分配、贺卡文案、送礼禁忌",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://at6pdhpmpa.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {"key": "gift", "title": "工具A 礼物推荐"},
+   {"key": "budget", "title": "工具B 预算分配"},
+   {"key": "wrap", "title": "工具C 包装与贺卡"},
+   {"key": "taboo", "title": "工具D 礼俗禁忌"}
+  ]
  },
  {
   "id": "x8dznvcakb",
