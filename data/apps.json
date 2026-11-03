@@ -4641,13 +4641,19 @@
  },
  {
   "id": "2qex6iqqxb",
-  "name": "甘特图任务排期生成器",
-  "desc": "按任务工期自动串联排期并输出 ASCII 甘特条与里程碑",
+  "name": "项目排期与进度合集",
+  "desc": "4 个排期工具同页：甘特图、里程碑、关键路径、燃尽图",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qex6iqqxb.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {"key": "gantt", "title": "工具A 甘特图排期"},
+   {"key": "milestone", "title": "工具B 里程碑与交付节点"},
+   {"key": "critical", "title": "工具C 关键路径"},
+   {"key": "burndown", "title": "工具D 燃尽图数据"}
+  ]
  },
  {
   "id": "m9jvqmue9a",
