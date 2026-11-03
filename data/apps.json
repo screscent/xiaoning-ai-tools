@@ -3395,13 +3395,31 @@
   },
   {
     "id": "4gswjgbtnf",
-    "name": "文章同义词替换与降重助手",
-    "desc": "内置同义词库+自定义替换对，按强度改写",
+    "name": "文本改写与降重合集",
+    "desc": "4 个改写工具同页：同义替换、强度改写、同义词表与改写对照，结果可复制",
     "tag": "免费",
     "price": 0,
     "cat": "实用工具",
     "url": "https://4gswjgbtnf.app.weavefox.cn",
-    "subcat": "文本处理"
+    "subcat": "文本处理",
+    "subapps": [
+      {
+        "key": "replace",
+        "title": "同义替换"
+      },
+      {
+        "key": "rewrite",
+        "title": "强度改写"
+      },
+      {
+        "key": "thesaurus",
+        "title": "同义词表"
+      },
+      {
+        "key": "compare",
+        "title": "改写对照"
+      }
+    ]
   },
   {
     "id": "qsikgrnhme",
