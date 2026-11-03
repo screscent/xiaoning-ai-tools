@@ -181,7 +181,7 @@
 - [文本加解密与哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：4 个本地工具：AES 加密、AES 解密、哈希计算、校验对比，不上传（免费）
 - [图片取色器](https://screscent.github.io/xiaoning-ai-tools/tools/image-color-picker.html)：上传图片点击取色，HEX/RGB/HSL + 历史调色板（免费）
 - [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：4 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出（免费）
-- [简易画板](https://screscent.github.io/xiaoning-ai-tools/tools/simple-whiteboard.html)：本地涂鸦画板，颜色/粗细/橡皮，导出 PNG（免费）
+- [手绘与标注合集](https://screscent.github.io/xiaoning-ai-tools/tools/draw-annotate.html)：4 个绘图工具同页：画板、图片标注、流程图、手写签名（免费）
 - [社交图片切图与比例合集](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：4 个切图工具同页：九宫格、1:1 方图、9:16 竖版、16:9 横版（免费）
 - [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：4 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对（免费）
 - [图片滤镜与灰度](https://screscent.github.io/xiaoning-ai-tools/tools/image-filters.html)：本地滤镜/黑白/亮度对比度饱和度，导出图片（免费）

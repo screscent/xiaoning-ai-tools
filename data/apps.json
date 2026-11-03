@@ -1758,12 +1758,19 @@
  },
  {
   "id": "j25db4xyyi",
-  "name": "简易画板",
-  "desc": "本地涂鸦画板，颜色/粗细/橡皮，导出 PNG",
+  "name": "手绘与标注合集",
+  "desc": "4 个绘图工具同页：画板、图片标注、流程图、手写签名",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://j25db4xyyi.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {"key": "draw", "title": "工具A 自由画板"},
+   {"key": "annotate", "title": "工具B 图片标注"},
+   {"key": "flow", "title": "工具C 简易流程图"},
+   {"key": "sign", "title": "工具D 手写签名"}
+  ]
  },
  {
   "id": "bnu92knsmb",
