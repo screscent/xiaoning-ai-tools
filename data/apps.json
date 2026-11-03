@@ -6462,5 +6462,28 @@
     "title": "工具C 湿度与通风"
    }
   ]
+ },
+ {
+  "id": "jadllqkp5e",
+  "name": "鞋服尺码换算合集",
+  "desc": "3 个尺码工具同页：鞋码换算、服装尺码、儿童尺码",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://jadllqkp5e.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "shoe",
+    "title": "工具A 鞋码换算"
+   },
+   {
+    "key": "cloth",
+    "title": "工具B 服装尺码推荐"
+   },
+   {
+    "key": "kids",
+    "title": "工具C 儿童鞋服尺码"
+   }
+  ]
  }
 ]
