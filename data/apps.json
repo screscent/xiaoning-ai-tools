@@ -2406,12 +2406,19 @@
  },
  {
   "id": "2qcjfcqqxb",
-  "name": "UUID 与随机密钥生成器",
-  "desc": "UUID v4 / Token / API Key 批量生成，含熵值与导出",
+  "name": "标识符与密钥生成合集",
+  "desc": "4 个生成工具同页：UUID、短 ID、随机令牌、十六进制密钥",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qcjfcqqxb.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {"key": "uuid", "title": "工具A UUID v4"},
+   {"key": "shortid", "title": "工具B 短 ID"},
+   {"key": "token", "title": "工具C 随机令牌"},
+   {"key": "secret", "title": "工具D 十六进制密钥"}
+  ]
  },
  {
   "id": "k64e8lftrk",

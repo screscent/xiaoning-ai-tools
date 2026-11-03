@@ -217,7 +217,7 @@
 - [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：4 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查（免费）
 - [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：4 个正则工具同页：匹配测试、批量替换、捕获组、常用速查（免费）
 - [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：4 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘（免费）
-- [UUID 与随机密钥生成器](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-key-generator.html)：UUID v4 / Token / API Key 批量生成，含熵值与导出（免费）
+- [标识符与密钥生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-secret-kit.html)：4 个生成工具同页：UUID、短 ID、随机令牌、十六进制密钥（免费）
 - [跨时区会议时间换算器](https://screscent.github.io/xiaoning-ai-tools/tools/timezone-meeting.html)：一个时间换算多时区本地时刻与时差，夏令时自动（免费）
 - [CSS 玻璃拟态生成器](https://screscent.github.io/xiaoning-ai-tools/tools/glassmorphism-generator.html)：滑杆调模糊/透明度/圆角，实时预览并复制 CSS（免费）
 - [贷款还款方式对比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/loan-compare.html)：等额本息与等额本金月供/总利息对比，含逐月明细（免费）
