@@ -1722,12 +1722,19 @@
  },
  {
   "id": "j25uddxyyi",
-  "name": "图片取色器",
-  "desc": "上传图片点击取色，HEX/RGB/HSL + 历史调色板",
+  "name": "取色与配色提取合集",
+  "desc": "4 个配色工具同页：单点取色、主色提取、CSS 变量、取色历史",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://j25uddxyyi.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {"key": "pick", "title": "工具A 单点取色"},
+   {"key": "palette", "title": "工具B 主色提取"},
+   {"key": "css", "title": "工具C CSS 变量导出"},
+   {"key": "history", "title": "工具D 取色历史"}
+  ]
  },
  {
   "id": "bnuscunsmb",

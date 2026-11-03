@@ -179,7 +179,7 @@
 - [打字练习与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：4 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势（免费）
 - [待办与任务管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/local-todo.html)：4 个任务工具同页：待办清单、例行任务、日周回顾、归档导入导出（免费）
 - [文本加解密与哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：4 个本地工具：AES 加密、AES 解密、哈希计算、校验对比，不上传（免费）
-- [图片取色器](https://screscent.github.io/xiaoning-ai-tools/tools/image-color-picker.html)：上传图片点击取色，HEX/RGB/HSL + 历史调色板（免费）
+- [取色与配色提取合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-extract.html)：4 个配色工具同页：单点取色、主色提取、CSS 变量、取色历史（免费）
 - [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：4 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出（免费）
 - [手绘与标注合集](https://screscent.github.io/xiaoning-ai-tools/tools/draw-annotate.html)：4 个绘图工具同页：画板、图片标注、流程图、手写签名（免费）
 - [社交图片切图与比例合集](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：4 个切图工具同页：九宫格、1:1 方图、9:16 竖版、16:9 横版（免费）
