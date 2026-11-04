@@ -316,7 +316,7 @@
 - [文本空行清理与重复行统计器](https://screscent.github.io/xiaoning-ai-tools/tools/text-lines-clean.html)：清理空行、去重并统计重复行次数，保留首次出现顺序（免费）
 - [时差调整与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/jetlag-plan.html)：4 个出行作息工具：向东倒时差、向西倒时差、作息调整表、落地建议（免费）
 - [久坐提醒与拉伸计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议（免费）
-- [待办四象限优先级整理器](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：按重要度与紧急度阈值分区待办，给出处理顺序与时间分配（免费）
+- [任务优先级与四象限合集](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：4 个优先级工具同页：四象限、评分、时间块、清单导出（免费）
 - [停车费与停车时长计算器](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：按入场出场时间与首小时/后续单价算停车时长与费用（免费）
 - [快递运费与包裹成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：4 个物流工具同页：首重续重运费、体积重抛比、保价理赔、退换寄回成本（免费）
 - [文件传输与带宽估算合集](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：4 个传输工具同页：下载耗时、上传耗时、带宽换算、体积与压缩（免费）

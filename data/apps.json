@@ -4301,13 +4301,31 @@
  },
  {
   "id": "4gs8yrbtnf",
-  "name": "待办四象限优先级整理器",
-  "desc": "按重要度与紧急度阈值分区待办，给出处理顺序与时间分配",
+  "name": "任务优先级与四象限合集",
+  "desc": "4 个优先级工具同页：四象限、评分、时间块、清单导出",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://4gs8yrbtnf.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "matrix",
+    "title": "四象限分区"
+   },
+   {
+    "key": "rule",
+    "title": "优先级评分"
+   },
+   {
+    "key": "plan",
+    "title": "时间块排期"
+   },
+   {
+    "key": "export",
+    "title": "清单导出"
+   }
+  ]
  },
  {
   "id": "npcsur2aq6",
