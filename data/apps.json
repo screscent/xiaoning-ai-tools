@@ -7268,5 +7268,29 @@
         "title": "球杆选配"
       }
     ]
+  },
+  {
+    "id": "vfknyylsqf",
+    "name": "保龄球计分与换算合集",
+    "desc": "3 个保龄球工具同页：十局计分、让分与净分、球重球速换算",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://vfknyylsqf.app.weavefox.cn",
+    "subcat": "生活健康",
+    "subapps": [
+      {
+        "key": "score",
+        "title": "十局计分"
+      },
+      {
+        "key": "handicap",
+        "title": "让分净分"
+      },
+      {
+        "key": "convert",
+        "title": "单位换算"
+      }
+    ]
   }
 ]
