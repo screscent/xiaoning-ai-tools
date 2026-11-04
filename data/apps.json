@@ -7196,5 +7196,29 @@
         "title": "球拍与穿线"
       }
     ]
+  },
+  {
+    "id": "bcg8c6k6f9",
+    "name": "乐理与音准速查合集",
+    "desc": "3 个乐理工具同页：音阶与调号、音程与频率换算、和弦构成与转位",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://bcg8c6k6f9.app.weavefox.cn",
+    "subcat": "生活健康",
+    "subapps": [
+      {
+        "key": "scale",
+        "title": "音阶调号"
+      },
+      {
+        "key": "interval",
+        "title": "音程频率"
+      },
+      {
+        "key": "chord",
+        "title": "和弦构成"
+      }
+    ]
   }
 ]
