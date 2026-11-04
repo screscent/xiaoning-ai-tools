@@ -3441,13 +3441,31 @@
  },
  {
   "id": "qsikgrnhme",
-  "name": "工资薪金个税计算器",
-  "desc": "按七档税率算个税与到手，含逐档明细",
+  "name": "个税与到手工资合集",
+  "desc": "4 个税务工具同页：工资个税到手、年终奖计税对比、专项附加扣除、五险一金明细",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qsikgrnhme.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "salary",
+    "title": "工资个税与到手"
+   },
+   {
+    "key": "bonus",
+    "title": "年终奖计税对比"
+   },
+   {
+    "key": "deduction",
+    "title": "专项附加扣除"
+   },
+   {
+    "key": "insurance",
+    "title": "五险一金明细"
+   }
+  ]
  },
  {
   "id": "vfmrjplsqf",
