@@ -7148,5 +7148,29 @@
         "title": "编码转换"
       }
     ]
+  },
+  {
+    "id": "ijtkz98zig",
+    "name": "游泳配速与训练合集",
+    "desc": "3 个游泳工具同页：配速与 SWOLF、趟数与距离换算、训练计划",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ijtkz98zig.app.weavefox.cn",
+    "subcat": "生活健康",
+    "subapps": [
+      {
+        "key": "pace",
+        "title": "配速与SWOLF"
+      },
+      {
+        "key": "turns",
+        "title": "趟数换算"
+      },
+      {
+        "key": "plan",
+        "title": "训练计划"
+      }
+    ]
   }
 ]
