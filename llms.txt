@@ -400,7 +400,7 @@
 - [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：6 个有氧工具同页：静息心率、VO2max、心率区间、训练负荷比、跨项目等效、训练计划（免费）
 - [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：6 个 SQL 工具同页：JSON→INSERT、INSERT→JSON、类型推断、关键字与 EXPLAIN 速查、SQL 格式化、连接与聚合，数据与语句一次转通（免费）
 - [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
-- [Git 场景命令速查](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：按局面查该用哪条 git 命令：撤销提交、丢弃改动、找回分支、合并冲突，附风险等级与更安全的替代做法（免费）
+- [Git 场景命令合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：4 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并（免费）
 - [Docker 命令与实战速查](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：4 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份（免费）
 - [Nginx 配置片段速查](https://screscent.github.io/xiaoning-ai-tools/tools/nginx-snippet-cheatsheet.html)：反向代理 / HTTPS / gzip / 缓存 / 限流 / 跨域常用配置片段，直接复制并附常见坑提示（免费）
 - [吉他尤克里里和弦指法速查](https://screscent.github.io/xiaoning-ai-tools/tools/guitar-chord-fingering.html)：输入和弦名即出六弦按法图与逐弦说明，支持吉他/尤克里里与常见替代和弦，练琴时不用再翻谱（免费）
