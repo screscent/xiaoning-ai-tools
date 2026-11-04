@@ -4828,13 +4828,31 @@
  },
  {
   "id": "sayvzk9xrs",
-  "name": "邮箱签名与名片信息生成器",
-  "desc": "一键生成纯文本与 HTML 邮箱签名，附脱敏预览",
+  "name": "邮箱签名与名片合集",
+  "desc": "4 个名片工具同页：邮箱签名、名片文案、社交简介、vCard",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sayvzk9xrs.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "sign",
+    "title": "邮箱签名"
+   },
+   {
+    "key": "card",
+    "title": "名片文案"
+   },
+   {
+    "key": "bio",
+    "title": "社交简介"
+   },
+   {
+    "key": "vcard",
+    "title": "名片文件"
+   }
+  ]
  },
  {
   "id": "k6bth4ftrk",
