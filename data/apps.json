@@ -3243,13 +3243,30 @@
   },
   {
     "id": "x89bsucakb",
-    "name": "发票税额与价税分离计算器",
-    "desc": "含税/不含税互转，按税率算税额并精确到分",
-    "tag": "免费",
+    "name": "发票与税额计算合集",
+    "desc": "4 个开票工具同页：价税分离、税额反算、多税率对照、开票信息",
     "price": 0,
     "cat": "实用工具",
     "url": "https://x89bsucakb.app.weavefox.cn",
-    "subcat": "计算换算"
+    "subcat": "计算换算",
+    "subapps": [
+      {
+        "key": "split",
+        "title": "工具A 价税分离计算"
+      },
+      {
+        "key": "tax",
+        "title": "工具B 税额反算"
+      },
+      {
+        "key": "rate",
+        "title": "工具C 多税率对照"
+      },
+      {
+        "key": "invoice",
+        "title": "工具D 开票信息生成"
+      }
+    ]
   },
   {
     "id": "bcykmjk6f9",
