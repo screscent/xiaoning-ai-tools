@@ -2187,12 +2187,30 @@
   },
   {
     "id": "frn8jngsra",
-    "name": "图片马赛克打码器",
-    "desc": "本地涂抹马赛克/模糊/黑块，保护隐私后下载",
+    "name": "图片打码与隐私遮挡合集",
+    "desc": "4 个打码工具同页：马赛克、模糊、黑块遮挡、裁切隐藏",
     "price": 0,
     "cat": "实用工具",
     "url": "https://frn8jngsra.app.weavefox.cn",
-    "subcat": "图片处理"
+    "subcat": "图片处理",
+    "subapps": [
+      {
+        "key": "mosaic",
+        "title": "工具A 马赛克"
+      },
+      {
+        "key": "blur",
+        "title": "工具B 模糊打码"
+      },
+      {
+        "key": "black",
+        "title": "工具C 黑块遮挡"
+      },
+      {
+        "key": "crop",
+        "title": "工具D 裁切隐藏"
+      }
+    ]
   },
   {
     "id": "puva8i3a4t",
