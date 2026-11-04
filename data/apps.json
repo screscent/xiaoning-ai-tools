@@ -1698,12 +1698,30 @@
  },
  {
   "id": "mknibarxwr",
-  "name": "图片加水印",
-  "desc": "本地给图片加水印，文字/字号/透明度/位置可调",
+  "name": "图片水印与批量处理合集",
+  "desc": "4 个水印工具同页：文字、图片、平铺、批量",
   "price": 0,
   "cat": "实用工具",
   "url": "https://mknibarxwr.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "text",
+    "title": "文字水印"
+   },
+   {
+    "key": "logo",
+    "title": "图片水印"
+   },
+   {
+    "key": "tile",
+    "title": "平铺水印"
+   },
+   {
+    "key": "batch",
+    "title": "批量水印"
+   }
+  ]
  },
  {
   "id": "tbqexcmk3t",
