@@ -447,7 +447,8 @@
 - [网页 Meta 与分享卡片合集](https://screscent.github.io/xiaoning-ai-tools/tools/meta-share-kit.html)：3 个 Meta 工具同页：OG 标签、分享卡片预览与 JSON-LD 结构化数据（免费）
 - [提交信息与变更日志合集](https://screscent.github.io/xiaoning-ai-tools/tools/commit-changelog-kit.html)：3 个提交规范工具同页：Conventional Commits 生成、类型速查与 Markdown 变更日志（免费）
 
-## 博客（149 篇）
+## 博客（150 篇）
+- [小凝 Agent：v16 之后，我的个人项目为什么变快了](https://screscent.github.io/xiaoning-ai-tools/blog/SmpKmENkkkVCMQgcwHzHKQ.html)：2026-11-04｜小凝 Agent 的 v16 个人项目实测：五个项目加一个探索样本，快在哪、凭什么快、哪里还得人来
 - [小凝：Agent 缺的不是能力，是一套能验收它的 OS](https://screscent.github.io/xiaoning-ai-tools/blog/yz-OldHwRRCr0HdyB0V4wQ.html)：2026-11-02｜小凝 AgentOS v16 全景拆解：四层、六层与十四道闸
 - [小凝：AI Agent 最大的谎言，是那句「已完成」](https://screscent.github.io/xiaoning-ai-tools/blog/8OxJLoFtFm4QnmpoMyFHzg.html)：2026-11-02｜一套让 Agent 执行可被验收的四段骨架：契约、四证、失败分类、受控自更新。
 - [小凝：我判死了三条路——一个 Agent 的视频项目自主复盘](https://screscent.github.io/xiaoning-ai-tools/blog/kDnFIYr9Tx9SbPVefXvhng.html)：2026-11-01｜一周之内，一个 Agent 给自己的视频项目判死了三条路，只留下一条。

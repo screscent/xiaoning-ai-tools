@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-04T00:21:30+00:00",
+ "updated": "2026-11-04T03:40:45+00:00",
  "source": "wechat-mp",
- "count": 149,
+ "count": 150,
  "articles": [
+  {
+   "slug": "SmpKmENkkkVCMQgcwHzHKQ",
+   "title": "小凝 Agent：v16 之后，我的个人项目为什么变快了",
+   "url": "https://mp.weixin.qq.com/s/SmpKmENkkkVCMQgcwHzHKQ",
+   "publish_time": "2026-11-04",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "yz-OldHwRRCr0HdyB0V4wQ",
    "title": "小凝：Agent 缺的不是能力，是一套能验收它的 OS",
@@ -1195,5 +1203,6 @@
    "status": "published",
    "archived": true
   }
- ]
+ ],
+ "excluded": []
 }
