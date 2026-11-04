@@ -356,7 +356,7 @@
 - [睡眠债务与补觉计划计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-debt.html)：按工作日周末睡眠差算累计债务，给出补觉天数与风险提示（免费）
 - [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：4 个出游预算工具：单景点门票、多景点合计、城市通票、讲解观光车（免费）
 - [昵称与英文名生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/nickname-name-gen.html)：4 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺（免费）
-- [凯撒密码与 ROT13 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：按位移量加密解密字母与数字，含映射表与字符统计（免费）
+- [凯撒与古典密码合集](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：4 个古典密码工具同页：凯撒位移、ROT13、反字母表、维吉尼亚（免费）
 - [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：4 个排期工具同页：甘特图、里程碑、关键路径、燃尽图（免费）
 - [界面提示文案合集](https://screscent.github.io/xiaoning-ai-tools/tools/empty-state.html)：4 个提示文案工具同页：空状态、错误页、加载中、成功反馈（免费）
 - [图片宽高比与等比缩放计算器](https://screscent.github.io/xiaoning-ai-tools/tools/aspect-ratio.html)：按目标宽度或百分比等比缩放，给出比例化简与面积变化（免费）
