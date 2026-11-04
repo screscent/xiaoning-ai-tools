@@ -3875,13 +3875,31 @@
   },
   {
     "id": "9paqwhr8kd",
-    "name": "JSONPath 提取器",
-    "desc": "用 $.a.b[0] 路径提取 JSON 字段，支持全部匹配",
+    "name": "JSON 路径查询合集",
+    "desc": "4 个路径工具同页：JSONPath、JSON Pointer、点号路径与路径生成，结果可复制",
     "tag": "免费",
     "price": 0,
     "cat": "实用工具",
     "url": "https://9paqwhr8kd.app.weavefox.cn",
-    "subcat": "编码转换"
+    "subcat": "编码转换",
+    "subapps": [
+      {
+        "key": "path",
+        "title": "JSONPath 提取"
+      },
+      {
+        "key": "pointer",
+        "title": "JSON Pointer"
+      },
+      {
+        "key": "dot",
+        "title": "点号路径"
+      },
+      {
+        "key": "build",
+        "title": "路径生成器"
+      }
+    ]
   },
   {
     "id": "2qeyylqqxb",

@@ -292,7 +292,7 @@
 - [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：4 个换汇工具同页：双向换算、多币种折算、手续费到账、现钞对比（免费）
 - [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算（免费）
 - [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：4 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算（免费）
-- [JSONPath 提取器](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：用 $.a.b[0] 路径提取 JSON 字段，支持全部匹配（免费）
+- [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：4 个路径工具同页：JSONPath、JSON Pointer、点号路径与路径生成，结果可复制（免费）
 - [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema.html)：4 个 Schema 工具同页：生成、校验、示例数据与字段说明，可复制（免费）
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
 - [数字转英文读法](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：整数转英文单词，支持英式 and 与序数词（免费）
