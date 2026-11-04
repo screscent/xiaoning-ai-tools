@@ -5336,13 +5336,30 @@
   },
   {
     "id": "kezy8adudk",
-    "name": "数字编号与缩进批量整理器",
-    "desc": "批量去掉原有编号并按指定格式与缩进重新编号",
-    "tag": "免费",
+    "name": "编号与缩进整理合集",
+    "desc": "4 个文本整理工具同页：重新编号、缩进规范、大纲层级、去编号空行",
     "price": 0,
     "cat": "实用工具",
     "url": "https://kezy8adudk.app.weavefox.cn",
-    "subcat": "文本处理"
+    "subcat": "文本处理",
+    "subapps": [
+      {
+        "key": "number",
+        "title": "工具A 重新编号"
+      },
+      {
+        "key": "indent",
+        "title": "工具B 缩进规范"
+      },
+      {
+        "key": "outline",
+        "title": "工具C 大纲层级"
+      },
+      {
+        "key": "clean",
+        "title": "工具D 去编号空行"
+      }
+    ]
   },
   {
     "id": "dzff47slwd",
