@@ -3885,13 +3885,31 @@
   },
   {
     "id": "2qeyylqqxb",
-    "name": "JSON Schema 生成器",
-    "desc": "从示例 JSON 推断 draft-07 Schema，含必填与数组项",
+    "name": "JSON Schema 与校验合集",
+    "desc": "4 个 Schema 工具同页：生成、校验、示例数据与字段说明，可复制",
     "tag": "免费",
     "price": 0,
     "cat": "实用工具",
     "url": "https://2qeyylqqxb.app.weavefox.cn",
-    "subcat": "编码转换"
+    "subcat": "编码转换",
+    "subapps": [
+      {
+        "key": "schema",
+        "title": "Schema 生成"
+      },
+      {
+        "key": "validate",
+        "title": "Schema 校验"
+      },
+      {
+        "key": "sample",
+        "title": "示例数据"
+      },
+      {
+        "key": "explain",
+        "title": "字段说明"
+      }
+    ]
   },
   {
     "id": "qhwvgdstfq",

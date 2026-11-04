@@ -2717,10 +2717,10 @@ APPS = {
         "写 Schema 比写业务还慢，手敲 properties 容易漏字段。",
         "后端开发者", "前端开发者", "接口设计",
         ['JSON 文本', '根标题', '推断必填', '格式化输出'],
-        "draft-07 Schema + 字段统计",
-        "{\"id\":1,\"tags\":[\"a\"],\"ok\":true} → object + integer/string/boolean + items + required。",
+        "draft-07 Schema + 校验问题清单 + 示例数据 + 字段路径表",
+        "{\"id\":1,\"tags\":[\"a\"],\"ok\":true} → object + integer/string/boolean + items + required；校验区块会列出缺失必填与类型不符项。",
         "能直接用于校验吗？",
-        "可作 draft-07 起点；业务约束（长度/枚举/格式）仍需按需补充。"),
+        "可作 draft-07 起点；业务约束（长度/枚举/格式）仍需按需补充，校验区块只覆盖结构、类型与必填。"),
 
     "qhwvgdstfq": ("color-mix",
         "想把两个颜色按比例调一下，再叠到背景上看实际效果，靠猜不准。",
