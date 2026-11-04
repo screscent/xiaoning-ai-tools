@@ -7142,7 +7142,7 @@
   {
     "id": "nyjwtlpkdd",
     "name": "咖啡与茶饮冲煮速查合集",
-    "desc": "3 个饮品工具同页：手冲与意式参数、茶叶冲泡参数、粉水比与咖啡因估算",
+    "desc": "4 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具",
     "price": 0,
     "cat": "实用工具",
     "url": "https://nyjwtlpkdd.app.weavefox.cn",
@@ -7159,6 +7159,10 @@
       {
         "key": "ratio",
         "title": "工具C 粉水比"
+      },
+      {
+        "key": "storage",
+        "title": "工具D 豆子与器具"
       }
     ]
   },
