@@ -4778,13 +4778,31 @@
  },
  {
   "id": "puhfd93a4t",
-  "name": "步数与活动量目标计算器",
-  "desc": "按身高体重估算步幅里程、额外步数与消耗热量",
+  "name": "步数与活动目标合集",
+  "desc": "4 个步数工具同页：步数目标、步幅里程、热量消耗、周计划",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://puhfd93a4t.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "steps",
+    "title": "步数目标"
+   },
+   {
+    "key": "stride",
+    "title": "步幅里程"
+   },
+   {
+    "key": "burn",
+    "title": "热量消耗"
+   },
+   {
+    "key": "plan",
+    "title": "周计划"
+   }
+  ]
  },
  {
   "id": "sayevp9xrs",

@@ -341,7 +341,7 @@
 - [心率区间与运动强度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：按年龄与静息心率算五档心率区间，给出燃脂推荐范围（免费）
 - [食物热量与运动消耗换算器](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：按 MET 与体重换算消耗某份热量需要的运动分钟数（免费）
 - [签证材料清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-checklist.html)：4 个签证材料清单：旅游、商务、学生、探亲访友（免费）
-- [步数与活动量目标计算器](https://screscent.github.io/xiaoning-ai-tools/tools/step-goal.html)：按身高体重估算步幅里程、额外步数与消耗热量（免费）
+- [步数与活动目标合集](https://screscent.github.io/xiaoning-ai-tools/tools/step-goal.html)：4 个步数工具同页：步数目标、步幅里程、热量消耗、周计划（免费）
 - [字体搭配与排版比例生成器](https://screscent.github.io/xiaoning-ai-tools/tools/type-scale.html)：按基准字号与字阶比例生成六级字号行高与字体栈（免费）
 - [色盲友好配色检查器](https://screscent.github.io/xiaoning-ai-tools/tools/cvd-checker.html)：模拟四类色觉障碍并重算 WCAG 对比度是否达标（免费）
 - [实际时薪与通勤成本计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hourly-wage.html)：扣除通勤时间与支出，算出真实时薪与年等效小时（免费）
