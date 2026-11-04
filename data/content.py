@@ -2623,6 +2623,15 @@ APPS = {
         "生成的文件能直接用吗？",
         "能。文字与 Emoji 图标浏览器内生成，SVG 可直接作 favicon，复制引用代码进 <head>，Manifest 配置按说明放置即可。"),
 
+    "cj4ckze3pc": ("meta-share-kit",
+        "网页分享出去没有标题和缩略图，OG 标签一条条手写太麻烦。",
+        "独立开发者", "前端开发者", "内容运营",
+        ['标题', '描述', '图片 URL', '站点名', '结构化数据类型'],
+        "OG/Twitter 标签 + 分享卡片预览 + Article/Product JSON-LD + 可复制代码",
+        "标题「小凝工具集」、描述 20 字、图片 https://example.com/cover.png、站点名 xiaoning → 输出 og:title/og:description/og:image 与 twitter:card 标签组，并给出 JSON-LD 片段。",
+        "生成后怎么用？",
+        "OG 标签复制进页面 <head>；JSON-LD 放进 <script type=\"application/ld+json\">；分享卡片为预览示意，实际展示以平台抓取为准。"),
+
     "tbnh7qmk3t": ("coupon-stack",
         "满减档位一堆，购物车里凑来凑去还是算不清最划算的组合。",
         "网购用户", "运营与市场", "拼单代购",

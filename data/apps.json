@@ -7052,5 +7052,29 @@
         "title": "工具C 纸张与相纸选择"
       }
     ]
+  },
+  {
+    "id": "cj4ckze3pc",
+    "name": "网页 Meta 与分享卡片合集",
+    "desc": "3 个 Meta 工具同页：OG 标签、分享卡片预览与 JSON-LD 结构化数据",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://cj4ckze3pc.app.weavefox.cn",
+    "subcat": "编码转换",
+    "subapps": [
+      {
+        "key": "og",
+        "title": "OG 标签"
+      },
+      {
+        "key": "card",
+        "title": "分享卡片"
+      },
+      {
+        "key": "jsonld",
+        "title": "JSON-LD"
+      }
+    ]
   }
 ]
