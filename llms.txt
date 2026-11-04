@@ -172,7 +172,7 @@
 - [常用单位换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-converter.html)：4 个单位工具同页：长度、重量、面积体积、温度压力（免费）
 - [哈希校验工具](https://screscent.github.io/xiaoning-ai-tools/tools/hash-checker.html)：本地计算 SHA-256/384/512，文本与文件校验对比（免费）
 - [番茄专注与计时合集](https://screscent.github.io/xiaoning-ai-tools/tools/pomodoro-timer.html)：4 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划（免费）
-- [科学计算器](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：四则与科学函数计算，角度模式、记忆键与历史（免费）
+- [科学计算与函数合集](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：4 个计算工具同页：科学计算、函数常数、统计概率、计算历史（免费）
 - [Markdown 写作合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：4 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架（免费）
 - [人民币大写金额转换器](https://screscent.github.io/xiaoning-ai-tools/tools/rmb-uppercase.html)：数字金额转中文大写，支持角分与银行汇款式（免费）
 - [图片水印与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：4 个水印工具同页：文字、图片、平铺、批量（免费）
