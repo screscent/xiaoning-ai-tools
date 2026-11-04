@@ -344,7 +344,7 @@
 - [步数与活动目标合集](https://screscent.github.io/xiaoning-ai-tools/tools/step-goal.html)：4 个步数工具同页：步数目标、步幅里程、热量消耗、周计划（免费）
 - [字体搭配与排版比例生成器](https://screscent.github.io/xiaoning-ai-tools/tools/type-scale.html)：按基准字号与字阶比例生成六级字号行高与字体栈（免费）
 - [色盲友好配色检查器](https://screscent.github.io/xiaoning-ai-tools/tools/cvd-checker.html)：模拟四类色觉障碍并重算 WCAG 对比度是否达标（免费）
-- [实际时薪与通勤成本计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hourly-wage.html)：扣除通勤时间与支出，算出真实时薪与年等效小时（免费）
+- [时薪与通勤成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/hourly-wage.html)：4 个时薪工具同页：实际时薪、通勤成本、涨薪换算、城市对比（免费）
 - [通胀与购买力合集](https://screscent.github.io/xiaoning-ai-tools/tools/inflation-power.html)：4 个通胀工具同页：购买力、存款收益、工资涨幅、目标金额（免费）
 - [邮箱签名与名片合集](https://screscent.github.io/xiaoning-ai-tools/tools/email-signature.html)：4 个名片工具同页：邮箱签名、名片文案、社交简介、vCard（免费）
 - [账单日与免息期合集](https://screscent.github.io/xiaoning-ai-tools/tools/card-billing.html)：4 个信用卡工具：账单日规划、免息期计算、还款日提醒、分期成本（免费）
