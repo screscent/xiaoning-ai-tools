@@ -403,7 +403,7 @@
 - [Git 场景命令合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：4 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并（免费）
 - [Docker 命令与实战速查](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：4 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份（免费）
 - [Nginx 配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/nginx-snippet-cheatsheet.html)：4 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域（免费）
-- [吉他尤克里里和弦指法速查](https://screscent.github.io/xiaoning-ai-tools/tools/guitar-chord-fingering.html)：输入和弦名即出六弦按法图与逐弦说明，支持吉他/尤克里里与常见替代和弦，练琴时不用再翻谱（免费）
+- [吉他和弦与调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/guitar-chord-fingering.html)：4 个吉他工具同页：和弦指法、调弦、变调夹、常用进行（免费）
 - [HTTP 接口调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-debug.html)：6 个接口工具同页：状态码速查、Mock JSON 生成、UA 解析、缓存头、CORS 与安全头、重试与超时，调接口本地自查（免费）
 - [Linux 运维速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/linux-ops.html)：6 个工具：命令、权限、端口、磁盘、进程、用户与 sudo（免费）
 - [服务器排障速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/server-ops.html)：6 个工具：SSH、systemd、日志、Nginx 5xx、DNS、CPU 内存（免费）
