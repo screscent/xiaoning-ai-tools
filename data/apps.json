@@ -7192,7 +7192,7 @@
  {
   "id": "jadllqkp5e",
   "name": "鞋服尺码换算合集",
-  "desc": "3 个尺码工具同页：鞋码换算、服装尺码、儿童尺码",
+  "desc": "4 个尺码工具同页：鞋码换算、服装尺码、儿童尺码、尺码对照表",
   "price": 0,
   "cat": "实用工具",
   "url": "https://jadllqkp5e.app.weavefox.cn",
@@ -7209,6 +7209,10 @@
    {
     "key": "kids",
     "title": "工具C 儿童鞋服尺码"
+   },
+   {
+    "key": "chart",
+    "title": "工具D 尺码表对照"
    }
   ]
  },

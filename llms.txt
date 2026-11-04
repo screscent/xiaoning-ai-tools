@@ -435,7 +435,7 @@
 - [绿植养护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/plant-care-quickref.html)：3 个绿植工具同页：浇水频率与光照、配土与换盆、黄叶烂根病虫害排查（免费）
 - [眼镜与视力保护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/eyewear-vision-care.html)：3 个视力工具同页：镜片折射率与镀膜、镜架尺寸与脸型、用眼习惯与验光周期（免费）
 - [居家除螨与过敏防护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/dust-mite-allergy.html)：3 个居家工具同页：除螨频率、过敏原排查、湿度与通风（免费）
-- [鞋服尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/shoe-clothing-size.html)：3 个尺码工具同页：鞋码换算、服装尺码、儿童尺码（免费）
+- [鞋服尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/shoe-clothing-size.html)：4 个尺码工具同页：鞋码换算、服装尺码、儿童尺码、尺码对照表（免费）
 - [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：3 个衣物工具同页：洗涤标签、面料护理、污渍处理（免费）
 - [验房与收房检查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-inspection.html)：3 个收房工具同页：验房清单、面积核对、整改跟踪（免费）
 - [自行车骑行与维护合集](https://screscent.github.io/xiaoning-ai-tools/tools/cycling-care.html)：3 个骑行工具同页：配速里程、保养周期、装备清单（免费）
