@@ -7100,5 +7100,29 @@
         "title": "变更日志"
       }
     ]
+  },
+  {
+    "id": "uiadeexjku",
+    "name": "JSON 转多语言模型合集",
+    "desc": "3 个代码生成工具同页：JSON 转 Go struct、Java POJO 与 Python dataclass",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://uiadeexjku.app.weavefox.cn",
+    "subcat": "编码转换",
+    "subapps": [
+      {
+        "key": "go",
+        "title": "Go struct"
+      },
+      {
+        "key": "java",
+        "title": "Java POJO"
+      },
+      {
+        "key": "python",
+        "title": "Python 模型"
+      }
+    ]
   }
 ]

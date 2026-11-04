@@ -2641,6 +2641,15 @@ APPS = {
         "破坏性变更怎么写？",
         "类型后加 !（如 feat!）并在脚注写 BREAKING CHANGE: 说明；类型速查区块有示例。"),
 
+    "uiadeexjku": ("json-to-models-kit",
+        "接口 JSON 拿到手，还要手敲 Go/Java/Python 的模型类，字段一多就漏。",
+        "后端开发者", "前端开发者", "跨语言迁移",
+        ['示例 JSON', '根类型名', '生成语言', '可选开关（指针/setter/TypedDict）'],
+        "Go struct + Java POJO + Python dataclass/TypedDict，均可复制",
+        "{\"id\":1,\"name\":\"A\",\"tags\":[\"x\"]} → Go struct 带 json tag、Java 字段与 getter、Python dataclass 三种代码。",
+        "嵌套对象与数组怎么处理？",
+        "按字段递归生成嵌套类型；数组取首元素推断元素类型，空数组回退为 []interface{} / List<Object> / list。"),
+
     "tbnh7qmk3t": ("coupon-stack",
         "满减档位一堆，购物车里凑来凑去还是算不清最划算的组合。",
         "网购用户", "运营与市场", "拼单代购",
