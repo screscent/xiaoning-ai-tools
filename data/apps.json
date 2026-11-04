@@ -1626,12 +1626,30 @@
  },
  {
   "id": "frnustgsra",
-  "name": "番茄钟与倒计时",
-  "desc": "专注/休息轮次计时，进度环与今日完成统计",
+  "name": "番茄专注与计时合集",
+  "desc": "4 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frnustgsra.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {
+    "key": "pomodoro",
+    "title": "番茄钟"
+   },
+   {
+    "key": "breaks",
+    "title": "休息计时"
+   },
+   {
+    "key": "stats",
+    "title": "专注统计"
+   },
+   {
+    "key": "plan",
+    "title": "番茄计划"
+   }
+  ]
  },
  {
   "id": "bnudn6nsmb",
