@@ -7124,5 +7124,29 @@
         "title": "Python 模型"
       }
     ]
+  },
+  {
+    "id": "uiag6axjku",
+    "name": "编码检测与乱码修复合集",
+    "desc": "3 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://uiag6axjku.app.weavefox.cn",
+    "subcat": "编码转换",
+    "subapps": [
+      {
+        "key": "detect",
+        "title": "编码检测"
+      },
+      {
+        "key": "fix",
+        "title": "乱码修复"
+      },
+      {
+        "key": "convert",
+        "title": "编码转换"
+      }
+    ]
   }
 ]
