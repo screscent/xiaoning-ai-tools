@@ -453,7 +453,7 @@
 - [乐理与音准速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/music-theory-kit.html)：3 个乐理工具同页：音阶与调号、音程与频率换算、和弦构成与转位（免费）
 - [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：3 个钓鱼工具同页：线组与浮漂搭配、鱼种与饵料速查、出钓装备清单（免费）
 - [台球计分与角度合集](https://screscent.github.io/xiaoning-ai-tools/tools/billiards-kit.html)：3 个台球工具同页：计分与犯规提示、击球角度与反弹、球杆与皮头选配（免费）
-- [保龄球计分与换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bowling-kit.html)：3 个保龄球工具同页：十局计分、让分与净分、球重球速换算（免费）
+- [保龄球计分与换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bowling-kit.html)：4 个保龄球工具同页：十局计分、让分与净分、球重球速换算、球道与瓶位（免费）
 
 ## 博客（150 篇）
 - [小凝 Agent：v16 之后，我的个人项目为什么变快了](https://screscent.github.io/xiaoning-ai-tools/blog/SmpKmENkkkVCMQgcwHzHKQ.html)：2026-11-04｜小凝 Agent 的 v16 个人项目实测：五个项目加一个探索样本，快在哪、凭什么快、哪里还得人来
