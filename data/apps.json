@@ -1104,12 +1104,30 @@
  },
  {
   "id": "3xh2yr5af3",
-  "name": "房贷提前还款计算器",
-  "desc": "等额本息对比 + 提前还款两方案，免费",
+  "name": "房贷与购房成本合集",
+  "desc": "4 个房贷工具同页：提前还款、利率月供、购房能力、二手房税费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://3xh2yr5af3.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "prepay",
+    "title": "提前还款测算"
+   },
+   {
+    "key": "rate",
+    "title": "利率调整月供"
+   },
+   {
+    "key": "afford",
+    "title": "购房能力与首付"
+   },
+   {
+    "key": "tax",
+    "title": "二手房交易税费"
+   }
+  ]
  },
  {
   "id": "g42fhctuhw",
