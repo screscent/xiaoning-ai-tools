@@ -7076,5 +7076,29 @@
         "title": "JSON-LD"
       }
     ]
+  },
+  {
+    "id": "wncjdkj8gw",
+    "name": "提交信息与变更日志合集",
+    "desc": "3 个提交规范工具同页：Conventional Commits 生成、类型速查与 Markdown 变更日志",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://wncjdkj8gw.app.weavefox.cn",
+    "subcat": "效率生活",
+    "subapps": [
+      {
+        "key": "commit",
+        "title": "提交信息"
+      },
+      {
+        "key": "types",
+        "title": "类型速查"
+      },
+      {
+        "key": "changelog",
+        "title": "变更日志"
+      }
+    ]
   }
 ]
