@@ -7244,5 +7244,29 @@
         "title": "装备清单"
       }
     ]
+  },
+  {
+    "id": "puscdc3a4t",
+    "name": "台球计分与角度合集",
+    "desc": "3 个台球工具同页：计分与犯规提示、击球角度与反弹、球杆与皮头选配",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://puscdc3a4t.app.weavefox.cn",
+    "subcat": "生活健康",
+    "subapps": [
+      {
+        "key": "score",
+        "title": "计分与犯规"
+      },
+      {
+        "key": "angle",
+        "title": "击球角度"
+      },
+      {
+        "key": "gear",
+        "title": "球杆选配"
+      }
+    ]
   }
 ]
