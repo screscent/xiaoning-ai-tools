@@ -2052,12 +2052,30 @@
  },
  {
   "id": "qse3gvnhme",
-  "name": "图片前后对比器",
-  "desc": "两张图滑块/并排/叠影对比，导出对比图",
+  "name": "图片对比与差异合集",
+  "desc": "4 个对比工具同页：滑块、并排、叠影、差异高亮",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qse3gvnhme.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "slider",
+    "title": "滑块对比"
+   },
+   {
+    "key": "side",
+    "title": "并排对比"
+   },
+   {
+    "key": "overlay",
+    "title": "叠影对比"
+   },
+   {
+    "key": "diff",
+    "title": "差异高亮"
+   }
+  ]
  },
  {
   "id": "npxak92aq6",
