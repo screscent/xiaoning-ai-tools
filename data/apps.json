@@ -7172,5 +7172,29 @@
         "title": "训练计划"
       }
     ]
+  },
+  {
+    "id": "5crc75t6g5",
+    "name": "网球计分与场地换算合集",
+    "desc": "3 个网球工具同页：计分推演、场地与球速换算、球拍与穿线建议",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://5crc75t6g5.app.weavefox.cn",
+    "subcat": "生活健康",
+    "subapps": [
+      {
+        "key": "score",
+        "title": "计分推演"
+      },
+      {
+        "key": "court",
+        "title": "场地换算"
+      },
+      {
+        "key": "gear",
+        "title": "球拍与穿线"
+      }
+    ]
   }
 ]
