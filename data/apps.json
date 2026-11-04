@@ -3885,11 +3885,11 @@
     "subapps": [
       {
         "key": "path",
-        "title": "JSONPath 提取"
+        "title": "路径提取"
       },
       {
         "key": "pointer",
-        "title": "JSON Pointer"
+        "title": "指针取值"
       },
       {
         "key": "dot",
