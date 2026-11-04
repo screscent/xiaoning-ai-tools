@@ -3722,11 +3722,11 @@ APPS = {
         "不会删运行中容器依赖的镜像，但会删未使用镜像、停止容器与悬空卷；执行前先 docker ps -a 确认，危险命令已标注。"),
 
     "sfb4eqy97s": ("nginx-snippet-cheatsheet",
-        "Nginx 配置片段记不住，反向代理少写两个 header 就丢 Cookie。",
+        "Nginx 配置片段记不住，反向代理少写两个 header 就丢 Cookie，HTTPS、缓存、限流每次都要翻半天文档。",
         "研发", "运维", "独立开发者",
-        ['场景关键词', '配置类型'],
-        "≥8 个常用场景的可复制配置片段 + 逐行作用说明 + 常见坑提示",
-        "反向代理 → proxy_pass http://127.0.0.1:8080; 并附 proxy_set_header Host / Cookie 与超时三项。",
+        ['场景关键词', '配置类型', '域名与证书', '限流阈值'],
+        "4 个 Nginx 工具同页：反向代理 + HTTPS 与证书 + 缓存与压缩 + 限流与跨域（可复制片段 + 逐行说明 + 常见坑）",
+        "反向代理 → proxy_pass http://127.0.0.1:8080; 并附 proxy_set_header Host / Cookie 与超时三项；HTTPS 给出 80→443 跳转与证书链配置。",
         "改完怎么验证？",
         "先 nginx -t 校验语法，再 reload；改配置前备份 conf，回滚成本最低。"),
 

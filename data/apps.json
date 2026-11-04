@@ -5971,12 +5971,30 @@
  },
  {
   "id": "sfb4eqy97s",
-  "name": "Nginx 配置片段速查",
-  "desc": "反向代理 / HTTPS / gzip / 缓存 / 限流 / 跨域常用配置片段，直接复制并附常见坑提示",
+  "name": "Nginx 配置合集",
+  "desc": "4 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sfb4eqy97s.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "proxy",
+    "title": "反向代理"
+   },
+   {
+    "key": "https",
+    "title": "HTTPS 与证书"
+   },
+   {
+    "key": "cache",
+    "title": "缓存与压缩"
+   },
+   {
+    "key": "limit",
+    "title": "限流与跨域"
+   }
+  ]
  },
  {
   "id": "mksvlrrxwr",
