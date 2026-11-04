@@ -4075,13 +4075,31 @@
  },
  {
   "id": "ztbavdhvkt",
-  "name": "时长加减与工时计算器",
-  "desc": "多行时长累加求合计与分钟数，按 8 小时折算并算金额",
+  "name": "工时与时长计算合集",
+  "desc": "4 个工时工具同页：时长累加、起止差、单位换算、工时统计",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ztbavdhvkt.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "sum",
+    "title": "时长累加"
+   },
+   {
+    "key": "span",
+    "title": "起止时间差"
+   },
+   {
+    "key": "convert",
+    "title": "单位换算"
+   },
+   {
+    "key": "sheet",
+    "title": "工时表统计"
+   }
+  ]
  },
  {
   "id": "qsiub9nhme",
