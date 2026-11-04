@@ -384,7 +384,7 @@
 - [引用格式与文献速查](https://screscent.github.io/xiaoning-ai-tools/tools/ref-citation.html)：4 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX 与文献管理要点（免费）
 - [嘌呤与尿酸饮食速查器](https://screscent.github.io/xiaoning-ai-tools/tools/purine-uric.html)：按人群算每日嘌呤上限，四档食物清单 + 替换建议（免费）
 - [食物升糖指数与血糖负荷计算器](https://screscent.github.io/xiaoning-ai-tools/tools/glycemic-load.html)：算 GI/GL 与分级，给同类替换与三餐搭配（免费）
-- [家庭应急物品清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/family-emergency-kit.html)：按人数与场景生成应急清单，含保质期、预算与采购优先级（免费）
+- [家庭应急与防灾合集](https://screscent.github.io/xiaoning-ai-tools/tools/family-emergency-kit.html)：4 个应急工具同页：物品清单、应急预案、急救包、停电停水（免费）
 - [海淘税费与禁限速查](https://screscent.github.io/xiaoning-ai-tools/tools/parcel-tax-calc.html)：4 个海淘工具同页：行邮税与到手价、国际运费与包裹限制、禁限物品与申报、退换与售后税费（免费）
 - [合同签署前必查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/contract-precheck.html)：按合同类型给主体、核心条款、风险条款与红线提示（免费）
 - [二手交易交接合集](https://screscent.github.io/xiaoning-ai-tools/tools/secondhand-handover.html)：4 个二手工具同页：交接单、验收清单、纠纷话术、面交邮寄流程（免费）

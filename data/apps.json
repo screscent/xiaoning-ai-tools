@@ -5465,13 +5465,31 @@
  },
  {
   "id": "ekgaqhvhte",
-  "name": "家庭应急物品清单生成器",
-  "desc": "按人数与场景生成应急清单，含保质期、预算与采购优先级",
+  "name": "家庭应急与防灾合集",
+  "desc": "4 个应急工具同页：物品清单、应急预案、急救包、停电停水",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ekgaqhvhte.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "kit",
+    "title": "应急物品清单"
+   },
+   {
+    "key": "plan",
+    "title": "应急预案"
+   },
+   {
+    "key": "firstaid",
+    "title": "急救包"
+   },
+   {
+    "key": "outage",
+    "title": "停电停水"
+   }
+  ]
  },
  {
   "id": "npxsuh2aq6",
