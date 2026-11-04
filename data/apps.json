@@ -4836,13 +4836,31 @@
  },
  {
   "id": "puhymr3a4t",
-  "name": "通胀购买力换算计算器",
-  "desc": "按通胀率推算未来等值金额、购买力缩水与实际收益率",
+  "name": "通胀与购买力合集",
+  "desc": "4 个通胀工具同页：购买力、存款收益、工资涨幅、目标金额",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://puhymr3a4t.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "power",
+    "title": "购买力换算"
+   },
+   {
+    "key": "save",
+    "title": "存款实际收益"
+   },
+   {
+    "key": "salary",
+    "title": "工资实际涨幅"
+   },
+   {
+    "key": "goal",
+    "title": "目标金额调整"
+   }
+  ]
  },
  {
   "id": "sayvzk9xrs",
