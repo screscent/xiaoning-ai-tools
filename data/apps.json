@@ -1590,12 +1590,30 @@
  },
  {
   "id": "keyw5ddudk",
-  "name": "单位换算器",
-  "desc": "长度/重量/面积/体积/温度/数据六类单位互转",
+  "name": "常用单位换算合集",
+  "desc": "4 个单位工具同页：长度、重量、面积体积、温度压力",
   "price": 0,
   "cat": "实用工具",
   "url": "https://keyw5ddudk.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "length",
+    "title": "长度"
+   },
+   {
+    "key": "weight",
+    "title": "重量"
+   },
+   {
+    "key": "area",
+    "title": "面积体积"
+   },
+   {
+    "key": "temp",
+    "title": "温度压力"
+   }
+  ]
  },
  {
   "id": "r3akzzzjyr",

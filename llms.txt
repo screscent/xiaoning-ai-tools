@@ -169,7 +169,7 @@
 - [密码与账号安全合集](https://screscent.github.io/xiaoning-ai-tools/tools/password-generator.html)：6 个安全工具同页：密码生成、强度检测、PIN 码、口令短语、两步验证与恢复码、泄露自查与应急（免费）
 - [随机分组与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-group-picker.html)：4 个分组工具：随机分组、代表抽取、顺序排位、结果导出（免费）
 - [健康指标计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bmi-calorie-calculator.html)：6 个健康计算器同页：BMI 与理想体重、基础代谢与每日热量、体脂率估算、每日饮水建议、血压与心率解读、睡眠时长评估（免费）
-- [单位换算器](https://screscent.github.io/xiaoning-ai-tools/tools/unit-converter.html)：长度/重量/面积/体积/温度/数据六类单位互转（免费）
+- [常用单位换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-converter.html)：4 个单位工具同页：长度、重量、面积体积、温度压力（免费）
 - [哈希校验工具](https://screscent.github.io/xiaoning-ai-tools/tools/hash-checker.html)：本地计算 SHA-256/384/512，文本与文件校验对比（免费）
 - [番茄钟与倒计时](https://screscent.github.io/xiaoning-ai-tools/tools/pomodoro-timer.html)：专注/休息轮次计时，进度环与今日完成统计（免费）
 - [科学计算器](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：四则与科学函数计算，角度模式、记忆键与历史（免费）
