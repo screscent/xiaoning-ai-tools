@@ -7220,5 +7220,29 @@
         "title": "和弦构成"
       }
     ]
+  },
+  {
+    "id": "4gfi47btnf",
+    "name": "钓鱼线组与装备合集",
+    "desc": "3 个钓鱼工具同页：线组与浮漂搭配、鱼种与饵料速查、出钓装备清单",
+    "tag": "免费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://4gfi47btnf.app.weavefox.cn",
+    "subcat": "生活健康",
+    "subapps": [
+      {
+        "key": "rig",
+        "title": "线组搭配"
+      },
+      {
+        "key": "bait",
+        "title": "饵料速查"
+      },
+      {
+        "key": "gear",
+        "title": "装备清单"
+      }
+    ]
   }
 ]
