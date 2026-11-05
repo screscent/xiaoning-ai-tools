@@ -431,7 +431,7 @@
 - [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：3 个户外工具同页：营地选址要点、户外风险现场处置、饮食饮水补给估算（免费）
 - [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：4 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具（免费）
 - [口腔与牙齿护理速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/oral-dental-care.html)：3 个口腔工具同页：刷牙方法与时长、牙线牙间清洁、症状护理与就诊信号（免费）
-- [居家烘焙换算速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-baking-conversion.html)：3 个烘焙工具同页：粉油糖杯克换算与替代、模具尺寸换算、烤箱温度与时间（免费）
+- [居家烘焙换算速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-baking-conversion.html)：4 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算（免费）
 - [绿植养护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/plant-care-quickref.html)：4 个绿植工具同页：浇水光照、配土换盆、病虫排查、施肥季节（免费）
 - [眼镜与视力保护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/eyewear-vision-care.html)：3 个视力工具同页：镜片折射率与镀膜、镜架尺寸与脸型、用眼习惯与验光周期（免费）
 - [居家除螨与过敏防护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/dust-mite-allergy.html)：3 个居家工具同页：除螨频率、过敏原排查、湿度与通风（免费）
