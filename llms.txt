@@ -456,10 +456,10 @@
 - [保龄球计分与换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bowling-kit.html)：4 个保龄球工具同页：十局计分、让分与净分、球重球速换算、球道与瓶位（免费）
 - [纸张尺寸与印刷出血合集](https://screscent.github.io/xiaoning-ai-tools/tools/paper-print-bleed.html)：3 个印刷设计工具同页：纸张尺寸、出血与安全边距、分辨率换算（免费）
 - [元素周期表与化学计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/element-chemistry.html)：3 个化学工具同页：元素速查、摩尔质量与物质的量、溶液浓度换算（免费）
-- [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：3 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼（免费）
-- [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：3 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重（免费）
+- [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：4 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼、灯位与回路规划（免费）
+- [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：4 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期（免费）
 - [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：4 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比（免费）
-- [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：3 个水族工具同页：鱼缸容积与水量、换水比例、加热棒功率与电费（免费）
+- [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：4 个水族工具同页：鱼缸容积与水量、换水比例、加热棒功率与电费、水草与照明时长（免费）
 
 ## 博客（150 篇）
 - [小凝 Agent：v16 之后，我的个人项目为什么变快了](https://screscent.github.io/xiaoning-ai-tools/blog/SmpKmENkkkVCMQgcwHzHKQ.html)：2026-11-04｜小凝 Agent 的 v16 个人项目实测：五个项目加一个探索样本，快在哪、凭什么快、哪里还得人来
