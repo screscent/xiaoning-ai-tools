@@ -7847,5 +7847,28 @@
         "title": "工具C 胎压与载重"
       }
     ]
+  },
+  {
+    "id": "vfd6jblsqf",
+    "name": "手机套餐与流量成本合集",
+    "desc": "3 个通信工具同页：套餐成本对比、流量与话费估算、换套餐决策",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://vfd6jblsqf.app.weavefox.cn",
+    "subcat": "效率生活",
+    "subapps": [
+      {
+        "key": "plan",
+        "title": "工具A 套餐成本对比"
+      },
+      {
+        "key": "usage",
+        "title": "工具B 流量与话费估算"
+      },
+      {
+        "key": "switch",
+        "title": "工具C 换套餐决策"
+      }
+    ]
   }
 ]
