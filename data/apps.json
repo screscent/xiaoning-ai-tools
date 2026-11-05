@@ -7793,5 +7793,28 @@
         "title": "工具C 溶液浓度换算"
       }
     ]
+  },
+  {
+    "id": "hmqg97fxk9",
+    "name": "色温与照明计算合集",
+    "desc": "3 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://hmqg97fxk9.app.weavefox.cn",
+    "subcat": "设计绘图",
+    "subapps": [
+      {
+        "key": "temp",
+        "title": "工具A 色温与灯泡"
+      },
+      {
+        "key": "lux",
+        "title": "工具B 照度与灯位"
+      },
+      {
+        "key": "cri",
+        "title": "工具C 显色与护眼"
+      }
+    ]
   }
 ]
