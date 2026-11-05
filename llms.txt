@@ -430,13 +430,13 @@
 - [开源素材与授权速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/open-assets-license.html)：4 个素材工具同页：字体授权、图标来源、音效授权、许可协议对照（免费）
 - [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：3 个户外工具同页：营地选址要点、户外风险现场处置、饮食饮水补给估算（免费）
 - [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：4 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具（免费）
-- [口腔与牙齿护理速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/oral-dental-care.html)：3 个口腔工具同页：刷牙方案、牙线使用、就诊信号（免费）
+- [口腔与牙齿护理速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/oral-dental-care.html)：4 个口腔工具同页：刷牙方案、牙线使用、就诊信号、牙齿美白与敏感护理（免费）
 - [居家烘焙换算速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-baking-conversion.html)：4 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算（免费）
 - [绿植养护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/plant-care-quickref.html)：4 个绿植工具同页：浇水光照、配土换盆、病虫排查、施肥季节（免费）
 - [眼镜与视力保护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/eyewear-vision-care.html)：4 个视力工具同页：镜片折射率与镀膜、镜架尺寸与脸型、用眼与验光、屏幕用眼与近视防控（免费）
 - [居家除螨与过敏防护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/dust-mite-allergy.html)：3 个居家工具同页：除螨频率、过敏原排查、湿度与通风（免费）
 - [鞋服尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/shoe-clothing-size.html)：4 个尺码工具同页：鞋码换算、服装尺码、儿童尺码、尺码对照表（免费）
-- [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：3 个衣物工具同页：洗护标签、面料特性、污渍处理（免费）
+- [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：4 个衣物工具同页：洗护标签、面料特性、污渍处理、熨烫温度与蒸汽档位（免费）
 - [验房与收房检查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-inspection.html)：3 个收房工具同页：验房清单、面积核对、整改跟踪（免费）
 - [自行车骑行与维护合集](https://screscent.github.io/xiaoning-ai-tools/tools/cycling-care.html)：3 个骑行工具同页：配速里程、保养周期、装备清单（免费）
 - [家居软装尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/soft-furnishing-size.html)：4 个软装工具同页：窗帘尺寸、地毯选配、挂画高度、沙发与茶几尺寸（免费）
@@ -454,7 +454,7 @@
 - [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：3 个钓鱼工具同页：线组与浮漂搭配、鱼种与饵料速查、出钓装备清单（免费）
 - [台球计分与角度合集](https://screscent.github.io/xiaoning-ai-tools/tools/billiards-kit.html)：3 个台球工具同页：计分与犯规提示、击球角度与反弹、球杆与皮头选配（免费）
 - [保龄球计分与换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bowling-kit.html)：4 个保龄球工具同页：十局计分、让分与净分、球重球速换算、球道与瓶位（免费）
-- [纸张尺寸与印刷出血合集](https://screscent.github.io/xiaoning-ai-tools/tools/paper-print-bleed.html)：3 个印刷设计工具同页：纸张尺寸、出血与安全边距、分辨率换算（免费）
+- [纸张尺寸与印刷出血合集](https://screscent.github.io/xiaoning-ai-tools/tools/paper-print-bleed.html)：4 个印刷工具同页：纸张尺寸、出血与安全边距、分辨率换算、折页与拼版规划（免费）
 - [元素周期表与化学计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/element-chemistry.html)：3 个化学工具同页：元素速查、摩尔质量与物质的量、溶液浓度换算（免费）
 - [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：4 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼、灯位与回路规划（免费）
 - [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：4 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期（免费）
