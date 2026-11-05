@@ -7875,7 +7875,7 @@
  {
   "id": "vfd6jblsqf",
   "name": "手机套餐与流量成本合集",
-  "desc": "3 个通信工具同页：套餐成本对比、流量与话费估算、换套餐决策",
+  "desc": "4 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比",
   "price": 0,
   "cat": "实用工具",
   "url": "https://vfd6jblsqf.app.weavefox.cn",
@@ -7892,6 +7892,10 @@
    {
     "key": "switch",
     "title": "工具C 换套餐决策"
+   },
+   {
+    "key": "broadband",
+    "title": "工具D 宽带与流量卡对比"
    }
   ]
  },

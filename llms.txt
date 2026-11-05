@@ -458,7 +458,7 @@
 - [元素周期表与化学计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/element-chemistry.html)：3 个化学工具同页：元素速查、摩尔质量与物质的量、溶液浓度换算（免费）
 - [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：3 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼（免费）
 - [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：3 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重（免费）
-- [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：3 个通信工具同页：套餐成本对比、流量与话费估算、换套餐决策（免费）
+- [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：4 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比（免费）
 - [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：3 个水族工具同页：鱼缸容积与水量、换水比例、加热棒功率与电费（免费）
 
 ## 博客（150 篇）
