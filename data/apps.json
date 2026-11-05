@@ -7870,5 +7870,28 @@
         "title": "工具C 换套餐决策"
       }
     ]
+  },
+  {
+    "id": "vfd6yrlsqf",
+    "name": "鱼缸水族与水质养护合集",
+    "desc": "3 个水族工具同页：鱼缸容积与水量、换水比例、加热棒功率与电费",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://vfd6yrlsqf.app.weavefox.cn",
+    "subcat": "生活健康",
+    "subapps": [
+      {
+        "key": "volume",
+        "title": "工具A 鱼缸容积与水量"
+      },
+      {
+        "key": "water",
+        "title": "工具B 换水比例估算"
+      },
+      {
+        "key": "heater",
+        "title": "工具C 加热棒功率与电费"
+      }
+    ]
   }
 ]
