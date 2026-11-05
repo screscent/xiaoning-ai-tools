@@ -7739,5 +7739,28 @@
         "title": "球道瓶位"
       }
     ]
+  },
+  {
+    "id": "qhnnmmstfq",
+    "name": "纸张尺寸与印刷出血合集",
+    "desc": "3 个印刷设计工具同页：纸张尺寸、出血与安全边距、分辨率换算",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://qhnnmmstfq.app.weavefox.cn",
+    "subcat": "设计绘图",
+    "subapps": [
+      {
+        "key": "paper",
+        "title": "工具A 纸张尺寸"
+      },
+      {
+        "key": "bleed",
+        "title": "工具B 出血与安全边距"
+      },
+      {
+        "key": "dpi",
+        "title": "工具C 分辨率换算"
+      }
+    ]
   }
 ]
