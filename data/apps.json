@@ -7169,7 +7169,7 @@
   {
     "id": "pudtks3a4t",
     "name": "口腔与牙齿护理速查合集",
-    "desc": "3 个口腔工具同页：刷牙方法与时长、牙线牙间清洁、症状护理与就诊信号",
+    "desc": "3 个口腔工具同页：刷牙方案、牙线使用、就诊信号",
     "price": 0,
     "cat": "实用工具",
     "url": "https://pudtks3a4t.app.weavefox.cn",
@@ -7177,15 +7177,15 @@
     "subapps": [
       {
         "key": "brush",
-        "title": "工具A 刷牙方法"
+        "title": "工具A 刷牙方案"
       },
       {
         "key": "floss",
-        "title": "工具B 牙线与邻面"
+        "title": "工具B 牙线使用"
       },
       {
         "key": "dental",
-        "title": "工具C 症状与就诊"
+        "title": "工具C 就诊信号"
       }
     ]
   },
