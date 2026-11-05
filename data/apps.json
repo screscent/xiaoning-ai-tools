@@ -7501,7 +7501,7 @@
  {
   "id": "pusczi3a4t",
   "name": "羽毛球入门与装备合集",
-  "desc": "3 个羽毛球工具同页：场地规则、球拍磅数、用球选择",
+  "desc": "4 个羽毛球工具同页：场地规则、球拍磅数、用球选择、计分与赛制",
   "price": 0,
   "cat": "实用工具",
   "url": "https://pusczi3a4t.app.weavefox.cn",
@@ -7518,13 +7518,17 @@
    {
     "key": "shuttle",
     "title": "工具C 用球与耐打选择"
+   },
+   {
+    "key": "score",
+    "title": "工具D 计分与赛制速查"
    }
   ]
  },
  {
   "id": "glrfuqcqng",
   "name": "家用打印机与耗材合集",
-  "desc": "3 个打印机工具同页：机型选型、耗材成本、纸张选择",
+  "desc": "4 个打印机工具同页：机型选型、耗材成本、纸张选择、故障排查",
   "price": 0,
   "cat": "实用工具",
   "url": "https://glrfuqcqng.app.weavefox.cn",
@@ -7541,13 +7545,17 @@
    {
     "key": "paper",
     "title": "工具C 纸张与相纸选择"
+   },
+   {
+    "key": "fault",
+    "title": "工具D 打印机故障与卡纸排查"
    }
   ]
  },
  {
   "id": "cj4ckze3pc",
   "name": "网页 Meta 与分享卡片合集",
-  "desc": "3 个 Meta 工具同页：OG 标签、分享卡片预览与 JSON-LD 结构化数据",
+  "desc": "4 个 Meta 工具同页：OG 标签、分享卡片预览、JSON-LD 结构化数据与长度校验",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -7565,6 +7573,10 @@
    {
     "key": "jsonld",
     "title": "JSON-LD"
+   },
+   {
+    "key": "length",
+    "title": "工具D 长度校验"
    }
   ]
  },

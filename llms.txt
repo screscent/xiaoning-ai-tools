@@ -442,9 +442,9 @@
 - [家居软装尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/soft-furnishing-size.html)：4 个软装工具同页：窗帘尺寸、地毯选配、挂画高度、沙发与茶几尺寸（免费）
 - [家庭防虫与灭鼠合集](https://screscent.github.io/xiaoning-ai-tools/tools/pest-control-home.html)：3 个防虫工具同页：蚊虫防治、蟑螂蚂蚁、老鼠封堵（免费）
 - [数码外设选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/digital-peripherals.html)：4 个数码工具同页：显示器选型、键盘轴体、鼠标握姿、耳机与音箱（免费）
-- [羽毛球入门与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/badminton-start.html)：3 个羽毛球工具同页：场地规则、球拍磅数、用球选择（免费）
-- [家用打印机与耗材合集](https://screscent.github.io/xiaoning-ai-tools/tools/printer-supplies.html)：3 个打印机工具同页：机型选型、耗材成本、纸张选择（免费）
-- [网页 Meta 与分享卡片合集](https://screscent.github.io/xiaoning-ai-tools/tools/meta-share-kit.html)：3 个 Meta 工具同页：OG 标签、分享卡片预览与 JSON-LD 结构化数据（免费）
+- [羽毛球入门与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/badminton-start.html)：4 个羽毛球工具同页：场地规则、球拍磅数、用球选择、计分与赛制（免费）
+- [家用打印机与耗材合集](https://screscent.github.io/xiaoning-ai-tools/tools/printer-supplies.html)：4 个打印机工具同页：机型选型、耗材成本、纸张选择、故障排查（免费）
+- [网页 Meta 与分享卡片合集](https://screscent.github.io/xiaoning-ai-tools/tools/meta-share-kit.html)：4 个 Meta 工具同页：OG 标签、分享卡片预览、JSON-LD 结构化数据与长度校验（免费）
 - [提交信息与变更日志合集](https://screscent.github.io/xiaoning-ai-tools/tools/commit-changelog-kit.html)：3 个提交规范工具同页：Conventional Commits 生成、类型速查与 Markdown 变更日志（免费）
 - [JSON 转多语言模型合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-models-kit.html)：3 个代码生成工具同页：JSON 转 Go struct、Java POJO 与 Python dataclass（免费）
 - [编码检测与乱码修复合集](https://screscent.github.io/xiaoning-ai-tools/tools/encoding-repair-kit.html)：3 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换（免费）
