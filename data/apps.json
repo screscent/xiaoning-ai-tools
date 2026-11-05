@@ -7766,5 +7766,28 @@
         "title": "工具C 分辨率换算"
       }
     ]
+  },
+  {
+    "id": "ztnsb8hvkt",
+    "name": "元素周期表与化学计算合集",
+    "desc": "3 个化学工具同页：元素速查、摩尔质量与物质的量、溶液浓度换算",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://ztnsb8hvkt.app.weavefox.cn",
+    "subcat": "计算换算",
+    "subapps": [
+      {
+        "key": "element",
+        "title": "工具A 元素速查"
+      },
+      {
+        "key": "molar",
+        "title": "工具B 摩尔质量与物质的量"
+      },
+      {
+        "key": "solution",
+        "title": "工具C 溶液浓度换算"
+      }
+    ]
   }
 ]
