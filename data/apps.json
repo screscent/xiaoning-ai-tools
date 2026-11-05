@@ -7816,5 +7816,28 @@
         "title": "工具C 显色与护眼"
       }
     ]
+  },
+  {
+    "id": "frsmkcgsra",
+    "name": "轮胎规格与轮毂换算合集",
+    "desc": "3 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重",
+    "price": 0,
+    "cat": "实用工具",
+    "url": "https://frsmkcgsra.app.weavefox.cn",
+    "subcat": "出行旅行",
+    "subapps": [
+      {
+        "key": "size",
+        "title": "工具A 轮胎规格解读"
+      },
+      {
+        "key": "upgrade",
+        "title": "工具B 轮毂升级适配"
+      },
+      {
+        "key": "pressure",
+        "title": "工具C 胎压与载重"
+      }
+    ]
   }
 ]
