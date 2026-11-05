@@ -7412,7 +7412,7 @@
  {
   "id": "uiaessxjku",
   "name": "家居软装尺寸合集",
-  "desc": "3 个软装工具同页：窗帘尺寸、地毯选配、挂画高度",
+  "desc": "4 个软装工具同页：窗帘尺寸、地毯选配、挂画高度、沙发与茶几尺寸",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uiaessxjku.app.weavefox.cn",
@@ -7429,6 +7429,10 @@
    {
     "key": "art",
     "title": "工具C 挂画高度定位"
+   },
+   {
+    "key": "sofa",
+    "title": "工具D 沙发与茶几尺寸"
    }
   ]
  },

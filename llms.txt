@@ -439,7 +439,7 @@
 - [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：3 个衣物工具同页：洗护标签、面料特性、污渍处理（免费）
 - [验房与收房检查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-inspection.html)：3 个收房工具同页：验房清单、面积核对、整改跟踪（免费）
 - [自行车骑行与维护合集](https://screscent.github.io/xiaoning-ai-tools/tools/cycling-care.html)：3 个骑行工具同页：配速里程、保养周期、装备清单（免费）
-- [家居软装尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/soft-furnishing-size.html)：3 个软装工具同页：窗帘尺寸、地毯选配、挂画高度（免费）
+- [家居软装尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/soft-furnishing-size.html)：4 个软装工具同页：窗帘尺寸、地毯选配、挂画高度、沙发与茶几尺寸（免费）
 - [家庭防虫与灭鼠合集](https://screscent.github.io/xiaoning-ai-tools/tools/pest-control-home.html)：3 个防虫工具同页：蚊虫防治、蟑螂蚂蚁、老鼠封堵（免费）
 - [数码外设选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/digital-peripherals.html)：4 个数码工具同页：显示器选型、键盘轴体、鼠标握姿、耳机与音箱（免费）
 - [羽毛球入门与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/badminton-start.html)：3 个羽毛球工具同页：场地规则、球拍磅数、用球选择（免费）
