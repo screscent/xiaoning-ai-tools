@@ -436,12 +436,12 @@
 - [眼镜与视力保护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/eyewear-vision-care.html)：4 个视力工具同页：镜片折射率与镀膜、镜架尺寸与脸型、用眼与验光、屏幕用眼与近视防控（免费）
 - [居家除螨与过敏防护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/dust-mite-allergy.html)：3 个居家工具同页：除螨频率、过敏原排查、湿度与通风（免费）
 - [鞋服尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/shoe-clothing-size.html)：4 个尺码工具同页：鞋码换算、服装尺码、儿童尺码、尺码对照表（免费）
-- [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：3 个衣物工具同页：洗涤标签、面料护理、污渍处理（免费）
+- [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：3 个衣物工具同页：洗护标签、面料特性、污渍处理（免费）
 - [验房与收房检查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-inspection.html)：3 个收房工具同页：验房清单、面积核对、整改跟踪（免费）
 - [自行车骑行与维护合集](https://screscent.github.io/xiaoning-ai-tools/tools/cycling-care.html)：3 个骑行工具同页：配速里程、保养周期、装备清单（免费）
 - [家居软装尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/soft-furnishing-size.html)：3 个软装工具同页：窗帘尺寸、地毯选配、挂画高度（免费）
 - [家庭防虫与灭鼠合集](https://screscent.github.io/xiaoning-ai-tools/tools/pest-control-home.html)：3 个防虫工具同页：蚊虫防治、蟑螂蚂蚁、老鼠封堵（免费）
-- [数码外设选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/digital-peripherals.html)：3 个数码工具同页：显示器选型、键盘轴体、鼠标握姿（免费）
+- [数码外设选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/digital-peripherals.html)：4 个数码工具同页：显示器选型、键盘轴体、鼠标握姿、耳机与音箱（免费）
 - [羽毛球入门与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/badminton-start.html)：3 个羽毛球工具同页：场地规则、球拍磅数、用球选择（免费）
 - [家用打印机与耗材合集](https://screscent.github.io/xiaoning-ai-tools/tools/printer-supplies.html)：3 个打印机工具同页：机型选型、耗材成本、纸张选择（免费）
 - [网页 Meta 与分享卡片合集](https://screscent.github.io/xiaoning-ai-tools/tools/meta-share-kit.html)：3 个 Meta 工具同页：OG 标签、分享卡片预览与 JSON-LD 结构化数据（免费）

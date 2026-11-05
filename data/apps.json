@@ -7327,19 +7327,19 @@
   {
     "id": "lyklq7jxel",
     "name": "衣物洗护与面料速查合集",
-    "desc": "3 个衣物工具同页：洗涤标签、面料护理、污渍处理",
+    "desc": "3 个衣物工具同页：洗护标签、面料特性、污渍处理",
     "price": 0,
     "cat": "实用工具",
     "url": "https://lyklq7jxel.app.weavefox.cn",
-    "subcat": "效率生活",
+    "subcat": "生活健康",
     "subapps": [
       {
         "key": "care",
-        "title": "工具A 洗涤标签符号"
+        "title": "工具A 洗护标签"
       },
       {
         "key": "fabric",
-        "title": "工具B 面料护理"
+        "title": "工具B 面料特性"
       },
       {
         "key": "stain",
@@ -7442,7 +7442,7 @@
   {
     "id": "np7qk62aq6",
     "name": "数码外设选购合集",
-    "desc": "3 个数码工具同页：显示器选型、键盘轴体、鼠标握姿",
+    "desc": "4 个数码工具同页：显示器选型、键盘轴体、鼠标握姿、耳机与音箱",
     "price": 0,
     "cat": "实用工具",
     "url": "https://np7qk62aq6.app.weavefox.cn",
@@ -7459,6 +7459,10 @@
       {
         "key": "mouse",
         "title": "工具C 鼠标握姿与DPI"
+      },
+      {
+        "key": "audio",
+        "title": "工具D 耳机与音箱选购"
       }
     ]
   },
