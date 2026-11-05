@@ -450,12 +450,12 @@
 - [编码检测与乱码修复合集](https://screscent.github.io/xiaoning-ai-tools/tools/encoding-repair-kit.html)：3 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换（免费）
 - [游泳配速与训练合集](https://screscent.github.io/xiaoning-ai-tools/tools/swim-training-kit.html)：3 个游泳工具同页：配速与 SWOLF、趟数与距离换算、训练计划（免费）
 - [网球计分与场地换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tennis-kit.html)：3 个网球工具同页：计分推演、场地与球速换算、球拍与穿线建议（免费）
-- [乐理与音准速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/music-theory-kit.html)：3 个乐理工具同页：音阶与调号、音程与频率换算、和弦构成与转位（免费）
-- [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：3 个钓鱼工具同页：线组与浮漂搭配、鱼种与饵料速查、出钓装备清单（免费）
+- [乐理与音准速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/music-theory-kit.html)：4 个乐理工具同页：音阶调号、音程频率、和弦构成、节奏与拍号换算（免费）
+- [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：4 个钓鱼工具同页：线组与浮漂搭配、鱼种与饵料速查、出钓装备清单、气压与水温鱼口评估（免费）
 - [台球计分与角度合集](https://screscent.github.io/xiaoning-ai-tools/tools/billiards-kit.html)：3 个台球工具同页：计分与犯规提示、击球角度与反弹、球杆与皮头选配（免费）
 - [保龄球计分与换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bowling-kit.html)：4 个保龄球工具同页：十局计分、让分与净分、球重球速换算、球道与瓶位（免费）
 - [纸张尺寸与印刷出血合集](https://screscent.github.io/xiaoning-ai-tools/tools/paper-print-bleed.html)：4 个印刷工具同页：纸张尺寸、出血与安全边距、分辨率换算、折页与拼版规划（免费）
-- [元素周期表与化学计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/element-chemistry.html)：3 个化学工具同页：元素速查、摩尔质量与物质的量、溶液浓度换算（免费）
+- [元素周期表与化学计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/element-chemistry.html)：4 个化学工具同页：元素速查、摩尔质量与物质的量、溶液浓度换算、气体定律与分压（免费）
 - [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：4 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼、灯位与回路规划（免费）
 - [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：4 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期（免费）
 - [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：4 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比（免费）
