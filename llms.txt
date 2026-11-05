@@ -426,7 +426,7 @@
 - [居家安全自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-safety-checklist.html)：6 个居家安全工具同页：消防、用电、燃气、水质、空气与应急物资，居家隐患一页查清（免费）
 - [家庭维修与工具速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-repair-quickref.html)：6 个维修工具同页：工具选型、故障排查、安全作业、墙面修补、下水疏通与工具保养（免费）
 - [家装尺寸与材料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-reno-quickref.html)：3 个家装工具同页：空间尺寸与层高、材料用量估算、采光与灯具数量，装修前先量清（免费）
-- [旅行装备与打包速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-gear-kit.html)：3 个出行工具同页：分场景打包清单、装备必买/可租/可省、季节衣物组合（免费）
+- [旅行装备与打包速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-gear-kit.html)：4 个出行工具同页：打包清单、装备选型、天气衣物、行李重量与托运合规（免费）
 - [开源素材与授权速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/open-assets-license.html)：4 个素材工具同页：字体授权、图标来源、音效授权、许可协议对照（免费）
 - [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：3 个户外工具同页：营地选址要点、户外风险现场处置、饮食饮水补给估算（免费）
 - [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：4 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具（免费）
