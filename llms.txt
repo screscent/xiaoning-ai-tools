@@ -445,10 +445,10 @@
 - [羽毛球入门与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/badminton-start.html)：4 个羽毛球工具同页：场地规则、球拍磅数、用球选择、计分与赛制（免费）
 - [家用打印机与耗材合集](https://screscent.github.io/xiaoning-ai-tools/tools/printer-supplies.html)：4 个打印机工具同页：机型选型、耗材成本、纸张选择、故障排查（免费）
 - [网页 Meta 与分享卡片合集](https://screscent.github.io/xiaoning-ai-tools/tools/meta-share-kit.html)：4 个 Meta 工具同页：OG 标签、分享卡片预览、JSON-LD 结构化数据与长度校验（免费）
-- [提交信息与变更日志合集](https://screscent.github.io/xiaoning-ai-tools/tools/commit-changelog-kit.html)：3 个提交规范工具同页：Conventional Commits 生成、类型速查与 Markdown 变更日志（免费）
+- [提交信息与变更日志合集](https://screscent.github.io/xiaoning-ai-tools/tools/commit-changelog-kit.html)：4 个提交规范工具同页：提交信息生成、类型速查、变更日志、commitlint 配置（免费）
 - [JSON 转多语言模型合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-models-kit.html)：3 个代码生成工具同页：JSON 转 Go struct、Java POJO 与 Python dataclass（免费）
-- [编码检测与乱码修复合集](https://screscent.github.io/xiaoning-ai-tools/tools/encoding-repair-kit.html)：3 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换（免费）
-- [游泳配速与训练合集](https://screscent.github.io/xiaoning-ai-tools/tools/swim-training-kit.html)：3 个游泳工具同页：配速与 SWOLF、趟数与距离换算、训练计划（免费）
+- [编码检测与乱码修复合集](https://screscent.github.io/xiaoning-ai-tools/tools/encoding-repair-kit.html)：4 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换、Unicode 与实体转换（免费）
+- [游泳配速与训练合集](https://screscent.github.io/xiaoning-ai-tools/tools/swim-training-kit.html)：4 个游泳工具同页：配速与 SWOLF、趟数与距离换算、训练计划、泳姿与划频分析（免费）
 - [网球计分与场地换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tennis-kit.html)：3 个网球工具同页：计分推演、场地与球速换算、球拍与穿线建议（免费）
 - [乐理与音准速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/music-theory-kit.html)：4 个乐理工具同页：音阶调号、音程频率、和弦构成、节奏与拍号换算（免费）
 - [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：4 个钓鱼工具同页：线组与浮漂搭配、鱼种与饵料速查、出钓装备清单、气压与水温鱼口评估（免费）

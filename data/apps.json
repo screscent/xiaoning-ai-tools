@@ -7583,7 +7583,7 @@
  {
   "id": "wncjdkj8gw",
   "name": "提交信息与变更日志合集",
-  "desc": "3 个提交规范工具同页：Conventional Commits 生成、类型速查与 Markdown 变更日志",
+  "desc": "4 个提交规范工具同页：提交信息生成、类型速查、变更日志、commitlint 配置",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -7601,6 +7601,10 @@
    {
     "key": "changelog",
     "title": "变更日志"
+   },
+   {
+    "key": "lint",
+    "title": "commitlint 配置"
    }
   ]
  },
@@ -7631,7 +7635,7 @@
  {
   "id": "uiag6axjku",
   "name": "编码检测与乱码修复合集",
-  "desc": "3 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换",
+  "desc": "4 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换、Unicode 与实体转换",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -7649,13 +7653,17 @@
    {
     "key": "convert",
     "title": "编码转换"
+   },
+   {
+    "key": "unicode",
+    "title": "Unicode 与实体转换"
    }
   ]
  },
  {
   "id": "ijtkz98zig",
   "name": "游泳配速与训练合集",
-  "desc": "3 个游泳工具同页：配速与 SWOLF、趟数与距离换算、训练计划",
+  "desc": "4 个游泳工具同页：配速与 SWOLF、趟数与距离换算、训练计划、泳姿与划频分析",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -7673,6 +7681,10 @@
    {
     "key": "plan",
     "title": "训练计划"
+   },
+   {
+    "key": "stroke",
+    "title": "泳姿与划频"
    }
   ]
  },
