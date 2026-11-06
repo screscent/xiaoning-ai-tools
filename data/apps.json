@@ -7611,7 +7611,7 @@
  {
   "id": "uiadeexjku",
   "name": "JSON 转多语言模型合集",
-  "desc": "4 个多语言工具同页：Go 结构体、Java 类、Python 模型、多语言键名规范",
+  "desc": "5 个多语言工具同页：Go 结构体、Java 类、Python 模型、多语言键名规范、Swift 模型",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uiadeexjku.app.weavefox.cn",
@@ -7627,11 +7627,15 @@
    },
    {
     "key": "python",
-    "title": "Python 模型生成"
+    "title": "Python 模型"
    },
    {
     "key": "keys",
     "title": "多语言键名规范"
+   },
+   {
+    "key": "swift",
+    "title": "Swift 模型"
    }
   ]
  },
@@ -7994,7 +7998,7 @@
  {
   "id": "jacqamkp5e",
   "name": "家庭光伏与储能收益合集",
-  "desc": "4 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益",
+  "desc": "5 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益、补贴与并网",
   "price": 0,
   "cat": "实用工具",
   "url": "https://jacqamkp5e.app.weavefox.cn",
@@ -8015,13 +8019,17 @@
    {
     "key": "bill",
     "title": "电费账单与省电收益"
+   },
+   {
+    "key": "subsidy",
+    "title": "补贴与并网"
    }
   ]
  },
  {
   "id": "bct8egk6f9",
   "name": "差旅报销与机酒预算合集",
-  "desc": "4 个差旅工具同页：差旅补贴、机票退改、自驾报销、住宿标准与超标处理",
+  "desc": "5 个差旅工具同页：差旅补贴、机票退改、自驾报销、住宿标准与超标处理、城市差旅标准",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bct8egk6f9.app.weavefox.cn",
@@ -8042,6 +8050,10 @@
    {
     "key": "hotel",
     "title": "住宿标准与超标处理"
+   },
+   {
+    "key": "city",
+    "title": "城市差旅标准"
    }
   ]
  },

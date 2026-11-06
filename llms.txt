@@ -446,7 +446,7 @@
 - [家用打印机与耗材合集](https://screscent.github.io/xiaoning-ai-tools/tools/printer-supplies.html)：4 个打印机工具同页：机型选型、耗材成本、纸张选择、故障排查（免费）
 - [网页 Meta 与分享卡片合集](https://screscent.github.io/xiaoning-ai-tools/tools/meta-share-kit.html)：4 个 Meta 工具同页：OG 标签、分享卡片预览、JSON-LD 结构化数据与长度校验（免费）
 - [提交信息与变更日志合集](https://screscent.github.io/xiaoning-ai-tools/tools/commit-changelog-kit.html)：4 个提交规范工具同页：提交信息生成、类型速查、变更日志、commitlint 配置（免费）
-- [JSON 转多语言模型合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-models-kit.html)：4 个多语言工具同页：Go 结构体、Java 类、Python 模型、多语言键名规范（免费）
+- [JSON 转多语言模型合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-models-kit.html)：5 个多语言工具同页：Go 结构体、Java 类、Python 模型、多语言键名规范、Swift 模型（免费）
 - [编码检测与乱码修复合集](https://screscent.github.io/xiaoning-ai-tools/tools/encoding-repair-kit.html)：4 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换、Unicode 与实体转换（免费）
 - [游泳配速与训练合集](https://screscent.github.io/xiaoning-ai-tools/tools/swim-training-kit.html)：4 个游泳工具同页：配速与 SWOLF、趟数与距离换算、训练计划、泳姿与划频分析（免费）
 - [网球计分与场地换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tennis-kit.html)：4 个网球工具同页：计分与赛制、场地尺寸换算、装备与穿线、训练计划与体能（免费）
@@ -460,8 +460,8 @@
 - [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：4 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期（免费）
 - [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：4 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比（免费）
 - [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：4 个水族工具同页：鱼缸容积与水量、换水比例、加热棒功率与电费、水草与照明时长（免费）
-- [家庭光伏与储能收益合集](https://screscent.github.io/xiaoning-ai-tools/tools/solar-storage-kit.html)：4 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益（免费）
-- [差旅报销与机酒预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/business-trip-expense-kit.html)：4 个差旅工具同页：差旅补贴、机票退改、自驾报销、住宿标准与超标处理（免费）
+- [家庭光伏与储能收益合集](https://screscent.github.io/xiaoning-ai-tools/tools/solar-storage-kit.html)：5 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益、补贴与并网（免费）
+- [差旅报销与机酒预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/business-trip-expense-kit.html)：5 个差旅工具同页：差旅补贴、机票退改、自驾报销、住宿标准与超标处理、城市差旅标准（免费）
 - [厨房调味与酱汁配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-seasoning-ratio-kit.html)：4 个下厨工具同页：万能酱汁配比、腌制盐水浓度、调料替代换算、火候与油温对照（免费）
 - [露营装备与营地费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-gear-site-kit.html)：4 个露营工具同页：装备清单与预算、营地费用与人均、用水用电与食材、装载与打包清单（免费）
 - [攀岩与抱石入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/climbing-grade-gear-gym-kit.html)：4 个攀岩工具同页：难度等级换算、装备清单与预算、岩馆费用与训练量、训练计划与伤病预防（免费）
