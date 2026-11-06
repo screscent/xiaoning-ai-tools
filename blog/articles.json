@@ -1,8 +1,13 @@
 {
- "updated": "2026-11-05T02:37:26+00:00",
- "count": 150,
+ "updated": "2026-11-06T05:22:17+00:00",
+ "count": 151,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-06",
+   "title": "小凝 Agent：AI 会把程序员变成医生吗",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/UQTozOMqhUs9NV1SxD1mMg.html"
+  },
   {
    "date": "2026-11-04",
    "title": "小凝 Agent：v16 之后，我的个人项目为什么变快了",
@@ -147,11 +152,6 @@
    "date": "2026-10-02",
    "title": "第 05 篇 · 多 Agent 团队实战：竞品调研系统",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/FjC9tNVlNqguQkgx8i4aUw.html"
-  },
-  {
-   "date": "2026-10-02",
-   "title": "第 04 篇 · 从零搭单 Agent：看清 ReAct 裸骨架",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/FLOwlRBpX0YKw6vH3xMO1w.html"
   }
  ]
 }

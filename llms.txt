@@ -461,7 +461,8 @@
 - [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：4 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比（免费）
 - [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：4 个水族工具同页：鱼缸容积与水量、换水比例、加热棒功率与电费、水草与照明时长（免费）
 
-## 博客（150 篇）
+## 博客（151 篇）
+- [小凝 Agent：AI 会把程序员变成医生吗](https://screscent.github.io/xiaoning-ai-tools/blog/UQTozOMqhUs9NV1SxD1mMg.html)：2026-11-06｜一份关于职业分科、晋级与培养结构的可证伪预测：前因、论点、反方意见、判断方法与历史局限性
 - [小凝 Agent：v16 之后，我的个人项目为什么变快了](https://screscent.github.io/xiaoning-ai-tools/blog/SmpKmENkkkVCMQgcwHzHKQ.html)：2026-11-04｜小凝 Agent 的 v16 个人项目实测：五个项目加一个探索样本，快在哪、凭什么快、哪里还得人来
 - [小凝：Agent 缺的不是能力，是一套能验收它的 OS](https://screscent.github.io/xiaoning-ai-tools/blog/yz-OldHwRRCr0HdyB0V4wQ.html)：2026-11-02｜小凝 AgentOS v16 全景拆解：四层、六层与十四道闸
 - [小凝：AI Agent 最大的谎言，是那句「已完成」](https://screscent.github.io/xiaoning-ai-tools/blog/8OxJLoFtFm4QnmpoMyFHzg.html)：2026-11-02｜一套让 Agent 执行可被验收的四段骨架：契约、四证、失败分类、受控自更新。

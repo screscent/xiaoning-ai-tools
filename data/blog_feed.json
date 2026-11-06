@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-05T02:37:26+00:00",
+ "updated": "2026-11-06T05:22:17+00:00",
  "source": "wechat-mp",
- "count": 150,
+ "count": 151,
  "articles": [
+  {
+   "slug": "UQTozOMqhUs9NV1SxD1mMg",
+   "title": "小凝 Agent：AI 会把程序员变成医生吗",
+   "url": "https://mp.weixin.qq.com/s/UQTozOMqhUs9NV1SxD1mMg",
+   "publish_time": "2026-11-06",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "SmpKmENkkkVCMQgcwHzHKQ",
    "title": "小凝 Agent：v16 之后，我的个人项目为什么变快了",

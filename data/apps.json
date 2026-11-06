@@ -7604,7 +7604,7 @@
    },
    {
     "key": "lint",
-    "title": "commitlint 配置"
+    "title": "提交规则配置"
    }
   ]
  },
@@ -7656,7 +7656,7 @@
    },
    {
     "key": "unicode",
-    "title": "Unicode 与实体转换"
+    "title": "码点与实体"
    }
   ]
  },
