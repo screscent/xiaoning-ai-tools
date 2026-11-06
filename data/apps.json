@@ -7612,7 +7612,7 @@
    },
    {
     "key": "lint",
-    "title": "commitlint 配置"
+    "title": "commitlint"
    },
    {
     "key": "pr",
