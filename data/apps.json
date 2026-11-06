@@ -8119,5 +8119,28 @@
     "title": "观星地点与光害"
    }
   ]
+ },
+ {
+  "id": "jacfa9kp5e",
+  "name": "潜水与浮潜费用合集",
+  "desc": "3 个潜水工具同页：装备清单与预算、气瓶用气时长、行程费用与人均",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://jacfa9kp5e.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "gear",
+    "title": "潜水装备清单与预算"
+   },
+   {
+    "key": "gas",
+    "title": "气瓶用气时长估算"
+   },
+   {
+    "key": "trip",
+    "title": "潜水行程费用与人均"
+   }
+  ]
  }
 ]
