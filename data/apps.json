@@ -8004,5 +8004,28 @@
     "title": "储能配置"
    }
   ]
+ },
+ {
+  "id": "bct8egk6f9",
+  "name": "差旅报销与机酒预算合集",
+  "desc": "3 个差旅工具同页：补贴标准、机票退改与自驾报销，填入参数即得结果",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bct8egk6f9.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "perdiem",
+    "title": "差旅补贴标准"
+   },
+   {
+    "key": "flight",
+    "title": "机票退改费"
+   },
+   {
+    "key": "mileage",
+    "title": "自驾报销"
+   }
+  ]
  }
 ]
