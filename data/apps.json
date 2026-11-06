@@ -8142,5 +8142,28 @@
     "title": "潜水行程费用与人均"
    }
   ]
+ },
+ {
+  "id": "hmqxkpfxk9",
+  "name": "语言学习进度与复习合集",
+  "desc": "3 个学习工具同页：词汇量与等级对照、学习时间规划、记忆曲线与复习量",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://hmqxkpfxk9.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "vocab",
+    "title": "词汇量与等级对照"
+   },
+   {
+    "key": "plan",
+    "title": "学习时间规划"
+   },
+   {
+    "key": "review",
+    "title": "记忆曲线与复习量"
+   }
+  ]
  }
 ]
