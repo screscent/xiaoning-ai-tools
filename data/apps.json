@@ -7320,7 +7320,7 @@
  {
   "id": "jadllqkp5e",
   "name": "鞋服尺码换算合集",
-  "desc": "4 个尺码工具同页：鞋码换算、服装尺码、儿童尺码、尺码对照表",
+  "desc": "5 个尺码工具同页：鞋码换算、服装尺码、儿童尺码、尺码对照表、版型与测量",
   "price": 0,
   "cat": "实用工具",
   "url": "https://jadllqkp5e.app.weavefox.cn",
@@ -7328,19 +7328,23 @@
   "subapps": [
    {
     "key": "shoe",
-    "title": "工具A 鞋码换算"
+    "title": "鞋码换算"
    },
    {
     "key": "cloth",
-    "title": "工具B 服装尺码推荐"
+    "title": "服装尺码"
    },
    {
     "key": "kids",
-    "title": "工具C 儿童鞋服尺码"
+    "title": "儿童尺码"
    },
    {
     "key": "chart",
-    "title": "工具D 尺码表对照"
+    "title": "尺码对照表"
+   },
+   {
+    "key": "fit",
+    "title": "版型与测量"
    }
   ]
  },
@@ -7478,7 +7482,7 @@
  {
   "id": "np7qk62aq6",
   "name": "数码外设选购合集",
-  "desc": "4 个数码工具同页：显示器选型、键盘轴体、鼠标握姿、耳机与音箱",
+  "desc": "5 个数码工具同页：显示器选型、键盘轴体、鼠标握姿、耳机与音箱、桌面布置与线材",
   "price": 0,
   "cat": "实用工具",
   "url": "https://np7qk62aq6.app.weavefox.cn",
@@ -7486,19 +7490,23 @@
   "subapps": [
    {
     "key": "monitor",
-    "title": "工具A 显示器尺寸与视距"
+    "title": "显示器选型"
    },
    {
     "key": "keyboard",
-    "title": "工具B 键盘轴体与配列"
+    "title": "键盘轴体"
    },
    {
     "key": "mouse",
-    "title": "工具C 鼠标握姿与DPI"
+    "title": "鼠标握姿"
    },
    {
     "key": "audio",
-    "title": "工具D 耳机与音箱选购"
+    "title": "耳机与音箱"
+   },
+   {
+    "key": "desk",
+    "title": "桌面布置与线材"
    }
   ]
  },
@@ -7960,7 +7968,7 @@
  {
   "id": "vfd6jblsqf",
   "name": "手机套餐与流量成本合集",
-  "desc": "4 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比",
+  "desc": "5 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比、Wi-Fi 覆盖",
   "price": 0,
   "cat": "实用工具",
   "url": "https://vfd6jblsqf.app.weavefox.cn",
@@ -7968,19 +7976,23 @@
   "subapps": [
    {
     "key": "plan",
-    "title": "工具A 套餐成本对比"
+    "title": "套餐成本"
    },
    {
     "key": "usage",
-    "title": "工具B 流量与话费估算"
+    "title": "流量估算"
    },
    {
     "key": "switch",
-    "title": "工具C 换套餐决策"
+    "title": "换套餐决策"
    },
    {
     "key": "broadband",
-    "title": "工具D 宽带与流量卡对比"
+    "title": "宽带与流量卡对比"
+   },
+   {
+    "key": "wifi",
+    "title": "Wi-Fi 覆盖"
    }
   ]
  },
