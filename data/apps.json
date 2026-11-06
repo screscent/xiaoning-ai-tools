@@ -8096,5 +8096,28 @@
     "title": "岩馆费用与训练量"
    }
   ]
+ },
+ {
+  "id": "dvr26ygy5d",
+  "name": "观星入门与望远镜合集",
+  "desc": "3 个观星工具同页：月相与观星时机、极限星等与望远镜、观星地点与光害",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dvr26ygy5d.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "moon",
+    "title": "月相与观星时机"
+   },
+   {
+    "key": "limit",
+    "title": "极限星等与望远镜"
+   },
+   {
+    "key": "site",
+    "title": "观星地点与光害"
+   }
+  ]
  }
 ]
