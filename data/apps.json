@@ -290,7 +290,7 @@
  {
   "id": "at6pdhpmpa",
   "name": "送礼与礼俗合集",
-  "desc": "4 个送礼工具同页：礼物推荐、预算分配、贺卡文案、送礼禁忌",
+  "desc": "5 个送礼工具同页：礼物推荐、预算分配、贺卡文案、送礼禁忌、回礼与答谢",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -299,19 +299,23 @@
   "subapps": [
    {
     "key": "gift",
-    "title": "工具A 礼物推荐"
+    "title": "礼物推荐"
    },
    {
     "key": "budget",
-    "title": "工具B 预算分配"
+    "title": "预算分配"
    },
    {
     "key": "wrap",
-    "title": "工具C 包装与贺卡"
+    "title": "贺卡文案"
    },
    {
     "key": "taboo",
-    "title": "工具D 礼俗禁忌"
+    "title": "送礼禁忌"
+   },
+   {
+    "key": "return",
+    "title": "回礼与答谢"
    }
   ]
  },
@@ -7528,7 +7532,7 @@
  {
   "id": "glrfuqcqng",
   "name": "家用打印机与耗材合集",
-  "desc": "4 个打印机工具同页：机型选型、耗材成本、纸张选择、故障排查",
+  "desc": "5 个打印机工具同页：机型选型、耗材成本、纸张选择、故障排查、共享与网络打印",
   "price": 0,
   "cat": "实用工具",
   "url": "https://glrfuqcqng.app.weavefox.cn",
@@ -7536,19 +7540,23 @@
   "subapps": [
    {
     "key": "printer",
-    "title": "工具A 打印机选型建议"
+    "title": "机型选型"
    },
    {
     "key": "cost",
-    "title": "工具B 耗材成本核算"
+    "title": "耗材成本"
    },
    {
     "key": "paper",
-    "title": "工具C 纸张与相纸选择"
+    "title": "纸张选择"
    },
    {
     "key": "fault",
-    "title": "工具D 打印机故障与卡纸排查"
+    "title": "故障排查"
+   },
+   {
+    "key": "share",
+    "title": "共享与网络打印"
    }
   ]
  },
@@ -7583,7 +7591,7 @@
  {
   "id": "wncjdkj8gw",
   "name": "提交信息与变更日志合集",
-  "desc": "4 个提交规范工具同页：提交信息生成、类型速查、变更日志、commitlint 配置",
+  "desc": "5 个提交规范工具同页：提交信息生成、类型速查、变更日志、commitlint 配置、PR 描述模板",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -7592,7 +7600,7 @@
   "subapps": [
    {
     "key": "commit",
-    "title": "提交信息"
+    "title": "提交信息生成"
    },
    {
     "key": "types",
@@ -7604,7 +7612,11 @@
    },
    {
     "key": "lint",
-    "title": "提交规则配置"
+    "title": "commitlint 配置"
+   },
+   {
+    "key": "pr",
+    "title": "PR 描述模板"
    }
   ]
  },
