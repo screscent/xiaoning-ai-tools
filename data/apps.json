@@ -4533,7 +4533,7 @@
  {
   "id": "5culhkt6g5",
   "name": "文件传输与带宽估算合集",
-  "desc": "4 个传输工具同页：下载耗时、上传耗时、带宽换算、体积与压缩",
+  "desc": "5 个传输工具同页：下载耗时、上传耗时、带宽换算、体积与压缩、延迟与游戏加速",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -4542,19 +4542,23 @@
   "subapps": [
    {
     "key": "download",
-    "title": "工具A 下载耗时"
+    "title": "下载耗时"
    },
    {
     "key": "upload",
-    "title": "工具B 上传耗时"
+    "title": "上传耗时"
    },
    {
     "key": "bandwidth",
-    "title": "工具C 带宽换算"
+    "title": "带宽换算"
    },
    {
     "key": "size",
-    "title": "工具D 体积与压缩"
+    "title": "体积与压缩"
+   },
+   {
+    "key": "qos",
+    "title": "延迟与游戏加速"
    }
   ]
  },
@@ -4581,7 +4585,7 @@
  {
   "id": "g4qemytuhw",
   "name": "行李额与超重费合集",
-  "desc": "4 个航班行李工具：手提额度、托运额度、超重费、航司对比",
+  "desc": "5 个航班行李工具：手提额度、托运额度、超重费、航司对比、丢失与理赔",
   "price": 0,
   "cat": "实用工具",
   "url": "https://g4qemytuhw.app.weavefox.cn",
@@ -4589,19 +4593,23 @@
   "subapps": [
    {
     "key": "carry",
-    "title": "工具A 手提额度"
+    "title": "手提额度"
    },
    {
     "key": "checked",
-    "title": "工具B 托运额度"
+    "title": "托运额度"
    },
    {
     "key": "overweight",
-    "title": "工具C 超重费"
+    "title": "超重费"
    },
    {
     "key": "compare",
-    "title": "工具D 航司对比"
+    "title": "航司对比"
+   },
+   {
+    "key": "claim",
+    "title": "丢失与理赔"
    }
   ]
  },
@@ -7351,7 +7359,7 @@
  {
   "id": "lyklq7jxel",
   "name": "衣物洗护与面料速查合集",
-  "desc": "4 个衣物工具同页：洗护标签、面料特性、污渍处理、熨烫温度与蒸汽档位",
+  "desc": "5 个衣物工具同页：洗护标签、面料特性、污渍处理、熨烫温度与蒸汽档位、晾晒与收纳",
   "price": 0,
   "cat": "实用工具",
   "url": "https://lyklq7jxel.app.weavefox.cn",
@@ -7359,19 +7367,23 @@
   "subapps": [
    {
     "key": "care",
-    "title": "工具A 洗护标签"
+    "title": "洗护标签"
    },
    {
     "key": "fabric",
-    "title": "工具B 面料特性"
+    "title": "面料特性"
    },
    {
     "key": "stain",
-    "title": "工具C 污渍处理"
+    "title": "污渍处理"
    },
    {
     "key": "iron",
-    "title": "工具D 熨烫温度与蒸汽档位"
+    "title": "熨烫温度与蒸汽档位"
+   },
+   {
+    "key": "dry",
+    "title": "晾晒与收纳"
    }
   ]
  },

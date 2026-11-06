@@ -319,10 +319,10 @@
 - [任务优先级与四象限合集](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：4 个优先级工具同页：四象限、评分、时间块、清单导出（免费）
 - [停车费与停车时长计算器](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：按入场出场时间与首小时/后续单价算停车时长与费用（免费）
 - [快递运费与包裹成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：4 个物流工具同页：首重续重运费、体积重抛比、保价理赔、退换寄回成本（免费）
-- [文件传输与带宽估算合集](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：4 个传输工具同页：下载耗时、上传耗时、带宽换算、体积与压缩（免费）
+- [文件传输与带宽估算合集](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：5 个传输工具同页：下载耗时、上传耗时、带宽换算、体积与压缩、延迟与游戏加速（免费）
 - [体脂率与腰臀比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/body-fat-waist.html)：按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险（免费）
 - [防晒霜用量与补涂计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sunscreen-dose.html)：按面部面积与 SPF 算单次用量、有效时长与补涂次数（免费）
-- [行李额与超重费合集](https://screscent.github.io/xiaoning-ai-tools/tools/baggage-allowance.html)：4 个航班行李工具：手提额度、托运额度、超重费、航司对比（免费）
+- [行李额与超重费合集](https://screscent.github.io/xiaoning-ai-tools/tools/baggage-allowance.html)：5 个航班行李工具：手提额度、托运额度、超重费、航司对比、丢失与理赔（免费）
 - [证件照尺寸与排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-photo-spec.html)：4 个证件照工具同页：尺寸查询、像素换算、相纸排版、底色要求（免费）
 - [家电保养与滤芯更换提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/appliance-care.html)：按家电类型与上次保养日推算下次保养与耗材更换（免费）
 - [房租押金与水电结算计算器](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：按租金押金月数水电与违约扣款算应退押金与清单（免费）
@@ -436,7 +436,7 @@
 - [眼镜与视力保护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/eyewear-vision-care.html)：4 个视力工具同页：镜片折射率与镀膜、镜架尺寸与脸型、用眼与验光、屏幕用眼与近视防控（免费）
 - [居家除螨与过敏防护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/dust-mite-allergy.html)：3 个居家工具同页：除螨频率、过敏原排查、湿度与通风（免费）
 - [鞋服尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/shoe-clothing-size.html)：5 个尺码工具同页：鞋码换算、服装尺码、儿童尺码、尺码对照表、版型与测量（免费）
-- [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：4 个衣物工具同页：洗护标签、面料特性、污渍处理、熨烫温度与蒸汽档位（免费）
+- [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：5 个衣物工具同页：洗护标签、面料特性、污渍处理、熨烫温度与蒸汽档位、晾晒与收纳（免费）
 - [验房与收房检查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-inspection.html)：3 个收房工具同页：验房清单、面积核对、整改跟踪（免费）
 - [自行车骑行与维护合集](https://screscent.github.io/xiaoning-ai-tools/tools/cycling-care.html)：3 个骑行工具同页：配速里程、保养周期、装备清单（免费）
 - [家居软装尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/soft-furnishing-size.html)：4 个软装工具同页：窗帘尺寸、地毯选配、挂画高度、沙发与茶几尺寸（免费）
