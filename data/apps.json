@@ -7611,8 +7611,7 @@
  {
   "id": "uiadeexjku",
   "name": "JSON 转多语言模型合集",
-  "desc": "3 个代码生成工具同页：JSON 转 Go struct、Java POJO 与 Python dataclass",
-  "tag": "免费",
+  "desc": "4 个多语言工具同页：Go 结构体、Java 类、Python 模型、多语言键名规范",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uiadeexjku.app.weavefox.cn",
@@ -7620,15 +7619,19 @@
   "subapps": [
    {
     "key": "go",
-    "title": "Go struct"
+    "title": "Go 结构体生成"
    },
    {
     "key": "java",
-    "title": "Java POJO"
+    "title": "Java 类生成"
    },
    {
     "key": "python",
-    "title": "Python 模型"
+    "title": "Python 模型生成"
+   },
+   {
+    "key": "keys",
+    "title": "多语言键名规范"
    }
   ]
  },
@@ -7691,8 +7694,7 @@
  {
   "id": "5crc75t6g5",
   "name": "网球计分与场地换算合集",
-  "desc": "3 个网球工具同页：计分推演、场地与球速换算、球拍与穿线建议",
-  "tag": "免费",
+  "desc": "4 个网球工具同页：计分与赛制、场地尺寸换算、装备与穿线、训练计划与体能",
   "price": 0,
   "cat": "实用工具",
   "url": "https://5crc75t6g5.app.weavefox.cn",
@@ -7700,15 +7702,19 @@
   "subapps": [
    {
     "key": "score",
-    "title": "计分推演"
+    "title": "计分与赛制"
    },
    {
     "key": "court",
-    "title": "场地换算"
+    "title": "场地尺寸换算"
    },
    {
     "key": "gear",
-    "title": "球拍与穿线"
+    "title": "装备与穿线"
+   },
+   {
+    "key": "train",
+    "title": "训练计划与体能"
    }
   ]
  },
@@ -7771,8 +7777,7 @@
  {
   "id": "puscdc3a4t",
   "name": "台球计分与角度合集",
-  "desc": "3 个台球工具同页：计分与犯规提示、击球角度与反弹、球杆与皮头选配",
-  "tag": "免费",
+  "desc": "4 个台球工具同页：计分与规则、击球角度换算、装备与皮头、球台规格与照明",
   "price": 0,
   "cat": "实用工具",
   "url": "https://puscdc3a4t.app.weavefox.cn",
@@ -7780,15 +7785,19 @@
   "subapps": [
    {
     "key": "score",
-    "title": "计分与犯规"
+    "title": "计分与规则"
    },
    {
     "key": "angle",
-    "title": "击球角度"
+    "title": "击球角度换算"
    },
    {
     "key": "gear",
-    "title": "球杆选配"
+    "title": "装备与皮头"
+   },
+   {
+    "key": "table",
+    "title": "球台规格与照明"
    }
   ]
  },
