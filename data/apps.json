@@ -8027,5 +8027,28 @@
     "title": "自驾报销"
    }
   ]
+ },
+ {
+  "id": "nybrtkpkdd",
+  "name": "厨房调味与酱汁配比合集",
+  "desc": "3 个下厨调味工具同页：酱汁配比、腌制盐水浓度与调料替代换算",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://nybrtkpkdd.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "sauce",
+    "title": "万能酱汁配比"
+   },
+   {
+    "key": "brine",
+    "title": "腌制盐水浓度"
+   },
+   {
+    "key": "sub",
+    "title": "调料替代换算"
+   }
+  ]
  }
 ]
