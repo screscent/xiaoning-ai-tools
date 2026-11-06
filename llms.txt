@@ -449,7 +449,7 @@
 - [JSON 转多语言模型合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-models-kit.html)：5 个多语言工具同页：Go 结构体、Java 类、Python 模型、多语言键名规范、Swift 模型（免费）
 - [编码检测与乱码修复合集](https://screscent.github.io/xiaoning-ai-tools/tools/encoding-repair-kit.html)：4 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换、Unicode 与实体转换（免费）
 - [游泳配速与训练合集](https://screscent.github.io/xiaoning-ai-tools/tools/swim-training-kit.html)：4 个游泳工具同页：配速与 SWOLF、趟数与距离换算、训练计划、泳姿与划频分析（免费）
-- [网球计分与场地换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tennis-kit.html)：4 个网球工具同页：计分与赛制、场地尺寸换算、装备与穿线、训练计划与体能（免费）
+- [网球计分与场地换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tennis-kit.html)：5 个网球工具同页：计分与赛制、场地尺寸换算、装备与穿线、训练计划与体能、发球与站位（免费）
 - [乐理与音准速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/music-theory-kit.html)：4 个乐理工具同页：音阶调号、音程频率、和弦构成、节奏与拍号换算（免费）
 - [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：4 个钓鱼工具同页：线组与浮漂搭配、鱼种与饵料速查、出钓装备清单、气压与水温鱼口评估（免费）
 - [台球计分与角度合集](https://screscent.github.io/xiaoning-ai-tools/tools/billiards-kit.html)：4 个台球工具同页：计分与规则、击球角度换算、装备与皮头、球台规格与照明（免费）
@@ -462,11 +462,11 @@
 - [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：4 个水族工具同页：鱼缸容积与水量、换水比例、加热棒功率与电费、水草与照明时长（免费）
 - [家庭光伏与储能收益合集](https://screscent.github.io/xiaoning-ai-tools/tools/solar-storage-kit.html)：5 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益、补贴与并网（免费）
 - [差旅报销与机酒预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/business-trip-expense-kit.html)：5 个差旅工具同页：差旅补贴、机票退改、自驾报销、住宿标准与超标处理、城市差旅标准（免费）
-- [厨房调味与酱汁配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-seasoning-ratio-kit.html)：4 个下厨工具同页：万能酱汁配比、腌制盐水浓度、调料替代换算、火候与油温对照（免费）
+- [厨房调味与酱汁配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-seasoning-ratio-kit.html)：5 个下厨调味工具同页：酱汁配比、腌制盐水浓度、调料替代换算、火候与油温对照、高汤与底味（免费）
 - [露营装备与营地费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-gear-site-kit.html)：5 个露营工具同页：装备清单与预算、营地费用与人均、用水用电与食材、装载与打包清单、往返路程油耗（免费）
 - [攀岩与抱石入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/climbing-grade-gear-gym-kit.html)：4 个攀岩工具同页：难度等级换算、装备清单与预算、岩馆费用与训练量、训练计划与伤病预防（免费）
 - [观星入门与望远镜合集](https://screscent.github.io/xiaoning-ai-tools/tools/stargazing-moon-limit-site-kit.html)：5 个观星工具同页：月相与观星时机、极限星等与望远镜、观星地点与光害、天体观测清单、观测计划（免费）
-- [潜水与浮潜费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/diving-gear-gas-trip-kit.html)：4 个潜水工具同页：装备清单与预算、气瓶用气时长、行程费用与人均、安全停留与紧急处置（免费）
+- [潜水与浮潜费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/diving-gear-gas-trip-kit.html)：5 个潜水工具同页：装备清单与预算、气瓶用气时长、行程费用与人均、安全停留与紧急处置、配重与浮力（免费）
 - [语言学习进度与复习合集](https://screscent.github.io/xiaoning-ai-tools/tools/language-vocab-plan-review-kit.html)：4 个学习工具同页：词汇量与等级对照、学习时间规划、记忆曲线与复习量、考试分数对照（免费）
 - [桌游与棋牌计分规则合集](https://screscent.github.io/xiaoning-ai-tools/tools/board-game-score-rules-kit.html)：5 个桌游工具同页：多人计分板、开局配置推荐、常见桌游规则速查、回合计时与时长控制、身份局配置（免费）
 
