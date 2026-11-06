@@ -8165,5 +8165,28 @@
     "title": "记忆曲线与复习量"
    }
   ]
+ },
+ {
+  "id": "urweqddyk8",
+  "name": "桌游与棋牌计分规则合集",
+  "desc": "3 个桌游工具同页：多人计分板、开局配置推荐、常见桌游规则速查",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://urweqddyk8.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "score",
+    "title": "多人计分板"
+   },
+   {
+    "key": "setup",
+    "title": "开局配置推荐"
+   },
+   {
+    "key": "rules",
+    "title": "常见桌游规则速查"
+   }
+  ]
  }
 ]
