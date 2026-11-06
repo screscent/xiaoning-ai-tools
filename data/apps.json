@@ -7981,5 +7981,28 @@
     "title": "工具D 水草与照明时长"
    }
   ]
+ },
+ {
+  "id": "jacqamkp5e",
+  "name": "家庭光伏与储能收益合集",
+  "desc": "3 个光伏工具同页：发电量估算、回本周期与储能配置，填入参数即得结果",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://jacqamkp5e.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "yield",
+    "title": "发电量估算"
+   },
+   {
+    "key": "payback",
+    "title": "回本周期"
+   },
+   {
+    "key": "battery",
+    "title": "储能配置"
+   }
+  ]
  }
 ]
