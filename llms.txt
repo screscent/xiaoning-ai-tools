@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 447 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 448 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（19 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（316 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（317 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -463,6 +463,7 @@
 - [家庭光伏与储能收益合集](https://screscent.github.io/xiaoning-ai-tools/tools/solar-storage-kit.html)：3 个光伏工具同页：发电量估算、回本周期与储能配置，填入参数即得结果（免费）
 - [差旅报销与机酒预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/business-trip-expense-kit.html)：3 个差旅工具同页：补贴标准、机票退改与自驾报销，填入参数即得结果（免费）
 - [厨房调味与酱汁配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-seasoning-ratio-kit.html)：3 个下厨调味工具同页：酱汁配比、腌制盐水浓度与调料替代换算（免费）
+- [露营装备与营地费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-gear-site-kit.html)：3 个露营工具同页：装备清单与预算、营地费用与人均、用水用电与食材（免费）
 
 ## 博客（152 篇）
 - [小凝 Agent：一条 iMessage 通道，装下了社交、指令、汇报和我的声音](https://screscent.github.io/xiaoning-ai-tools/blog/AtXmsMbywxdgb-sckSLl9w.html)：2026-11-06｜一条通道，四种用法：社交、指令、主动汇报，以及小凝自己的声音。

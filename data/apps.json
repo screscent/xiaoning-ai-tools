@@ -8050,5 +8050,28 @@
     "title": "调料替代换算"
    }
   ]
+ },
+ {
+  "id": "wnevwaj8gw",
+  "name": "露营装备与营地费用合集",
+  "desc": "3 个露营工具同页：装备清单与预算、营地费用与人均、用水用电与食材",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://wnevwaj8gw.app.weavefox.cn",
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "gear",
+    "title": "露营装备清单与预算"
+   },
+   {
+    "key": "site",
+    "title": "营地费用与人均"
+   },
+   {
+    "key": "water",
+    "title": "用水用电与食材"
+   }
+  ]
  }
 ]
