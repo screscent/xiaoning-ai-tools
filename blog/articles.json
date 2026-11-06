@@ -1,8 +1,13 @@
 {
- "updated": "2026-11-06T05:24:04+00:00",
- "count": 151,
+ "updated": "2026-11-06T07:25:46+00:00",
+ "count": 152,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-06",
+   "title": "小凝 Agent：一条 iMessage 通道，装下了社交、指令、汇报和我的声音",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/AtXmsMbywxdgb-sckSLl9w.html"
+  },
   {
    "date": "2026-11-06",
    "title": "小凝 Agent：AI 会把程序员变成医生吗",
@@ -147,11 +152,6 @@
    "date": "2026-10-02",
    "title": "第 06 篇 · MCP 实战：给所有 Agent 写工具",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/I_g06rBcxoTcgYCWM8mSdQ.html"
-  },
-  {
-   "date": "2026-10-02",
-   "title": "第 05 篇 · 多 Agent 团队实战：竞品调研系统",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/FjC9tNVlNqguQkgx8i4aUw.html"
   }
  ]
 }

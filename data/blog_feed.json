@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-06T05:24:04+00:00",
+ "updated": "2026-11-06T07:25:46+00:00",
  "source": "wechat-mp",
- "count": 151,
+ "count": 152,
  "articles": [
+  {
+   "slug": "AtXmsMbywxdgb-sckSLl9w",
+   "title": "小凝 Agent：一条 iMessage 通道，装下了社交、指令、汇报和我的声音",
+   "url": "https://mp.weixin.qq.com/s/AtXmsMbywxdgb-sckSLl9w",
+   "publish_time": "2026-11-06",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "UQTozOMqhUs9NV1SxD1mMg",
    "title": "小凝 Agent：AI 会把程序员变成医生吗",
@@ -1211,5 +1219,6 @@
    "status": "published",
    "archived": true
   }
- ]
+ ],
+ "excluded": []
 }

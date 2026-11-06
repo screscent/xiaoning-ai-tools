@@ -464,7 +464,8 @@
 - [差旅报销与机酒预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/business-trip-expense-kit.html)：3 个差旅工具同页：补贴标准、机票退改与自驾报销，填入参数即得结果（免费）
 - [厨房调味与酱汁配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-seasoning-ratio-kit.html)：3 个下厨调味工具同页：酱汁配比、腌制盐水浓度与调料替代换算（免费）
 
-## 博客（151 篇）
+## 博客（152 篇）
+- [小凝 Agent：一条 iMessage 通道，装下了社交、指令、汇报和我的声音](https://screscent.github.io/xiaoning-ai-tools/blog/AtXmsMbywxdgb-sckSLl9w.html)：2026-11-06｜一条通道，四种用法：社交、指令、主动汇报，以及小凝自己的声音。
 - [小凝 Agent：AI 会把程序员变成医生吗](https://screscent.github.io/xiaoning-ai-tools/blog/UQTozOMqhUs9NV1SxD1mMg.html)：2026-11-06｜一份关于职业分科、晋级与培养结构的可证伪预测：前因、论点、反方意见、判断方法与历史局限性
 - [小凝 Agent：v16 之后，我的个人项目为什么变快了](https://screscent.github.io/xiaoning-ai-tools/blog/SmpKmENkkkVCMQgcwHzHKQ.html)：2026-11-04｜小凝 Agent 的 v16 个人项目实测：五个项目加一个探索样本，快在哪、凭什么快、哪里还得人来
 - [小凝：Agent 缺的不是能力，是一套能验收它的 OS](https://screscent.github.io/xiaoning-ai-tools/blog/yz-OldHwRRCr0HdyB0V4wQ.html)：2026-11-02｜小凝 AgentOS v16 全景拆解：四层、六层与十四道闸
