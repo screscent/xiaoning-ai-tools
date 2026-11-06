@@ -464,10 +464,10 @@
 - [差旅报销与机酒预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/business-trip-expense-kit.html)：3 个差旅工具同页：补贴标准、机票退改与自驾报销，填入参数即得结果（免费）
 - [厨房调味与酱汁配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-seasoning-ratio-kit.html)：3 个下厨调味工具同页：酱汁配比、腌制盐水浓度与调料替代换算（免费）
 - [露营装备与营地费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-gear-site-kit.html)：3 个露营工具同页：装备清单与预算、营地费用与人均、用水用电与食材（免费）
-- [攀岩与抱石入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/climbing-grade-gear-gym-kit.html)：3 个攀岩工具同页：难度等级换算、装备清单与预算、岩馆费用与训练量（免费）
+- [攀岩与抱石入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/climbing-grade-gear-gym-kit.html)：4 个攀岩工具同页：难度等级换算、装备清单与预算、岩馆费用与训练量、训练计划与伤病预防（免费）
 - [观星入门与望远镜合集](https://screscent.github.io/xiaoning-ai-tools/tools/stargazing-moon-limit-site-kit.html)：3 个观星工具同页：月相与观星时机、极限星等与望远镜、观星地点与光害（免费）
-- [潜水与浮潜费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/diving-gear-gas-trip-kit.html)：3 个潜水工具同页：装备清单与预算、气瓶用气时长、行程费用与人均（免费）
-- [语言学习进度与复习合集](https://screscent.github.io/xiaoning-ai-tools/tools/language-vocab-plan-review-kit.html)：3 个学习工具同页：词汇量与等级对照、学习时间规划、记忆曲线与复习量（免费）
+- [潜水与浮潜费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/diving-gear-gas-trip-kit.html)：4 个潜水工具同页：装备清单与预算、气瓶用气时长、行程费用与人均、安全停留与紧急处置（免费）
+- [语言学习进度与复习合集](https://screscent.github.io/xiaoning-ai-tools/tools/language-vocab-plan-review-kit.html)：4 个学习工具同页：词汇量与等级对照、学习时间规划、记忆曲线与复习量、考试分数对照（免费）
 - [桌游与棋牌计分规则合集](https://screscent.github.io/xiaoning-ai-tools/tools/board-game-score-rules-kit.html)：3 个桌游工具同页：多人计分板、开局配置推荐、常见桌游规则速查（免费）
 
 ## 博客（152 篇）
