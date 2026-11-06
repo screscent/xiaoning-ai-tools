@@ -7985,7 +7985,7 @@
  {
   "id": "jacqamkp5e",
   "name": "家庭光伏与储能收益合集",
-  "desc": "3 个光伏工具同页：发电量估算、回本周期与储能配置，填入参数即得结果",
+  "desc": "4 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益",
   "price": 0,
   "cat": "实用工具",
   "url": "https://jacqamkp5e.app.weavefox.cn",
@@ -8002,13 +8002,17 @@
    {
     "key": "battery",
     "title": "储能配置"
+   },
+   {
+    "key": "bill",
+    "title": "电费账单与省电收益"
    }
   ]
  },
  {
   "id": "bct8egk6f9",
   "name": "差旅报销与机酒预算合集",
-  "desc": "3 个差旅工具同页：补贴标准、机票退改与自驾报销，填入参数即得结果",
+  "desc": "4 个差旅工具同页：差旅补贴、机票退改、自驾报销、住宿标准与超标处理",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bct8egk6f9.app.weavefox.cn",
@@ -8016,15 +8020,19 @@
   "subapps": [
    {
     "key": "perdiem",
-    "title": "差旅补贴标准"
+    "title": "差旅补贴"
    },
    {
     "key": "flight",
-    "title": "机票退改费"
+    "title": "机票退改"
    },
    {
     "key": "mileage",
     "title": "自驾报销"
+   },
+   {
+    "key": "hotel",
+    "title": "住宿标准与超标处理"
    }
   ]
  },
@@ -8058,7 +8066,7 @@
  {
   "id": "wnevwaj8gw",
   "name": "露营装备与营地费用合集",
-  "desc": "3 个露营工具同页：装备清单与预算、营地费用与人均、用水用电与食材",
+  "desc": "4 个露营工具同页：装备清单与预算、营地费用与人均、用水用电与食材、装载与打包清单",
   "price": 0,
   "cat": "实用工具",
   "url": "https://wnevwaj8gw.app.weavefox.cn",
@@ -8066,7 +8074,7 @@
   "subapps": [
    {
     "key": "gear",
-    "title": "露营装备清单与预算"
+    "title": "装备清单与预算"
    },
    {
     "key": "site",
@@ -8075,6 +8083,10 @@
    {
     "key": "water",
     "title": "用水用电与食材"
+   },
+   {
+    "key": "pack",
+    "title": "装载与打包清单"
    }
   ]
  },
