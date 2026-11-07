@@ -1757,7 +1757,7 @@
  {
   "id": "mknibarxwr",
   "name": "图片水印与批量处理合集",
-  "desc": "4 个水印工具同页：文字、图片、平铺、批量",
+  "desc": "5 个水印工具同页：文字、图片、平铺、批量、体积与压缩估算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://mknibarxwr.app.weavefox.cn",
@@ -1778,6 +1778,10 @@
    {
     "key": "batch",
     "title": "批量水印"
+   },
+   {
+    "key": "compress",
+    "title": "图片体积与压缩估算"
    }
   ]
  },
@@ -7171,7 +7175,7 @@
  {
   "id": "4ghafrbtnf",
   "name": "旅行装备与打包速查合集",
-  "desc": "4 个出行工具同页：打包清单、装备选型、天气衣物、行李重量与托运合规",
+  "desc": "5 个出行工具同页：打包清单、装备选型、天气衣物、行李重量与托运合规、旅行预算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://4ghafrbtnf.app.weavefox.cn",
@@ -7192,6 +7196,10 @@
    {
     "key": "weight",
     "title": "工具D 行李重量与托运合规"
+   },
+   {
+    "key": "budget",
+    "title": "工具E 旅行预算与每日花费"
    }
   ]
  },
@@ -7252,7 +7260,7 @@
  {
   "id": "nyjwtlpkdd",
   "name": "咖啡与茶饮冲煮速查合集",
-  "desc": "4 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具",
+  "desc": "5 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具、咖啡因与就寝",
   "price": 0,
   "cat": "实用工具",
   "url": "https://nyjwtlpkdd.app.weavefox.cn",
@@ -7273,6 +7281,10 @@
    {
     "key": "storage",
     "title": "工具D 豆子与器具"
+   },
+   {
+    "key": "caffeine",
+    "title": "工具E 咖啡因摄入与就寝提醒"
    }
   ]
  },

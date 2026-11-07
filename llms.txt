@@ -175,7 +175,7 @@
 - [科学计算与函数合集](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：5 个计算工具同页：科学计算、函数常数、统计概率、计算历史、矩阵运算（免费）
 - [Markdown 写作合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：5 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架、目录生成（免费）
 - [人民币大写金额转换器](https://screscent.github.io/xiaoning-ai-tools/tools/rmb-uppercase.html)：数字金额转中文大写，支持角分与银行汇款式（免费）
-- [图片水印与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：4 个水印工具同页：文字、图片、平铺、批量（免费）
+- [图片水印与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：5 个水印工具同页：文字、图片、平铺、批量、体积与压缩估算（免费）
 - [打字练习与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：4 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势（免费）
 - [待办与任务管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/local-todo.html)：5 个任务工具同页：待办清单、例行任务、日周回顾、归档导入导出、四象限优先级（免费）
 - [文本加解密与哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：5 个本地工具：AES 加密、AES 解密、哈希计算、校验对比、HMAC 签名，不上传（免费）
@@ -426,10 +426,10 @@
 - [居家安全自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-safety-checklist.html)：6 个居家安全工具同页：消防、用电、燃气、水质、空气与应急物资，居家隐患一页查清（免费）
 - [家庭维修与工具速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-repair-quickref.html)：6 个维修工具同页：工具选型、故障排查、安全作业、墙面修补、下水疏通与工具保养（免费）
 - [家装尺寸与材料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-reno-quickref.html)：4 个家装工具同页：空间尺寸与层高、材料用量估算、采光与灯具数量、墙面配色与涂料（免费）
-- [旅行装备与打包速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-gear-kit.html)：4 个出行工具同页：打包清单、装备选型、天气衣物、行李重量与托运合规（免费）
+- [旅行装备与打包速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-gear-kit.html)：5 个出行工具同页：打包清单、装备选型、天气衣物、行李重量与托运合规、旅行预算（免费）
 - [开源素材与授权速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/open-assets-license.html)：4 个素材工具同页：字体授权、图标来源、音效授权、许可协议对照（免费）
 - [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：3 个户外工具同页：营地选址要点、户外风险现场处置、饮食饮水补给估算（免费）
-- [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：4 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具（免费）
+- [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：5 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具、咖啡因与就寝（免费）
 - [口腔与牙齿护理速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/oral-dental-care.html)：4 个口腔工具同页：刷牙方案、牙线使用、就诊信号、牙齿美白与敏感护理（免费）
 - [居家烘焙换算速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-baking-conversion.html)：4 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算（免费）
 - [绿植养护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/plant-care-quickref.html)：4 个绿植工具同页：浇水光照、配土换盆、病虫排查、施肥季节（免费）
