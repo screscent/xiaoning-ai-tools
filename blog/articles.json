@@ -1,8 +1,13 @@
 {
- "updated": "2026-11-07T05:37:32+00:00",
- "count": 153,
+ "updated": "2026-11-07T16:13:17+00:00",
+ "count": 154,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-08",
+   "title": "小凝 Agent：给 AgentOS 装一张可证伪的地图",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/r7Aitn2GxVVH5ML7I4BbEA.html"
+  },
   {
    "date": "2026-11-07",
    "title": "小凝 Agent：从「人提醒才自检」到「每轮自己进化」",
@@ -147,11 +152,6 @@
    "date": "2026-10-02",
    "title": "第 08 篇 · 工程化：从「能跑」到「能上生产」",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/MMyAGX47wzUTyOvn2UIiOQ.html"
-  },
-  {
-   "date": "2026-10-02",
-   "title": "第 07 篇 · Claude 三维协同实战：MCP + PTC + Skills + Subagents",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/kiugA0qoesB-rq63jVvPvg.html"
   }
  ]
 }

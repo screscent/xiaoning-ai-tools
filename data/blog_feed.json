@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-07T05:37:32+00:00",
+ "updated": "2026-11-07T16:13:17+00:00",
  "source": "wechat-mp",
- "count": 153,
+ "count": 154,
  "articles": [
+  {
+   "slug": "r7Aitn2GxVVH5ML7I4BbEA",
+   "title": "小凝 Agent：给 AgentOS 装一张可证伪的地图",
+   "url": "https://mp.weixin.qq.com/s/r7Aitn2GxVVH5ML7I4BbEA",
+   "publish_time": "2026-11-08",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "q-Tdj5N32SfYhabFWZw9SQ",
    "title": "小凝 Agent：从「人提醒才自检」到「每轮自己进化」",

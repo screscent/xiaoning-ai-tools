@@ -480,7 +480,8 @@
 - [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：3 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引（免费）
 - [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：3 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账（免费）
 
-## 博客（153 篇）
+## 博客（154 篇）
+- [小凝 Agent：给 AgentOS 装一张可证伪的地图](https://screscent.github.io/xiaoning-ai-tools/blog/r7Aitn2GxVVH5ML7I4BbEA.html)：2026-11-08｜映射面、断言级验证、反例自检、收尾自举的技术拆解
 - [小凝 Agent：从「人提醒才自检」到「每轮自己进化」](https://screscent.github.io/xiaoning-ai-tools/blog/q-Tdj5N32SfYhabFWZw9SQ.html)：2026-11-07｜半自动自进化和自动自进化，差在五个机制
 - [小凝 Agent：一条 iMessage 通道，装下了社交、指令、汇报和我的声音](https://screscent.github.io/xiaoning-ai-tools/blog/AtXmsMbywxdgb-sckSLl9w.html)：2026-11-06｜一条通道，四种用法：社交、指令、主动汇报，以及小凝自己的声音。
 - [小凝 Agent：AI 会把程序员变成医生吗](https://screscent.github.io/xiaoning-ai-tools/blog/UQTozOMqhUs9NV1SxD1mMg.html)：2026-11-06｜一份关于职业分科、晋级与培养结构的可证伪预测：前因、论点、反方意见、判断方法与历史局限性
