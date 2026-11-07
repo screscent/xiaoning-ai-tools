@@ -5856,8 +5856,7 @@
  {
   "id": "npxsuh2aq6",
   "name": "海淘税费与禁限速查",
-  "desc": "4 个海淘工具同页：行邮税与到手价、国际运费与包裹限制、禁限物品与申报、退换与售后税费",
-  "tag": "免费",
+  "desc": "5 个海淘工具：行邮税与到手价、运费与包裹、禁限与申报、退换与售后、行邮税与免税额度",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npxsuh2aq6.app.weavefox.cn",
@@ -5878,6 +5877,10 @@
    {
     "key": "return",
     "title": "工具D 退换与售后"
+   },
+   {
+    "key": "duty",
+    "title": "工具E 行邮税与免税额度"
    }
   ]
  },
@@ -6395,7 +6398,7 @@
  {
   "id": "mksvlrrxwr",
   "name": "吉他和弦与调试合集",
-  "desc": "4 个吉他工具同页：和弦指法、调弦、变调夹、常用进行",
+  "desc": "5 个吉他工具：和弦指法、调弦、变调夹、常用进行、弦距与手感调整",
   "price": 0,
   "cat": "实用工具",
   "url": "https://mksvlrrxwr.app.weavefox.cn",
@@ -6416,6 +6419,10 @@
    {
     "key": "progression",
     "title": "常用进行"
+   },
+   {
+    "key": "setup",
+    "title": "工具E 弦距与手感调整"
    }
   ]
  },
@@ -6702,7 +6709,7 @@
  {
   "id": "dvgx7igy5d",
   "name": "API 设计与 OpenAPI 速查合集",
-  "desc": "4 个接口工具同页：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容，接口设计速查",
+  "desc": "5 个接口工具：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容、限流与重试估算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dvgx7igy5d.app.weavefox.cn",
@@ -6723,6 +6730,10 @@
    {
     "key": "version",
     "title": "工具D 版本与兼容"
+   },
+   {
+    "key": "ratelimit",
+    "title": "工具E 限流与重试估算"
    }
   ]
  },
