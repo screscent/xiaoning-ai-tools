@@ -8375,5 +8375,28 @@
     "title": "覆盖信道"
    }
   ]
+ },
+ {
+  "id": "r3damkzjyr",
+  "name": "居家适老化改造速查合集",
+  "desc": "3 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://r3damkzjyr.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "grab",
+    "title": "扶手与坡道"
+   },
+   {
+    "key": "bath",
+    "title": "卫浴防滑"
+   },
+   {
+    "key": "light",
+    "title": "夜灯与开关"
+   }
+  ]
  }
 ]
