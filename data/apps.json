@@ -1435,7 +1435,7 @@
  {
   "id": "lymnmkjxel",
   "name": "日期计算与间隔合集",
-  "desc": "4 个日期工具：间隔计算、日期推算、星期推算、日期比较",
+  "desc": "5 个日期工具：间隔计算、日期推算、星期推算、日期比较、工作日计算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://lymnmkjxel.app.weavefox.cn",
@@ -1456,6 +1456,10 @@
    {
     "key": "compare",
     "title": "工具D 日期比较"
+   },
+   {
+    "key": "workday",
+    "title": "工作日计算"
    }
   ]
  },
@@ -1603,7 +1607,7 @@
  {
   "id": "keyw5ddudk",
   "name": "常用单位换算合集",
-  "desc": "4 个单位工具同页：长度、重量、面积体积、温度压力",
+  "desc": "5 个单位工具同页：长度、重量、面积体积、温度压力、数据带宽",
   "price": 0,
   "cat": "实用工具",
   "url": "https://keyw5ddudk.app.weavefox.cn",
@@ -1624,6 +1628,10 @@
    {
     "key": "temp",
     "title": "温度压力"
+   },
+   {
+    "key": "data",
+    "title": "数据与带宽换算"
    }
   ]
  },
@@ -1639,7 +1647,7 @@
  {
   "id": "frnustgsra",
   "name": "番茄专注与计时合集",
-  "desc": "4 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划",
+  "desc": "5 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划、番茄周期规划",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frnustgsra.app.weavefox.cn",
@@ -1660,6 +1668,10 @@
    {
     "key": "plan",
     "title": "番茄计划"
+   },
+   {
+    "key": "cycle",
+    "title": "番茄周期规划"
    }
   ]
  },
