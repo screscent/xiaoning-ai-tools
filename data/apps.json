@@ -2158,7 +2158,7 @@
    },
    {
     "key": "export",
-    "title": "SVG/PNG/Markdown 导出"
+    "title": "导出格式"
    },
    {
     "key": "mermaid",
