@@ -8352,5 +8352,28 @@
     "title": "科目要点"
    }
   ]
+ },
+ {
+  "id": "m9wdqfue9a",
+  "name": "家庭组网与网线速查合集",
+  "desc": "3 个组网工具同页：网线线序、宽带速率、WiFi 覆盖",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://m9wdqfue9a.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "line",
+    "title": "网线线序"
+   },
+   {
+    "key": "speed",
+    "title": "速率换算"
+   },
+   {
+    "key": "cover",
+    "title": "覆盖信道"
+   }
+  ]
  }
 ]
