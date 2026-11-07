@@ -8490,5 +8490,28 @@
     "title": "规则与差点计算"
    }
   ]
+ },
+ {
+  "id": "r3d5wgzjyr",
+  "name": "月子护理与产后恢复合集",
+  "desc": "3 个月子与产后工具同页：月子餐热量配比、月嫂与月子中心花销预算、恢复周程与复查节点",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://r3d5wgzjyr.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "meal",
+    "title": "月子餐热量与营养配比"
+   },
+   {
+    "key": "care",
+    "title": "月嫂与月子期花销预算"
+   },
+   {
+    "key": "recover",
+    "title": "产后恢复周程与复查节点"
+   }
+  ]
  }
 ]
