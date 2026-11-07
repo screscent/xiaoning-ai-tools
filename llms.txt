@@ -148,7 +148,7 @@
 - [商品上架审核清单](https://screscent.github.io/xiaoning-ai-tools/tools/listing-audit.html)：平台品类 → 资质图文 + 违禁词 + 观察项（¥2）
 - [古诗词默写检测器](https://screscent.github.io/xiaoning-ai-tools/tools/poem-dictation.html)：学段篇目 → 题卡 + 答案 + 复习安排（¥1）
 - [内容选题日历生成器](https://screscent.github.io/xiaoning-ai-tools/tools/content-calendar.html)：平台赛道 → 30天选题 + 标题模板（¥2）
-- [图片压缩与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-compressor.html)：4 个图片工具同页：单图压缩、批量统一压缩、压缩前后对比、画质档位建议（免费）
+- [图片压缩与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-compressor.html)：5 个图片工具同页：单图压缩、批量统一压缩、压缩前后对比、画质档位建议、尺寸缩放限制（免费）
 - [房贷与购房成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：4 个房贷工具同页：提前还款、利率月供、购房能力、二手房税费（免费）
 - [二维码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：文本网址 → 本地生成 PNG，免费（免费）
 - [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：6 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、JSON 与 XML、结构统计、两段差异对比，键路径级定位（免费）
@@ -425,7 +425,7 @@
 - [饮食营养速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/nutrition-quickref.html)：6 个营养工具同页：热量、宏量配比、营养标签、三餐搭配、饮水补液、控糖 GI，吃前先算清（免费）
 - [居家安全自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-safety-checklist.html)：6 个居家安全工具同页：消防、用电、燃气、水质、空气与应急物资，居家隐患一页查清（免费）
 - [家庭维修与工具速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-repair-quickref.html)：6 个维修工具同页：工具选型、故障排查、安全作业、墙面修补、下水疏通与工具保养（免费）
-- [家装尺寸与材料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-reno-quickref.html)：3 个家装工具同页：空间尺寸与层高、材料用量估算、采光与灯具数量，装修前先量清（免费）
+- [家装尺寸与材料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-reno-quickref.html)：4 个家装工具同页：空间尺寸与层高、材料用量估算、采光与灯具数量、墙面配色与涂料（免费）
 - [旅行装备与打包速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-gear-kit.html)：4 个出行工具同页：打包清单、装备选型、天气衣物、行李重量与托运合规（免费）
 - [开源素材与授权速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/open-assets-license.html)：4 个素材工具同页：字体授权、图标来源、音效授权、许可协议对照（免费）
 - [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：3 个户外工具同页：营地选址要点、户外风险现场处置、饮食饮水补给估算（免费）
@@ -464,7 +464,7 @@
 - [差旅报销与机酒预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/business-trip-expense-kit.html)：6 个差旅工具同页：差旅补贴、机票退改、自驾报销、住宿标准与超标处理、城市差旅标准、制度与审批（免费）
 - [厨房调味与酱汁配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-seasoning-ratio-kit.html)：5 个下厨调味工具同页：酱汁配比、腌制盐水浓度、调料替代换算、火候与油温对照、高汤与底味（免费）
 - [露营装备与营地费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-gear-site-kit.html)：5 个露营工具同页：装备清单与预算、营地费用与人均、用水用电与食材、装载与打包清单、往返路程油耗（免费）
-- [攀岩与抱石入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/climbing-grade-gear-gym-kit.html)：4 个攀岩工具同页：难度等级换算、装备清单与预算、岩馆费用与训练量、训练计划与伤病预防（免费）
+- [攀岩与抱石入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/climbing-grade-gear-gym-kit.html)：5 个攀岩工具同页：难度等级换算、装备清单与预算、岩馆费用与训练量、训练计划与伤病预防、练后恢复（免费）
 - [观星入门与望远镜合集](https://screscent.github.io/xiaoning-ai-tools/tools/stargazing-moon-limit-site-kit.html)：5 个观星工具同页：月相与观星时机、极限星等与望远镜、观星地点与光害、天体观测清单、观测计划（免费）
 - [潜水与浮潜费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/diving-gear-gas-trip-kit.html)：6 个潜水工具同页：装备清单与预算、气瓶用气时长、行程费用与人均、安全停留与紧急处置、配重与浮力、潜水日志（免费）
 - [语言学习进度与复习合集](https://screscent.github.io/xiaoning-ai-tools/tools/language-vocab-plan-review-kit.html)：5 个学习工具同页：词汇量与等级对照、学习时间规划、记忆曲线与复习量、考试分数对照、常用短语练习（免费）
