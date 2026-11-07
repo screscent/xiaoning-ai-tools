@@ -8467,5 +8467,28 @@
     "title": "雪道难度与安全"
    }
   ]
+ },
+ {
+  "id": "samava9xrs",
+  "name": "高尔夫入门与打球成本合集",
+  "desc": "3 个高尔夫工具同页：球场费用与练习场预算、球杆选购与握把尺寸、规则与差点计算",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://samava9xrs.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "cost",
+    "title": "球场费用与练习场预算"
+   },
+   {
+    "key": "gear",
+    "title": "球杆选购与握把尺寸"
+   },
+   {
+    "key": "rules",
+    "title": "规则与差点计算"
+   }
+  ]
  }
 ]
