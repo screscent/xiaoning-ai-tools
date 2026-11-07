@@ -8444,5 +8444,28 @@
     "title": "描述统计与离散度"
    }
   ]
+ },
+ {
+  "id": "urvrxxdyk8",
+  "name": "滑雪装备与雪场费用合集",
+  "desc": "3 个滑雪工具同页：雪场费用与雪票预算、装备选购与尺码、雪道难度与安全",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://urvrxxdyk8.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "resort",
+    "title": "雪场费用与雪票预算"
+   },
+   {
+    "key": "gear",
+    "title": "装备选购与尺码"
+   },
+   {
+    "key": "slope",
+    "title": "雪道难度与安全"
+   }
+  ]
  }
 ]
