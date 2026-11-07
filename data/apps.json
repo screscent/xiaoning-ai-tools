@@ -8513,5 +8513,28 @@
     "title": "产后恢复与复查节点"
    }
   ]
+ },
+ {
+  "id": "vfgaw6lsqf",
+  "name": "邻里与物业事务合集",
+  "desc": "3 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://vfgaw6lsqf.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "fee",
+    "title": "物业费与公摊核算"
+   },
+   {
+    "key": "noise",
+    "title": "邻里噪声与纠纷处理"
+   },
+   {
+    "key": "rights",
+    "title": "业主维权流程指引"
+   }
+  ]
  }
 ]
