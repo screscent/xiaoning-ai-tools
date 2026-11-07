@@ -387,7 +387,7 @@
 - [家庭应急与防灾合集](https://screscent.github.io/xiaoning-ai-tools/tools/family-emergency-kit.html)：4 个应急工具同页：物品清单、应急预案、急救包、停电停水（免费）
 - [海淘税费与禁限速查](https://screscent.github.io/xiaoning-ai-tools/tools/parcel-tax-calc.html)：4 个海淘工具同页：行邮税与到手价、国际运费与包裹限制、禁限物品与申报、退换与售后税费（免费）
 - [合同签署前必查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/contract-precheck.html)：按合同类型给主体、核心条款、风险条款与红线提示（免费）
-- [二手交易交接合集](https://screscent.github.io/xiaoning-ai-tools/tools/secondhand-handover.html)：4 个二手工具同页：交接单、验收清单、纠纷话术、面交邮寄流程（免费）
+- [二手交易交接合集](https://screscent.github.io/xiaoning-ai-tools/tools/secondhand-handover.html)：5 个二手工具：交接单、验收清单、纠纷话术、面交邮寄流程、定价与砍价底线（免费）
 - [家用电器选购计算合集（空调·冰箱·洗衣机·电视·热水器·净水）](https://screscent.github.io/xiaoning-ai-tools/tools/home-appliance-picker.html)：一个页面装 6 个家电选购计算器，按面积/人数/距离算清该买多大，hash 直链可直达（免费）
 - [职场权益与离职计算合集（补偿·试用期·竞业·年假）](https://screscent.github.io/xiaoning-ai-tools/tools/workrights-collection.html)：6 个职场计算器同页：离职补偿 N/N+1/2N、试用期合规自查、竞业限制补偿、年假与未休折算、社保公积金与到手工资、病假工资与医疗期，一个页面算清离职、每月到手和病假能拿多少（免费）
 - [车主用车成本与合规计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-cost-collection.html)：6 个车主工具同页：车险保费、违章记分、年检到期、用车成本、保养周期与费用、洗车与美容花费，hash 直链可直达（免费）
@@ -427,8 +427,8 @@
 - [家庭维修与工具速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-repair-quickref.html)：6 个维修工具同页：工具选型、故障排查、安全作业、墙面修补、下水疏通与工具保养（免费）
 - [家装尺寸与材料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-reno-quickref.html)：4 个家装工具同页：空间尺寸与层高、材料用量估算、采光与灯具数量、墙面配色与涂料（免费）
 - [旅行装备与打包速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-gear-kit.html)：5 个出行工具同页：打包清单、装备选型、天气衣物、行李重量与托运合规、旅行预算（免费）
-- [开源素材与授权速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/open-assets-license.html)：4 个素材工具同页：字体授权、图标来源、音效授权、许可协议对照（免费）
-- [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：3 个户外工具同页：营地选址要点、户外风险现场处置、饮食饮水补给估算（免费）
+- [开源素材与授权速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/open-assets-license.html)：5 个素材工具：字体授权、图标来源、音效授权、许可协议对照、授权期限提醒（免费）
+- [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：5 个露营工具：营地选址、安全处置、补给计算、保暖温标、费用分摊（免费）
 - [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：5 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具、咖啡因与就寝（免费）
 - [口腔与牙齿护理速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/oral-dental-care.html)：4 个口腔工具同页：刷牙方案、牙线使用、就诊信号、牙齿美白与敏感护理（免费）
 - [居家烘焙换算速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-baking-conversion.html)：5 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算、配方缩放（免费）

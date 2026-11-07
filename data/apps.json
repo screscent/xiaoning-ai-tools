@@ -5890,7 +5890,7 @@
  {
   "id": "dzkttqslwd",
   "name": "二手交易交接合集",
-  "desc": "4 个二手工具同页：交接单、验收清单、纠纷话术、面交邮寄流程",
+  "desc": "5 个二手工具：交接单、验收清单、纠纷话术、面交邮寄流程、定价与砍价底线",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzkttqslwd.app.weavefox.cn",
@@ -5911,6 +5911,10 @@
    {
     "key": "process",
     "title": "工具D 面交邮寄流程"
+   },
+   {
+    "key": "price",
+    "title": "工具E 定价与砍价底线"
    }
   ]
  },
@@ -7210,7 +7214,7 @@
  {
   "id": "glmtjccqng",
   "name": "开源素材与授权速查合集",
-  "desc": "4 个素材工具同页：字体授权、图标来源、音效授权、许可协议对照",
+  "desc": "5 个素材工具：字体授权、图标来源、音效授权、许可协议对照、授权期限提醒",
   "price": 0,
   "cat": "实用工具",
   "url": "https://glmtjccqng.app.weavefox.cn",
@@ -7231,13 +7235,17 @@
    {
     "key": "license",
     "title": "工具D 许可协议对照"
+   },
+   {
+    "key": "expiry",
+    "title": "工具E 授权期限与到期提醒"
    }
   ]
  },
  {
   "id": "pzxwdjqyzx",
   "name": "露营与户外安全速查合集",
-  "desc": "3 个户外工具同页：营地选址要点、户外风险现场处置、饮食饮水补给估算",
+  "desc": "5 个露营工具：营地选址、安全处置、补给计算、保暖温标、费用分摊",
   "price": 0,
   "cat": "实用工具",
   "url": "https://pzxwdjqyzx.app.weavefox.cn",
@@ -7258,6 +7266,10 @@
    {
     "key": "heat",
     "title": "工具D 露营保暖与温标选择"
+   },
+   {
+    "key": "cost",
+    "title": "工具E 营地费用与人均分摊"
    }
   ]
  },
