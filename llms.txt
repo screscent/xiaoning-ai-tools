@@ -158,7 +158,7 @@
 - [URL 编解码与参数解析器](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：URL 编码/解码 + 查询参数解析与地址分解（免费）
 - [时间戳与日期工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/timestamp-converter.html)：6 个时间工具同页：时间戳转换、时区换算、时区缩写与 UTC 偏移、ISO·RFC 格式、ISO 周数与季节、Cron 解析，排期与对时一个页面搞定（免费）
 - [图片格式转换器](https://screscent.github.io/xiaoning-ai-tools/tools/image-format-converter.html)：PNG/JPG/WebP 互转，质量/尺寸可调，本地处理（免费）
-- [文本差异与合并合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-diff.html)：4 个文本工具同页：逐行逐词对比、三路合并与冲突标记、unified diff 补丁、增删改统计（免费）
+- [文本差异与合并合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-diff.html)：5 个文本工具同页：逐行逐词对比、三路合并与冲突标记、unified diff 补丁、增删改统计、词级差异（免费）
 - [颜色转换与对比度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/color-contrast.html)：HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测（免费）
 - [Markdown 表格排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-table.html)：6 个表格工具同页：CSV 转表格、文本转表格、表格转 HTML、对齐调整、表格转 JSON、列表与嵌套，列多也不乱（免费）
 - [数字进制转换器](https://screscent.github.io/xiaoning-ai-tools/tools/number-base-converter.html)：二/八/十/十六进制互转，位宽与位模式展示（免费）
@@ -173,7 +173,7 @@
 - [哈希校验工具](https://screscent.github.io/xiaoning-ai-tools/tools/hash-checker.html)：本地计算 SHA-256/384/512，文本与文件校验对比（免费）
 - [番茄专注与计时合集](https://screscent.github.io/xiaoning-ai-tools/tools/pomodoro-timer.html)：4 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划（免费）
 - [科学计算与函数合集](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：4 个计算工具同页：科学计算、函数常数、统计概率、计算历史（免费）
-- [Markdown 写作合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：4 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架（免费）
+- [Markdown 写作合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：5 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架、目录生成（免费）
 - [人民币大写金额转换器](https://screscent.github.io/xiaoning-ai-tools/tools/rmb-uppercase.html)：数字金额转中文大写，支持角分与银行汇款式（免费）
 - [图片水印与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：4 个水印工具同页：文字、图片、平铺、批量（免费）
 - [打字练习与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：4 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势（免费）
@@ -194,7 +194,7 @@
 - [月历与年历合集](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-calendar.html)：4 个月历工具：月历排布、年历总览、周数对照、打印版式（免费）
 - [密码强度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/password-strength.html)：本地评估密码强度、熵值与改进建议（免费）
 - [思维导图与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/mind-map-generator.html)：5 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出、Mermaid 转写（免费）
-- [世界时钟与时区合集](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：4 个时区工具：多城时钟、时差计算、夏令时判断、会议对照（免费）
+- [世界时钟与时区合集](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：5 个时区工具：多城时钟、时差计算、夏令时判断、会议对照、时间戳互转（免费）
 - [图片打码与隐私遮挡合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：4 个打码工具同页：马赛克、模糊、黑块遮挡、裁切隐藏（免费）
 - [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：4 个摩斯工具同页：文本互转、音频播放、码表速查、练习测试（免费）
 - [复利与定投合集](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：4 个理财工具同页：复利终值、定投收益、目标月存、提取计划（免费）

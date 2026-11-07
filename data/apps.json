@@ -1312,7 +1312,7 @@
  {
   "id": "wn3a9fj8gw",
   "name": "文本差异与合并合集",
-  "desc": "4 个文本工具同页：逐行逐词对比、三路合并与冲突标记、unified diff 补丁、增删改统计",
+  "desc": "5 个文本工具同页：逐行逐词对比、三路合并与冲突标记、unified diff 补丁、增删改统计、词级差异",
   "price": 0,
   "cat": "实用工具",
   "url": "https://wn3a9fj8gw.app.weavefox.cn",
@@ -1333,6 +1333,10 @@
    {
     "key": "stats",
     "title": "工具D 差异统计"
+   },
+   {
+    "key": "word",
+    "title": "工具E 词级文本差异"
    }
   ]
  },
@@ -1685,7 +1689,7 @@
  {
   "id": "ekg2knvhte",
   "name": "Markdown 写作合集",
-  "desc": "4 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架",
+  "desc": "5 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架、目录生成",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ekg2knvhte.app.weavefox.cn",
@@ -1706,6 +1710,10 @@
    {
     "key": "template",
     "title": "工具D 文档模板"
+   },
+   {
+    "key": "toc",
+    "title": "工具E Markdown 目录生成"
    }
   ]
  },
@@ -2177,7 +2185,7 @@
  {
   "id": "r3avkczjyr",
   "name": "世界时钟与时区合集",
-  "desc": "4 个时区工具：多城时钟、时差计算、夏令时判断、会议对照",
+  "desc": "5 个时区工具：多城时钟、时差计算、夏令时判断、会议对照、时间戳互转",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r3avkczjyr.app.weavefox.cn",
@@ -2198,6 +2206,10 @@
    {
     "key": "meet",
     "title": "工具D 会议对照"
+   },
+   {
+    "key": "convert",
+    "title": "工具E 时间戳与时区互转"
    }
   ]
  },
