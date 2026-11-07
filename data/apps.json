@@ -6356,7 +6356,7 @@
  {
   "id": "sfb4eqy97s",
   "name": "Nginx 配置合集",
-  "desc": "4 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域",
+  "desc": "5 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域、并发估算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sfb4eqy97s.app.weavefox.cn",
@@ -6377,6 +6377,10 @@
    {
     "key": "limit",
     "title": "限流与跨域"
+   },
+   {
+    "key": "concurrency",
+    "title": "并发与连接数估算"
    }
   ]
  },
@@ -7318,7 +7322,7 @@
  {
   "id": "x8akttcakb",
   "name": "居家烘焙换算速查合集",
-  "desc": "4 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算",
+  "desc": "5 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算、配方缩放",
   "price": 0,
   "cat": "实用工具",
   "url": "https://x8akttcakb.app.weavefox.cn",
@@ -7339,13 +7343,17 @@
    {
     "key": "time",
     "title": "工具D 温度与时间换算"
+   },
+   {
+    "key": "scale",
+    "title": "工具E 配方缩放换算"
    }
   ]
  },
  {
   "id": "ij5ecw8zig",
   "name": "绿植养护速查合集",
-  "desc": "4 个绿植工具同页：浇水光照、配土换盆、病虫排查、施肥季节",
+  "desc": "5 个绿植工具同页：浇水光照、配土换盆、病虫排查、施肥季节、补光与电费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ij5ecw8zig.app.weavefox.cn",
@@ -7366,6 +7374,10 @@
    {
     "key": "fert",
     "title": "工具D 施肥与季节"
+   },
+   {
+    "key": "light",
+    "title": "工具E 补光灯时长与电费"
    }
   ]
  },
