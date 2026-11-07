@@ -2308,7 +2308,7 @@
  {
   "id": "safjgk9xrs",
   "name": "Cron 表达式工具合集",
-  "desc": "4 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查",
+  "desc": "5 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查、自然语言转规则",
   "price": 0,
   "cat": "实用工具",
   "url": "https://safjgk9xrs.app.weavefox.cn",
@@ -2329,6 +2329,10 @@
    {
     "key": "cheatsheet",
     "title": "工具D 常用速查"
+   },
+   {
+    "key": "human",
+    "title": "工具E 自然语言转规则"
    }
   ]
  },
@@ -2524,7 +2528,7 @@
  {
   "id": "ztxq59hvkt",
   "name": "工作日与假期天数合集",
-  "desc": "4 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日",
+  "desc": "5 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ztxq59hvkt.app.weavefox.cn",
@@ -2545,6 +2549,10 @@
    {
     "key": "calendar",
     "title": "工具D 月度工作日"
+   },
+   {
+    "key": "overtime",
+    "title": "工具E 加班与调休折算"
    }
   ]
  },
@@ -3256,7 +3264,7 @@
  {
   "id": "x89bsucakb",
   "name": "发票与税额计算合集",
-  "desc": "4 个开票工具同页：价税分离、税额反算、多税率对照、开票信息",
+  "desc": "5 个开票工具同页：价税分离、税额反算、多税率对照、开票信息、进项抵扣测算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://x89bsucakb.app.weavefox.cn",
@@ -3277,6 +3285,10 @@
    {
     "key": "invoice",
     "title": "工具D 开票信息生成"
+   },
+   {
+    "key": "deduct",
+    "title": "工具E 进项抵扣测算"
    }
   ]
  },

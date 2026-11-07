@@ -201,7 +201,7 @@
 - [CSS 渐变生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：线性/径向/圆锥渐变，实时预览并复制或下载 CSS（免费）
 - [HTTP 状态码速查表](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：30+ 常见状态码速查，支持搜索/分类/排查建议与复制（免费）
 - [折扣与百分比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/discount-calculator.html)：折扣/满减/税率 → 折后价、节省与实付，含计算过程（免费）
-- [Cron 表达式工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：4 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查（免费）
+- [Cron 表达式工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：5 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查、自然语言转规则（免费）
 - [图片拼接与拼图合集](https://screscent.github.io/xiaoning-ai-tools/tools/stitch-grid.html)：4 个拼图工具同页：纵向拼接、横向拼接、宫格拼图、边框美化（免费）
 - [HTML 实体编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/html-entity-codec.html)：HTML 特殊字符实体编码/解码，支持引号与换行（免费）
 - [单价与多规格比价合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-price-comparator.html)：4 个比价工具同页：单位价格、多规格折算、多件优惠、会员价（免费）
@@ -212,7 +212,7 @@
 - [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：4 个本地脱敏工具：手机/身份证/银行卡/邮箱打码、批量处理与分享前自查（免费）
 - [颜色名称查询](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色（免费）
 - [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
-- [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：4 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日（免费）
+- [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：5 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算（免费）
 - [随机密码短语生成器](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：易记词组合成密码短语，含熵值估算与强度评级（免费）
 - [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：4 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查（免费）
 - [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：4 个正则工具同页：匹配测试、批量替换、捕获组、常用速查（免费）
@@ -250,7 +250,7 @@
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：4 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查（免费）
 - [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：4 个农历工具：农历转换、节气查询、月相查询、农历生日（免费）
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
-- [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：4 个开票工具同页：价税分离、税额反算、多税率对照、开票信息（免费）
+- [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：5 个开票工具同页：价税分离、税额反算、多税率对照、开票信息、进项抵扣测算（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
 - [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：4 个光线工具同页：日出日落、黄金蓝调、昼长季节、拍摄规划（免费）
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
