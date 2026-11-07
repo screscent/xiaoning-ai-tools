@@ -240,7 +240,7 @@
 - [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：6 个出行工具同页：油耗、油电对比、停车过路、通勤月成本、公交月票、五年总持有（免费）
 - [CSS Flex 与 Grid 布局生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：切换 Flex/Grid 调间距对齐，实时预览并复制 CSS（免费）
 - [文本行去重与排序工具](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：按行去重排序并统计重复次数，可忽略大小写（免费）
-- [菜谱份量与备餐换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：4 个备餐工具同页：份量换算、批量备餐总量、器具尺寸换算、采购清单合并（免费）
+- [菜谱份量与备餐换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：5 个备餐工具：份量换算、批量备餐、器具尺寸、采购清单、剩菜保存与复热（免费）
 - [周数与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/iso-week.html)：4 个周数工具：ISO 周号、周范围、周计划、季度周数（免费）
 - [图片转 ASCII 艺术](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：图片转字符画，可选字符集与彩色 HTML 输出（免费）
 - [CSS 霓虹文字效果生成器](https://screscent.github.io/xiaoning-ai-tools/tools/neon-text.html)：调色与发光强度生成霓虹 text-shadow，可复制下载（免费）
@@ -430,10 +430,10 @@
 - [开源素材与授权速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/open-assets-license.html)：5 个素材工具：字体授权、图标来源、音效授权、许可协议对照、授权期限提醒（免费）
 - [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：5 个露营工具：营地选址、安全处置、补给计算、保暖温标、费用分摊（免费）
 - [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：5 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具、咖啡因与就寝（免费）
-- [口腔与牙齿护理速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/oral-dental-care.html)：4 个口腔工具同页：刷牙方案、牙线使用、就诊信号、牙齿美白与敏感护理（免费）
+- [口腔与牙齿护理速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/oral-dental-care.html)：5 个口腔工具：刷牙方案、牙线使用、就诊信号、牙齿美白与敏感护理、含氟牙膏与用量（免费）
 - [居家烘焙换算速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-baking-conversion.html)：5 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算、配方缩放（免费）
 - [绿植养护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/plant-care-quickref.html)：5 个绿植工具同页：浇水光照、配土换盆、病虫排查、施肥季节、补光与电费（免费）
-- [眼镜与视力保护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/eyewear-vision-care.html)：4 个视力工具同页：镜片折射率与镀膜、镜架尺寸与脸型、用眼与验光、屏幕用眼与近视防控（免费）
+- [眼镜与视力保护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/eyewear-vision-care.html)：5 个视力工具：镜片选择、镜架尺寸、用眼与验光、屏幕用眼与防控、屏幕距离与休息（免费）
 - [居家除螨与过敏防护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/dust-mite-allergy.html)：5 个除螨工具：除螨频率与清洗、过敏原排查、湿度与通风、霉菌控制、湿度与螨虫风险（免费）
 - [鞋服尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/shoe-clothing-size.html)：5 个尺码工具同页：鞋码换算、服装尺码、儿童尺码、尺码对照表、版型与测量（免费）
 - [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：5 个衣物工具同页：洗护标签、面料特性、污渍处理、熨烫温度与蒸汽档位、晾晒与收纳（免费）
