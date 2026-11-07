@@ -8329,5 +8329,28 @@
     "title": "身份局配置"
    }
   ]
+ },
+ {
+  "id": "fwvfegyqkh",
+  "name": "学车考驾照费用与进度合集",
+  "desc": "3 个学车工具同页：费用拆解、学时与进度、科目考试要点",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://fwvfegyqkh.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "cost",
+    "title": "费用拆解"
+   },
+   {
+    "key": "hours",
+    "title": "学时与进度"
+   },
+   {
+    "key": "exam",
+    "title": "科目要点"
+   }
+  ]
  }
 ]
