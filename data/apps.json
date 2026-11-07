@@ -1788,7 +1788,7 @@
  {
   "id": "tbqexcmk3t",
   "name": "打字练习与速度合集",
-  "desc": "4 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势",
+  "desc": "5 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势、键盘布局与指法",
   "price": 0,
   "cat": "实用工具",
   "url": "https://tbqexcmk3t.app.weavefox.cn",
@@ -1809,6 +1809,10 @@
    {
     "key": "progress",
     "title": "工具D 成绩趋势"
+   },
+   {
+    "key": "layout",
+    "title": "工具E 键盘布局与指法"
    }
   ]
  },
@@ -1905,7 +1909,7 @@
  {
   "id": "bnuscunsmb",
   "name": "记账与月度分析合集",
-  "desc": "4 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出",
+  "desc": "5 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出、预算与超支预警",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bnuscunsmb.app.weavefox.cn",
@@ -1926,6 +1930,10 @@
    {
     "key": "export",
     "title": "工具D CSV 报表"
+   },
+   {
+    "key": "budget",
+    "title": "工具E 预算与超支预警"
    }
   ]
  },
@@ -2302,7 +2310,7 @@
  {
   "id": "safluw9xrs",
   "name": "复利与定投合集",
-  "desc": "4 个理财工具同页：复利终值、定投收益、目标月存、提取计划",
+  "desc": "5 个理财工具同页：复利终值、定投收益、目标月存、提取计划、贷款月供与提前还款",
   "price": 0,
   "cat": "实用工具",
   "url": "https://safluw9xrs.app.weavefox.cn",
@@ -2323,6 +2331,10 @@
    {
     "key": "withdraw",
     "title": "提取计划"
+   },
+   {
+    "key": "loan",
+    "title": "贷款月供与提前还款"
    }
   ]
  },
