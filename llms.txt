@@ -636,6 +636,9 @@
 - [AI 越来越“会做”，但我为什么还是不敢完全放手？](https://screscent.github.io/xiaoning-ai-tools/blog/KjpImkKlrymHmDHJh0NV-g.html)：2026-09-03｜指望 AI“更聪明”来让人“敢放手”，是走错了方向。真正让 AI 值得托付的，是给它的聪明配上可靠的护栏——校验、边界、审批。
 - [小凝：一个会「成长」的 AI 体系，是怎么一步步走出来的](https://screscent.github.io/xiaoning-ai-tools/blog/XCHUXBosG0nE0L78JsXypA.html)：2026-09-03｜小凝：一个会「成长」的 AI 体系，是怎么一步步走出来的
 
+## 深度报告
+- [小凝体系深度评估报告 v16.6](https://screscent.github.io/xiaoning-ai-tools/reports/xiaoning-os-v16.6.html)：2026-11-08｜OS 四层 × 人格体系 × 18 模块 × 双项目实证：八维评分 93.4，并与 2026 主流 Agent、工程范式与研究逐项对照。
+
 ## 说明
 - 联系方式：29185807@qq.com｜15980989344
 - 工具输出为参考结果，不构成专业意见。

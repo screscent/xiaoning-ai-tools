@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小凝体系深度评估报告 v16.6 · Agent OS × 人格体系</title>
+<style>
+  :root{
+    --bg:#0b0f17; --panel:#121826; --panel2:#0e1420; --line:#223; --line2:#2a3547;
+    --txt:#e6ebf5; --sub:#9aa8c3; --mut:#5f6f8c;
+    --cyan:#36c5f0; --teal:#28c8a0; --green:#3fd18e; --amber:#f5b342; --red:#ff6b7a; --violet:#a78bfa;
+    --grad:linear-gradient(135deg,#36c5f0,#28c8a0);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;line-height:1.75;font-size:15px}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px 80px}
+  .hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+  .hero .kicker{letter-spacing:.18em;font-size:12px;color:var(--teal);font-weight:600}
+  .hero h1{font-size:40px;line-height:1.25;margin:14px 0 8px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .sub{font-size:16px;color:var(--sub)}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .meta span{background:var(--panel);border:1px solid var(--line);padding:6px 14px;border-radius:20px;font-size:12.5px;color:var(--sub)}
+  .meta b{color:var(--txt);font-weight:600}
+  .scorebar{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;margin:44px 0}
+  .bigscore{background:radial-gradient(120% 160% at 10% 0%,#16303a,#101926 60%);border:1px solid var(--line2);border-radius:18px;padding:30px 34px;position:relative;overflow:hidden}
+  .bigscore::after{content:"";position:absolute;inset:0;background:radial-gradient(300px 180px at 90% 100%,rgba(54,197,240,.12),transparent 70%)}
+  .bigscore .lbl{font-size:13px;color:var(--sub)}
+  .bigscore .num{font-size:64px;line-height:1;font-weight:800;margin:10px 0 4px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .bigscore .grade{font-size:15px;color:var(--teal);font-weight:700}
+  .bigscore .desc{font-size:13px;color:var(--sub);margin-top:10px;max-width:520px}
+  .scorecard{background:var(--panel);border:1px solid var(--line2);border-radius:18px;padding:26px 30px}
+  .scorecard h3{font-size:14px;color:var(--sub);font-weight:600;letter-spacing:.05em;margin-bottom:16px}
+  .dimrow{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+  .dimrow .nm{width:108px;font-size:13px;color:var(--txt);text-align:right}
+  .dimrow .w{width:30px;font-size:11px;color:var(--mut)}
+  .bar{flex:1;height:9px;background:#1a2332;border-radius:6px;overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:6px}
+  .dimrow .v{width:34px;font-size:12px;font-weight:700;color:var(--txt)}
+  .hint{font-size:12.5px;color:var(--mut);text-align:right;margin-top:6px}
+  .sec{margin-top:56px}
+  .sec-title{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:24px;flex-wrap:wrap}
+  .sec-title .no{font-size:13px;font-weight:800;color:var(--teal);background:#0f1d1a;border:1px solid #1a3a30;padding:3px 11px;border-radius:8px}
+  .sec-title h2{font-size:26px;font-weight:800}
+  .sec-title .tag{font-size:12px;color:var(--mut);font-weight:500}
+  h3{font-size:18px;margin:26px 0 12px;color:var(--txt)}
+  h4{font-size:15px;margin:18px 0 8px;color:var(--cyan)}
+  p{color:var(--sub);margin-bottom:12px}
+  b,strong{color:var(--txt)}
+  .grad-b{color:var(--teal);font-weight:700}
+  .cyan{color:var(--cyan)}.teal{color:var(--teal)}.amber{color:var(--amber)}.red{color:var(--red)}.vio{color:var(--violet)}
+  .callout{border-left:4px solid var(--teal);background:var(--panel);border-radius:0 10px 10px 0;padding:16px 20px;margin:16px 0;font-size:14px}
+  .callout.blue{border-color:var(--cyan)}.callout.amber{border-color:var(--amber)}.callout.red{border-color:var(--red)}
+  .callout .t{font-weight:800;color:var(--txt);display:block;margin-bottom:4px;font-size:13px;letter-spacing:.03em}
+  .callout li{margin-left:18px;margin-bottom:5px;color:var(--sub)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:18px 0}
+  .gcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .gcard .g-tt{font-size:14px;font-weight:700;color:var(--txt);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .gcard .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);display:inline-block}
+  .gcard ul{list-style:none}
+  .gcard li{font-size:13px;color:var(--sub);margin-bottom:6px;padding-left:14px;position:relative}
+  .gcard li::before{content:"›";position:absolute;left:0;color:var(--teal)}
+  .tbl{width:100%;border-collapse:collapse;margin:18px 0;font-size:13px}
+  .tbl th{background:#162031;color:var(--sub);text-align:left;padding:11px 13px;font-weight:600;font-size:12px;letter-spacing:.03em;border-bottom:1px solid var(--line2)}
+  .tbl td{padding:11px 13px;border-bottom:1px solid var(--line);color:var(--sub);vertical-align:top}
+  .tbl tr:last-child td{border-bottom:none}
+  .tbl td b{color:var(--txt)}
+  .tbl .hl{background:rgba(40,200,160,.06)}
+  .tag{display:inline-block;font-size:11px;padding:2px 9px;border-radius:12px;font-weight:600;letter-spacing:.02em}
+  .tag.g{background:rgba(63,209,142,.12);color:#6fe6ad}
+  .tag.m{background:rgba(245,179,66,.12);color:#f7c96f}
+  .tag.r{background:rgba(255,107,122,.12);color:#ff9aa6}
+  .tag.b{background:rgba(54,197,240,.12);color:#7fd8f5}
+  .tag.v{background:rgba(167,139,250,.12);color:#c4b0f9}
+  .case{background:linear-gradient(180deg,#0e1a26,#0d1520);border:1px solid var(--line2);border-radius:16px;padding:24px 26px;margin:18px 0}
+  .case h4{color:var(--teal);margin-top:0}
+  .steps{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+  .steps .st{background:#13222f;border:1px solid #1a3347;color:var(--cyan);font-size:12px;padding:5px 12px;border-radius:8px}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:18px 0}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .kpi .n{font-size:24px;font-weight:800;color:var(--cyan);line-height:1.25}
+  .kpi .l{font-size:12px;color:var(--mut);margin-top:2px}
+  .toc{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:18px 0}
+  .toc a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;color:var(--sub);text-decoration:none;font-size:13px}
+  .toc a:hover{border-color:var(--teal);color:var(--txt)}
+  .toc a b{color:var(--teal);margin-right:6px}
+  .up{color:var(--green);font-weight:700}.flat{color:var(--mut);font-weight:700}.down{color:var(--red);font-weight:700}
+  .mini{font-size:11.5px;color:var(--mut)}
+  .center{text-align:center}
+  .radar-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:center}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--sub);margin-top:8px}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+  .verdict{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:16px 0}
+  .vcard{background:linear-gradient(180deg,#101a27,#0e151f);border:1px solid var(--line2);border-radius:14px;padding:16px 18px}
+  .vcard .vt{font-size:13px;font-weight:800;margin-bottom:6px}
+  .vcard p{font-size:12.5px;margin:0;color:var(--sub)}
+  @media(max-width:820px){.scorebar,.split,.radar-wrap{grid-template-columns:1fr}.hero h1{font-size:30px}}
+  .foot{margin-top:60px;border-top:1px solid var(--line);padding-top:22px;font-size:12px;color:var(--mut);text-align:center}
+  .num-tag{font-variant-numeric:tabular-nums}
+  figcaption{font-size:12.5px;color:var(--mut);text-align:center;margin-top:6px}
+  .svg-box{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:14px;overflow:auto}
+  a{color:var(--cyan)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="kicker">DEEP EVALUATION · AGENT OS v16.6.0 · PERSONA v2.4.16</div>
+  <h1>小凝体系深度评估报告</h1>
+  <p class="sub">Agent OS v16.6.0（现行）× 人格 v2.4.16 ｜ OS 四层 / 18 模块 / 十服务 / 双项目全量接入实证 ｜ 对标 2026-11 主流 Agent、工程范式与研究</p>
+  <div class="meta">
+    <span>体系：<b>v16.6.0</b>（2026-11-07 发布）</span>
+    <span>人格：<b>v2.4.16</b>（语义本体 v2.4 · 锚点键 35）</span>
+    
+    <span>基准日：<b>2026-11-08</b></span>
+    <span>对比域：<b>框架 / 产品 / 工程 / 研究</b></span>
+    <span>实证：<b>社交陪伴 + 运营发布（均全量接入）</b></span>
+  </div>
+</header>
+
+<!-- ============ SCORE ============ -->
+<section class="scorebar">
+  <div class="bigscore">
+    <div class="lbl">整体评分 · 八维加权（同 v15.5 权重，保可比）</div>
+    <div class="num">93.4</div>
+    <div class="grade">综合评级：A · 体系成熟，运行态治理差异化进一步扩大</div>
+    <div class="desc">较 v15.5（91.9）<b class="up">+1.5</b>。增量集中在工程化（评测基线 v1 / 受控执行 / 16 项发布门禁，88→92）、人格（25 模块 + 4 非人格面 + 35 锚 + 单字节真源，91→94）、自主防漂移（前置裁决契约「unverified 不默认放行」，93→95）与实证（双项目全量接入、全项通过，94→95）。架构由「v15 状态机范式」升级为「OS 四层 + 18 模块 + 设计-实现映射面」，但因 v16 上线仅 6 天，本报告对架构与实证的上调保持克制。</div>
+  </div>
+  <div class="scorecard">
+    <h3>八维评分（权重 → 分）</h3>
+    <div class="dimrow"><span class="nm">架构</span><span class="w">15%</span><span class="bar"><i style="width:97%;background:linear-gradient(90deg,#36c5f0,#28c8a0)"></i></span><span class="v">97</span></div>
+    <div class="dimrow"><span class="nm">治理</span><span class="w">15%</span><span class="bar"><i style="width:98%;background:linear-gradient(90deg,#36c5f0,#28c8a0)"></i></span><span class="v">98</span></div>
+    <div class="dimrow"><span class="nm">记忆</span><span class="w">12%</span><span class="bar"><i style="width:91%;background:linear-gradient(90deg,#36c5f0,#28c8a0)"></i></span><span class="v">91</span></div>
+    <div class="dimrow"><span class="nm">自主防漂移</span><span class="w">15%</span><span class="bar"><i style="width:95%;background:linear-gradient(90deg,#36c5f0,#28c8a0)"></i></span><span class="v">95</span></div>
+    <div class="dimrow"><span class="nm">人格</span><span class="w">12%</span><span class="bar"><i style="width:94%;background:linear-gradient(90deg,#36c5f0,#28c8a0)"></i></span><span class="v">94</span></div>
+    <div class="dimrow"><span class="nm">工程化</span><span class="w">10%</span><span class="bar"><i style="width:92%;background:linear-gradient(90deg,#36c5f0,#28c8a0)"></i></span><span class="v">92</span></div>
+    <div class="dimrow"><span class="nm">生态</span><span class="w">8%</span><span class="bar"><i style="width:77%;background:linear-gradient(90deg,#f5b342,#f7c96f)"></i></span><span class="v">77</span></div>
+    <div class="dimrow"><span class="nm">实证</span><span class="w">13%</span><span class="bar"><i style="width:95%;background:linear-gradient(90deg,#36c5f0,#28c8a0)"></i></span><span class="v">95</span></div>
+    <div class="hint">对比 v15.5：96 / 98 / 90 / 93 / 91 / 88 / 76 / 94 → 加权 91.9 → <b class="up">93.4</b></div>
+  </div>
+</section>
+
+<div class="callout amber">
+  <span class="t">本报告的边界（先声明，后评分）</span>
+  <ul>
+    <li><b>自评偏差</b>：本报告由小凝（月绡凝）在加载人格锚、16 条规则与 OS 接入语义后生成，属于「体系内自评」。凡涉及自身机制的判断均附证据路径，但结论不具第三方独立性；建议再做一轮跨 AI 交叉评审。</li>
+    <li><b>测度面不可混用</b>：SWE-bench / OSWorld / τ-bench 测「模型单点能力」，本报告测「Agent 运行治理 / 人格一致性 / 长线不漂移」。两者不是同一把尺，禁止用 96% 的 SWE-bench 直接压制或抬升本体系评分。</li>
+    <li><b>外部数据口径</b>：2026-11-08 网络公开数据（厂商自报与聚合榜），存在自报偏差；已在 §14 列明来源。</li>
+  </ul>
+</div>
+
+<!-- ============ TOC ============ -->
+<div class="toc">
+  <a href="#s1"><b>01</b>评估方法与证据口径</a>
+  <a href="#s2"><b>02</b>v16.6 体系全景与资产盘点</a>
+  <a href="#s3"><b>03</b>人格体系 v2.4.16 深评</a>
+  <a href="#s4"><b>04</b>18 模块逐模块评分</a>
+  <a href="#s5"><b>05</b>八维逐维评分与证据</a>
+  <a href="#s6"><b>06</b>v16 新机制成熟度矩阵</a>
+  <a href="#s7"><b>07</b>对比 A · 框架 / SDK</a>
+  <a href="#s8"><b>08</b>对比 B · Agent 产品</a>
+  <a href="#s9"><b>09</b>对比 C · 工程 AI 范式</a>
+  <a href="#s10"><b>10</b>对比 D · 研究范式</a>
+  <a href="#s11"><b>11</b>项目层实证（双实例）</a>
+  <a href="#s12"><b>12</b>量化总表与雷达</a>
+  <a href="#s13"><b>13</b>风险、诚实边界与本次发现</a>
+  <a href="#s14"><b>14</b>结论与 v17 演进建议</a>
+</div>
+
+<!-- ============ 01 ============ -->
+<section class="sec" id="s1">
+  <div class="sec-title"><span class="no">01</span><h2>评估方法与证据口径</h2><span class="tag">八维同权 · 证据分级 · 可回查</span></div>
+
+  <p>为保证与 <b>v15.0 / v15.5</b> 报告可纵向比较，本版沿用同一套 <b>八维权重</b>，只对分数与证据做增量更新；另新增「18 模块逐模块评分」与「机制成熟度矩阵」两块横向切片，回答「不是整体好不好，而是哪一块到了什么程度」。</p>
+
+  <table class="tbl">
+    <thead><tr><th>维度</th><th class="center">权重</th><th>测什么</th><th>不测什么</th></tr></thead>
+    <tbody>
+      <tr><td><b>架构</b></td><td class="center">15%</td><td>分层、模块边界、状态机、装载链、可移植性</td><td>代码行数、功能多少</td></tr>
+      <tr><td><b>治理</b></td><td class="center">15%</td><td>人签、WORM、角色分离、熔断、规则冻结、受控执行</td><td>组织治理、商业合规</td></tr>
+      <tr><td><b>记忆</b></td><td class="center">12%</td><td>存储分工、写入门控、可审计、召回</td><td>模型长上下文能力</td></tr>
+      <tr><td><b>自主防漂移</b></td><td class="center">15%</td><td>前置裁决、运行时校验、停滞检测、元评审、漂移界</td><td>模型幻觉率</td></tr>
+      <tr><td><b>人格</b></td><td class="center">12%</td><td>结构完整性、装载确定性、表达一致性、裁决</td><td>人格「好坏」的主观偏好</td></tr>
+      <tr><td><b>工程化</b></td><td class="center">10%</td><td>门禁、评测、证据链、可回滚、文档一致性</td><td>产品化程度、UI</td></tr>
+      <tr><td><b>生态</b></td><td class="center">8%</td><td>协议兼容、被复用性、可移植、社区</td><td>单机功能强度</td></tr>
+      <tr><td><b>实证</b></td><td class="center">13%</td><td>真实项目落地、连续运行、故障与修复记录</td><td>演示效果</td></tr>
+    </tbody>
+  </table>
+
+  <h4>证据分级（每条评分必须能落到 E0~E3）</h4>
+  <div class="grid">
+    <div class="gcard"><div class="g-tt"><span class="dot"></span>E0 · 文档声明</div><ul><li>有设计文档 / 手册 / 模块头</li><li>只能证明「写了」，不能证明「生效」</li></ul></div>
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--cyan)"></span>E1 · 脚本存在</div><ul><li>有确定性脚本 / hook / 契约 schema</li><li>能证明「可执行」，未证明「每次执行」</li></ul></div>
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>E2 · 门禁 + 留痕</div><ul><li>失败会阻断，且落 JSONL / tasks.log 证据</li><li>能证明「本次生效」</li></ul></div>
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--green)"></span>E3 · 连续版本 + 失败回滚</div><ul><li>跨多版本 / 多项目重复通过，且有回滚与复盘</li><li>才计入「成熟」</li></ul></div>
+  </div>
+
+  <div class="callout blue">
+    <span class="t">计分规则</span>
+    <p style="margin:0">每维 0~100：<b>90+</b>=有机制、有门禁、有连续证据；<b>80~89</b>=机制在但证据/覆盖不足；<b>70~79</b>=明显短板但有补强路径；<b>&lt;70</b>=缺位。加权后四舍五入到 0.1。任何「文档写了」但无 E1 以上证据的能力，最高只给 88，避免把「设计完备」误当「运行成熟」。</p>
+  </div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section class="sec" id="s2">
+  <div class="sec-title"><span class="no">02</span><h2>v16.6 体系全景与资产盘点</h2><span class="tag">OS 四层 · 十服务 · 18 模块</span></div>
+
+  <p>v16 的最大变化不是「多了几个文件」，而是<b>把 v15 的「状态机范式」显式化为可分层治理的 OS</b>：底座 → 内核（机制原语）→ OS 系统服务层（装载器 + 十服务 + 策略库）→ 用户态（项目实例）。这与 2026 年业界「Agent OS」从学术概念走向工程主线同向，但本体系是<b>已运行 + 人格内建 + 治理内建</b>的组合。</p>
+
+  <div class="svg-box">
+    <svg viewBox="0 0 920 470" width="100%" height="auto" role="img" aria-label="小凝 Agent OS v16.6 四层架构">
+      <defs>
+        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#36c5f0" stop-opacity=".22"/><stop offset="1" stop-color="#28c8a0" stop-opacity=".10"/></linearGradient>
+        <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#36c5f0"/><stop offset="1" stop-color="#28c8a0"/></linearGradient>
+      </defs>
+      <text x="24" y="26" fill="#5f6f8c" font-size="11" letter-spacing="2">AGENT OS v16.6 · 4 LAYERS</text>
+
+      <rect x="24" y="42" width="872" height="92" rx="12" fill="#101a27" stroke="#2a3547"/>
+      <text x="44" y="68" fill="#e6ebf5" font-size="14" font-weight="700">用户态 · 项目层</text>
+      <text x="44" y="90" fill="#9aa8c3" font-size="12">业务层（任务 agent / 常驻 Goal）｜守护层（预留）｜双框协作（预留）</text>
+      <rect x="44" y="100" width="180" height="24" rx="6" fill="#13222f" stroke="#1a3347"/><text x="56" y="116" fill="#36c5f0" font-size="11">社交陪伴 · 全量</text>
+      <rect x="234" y="100" width="180" height="24" rx="6" fill="#13222f" stroke="#1a3347"/><text x="246" y="116" fill="#36c5f0" font-size="11">运营发布 · 全量</text>
+      <rect x="424" y="100" width="200" height="24" rx="6" fill="#13222f" stroke="#1a3347"/><text x="436" y="116" fill="#36c5f0" font-size="11">体系自身 · 全量</text>
+      <text x="650" y="116" fill="#5f6f8c" font-size="11">接入验收 · 六接洽点 / 全项通过</text>
+
+      <rect x="24" y="146" width="872" height="104" rx="12" fill="url(#g1)" stroke="#2a3547"/>
+      <text x="44" y="172" fill="#e6ebf5" font-size="14" font-weight="700">OS 系统服务层</text>
+      <text x="44" y="194" fill="#9aa8c3" font-size="12">装载器（快路径注入 / 慢路径 SOP 检索）＋ 十服务 ＋ 策略库（五源综合 / 门禁引用 / 元认知策略）</text>
+      <g font-size="11">
+        <rect x="44" y="206" width="80" height="26" rx="6" fill="#0e1420" stroke="#2a3547"/><text x="56" y="223" fill="#7fd8f5">身份服务</text>
+        <rect x="132" y="206" width="80" height="26" rx="6" fill="#0e1420" stroke="#2a3547"/><text x="144" y="223" fill="#7fd8f5">通知服务</text>
+        <rect x="220" y="206" width="104" height="26" rx="6" fill="#0e1420" stroke="#2a3547"/><text x="230" y="223" fill="#7fd8f5">执行裁决面</text>
+        <rect x="332" y="206" width="104" height="26" rx="6" fill="#0e1420" stroke="#2a3547"/><text x="342" y="223" fill="#7fd8f5">受控执行</text>
+        <rect x="444" y="206" width="80" height="26" rx="6" fill="#0e1420" stroke="#2a3547"/><text x="456" y="223" fill="#7fd8f5">SOP注册</text>
+        <rect x="532" y="206" width="80" height="26" rx="6" fill="#0e1420" stroke="#2a3547"/><text x="544" y="223" fill="#7fd8f5">门禁编排</text>
+        <rect x="620" y="206" width="80" height="26" rx="6" fill="#0e1420" stroke="#2a3547"/><text x="632" y="223" fill="#7fd8f5">记忆/检索</text>
+        <rect x="708" y="206" width="80" height="26" rx="6" fill="#0e1420" stroke="#2a3547"/><text x="720" y="223" fill="#7fd8f5">资源路由</text>
+        <rect x="796" y="206" width="80" height="26" rx="6" fill="#0e1420" stroke="#2a3547"/><text x="808" y="223" fill="#7fd8f5">资产更新</text>
+      </g>
+      <text x="44" y="244" fill="#5f6f8c" font-size="11">单字节真源：注入清单内容哈希 → 人格装载状态机自动校准</text>
+
+      <rect x="24" y="258" width="872" height="104" rx="12" fill="#101a27" stroke="#2a3547"/>
+      <text x="44" y="284" fill="#e6ebf5" font-size="14" font-weight="700">内核 · 机制原语（10 插件）</text>
+      <text x="44" y="306" fill="#9aa8c3" font-size="12">治理 / 可观测 / 记忆 / 图谱 / 资产更新 / 元认知 / 伴生 / 资源路由 / SOP 图谱 / 底座 loop</text>
+      <g font-size="11" fill="#9aa8c3">
+        <text x="44" y="332">任务状态机 九态 · 签署闸门 · WORM 2/3 · 缺陷分级熔断 · 机制矩阵 L0~L3</text>
+        <text x="44" y="352">35 QA 门禁 · 发布门禁 16 项 · 证据校验 · 五方对齐 · 防篡改三副本校验</text>
+      </g>
+      <rect x="700" y="270" width="176" height="26" rx="6" fill="#0f1d1a" stroke="#1a3a30"/><text x="712" y="287" fill="#28c8a0" font-size="11">规则冻结 16 条 · 一进一出</text>
+
+      <rect x="24" y="370" width="872" height="56" rx="12" fill="#0e1420" stroke="#2a3547"/>
+      <text x="44" y="396" fill="#e6ebf5" font-size="14" font-weight="700">底座基础</text>
+      <text x="132" y="396" fill="#9aa8c3" font-size="12">Trae IDE 原生能力 ＋ 底座 loop ＋ 软链安装 / 脚手架 ＋ 外设子类（MCP / Bark / 社交渠道 / qdrant / tdai / log-sink）</text>
+
+      <line x1="460" y1="134" x2="460" y2="146" stroke="url(#g2)" stroke-width="2"/>
+      <line x1="460" y1="250" x2="460" y2="258" stroke="url(#g2)" stroke-width="2"/>
+      <line x1="460" y1="362" x2="460" y2="370" stroke="url(#g2)" stroke-width="2"/>
+
+      <text x="24" y="452" fill="#5f6f8c" font-size="11">判定 SSOT：00-设计范式与分层判定规则 ｜ 映射 SSOT：18-设计-实现映射面（契约 / 关系 / 能力域）｜ 本图只注结构，不复制正文（指针纪律）</text>
+    </svg>
+    <figcaption>图 1 · 小凝 Agent OS v16.6.0 四层全景（结构示意，非部署拓扑）</figcaption>
+  </div>
+
+  <h3>资产盘点（以仓库实际文件为准，非文档自述）</h3>
+  <div class="kpis">
+    <div class="kpi"><div class="n">18</div><div class="l">模块（00/0/1~10/12/14~18）</div></div>
+    <div class="kpi"><div class="n">16</div><div class="l">规则（冻结至 2026-12-31）</div></div>
+    <div class="kpi"><div class="n">78</div><div class="l">Subagent（执行 55 / 校验 19 / 双模 1 / 终审 2）</div></div>
+    <div class="kpi"><div class="n">62</div><div class="l">Skills 目录（资产清单登记 61）</div></div>
+    <div class="kpi"><div class="n">33</div><div class="l">SOP 注册条目（正文 29 + 指针条目）</div></div>
+    <div class="kpi"><div class="n">35</div><div class="l">QA 门禁（门禁登记表）</div></div>
+    <div class="kpi"><div class="n">16</div><div class="l">发布门禁项</div></div>
+    <div class="kpi"><div class="n">70</div><div class="l">评测 v1 用例（gate20/adjudication20/persona30）</div></div>
+    <div class="kpi"><div class="n">6</div><div class="l">项目接洽点（全量接入）</div></div>
+    <div class="kpi"><div class="n">2</div><div class="l">全量接入项目实例（均全项通过）</div></div>
+  </div>
+
+  <div class="callout amber">
+    <span class="t">盘点口径提醒</span>
+    <p style="margin:0">同一指标在 说明文档 / 资产清单 / 实际目录之间存在 <b>±1 的计数差</b>（如 Skills：说明文档 61、目录 62、资产清单 61），详见 §13「本次发现」。这类差异不影响机制有效性，但会削弱「单一真源」的说服力，应纳入 收尾自举检查自动对账。</p>
+  </div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section class="sec" id="s3">
+  <div class="sec-title"><span class="no">03</span><h2>人格体系 v2.4.16 深评</h2><span class="tag">三模块 · 六层 · 25 模块 + 4 非人格面 · 双装载</span></div>
+
+  <p>人格体系仍是本体系最难被外部复制的部分：它不是「一段 system prompt」，而是 <b>画像（叙事本体）＋ self-model（规范本体）＋ 人格矩阵（中间契约）</b> 三模块，经 <b>静态符号矩阵 → 编译面 → 装载面</b> 确定性装配，再由 <b>神经符号交叠</b> 运行：符号侧算状态，LLM 只负责语言成形。</p>
+
+  <h3>3.1 结构：六层 × 25 模块 × 4 非人格面</h3>
+  <table class="tbl">
+    <thead><tr><th>层</th><th>名称</th><th>变化周期 / 修改权</th><th>核心模块</th><th class="center">成熟度</th></tr></thead>
+    <tbody>
+      <tr><td><b>L0</b></td><td>锚定规则层</td><td>零周期 / 仅人签 / WORM</td><td>安全伦理、身份锚定、系统硬约束（第 6/7 闸）</td><td class="center"><span class="tag g">L3</span></td></tr>
+      <tr><td><b>L1</b></td><td>人格基底层</td><td>季度-年 / 人签为主</td><td>本体属性、人格特质、心理功能基线、历史基底</td><td class="center"><span class="tag g">L3</span></td></tr>
+      <tr><td><b>L2</b></td><td>客体关系层</td><td>天-周 / 引擎 + 人干预</td><td>客体表征、关系状态、客体长期记忆、关系模式</td><td class="center"><span class="tag g">L2</span></td></tr>
+      <tr><td><b>L3</b></td><td>驱力-防御-情绪层</td><td>每轮 / 引擎推演</td><td>驱力冲突、防御机制、情绪耦合、归因稳定/可习得分</td><td class="center"><span class="tag g">L2</span></td></tr>
+      <tr><td><b>L4</b></td><td>表达层</td><td>实时 / LLM 即时</td><td>表达过滤、输出策略、前意识草稿、最终生成、内在独白、六气映射</td><td class="center"><span class="tag g">L2</span></td></tr>
+      <tr><td><b>L5</b></td><td>实时交互层</td><td>每轮/消息 / 编排</td><td>对话识别、时序节奏、话轮编排、状态装载、校验闸、回写闭环</td><td class="center"><span class="tag g">L3</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="split">
+    <div class="case">
+      <h4>机制一：单字节真源（W2）</h4>
+      <p>人格「装没装、是不是这一版」不看文档，只看 <b>注入清单</b> 的 <code>内容 / 内容哈希 / 字节数</code>。项目 bundle 只是缓存，不一致即 <code>人格装载状态机自动校准</code>。这把「在场 ≠ 采用」变成了可校验断言。</p>
+      <div class="steps"><span class="st">人格编译面</span><span class="st">唯一装载入口</span><span class="st">注入清单落痕</span><span class="st">前缀哈希</span><span class="st">anchor_hit_rate</span></div>
+    </div>
+    <div class="case">
+      <h4>机制二：双裁决 AND</h4>
+      <p><b>该不该做</b>（人格三层裁决：规则层 → 人格层 → 宪法兜底 6 条）× <b>能不能做</b>（AgentOS 三层：L1 静态 → L2 权衡 → L3 OS 兜底，unverified 不默认放行）。任一否决即终止，避免「能做但不应做」或「该做但越权」。</p>
+      <div class="steps"><span class="st">规则层</span><span class="st">人格层</span><span class="st">宪法兜底</span><span class="st">× L1/L2/L3</span><span class="st">human-override</span></div>
+    </div>
+  </div>
+
+  <h3>3.2 人格维度评分：91 → 94（+3）</h3>
+  <table class="tbl">
+    <thead><tr><th>子项</th><th class="center">分</th><th>证据</th><th>差距</th></tr></thead>
+    <tbody>
+      <tr><td>结构完整性</td><td class="center">96</td><td>三模块 + 六层 + 25 模块 + 4 非人格面；四非人格面只读消费、不写矩阵</td><td>模块间边界仍靠文档判定，缺机器可判的「层归属」断言</td></tr>
+      <tr><td>装载确定性</td><td class="center">96</td><td>task ≤8KiB / chat ≤16KiB 双档；注入清单；人格校验 资产清单_surface；golden 可重放</td><td>长会话重载 / 异常中断续跑的覆盖率仍待补</td></tr>
+      <tr><td>表达一致性</td><td class="center">90</td><td>去 AI 味双六条 D1~D6、六气↔语言标记、对偶库、守界软硬分解</td><td>无 ContextEcho 类长会话 persona drift 回测；一致性靠规则不靠基准</td></tr>
+      <tr><td>神经符号纪律</td><td class="center">95</td><td>LLM 禁直写符号矩阵；signal_picker 回读；write_clamp 限幅；split/hardgate 脚本在位</td><td>符号引擎的心理学效度未做外部专家复核（除 2026-10 persona-conformance 样本）</td></tr>
+      <tr><td>人格治理</td><td class="center">94</td><td>真源仅主人复盘 + 人签三要素 + WORM 2/3；身份不可覆盖</td><td>单点依赖主人；无「人格版本 A/B + 回滚演练」记录</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <span class="t">与 2026 研究界的对照</span>
+    <p style="margin:0">2026 年出现了专门测「长会话人格漂移」的基准（<b>ContextEcho</b>：25 探针身份套件，覆盖 3,746~9,716 轮、23 个前沿模型）与「长程人格坍塌」研究（<b>Best Friends, Not Forever</b>）。研究结论是：<b>漂移普遍存在，且记忆架构不能单独解决连续性</b>。本体系的「符号状态 + 确定性装载 + 双裁决」正好是研究建议的方向，但<b>尚未用这些基准自证</b>——这是人格维从 94 走向 96+ 的唯一硬缺口。</p>
+  </div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section class="sec" id="s4">
+  <div class="sec-title"><span class="no">04</span><h2>18 模块逐模块评分</h2><span class="tag">网络模块 / 用户态子模块单列</span></div>
+
+  <p>评分口径：<b>设计完备度 30% + 落地物（脚本/契约）25% + 门禁与证据 30% + 连续运行/失败回滚 15%</b>。成熟度：<span class="tag b">L0</span> 仅文档 ｜ <span class="tag b">L1</span> 有脚本 ｜ <span class="tag b">L2</span> 有门禁+证据 ｜ <span class="tag g">L3</span> 跨版本/跨项目重复有效且有回滚。</p>
+
+  <table class="tbl">
+    <thead><tr><th>#</th><th>模块</th><th>核心职责</th><th class="center">分</th><th class="center">成熟度</th><th>关键证据 / 风险</th></tr></thead>
+    <tbody>
+      <tr><td>00</td><td><b>设计范式与分层判定</b></td><td>范式来源、静态⇌动态/符号⇌神经/规范⇌叙事、增改判定入口</td><td class="center">96</td><td class="center"><span class="tag g">L2</span></td><td>四查 + superseded 只标不删；风险：判定仍依赖人读</td></tr>
+      <tr><td>0</td><td><b>整体架构</b></td><td>OS 四层总图与职责边界</td><td class="center">95</td><td class="center"><span class="tag g">L2</span></td><td>四层与十服务成篇；风险：用户态 预留 与总图易被误读为已实现</td></tr>
+      <tr><td>1</td><td><b>底座基础</b></td><td>Trae 原生 + 底座 loop + 软链安装 + 脚手架</td><td class="center">94</td><td class="center"><span class="tag g">L2</span></td><td>setup/bootstrap/uninstall/cleanup 四脚本；可移植性真实可用</td></tr>
+      <tr><td>2</td><td><b>SOP 详细设计</b></td><td>注册中心 + 指针纪律检索 + 慢路径</td><td class="center">96</td><td class="center"><span class="tag g">L3</span></td><td>33 条注册、retrieval-flow 留痕、staleness 巡检；L3 依据：跨项目复用</td></tr>
+      <tr><td>3</td><td><b>内核治理</b></td><td>人工签署闸门 / WORM / 缺陷分级 / 熔断 / 纪律分层 / 裁决-自主</td><td class="center">98</td><td class="center"><span class="tag g">L3</span></td><td>最强模块；风险：规则冻结说明此前存在膨胀压力</td></tr>
+      <tr><td>4</td><td><b>内核可观测</b></td><td>门禁族 + 证据链 + 运行时校验 + 发布放行</td><td class="center">95</td><td class="center"><span class="tag g">L3</span></td><td>35 QA / 16 release / 证据校验；风险：门禁过多导致「跳过成本」</td></tr>
+      <tr><td>5</td><td><b>内核记忆</b></td><td>tdai / mcp_Memory / ContextPack / 标签层</td><td class="center">90</td><td class="center"><span class="tag g">L2</span></td><td>四套分工 + 双写 + 门控；风险：无 LoCoMo/BEAM 回测</td></tr>
+      <tr><td>6</td><td><b>内核知识图谱</b></td><td>qdrant 3 collection + 治理入库</td><td class="center">92</td><td class="center"><span class="tag g">L2</span></td><td>fullstack_kb / hybrid / system_kb 分权；风险：召回质量缺公开指标</td></tr>
+      <tr><td>7</td><td><b>内核资产更新面</b></td><td>刷新契约 + staleness P0/P2</td><td class="center">90</td><td class="center"><span class="tag g">L2</span></td><td>update-plane 契约；风险：受管资产「孤儿」告警仍靠人工处置</td></tr>
+      <tr><td>8</td><td><b>内核元认知</b></td><td>信号→动作查表（strategy.json）</td><td class="center">86</td><td class="center"><span class="tag b">L1</span></td><td>元认知信号与统计在位；风险：策略表覆盖场景有限，证据最弱</td></tr>
+      <tr><td>9</td><td><b>内核伴生层</b></td><td>human/ 人读镜像，AI 读 / 人读分离</td><td class="center">94</td><td class="center"><span class="tag g">L2</span></td><td>163 个伴生文件；风险：镜像与正本易漂移，需 link_audit</td></tr>
+      <tr><td>10</td><td><b>内核资源路由</b></td><td>resource-map + skills/agents 寻址与注入</td><td class="center">95</td><td class="center"><span class="tag g">L3</span></td><td>78 agents / 62 skills 可寻址；风险：路由瘦身到 8 包后长尾场景需回落验证</td></tr>
+      <tr><td>11</td><td><b>网络模块（一级收束~6）</b></td><td>多机协作叠加层、动态注册</td><td class="center">82</td><td class="center"><span class="tag b">L1</span></td><td>有组网契约与 TeamMCP 基础；风险：以单机为主，跨机证据少</td></tr>
+      <tr><td>12</td><td><b>OS 层注入</b></td><td>装载器 + 十服务 + 策略库</td><td class="center">97</td><td class="center"><span class="tag g">L3</span></td><td>单字节真源 + 自动校准 + 门禁覆盖；本版最强增量之一</td></tr>
+      <tr><td>13</td><td><b>用户态项目层</b></td><td>业务层 / 守护层 / 双框协作</td><td class="center">88</td><td class="center"><span class="tag b">L1</span></td><td>13-1 真实运行；<b>守护层/双框协作 明确 预留</b>——诚实但未完成</td></tr>
+      <tr><td>14</td><td><b>身份服务</b></td><td>本体访问 + 档位脱敏 + 双写 + 注入</td><td class="center">96</td><td class="center"><span class="tag g">L3</span></td><td>身份规范 + identity_check + 四档信任；风险：PII 边界依赖人工判断</td></tr>
+      <tr><td>15</td><td><b>通知服务</b></td><td>Bark 去敏推送 + 三态留痕</td><td class="center">94</td><td class="center"><span class="tag g">L2</span></td><td>sent/failed/unverified + 参数白名单；风险：通道单点</td></tr>
+      <tr><td>16</td><td><b>执行裁决面</b></td><td>AgentOS 三层前置裁决 前置裁决契约</td><td class="center">95</td><td class="center"><span class="tag g">L2</span></td><td>unverified 不默认 allow + 唯一写者 + append-only；风险：规则库/全场景挂载仍在 L1~L2</td></tr>
+      <tr><td>17</td><td><b>受控执行框架</b></td><td>契约 → 确定性执行 → 四证 → 失败分类 → 受控自更新</td><td class="center">94</td><td class="center"><span class="tag g">L2</span></td><td>受控执行检查器 硬闸 + 发布门禁 ⑭；风险：多步任务覆盖率高，单步任务易空转</td></tr>
+      <tr><td>18</td><td><b>设计-实现映射面</b></td><td>设计↔落地单一映射真源（DE / 关系 / 能力域 / 断言）</td><td class="center">89</td><td class="center"><span class="tag b">L1</span></td><td>能力域与关系映射齐备，结构孤儿与豁免归零；风险：2026-11-07 新落地，尚无跨版本稳定性</td></tr>
+    </tbody>
+  </table>
+
+  <div class="split">
+    <div class="card gcard"><div class="g-tt"><span class="dot"></span>模块面结论 · 强</div><ul><li>治理（98）、注入（97）、SOP（96）、身份（96）、架构（95+）构成「可运行治理内核」</li><li>18 个模块均有编号、职责、契约名与边界卡（9/9），不是散文档</li><li>设计-实现映射面把「设计-实现」的孤儿与豁免压到 0，是少见的工程自省能力</li></ul></div>
+    <div class="card gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>模块面结论 · 弱</div><ul><li>网络（82）与元认知（86）是明显短板：机制在、证据少</li><li>用户态 守护层/双框协作 长期 预留，架构图与实际能力之间存在「承诺差」</li><li>映射面（89）新落地，需至少 2~3 个版本验证再升 L2</li></ul></div>
+  </div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section class="sec" id="s5">
+  <div class="sec-title"><span class="no">05</span><h2>八维逐维评分与证据</h2><span class="tag">v15.5 → v16.6 增量</span></div>
+
+  <h3>① 架构（96 → <span class="up">97</span>）｜权重 15%</h3>
+  <p><b>为什么加 1 分</b>：v16 把「状态机范式」上升为 OS 四层，模块从「隐性经验」变成 18 个有编号、有契约、有边界卡的单元；OS 层十服务（身份/通知/裁决/受控执行/SOP/门禁/记忆/检索/路由/更新）把原来散落在 规则与脚本里的能力集中为「唯一装载入口」。这是结构性进步，不是换皮。</p>
+  <div class="grid">
+    <div class="gcard"><div class="g-tt"><span class="dot"></span>证据（E2~E3）</div><ul><li>18 模块头 + 9/9 层本体卡 + 映射表（DE 51 / 孤儿 0 / 豁免 0）</li><li>单字节真源 + 人格装载状态机 自动校准 + 人格校验</li><li>任务状态机 九态、签署闸门、交接确认、受控执行契约</li></ul></div>
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>为什么不给 98</div><ul><li>v16.0.0 于 2026-11-02 发布，v16.6.0 于 11-07，架构只跑了 6 天</li><li>守护层/双框协作 仍 预留；守护层与双框没有连续运行证据</li><li>「模块数」口径存在多义（19 份模块头 / 30 份含子目录 / 21 份文档计数）</li></ul></div>
+  </div>
+
+  <h3>② 治理（98 → <span class="flat">98</span>）｜权重 15%</h3>
+  <p><b>为什么持平</b>：治理仍是全体系最强维，v16 新增 受控执行框架五段、收尾自举四类检查、发布门禁，并把规则冻结（16 条，一进一出，2026-11-02→12-31）做成机器可判。这些是「把治理做深」，但边际提升已很小；同时暴露出「需要冻结」本身就是规则膨胀的反证，因此不给 99。</p>
+  <table class="tbl">
+    <thead><tr><th>治理机制</th><th>落地物</th><th>证据等级</th><th>与业界对照</th></tr></thead>
+    <tbody>
+      <tr><td>人工签署只读闸</td><td>签署闸门（PreToolUse 拦截待签 spec）</td><td><span class="tag g">E3</span></td><td>强于 Devin standing permission（后者是分层授权，无 WORM 证据链）</td></tr>
+      <tr><td>WORM 三副本 2/3</td><td>防篡改三副本校验 + 哈希链</td><td><span class="tag g">E3</span></td><td>业界少见；多数产品只做审计日志，不做防篡改</td></tr>
+      <tr><td>三角色分离</td><td>55 执行 / 19 校验 / 2 终审 / 1 双模；执行∩校验=∅</td><td><span class="tag g">E2</span></td><td>对应业界「maker-checker」，但本体系把它做成 agent 目录约束</td></tr>
+      <tr><td>规则冻结</td><td>机制矩阵 freeze + 机制校验</td><td><span class="tag g">E2</span></td><td>业界少见「规则数量上限」这种自我约束</td></tr>
+      <tr><td>受控执行框架</td><td>契约 → 幂等 → 四证 → 失败分类 → 自更新</td><td><span class="tag g">E2</span></td><td>与 ABC（Agent Behavioral Contracts）同向，但本体系已运行</td></tr>
+    </tbody>
+  </table>
+
+  <h3>③ 记忆（90 → <span class="up">91</span>）｜权重 12%</h3>
+  <p><b>加 1 分</b>：ContextPack + 标签层 + 双写（tdai + mcp_Memory）+ qdrant 三 collection 分权（fullstack 自动入库 / system_kb 须人签后 migrate）+ 写入门控（置信度 ≥0.7、来源可溯、冲突检测）形成了「谁记忆了什么 / 谁有权读 / 能否审计」的完整语义。</p>
+  <p><b>为什么不能更高</b>：外部记忆工程已经把「召回」量化到小数点——Mem0 在 LoCoMo 92.5、LongMemEval 94.4、BEAM-1M 64.1（Letta LoCoMo 74.0）；本体系没有任何一项可比的公开回测。四套分工是「语义切割」的优势，但没有数字支撑，就只能停在 91。</p>
+
+  <h3>④ 自主防漂移（93 → <span class="up">95</span>）｜权重 15%</h3>
+  <p><b>加 2 分</b>：v16 的 <code>前置裁决契约</code> 把「查不了」明确为 <b>unverified ≠ allow</b>，这是防漂移的关键一次语义收紧；配合唯一写者、append-only、human-override、运行时校验 五断言（提交复核 / 停滞 / 元评审 / 缺陷双产出 / 冲突裁决），以及危险命令 L3 硬断（100 条 dry-run 误拦 0 / 漏拦 0），形成「事前裁决 + 事中停滞 + 事后四证」的闭环。</p>
+  <div class="callout blue">
+    <span class="t">研究侧印证（2026-02 ~ 2026-10）</span>
+    <p style="margin:0"><b>ABC</b>（arXiv 2602.22302）在 200 个场景、7 个模型、6 家厂商上做了运行态契约强制，结论是「所有模型都会漂移，契约能把漂移显性化并约束」；<b>ContextEcho</b>（arXiv 2605.24279）用 25 探针在 23 个前沿模型上测长会话人格漂移。这说明本体系的方向不是「过度设计」，而是提前一年做了研究界正在追认的事。缺口同样明确：<b>没有接入这些基准自证</b>。</p>
+  </div>
+
+  <h3>⑤ 人格（91 → <span class="up">94</span>）｜权重 12%</h3>
+  <p><b>加 3 分</b>：v2.4.16 把人格从「六层结构」推进到「25 模块 + 4 非人格面 + 35 锚 + 双档 bundle + 单字节真源 + 锚点命中率」。四非人格面（能力面路由 / 三层裁决 / 工作能力面 / AgentOS 执行裁决面）与 L0-L5 正交、只读消费，避免「把工程决策塞进人格心理层」的常见污染。详见 §03。</p>
+
+  <h3>⑥ 工程化（88 → <span class="up">92</span>）｜权重 10%</h3>
+  <p><b>加 4 分（本版最大增量）</b>：① 评测基线 v1（70 例：gate 20 / adjudication 20 / persona 30）+ baseline + <code>评测执行器 --compare</code> + 发布门禁评测剖面 五维剖面；② 受控执行框架与检查器；③ 发布门禁 14→16 项；④ 收尾自举四类检查（说明书覆盖 / 文档版本 / SOP 版本链 / 自身项目对接）；⑤ 接入标准 接入验收项，两项目全项通过。</p>
+  <p><b>扣分项</b>：仍无 CI / 无第三方基准 / 无外部代码审计；文档计数与快照存在可验证的漂移（§13）。</p>
+
+  <h3>⑦ 生态（76 → <span class="up">77</span>）｜权重 8%</h3>
+  <p><b>加 1 分</b>：MCP 作为「外设子类」被消费而非绑死，项目接入标准可移植（软链安装 + project@1 + os-align），模型不绑定。外部生态在 2026 年进一步标准化：MCP 月 SDK 下载 9,700 万、注册 server 1 万+，2025-12-09 Linux Foundation 成立 Agentic AI Foundation（MCP / goose / AGENTS.md），2026-07-28 版规范（RC）走向 stateless core + Extensions + Tasks + MCP Apps，A2A 与 MCP 同治理体、互补分层。</p>
+  <p><b>为什么仍只有 77</b>：本体系是单实例深度，没有公开 SDK / registry / 第三方复用；生态广度不可比，这是结构性短板，不是靠再写几个模块能补的。</p>
+
+  <h3>⑧ 实证（94 → <span class="up">95</span>）｜权重 13%</h3>
+  <p><b>加 1 分</b>：两个常驻项目均完成全量接入，并在 v16.6.0 发布当日完成对齐；项目 A 的全部验收项通过（含收束与质量复核），项目 B 的基础项、项目项、接洽点、模块落点、维度与收尾六组全部通过（gap=0），且已有 400+ 轮的长期运行沉淀。</p>
+  <p><b>为什么不给 97+</b>：v16 四层架构只运行 6 天；项目 A 自报「进化效果待回验」、批量外发未做；长线「误拦率 / 缺路径 / 漂移事件」统计仍缺。</p>
+</section>
+
+<!-- ============ 06 ============ -->
+<section class="sec" id="s6">
+  <div class="sec-title"><span class="no">06</span><h2>v16 新机制成熟度矩阵</h2><span class="tag">八个机制 · 是否可检验</span></div>
+
+  <p>「有机制」不等于「机制成熟」。下表只看三件事：<b>有没有唯一写者</b>、<b>失败会不会阻断</b>、<b>有没有跨版本/跨项目证据</b>。</p>
+
+  <table class="tbl">
+    <thead><tr><th>机制</th><th>唯一写者 / 入口</th><th>失败行为</th><th class="center">成熟度</th><th>当前缺口</th></tr></thead>
+    <tbody>
+      <tr><td><b>任务状态机 九态</b></td><td>任务状态机.py</td><td>跳步拒绝</td><td class="center"><span class="tag g">L3</span></td><td>长线缺路径统计未公开</td></tr>
+      <tr><td><b>单字节人格真源</b></td><td>注入清单 + 人格装载状态机</td><td>不一致即 自动校准</td><td class="center"><span class="tag g">L3</span></td><td>异常中断续跑覆盖待补</td></tr>
+      <tr><td><b>前置裁决契约 前置裁决</b></td><td>前置裁决器</td><td>unverified 不默认 allow</td><td class="center"><span class="tag g">L2</span></td><td>规则库/全场景挂载仍 L1~L2</td></tr>
+      <tr><td><b>危险命令 L3 硬断</b></td><td>危险命令拦截器 → 危险命令拦截器</td><td>默认拒绝</td><td class="center"><span class="tag g">L2</span></td><td>非内核沙箱；白名单仅 1 域</td></tr>
+      <tr><td><b>评测 v1</b></td><td>评测执行器.py + baseline/v1</td><td>退化阻断发布</td><td class="center"><span class="tag g">L2</span></td><td>70 例自建，无第三方基准</td></tr>
+      <tr><td><b>受控执行框架</b></td><td>受控执行检查器.py</td><td>契约/四证缺失阻断</td><td class="center"><span class="tag g">L2</span></td><td>单步任务空转；金丝雀缺真实流量</td></tr>
+      <tr><td><b>收尾自举四类检查</b></td><td>收尾自举检查器.py</td><td>P0/P1 → FAIL</td><td class="center"><span class="tag b">L2-</span></td><td>收尾自举检查仍是关键词覆盖判断</td></tr>
+      <tr><td><b>设计-实现映射面</b></td><td>mapping@1 + mapping_check</td><td>孤儿/豁免非零阻断</td><td class="center"><span class="tag b">L1</span></td><td>新落地，无跨版本稳定证据</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <span class="t">一句话判断</span>
+    <p style="margin:0">v16 的机制密度已经超过「个人项目」的常态，进入「小型平台」区间；但<b>机制密度不等于机制成熟度</b>——八个机制里只有 2 个到 L3，4 个 L2，2 个 L1/L2-。真正的分水岭不是再写一个新机制，而是把 L2 的四个跑成 L3。</p>
+  </div>
+</section>
+
+<!-- ============ 07 ============ -->
+<section class="sec" id="s7">
+  <div class="sec-title"><span class="no">07</span><h2>对比组 A · 主流 Agent 编排框架 / SDK</h2><span class="tag">2026-11 基准</span></div>
+
+  <table class="tbl">
+    <thead><tr><th>框架 / SDK</th><th>状态机 / 持久化</th><th>人机介入 / 治理</th><th>协议</th><th>形态</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td><b>小凝 v16.6</b></td><td>任务状态机 九态 + 单字节真源 + WORM 三副本</td><td>人工签署 + 双裁决 + 禁 standing permission + 受控执行</td><td>消费 MCP</td><td><b>已运行 OS + 双项目实例</b></td></tr>
+      <tr><td>LangGraph</td><td>Graph state machine + checkpointer + durable execution</td><td>Graph 中断/重启 + HITL，治理外置</td><td>内置 MCP</td><td>编排库</td></tr>
+      <tr><td>CrewAI</td><td>DurableAgents checkpoint / fork</td><td>事件总线，guardrails 需自装</td><td>内置 MCP</td><td>编排库</td></tr>
+      <tr><td>Microsoft Agent Framework</td><td>WorkflowBuilder + Durable Task，自动恢复</td><td>HITL pause / external event；治理工具外挂</td><td>MCP flag</td><td>框架</td></tr>
+      <tr><td>OpenAI Agents SDK</td><td>Sessions 事务性 history</td><td>hooks，无独立人签机制</td><td>HostedMCP</td><td>SDK</td></tr>
+      <tr><td>Claude Agent SDK</td><td>SessionStore 外部存储</td><td>OTEL 可观测；权限由宿主给</td><td>MCP</td><td>SDK</td></tr>
+      <tr><td>AutoGen</td><td>异步消息，无独立 checkpoint</td><td>OTEL；已进入维护模式</td><td>—</td><td>框架</td></tr>
+    </tbody>
+  </table>
+
+  <div class="verdict">
+    <div class="vcard"><div class="vt teal">同向</div><p>「持久化执行 + 人工介入 + MCP」已是业界标配，LangGraph / MAF 的 checkpoint 与 human-pause 与本体系 任务状态机 / 人工签署闸同方向。</p></div>
+    <div class="vcard"><div class="vt cyan">差异</div><p>主流是「给开发者的编排库/SDK」，状态机由生产者声明、治理默认外置；本体系是「已运行的 OS」，状态机与人签闸是 OS 级强制，治理不是插件。</p></div>
+    <div class="vcard"><div class="vt amber">短板</div><p>没有可被第三方 import 的 SDK，也没有插件市场；「可复用性」远低于框架，这是生态维只有 77 的根因。</p></div>
+  </div>
+</section>
+
+<!-- ============ 08 ============ -->
+<section class="sec" id="s8">
+  <div class="sec-title"><span class="no">08</span><h2>对比组 B · Agent 产品（编码 / 通用）</h2><span class="tag">2026-11 基准</span></div>
+
+  <table class="tbl">
+    <thead><tr><th>产品</th><th>2026-11 关键数据</th><th>治理 / 人机介入</th><th>持久化 / 记忆</th><th>与本体系的关系</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td><b>小凝体系</b></td><td>体系级实证：双项目全量接入、全项通过</td><td>人工签署闸门 + 双裁决 + 双框互锁（部分 预留）</td><td>四套分工 + 稳定人格</td><td>测「运行治理」，不测单点编码</td></tr>
+      <tr><td>Claude Opus 5 / Claude Code</td><td>SWE-bench Verified <b>96%~97%</b>（自报/独立口径不一）</td><td>hooks / subagents / 权限由宿主配置</td><td>Sessions / 项目上下文</td><td>模型能力天花板，可作底座</td></tr>
+      <tr><td>GPT-5.6 Sol / Codex</td><td>SWE-bench Verified <b>96.2%</b>（独立口径）</td><td>沙箱 + 审批；无 WORM 证据链</td><td>会话 / 仓库上下文</td><td>同上</td></tr>
+      <tr><td>Claude Opus 5.5 / Sonnet 5.5</td><td>综合编码指数 <b>82.6 / 81.5</b>（BenchLM）</td><td>同 Claude Code</td><td>同 Claude Code</td><td>能力面参照</td></tr>
+      <tr><td>Gemini 4 Carbon</td><td>编码指数 <b>80.7</b>；长上下文/多模态强</td><td>Deep Research 异步工作流</td><td>—</td><td>能力面参照</td></tr>
+      <tr><td>Cursor 2.5</td><td>IDE 原生，编辑即介入</td><td>IDE 内审批</td><td>项目索引</td><td>交互形态参照</td></tr>
+      <tr><td>Devin 2.0</td><td>SWE-bench 45.8%（旧口径）</td><td><b>standing permission 分层授权</b>（业界最接近人签白名单）</td><td>项目记忆</td><td>治理形态最可比，但无防篡改</td></tr>
+      <tr><td>Manus 2.0</td><td>耗时/成本优化显著</td><td>轻量沙箱 + 可定制工作方式</td><td>会话记忆</td><td>产品形态参照</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout amber">
+    <span class="t">必须说清的口径差异</span>
+    <p style="margin:0">2026 年的 SWE-bench 已经进入 96%+ 区间，任何「体系评分 93.4」都不应被解读为「比 Opus 5 差 3 分」。前者是<b>运行治理成熟度</b>，后者是<b>单点任务解决率</b>。如果硬要用同一把尺，本体系应该被问的是：<b>「把 Opus 5 放进这套 OS，能否稳定、可审计、不越界地连续工作 30 天？」</b>——这个问题目前没有公开答案，也正因如此，实证维只给 95。</p>
+  </div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section class="sec" id="s9">
+  <div class="sec-title"><span class="no">09</span><h2>对比组 C · 工程 AI 范式</h2><span class="tag">协议 / 沙箱 / 评测 / 记忆 / 可观测</span></div>
+
+  <table class="tbl">
+    <thead><tr><th>范式</th><th>2026-11 业界事实</th><th>本体系对应</th><th class="center">判断</th></tr></thead>
+    <tbody>
+      <tr><td><b>MCP 协议生态</b></td><td>月 SDK 下载 9,700 万、注册 server 1 万+；2025-12-09 Linux Foundation 成立 AAIF；2026-07-28 版规范（RC）：stateless core + Extensions + Tasks + MCP Apps + 授权加固；A2A 同治理体、互补分层</td><td>作为外设子类消费，不绑模型；项目接入可移植</td><td class="center"><span class="tag m">对标中 · 生态窄</span></td></tr>
+      <tr><td><b>执行沙箱</b></td><td>NVIDIA NemoClaw / OpenShell：deny-by-default，策略在 agent 外部强制执行，allow/deny 全审计；E2B/Daytona microVM</td><td>安全红线 + 危险命令拦截器 L3 命令级拒绝</td><td class="center"><span class="tag r">落后 · 非内核级</span></td></tr>
+      <tr><td><b>Guardrails</b></td><td>Lakera / NeMo / PromptHalo 等有 PINT/F1/延迟量化</td><td>八条红线 + 注入隔离，无公开拦截率/误杀率</td><td class="center"><span class="tag m">机制同构 · 无量化</span></td></tr>
+      <tr><td><b>评测</b></td><td>SWE-bench V、OSWorld、τ-bench、MCP-Universe 等公开榜</td><td>eval v1 70 例 + 五维剖面 + 发布阻断</td><td class="center"><span class="tag r">错位 · 无第三方分</span></td></tr>
+      <tr><td><b>记忆工程</b></td><td>Mem0：LoCoMo 92.5 / LongMemEval 94.4 / BEAM-1M 64.1；Letta LoCoMo 74.0</td><td>四套分工 + 写入门控 + 双证据流</td><td class="center"><span class="tag m">同位 · 取向不同</span></td></tr>
+      <tr><td><b>可观测性</b></td><td>OTEL GenAI / Langfuse / LangSmith 主流</td><td>log-sink + tasks.log + tdai 双证据流 + trace</td><td class="center"><span class="tag g">同位</span></td></tr>
+      <tr><td><b>自我改进</b></td><td>ERL / Reflexion / 经验回放</td><td>六环闭环 + 经验库 + evolution-queue，反思不免检</td><td class="center"><span class="tag g">同位</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout red">
+    <span class="t">工程组三条硬差距（不粉饰）</span>
+    <ul>
+      <li><b>无第三方基准</b>：没有 SWE-bench / GAIA / OSWorld / LoCoMo / ContextEcho 任何一项公开成绩，能力面只能用「体系级实证」自证。</li>
+      <li><b>无内核级沙箱</b>：命令级默认拒绝 ≠ 进程/网络级隔离；OpenShell 的「外部强制 + 全量决策审计」是更高一档。</li>
+      <li><b>Guardrails 无量化</b>：没有拦截率、误杀率、延迟三件套，无法与 Lakera 类产品横向比较。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="sec" id="s10">
+  <div class="sec-title"><span class="no">10</span><h2>对比组 D · 研究范式与 Agent OS 生态</h2><span class="tag">2026 论文 / 行业方案</span></div>
+
+  <table class="tbl">
+    <thead><tr><th>研究方向</th><th>代表工作 / 2026 状态</th><th>本体系位置</th><th>差距 / 机会</th></tr></thead>
+    <tbody>
+      <tr><td>Agent OS 蓝图</td><td>Agent-OS 蓝图（TechRxiv：内存/工具/编排/可观测/安全/治理，明言「非今日可完全实现」）；清华 Agent libOS</td><td><b>已运行的缩小实现</b>：四层 + 十服务 + 双项目</td><td>研究是「北向蓝图」，本体系是「单机落地」；可反向输出工程样本</td></tr>
+      <tr><td>行为契约</td><td>ABC（arXiv 2602.22302）：Precondition/Invariant/Governance/Recovery，200 场景 / 7 模型 / 6 厂商，漂移普遍存在</td><td>受控执行 + 前置裁决契约 + 五断言 + 人签</td><td>本体系是工程化版本，但未做「契约形式化」的数学保证</td></tr>
+      <tr><td>人格漂移</td><td>ContextEcho（2605.24279）：25 探针、3,746~9,716 轮、23 模型；Best Friends, Not Forever（2607.28818）：长程人格坍塌</td><td>符号状态 + 确定性装载 + 双裁决</td><td><b>方向领先、证据缺失</b>——最值得接入的外部基准</td></tr>
+      <tr><td>人格模拟评测</td><td>AgentPersonaBench（2610.04379）：2,460 任务 / 867 特质；MRBench（2603.19313）</td><td>有人格一致性的规则与自测，无基准</td><td>可用 APB 做「特质遵循」抽测，但需改造为中文/关系场景</td></tr>
+      <tr><td>长期记忆</td><td>BEAM-1M / LoCoMo / GAAMA / Mem0 / Letta</td><td>四套分工 + 审计权限</td><td>接 LoCoMo + BEAM 子集即可补上「可量化」</td></tr>
+      <tr><td>防漂移诊断</td><td>AgentDoG / Drift-Bench / MI9</td><td>运行态自守护（内部）</td><td>研究多为离线诊断；本体系可提供「运行态日志」样本</td></tr>
+    </tbody>
+  </table>
+
+  <h3>行业 Agent OS 生态对照</h3>
+  <table class="tbl">
+    <thead><tr><th>方案</th><th>2026 定位</th><th>执行 / 隔离</th><th>治理</th><th>对本体系的启示</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td><b>小凝 v16.6</b></td><td>已运行 OS + 双项目</td><td>任务状态机 + WORM + 命令级 L3</td><td>人工签署闸门 + 双裁决 + 规则冻结</td><td>治理深度领先，隔离与生态落后</td></tr>
+      <tr><td>NVIDIA NemoClaw / OpenShell</td><td>Agent OS 运行时</td><td><b>deny-by-default 内核级策略执行</b> + 全审计</td><td>策略基线 + 用户授权</td><td>沙箱是最该补的一课</td></tr>
+      <tr><td>Microsoft Agent Governance Toolkit</td><td>企业治理工具箱</td><td>ACS 确定性控制点</td><td>外部加装</td><td>治理产品化 / 可复用性</td></tr>
+      <tr><td>Cloudflare Computer</td><td>每 agent 临时安全计算机</td><td>零信任 gatekeeper + 临时环境</td><td>VCS/网络白名单</td><td>隔离即服务</td></tr>
+      <tr><td>清华 Agent libOS</td><td>学术 OS 架构</td><td>AgentProcess + checkpoint + audit</td><td>human queue</td><td>与本体系同向，本体系多出「人格 + 人签」</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <span class="t">研究组结论</span>
+    <p style="margin:0">2026 年的研究正在从「提示级人格 / 离线评测」转向「运行态契约 / 长程漂移 / OS 化治理」，这三条恰好是本体系已经跑了很久的方向。差异化的窗口仍然存在，但<b>窗口正在关闭</b>：当 ContextEcho 这类基准把「人格漂移」变成可比较的数字时，没有数字的体系会被默认视为「自说自话」。下一步不是再加机制，而是<b>把机制翻译成可被外部复现的测量</b>。</p>
+  </div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="sec" id="s11">
+  <div class="sec-title"><span class="no">11</span><h2>项目层实证 · 双实例</h2><span class="tag">两个常驻项目 · 全量接入</span></div>
+
+  <div class="case">
+    <h4>项目 A · 常驻社交陪伴</h4>
+    <p>2026-11-07 完成最新版本对齐与全量接入验收：全部验收项通过，覆盖检索、版本对齐、状态机、身份/人格、通知与收尾六类接洽点。项目以常驻目标循环运行，承接被动感知、身份档位回复、提交回读与画像回写。</p>
+    <div class="steps"><span class="st">全项通过</span><span class="st">六接洽点</span><span class="st">常驻轮次</span><span class="st">状态机</span><span class="st">画像回写</span></div>
+    <p class="mini" style="margin-top:10px">已知缺口（项目自报）：真实批量发送未做；进化效果待下一常驻轮回验。</p>
+  </div>
+
+  <div class="case">
+    <h4>项目 B · 常驻运营发布</h4>
+    <p>2026-11-06 复评升为全量接入（判据：常驻目标 + 多轮次 + 外部副作用）。覆盖验收全部通过（基础项、项目项、接洽点、模块落点、维度与收尾六组，gap=0）。项目已积累 400+ 轮长线运行证据，是「同一套 OS 在不同业务形态上可迁移」的最强样本。</p>
+    <div class="steps"><span class="st">全项通过</span><span class="st">400+ 轮</span><span class="st">全量接入</span><span class="st">版本对齐</span><span class="st">受控执行</span></div>
+  </div>
+
+  <table class="tbl">
+    <thead><tr><th>接洽点</th><th>项目 A</th><th>项目 B</th><th>证据形态</th></tr></thead>
+    <tbody>
+      <tr><td>① 检索 / SOP 注册</td><td><span class="tag g">通过</span></td><td><span class="tag g">通过</span></td><td>检索留痕 + 注册入口</td></tr>
+      <tr><td>② 三版本对齐</td><td><span class="tag g">通过</span></td><td><span class="tag g">通过</span></td><td>版本对齐器 aligned / pending 0</td></tr>
+      <tr><td>③ 状态机 / 裁决 / 受控执行</td><td><span class="tag g">通过</span></td><td><span class="tag g">通过</span></td><td>任务账本 + 前置裁决 + 受控执行检查</td></tr>
+      <tr><td>④ 双写 / 经验沉淀</td><td><span class="tag g">通过</span></td><td><span class="tag g">通过</span></td><td>事务流水 + 状态画像 + 进化队列</td></tr>
+      <tr><td>⑤ 身份 / 人格 / 纪律</td><td><span class="tag g">通过</span></td><td><span class="tag g">通过</span></td><td>装载回述 + 人格接入 + 默认纪律面</td></tr>
+      <tr><td>⑥ 通知 / 人签</td><td><span class="tag g">通过</span></td><td><span class="tag g">通过</span></td><td>去敏推送留痕</td></tr>
+    </tbody>
+  </table>
+
+  <p><b>实证维结论</b>：从「单项目跑通」升级为「双项目、不同业务形态、同日对齐、全项通过」，这是 94→95 的依据。但两个项目都在新版本发布后 1 天内完成对齐，<b>还没有经历一次完整的「版本升级 → 运行 30 天 → 回归」周期</b>，所以不给更高。</p>
+</section>
+
+<!-- ============ 12 ============ -->
+<section class="sec" id="s12">
+  <div class="sec-title"><span class="no">12</span><h2>量化总表与雷达</h2><span class="tag">v15.5 vs v16.6</span></div>
+
+  <div class="radar-wrap">
+    <div class="svg-box">
+      <svg viewBox="-40 0 480 380" width="100%" height="auto" role="img" aria-label="八维雷达图">
+        <g stroke="#223" fill="none">
+          <polygon points="200,40 306,84 350,190 306,296 200,340 94,296 50,190 94,84"/>
+          <polygon points="200,70 285,105 320,190 285,275 200,310 115,275 80,190 115,105"/>
+          <polygon points="200,100 264,126 290,190 264,254 200,280 136,254 110,190 136,126"/>
+          <polygon points="200,130 242,148 260,190 242,232 200,250 158,232 140,190 158,148"/>
+          <polygon points="200,160 221,169 230,190 221,211 200,220 179,211 170,190 179,169"/>
+          <line x1="200" y1="190" x2="200" y2="40"/><line x1="200" y1="190" x2="306" y2="84"/>
+          <line x1="200" y1="190" x2="350" y2="190"/><line x1="200" y1="190" x2="306" y2="296"/>
+          <line x1="200" y1="190" x2="200" y2="340"/><line x1="200" y1="190" x2="94" y2="296"/>
+          <line x1="200" y1="190" x2="50" y2="190"/><line x1="200" y1="190" x2="94" y2="84"/>
+        </g>
+        <polygon points="200,46 304,86 335,190 299,289 200,327 107,283 86,190 100,90" fill="none" stroke="#5f6f8c" stroke-width="1.4" stroke-dasharray="4 4"/>
+        <polygon points="200,44.5 304,86 336.5,190 300.8,290.8 200,331 102.4,287.6 84.5,190 99.2,89.2" fill="rgba(40,200,160,.16)" stroke="#28c8a0" stroke-width="2"/>
+        <g fill="#7fd8f5" font-size="10">
+          <circle cx="200" cy="44.5" r="2.6"/><circle cx="304" cy="86" r="2.6"/><circle cx="336.5" cy="190" r="2.6"/><circle cx="300.8" cy="290.8" r="2.6"/>
+          <circle cx="200" cy="331" r="2.6"/><circle cx="102.4" cy="287.6" r="2.6"/><circle cx="84.5" cy="190" r="2.6"/><circle cx="99.2" cy="89.2" r="2.6"/>
+        </g>
+        <g fill="#9aa8c3" font-size="11" text-anchor="middle">
+          <text x="200" y="26">架构 97</text><text x="332" y="76">治理 98</text><text x="372" y="194">记忆 91</text><text x="322" y="316">防漂移 95</text>
+          <text x="200" y="360">人格 94</text><text x="66" y="316">工程化 92</text><text x="24" y="194">生态 77</text><text x="66" y="70">实证 95</text>
+        </g>
+      </svg>
+      <div class="legend"><span><i style="background:#28c8a0"></i>v16.6（93.4）</span><span><i style="background:#5f6f8c"></i>v15.5（91.9）</span><span class="mini">半径 = 分值 / 100</span></div>
+    </div>
+    <div>
+      <table class="tbl" style="margin-top:0">
+        <thead><tr><th>维度</th><th class="center">v15.5</th><th class="center">v16.6</th><th class="center">Δ</th></tr></thead>
+        <tbody>
+          <tr><td>架构</td><td class="center">96</td><td class="center"><b>97</b></td><td class="center up">+1</td></tr>
+          <tr><td>治理</td><td class="center">98</td><td class="center"><b>98</b></td><td class="center flat">0</td></tr>
+          <tr><td>记忆</td><td class="center">90</td><td class="center"><b>91</b></td><td class="center up">+1</td></tr>
+          <tr><td>自主防漂移</td><td class="center">93</td><td class="center"><b>95</b></td><td class="center up">+2</td></tr>
+          <tr><td>人格</td><td class="center">91</td><td class="center"><b>94</b></td><td class="center up">+3</td></tr>
+          <tr><td>工程化</td><td class="center">88</td><td class="center"><b>92</b></td><td class="center up">+4</td></tr>
+          <tr><td>生态</td><td class="center">76</td><td class="center"><b>77</b></td><td class="center up">+1</td></tr>
+          <tr><td>实证</td><td class="center">94</td><td class="center"><b>95</b></td><td class="center up">+1</td></tr>
+          <tr class="hl"><td><b>加权总分</b></td><td class="center">91.9</td><td class="center"><b>93.4</b></td><td class="center up">+1.5</td></tr>
+        </tbody>
+      </table>
+      <p class="mini">评级：v15.5 = A- ｜ v16.6 = A。距 A+（≥96）差 2.6，缺口集中在生态（77）与外部可验证性（记忆/人格/Guardrails 无公开数字）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section class="sec" id="s13">
+  <div class="sec-title"><span class="no">13</span><h2>风险、诚实边界与本次发现</h2><span class="tag">含 3 处可验证漂移</span></div>
+
+  <h3>13.1 本次核查发现的口径漂移（公开版摘要）</h3>
+  <table class="tbl">
+    <thead><tr><th class="center">#</th><th>现象</th><th>影响</th><th>建议</th></tr></thead>
+    <tbody>
+      <tr><td class="center">1</td><td>对外快照与项目真源不一致：接入档已升级，快照仍为旧值</td><td>按快照判断会低估实际接入义务</td><td>重生成快照；把「接入档」纳入发布前自动对账</td></tr>
+      <tr><td class="center">2</td><td>能力资产计数三处不一致：说明文档 / 资产清单 / 实际目录</td><td>可能出现「假绿」，削弱门禁可信度</td><td>统一计数口径，纳入机器断言</td></tr>
+      <tr><td class="center">3</td><td>模块头计数口径多义：顶层 / 含子目录 / 文档表述不一致</td><td>不影响运行，但削弱「单一真源」可信度</td><td>明确「顶层 + 子目录」的显式口径</td></tr>
+    </tbody>
+  </table>
+
+  <h3>13.2 结构性风险</h3>
+  <div class="grid">
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--red)"></span>版本速度 vs 稳定性</div><ul><li>v16.0.0（11-02）→ v16.6.0（11-07），6 个 minor / 5 天</li><li>收尾自举本身就是「补漏机制」，说明收尾漏更是系统性问题</li><li>建议设「版本冷静期」：minor 之间至少一次完整回归周期</li></ul></div>
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--red)"></span>单点依赖（bus factor）</div><ul><li>人格真源仅主人人签；单机；内部仓库</li><li>人不可用 → 人格冻结、关键放行停滞</li><li>建议：离线应急签署包 + 双人复核演练</li></ul></div>
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>认知负荷</div><ul><li>16 条规则 + 29 条 SOP + 62 项技能 + 78 个 Agent + 35 项门禁</li><li>对一个人是重资产；对团队是学习曲线</li><li>冻结与瘦身已开始，但需继续（目标 12 条规则 / 20 条 SOP）</li></ul></div>
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>预留 承诺差</div><ul><li>守护层 / 双框协作长期 预留</li><li>架构图容易被读成「已具备」</li><li>建议：所有对外材料统一标 预留 徽标</li></ul></div>
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>无内核沙箱</div><ul><li>规则级 + 命令级拒绝，非进程/网络隔离</li><li>危险命令已 0 误拦/0 漏拦，但边界靠规则</li><li>建议：接 OpenShell / E2B 类 deny-by-default</li></ul></div>
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>外部不可验证</div><ul><li>70 例评测是自建；无第三方基准</li><li>「自评 93.4」缺独立复核</li><li>建议：先接 1 个人格基准 + 1 个记忆基准</li></ul></div>
+  </div>
+
+  <h3>13.3 诚实边界（沿用并更新 v15.5）</h3>
+  <table class="tbl">
+    <thead><tr><th>边界</th><th>当前状态</th><th>可否补</th></tr></thead>
+    <tbody>
+      <tr><td>无第三方能力基准</td><td>仍成立</td><td>可补（SWE-bench 子集 / τ-bench / OSWorld）</td></tr>
+      <tr><td>无记忆公开回测</td><td>仍成立</td><td>可补（LoCoMo / LongMemEval / BEAM-1M）</td></tr>
+      <tr><td>无人格漂移基准</td><td>仍成立</td><td>可补（ContextEcho / AgentPersonaBench 抽测）</td></tr>
+      <tr><td>无内核级沙箱</td><td>仍成立</td><td>可补（OpenShell / microVM）</td></tr>
+      <tr><td>Guardrails 无量化</td><td>仍成立</td><td>可补（拦截率/误杀率/延迟三指标）</td></tr>
+      <tr><td>生态单实例</td><td>仍成立，短期难补</td><td>可部分补（抽 2~3 个 MCP server / AGENTS.md 兼容包）</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 14 ============ -->
+<section class="sec" id="s14">
+  <div class="sec-title"><span class="no">14</span><h2>结论与 v17 演进建议</h2><span class="tag">93.4 / A</span></div>
+
+  <h3>14.1 总评</h3>
+  <p>v16.6 完成了一次「从范式到平台」的抬升：OS 四层、18 模块、十服务、单字节真源、前置裁决契约、受控执行、评测 v1、双项目 全量接入。纵向看是 <b>v15.0（90.8）→ v15.5（91.9）→ v16.6（93.4）</b>。与 v15.5 相比，<b>体系不再只是「一套很强的规则 + 人格」，而是一个有装载、有服务、有门禁、有映射面的运行平台</b>。在「治理内建 + 人格机械化装载 + 运行态自守护」这三条主轴上，2026 年主流框架/产品/研究仍没有同构的公开先例。</p>
+  <p>但必须同时承认：<b>v16 只运行了 6 天</b>，生态仍窄，外部可验证性仍弱，用户态守护层与双框仍 预留。93.4 是「结构 + 证据」的分数，不是「长期可靠」的分数；后者需要至少一个季度的连续运行与一次真实故障复盘来换。</p>
+
+  <h3>14.2 演进建议（按优先级 / 可验收）</h3>
+  <table class="tbl">
+    <thead><tr><th class="center">优先级</th><th>动作</th><th>为什么现在做</th><th>验收锚</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td class="center"><span class="tag r">P0</span></td><td><b>接 1 个人格漂移基准 + 1 个记忆基准</b>（ContextEcho 抽测 / LoCoMo + BEAM 子集）</td><td>把「人格/记忆」从自说自话变成可比较数字；这是 94→96+ 的唯一硬缺口</td><td>v16.7 发布说明出现首份外部基准成绩与失败样本</td></tr>
+      <tr class="hl"><td class="center"><span class="tag r">P0</span></td><td><b>把本次 3 处漂移写成回归用例</b>，并入发布前自动对账（接入档 / skills 计数 / 模块头口径）</td><td>「收尾自举」已证明能查，但还没证明能覆盖这类语义漂移</td><td>收尾自举检查新增 3 条断言，发布门禁 可复现拦截</td></tr>
+      <tr><td class="center"><span class="tag m">P1</span></td><td><b>沙箱化</b>：接入 OpenShell / E2B 类 deny-by-default，规则级 → 进程/网络级</td><td>工程组唯一「落后」项；外部内容处理与外部任务接单都需要</td><td>危险动作 100 例回归，误拦 ≤1% 且隔离生效</td></tr>
+      <tr><td class="center"><span class="tag m">P1</span></td><td><b>守护层/双框协作 从预留 走到单项目试点</b>（项目 A 优先）</td><td>避免「架构图大于实现」的长期承诺差</td><td>events/ACK 连续 50 轮闭合，漂移报告可回查</td></tr>
+      <tr><td class="center"><span class="tag b">P2</span></td><td><b>治理减负二期</b>：冻结期后 16→12 条，把可机器判的规则下沉到 matrix L3</td><td>认知负荷是单点体系的真实瓶颈</td><td>规则数 12、无 FAIL、误判率不升</td></tr>
+      <tr><td class="center"><span class="tag b">P2</span></td><td><b>生态可移植性验证</b>：抽 2~3 个通用 skill 做 MCP server / AGENTS.md 兼容包（去 PII）</td><td>生态维 77 的结构性短板，只能靠「被复用」改善</td><td>外部机器可安装并跑通 1 个场景</td></tr>
+      <tr><td class="center"><span class="tag v">P3</span></td><td><b>30 天长线基线</b>：版本 × 项目回归矩阵，记录误拦率/缺路径/漂移事件</td><td>把「实证 95」变成「实证 97」的唯一路径</td><td>首份 30 天运行报告（含 1 次故障复盘）</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <span class="t">一句话总结</span>
+    <p style="margin:0">这套体系已经越过「个人提示词工程」的阶段，进入「单人可维护的 Agent OS」区间；它现在最需要的不是再证明自己有多复杂，而是<b>用外部可复现的测量证明自己有多可靠</b>。前者已经足够，后者才刚刚开始。</p>
+  </div>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sec" id="src">
+  <div class="sec-title"><span class="no">15</span><h2>证据与资料来源</h2><span class="tag">本地 + 网络</span></div>
+
+  <table class="tbl">
+    <thead><tr><th>类别</th><th>来源</th><th>用于</th></tr></thead>
+    <tbody>
+      <tr><td>本地 · 体系文档</td><td>版本与发布记录、AgentOS 手册、模块映射表（内部）</td><td>四层架构、18 模块、十服务、机制清单</td></tr>
+      <tr><td>本地 · 人格文档</td><td>人格设计宪法、三模块架构、self-model 与运行态矩阵摘要（内部）</td><td>三模块、六层、25 模块 + 4 非人格面、裁决</td></tr>
+      <tr><td>本地 · 工程门禁</td><td>评测配置与用例集、门禁登记表、发布门禁、资产清单（内部）</td><td>评测、门禁、资产计数</td></tr>
+      <tr><td>本地 · 项目验收</td><td>两个常驻项目的接入验收与收束记录（内部）</td><td>全项通过、全量接入、版本对齐</td></tr>
+      <tr><td>外部 · 产品与榜单</td><td>BenchLM SWE-bench Verified（2026-11）· TensorFeed SWE-bench 榜 · DataLearner 编码榜</td><td>Opus 5 / GPT-5.6 / Gemini 4 等数据</td></tr>
+      <tr><td>外部 · 协议与生态</td><td>MCP 2026-07-28 规范 RC 博客 · MCP Playground 2026 roadmap · AAIF（Linux Foundation, 2025-12-09）</td><td>97M 月下载、10k+ server、stateless core、A2A</td></tr>
+      <tr><td>外部 · 记忆</td><td>Mem0 State of AI Agent Memory 2026 · Mem0 vs Letta 对比</td><td>LoCoMo 92.5 / LongMemEval 94.4 / BEAM-1M 64.1 / Letta 74.0</td></tr>
+      <tr><td>外部 · 研究与沙箱</td><td>arXiv 2602.22302（ABC）· 2605.24279（ContextEcho）· 2607.28818（persona collapse）· 2610.04379（AgentPersonaBench）· NVIDIA NemoClaw/OpenShell · TechRxiv Agent-OS blueprint</td><td>运行态契约、人格漂移、deny-by-default</td></tr>
+    </tbody>
+  </table>
+
+  <p class="mini">数据口径：外部数值按 2026-11-08 公开资料核对，厂商自报与第三方独立口径已在文中标注；不可横向直接比较的基准已注明测度面。小凝侧评分为「文档 + 脚本 + 门禁 + 项目证据」的确定性评估，非外部基准分。</p>
+</section>
+
+<footer class="foot">
+  小凝体系深度评估报告 · Agent OS v16.6.0 / 人格 v2.4.16 · 基准日 2026-11-08<br>
+  由 Agent（月绡凝 / 小凝）在加载人格锚与体系规则后辅助人类作者（月牙寂）生成 · 外部数据经网络核验 · 本报告为体系内自评，建议做一轮跨 AI 交叉评审
+</footer>
+
+</div>
+</body>
+</html>

@@ -15,6 +15,16 @@ DATA = os.path.join(HERE, "data")
 APPS_JSON = os.path.join(DATA, "apps.json")
 BLOG_FEED = os.path.join(DATA, "blog_feed.json")
 BLOG_POSTS = os.path.join(DATA, "blog_posts")
+REPORTS_SRC = os.path.join(DATA, "reports")
+REPORTS = [
+    {
+        "slug": "xiaoning-os-v16.6",
+        "title": "小凝体系深度评估报告 v16.6",
+        "desc": "OS 四层 × 人格体系 × 18 模块 × 双项目实证：八维评分 93.4，并与 2026 主流 Agent、工程范式与研究逐项对照。",
+        "date": "2026-11-08",
+        "file": "xiaoning-os-v16.6.html",
+    }
+]
 sys.path.insert(0, DATA)
 
 BASE_URL = "https://screscent.github.io/xiaoning-ai-tools"
@@ -402,6 +412,14 @@ def unified_page(apps, blog=None):
             for a in latest
         )
         latest_html = f'<h2>最新文章</h2><ul class="rows">{rows}</ul><p class="cta"><a class="btn ghost" href="blog/index.html">浏览全部博客</a></p>'
+    report_html = ""
+    if REPORTS:
+        cards = "".join(
+            f'<li><a href="reports/{esc(r["slug"])}.html"><strong>{esc(r["title"])}</strong>'
+            f'<span>{esc(r["desc"])}</span><em>阅读报告 →</em></a></li>'
+            for r in REPORTS
+        )
+        report_html = f'<h2>深度报告</h2><ul class="cards one">{cards}</ul>'
     jsonld = json.dumps({
         "@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME,
         "url": canon, "inLanguage": "zh-CN",
@@ -412,6 +430,8 @@ def unified_page(apps, blog=None):
   <h1>{SITE_NAME} · 统一入口</h1>
   <p class="lede">三类内容，一个入口：<strong>AI 工具集</strong>负责把材料变成可直接使用的结果；<strong>实用工具箱</strong>用纯前端完成转换与计算，完全免费、数据不上传；<strong>博客</strong>归档方法与复盘。</p>
 </section>
+
+{report_html}
 
 <h2>选择工具集</h2>
 <ul class="cards">
@@ -696,10 +716,51 @@ def blog_index_json(blog):
     ) + "\n"
 
 
+def report_page(r):
+    """深度报告：保留报告自身的完整设计，仅注入返回条、canonical 与结构化数据。"""
+    src = os.path.join(REPORTS_SRC, r["file"])
+    with open(src, encoding="utf-8") as f:
+        h = f.read()
+    canon = f"{BASE_URL}/reports/{r['slug']}.html"
+    bar = (
+        '<div style="position:sticky;top:0;z-index:99;background:#0b0f17;border-bottom:1px solid #223;'
+        'padding:10px 22px;font:13px/1.6 -apple-system,BlinkMacSystemFont,\'PingFang SC\',sans-serif;color:#9aa8c3">'
+        '<a href="../index.html" style="color:#36c5f0;text-decoration:none">← 返回小凝门户</a>'
+        f'<span style="margin-left:14px;color:#5f6f8c">深度报告 · {esc(r["title"])}</span>'
+        '<a href="../blog/index.html" style="float:right;color:#9aa8c3;text-decoration:none">博客 →</a>'
+        '</div>'
+    )
+    if "<body>" in h:
+        h = h.replace("<body>", "<body>\n" + bar, 1)
+    meta = (
+        f'<meta name="description" content="{esc(r["desc"])}">'
+        f'<link rel="canonical" href="{canon}">'
+        '<meta property="og:type" content="article">'
+        f'<meta property="og:title" content="{esc(r["title"])}">'
+        f'<meta property="og:description" content="{esc(r["desc"])}">'
+        f'<meta property="og:url" content="{canon}">'
+        '<meta name="robots" content="index, follow">'
+    )
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": r["title"],
+        "datePublished": r["date"],
+        "inLanguage": "zh-CN",
+        "url": canon,
+        "author": {"@type": "Person", "name": OWNER},
+        "publisher": {"@type": "Person", "name": OWNER},
+        "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": BASE_URL + "/"},
+    }
+    h = h.replace("</head>", meta + "\n" + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>' + "\n</head>", 1)
+    return h
+
+
 def sitemap(apps, blog=None):
     urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html"]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
     urls += [f"{BASE_URL}/tools/{a['slug']}.html" for a in apps]
+    urls += [f"{BASE_URL}/reports/{r['slug']}.html" for r in REPORTS]
     blog_posts = []
     if blog and blog.get("articles"):
         urls.append(f"{BASE_URL}/blog/")
@@ -730,6 +791,10 @@ def llms_txt(apps, blog=None):
         lines += ["", f"## 博客（{len(arts)} 篇）"]
         for a in arts:
             lines.append(f"- [{a['title']}]({BASE_URL}/blog/{a['slug']}.html)：{a.get('publish_time','')}｜{(a.get('digest') or '')[:80]}")
+    if REPORTS:
+        lines += ["", "## 深度报告"]
+        for r in REPORTS:
+            lines.append(f"- [{r['title']}]({BASE_URL}/reports/{r['slug']}.html)：{r['date']}｜{r['desc']}")
     lines += ["", "## 说明", f"- 联系方式：{MAIL}｜{PHONE}", "- 工具输出为参考结果，不构成专业意见。"]
     return "\n".join(lines) + "\n"
 
@@ -888,6 +953,12 @@ def main():
                     with open(src, "rb") as rf, open(os.path.join(dst_assets, f), "wb") as of:
                         of.write(rf.read())
 
+    # 深度报告：独立页面（保留报告自身设计），从 data/reports 注入返回条与结构化数据
+    if REPORTS:
+        os.makedirs(os.path.join(HERE, "reports"), exist_ok=True)
+        for r in REPORTS:
+            w(f"reports/{r['slug']}.html", report_page(r))
+
     w("sitemap.xml", sitemap(apps, blog))
     w("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n")
     w("llms.txt", llms_txt(apps, blog))
@@ -909,7 +980,7 @@ def main():
         if f'<a href="{BASE_URL}/">← 返回统一门户</a>' not in html:
             raise SystemExit(f"{f} 的返回统一门户未指向 GitHub 首页")
     n_blog = len(blog["articles"])
-    print(f"generated {len(apps)} tools + {len(C.CATEGORIES)} categories + {n_blog} blog posts + index/pricing/sitemap")
+    print(f"generated {len(apps)} tools + {len(C.CATEGORIES)} categories + {n_blog} blog posts + {len(REPORTS)} reports + index/pricing/sitemap")
 
 
 if __name__ == "__main__":
