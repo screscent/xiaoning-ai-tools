@@ -2138,7 +2138,7 @@
  {
   "id": "key2pcdudk",
   "name": "思维导图与大纲合集",
-  "desc": "4 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出",
+  "desc": "5 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出、Mermaid 转写",
   "price": 0,
   "cat": "实用工具",
   "url": "https://key2pcdudk.app.weavefox.cn",
@@ -2146,19 +2146,23 @@
   "subapps": [
    {
     "key": "map",
-    "title": "工具A 导图生成"
+    "title": "导图生成"
    },
    {
     "key": "outline",
-    "title": "工具B 大纲转导图"
+    "title": "大纲转导图"
    },
    {
     "key": "templates",
-    "title": "工具C 场景模板"
+    "title": "场景模板"
    },
    {
     "key": "export",
-    "title": "工具D 导出"
+    "title": "SVG/PNG/Markdown 导出"
+   },
+   {
+    "key": "mermaid",
+    "title": "Mermaid 转写"
    }
   ]
  },
@@ -6215,7 +6219,7 @@
  {
   "id": "ury5ezdyk8",
   "name": "Git 场景命令合集",
-  "desc": "4 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并",
+  "desc": "5 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并、bisect 定位",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ury5ezdyk8.app.weavefox.cn",
@@ -6237,13 +6241,17 @@
    {
     "key": "conflict",
     "title": "冲突与合并"
+   },
+   {
+    "key": "bisect",
+    "title": "bisect 定位"
    }
   ]
  },
  {
   "id": "ekrwstvhte",
   "name": "Docker 命令与实战速查",
-  "desc": "4 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份",
+  "desc": "5 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份、Compose 文件",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ekrwstvhte.app.weavefox.cn",
@@ -6251,19 +6259,23 @@
   "subapps": [
    {
     "key": "container",
-    "title": "工具A 容器运行与排障"
+    "title": "容器运行与排障"
    },
    {
     "key": "image",
-    "title": "工具B 镜像构建与清理"
+    "title": "镜像构建与清理"
    },
    {
     "key": "network",
-    "title": "工具C 网络端口与连通"
+    "title": "网络端口与连通"
    },
    {
     "key": "volume",
-    "title": "工具D 数据卷与备份"
+    "title": "数据卷挂载与备份"
+   },
+   {
+    "key": "compose",
+    "title": "Compose 文件"
    }
   ]
  },

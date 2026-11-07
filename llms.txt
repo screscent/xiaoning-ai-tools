@@ -193,7 +193,7 @@
 - [图片对比与差异合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-ab-compare.html)：4 个对比工具同页：滑块、并排、叠影、差异高亮（免费）
 - [月历与年历合集](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-calendar.html)：4 个月历工具：月历排布、年历总览、周数对照、打印版式（免费）
 - [密码强度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/password-strength.html)：本地评估密码强度、熵值与改进建议（免费）
-- [思维导图与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/mind-map-generator.html)：4 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出（免费）
+- [思维导图与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/mind-map-generator.html)：5 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出、Mermaid 转写（免费）
 - [世界时钟与时区合集](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：4 个时区工具：多城时钟、时差计算、夏令时判断、会议对照（免费）
 - [图片打码与隐私遮挡合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：4 个打码工具同页：马赛克、模糊、黑块遮挡、裁切隐藏（免费）
 - [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：4 个摩斯工具同页：文本互转、音频播放、码表速查、练习测试（免费）
@@ -400,8 +400,8 @@
 - [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：6 个有氧工具同页：静息心率、VO2max、心率区间、训练负荷比、跨项目等效、训练计划（免费）
 - [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：6 个 SQL 工具同页：JSON→INSERT、INSERT→JSON、类型推断、关键字与 EXPLAIN 速查、SQL 格式化、连接与聚合，数据与语句一次转通（免费）
 - [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
-- [Git 场景命令合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：4 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并（免费）
-- [Docker 命令与实战速查](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：4 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份（免费）
+- [Git 场景命令合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：5 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并、bisect 定位（免费）
+- [Docker 命令与实战速查](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：5 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份、Compose 文件（免费）
 - [Nginx 配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/nginx-snippet-cheatsheet.html)：4 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域（免费）
 - [吉他和弦与调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/guitar-chord-fingering.html)：4 个吉他工具同页：和弦指法、调弦、变调夹、常用进行（免费）
 - [HTTP 接口调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-debug.html)：6 个接口工具同页：状态码速查、Mock JSON 生成、UA 解析、缓存头、CORS 与安全头、重试与超时，调接口本地自查（免费）
