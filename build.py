@@ -723,15 +723,38 @@ def report_page(r):
         h = f.read()
     canon = f"{BASE_URL}/reports/{r['slug']}.html"
     bar = (
-        '<div style="position:sticky;top:0;z-index:99;background:#0b0f17;border-bottom:1px solid #223;'
-        'padding:10px 22px;font:13px/1.6 -apple-system,BlinkMacSystemFont,\'PingFang SC\',sans-serif;color:#9aa8c3">'
+        '<div class="xn-bar" style="position:sticky;top:0;z-index:99;background:#0b0f17;border-bottom:1px solid #223;'
+        'padding:10px 22px;font:13px/1.6 -apple-system,BlinkMacSystemFont,\'PingFang SC\',sans-serif;color:#9aa8c3;'
+        'display:flex;align-items:center;gap:12px;flex-wrap:wrap">'
         '<a href="../index.html" style="color:#36c5f0;text-decoration:none">← 返回小凝门户</a>'
-        f'<span style="margin-left:14px;color:#5f6f8c">深度报告 · {esc(r["title"])}</span>'
-        '<a href="../blog/index.html" style="float:right;color:#9aa8c3;text-decoration:none">博客 →</a>'
+        f'<span class="t" style="color:#5f6f8c">深度报告 · {esc(r["title"])}</span>'
+        '<a href="../blog/index.html" style="margin-left:auto;color:#9aa8c3;text-decoration:none">博客 →</a>'
         '</div>'
     )
     if "<body>" in h:
         h = h.replace("<body>", "<body>\n" + bar, 1)
+    mobile = """<style>
+@media (max-width:820px){
+  html,body{overflow-x:hidden}
+  .wrap{padding:0 16px 60px}
+  .xn-bar .t{display:none}
+  .hero h1{font-size:30px}
+  .bigscore .num{font-size:52px}
+  .tbl{font-size:12px}
+}
+.xn-table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0}
+.xn-table-scroll .tbl{margin:0;min-width:640px}
+</style>
+<script>
+(function(){
+  document.querySelectorAll('table.tbl').forEach(function(t){
+    if(t.parentElement && t.parentElement.classList.contains('xn-table-scroll')) return;
+    var w=document.createElement('div'); w.className='xn-table-scroll';
+    t.parentNode.insertBefore(w,t); w.appendChild(t);
+  });
+})();
+</script>"""
+    h = h.replace("</body>", mobile + "\n</body>", 1)
     meta = (
         f'<meta name="description" content="{esc(r["desc"])}">'
         f'<link rel="canonical" href="{canon}">'
