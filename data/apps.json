@@ -1806,7 +1806,7 @@
  {
   "id": "sfw5ysy97s",
   "name": "文本加解密与哈希合集",
-  "desc": "4 个本地工具：AES 加密、AES 解密、哈希计算、校验对比，不上传",
+  "desc": "5 个本地工具：AES 加密、AES 解密、哈希计算、校验对比、HMAC 签名，不上传",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sfw5ysy97s.app.weavefox.cn",
@@ -1827,6 +1827,10 @@
    {
     "key": "verify",
     "title": "工具D 校验对比"
+   },
+   {
+    "key": "hmac",
+    "title": "工具E HMAC 签名验签"
    }
   ]
  },
@@ -3198,8 +3202,7 @@
  {
   "id": "atverkpmpa",
   "name": "IP 与子网计算合集",
-  "desc": "4 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查",
-  "tag": "免费",
+  "desc": "5 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网",
   "price": 0,
   "cat": "实用工具",
   "url": "https://atverkpmpa.app.weavefox.cn",
@@ -3220,6 +3223,10 @@
    {
     "key": "health",
     "title": "工具D 网关与配置自查"
+   },
+   {
+    "key": "v6",
+    "title": "工具E IPv6 子网划分"
    }
   ]
  },
@@ -3817,7 +3824,7 @@
  {
   "id": "ztbksuhvkt",
   "name": "URL 清理与参数合集",
-  "desc": "4 个链接工具：追踪参数清理、参数解析、链接重建、分享前检查",
+  "desc": "5 个链接工具：追踪参数清理、参数解析、链接重建、分享前检查、UTM 构建",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ztbksuhvkt.app.weavefox.cn",
@@ -3838,6 +3845,10 @@
    {
     "key": "check",
     "title": "工具D 分享检查"
+   },
+   {
+    "key": "utm",
+    "title": "工具E UTM 链接构建"
    }
   ]
  },
