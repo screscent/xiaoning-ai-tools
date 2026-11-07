@@ -149,7 +149,7 @@
 - [古诗词默写检测器](https://screscent.github.io/xiaoning-ai-tools/tools/poem-dictation.html)：学段篇目 → 题卡 + 答案 + 复习安排（¥1）
 - [内容选题日历生成器](https://screscent.github.io/xiaoning-ai-tools/tools/content-calendar.html)：平台赛道 → 30天选题 + 标题模板（¥2）
 - [图片压缩与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-compressor.html)：5 个图片工具同页：单图压缩、批量统一压缩、压缩前后对比、画质档位建议、尺寸缩放限制（免费）
-- [房贷与购房成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：4 个房贷工具同页：提前还款、利率月供、购房能力、二手房税费（免费）
+- [房贷与购房成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：5 个房贷工具同页：提前还款、利率月供、购房能力、二手房税费、租房买房对比（免费）
 - [二维码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：文本网址 → 本地生成 PNG，免费（免费）
 - [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：6 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、JSON 与 XML、结构统计、两段差异对比，键路径级定位（免费）
 - [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：6 个 CSV 工具同页：CSV→JSON、JSON→CSV、表格预览、分隔符检测、列筛选重排、编码与换行清洗，字段多时先挑列再转换（免费）
@@ -167,12 +167,12 @@
 - [文本统计与阅读时长合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-stats.html)：6 个文本工具同页：字符与字数统计、阅读与演讲时长、阅读进度、词频 Top10、段落与最长行、重复行与相似句（免费）
 - [图片裁剪器](https://screscent.github.io/xiaoning-ai-tools/tools/image-cropper.html)：本地裁剪头像/封面/商品图，比例尺寸自选可下载（免费）
 - [密码与账号安全合集](https://screscent.github.io/xiaoning-ai-tools/tools/password-generator.html)：6 个安全工具同页：密码生成、强度检测、PIN 码、口令短语、两步验证与恢复码、泄露自查与应急（免费）
-- [随机分组与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-group-picker.html)：4 个分组工具：随机分组、代表抽取、顺序排位、结果导出（免费）
+- [随机分组与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-group-picker.html)：5 个分组工具：随机分组、代表抽取、顺序排位、结果导出、淘汰赛对阵（免费）
 - [健康指标计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bmi-calorie-calculator.html)：6 个健康计算器同页：BMI 与理想体重、基础代谢与每日热量、体脂率估算、每日饮水建议、血压与心率解读、睡眠时长评估（免费）
 - [常用单位换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-converter.html)：5 个单位工具同页：长度、重量、面积体积、温度压力、数据带宽（免费）
 - [哈希校验工具](https://screscent.github.io/xiaoning-ai-tools/tools/hash-checker.html)：本地计算 SHA-256/384/512，文本与文件校验对比（免费）
 - [番茄专注与计时合集](https://screscent.github.io/xiaoning-ai-tools/tools/pomodoro-timer.html)：5 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划、番茄周期规划（免费）
-- [科学计算与函数合集](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：4 个计算工具同页：科学计算、函数常数、统计概率、计算历史（免费）
+- [科学计算与函数合集](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：5 个计算工具同页：科学计算、函数常数、统计概率、计算历史、矩阵运算（免费）
 - [Markdown 写作合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：5 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架、目录生成（免费）
 - [人民币大写金额转换器](https://screscent.github.io/xiaoning-ai-tools/tools/rmb-uppercase.html)：数字金额转中文大写，支持角分与银行汇款式（免费）
 - [图片水印与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：4 个水印工具同页：文字、图片、平铺、批量（免费）
