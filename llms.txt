@@ -177,7 +177,7 @@
 - [人民币大写金额转换器](https://screscent.github.io/xiaoning-ai-tools/tools/rmb-uppercase.html)：数字金额转中文大写，支持角分与银行汇款式（免费）
 - [图片水印与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：4 个水印工具同页：文字、图片、平铺、批量（免费）
 - [打字练习与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：4 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势（免费）
-- [待办与任务管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/local-todo.html)：4 个任务工具同页：待办清单、例行任务、日周回顾、归档导入导出（免费）
+- [待办与任务管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/local-todo.html)：5 个任务工具同页：待办清单、例行任务、日周回顾、归档导入导出、四象限优先级（免费）
 - [文本加解密与哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：4 个本地工具：AES 加密、AES 解密、哈希计算、校验对比，不上传（免费）
 - [取色与配色提取合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-extract.html)：4 个配色工具同页：单点取色、主色提取、CSS 变量、取色历史（免费）
 - [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：4 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出（免费）
@@ -255,7 +255,7 @@
 - [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：4 个光线工具同页：日出日落、黄金蓝调、昼长季节、拍摄规划（免费）
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
 - [行李打包清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：4 个出行清单：商务出差、海岛度假、户外徒步、亲子出行（免费）
-- [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：4 个几何工具同页：平面面积、立体体积、圆与角度、土方混凝土（免费）
+- [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：5 个几何工具同页：平面面积、立体体积、圆与角度、土方混凝土、刷漆用量估算（免费）
 - [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：4 个 Base32 工具同页：编码、解码、RFC 校验与编码互转，结果可复制（免费）
 - [中文标点全半角转换器](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：全角半角互转，按标点/数字/空格分范围处理（免费）
 - [AA 分摊与结算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bill-split.html)：4 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录（免费）
@@ -467,7 +467,7 @@
 - [攀岩与抱石入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/climbing-grade-gear-gym-kit.html)：4 个攀岩工具同页：难度等级换算、装备清单与预算、岩馆费用与训练量、训练计划与伤病预防（免费）
 - [观星入门与望远镜合集](https://screscent.github.io/xiaoning-ai-tools/tools/stargazing-moon-limit-site-kit.html)：5 个观星工具同页：月相与观星时机、极限星等与望远镜、观星地点与光害、天体观测清单、观测计划（免费）
 - [潜水与浮潜费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/diving-gear-gas-trip-kit.html)：6 个潜水工具同页：装备清单与预算、气瓶用气时长、行程费用与人均、安全停留与紧急处置、配重与浮力、潜水日志（免费）
-- [语言学习进度与复习合集](https://screscent.github.io/xiaoning-ai-tools/tools/language-vocab-plan-review-kit.html)：4 个学习工具同页：词汇量与等级对照、学习时间规划、记忆曲线与复习量、考试分数对照（免费）
+- [语言学习进度与复习合集](https://screscent.github.io/xiaoning-ai-tools/tools/language-vocab-plan-review-kit.html)：5 个学习工具同页：词汇量与等级对照、学习时间规划、记忆曲线与复习量、考试分数对照、常用短语练习（免费）
 - [桌游与棋牌计分规则合集](https://screscent.github.io/xiaoning-ai-tools/tools/board-game-score-rules-kit.html)：5 个桌游工具同页：多人计分板、开局配置推荐、常见桌游规则速查、回合计时与时长控制、身份局配置（免费）
 - [学车考驾照费用与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/driving-license-cost-hours-exam-kit.html)：3 个学车工具同页：费用拆解、学时与进度、科目考试要点（免费）
 - [家庭组网与网线速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-network-cable-kit.html)：3 个组网工具同页：网线线序、宽带速率、WiFi 覆盖（免费）
