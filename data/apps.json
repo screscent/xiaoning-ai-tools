@@ -8398,5 +8398,28 @@
     "title": "夜灯与开关"
    }
   ]
+ },
+ {
+  "id": "j28nvjxyyi",
+  "name": "家政与保洁报价合集",
+  "desc": "3 个家政工具同页：开荒保洁、日常保洁、家电清洗",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://j28nvjxyyi.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "deep",
+    "title": "开荒保洁"
+   },
+   {
+    "key": "daily",
+    "title": "日常保洁"
+   },
+   {
+    "key": "appliance",
+    "title": "家电清洗"
+   }
+  ]
  }
 ]

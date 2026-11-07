@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 456 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 457 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（19 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（325 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（326 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -472,6 +472,7 @@
 - [学车考驾照费用与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/driving-license-cost-hours-exam-kit.html)：3 个学车工具同页：费用拆解、学时与进度、科目考试要点（免费）
 - [家庭组网与网线速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-network-cable-kit.html)：3 个组网工具同页：网线线序、宽带速率、WiFi 覆盖（免费）
 - [居家适老化改造速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-aging-friendly-renovation-kit.html)：3 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关（免费）
+- [家政与保洁报价合集](https://screscent.github.io/xiaoning-ai-tools/tools/housekeeping-cleaning-quote-kit.html)：3 个家政工具同页：开荒保洁、日常保洁、家电清洗（免费）
 
 ## 博客（152 篇）
 - [小凝 Agent：一条 iMessage 通道，装下了社交、指令、汇报和我的声音](https://screscent.github.io/xiaoning-ai-tools/blog/AtXmsMbywxdgb-sckSLl9w.html)：2026-11-06｜一条通道，四种用法：社交、指令、主动汇报，以及小凝自己的声音。
