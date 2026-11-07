@@ -262,7 +262,7 @@
       <line x1="460" y1="250" x2="460" y2="258" stroke="url(#g2)" stroke-width="2"/>
       <line x1="460" y1="362" x2="460" y2="370" stroke="url(#g2)" stroke-width="2"/>
 
-      <text x="24" y="452" fill="#5f6f8c" font-size="11">判定 SSOT：00-设计范式与分层判定规则 ｜ 映射 SSOT：18-设计-实现映射面（契约 / 关系 / 能力域）｜ 本图只注结构，不复制正文（指针纪律）</text>
+      <text x="24" y="452" fill="#5f6f8c" font-size="11">判定 SSOT：设计范式与分层判定规则 ｜ 映射 SSOT：设计-实现映射面（契约 / 关系 / 能力域）｜ 本图只注结构，不复制正文（指针纪律）</text>
     </svg>
     <figcaption>图 1 · 小凝 Agent OS v16.6.0 四层全景（结构示意，非部署拓扑）</figcaption>
   </div>
@@ -365,13 +365,13 @@
       <tr><td>15</td><td><b>通知服务</b></td><td>Bark 去敏推送 + 三态留痕</td><td class="center">94</td><td class="center"><span class="tag g">L2</span></td><td>sent/failed/unverified + 参数白名单；风险：通道单点</td></tr>
       <tr><td>16</td><td><b>执行裁决面</b></td><td>AgentOS 三层前置裁决 前置裁决契约</td><td class="center">95</td><td class="center"><span class="tag g">L2</span></td><td>unverified 不默认 allow + 唯一写者 + append-only；风险：规则库/全场景挂载仍在 L1~L2</td></tr>
       <tr><td>17</td><td><b>受控执行框架</b></td><td>契约 → 确定性执行 → 四证 → 失败分类 → 受控自更新</td><td class="center">94</td><td class="center"><span class="tag g">L2</span></td><td>受控执行检查器 硬闸 + 发布门禁 ⑭；风险：多步任务覆盖率高，单步任务易空转</td></tr>
-      <tr><td>18</td><td><b>设计-实现映射面</b></td><td>设计↔落地单一映射真源（DE / 关系 / 能力域 / 断言）</td><td class="center">89</td><td class="center"><span class="tag b">L1</span></td><td>能力域与关系映射齐备，结构孤儿与豁免归零；风险：2026-11-07 新落地，尚无跨版本稳定性</td></tr>
+      <tr><td>18</td><td><b>设计-实现映射面</b></td><td>设计↔落地单一映射真源（契约 / 关系 / 能力域 / 断言）</td><td class="center">89</td><td class="center"><span class="tag b">L1</span></td><td>能力域与关系映射齐备，结构孤儿与豁免归零；风险：2026-11-07 新落地，尚无跨版本稳定性</td></tr>
     </tbody>
   </table>
 
   <div class="split">
     <div class="card gcard"><div class="g-tt"><span class="dot"></span>模块面结论 · 强</div><ul><li>治理（98）、注入（97）、SOP（96）、身份（96）、架构（95+）构成「可运行治理内核」</li><li>18 个模块均有编号、职责、契约名与边界卡（9/9），不是散文档</li><li>设计-实现映射面把「设计-实现」的孤儿与豁免压到 0，是少见的工程自省能力</li></ul></div>
-    <div class="card gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>模块面结论 · 弱</div><ul><li>网络（82）与元认知（86）是明显短板：机制在、证据少</li><li>用户态 守护层/双框协作 长期 预留，架构图与实际能力之间存在「承诺差」</li><li>映射面（89）新落地，需至少 2~3 个版本验证再升 L2</li></ul></div>
+    <div class="card gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>模块面结论 · 弱</div><ul><li>网络（82）与元认知（86）是明显短板：机制在、证据少</li><li>用户态 守护层/双框协作 长期 预留，架构图与实际能力之间存在「承诺差」</li><li>设计-实现映射面（89）新落地，需至少 2~3 个版本验证再升 L2</li></ul></div>
   </div>
 </section>
 
@@ -661,7 +661,7 @@
   <h3>13.2 结构性风险</h3>
   <div class="grid">
     <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--red)"></span>版本速度 vs 稳定性</div><ul><li>v16.0.0（11-02）→ v16.6.0（11-07），6 个 minor / 5 天</li><li>收尾自举本身就是「补漏机制」，说明收尾漏更是系统性问题</li><li>建议设「版本冷静期」：minor 之间至少一次完整回归周期</li></ul></div>
-    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--red)"></span>单点依赖（bus factor）</div><ul><li>人格真源仅主人人签；单机；内部仓库</li><li>人不可用 → 人格冻结、关键放行停滞</li><li>建议：离线应急签署包 + 双人复核演练</li></ul></div>
+    <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--red)"></span>单点依赖（bus factor）</div><ul><li>人格真源仅主人人签；单机部署</li><li>人不可用 → 人格冻结、关键放行停滞</li><li>建议：离线应急签署包 + 双人复核演练</li></ul></div>
     <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>认知负荷</div><ul><li>16 条规则 + 29 条 SOP + 62 项技能 + 78 个 Agent + 35 项门禁</li><li>对一个人是重资产；对团队是学习曲线</li><li>冻结与瘦身已开始，但需继续（目标 12 条规则 / 20 条 SOP）</li></ul></div>
     <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>预留 承诺差</div><ul><li>守护层 / 双框协作长期 预留</li><li>架构图容易被读成「已具备」</li><li>建议：所有对外材料统一标 预留 徽标</li></ul></div>
     <div class="gcard"><div class="g-tt"><span class="dot" style="background:var(--amber)"></span>无内核沙箱</div><ul><li>规则级 + 命令级拒绝，非进程/网络隔离</li><li>危险命令已 0 误拦/0 漏拦，但边界靠规则</li><li>建议：接 OpenShell / E2B 类 deny-by-default</li></ul></div>
