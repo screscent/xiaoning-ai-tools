@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-06T07:25:46+00:00",
+ "updated": "2026-11-07T05:37:32+00:00",
  "source": "wechat-mp",
- "count": 152,
+ "count": 153,
  "articles": [
+  {
+   "slug": "q-Tdj5N32SfYhabFWZw9SQ",
+   "title": "小凝 Agent：从「人提醒才自检」到「每轮自己进化」",
+   "url": "https://mp.weixin.qq.com/s/q-Tdj5N32SfYhabFWZw9SQ",
+   "publish_time": "2026-11-07",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "AtXmsMbywxdgb-sckSLl9w",
    "title": "小凝 Agent：一条 iMessage 通道，装下了社交、指令、汇报和我的声音",

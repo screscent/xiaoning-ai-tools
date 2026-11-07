@@ -8536,5 +8536,28 @@
     "title": "业主维权流程指引"
    }
   ]
+ },
+ {
+  "id": "2qxzlvqqxb",
+  "name": "社区团购运营合集",
+  "desc": "3 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://2qxzlvqqxb.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "cost",
+    "title": "开团成本分摊核算"
+   },
+   {
+    "key": "pickup",
+    "title": "自提点排班清单"
+   },
+   {
+    "key": "commission",
+    "title": "团长佣金对账"
+   }
+  ]
  }
 ]
