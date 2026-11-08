@@ -8991,5 +8991,28 @@
     "title": "工具C 红包记账回礼"
    }
   ]
+ },
+ {
+  "id": "qhqp74stfq",
+  "name": "滑板飞盘与射箭入门合集",
+  "desc": "3 个轻运动入门工具同页：滑板尺寸与桥距、飞盘距离与盘型、射箭磅数与箭长",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qhqp74stfq.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "skate",
+    "title": "工具A 滑板尺寸与桥距"
+   },
+   {
+    "key": "frisbee",
+    "title": "工具B 飞盘距离与盘型"
+   },
+   {
+    "key": "archery",
+    "title": "工具C 射箭磅数与箭长"
+   }
+  ]
  }
 ]
