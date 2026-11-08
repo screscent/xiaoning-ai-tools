@@ -202,14 +202,14 @@
 - [HTTP 状态码速查表](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：30+ 常见状态码速查，支持搜索/分类/排查建议与复制（免费）
 - [折扣与百分比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/discount-calculator.html)：折扣/满减/税率 → 折后价、节省与实付，含计算过程（免费）
 - [Cron 表达式工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：5 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查、自然语言转规则（免费）
-- [图片拼接与拼图合集](https://screscent.github.io/xiaoning-ai-tools/tools/stitch-grid.html)：4 个拼图工具同页：纵向拼接、横向拼接、宫格拼图、边框美化（免费）
+- [图片拼接与拼图合集](https://screscent.github.io/xiaoning-ai-tools/tools/stitch-grid.html)：5 个拼图工具同页：纵向拼接、横向拼接、宫格拼图、边框美化、间距留白（免费）
 - [HTML 实体编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/html-entity-codec.html)：HTML 特殊字符实体编码/解码，支持引号与换行（免费）
 - [单价与多规格比价合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-price-comparator.html)：5 个比价工具同页：单位价格、多规格折算、多件优惠、会员价、优惠叠加（免费）
 - [图片圆角与边框合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-round-corner.html)：4 个图片工具同页：圆角、边框、圆形头像、投影（免费）
 - [CSS 阴影生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-shadow-generator.html)：滑块调偏移/模糊/扩散，实时预览并复制 box-shadow（免费）
 - [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：6 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义、正则转义与常用式（免费）
 - [Markdown 转纯文本](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：Markdown → 纯文本，可去列表符号/代码块并下载 txt（免费）
-- [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：4 个本地脱敏工具：手机/身份证/银行卡/邮箱打码、批量处理与分享前自查（免费）
+- [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：5 个本地脱敏工具：手机/证件/邮箱打码、批量处理、分享前自查、规则自定义（免费）
 - [颜色名称查询](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色（免费）
 - [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
 - [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：5 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算（免费）
@@ -241,7 +241,7 @@
 - [CSS Flex 与 Grid 布局生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：切换 Flex/Grid 调间距对齐，实时预览并复制 CSS（免费）
 - [文本行去重与排序工具](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：按行去重排序并统计重复次数，可忽略大小写（免费）
 - [菜谱份量与备餐换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：5 个备餐工具：份量换算、批量备餐、器具尺寸、采购清单、剩菜保存与复热（免费）
-- [周数与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/iso-week.html)：4 个周数工具：ISO 周号、周范围、周计划、季度周数（免费）
+- [周数与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/iso-week.html)：5 个周数工具：ISO 周号、周范围、周计划、季度周数、双周迭代（免费）
 - [图片转 ASCII 艺术](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：图片转字符画，可选字符集与彩色 HTML 输出（免费）
 - [CSS 霓虹文字效果生成器](https://screscent.github.io/xiaoning-ai-tools/tools/neon-text.html)：调色与发光强度生成霓虹 text-shadow，可复制下载（免费）
 - [中文与拼音处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-pinyin.html)：5 个拼音工具同页：带调拼音、无调首字母、多音字、逐字对照表、拼音排序（免费）
