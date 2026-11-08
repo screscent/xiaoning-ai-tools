@@ -1976,7 +1976,7 @@
  {
   "id": "bnu92knsmb",
   "name": "社交图片切图与比例合集",
-  "desc": "4 个切图工具同页：九宫格、1:1 方图、9:16 竖版、16:9 横版",
+  "desc": "5 个切图工具同页：九宫格、1:1 方图、9:16 竖版、16:9 横版、圆角描边",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bnu92knsmb.app.weavefox.cn",
@@ -1997,6 +1997,10 @@
    {
     "key": "cover",
     "title": "工具D 16:9 横版"
+   },
+   {
+    "key": "radius",
+    "title": "工具E 圆角描边"
    }
   ]
  },
@@ -2182,7 +2186,7 @@
  {
   "id": "npxak92aq6",
   "name": "月历与年历合集",
-  "desc": "4 个月历工具：月历排布、年历总览、周数对照、打印版式",
+  "desc": "5 个月历工具：月历排布、年历总览、周数对照、打印版式、季度财年",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npxak92aq6.app.weavefox.cn",
@@ -2203,6 +2207,10 @@
    {
     "key": "print",
     "title": "工具D 打印版式"
+   },
+   {
+    "key": "quarter",
+    "title": "工具E 季度财年"
    }
   ]
  },
@@ -2964,7 +2972,7 @@
  {
   "id": "z5wpwyaahj",
   "name": "Token 与鉴权自查合集",
-  "desc": "4 个鉴权工具同页：JWT 解码、声明解释、Authorization 头、Cookie 自查",
+  "desc": "5 个鉴权工具同页：JWT 解码、声明解释、Authorization 头、Cookie 自查、权限范围",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5wpwyaahj.app.weavefox.cn",
@@ -2985,6 +2993,10 @@
    {
     "key": "cookie",
     "title": "工具D Cookie 自查"
+   },
+   {
+    "key": "scope",
+    "title": "工具E 权限范围"
    }
   ]
  },
