@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 464 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 465 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（19 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（333 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（334 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -480,6 +480,7 @@
 - [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：3 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引（免费）
 - [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：3 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账（免费）
 - [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：3 个乒乓球工具同页：胶皮与底板搭配、发球与旋转术语、计分与赛制（免费）
+- [室内空气与温湿度合集](https://screscent.github.io/xiaoning-ai-tools/tools/indoor-air-humidity.html)：3 个室内环境工具同页：甲醛浓度与国标判定、净化器适用面积与净化时间、温湿度与体感舒适度（免费）
 
 ## 博客（154 篇）
 - [小凝 Agent：给 AgentOS 装一张可证伪的地图](https://screscent.github.io/xiaoning-ai-tools/blog/r7Aitn2GxVVH5ML7I4BbEA.html)：2026-11-08｜映射面、断言级验证、反例自检、收尾自举的技术拆解

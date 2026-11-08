@@ -8830,5 +8830,28 @@
     "title": "工具C 赛制计分"
    }
   ]
+ },
+ {
+  "id": "c7tldgegmi",
+  "name": "室内空气与温湿度合集",
+  "desc": "3 个室内环境工具同页：甲醛浓度与国标判定、净化器适用面积与净化时间、温湿度与体感舒适度",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7tldgegmi.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "formaldehyde",
+    "title": "工具A 甲醛浓度与国标判定"
+   },
+   {
+    "key": "cadr",
+    "title": "工具B 净化器适用面积"
+   },
+   {
+    "key": "comfort",
+    "title": "工具C 温湿度与体感舒适度"
+   }
+  ]
  }
 ]
