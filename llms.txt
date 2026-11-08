@@ -482,11 +482,11 @@
 - [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：3 个乒乓球工具同页：胶皮与底板搭配、发球与旋转术语、计分与赛制（免费）
 - [室内空气与温湿度合集](https://screscent.github.io/xiaoning-ai-tools/tools/indoor-air-humidity.html)：4 个室内环境工具同页：甲醛浓度与国标判定、净化器适用面积与净化时间、温湿度与体感舒适度、新风与换气（免费）
 - [公积金医保与津贴计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/housing-fund-medical-maternity.html)：4 个社保福利工具同页：公积金贷款额度、医保报销自付、生育津贴与产假工资、失业金测算（免费）
-- [垃圾分类与回收变现合集](https://screscent.github.io/xiaoning-ai-tools/tools/waste-sorting-recycling.html)：3 个垃圾分类工具同页：分类速查、可回收物估价、大件垃圾清运与预约（免费）
-- [养老与退休金计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/retirement-pension-fire.html)：3 个养老测算工具同页：养老金缺口、退休金估算、提前退休测算（免费）
+- [垃圾分类与回收变现合集](https://screscent.github.io/xiaoning-ai-tools/tools/waste-sorting-recycling.html)：4 个垃圾分类工具同页：分类速查、可回收物估价、大件垃圾清运、厨余堆肥（免费）
+- [养老与退休金计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/retirement-pension-fire.html)：4 个养老测算工具同页：养老金缺口、退休金估算、提前退休测算、护理费用测算（免费）
 - [家庭用水与水垢计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/water-hardness-filter-softener.html)：4 个家庭用水工具同页：水质硬度判定、滤芯成本测算、软水盐耗估算、用水量与水费（免费）
 - [日语五十音入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/japanese-kana-romaji-dictation.html)：3 个日语入门工具同页：五十音速查、假名罗马音互转、假名听写练习（免费）
-- [人情往来与红包计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gift-money-banquet-redpacket-ledger.html)：3 个人情往来工具同页：份子钱参考、婚礼酒席预算、红包记账回礼（免费）
+- [人情往来与红包计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gift-money-banquet-redpacket-ledger.html)：4 个人情往来工具同页：份子钱参考、婚礼酒席预算、红包记账回礼、年度人情预算（免费）
 - [滑板飞盘与射箭入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/skateboard-frisbee-archery.html)：3 个轻运动入门工具同页：滑板尺寸与桥距、飞盘距离与盘型、射箭磅数与箭长（免费）
 - [保险保额与缴费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/insurance-coverage-premium.html)：3 个保险测算工具同页：重疾保额需求、寿险保额需求、年缴月缴对比（免费）
 
