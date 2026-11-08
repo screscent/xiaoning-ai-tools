@@ -8945,5 +8945,28 @@
     "title": "工具C 软水盐耗估算"
    }
   ]
+ },
+ {
+  "id": "j28hupxyyi",
+  "name": "日语五十音入门合集",
+  "desc": "3 个日语入门工具同页：五十音速查、假名罗马音互转、假名听写练习",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://j28hupxyyi.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "kana",
+    "title": "工具A 五十音速查"
+   },
+   {
+    "key": "romaji",
+    "title": "工具B 假名罗马音互转"
+   },
+   {
+    "key": "dictation",
+    "title": "工具C 假名听写练习"
+   }
+  ]
  }
 ]
