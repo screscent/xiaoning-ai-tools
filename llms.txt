@@ -293,7 +293,7 @@
 - [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算（免费）
 - [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：4 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算（免费）
 - [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：4 个路径工具同页：JSONPath、JSON Pointer、点号路径与路径生成，结果可复制（免费）
-- [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema.html)：4 个 Schema 工具同页：生成、校验、示例数据与字段说明，可复制（免费）
+- [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema.html)：5 个 Schema 工具同页：生成、校验、示例数据、字段说明与 TS 类型生成，可复制（免费）
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
 - [数字转英文读法](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：整数转英文单词，支持英式 and 与序数词（免费）
 - [HTML 转 Markdown 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/html-to-md.html)：HTML 片段转 Markdown，支持标题/加粗/链接/列表（免费）
@@ -316,14 +316,14 @@
 - [文本空行清理与重复行统计器](https://screscent.github.io/xiaoning-ai-tools/tools/text-lines-clean.html)：清理空行、去重并统计重复行次数，保留首次出现顺序（免费）
 - [时差调整与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/jetlag-plan.html)：5 个出行作息工具：向东倒时差、向西倒时差、作息调整表、落地建议、小睡与咖啡因窗口（免费）
 - [久坐提醒与拉伸计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议（免费）
-- [任务优先级与四象限合集](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：4 个优先级工具同页：四象限、评分、时间块、清单导出（免费）
+- [任务优先级与四象限合集](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：5 个优先级工具同页：四象限、评分、时间块、清单导出与周复盘（免费）
 - [停车费与停车时长计算器](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：按入场出场时间与首小时/后续单价算停车时长与费用（免费）
 - [快递运费与包裹成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：4 个物流工具同页：首重续重运费、体积重抛比、保价理赔、退换寄回成本（免费）
 - [文件传输与带宽估算合集](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：5 个传输工具同页：下载耗时、上传耗时、带宽换算、体积与压缩、延迟与游戏加速（免费）
 - [体脂率与腰臀比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/body-fat-waist.html)：按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险（免费）
 - [防晒霜用量与补涂计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sunscreen-dose.html)：按面部面积与 SPF 算单次用量、有效时长与补涂次数（免费）
 - [行李额与超重费合集](https://screscent.github.io/xiaoning-ai-tools/tools/baggage-allowance.html)：5 个航班行李工具：手提额度、托运额度、超重费、航司对比、丢失与理赔（免费）
-- [证件照尺寸与排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-photo-spec.html)：4 个证件照工具同页：尺寸查询、像素换算、相纸排版、底色要求（免费）
+- [证件照尺寸与排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-photo-spec.html)：5 个证件照工具同页：尺寸查询、像素换算、相纸排版、底色要求与合规自查（免费）
 - [家电保养与滤芯更换提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/appliance-care.html)：按家电类型与上次保养日推算下次保养与耗材更换（免费）
 - [房租押金与水电结算计算器](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：按租金押金月数水电与违约扣款算应退押金与清单（免费）
 - [屏幕使用与护眼休息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/eye-break-plan.html)：按屏幕时长与间隔生成 20-20-20 休息提醒时间表（免费）
