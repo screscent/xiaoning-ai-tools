@@ -8876,5 +8876,28 @@
     "title": "工具C 生育津贴与产假工资"
    }
   ]
+ },
+ {
+  "id": "qsbsgsnhme",
+  "name": "垃圾分类与回收变现合集",
+  "desc": "3 个垃圾分类工具同页：分类速查、可回收物估价、大件垃圾清运与预约",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsbsgsnhme.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "sort",
+    "title": "工具A 垃圾分类速查"
+   },
+   {
+    "key": "price",
+    "title": "工具B 可回收物估价"
+   },
+   {
+    "key": "bulky",
+    "title": "工具C 大件垃圾清运"
+   }
+  ]
  }
 ]
