@@ -186,7 +186,7 @@
 - [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：4 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对（免费）
 - [图片滤镜与调色合集](https://screscent.github.io/xiaoning-ai-tools/tools/filter-tone.html)：5 个调色工具同页：灰度、模糊、复古、明暗、锐化与降噪参数（免费）
 - [数字转罗马与中文数字](https://screscent.github.io/xiaoning-ai-tools/tools/roman-chinese-numerals.html)：阿拉伯/罗马/中文数字双向转换，含对照表（免费）
-- [决策与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-decider.html)：4 个决策工具同页：随机抽取、加权概率、多人投票计票、不重复名单抽签（免费）
+- [决策与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-decider.html)：5 个决策工具同页：随机抽取、加权概率、多人投票计票、不重复名单抽签、波达计分（免费）
 - [图片转 DataURL](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-dataurl.html)：图片转 DataURL/Base64/HTML/Markdown，可压缩（免费）
 - [秒表与计时记录合集](https://screscent.github.io/xiaoning-ai-tools/tools/stopwatch-lap.html)：5 个计时工具同页：秒表计时、分段记录、多次对比、CSV 导出、间歇训练计时配置（免费）
 - [配色方案生成器](https://screscent.github.io/xiaoning-ai-tools/tools/color-palette-generator.html)：互补/邻近/三角等配色规则，一键复制色卡（免费）
@@ -297,7 +297,7 @@
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
 - [数字转英文读法](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：整数转英文单词，支持英式 and 与序数词（免费）
 - [HTML 转 Markdown 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/html-to-md.html)：HTML 片段转 Markdown，支持标题/加粗/链接/列表（免费）
-- [节拍器与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/metronome.html)：4 个节拍工具同页：节拍器、毫秒换算、手动测速、速度术语（免费）
+- [节拍器与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/metronome.html)：5 个节拍工具同页：节拍器、毫秒换算、手动测速、速度术语、复节奏与节拍练习（免费）
 - [CSS 进度条样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-progress.html)：颜色/高度/圆角/条纹可调，实时预览并生成 CSS（免费）
 - [CSV 合并与拆分工具](https://screscent.github.io/xiaoning-ai-tools/tools/csv-merge-split.html)：多份 CSV 按表头合并，按行数或列值拆分后导出（免费）
 - [CSS 文字描边生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-text-stroke.html)：描边颜色/宽度/方式可调，实时预览并生成 CSS（免费）
@@ -314,7 +314,7 @@
 - [呼吸放松计时器](https://screscent.github.io/xiaoning-ai-tools/tools/breathing-timer.html)：4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进（免费）
 - [保养与年检提醒合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-maintenance.html)：4 个车主提醒工具：保养周期、年检到期、保险到期、保养项目清单（免费）
 - [文本空行清理与重复行统计器](https://screscent.github.io/xiaoning-ai-tools/tools/text-lines-clean.html)：清理空行、去重并统计重复行次数，保留首次出现顺序（免费）
-- [时差调整与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/jetlag-plan.html)：4 个出行作息工具：向东倒时差、向西倒时差、作息调整表、落地建议（免费）
+- [时差调整与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/jetlag-plan.html)：5 个出行作息工具：向东倒时差、向西倒时差、作息调整表、落地建议、小睡与咖啡因窗口（免费）
 - [久坐提醒与拉伸计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议（免费）
 - [任务优先级与四象限合集](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：4 个优先级工具同页：四象限、评分、时间块、清单导出（免费）
 - [停车费与停车时长计算器](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：按入场出场时间与首小时/后续单价算停车时长与费用（免费）
