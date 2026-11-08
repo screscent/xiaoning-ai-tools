@@ -474,12 +474,12 @@
 - [居家适老化改造速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-aging-friendly-renovation-kit.html)：4 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关、改造预算（免费）
 - [家政与保洁报价合集](https://screscent.github.io/xiaoning-ai-tools/tools/housekeeping-cleaning-quote-kit.html)：4 个家政工具同页：开荒保洁、日常保洁、家电清洗、玻璃与纱窗清洗（免费）
 - [数据分析与统计速算合集](https://screscent.github.io/xiaoning-ai-tools/tools/data-analysis-statistics-kit.html)：4 个统计工具同页：样本量与置信区间、A/B 显著性、描述统计与离散度、相关性与回归速算（免费）
-- [滑雪装备与雪场费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/ski-gear-resort-cost-kit.html)：3 个滑雪工具同页：雪场费用与雪票预算、装备选购与尺码、雪道难度与安全（免费）
-- [高尔夫入门与打球成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/golf-cost-gear-handicap-kit.html)：3 个高尔夫工具同页：球场费用与练习场预算、球杆选购与握把尺寸、规则与差点计算（免费）
+- [滑雪装备与雪场费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/ski-gear-resort-cost-kit.html)：4 个滑雪工具同页：雪场费用与雪票预算、装备选购与尺码、雪道难度与安全、租赁与保险预算（免费）
+- [高尔夫入门与打球成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/golf-cost-gear-handicap-kit.html)：4 个高尔夫工具同页：球场费用与练习场预算、球杆选购与握把尺寸、规则与差点计算、下场礼仪与打球节奏（免费）
 - [月子护理与产后恢复合集](https://screscent.github.io/xiaoning-ai-tools/tools/postpartum-meal-care-recovery-kit.html)：4 个月子与产后工具同页：月子餐热量配比、月嫂与月子中心花销预算、恢复周程与复查节点、月嫂面试与合同要点（免费）
 - [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：4 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引、报修与维修基金（免费）
 - [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：4 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账、售后与结算测算（免费）
-- [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：3 个乒乓球工具同页：胶皮与底板搭配、发球与旋转术语、计分与赛制（免费）
+- [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：4 个乒乓球工具同页：胶皮与底板搭配、发球与旋转术语、计分与赛制、训练计划与强度（免费）
 - [室内空气与温湿度合集](https://screscent.github.io/xiaoning-ai-tools/tools/indoor-air-humidity.html)：5 个室内环境工具同页：甲醛浓度与国标判定、净化器适用面积、温湿度与体感舒适度、新风与换气、霉菌与除湿（免费）
 - [公积金医保与津贴计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/housing-fund-medical-maternity.html)：6 个社保福利工具同页：公积金贷款额度、医保报销自付、生育津贴与产假工资、失业金测算、公积金提取、个税与专项扣除（免费）
 - [垃圾分类与回收变现合集](https://screscent.github.io/xiaoning-ai-tools/tools/waste-sorting-recycling.html)：5 个垃圾分类工具同页：分类速查、可回收物估价、大件垃圾清运、厨余堆肥、分类桶配置（免费）
