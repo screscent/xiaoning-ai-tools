@@ -3698,8 +3698,7 @@
  {
   "id": "z5wwxxaahj",
   "name": "装修材料用量合集",
-  "desc": "4 个装修工具同页：涂料用量、瓷砖块数、地板用量、壁纸卷数",
-  "tag": "免费",
+  "desc": "5 个装修工具同页：涂料用量、瓷砖块数、地板用量、壁纸卷数、损耗补货",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5wwxxaahj.app.weavefox.cn",
@@ -3720,6 +3719,10 @@
    {
     "key": "wallpaper",
     "title": "工具D 壁纸卷数"
+   },
+   {
+    "key": "waste",
+    "title": "工具E 损耗补货"
    }
   ]
  },
@@ -8671,7 +8674,7 @@
  {
   "id": "fwvfegyqkh",
   "name": "学车考驾照费用与进度合集",
-  "desc": "4 个学车工具同页：费用拆解、学时与进度、科目考试要点、补考与重练预算",
+  "desc": "5 个学车工具同页：费用拆解、学时与进度、科目考试要点、补考与重练预算、拿证规划",
   "price": 0,
   "cat": "实用工具",
   "url": "https://fwvfegyqkh.app.weavefox.cn",
@@ -8692,6 +8695,10 @@
    {
     "key": "retake",
     "title": "补考预算"
+   },
+   {
+    "key": "timeline",
+    "title": "工具E 拿证规划"
    }
   ]
  },
@@ -8725,7 +8732,7 @@
  {
   "id": "r3damkzjyr",
   "name": "居家适老化改造速查合集",
-  "desc": "4 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关、改造预算",
+  "desc": "5 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关、改造预算、防滑门槛",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r3damkzjyr.app.weavefox.cn",
@@ -8746,6 +8753,10 @@
    {
     "key": "budget",
     "title": "改造预算"
+   },
+   {
+    "key": "slip",
+    "title": "工具E 防滑门槛"
    }
   ]
  },
