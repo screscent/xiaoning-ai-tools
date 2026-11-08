@@ -9014,5 +9014,28 @@
     "title": "工具C 射箭磅数与箭长"
    }
   ]
+ },
+ {
+  "id": "samk2e9xrs",
+  "name": "保险保额与缴费计算合集",
+  "desc": "3 个保险测算工具同页：重疾保额需求、寿险保额需求、年缴月缴对比",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://samk2e9xrs.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "critical",
+    "title": "工具A 重疾保额需求"
+   },
+   {
+    "key": "life",
+    "title": "工具B 寿险保额需求"
+   },
+   {
+    "key": "payment",
+    "title": "工具C 年缴月缴对比"
+   }
+  ]
  }
 ]
