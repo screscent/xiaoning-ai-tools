@@ -8853,5 +8853,28 @@
     "title": "工具C 温湿度与体感舒适度"
    }
   ]
+ },
+ {
+  "id": "purdat3a4t",
+  "name": "公积金医保与津贴计算合集",
+  "desc": "3 个社保福利工具同页：公积金贷款额度、医保报销自付、生育津贴与产假工资",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://purdat3a4t.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "fund",
+    "title": "工具A 公积金贷款额度"
+   },
+   {
+    "key": "medical",
+    "title": "工具B 医保报销自付"
+   },
+   {
+    "key": "maternity",
+    "title": "工具C 生育津贴与产假工资"
+   }
+  ]
  }
 ]
