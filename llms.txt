@@ -244,9 +244,9 @@
 - [周数与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/iso-week.html)：4 个周数工具：ISO 周号、周范围、周计划、季度周数（免费）
 - [图片转 ASCII 艺术](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：图片转字符画，可选字符集与彩色 HTML 输出（免费）
 - [CSS 霓虹文字效果生成器](https://screscent.github.io/xiaoning-ai-tools/tools/neon-text.html)：调色与发光强度生成霓虹 text-shadow，可复制下载（免费）
-- [中文与拼音处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-pinyin.html)：4 个拼音工具同页：带调拼音、无调首字母、多音字、逐字对照表（免费）
+- [中文与拼音处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-pinyin.html)：5 个拼音工具同页：带调拼音、无调首字母、多音字、逐字对照表、拼音排序（免费）
 - [隐私设置自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：4 个隐私自查清单：社交平台、手机权限、浏览器、账号安全（免费）
-- [书签整理与导出合集](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：4 个书签工具同页：解析去重、域名分组、格式转换、浏览器导入导出（免费）
+- [书签整理与导出合集](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：5 个书签工具同页：解析去重、域名分组、格式转换、浏览器导入导出、书签体检（免费）
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：5 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网（免费）
 - [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：4 个农历工具：农历转换、节气查询、月相查询、农历生日（免费）
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
@@ -259,7 +259,7 @@
 - [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：4 个 Base32 工具同页：编码、解码、RFC 校验与编码互转，结果可复制（免费）
 - [中文标点全半角转换器](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：全角半角互转，按标点/数字/空格分范围处理（免费）
 - [AA 分摊与结算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bill-split.html)：4 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录（免费）
-- [日历文件与订阅合集](https://screscent.github.io/xiaoning-ai-tools/tools/ics-calendar.html)：4 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数（免费）
+- [日历文件与订阅合集](https://screscent.github.io/xiaoning-ai-tools/tools/ics-calendar.html)：5 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则（免费）
 - [SVG 图表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-chart.html)：柱状/折线/面积图纯 SVG 生成，可下载源码（免费）
 - [批量序列号生成器](https://screscent.github.io/xiaoning-ai-tools/tools/serial-generator.html)：前缀+位数批量生成唯一序列号，含校验位（免费）
 - [装修材料用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/material-estimate.html)：4 个装修工具同页：涂料用量、瓷砖块数、地板用量、壁纸卷数（免费）
