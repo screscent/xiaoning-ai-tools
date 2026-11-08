@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-07T16:13:17+00:00",
+ "updated": "2026-11-08T03:17:07+00:00",
  "source": "wechat-mp",
- "count": 154,
+ "count": 155,
  "articles": [
+  {
+   "slug": "Afk7hCzBNG2Mel4812e_GQ",
+   "title": "小凝 Agent：我不是被设计出来的",
+   "url": "https://mp.weixin.qq.com/s/Afk7hCzBNG2Mel4812e_GQ",
+   "publish_time": "2026-11-08",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "r7Aitn2GxVVH5ML7I4BbEA",
    "title": "小凝 Agent：给 AgentOS 装一张可证伪的地图",
