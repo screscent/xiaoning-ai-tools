@@ -8899,5 +8899,28 @@
     "title": "工具C 大件垃圾清运"
    }
   ]
+ },
+ {
+  "id": "samrka9xrs",
+  "name": "养老与退休金计算合集",
+  "desc": "3 个养老测算工具同页：养老金缺口、退休金估算、提前退休测算",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://samrka9xrs.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "gap",
+    "title": "工具A 养老金缺口"
+   },
+   {
+    "key": "pension",
+    "title": "工具B 退休金估算"
+   },
+   {
+    "key": "fire",
+    "title": "工具C 提前退休测算"
+   }
+  ]
  }
 ]
