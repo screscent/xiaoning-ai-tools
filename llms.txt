@@ -183,7 +183,7 @@
 - [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：5 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出、预算与超支预警（免费）
 - [手绘与标注合集](https://screscent.github.io/xiaoning-ai-tools/tools/draw-annotate.html)：5 个绘图工具同页：画板、标注、流程、签名、图例与编号规则（免费）
 - [社交图片切图与比例合集](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：5 个切图工具同页：九宫格、1:1 方图、9:16 竖版、16:9 横版、圆角描边（免费）
-- [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：4 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对（免费）
+- [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：5 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对、本命年（免费）
 - [图片滤镜与调色合集](https://screscent.github.io/xiaoning-ai-tools/tools/filter-tone.html)：5 个调色工具同页：灰度、模糊、复古、明暗、锐化与降噪参数（免费）
 - [数字转罗马与中文数字](https://screscent.github.io/xiaoning-ai-tools/tools/roman-chinese-numerals.html)：阿拉伯/罗马/中文数字双向转换，含对照表（免费）
 - [决策与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-decider.html)：5 个决策工具同页：随机抽取、加权概率、多人投票计票、不重复名单抽签、波达计分（免费）
@@ -204,7 +204,7 @@
 - [Cron 表达式工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：5 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查、自然语言转规则（免费）
 - [图片拼接与拼图合集](https://screscent.github.io/xiaoning-ai-tools/tools/stitch-grid.html)：4 个拼图工具同页：纵向拼接、横向拼接、宫格拼图、边框美化（免费）
 - [HTML 实体编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/html-entity-codec.html)：HTML 特殊字符实体编码/解码，支持引号与换行（免费）
-- [单价与多规格比价合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-price-comparator.html)：4 个比价工具同页：单位价格、多规格折算、多件优惠、会员价（免费）
+- [单价与多规格比价合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-price-comparator.html)：5 个比价工具同页：单位价格、多规格折算、多件优惠、会员价、优惠叠加（免费）
 - [图片圆角与边框合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-round-corner.html)：4 个图片工具同页：圆角、边框、圆形头像、投影（免费）
 - [CSS 阴影生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-shadow-generator.html)：滑块调偏移/模糊/扩散，实时预览并复制 box-shadow（免费）
 - [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：6 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义、正则转义与常用式（免费）
@@ -216,7 +216,7 @@
 - [随机密码短语生成器](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：易记词组合成密码短语，含熵值估算与强度评级（免费）
 - [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：5 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查、定位脱敏（免费）
 - [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：5 个正则工具同页：匹配测试、批量替换、捕获组、常用速查、批量提取与清洗（免费）
-- [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：4 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘（免费）
+- [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：5 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘、目标拆解（免费）
 - [标识符与密钥生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-secret-kit.html)：5 个生成工具同页：UUID、短 ID、随机令牌、十六进制密钥、ULID 生成与解析（免费）
 - [跨时区会议时间换算器](https://screscent.github.io/xiaoning-ai-tools/tools/timezone-meeting.html)：一个时间换算多时区本地时刻与时差，夏令时自动（免费）
 - [CSS 玻璃拟态生成器](https://screscent.github.io/xiaoning-ai-tools/tools/glassmorphism-generator.html)：滑杆调模糊/透明度/圆角，实时预览并复制 CSS（免费）
