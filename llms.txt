@@ -270,7 +270,7 @@
 - [节假日与调休合集](https://screscent.github.io/xiaoning-ai-tools/tools/holiday-calendar.html)：4 个假期工具：放假安排、调休标注、拼假规划、假期倒计时（免费）
 - [CSS 表格样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-table.html)：调色圆角斑马纹实时生成表格 CSS/HTML（免费）
 - [文本改写与降重合集](https://screscent.github.io/xiaoning-ai-tools/tools/synonym-rewrite.html)：5 个改写工具同页：同义替换、强度改写、同义词表、改写对照、降重评分，结果可复制（免费）
-- [个税与到手工资合集](https://screscent.github.io/xiaoning-ai-tools/tools/salary-tax.html)：4 个税务工具同页：工资个税到手、年终奖计税对比、专项附加扣除、五险一金明细（免费）
+- [个税与到手工资合集](https://screscent.github.io/xiaoning-ai-tools/tools/salary-tax.html)：5 个税务工具同页：工资个税到手、年终奖计税对比、专项附加扣除、五险一金明细、年度汇算（免费）
 - [会议排期与时段合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-conflict.html)：4 个排期工具：冲突检测、空档查找、时段推荐、占用清单（免费）
 - [CSS 徽章与标签样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-badge.html)：四种徽章样式实时预览并生成 CSS/HTML（免费）
 - [Web 安全响应头合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-headers.html)：4 个 Web 安全工具：响应头检查、CSP 生成、Cookie 属性、HSTS 配置（免费）
@@ -291,7 +291,7 @@
 - [Markdown 目录与锚点合集](https://screscent.github.io/xiaoning-ai-tools/tools/md-toc-anchor.html)：5 个文档工具同页：目录生成、锚点、内链、大纲、批量标题锚点（免费）
 - [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：4 个换汇工具同页：双向换算、多币种折算、手续费到账、现钞对比（免费）
 - [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算（免费）
-- [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：4 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算（免费）
+- [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：5 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算、训练区间（免费）
 - [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：4 个路径工具同页：JSONPath、JSON Pointer、点号路径与路径生成，结果可复制（免费）
 - [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema.html)：5 个 Schema 工具同页：生成、校验、示例数据、字段说明与 TS 类型生成，可复制（免费）
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
