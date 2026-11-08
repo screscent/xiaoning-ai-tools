@@ -8770,5 +8770,29 @@
     "title": "团长佣金对账"
    }
   ]
+ },
+ {
+  "id": "ijxlsz8zig",
+  "name": "乒乓球入门与器材合集",
+  "desc": "3 个乒乓球工具同页：胶皮与底板搭配、发球与旋转术语、计分与赛制",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ijxlsz8zig.app.weavefox.cn",
+  "subcat": "生活健康",
+  "tag": "免费",
+  "subapps": [
+   {
+    "key": "rubber",
+    "title": "工具A 器材搭配"
+   },
+   {
+    "key": "spin",
+    "title": "工具B 旋转术语"
+   },
+   {
+    "key": "score",
+    "title": "工具C 赛制计分"
+   }
+  ]
  }
 ]
