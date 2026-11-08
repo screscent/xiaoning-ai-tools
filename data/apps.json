@@ -8968,5 +8968,28 @@
     "title": "工具C 假名听写练习"
    }
   ]
+ },
+ {
+  "id": "nynzkwpkdd",
+  "name": "人情往来与红包计算合集",
+  "desc": "3 个人情往来工具同页：份子钱参考、婚礼酒席预算、红包记账回礼",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://nynzkwpkdd.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "gift",
+    "title": "工具A 份子钱参考"
+   },
+   {
+    "key": "banquet",
+    "title": "工具B 婚礼酒席预算"
+   },
+   {
+    "key": "ledger",
+    "title": "工具C 红包记账回礼"
+   }
+  ]
  }
 ]
