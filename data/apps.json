@@ -2656,7 +2656,7 @@
  {
   "id": "2qcwr7qqxb",
   "name": "图片元数据与隐私清理合集",
-  "desc": "4 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查",
+  "desc": "5 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查、定位脱敏",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qcwr7qqxb.app.weavefox.cn",
@@ -2677,6 +2677,10 @@
    {
     "key": "privacy",
     "title": "工具D 隐私自查"
+   },
+   {
+    "key": "gps",
+    "title": "工具E 定位脱敏"
    }
   ]
  },
@@ -2741,8 +2745,7 @@
  {
   "id": "2qcjfcqqxb",
   "name": "标识符与密钥生成合集",
-  "desc": "4 个生成工具同页：UUID、短 ID、随机令牌、十六进制密钥",
-  "tag": "免费",
+  "desc": "5 个生成工具同页：UUID、短 ID、随机令牌、十六进制密钥、ULID 生成与解析",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qcjfcqqxb.app.weavefox.cn",
@@ -2763,6 +2766,10 @@
    {
     "key": "secret",
     "title": "工具D 十六进制密钥"
+   },
+   {
+    "key": "ulid",
+    "title": "工具E ULID 生成"
    }
   ]
  },
@@ -5444,8 +5451,7 @@
  {
   "id": "2qex6iqqxb",
   "name": "项目排期与进度合集",
-  "desc": "4 个排期工具同页：甘特图、里程碑、关键路径、燃尽图",
-  "tag": "免费",
+  "desc": "5 个排期工具同页：甘特图、里程碑、关键路径、燃尽图、人力与工期估算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qex6iqqxb.app.weavefox.cn",
@@ -5466,6 +5472,10 @@
    {
     "key": "burndown",
     "title": "工具D 燃尽图数据"
+   },
+   {
+    "key": "resource",
+    "title": "工具E 人力工期"
    }
   ]
  },

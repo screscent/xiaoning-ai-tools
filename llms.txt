@@ -214,10 +214,10 @@
 - [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
 - [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：5 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算（免费）
 - [随机密码短语生成器](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：易记词组合成密码短语，含熵值估算与强度评级（免费）
-- [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：4 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查（免费）
+- [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：5 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查、定位脱敏（免费）
 - [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：5 个正则工具同页：匹配测试、批量替换、捕获组、常用速查、批量提取与清洗（免费）
 - [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：4 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘（免费）
-- [标识符与密钥生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-secret-kit.html)：4 个生成工具同页：UUID、短 ID、随机令牌、十六进制密钥（免费）
+- [标识符与密钥生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-secret-kit.html)：5 个生成工具同页：UUID、短 ID、随机令牌、十六进制密钥、ULID 生成与解析（免费）
 - [跨时区会议时间换算器](https://screscent.github.io/xiaoning-ai-tools/tools/timezone-meeting.html)：一个时间换算多时区本地时刻与时差，夏令时自动（免费）
 - [CSS 玻璃拟态生成器](https://screscent.github.io/xiaoning-ai-tools/tools/glassmorphism-generator.html)：滑杆调模糊/透明度/圆角，实时预览并复制 CSS（免费）
 - [贷款还款方式对比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/loan-compare.html)：等额本息与等额本金月供/总利息对比，含逐月明细（免费）
@@ -357,7 +357,7 @@
 - [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：4 个出游预算工具：单景点门票、多景点合计、城市通票、讲解观光车（免费）
 - [昵称与英文名生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/nickname-name-gen.html)：4 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺（免费）
 - [凯撒与古典密码合集](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：4 个古典密码工具同页：凯撒位移、ROT13、反字母表、维吉尼亚（免费）
-- [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：4 个排期工具同页：甘特图、里程碑、关键路径、燃尽图（免费）
+- [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：5 个排期工具同页：甘特图、里程碑、关键路径、燃尽图、人力与工期估算（免费）
 - [界面提示文案合集](https://screscent.github.io/xiaoning-ai-tools/tools/empty-state.html)：4 个提示文案工具同页：空状态、错误页、加载中、成功反馈（免费）
 - [图片宽高比与等比缩放计算器](https://screscent.github.io/xiaoning-ai-tools/tools/aspect-ratio.html)：按目标宽度或百分比等比缩放，给出比例化简与面积变化（免费）
 - [手机 App 权限自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/app-permission.html)：按设备与场景生成权限自查清单，标出高风险与设置路径（免费）
