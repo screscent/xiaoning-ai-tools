@@ -181,10 +181,10 @@
 - [文本加解密与哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：5 个本地工具：AES 加密、AES 解密、哈希计算、校验对比、HMAC 签名，不上传（免费）
 - [取色与配色提取合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-extract.html)：5 个配色工具同页：取色器、主色提取、CSS 变量导出、配色历史、对比度与无障碍检查（免费）
 - [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：5 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出、预算与超支预警（免费）
-- [手绘与标注合集](https://screscent.github.io/xiaoning-ai-tools/tools/draw-annotate.html)：4 个绘图工具同页：画板、图片标注、流程图、手写签名（免费）
+- [手绘与标注合集](https://screscent.github.io/xiaoning-ai-tools/tools/draw-annotate.html)：5 个绘图工具同页：画板、标注、流程、签名、图例与编号规则（免费）
 - [社交图片切图与比例合集](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：4 个切图工具同页：九宫格、1:1 方图、9:16 竖版、16:9 横版（免费）
 - [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：4 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对（免费）
-- [图片滤镜与调色合集](https://screscent.github.io/xiaoning-ai-tools/tools/filter-tone.html)：4 个调色工具同页：灰度、模糊、复古、明暗调节（免费）
+- [图片滤镜与调色合集](https://screscent.github.io/xiaoning-ai-tools/tools/filter-tone.html)：5 个调色工具同页：灰度、模糊、复古、明暗、锐化与降噪参数（免费）
 - [数字转罗马与中文数字](https://screscent.github.io/xiaoning-ai-tools/tools/roman-chinese-numerals.html)：阿拉伯/罗马/中文数字双向转换，含对照表（免费）
 - [决策与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-decider.html)：4 个决策工具同页：随机抽取、加权概率、多人投票计票、不重复名单抽签（免费）
 - [图片转 DataURL](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-dataurl.html)：图片转 DataURL/Base64/HTML/Markdown，可压缩（免费）
@@ -225,7 +225,7 @@
 - [条形码生成器 Code128](https://screscent.github.io/xiaoning-ai-tools/tools/barcode-code128.html)：Code128B/C 与 EAN-13 条码绘制，含校验与导 PNG（免费）
 - [TOTP 动态验证码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：本地计算 2FA 动态验证码，Base32 解码与倒计时（免费）
 - [倒班排班与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：4 个排班工具：三班倒、四班两倒、夜班作息、换班记录（免费）
-- [纪念日与提醒清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：4 个纪念日工具：倒计时清单、提醒设置、周年计算、礼物备忘（免费）
+- [纪念日与提醒清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：5 个纪念日工具同页：倒计时、提醒、周年、礼物、周年与周期提醒（免费）
 - [图片转 ICO 图标生成器](https://screscent.github.io/xiaoning-ai-tools/tools/ico-generator.html)：多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载（免费）
 - [SVG 波浪分割线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-wave-divider.html)：调波高波峰生成 SVG 波浪分割线，复制或下载（免费）
 - [水电燃气账单计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/utility-tier-calculator.html)：5 个账单工具同页：阶梯电价、阶梯水价、燃气费、峰谷电价、账单分摊与合租结算（免费）
