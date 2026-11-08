@@ -8580,7 +8580,7 @@
  {
   "id": "fwvfegyqkh",
   "name": "学车考驾照费用与进度合集",
-  "desc": "3 个学车工具同页：费用拆解、学时与进度、科目考试要点",
+  "desc": "4 个学车工具同页：费用拆解、学时与进度、科目考试要点、补考与重练预算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://fwvfegyqkh.app.weavefox.cn",
@@ -8597,6 +8597,10 @@
    {
     "key": "exam",
     "title": "科目要点"
+   },
+   {
+    "key": "retake",
+    "title": "补考预算"
    }
   ]
  },
@@ -8649,7 +8653,7 @@
  {
   "id": "j28nvjxyyi",
   "name": "家政与保洁报价合集",
-  "desc": "3 个家政工具同页：开荒保洁、日常保洁、家电清洗",
+  "desc": "4 个家政工具同页：开荒保洁、日常保洁、家电清洗、玻璃与纱窗清洗",
   "price": 0,
   "cat": "实用工具",
   "url": "https://j28nvjxyyi.app.weavefox.cn",
@@ -8666,6 +8670,10 @@
    {
     "key": "appliance",
     "title": "家电清洗"
+   },
+   {
+    "key": "window",
+    "title": "玻璃清洗"
    }
   ]
  },
@@ -8787,7 +8795,7 @@
  {
   "id": "2qxzlvqqxb",
   "name": "社区团购运营合集",
-  "desc": "3 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账",
+  "desc": "4 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账、售后与结算测算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qxzlvqqxb.app.weavefox.cn",
@@ -8804,6 +8812,10 @@
    {
     "key": "commission",
     "title": "团长佣金对账"
+   },
+   {
+    "key": "settle",
+    "title": "售后结算"
    }
   ]
  },
