@@ -3403,8 +3403,7 @@
  {
   "id": "dzf5haslwd",
   "name": "农历与节气查询合集",
-  "desc": "4 个农历工具：农历转换、节气查询、月相查询、农历生日",
-  "tag": "免费",
+  "desc": "5 个农历工具：农历转换、节气查询、月相查询、农历生日、节日倒计时",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzf5haslwd.app.weavefox.cn",
@@ -3425,6 +3424,10 @@
    {
     "key": "birthday",
     "title": "工具D 农历生日"
+   },
+   {
+    "key": "festival",
+    "title": "工具E 节日倒计时"
    }
   ]
  },
@@ -3801,8 +3804,7 @@
  {
   "id": "4gswjgbtnf",
   "name": "文本改写与降重合集",
-  "desc": "4 个改写工具同页：同义替换、强度改写、同义词表与改写对照，结果可复制",
-  "tag": "免费",
+  "desc": "5 个改写工具同页：同义替换、强度改写、同义词表、改写对照、降重评分，结果可复制",
   "price": 0,
   "cat": "实用工具",
   "url": "https://4gswjgbtnf.app.weavefox.cn",
@@ -3823,6 +3825,10 @@
    {
     "key": "compare",
     "title": "改写对照"
+   },
+   {
+    "key": "score",
+    "title": "工具E 降重评分"
    }
   ]
  },
