@@ -328,7 +328,7 @@
 - [房租押金与水电结算计算器](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：按租金押金月数水电与违约扣款算应退押金与清单（免费）
 - [屏幕使用与护眼休息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/eye-break-plan.html)：按屏幕时长与间隔生成 20-20-20 休息提醒时间表（免费）
 - [CSS 骨架屏占位生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-skeleton.html)：块数/高度/圆角/颜色可调，实时预览并导出骨架屏 CSS（免费）
-- [噪音分贝与听力保护速查](https://screscent.github.io/xiaoning-ai-tools/tools/noise-hearing.html)：4 个噪音工具同页：分贝对照、听力安全时长、家电噪音对比、隔音与耳塞选型（免费）
+- [噪音分贝与听力保护速查](https://screscent.github.io/xiaoning-ai-tools/tools/noise-hearing.html)：5 个噪音工具同页：分贝对照、听力安全时长、家电噪音、隔音耳塞、噪声剂量（免费）
 - [转机时间与衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/transfer-time.html)：4 个航班转机工具：最短转机时间、转机够不够、行李直挂、过夜转机（免费）
 - [洗手计时与步骤提示器](https://screscent.github.io/xiaoning-ai-tools/tools/handwash-timer.html)：20 秒倒计时配七步提示，流动水与皂液要点（免费）
 - [小费与账单分摊计算器](https://screscent.github.io/xiaoning-ai-tools/tools/tip-split.html)：按账单与小费比例算总额，支持服务费与每人取整分摊（免费）
@@ -337,7 +337,7 @@
 - [行李打包清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/travel-packing-list.html)：按天数季节与出行类型生成分类打包清单，可勾选核对（免费）
 - [数码续航与充电合集](https://screscent.github.io/xiaoning-ai-tools/tools/battery-charge-time.html)：6 个数码工具同页：充电用时、充电宝容量、笔记本续航、电池健康、快充协议、充电器选型，续航充电速查（免费）
 - [到期管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/contract-renewal.html)：6 个到期工具同页：合同续签、证件换发、保险续保、车辆年检、驾驶证记分换证、会员订阅，到期前该办什么一页算清（免费）
-- [护照签证与入境合集](https://screscent.github.io/xiaoning-ai-tools/tools/passport-validity.html)：4 个出行有效期工具：护照余量、签证有效期、停留天数、换发提醒（免费）
+- [护照签证与入境合集](https://screscent.github.io/xiaoning-ai-tools/tools/passport-validity.html)：5 个出入境工具同页：护照余量、签证有效期、停留天数、换发提醒、签证照片（免费）
 - [心率区间与运动强度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：按年龄与静息心率算五档心率区间，给出燃脂推荐范围（免费）
 - [食物热量与运动消耗换算器](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：按 MET 与体重换算消耗某份热量需要的运动分钟数（免费）
 - [签证材料清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-checklist.html)：4 个签证材料清单：旅游、商务、学生、探亲访友（免费）
@@ -459,7 +459,7 @@
 - [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：5 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼、灯位与回路规划、照明功率与电费（免费）
 - [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：4 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期（免费）
 - [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：5 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比、Wi-Fi 覆盖（免费）
-- [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：4 个水族工具同页：鱼缸容积与水量、换水比例、加热棒功率与电费、水草与照明时长（免费）
+- [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：5 个水族工具同页：鱼缸容积、换水比例、加热棒功率、水草照明、换水排程（免费）
 - [家庭光伏与储能收益合集](https://screscent.github.io/xiaoning-ai-tools/tools/solar-storage-kit.html)：6 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益、补贴与并网、倾角与朝向（免费）
 - [差旅报销与机酒预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/business-trip-expense-kit.html)：6 个差旅工具同页：差旅补贴、机票退改、自驾报销、住宿标准与超标处理、城市差旅标准、制度与审批（免费）
 - [厨房调味与酱汁配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-seasoning-ratio-kit.html)：5 个下厨调味工具同页：酱汁配比、腌制盐水浓度、调料替代换算、火候与油温对照、高汤与底味（免费）
