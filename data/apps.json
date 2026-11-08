@@ -7611,7 +7611,7 @@
  {
   "id": "vfkjaglsqf",
   "name": "验房与收房检查合集",
-  "desc": "3 个收房工具同页：验房清单、面积核对、整改跟踪",
+  "desc": "4 个收房工具同页：验房清单、面积核对、整改跟踪、收房税费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://vfkjaglsqf.app.weavefox.cn",
@@ -7628,6 +7628,10 @@
    {
     "key": "defect",
     "title": "工具C 缺陷与整改跟踪"
+   },
+   {
+    "key": "fees",
+    "title": "工具D 收房税费"
    }
   ]
  },
@@ -8607,7 +8611,7 @@
  {
   "id": "m9wdqfue9a",
   "name": "家庭组网与网线速查合集",
-  "desc": "3 个组网工具同页：网线线序、宽带速率、WiFi 覆盖",
+  "desc": "4 个组网工具同页：网线线序、宽带速率、WiFi 覆盖、组网方案与预算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://m9wdqfue9a.app.weavefox.cn",
@@ -8624,13 +8628,17 @@
    {
     "key": "cover",
     "title": "覆盖信道"
+   },
+   {
+    "key": "mesh",
+    "title": "组网方案"
    }
   ]
  },
  {
   "id": "r3damkzjyr",
   "name": "居家适老化改造速查合集",
-  "desc": "3 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关",
+  "desc": "4 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关、改造预算",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r3damkzjyr.app.weavefox.cn",
@@ -8647,6 +8655,10 @@
    {
     "key": "light",
     "title": "夜灯与开关"
+   },
+   {
+    "key": "budget",
+    "title": "改造预算"
    }
   ]
  },
