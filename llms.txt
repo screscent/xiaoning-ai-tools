@@ -196,7 +196,7 @@
 - [思维导图与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/mind-map-generator.html)：5 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出、Mermaid 转写（免费）
 - [世界时钟与时区合集](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：5 个时区工具：多城时钟、时差计算、夏令时判断、会议对照、时间戳互转（免费）
 - [图片打码与隐私遮挡合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：4 个打码工具同页：马赛克、模糊、黑块遮挡、裁切隐藏（免费）
-- [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：4 个摩斯工具同页：文本互转、音频播放、码表速查、练习测试（免费）
+- [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：5 个摩斯工具同页：文本转摩斯、摩斯转文本、音频播放、码表与练习、求救信号与闪光节拍（免费）
 - [复利与定投合集](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：5 个理财工具同页：复利终值、定投收益、目标月存、提取计划、贷款月供与提前还款（免费）
 - [CSS 渐变生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：线性/径向/圆锥渐变，实时预览并复制或下载 CSS（免费）
 - [HTTP 状态码速查表](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：30+ 常见状态码速查，支持搜索/分类/排查建议与复制（免费）
@@ -215,7 +215,7 @@
 - [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：5 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算（免费）
 - [随机密码短语生成器](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：易记词组合成密码短语，含熵值估算与强度评级（免费）
 - [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：4 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查（免费）
-- [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：4 个正则工具同页：匹配测试、批量替换、捕获组、常用速查（免费）
+- [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：5 个正则工具同页：匹配测试、批量替换、捕获组、常用速查、批量提取与清洗（免费）
 - [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：4 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘（免费）
 - [标识符与密钥生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-secret-kit.html)：4 个生成工具同页：UUID、短 ID、随机令牌、十六进制密钥（免费）
 - [跨时区会议时间换算器](https://screscent.github.io/xiaoning-ai-tools/tools/timezone-meeting.html)：一个时间换算多时区本地时刻与时差，夏令时自动（免费）
@@ -235,7 +235,7 @@
 - [中文简繁转换器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-converter.html)：简繁双向逐字转换，含对照表与未收录提示（免费）
 - [年龄与生日计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/age-calculator.html)：4 个生日工具：精确年龄、生日倒计时、届龄提醒、年龄对比（免费）
 - [家务分工与轮值合集](https://screscent.github.io/xiaoning-ai-tools/tools/chore-roster.html)：4 个家务工具同页：轮值表、公平度评分、换班与请假、家务清单与频次（免费）
-- [证件与卡号校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-card-validator.html)：4 个校验工具同页：身份证校验、银行卡 Luhn、统一社会信用代码、手机号邮箱格式（免费）
+- [证件与卡号校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-card-validator.html)：5 个校验工具同页：身份证、银行卡、统一社会信用代码、联系方式、车架号 VIN 校验（免费）
 - [图片自动裁剪透明边](https://screscent.github.io/xiaoning-ai-tools/tools/trim-transparent.html)：按容差自动裁掉透明边并保留内边距，导出图片（免费）
 - [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：6 个出行工具同页：油耗、油电对比、停车过路、通勤月成本、公交月票、五年总持有（免费）
 - [CSS Flex 与 Grid 布局生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：切换 Flex/Grid 调间距对齐，实时预览并复制 CSS（免费）
