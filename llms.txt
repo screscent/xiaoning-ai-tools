@@ -195,7 +195,7 @@
 - [密码强度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/password-strength.html)：本地评估密码强度、熵值与改进建议（免费）
 - [思维导图与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/mind-map-generator.html)：5 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出、Mermaid 转写（免费）
 - [世界时钟与时区合集](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：5 个时区工具：多城时钟、时差计算、夏令时判断、会议对照、时间戳互转（免费）
-- [图片打码与隐私遮挡合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：4 个打码工具同页：马赛克、模糊、黑块遮挡、裁切隐藏（免费）
+- [图片打码与隐私遮挡合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：5 个打码工具同页：马赛克、模糊打码、黑块遮挡、裁切隐藏、像素化强度（免费）
 - [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：5 个摩斯工具同页：文本转摩斯、摩斯转文本、音频播放、码表与练习、求救信号与闪光节拍（免费）
 - [复利与定投合集](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：5 个理财工具同页：复利终值、定投收益、目标月存、提取计划、贷款月供与提前还款（免费）
 - [CSS 渐变生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：线性/径向/圆锥渐变，实时预览并复制或下载 CSS（免费）
@@ -303,7 +303,7 @@
 - [CSS 文字描边生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-text-stroke.html)：描边颜色/宽度/方式可调，实时预览并生成 CSS（免费）
 - [YAML 与 JSON 双向转换器](https://screscent.github.io/xiaoning-ai-tools/tools/yaml-json-convert.html)：YAML ⇄ JSON 双向转换，缩进可调并定位错误行号（免费）
 - [TOML 与 JSON 双向转换器](https://screscent.github.io/xiaoning-ai-tools/tools/toml-json-convert.html)：TOML 与 JSON 互转，支持表/数组表并定位错误行号（免费）
-- [工时与时长计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/duration-hours.html)：4 个工时工具同页：时长累加、起止差、单位换算、工时统计（免费）
+- [工时与时长计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/duration-hours.html)：5 个工时工具同页：时长累加、起止时间差、单位换算、工时表统计、工时扣休（免费）
 - [文本大小写批量转换器](https://screscent.github.io/xiaoning-ai-tools/tools/text-case-convert.html)：五种大小写模式逐行批量转换，含空格归并与自定义替换（免费）
 - [CSS 动画缓动曲线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-easing.html)：调节四个控制点生成 cubic-bezier，实时预览并导出 CSS（免费）
 - [工资与加班费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/overtime-pay.html)：6 个工资工具同页：加班费、节假日加班、夜班津贴、加班上限、个税与到手工资、请假与缺勤扣款（免费）
@@ -354,7 +354,7 @@
 - [储蓄目标达成时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/saving-goal.html)：按月复利推演攒到目标金额所需月数与利息结构（免费）
 - [CSS 背景与纹理生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-pattern.html)：4 个背景纹理工具同页：分隔线、点阵背景、网格条纹、噪点纹理，实时预览并复制 CSS 与 HTML 示例（免费）
 - [睡眠债务与补觉计划计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-debt.html)：按工作日周末睡眠差算累计债务，给出补觉天数与风险提示（免费）
-- [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：4 个出游预算工具：单景点门票、多景点合计、城市通票、讲解观光车（免费）
+- [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：5 个门票工具同页：单景点门票、多景点合计、城市通票、讲解观光车、儿童票（免费）
 - [昵称与英文名生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/nickname-name-gen.html)：4 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺（免费）
 - [凯撒与古典密码合集](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：4 个古典密码工具同页：凯撒位移、ROT13、反字母表、维吉尼亚（免费）
 - [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：5 个排期工具同页：甘特图、里程碑、关键路径、燃尽图、人力与工期估算（免费）
