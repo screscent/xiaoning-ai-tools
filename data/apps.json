@@ -8922,5 +8922,28 @@
     "title": "工具C 提前退休测算"
    }
   ]
+ },
+ {
+  "id": "nynr4epkdd",
+  "name": "家庭用水与水垢计算合集",
+  "desc": "3 个家庭用水工具同页：水质硬度判定、滤芯成本测算、软水盐耗估算",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://nynr4epkdd.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "hardness",
+    "title": "工具A 水质硬度判定"
+   },
+   {
+    "key": "filter",
+    "title": "工具B 滤芯成本测算"
+   },
+   {
+    "key": "softener",
+    "title": "工具C 软水盐耗估算"
+   }
+  ]
  }
 ]
