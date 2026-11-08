@@ -252,7 +252,7 @@
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
 - [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：5 个开票工具同页：价税分离、税额反算、多税率对照、开票信息、进项抵扣测算（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
-- [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：4 个光线工具同页：日出日落、黄金蓝调、昼长季节、拍摄规划（免费）
+- [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：5 个光线工具同页：日出日落、黄金蓝调、昼长季节、拍摄规划、光时对照（免费）
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
 - [行李打包清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：4 个出行清单：商务出差、海岛度假、户外徒步、亲子出行（免费）
 - [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：5 个几何工具同页：平面面积、立体体积、圆与角度、土方混凝土、刷漆用量估算（免费）
@@ -271,7 +271,7 @@
 - [CSS 表格样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-table.html)：调色圆角斑马纹实时生成表格 CSS/HTML（免费）
 - [文本改写与降重合集](https://screscent.github.io/xiaoning-ai-tools/tools/synonym-rewrite.html)：5 个改写工具同页：同义替换、强度改写、同义词表、改写对照、降重评分，结果可复制（免费）
 - [个税与到手工资合集](https://screscent.github.io/xiaoning-ai-tools/tools/salary-tax.html)：5 个税务工具同页：工资个税到手、年终奖计税对比、专项附加扣除、五险一金明细、年度汇算（免费）
-- [会议排期与时段合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-conflict.html)：4 个排期工具：冲突检测、空档查找、时段推荐、占用清单（免费）
+- [会议排期与时段合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-conflict.html)：5 个排期工具同页：冲突检测、空档查找、时段推荐、占用清单、时段投票（免费）
 - [CSS 徽章与标签样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-badge.html)：四种徽章样式实时预览并生成 CSS/HTML（免费）
 - [Web 安全响应头合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-headers.html)：4 个 Web 安全工具：响应头检查、CSP 生成、Cookie 属性、HSTS 配置（免费）
 - [十六进制文件查看器](https://screscent.github.io/xiaoning-ai-tools/tools/hex-viewer.html)：本地读文件或粘贴文本转十六进制转储与 ASCII（免费）
@@ -281,7 +281,7 @@
 - [URL 清理与参数合集](https://screscent.github.io/xiaoning-ai-tools/tools/url-cleaner.html)：5 个链接工具：追踪参数清理、参数解析、链接重建、分享前检查、UTM 构建（免费）
 - [CSS 开关切换组件生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-switch.html)：纯 CSS 开关实时预览，生成含 checked 状态代码（免费）
 - [JSON 转 TypeScript 接口生成器](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-ts.html)：粘贴 JSON 自动推导类型并生成 TypeScript interface（免费）
-- [增长与经营指标合集](https://screscent.github.io/xiaoning-ai-tools/tools/growth-metrics.html)：4 个经营指标工具同页：CAGR、同比环比、72 法则、盈亏平衡（免费）
+- [增长与经营指标合集](https://screscent.github.io/xiaoning-ai-tools/tools/growth-metrics.html)：5 个经营指标工具同页：CAGR、同比环比、72 法则、盈亏平衡、留存 LTV（免费）
 - [Favicon 与站点图标生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-favicon.html)：4 个图标工具同页：文字、Emoji、SVG 与 Manifest 配置，生成 favicon 可复制代码（免费）
 - [满减与优惠叠加合集](https://screscent.github.io/xiaoning-ai-tools/tools/coupon-stack.html)：4 个优惠工具同页：满减凑单、优惠券叠加、会员折上折、积分抵扣（免费）
 - [SQL 格式化与美化器](https://screscent.github.io/xiaoning-ai-tools/tools/sql-formatter.html)：SQL 关键字换行缩进美化，支持大小写与逗号换行（免费）

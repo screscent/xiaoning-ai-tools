@@ -3485,8 +3485,7 @@
  {
   "id": "bnxzbrnsmb",
   "name": "日出日落与光线时刻合集",
-  "desc": "4 个光线工具同页：日出日落、黄金蓝调、昼长季节、拍摄规划",
-  "tag": "免费",
+  "desc": "5 个光线工具同页：日出日落、黄金蓝调、昼长季节、拍摄规划、光时对照",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bnxzbrnsmb.app.weavefox.cn",
@@ -3507,6 +3506,10 @@
    {
     "key": "plan",
     "title": "工具D 拍摄时间规划"
+   },
+   {
+    "key": "city",
+    "title": "工具E 光时对照"
    }
   ]
  },
@@ -3869,8 +3872,7 @@
  {
   "id": "vfmrjplsqf",
   "name": "会议排期与时段合集",
-  "desc": "4 个排期工具：冲突检测、空档查找、时段推荐、占用清单",
-  "tag": "免费",
+  "desc": "5 个排期工具同页：冲突检测、空档查找、时段推荐、占用清单、时段投票",
   "price": 0,
   "cat": "实用工具",
   "url": "https://vfmrjplsqf.app.weavefox.cn",
@@ -3891,6 +3893,10 @@
    {
     "key": "busy",
     "title": "工具D 占用清单"
+   },
+   {
+    "key": "vote",
+    "title": "工具E 时段投票"
    }
   ]
  },
@@ -4061,8 +4067,7 @@
  {
   "id": "pz7jntqyzx",
   "name": "增长与经营指标合集",
-  "desc": "4 个经营指标工具同页：CAGR、同比环比、72 法则、盈亏平衡",
-  "tag": "免费",
+  "desc": "5 个经营指标工具同页：CAGR、同比环比、72 法则、盈亏平衡、留存 LTV",
   "price": 0,
   "cat": "实用工具",
   "url": "https://pz7jntqyzx.app.weavefox.cn",
@@ -4083,6 +4088,10 @@
    {
     "key": "breakeven",
     "title": "工具D 盈亏平衡"
+   },
+   {
+    "key": "ltv",
+    "title": "工具E 留存LTV"
    }
   ]
  },
