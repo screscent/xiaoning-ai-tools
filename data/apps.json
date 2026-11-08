@@ -3588,8 +3588,7 @@
  {
   "id": "rdqkfj4t4r",
   "name": "Base32 与编码校验合集",
-  "desc": "4 个 Base32 工具同页：编码、解码、RFC 校验与编码互转，结果可复制",
-  "tag": "免费",
+  "desc": "5 个编码工具同页：Base32 编码、Base32 解码、填充与校验、编码互转、文本十六进制",
   "price": 0,
   "cat": "实用工具",
   "url": "https://rdqkfj4t4r.app.weavefox.cn",
@@ -3610,6 +3609,10 @@
    {
     "key": "convert",
     "title": "编码互转"
+   },
+   {
+    "key": "hex",
+    "title": "工具E 文本十六进制"
    }
   ]
  },
@@ -5823,8 +5826,7 @@
  {
   "id": "c7rpgyegmi",
   "name": "打车费用与通勤速查",
-  "desc": "4 个出行工具同页：出租车计价、网约车对比、机场接送、通勤月成本",
-  "tag": "免费",
+  "desc": "5 个出行工具同页：出租车计价、网约车对比、机场接送、通勤月成本、拼车分摊",
   "price": 0,
   "cat": "实用工具",
   "url": "https://c7rpgyegmi.app.weavefox.cn",
@@ -5845,6 +5847,10 @@
    {
     "key": "commute",
     "title": "工具D 通勤月成本"
+   },
+   {
+    "key": "pool",
+    "title": "工具E 拼车分摊"
    }
   ]
  },
@@ -8068,8 +8074,7 @@
  {
   "id": "ijtkz98zig",
   "name": "游泳配速与训练合集",
-  "desc": "4 个游泳工具同页：配速与 SWOLF、趟数与距离换算、训练计划、泳姿与划频分析",
-  "tag": "免费",
+  "desc": "5 个游泳工具同页：配速与SWOLF、趟数换算、训练计划、泳姿与划频、组间休息",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ijtkz98zig.app.weavefox.cn",
@@ -8090,6 +8095,10 @@
    {
     "key": "stroke",
     "title": "泳姿与划频"
+   },
+   {
+    "key": "rest",
+    "title": "工具E 组间休息"
    }
   ]
  },

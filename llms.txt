@@ -256,7 +256,7 @@
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
 - [行李打包清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：4 个出行清单：商务出差、海岛度假、户外徒步、亲子出行（免费）
 - [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：5 个几何工具同页：平面面积、立体体积、圆与角度、土方混凝土、刷漆用量估算（免费）
-- [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：4 个 Base32 工具同页：编码、解码、RFC 校验与编码互转，结果可复制（免费）
+- [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：5 个编码工具同页：Base32 编码、Base32 解码、填充与校验、编码互转、文本十六进制（免费）
 - [中文标点全半角转换器](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：全角半角互转，按标点/数字/空格分范围处理（免费）
 - [AA 分摊与结算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bill-split.html)：4 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录（免费）
 - [日历文件与订阅合集](https://screscent.github.io/xiaoning-ai-tools/tools/ics-calendar.html)：5 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则（免费）
@@ -371,7 +371,7 @@
 - [繁简转换与用词对照器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-tw-cn.html)：繁简互转并对照用词与单字变化，附字数统计（免费）
 - [Base64URL 编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/base64url-codec.html)：URL 安全 Base64 编解码，可去填充与加 data 前缀（免费）
 - [数据备份 3-2-1 自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/backup-321-check.html)：按备份份数异地离线校验四项打分并给出改进动作（免费）
-- [打车费用与通勤速查](https://screscent.github.io/xiaoning-ai-tools/tools/ride-fare-compare.html)：4 个出行工具同页：出租车计价、网约车对比、机场接送、通勤月成本（免费）
+- [打车费用与通勤速查](https://screscent.github.io/xiaoning-ai-tools/tools/ride-fare-compare.html)：5 个出行工具同页：出租车计价、网约车对比、机场接送、通勤月成本、拼车分摊（免费）
 - [蛋白质摄入与三餐分配计算器](https://screscent.github.io/xiaoning-ai-tools/tools/protein-split.html)：按体重目标活动量算每日蛋白并均分到每餐，附食物等量对照（免费）
 - [浏览器指纹与隐私暴露自查器](https://screscent.github.io/xiaoning-ai-tools/tools/browser-fingerprint-check.html)：本地读取时区语言屏幕硬件Canvas九项，算熵值并给加固建议（免费）
 - [新能源车续航与充电费用估算器](https://screscent.github.io/xiaoning-ai-tools/tools/ev-range-cost.html)：按气温空调折损算真实续航与电费，判断行程是否需补能（免费）
@@ -448,7 +448,7 @@
 - [提交信息与变更日志合集](https://screscent.github.io/xiaoning-ai-tools/tools/commit-changelog-kit.html)：5 个提交规范工具同页：提交信息生成、类型速查、变更日志、commitlint 配置、PR 描述模板（免费）
 - [JSON 转多语言模型合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-models-kit.html)：5 个多语言工具同页：Go 结构体、Java 类、Python 模型、多语言键名规范、Swift 模型（免费）
 - [编码检测与乱码修复合集](https://screscent.github.io/xiaoning-ai-tools/tools/encoding-repair-kit.html)：4 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换、Unicode 与实体转换（免费）
-- [游泳配速与训练合集](https://screscent.github.io/xiaoning-ai-tools/tools/swim-training-kit.html)：4 个游泳工具同页：配速与 SWOLF、趟数与距离换算、训练计划、泳姿与划频分析（免费）
+- [游泳配速与训练合集](https://screscent.github.io/xiaoning-ai-tools/tools/swim-training-kit.html)：5 个游泳工具同页：配速与SWOLF、趟数换算、训练计划、泳姿与划频、组间休息（免费）
 - [网球计分与场地换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tennis-kit.html)：5 个网球工具同页：计分与赛制、场地尺寸换算、装备与穿线、训练计划与体能、发球与站位（免费）
 - [乐理与音准速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/music-theory-kit.html)：5 个乐理工具：音阶调号、音程频率、和弦构成、节奏拍号、BPM 与节拍时值（免费）
 - [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：5 个钓鱼工具：线组搭配、饵料速查、装备清单、鱼口评估、线号与拉力换算（免费）
