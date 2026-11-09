@@ -2516,7 +2516,8 @@
  {
   "id": "frn2l7gsra",
   "name": "图片拼接与拼图合集",
-  "desc": "5 个拼图工具同页：纵向拼接、横向拼接、宫格拼图、边框美化、间距留白",
+  "desc": "6 个拼图工具同页：纵向、横向、宫格、边框、间距、拼图比例预设",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frn2l7gsra.app.weavefox.cn",
@@ -2532,15 +2533,19 @@
    },
    {
     "key": "grid",
-    "title": "工具C 宫格拼图"
+    "title": "工具C 宫格"
    },
    {
     "key": "border",
-    "title": "工具D 边框美化"
+    "title": "工具D 边框"
    },
    {
     "key": "gap",
-    "title": "工具E 间距留白"
+    "title": "工具E 间距"
+   },
+   {
+    "key": "ratio",
+    "title": "工具F 拼图比例预设"
    }
   ]
  },
@@ -2556,7 +2561,8 @@
  {
   "id": "r3a6wazjyr",
   "name": "单价与多规格比价合集",
-  "desc": "5 个比价工具同页：单位价格、多规格折算、多件优惠、会员价、优惠叠加",
+  "desc": "6 个比价工具同页：单位价、规格、多件、会员价、优惠叠加、历史价格记录",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r3a6wazjyr.app.weavefox.cn",
@@ -2564,23 +2570,27 @@
   "subapps": [
    {
     "key": "unit",
-    "title": "工具A 单位价格比较"
+    "title": "工具A 单位价"
    },
    {
     "key": "pack",
-    "title": "工具B 多规格折算"
+    "title": "工具B 规格"
    },
    {
     "key": "bulk",
-    "title": "工具C 多件优惠单价"
+    "title": "工具C 多件"
    },
    {
     "key": "member",
-    "title": "工具D 会员价对比"
+    "title": "工具D 会员价"
    },
    {
     "key": "stack",
     "title": "工具E 优惠叠加"
+   },
+   {
+    "key": "history",
+    "title": "工具F 历史价格记录"
    }
   ]
  },
@@ -3014,7 +3024,8 @@
  {
   "id": "qseqsqnhme",
   "name": "水电燃气账单计算合集",
-  "desc": "5 个账单工具同页：阶梯电价、阶梯水价、燃气费、峰谷电价、账单分摊与合租结算",
+  "desc": "6 个账单工具同页：电费、水费、燃气、峰谷、分摊、年度账单预算",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qseqsqnhme.app.weavefox.cn",
@@ -3022,23 +3033,27 @@
   "subapps": [
    {
     "key": "power",
-    "title": "工具A 阶梯电价"
+    "title": "工具A 电费"
    },
    {
     "key": "water",
-    "title": "工具B 阶梯水价"
+    "title": "工具B 水费"
    },
    {
     "key": "gas",
-    "title": "工具C 阶梯气价"
+    "title": "工具C 燃气"
    },
    {
     "key": "tou",
-    "title": "工具D 峰谷电价"
+    "title": "工具D 峰谷"
    },
    {
     "key": "split",
-    "title": "工具E 账单分摊与合租结算"
+    "title": "工具E 分摊"
+   },
+   {
+    "key": "budget",
+    "title": "工具F 年度账单预算"
    }
   ]
  },
