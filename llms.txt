@@ -439,7 +439,7 @@
 - [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：6 个衣物工具同页：标签、面料、污渍、熨烫、晾晒收纳、换季收纳清单（免费）
 - [验房与收房检查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-inspection.html)：5 个收房工具同页：验房清单、面积核对、整改跟踪、收房税费、验房工时（免费）
 - [自行车骑行与维护合集](https://screscent.github.io/xiaoning-ai-tools/tools/cycling-care.html)：5 个骑行工具同页：配速里程、保养周期、装备清单、车架尺寸、链条与飞轮寿命（免费）
-- [家居软装尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/soft-furnishing-size.html)：5 个软装工具：窗帘尺寸与褶皱、地毯尺寸选配、挂画高度定位、沙发与茶几尺寸、灯具尺寸与层高（免费）
+- [家居软装尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/soft-furnishing-size.html)：6 个软装工具同页：窗帘、地毯、挂画、沙发、灯具、软装预算分配（免费）
 - [家庭防虫与灭鼠合集](https://screscent.github.io/xiaoning-ai-tools/tools/pest-control-home.html)：5 个防虫工具：蚊虫防治、蟑螂蚂蚁、老鼠封堵、白蚁蛀虫、驱蚊剂浓度与时效（免费）
 - [数码外设选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/digital-peripherals.html)：5 个数码工具同页：显示器选型、键盘轴体、鼠标握姿、耳机与音箱、桌面布置与线材（免费）
 - [羽毛球入门与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/badminton-start.html)：5 个羽毛球工具同页：场地规则、球拍磅数、用球选择、计分与赛制、场地成本（免费）
@@ -454,7 +454,7 @@
 - [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：5 个钓鱼工具：线组搭配、饵料速查、装备清单、鱼口评估、线号与拉力换算（免费）
 - [台球计分与角度合集](https://screscent.github.io/xiaoning-ai-tools/tools/billiards-kit.html)：5 个台球工具：计分与规则、击球角度换算、装备与皮头、球台规格与照明、击球力度与走位（免费）
 - [保龄球计分与换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bowling-kit.html)：5 个保龄球工具同页：十局计分、让分与净分、球重球速换算、球道与瓶位、局均分与稳定性（免费）
-- [纸张尺寸与印刷出血合集](https://screscent.github.io/xiaoning-ai-tools/tools/paper-print-bleed.html)：5 个印刷工具同页：纸张尺寸、出血与安全边距、分辨率换算、折页与拼版规划、开数与印张换算（免费）
+- [纸张尺寸与印刷出血合集](https://screscent.github.io/xiaoning-ai-tools/tools/paper-print-bleed.html)：6 个印刷工具同页：纸张、出血、DPI、折页、开数印张、印量与成本（免费）
 - [元素周期表与化学计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/element-chemistry.html)：5 个化学工具同页：元素速查、摩尔质量与物质的量、溶液浓度换算、气体定律与分压、pH 与缓冲溶液（免费）
 - [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：5 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼、灯位与回路规划、照明功率与电费（免费）
 - [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：5 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期、轮胎周长与转数（免费）

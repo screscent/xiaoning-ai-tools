@@ -8068,7 +8068,8 @@
  {
   "id": "uiaessxjku",
   "name": "家居软装尺寸合集",
-  "desc": "5 个软装工具：窗帘尺寸与褶皱、地毯尺寸选配、挂画高度定位、沙发与茶几尺寸、灯具尺寸与层高",
+  "desc": "6 个软装工具同页：窗帘、地毯、挂画、沙发、灯具、软装预算分配",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uiaessxjku.app.weavefox.cn",
@@ -8076,23 +8077,27 @@
   "subapps": [
    {
     "key": "curtain",
-    "title": "工具A 窗帘尺寸与褶皱"
+    "title": "工具A 窗帘"
    },
    {
     "key": "rug",
-    "title": "工具B 地毯尺寸选配"
+    "title": "工具B 地毯"
    },
    {
     "key": "art",
-    "title": "工具C 挂画高度定位"
+    "title": "工具C 挂画"
    },
    {
     "key": "sofa",
-    "title": "工具D 沙发与茶几尺寸"
+    "title": "工具D 沙发"
    },
    {
     "key": "lamp",
-    "title": "工具E 灯具尺寸与层高"
+    "title": "工具E 灯具"
+   },
+   {
+    "key": "layout",
+    "title": "工具F 软装预算分配"
    }
   ]
  },
@@ -8538,7 +8543,8 @@
  {
   "id": "qhnnmmstfq",
   "name": "纸张尺寸与印刷出血合集",
-  "desc": "5 个印刷工具同页：纸张尺寸、出血与安全边距、分辨率换算、折页与拼版规划、开数与印张换算",
+  "desc": "6 个印刷工具同页：纸张、出血、DPI、折页、开数印张、印量与成本",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qhnnmmstfq.app.weavefox.cn",
@@ -8546,23 +8552,27 @@
   "subapps": [
    {
     "key": "paper",
-    "title": "工具A 纸张尺寸"
+    "title": "工具A 纸张"
    },
    {
     "key": "bleed",
-    "title": "工具B 出血与安全边距"
+    "title": "工具B 出血"
    },
    {
     "key": "dpi",
-    "title": "工具C 分辨率换算"
+    "title": "工具C DPI"
    },
    {
     "key": "fold",
-    "title": "工具D 折页与拼版规划"
+    "title": "工具D 折页"
    },
    {
     "key": "sheet",
-    "title": "工具E 开数与印张换算"
+    "title": "工具E 开数印张"
+   },
+   {
+    "key": "qty",
+    "title": "工具F 印量与成本估算"
    }
   ]
  },
