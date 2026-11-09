@@ -9482,5 +9482,28 @@
     "title": "工具C 取暖方式对比"
    }
   ]
+ },
+ {
+  "id": "bnjyymnsmb",
+  "name": "洗碗机容量与耗材计算合集",
+  "desc": "3 个洗碗机工具同页：容量与餐具量、耗材月成本、洗涤水电费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bnjyymnsmb.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "capacity",
+    "title": "工具A 容量与餐具量"
+   },
+   {
+    "key": "supply",
+    "title": "工具B 耗材月成本"
+   },
+   {
+    "key": "runtime",
+    "title": "工具C 洗涤水电费"
+   }
+  ]
  }
 ]
