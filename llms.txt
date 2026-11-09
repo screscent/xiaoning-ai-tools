@@ -252,17 +252,17 @@
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
 - [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：5 个开票工具同页：价税分离、税额反算、多税率对照、开票信息、进项抵扣测算（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
-- [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：5 个光线工具同页：日出日落、黄金蓝调、昼长季节、拍摄规划、光时对照（免费）
+- [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：6 个光线工具同页：日出、黄金时刻、昼长、规划、光时、月相与夜空窗口（免费）
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
 - [行李打包清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：4 个出行清单：商务出差、海岛度假、户外徒步、亲子出行（免费）
-- [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：5 个几何工具同页：平面面积、立体体积、圆与角度、土方混凝土、刷漆用量估算（免费）
+- [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：6 个几何工具同页：平面、立体、圆与角、土方、刷漆用量、坡度与排水（免费）
 - [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：5 个编码工具同页：Base32 编码、Base32 解码、填充与校验、编码互转、文本十六进制（免费）
 - [中文标点全半角转换器](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：全角半角互转，按标点/数字/空格分范围处理（免费）
 - [AA 分摊与结算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bill-split.html)：5 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录、小费与税费分摊（免费）
 - [日历文件与订阅合集](https://screscent.github.io/xiaoning-ai-tools/tools/ics-calendar.html)：5 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则（免费）
 - [SVG 图表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-chart.html)：柱状/折线/面积图纯 SVG 生成，可下载源码（免费）
 - [批量序列号生成器](https://screscent.github.io/xiaoning-ai-tools/tools/serial-generator.html)：前缀+位数批量生成唯一序列号，含校验位（免费）
-- [装修材料用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/material-estimate.html)：5 个装修工具同页：涂料用量、瓷砖块数、地板用量、壁纸卷数、损耗补货（免费）
+- [装修材料用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/material-estimate.html)：6 个装修工具同页：涂料、瓷砖、地板、壁纸、损耗、装修预算分配（免费）
 - [文章字数与稿费计算器](https://screscent.github.io/xiaoning-ai-tools/tools/word-fee.html)：按字数千字单价算稿费，含加急倍数与阅读时长（免费）
 - [Unicode 码点与 UTF-8 字节查询器](https://screscent.github.io/xiaoning-ai-tools/tools/unicode-codepoint.html)：逐字查码点/UTF-8 字节，正确处理 emoji 代理对（免费）
 - [敏感词本地过滤检测器](https://screscent.github.io/xiaoning-ai-tools/tools/sensitive-filter.html)：内置 80 条分类词库+自定义词，本地过滤并统计（免费）
