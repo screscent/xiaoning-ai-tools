@@ -149,7 +149,7 @@
 - [古诗词默写检测器](https://screscent.github.io/xiaoning-ai-tools/tools/poem-dictation.html)：学段篇目 → 题卡 + 答案 + 复习安排（¥1）
 - [内容选题日历生成器](https://screscent.github.io/xiaoning-ai-tools/tools/content-calendar.html)：平台赛道 → 30天选题 + 标题模板（¥2）
 - [图片压缩与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-compressor.html)：6 个图片工具同页：单图压缩、批量统一压缩、压缩前后对比、画质档位建议、尺寸缩放限制、WebP 格式选择（免费）
-- [房贷与购房成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：5 个房贷工具同页：提前还款、利率月供、购房能力、二手房税费、租房买房对比（免费）
+- [房贷与购房成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：6 个房贷工具同页：提前还款、利率月供、购房能力、二手房税费、租房买房对比、中介与过户杂费（免费）
 - [二维码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：文本网址 → 本地生成 PNG，免费（免费）
 - [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：6 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、JSON 与 XML、结构统计、两段差异对比，键路径级定位（免费）
 - [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：6 个 CSV 工具同页：CSV→JSON、JSON→CSV、表格预览、分隔符检测、列筛选重排、编码与换行清洗，字段多时先挑列再转换（免费）
@@ -190,7 +190,7 @@
 - [图片转 DataURL](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-dataurl.html)：图片转 DataURL/Base64/HTML/Markdown，可压缩（免费）
 - [秒表与计时记录合集](https://screscent.github.io/xiaoning-ai-tools/tools/stopwatch-lap.html)：6 个计时工具同页：秒表、分段、对比、导出、间歇、多段倒计时（免费）
 - [配色方案生成器](https://screscent.github.io/xiaoning-ai-tools/tools/color-palette-generator.html)：互补/邻近/三角等配色规则，一键复制色卡（免费）
-- [图片对比与差异合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-ab-compare.html)：5 个图片对比工具同页：滑块对比、并排对比、叠加对比、差异高亮、差异评分与阈值（免费）
+- [图片对比与差异合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-ab-compare.html)：6 个图片对比工具同页：滑块对比、并排对比、叠加对比、差异高亮、差异评分、差异报告（免费）
 - [月历与年历合集](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-calendar.html)：5 个月历工具：月历排布、年历总览、周数对照、打印版式、季度财年（免费）
 - [密码强度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/password-strength.html)：本地评估密码强度、熵值与改进建议（免费）
 - [思维导图与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/mind-map-generator.html)：6 个思维工具同页：导图、大纲、模板、导出、Mermaid 转写、清单与待办大纲（免费）
@@ -209,7 +209,7 @@
 - [CSS 阴影生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-shadow-generator.html)：滑块调偏移/模糊/扩散，实时预览并复制 box-shadow（免费）
 - [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：6 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义、正则转义与常用式（免费）
 - [Markdown 转纯文本](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：Markdown → 纯文本，可去列表符号/代码块并下载 txt（免费）
-- [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：5 个本地脱敏工具：手机/证件/邮箱打码、批量处理、分享前自查、规则自定义（免费）
+- [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：6 个本地脱敏工具：手机/证件/邮箱打码、批量处理、分享前自查、规则自定义、哈希脱敏（免费）
 - [颜色名称查询](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色（免费）
 - [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
 - [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：5 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算（免费）
