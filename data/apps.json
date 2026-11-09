@@ -9321,5 +9321,28 @@
     "title": "工具E 保费占比"
    }
   ]
+ },
+ {
+  "id": "qsnqwjnhme",
+  "name": "母婴护理与开销合集",
+  "desc": "3 个母婴工具同页：疫苗时间表、尿布开销、衣物尺码",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qsnqwjnhme.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "vaccine",
+    "title": "工具A 疫苗时间表"
+   },
+   {
+    "key": "diaper",
+    "title": "工具B 尿布开销"
+   },
+   {
+    "key": "size",
+    "title": "工具C 衣物尺码"
+   }
+  ]
  }
 ]
