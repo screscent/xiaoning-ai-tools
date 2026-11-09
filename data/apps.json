@@ -1082,7 +1082,8 @@
  {
   "id": "ekgs3pvhte",
   "name": "图片压缩与批量处理合集",
-  "desc": "5 个图片工具同页：单图压缩、批量统一压缩、压缩前后对比、画质档位建议、尺寸缩放限制",
+  "desc": "6 个图片工具同页：单图压缩、批量统一压缩、压缩前后对比、画质档位建议、尺寸缩放限制、WebP 格式选择",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ekgs3pvhte.app.weavefox.cn",
@@ -1098,7 +1099,7 @@
    },
    {
     "key": "compare",
-    "title": "工具C 前后对比"
+    "title": "工具C 压缩对比"
    },
    {
     "key": "quality",
@@ -1106,7 +1107,11 @@
    },
    {
     "key": "resize",
-    "title": "工具E 尺寸缩放与限制"
+    "title": "工具E 尺寸缩放"
+   },
+   {
+    "key": "webp",
+    "title": "工具F WebP 格式选择"
    }
   ]
  },
@@ -1722,7 +1727,8 @@
  {
   "id": "ekg2knvhte",
   "name": "Markdown 写作合集",
-  "desc": "5 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架、目录生成",
+  "desc": "6 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架、目录生成、导出与打印",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ekg2knvhte.app.weavefox.cn",
@@ -1742,11 +1748,15 @@
    },
    {
     "key": "template",
-    "title": "工具D 文档模板"
+    "title": "工具D 模板骨架"
    },
    {
     "key": "toc",
     "title": "工具E 目录生成"
+   },
+   {
+    "key": "export",
+    "title": "工具F 导出与打印"
    }
   ]
  },
@@ -1923,7 +1933,8 @@
  {
   "id": "bnuscunsmb",
   "name": "记账与月度分析合集",
-  "desc": "5 个记账工具同页：流水记账、分类占比与预算线、月度收支趋势、CSV 报表导出、预算与超支预警",
+  "desc": "6 个记账工具同页：流水、分类、月度、导出、预算、月度趋势与同比",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bnuscunsmb.app.weavefox.cn",
@@ -1931,23 +1942,27 @@
   "subapps": [
    {
     "key": "ledger",
-    "title": "工具A 流水记账"
+    "title": "工具A 流水记录"
    },
    {
     "key": "category",
-    "title": "工具B 分类与预算"
+    "title": "工具B 分类统计"
    },
    {
     "key": "monthly",
-    "title": "工具C 月度对比"
+    "title": "工具C 月度汇总"
    },
    {
     "key": "export",
-    "title": "工具D CSV 报表"
+    "title": "工具D 导出"
    },
    {
     "key": "budget",
-    "title": "工具E 预算与超支预警"
+    "title": "工具E 预算"
+   },
+   {
+    "key": "trend",
+    "title": "工具F 月度趋势与同比"
    }
   ]
  },
