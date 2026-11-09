@@ -2137,7 +2137,8 @@
  {
   "id": "dvznbegy5d",
   "name": "决策与抽签合集",
-  "desc": "5 个决策工具同页：随机抽取、加权概率、多人投票计票、不重复名单抽签、波达计分",
+  "desc": "6 个决策工具同页：随机、加权、投票、抽签、波达计分、决策矩阵",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dvznbegy5d.app.weavefox.cn",
@@ -2145,23 +2146,27 @@
   "subapps": [
    {
     "key": "random",
-    "title": "工具A 随机抽取"
+    "title": "工具A 随机"
    },
    {
     "key": "weighted",
-    "title": "工具B 加权概率"
+    "title": "工具B 加权"
    },
    {
     "key": "vote",
-    "title": "工具C 投票计票"
+    "title": "工具C 投票"
    },
    {
     "key": "picker",
-    "title": "工具D 名单抽签"
+    "title": "工具D 抽签"
    },
    {
     "key": "borda",
     "title": "工具E 波达计分"
+   },
+   {
+    "key": "matrix",
+    "title": "工具F 决策矩阵打分"
    }
   ]
  },
@@ -2177,7 +2182,8 @@
  {
   "id": "x8s6kkcakb",
   "name": "秒表与计时记录合集",
-  "desc": "5 个计时工具同页：秒表计时、分段记录、多次对比、CSV 导出、间歇训练计时配置",
+  "desc": "6 个计时工具同页：秒表、分段、对比、导出、间歇、多段倒计时",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://x8s6kkcakb.app.weavefox.cn",
@@ -2185,23 +2191,27 @@
   "subapps": [
    {
     "key": "stopwatch",
-    "title": "工具A 大字秒表"
+    "title": "工具A 秒表"
    },
    {
     "key": "laps",
-    "title": "工具B 分段与圈速"
+    "title": "工具B 分段"
    },
    {
     "key": "compare",
-    "title": "工具C 两组对比"
+    "title": "工具C 对比"
    },
    {
     "key": "export",
-    "title": "工具D 记录导出"
+    "title": "工具D 导出"
    },
    {
     "key": "interval",
-    "title": "工具E 间歇训练计时配置"
+    "title": "工具E 间歇"
+   },
+   {
+    "key": "countdown",
+    "title": "工具F 多段倒计时"
    }
   ]
  },
@@ -2288,7 +2298,8 @@
  {
   "id": "key2pcdudk",
   "name": "思维导图与大纲合集",
-  "desc": "5 个思维工具同页：导图生成、大纲转导图、场景模板、SVG/PNG/Markdown 导出、Mermaid 转写",
+  "desc": "6 个思维工具同页：导图、大纲、模板、导出、Mermaid 转写、清单与待办大纲",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://key2pcdudk.app.weavefox.cn",
@@ -2296,23 +2307,27 @@
   "subapps": [
    {
     "key": "map",
-    "title": "导图生成"
+    "title": "工具A 导图"
    },
    {
     "key": "outline",
-    "title": "大纲转导图"
+    "title": "工具B 大纲"
    },
    {
     "key": "templates",
-    "title": "场景模板"
+    "title": "工具C 模板"
    },
    {
     "key": "export",
-    "title": "导出格式"
+    "title": "工具D 导出"
    },
    {
     "key": "mermaid",
-    "title": "Mermaid 转写"
+    "title": "工具E Mermaid 转写"
+   },
+   {
+    "key": "checklist",
+    "title": "工具F 清单与待办大纲"
    }
   ]
  },
