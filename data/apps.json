@@ -1549,7 +1549,8 @@
  {
   "id": "vftnmglsqf",
   "name": "随机分组与抽签合集",
-  "desc": "5 个分组工具：随机分组、代表抽取、顺序排位、结果导出、淘汰赛对阵",
+  "desc": "6 个分组工具同页：分组、代表、顺序、导出、对阵、随机种子与复现",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://vftnmglsqf.app.weavefox.cn",
@@ -1565,15 +1566,19 @@
    },
    {
     "key": "order",
-    "title": "工具C 顺序排位"
+    "title": "工具C 顺序抽签"
    },
    {
     "key": "export",
-    "title": "工具D 结果导出"
+    "title": "工具D 导出"
    },
    {
     "key": "bracket",
-    "title": "淘汰赛对阵"
+    "title": "工具E 对阵表"
+   },
+   {
+    "key": "seed",
+    "title": "工具F 随机种子与复现"
    }
   ]
  },
@@ -1819,7 +1824,8 @@
  {
   "id": "rdp8n24t4r",
   "name": "待办与任务管理合集",
-  "desc": "5 个任务工具同页：待办清单、例行任务、日周回顾、归档导入导出、四象限优先级",
+  "desc": "6 个任务工具同页：待办、例行、回顾、归档、四象限优先级、任务计时与耗时统计",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://rdp8n24t4r.app.weavefox.cn",
@@ -1827,23 +1833,27 @@
   "subapps": [
    {
     "key": "todo",
-    "title": "工具A 待办清单"
+    "title": "工具A 待办"
    },
    {
     "key": "routine",
-    "title": "工具B 例行任务"
+    "title": "工具B 例行"
    },
    {
     "key": "review",
-    "title": "工具C 日周回顾"
+    "title": "工具C 回顾"
    },
    {
     "key": "archive",
-    "title": "工具D 归档与导出"
+    "title": "工具D 归档"
    },
    {
     "key": "eisen",
     "title": "工具E 四象限优先级"
+   },
+   {
+    "key": "timer",
+    "title": "工具F 任务计时与耗时统计"
    }
   ]
  },
@@ -1976,7 +1986,8 @@
  {
   "id": "bnu92knsmb",
   "name": "社交图片切图与比例合集",
-  "desc": "5 个切图工具同页：九宫格、1:1 方图、9:16 竖版、16:9 横版、圆角描边",
+  "desc": "6 个切图工具同页：九宫格、方图、竖版、横版、圆角、Banner 与安全区",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bnu92knsmb.app.weavefox.cn",
@@ -1988,19 +1999,23 @@
    },
    {
     "key": "square",
-    "title": "工具B 1:1 方图"
+    "title": "工具B 方图"
    },
    {
     "key": "story",
-    "title": "工具C 9:16 竖版"
+    "title": "工具C 竖版"
    },
    {
     "key": "cover",
-    "title": "工具D 16:9 横版"
+    "title": "工具D 横版"
    },
    {
     "key": "radius",
-    "title": "工具E 圆角描边"
+    "title": "工具E 圆角"
+   },
+   {
+    "key": "banner",
+    "title": "工具F Banner 与安全区尺寸"
    }
   ]
  },
