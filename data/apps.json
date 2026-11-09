@@ -7671,7 +7671,8 @@
  {
   "id": "glmtjccqng",
   "name": "开源素材与授权速查合集",
-  "desc": "5 个素材工具：字体授权、图标来源、音效授权、许可协议对照、授权期限提醒",
+  "desc": "6 个工具同页：字体、图标、音频、许可、到期、署名与致谢模板",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://glmtjccqng.app.weavefox.cn",
@@ -7679,23 +7680,27 @@
   "subapps": [
    {
     "key": "font",
-    "title": "工具A 字体授权"
+    "title": "工具A 字体"
    },
    {
     "key": "icon",
-    "title": "工具B 图标来源"
+    "title": "工具B 图标"
    },
    {
     "key": "audio",
-    "title": "工具C 音效授权"
+    "title": "工具C 音频"
    },
    {
     "key": "license",
-    "title": "工具D 许可协议对照"
+    "title": "工具D 许可"
    },
    {
     "key": "expiry",
-    "title": "工具E 授权期限与到期提醒"
+    "title": "工具E 到期"
+   },
+   {
+    "key": "attribution",
+    "title": "工具F 署名与致谢模板"
    }
   ]
  },
@@ -7929,7 +7934,8 @@
  {
   "id": "jadllqkp5e",
   "name": "鞋服尺码换算合集",
-  "desc": "5 个尺码工具同页：鞋码换算、服装尺码、儿童尺码、尺码对照表、版型与测量",
+  "desc": "6 个尺码工具同页：鞋码、服装、儿童、对照表、版型测量、品牌尺码对照",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://jadllqkp5e.app.weavefox.cn",
@@ -7937,30 +7943,35 @@
   "subapps": [
    {
     "key": "shoe",
-    "title": "鞋码换算"
+    "title": "工具A 鞋码"
    },
    {
     "key": "cloth",
-    "title": "服装尺码"
+    "title": "工具B 服装"
    },
    {
     "key": "kids",
-    "title": "儿童尺码"
+    "title": "工具C 儿童"
    },
    {
     "key": "chart",
-    "title": "尺码对照表"
+    "title": "工具D 对照表"
    },
    {
     "key": "fit",
-    "title": "版型与测量"
+    "title": "工具E 版型测量"
+   },
+   {
+    "key": "convert",
+    "title": "工具F 品牌尺码对照"
    }
   ]
  },
  {
   "id": "lyklq7jxel",
   "name": "衣物洗护与面料速查合集",
-  "desc": "5 个衣物工具同页：洗护标签、面料特性、污渍处理、熨烫温度与蒸汽档位、晾晒与收纳",
+  "desc": "6 个衣物工具同页：标签、面料、污渍、熨烫、晾晒收纳、换季收纳清单",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://lyklq7jxel.app.weavefox.cn",
@@ -7968,23 +7979,27 @@
   "subapps": [
    {
     "key": "care",
-    "title": "洗护标签"
+    "title": "工具A 标签"
    },
    {
     "key": "fabric",
-    "title": "面料特性"
+    "title": "工具B 面料"
    },
    {
     "key": "stain",
-    "title": "污渍处理"
+    "title": "工具C 污渍"
    },
    {
     "key": "iron",
-    "title": "熨烫温度与蒸汽档位"
+    "title": "工具D 熨烫"
    },
    {
     "key": "dry",
-    "title": "晾晒与收纳"
+    "title": "工具E 晾晒收纳"
+   },
+   {
+    "key": "storage",
+    "title": "工具F 换季收纳清单"
    }
   ]
  },
