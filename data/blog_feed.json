@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-09T03:54:21+00:00",
+ "updated": "2026-11-09T10:48:02+00:00",
  "source": "wechat-mp",
- "count": 157,
+ "count": 158,
  "articles": [
+  {
+   "slug": "vlERSqnm4u7OeFaiGZX9vQ",
+   "title": "小凝 Agent：一个 Agent 的三层进化——内环、外环与自适应",
+   "url": "https://mp.weixin.qq.com/s/vlERSqnm4u7OeFaiGZX9vQ",
+   "publish_time": "2026-11-09",
+   "status": "published",
+   "archived": false
+  },
   {
    "slug": "1STTQtD_vmzWyEOAW3R9Qw",
    "title": "小凝 Agent：给裁决加一层博弈——项目与 OS 如何互相长大",
@@ -1259,6 +1267,5 @@
    "status": "published",
    "archived": true
   }
- ],
- "excluded": []
+ ]
 }
