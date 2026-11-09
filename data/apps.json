@@ -5665,7 +5665,8 @@
  {
   "id": "kezy8adudk",
   "name": "编号与缩进整理合集",
-  "desc": "4 个文本整理工具同页：重新编号、缩进规范、大纲层级、去编号空行",
+  "desc": "5 个文本整理工具同页：重新编号、缩进规范、大纲层级、去编号空行、缩进宽度换算",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://kezy8adudk.app.weavefox.cn",
@@ -5686,6 +5687,10 @@
    {
     "key": "clean",
     "title": "工具D 去编号空行"
+   },
+   {
+    "key": "tabwidth",
+    "title": "工具E 缩进宽度换算"
    }
   ]
  },
@@ -5774,7 +5779,7 @@
  {
   "id": "ewzae9ixkx",
   "name": "图片体积与位深估算合集",
-  "desc": "4 个估算工具同页：位深体积、内存占用、压缩比与色彩数，输入参数即出结果",
+  "desc": "5 个估算工具同页：位深体积、内存占用、压缩比、色彩数与批量压缩体积，输入参数即出结果",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -5783,19 +5788,23 @@
   "subapps": [
    {
     "key": "depth",
-    "title": "位深体积"
+    "title": "工具A 位深体积"
    },
    {
     "key": "memory",
-    "title": "内存占用"
+    "title": "工具B 内存占用"
    },
    {
     "key": "ratio",
-    "title": "压缩比估算"
+    "title": "工具C 压缩比"
    },
    {
     "key": "colors",
-    "title": "色彩数"
+    "title": "工具D 色彩数"
+   },
+   {
+    "key": "shrink",
+    "title": "工具E 批量压缩体积"
    }
   ]
  },
@@ -6007,7 +6016,7 @@
  {
   "id": "g42maetuhw",
   "name": "引用格式与文献速查",
-  "desc": "4 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX 与文献管理要点",
+  "desc": "5 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX 与文献去重统计",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -6029,6 +6038,10 @@
    {
     "key": "bib",
     "title": "工具D BibTeX"
+   },
+   {
+    "key": "dedupe",
+    "title": "工具E 参考文献去重统计"
    }
   ]
  },
