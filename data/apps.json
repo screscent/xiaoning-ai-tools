@@ -1818,7 +1818,8 @@
  {
   "id": "tbqexcmk3t",
   "name": "打字练习与速度合集",
-  "desc": "5 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势、键盘布局与指法",
+  "desc": "6 个打字工具同页：速度、错键、练习、趋势、指法、自定义测试文本",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://tbqexcmk3t.app.weavefox.cn",
@@ -1834,15 +1835,19 @@
    },
    {
     "key": "drill",
-    "title": "工具C 专项练习"
+    "title": "工具C 练习"
    },
    {
     "key": "progress",
-    "title": "工具D 成绩趋势"
+    "title": "工具D 趋势"
    },
    {
     "key": "layout",
-    "title": "工具E 键盘布局与指法"
+    "title": "工具E 指法"
+   },
+   {
+    "key": "custom",
+    "title": "工具F 自定义测试文本"
    }
   ]
  },
@@ -2087,7 +2092,7 @@
  {
   "id": "glh2nmcqng",
   "name": "图片滤镜与调色合集",
-  "desc": "5 个调色工具同页：灰度、模糊、复古、明暗、锐化与降噪参数",
+  "desc": "6 个调色工具同页：灰度、模糊、复古、明暗、锐化、色温与色调",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -2096,23 +2101,27 @@
   "subapps": [
    {
     "key": "gray",
-    "title": "工具A 灰度与黑白"
+    "title": "工具A 灰度"
    },
    {
     "key": "blur",
-    "title": "工具B 模糊与景深"
+    "title": "工具B 模糊"
    },
    {
     "key": "vintage",
-    "title": "工具C 复古色调"
+    "title": "工具C 复古"
    },
    {
     "key": "tone",
-    "title": "工具D 明暗与色彩"
+    "title": "工具D 明暗"
    },
    {
     "key": "sharpen",
-    "title": "工具E 锐化与降噪参数"
+    "title": "工具E 锐化"
+   },
+   {
+    "key": "temperature",
+    "title": "工具F 色温与色调"
    }
   ]
  },
@@ -4870,8 +4879,8 @@
  },
  {
   "id": "5culhkt6g5",
-  "name": "文件传输与带宽估算合集",
-  "desc": "5 个传输工具同页：下载耗时、上传耗时、带宽换算、体积与压缩、延迟与游戏加速",
+  "name": "网盘与下载带宽合集",
+  "desc": "6 个传输工具同页：下载时间、上传时间、带宽换算、体积压缩、延迟与加速、流量与超额费用",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -4880,23 +4889,27 @@
   "subapps": [
    {
     "key": "download",
-    "title": "下载耗时"
+    "title": "工具A 下载时间"
    },
    {
     "key": "upload",
-    "title": "上传耗时"
+    "title": "工具B 上传时间"
    },
    {
     "key": "bandwidth",
-    "title": "带宽换算"
+    "title": "工具C 带宽换算"
    },
    {
     "key": "size",
-    "title": "体积与压缩"
+    "title": "工具D 体积压缩"
    },
    {
     "key": "qos",
-    "title": "延迟与游戏加速"
+    "title": "工具E 延迟与加速"
+   },
+   {
+    "key": "traffic",
+    "title": "工具F 流量与超额费用"
    }
   ]
  },
