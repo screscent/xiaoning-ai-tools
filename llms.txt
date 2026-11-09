@@ -267,7 +267,7 @@
 - [Unicode 码点与 UTF-8 字节查询器](https://screscent.github.io/xiaoning-ai-tools/tools/unicode-codepoint.html)：逐字查码点/UTF-8 字节，正确处理 emoji 代理对（免费）
 - [敏感词本地过滤检测器](https://screscent.github.io/xiaoning-ai-tools/tools/sensitive-filter.html)：内置 80 条分类词库+自定义词，本地过滤并统计（免费）
 - [每日饮水与作息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/daily-plan.html)：按体重活动量算饮水量并生成分时作息表（免费）
-- [节假日与调休合集](https://screscent.github.io/xiaoning-ai-tools/tools/holiday-calendar.html)：4 个假期工具：放假安排、调休标注、拼假规划、假期倒计时（免费）
+- [节假日与调休合集](https://screscent.github.io/xiaoning-ai-tools/tools/holiday-calendar.html)：5 个假期工具：放假安排、调休标注、拼假规划、假期倒计时、加班费（免费）
 - [CSS 表格样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-table.html)：调色圆角斑马纹实时生成表格 CSS/HTML（免费）
 - [文本改写与降重合集](https://screscent.github.io/xiaoning-ai-tools/tools/synonym-rewrite.html)：5 个改写工具同页：同义替换、强度改写、同义词表、改写对照、降重评分，结果可复制（免费）
 - [个税与到手工资合集](https://screscent.github.io/xiaoning-ai-tools/tools/salary-tax.html)：5 个税务工具同页：工资个税到手、年终奖计税对比、专项附加扣除、五险一金明细、年度汇算（免费）
@@ -289,7 +289,7 @@
 - [打印尺寸与像素换算器](https://screscent.github.io/xiaoning-ai-tools/tools/print-size-px.html)：毫米尺寸与 DPI 换算像素，含 A4/名片等预设（免费）
 - [XML 格式化与压缩器](https://screscent.github.io/xiaoning-ai-tools/tools/xml-format.html)：XML 逐层缩进美化与单行压缩，含统计与错误提示（免费）
 - [Markdown 目录与锚点合集](https://screscent.github.io/xiaoning-ai-tools/tools/md-toc-anchor.html)：5 个文档工具同页：目录生成、锚点、内链、大纲、批量标题锚点（免费）
-- [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：4 个换汇工具同页：双向换算、多币种折算、手续费到账、现钞对比（免费）
+- [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：5 个换汇工具同页：双向换算、多币种折算、手续费到账、现钞对比、境外刷卡（免费）
 - [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算（免费）
 - [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：5 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算、训练区间（免费）
 - [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：4 个路径工具同页：JSONPath、JSON Pointer、点号路径与路径生成，结果可复制（免费）
@@ -347,7 +347,7 @@
 - [时薪与通勤成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/hourly-wage.html)：4 个时薪工具同页：实际时薪、通勤成本、涨薪换算、城市对比（免费）
 - [通胀与购买力合集](https://screscent.github.io/xiaoning-ai-tools/tools/inflation-power.html)：4 个通胀工具同页：购买力、存款收益、工资涨幅、目标金额（免费）
 - [邮箱签名与名片合集](https://screscent.github.io/xiaoning-ai-tools/tools/email-signature.html)：4 个名片工具同页：邮箱签名、名片文案、社交简介、vCard（免费）
-- [账单日与免息期合集](https://screscent.github.io/xiaoning-ai-tools/tools/card-billing.html)：4 个信用卡工具：账单日规划、免息期计算、还款日提醒、分期成本（免费）
+- [账单日与免息期合集](https://screscent.github.io/xiaoning-ai-tools/tools/card-billing.html)：5 个信用卡工具：账单日规划、免息期计算、还款日提醒、分期成本、最低还款利息（免费）
 - [长文本摘要与压缩率计算器](https://screscent.github.io/xiaoning-ai-tools/tools/text-summary.html)：确定性抽取式摘要，给出字数压缩率与句子段落统计（免费）
 - [月度预算配额分配器](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-budget.html)：按收入与比例拆分配额，校验占比合计与结余（免费）
 - [预产期与孕周计算器](https://screscent.github.io/xiaoning-ai-tools/tools/due-date.html)：按末次月经与周期算预产期、孕周天数与进度百分比（免费）
