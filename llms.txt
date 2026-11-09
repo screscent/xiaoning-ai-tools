@@ -283,7 +283,7 @@
 - [JSON 转 TypeScript 接口生成器](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-ts.html)：粘贴 JSON 自动推导类型并生成 TypeScript interface（免费）
 - [增长与经营指标合集](https://screscent.github.io/xiaoning-ai-tools/tools/growth-metrics.html)：5 个经营指标工具同页：CAGR、同比环比、72 法则、盈亏平衡、留存 LTV（免费）
 - [Favicon 与站点图标生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-favicon.html)：4 个图标工具同页：文字、Emoji、SVG 与 Manifest 配置，生成 favicon 可复制代码（免费）
-- [满减与优惠叠加合集](https://screscent.github.io/xiaoning-ai-tools/tools/coupon-stack.html)：4 个优惠工具同页：满减凑单、优惠券叠加、会员折上折、积分抵扣（免费）
+- [满减与优惠叠加合集](https://screscent.github.io/xiaoning-ai-tools/tools/coupon-stack.html)：5 个优惠工具同页：满减凑单、优惠券、会员折扣、积分抵扣、叠加顺序（免费）
 - [SQL 格式化与美化器](https://screscent.github.io/xiaoning-ai-tools/tools/sql-formatter.html)：SQL 关键字换行缩进美化，支持大小写与逗号换行（免费）
 - [睡眠周期与就寝时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-cycle.html)：按 90 分钟周期倒推就寝时间，含入睡耗时（免费）
 - [打印尺寸与像素换算器](https://screscent.github.io/xiaoning-ai-tools/tools/print-size-px.html)：毫米尺寸与 DPI 换算像素，含 A4/名片等预设（免费）
@@ -309,7 +309,7 @@
 - [工资与加班费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/overtime-pay.html)：6 个工资工具同页：加班费、节假日加班、夜班津贴、加班上限、个税与到手工资、请假与缺勤扣款（免费）
 - [咖啡因摄入与代谢计算器](https://screscent.github.io/xiaoning-ai-tools/tools/caffeine-metabolism.html)：按半衰期算 4/8/12 小时残留与建议就寝时间（免费）
 - [家庭用药提醒清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/med-reminder.html)：按频次与开始时间生成每日服药时间点、日程表与累计次数（免费）
-- [会议议程与控场合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：4 个开会工具同页：议程时间表、发言分配、主持人控场话术、分段计时提醒（免费）
+- [会议议程与控场合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：5 个开会工具同页：议程生成、发言分配、控场提示、计时、决议与待办（免费）
 - [CSS 轮播图样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-carousel.html)：宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML（免费）
 - [呼吸放松计时器](https://screscent.github.io/xiaoning-ai-tools/tools/breathing-timer.html)：4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进（免费）
 - [保养与年检提醒合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-maintenance.html)：4 个车主提醒工具：保养周期、年检到期、保险到期、保养项目清单（免费）
@@ -475,7 +475,7 @@
 - [家政与保洁报价合集](https://screscent.github.io/xiaoning-ai-tools/tools/housekeeping-cleaning-quote-kit.html)：5 个家政工具同页：开荒保洁、日常保洁、家电清洗、玻璃与纱窗清洗、保洁耗材成本（免费）
 - [数据分析与统计速算合集](https://screscent.github.io/xiaoning-ai-tools/tools/data-analysis-statistics-kit.html)：5 个统计工具同页：样本量与置信区间、A/B 显著性、描述统计与离散度、相关性与回归速算、四分位距（免费）
 - [滑雪装备与雪场费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/ski-gear-resort-cost-kit.html)：5 个滑雪工具同页：雪场费用与雪票预算、装备选购与尺码、雪道难度与安全、租赁与保险预算、缆车与雪票组合（免费）
-- [高尔夫入门与打球成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/golf-cost-gear-handicap-kit.html)：4 个高尔夫工具同页：球场费用与练习场预算、球杆选购与握把尺寸、规则与差点计算、下场礼仪与打球节奏（免费）
+- [高尔夫入门与打球成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/golf-cost-gear-handicap-kit.html)：5 个高尔夫工具同页：球场费用、球杆与握把、规则与差点、下场礼仪、练习场计划（免费）
 - [月子护理与产后恢复合集](https://screscent.github.io/xiaoning-ai-tools/tools/postpartum-meal-care-recovery-kit.html)：5 个月子与产后工具同页：月子餐热量配比、月嫂与月子中心花销预算、恢复周程与复查节点、月嫂面试与合同要点、月子餐采购量（免费）
 - [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：5 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引、报修基金、车位与停车费（免费）
 - [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：5 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账、售后与结算测算、毛利与盈亏平衡（免费）
