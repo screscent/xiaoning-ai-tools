@@ -1325,7 +1325,8 @@
  {
   "id": "wn3a9fj8gw",
   "name": "文本差异与合并合集",
-  "desc": "5 个文本工具同页：逐行逐词对比、三路合并与冲突标记、unified diff 补丁、增删改统计、词级差异",
+  "desc": "6 个文本工具同页：逐行对比、三路合并、unified 补丁、增删改统计、词级差异、空白与标点规范",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://wn3a9fj8gw.app.weavefox.cn",
@@ -1333,7 +1334,7 @@
   "subapps": [
    {
     "key": "diff",
-    "title": "工具A 文本对比"
+    "title": "工具A 逐行对比"
    },
    {
     "key": "merge",
@@ -1341,15 +1342,19 @@
    },
    {
     "key": "patch",
-    "title": "工具C 补丁导出"
+    "title": "工具C unified 补丁"
    },
    {
     "key": "stats",
-    "title": "工具D 差异统计"
+    "title": "工具D 增删改统计"
    },
    {
     "key": "word",
-    "title": "工具E 词级文本差异"
+    "title": "工具E 词级差异"
+   },
+   {
+    "key": "clean",
+    "title": "工具F 空白与标点规范"
    }
   ]
  },
