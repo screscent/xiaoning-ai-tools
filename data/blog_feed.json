@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-09T10:49:34+00:00",
+ "updated": "2026-11-09T16:49:28+00:00",
  "source": "wechat-mp",
- "count": 158,
+ "count": 159,
  "articles": [
+  {
+   "slug": "OMVTQmhWEFaCihNLC9iyaw",
+   "title": "小凝 Agent：常驻 Agent OS 能否迁移到作战指挥系统",
+   "url": "https://mp.weixin.qq.com/s/OMVTQmhWEFaCihNLC9iyaw",
+   "publish_time": "2026-11-10",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "vlERSqnm4u7OeFaiGZX9vQ",
    "title": "小凝 Agent：一个 Agent 的三层进化——内环、外环与自适应",
