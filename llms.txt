@@ -241,10 +241,10 @@
 - [CSS Flex 与 Grid 布局生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：切换 Flex/Grid 调间距对齐，实时预览并复制 CSS（免费）
 - [文本行去重与排序工具](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：按行去重排序并统计重复次数，可忽略大小写（免费）
 - [菜谱份量与备餐换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：5 个备餐工具：份量换算、批量备餐、器具尺寸、采购清单、剩菜保存与复热（免费）
-- [周数与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/iso-week.html)：5 个周数工具：ISO 周号、周范围、周计划、季度周数、双周迭代（免费）
+- [周数与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/iso-week.html)：6 个周数工具：周号查询、周范围、周计划、季度周数、双周迭代、周偏移倒推（免费）
 - [图片转 ASCII 艺术](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：图片转字符画，可选字符集与彩色 HTML 输出（免费）
 - [CSS 霓虹文字效果生成器](https://screscent.github.io/xiaoning-ai-tools/tools/neon-text.html)：调色与发光强度生成霓虹 text-shadow，可复制下载（免费）
-- [中文与拼音处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-pinyin.html)：5 个拼音工具同页：带调拼音、无调首字母、多音字、逐字对照表、拼音排序（免费）
+- [中文与拼音处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-pinyin.html)：6 个拼音工具：带调拼音、无调与首字母、多音字、逐字对照表、拼音排序、声韵拆解（免费）
 - [隐私设置自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：4 个隐私自查清单：社交平台、手机权限、浏览器、账号安全（免费）
 - [书签整理与导出合集](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：5 个书签工具同页：解析去重、域名分组、格式转换、浏览器导入导出、书签体检（免费）
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：6 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网、端口与协议自查（免费）
@@ -256,7 +256,7 @@
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
 - [行李打包清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：4 个出行清单：商务出差、海岛度假、户外徒步、亲子出行（免费）
 - [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：6 个几何工具同页：平面、立体、圆与角、土方、刷漆用量、坡度与排水（免费）
-- [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：5 个编码工具同页：Base32 编码、Base32 解码、填充与校验、编码互转、文本十六进制（免费）
+- [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：6 个编码工具：Base32 编码、解码、填充校验、编码互转、文本十六进制、Crockford Base32（免费）
 - [中文标点全半角转换器](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：全角半角互转，按标点/数字/空格分范围处理（免费）
 - [AA 分摊与结算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bill-split.html)：5 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录、小费与税费分摊（免费）
 - [日历文件与订阅合集](https://screscent.github.io/xiaoning-ai-tools/tools/ics-calendar.html)：6 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则、时区转换（免费）

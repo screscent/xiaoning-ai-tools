@@ -3395,7 +3395,8 @@
  {
   "id": "j2tnfgxyyi",
   "name": "周数与周计划合集",
-  "desc": "5 个周数工具：ISO 周号、周范围、周计划、季度周数、双周迭代",
+  "desc": "6 个周数工具：周号查询、周范围、周计划、季度周数、双周迭代、周偏移倒推",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://j2tnfgxyyi.app.weavefox.cn",
@@ -3420,6 +3421,10 @@
    {
     "key": "sprint",
     "title": "工具E 双周迭代"
+   },
+   {
+    "key": "offsetweek",
+    "title": "工具F 周偏移倒推"
    }
   ]
  },
@@ -3444,7 +3449,8 @@
  {
   "id": "7b3qgqweb7",
   "name": "中文与拼音处理合集",
-  "desc": "5 个拼音工具同页：带调拼音、无调首字母、多音字、逐字对照表、拼音排序",
+  "desc": "6 个拼音工具：带调拼音、无调与首字母、多音字、逐字对照表、拼音排序、声韵拆解",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://7b3qgqweb7.app.weavefox.cn",
@@ -3469,6 +3475,10 @@
    {
     "key": "sort",
     "title": "工具E 拼音排序"
+   },
+   {
+    "key": "initial",
+    "title": "工具F 声韵拆解"
    }
   ]
  },
@@ -3765,7 +3775,8 @@
  {
   "id": "rdqkfj4t4r",
   "name": "Base32 与编码校验合集",
-  "desc": "5 个编码工具同页：Base32 编码、Base32 解码、填充与校验、编码互转、文本十六进制",
+  "desc": "6 个编码工具：Base32 编码、解码、填充校验、编码互转、文本十六进制、Crockford Base32",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://rdqkfj4t4r.app.weavefox.cn",
@@ -3790,6 +3801,10 @@
    {
     "key": "hex",
     "title": "工具E 文本十六进制"
+   },
+   {
+    "key": "crockford",
+    "title": "工具F Crockford Base32"
    }
   ]
  },
