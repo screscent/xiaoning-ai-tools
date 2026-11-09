@@ -52,7 +52,7 @@
 - [家庭月度预算表](https://screscent.github.io/xiaoning-ai-tools/tools/family-budget.html)：收入与支出 → 预算表 + 超支预警（¥2）
 - [婚礼流程策划器](https://screscent.github.io/xiaoning-ai-tools/tools/wedding-planner.html)：婚期与预算 → 流程、分工与物品清单（¥2）
 - [装修预算清单](https://screscent.github.io/xiaoning-ai-tools/tools/renovation-budget.html)：面积与档次 → 分项预算与超支预警（¥2）
-- [送礼与礼俗合集](https://screscent.github.io/xiaoning-ai-tools/tools/gift-taboo.html)：5 个送礼工具同页：礼物推荐、预算分配、贺卡文案、送礼禁忌、回礼与答谢（免费）
+- [送礼与礼俗合集](https://screscent.github.io/xiaoning-ai-tools/tools/gift-taboo.html)：6 个送礼工具同页：礼物推荐、预算分配、贺卡文案、送礼禁忌、回礼与答谢、节庆送礼日历（免费）
 - [宝宝辅食食谱](https://screscent.github.io/xiaoning-ai-tools/tools/baby-food.html)：月龄与忌口 → 7 天辅食与做法（¥1）
 - [儿童睡前故事](https://screscent.github.io/xiaoning-ai-tools/tools/bedtime-story.html)：年龄与主题 → 3 篇完整睡前故事（¥1）
 - [宠物喂养计划](https://screscent.github.io/xiaoning-ai-tools/tools/pet-feeding.html)：猫狗信息 → 每日喂食 + 每周护理（¥1）
@@ -169,7 +169,7 @@
 - [密码与账号安全合集](https://screscent.github.io/xiaoning-ai-tools/tools/password-generator.html)：6 个安全工具同页：密码生成、强度检测、PIN 码、口令短语、两步验证与恢复码、泄露自查与应急（免费）
 - [随机分组与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-group-picker.html)：6 个分组工具同页：分组、代表、顺序、导出、对阵、随机种子与复现（免费）
 - [健康指标计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bmi-calorie-calculator.html)：6 个健康计算器同页：BMI 与理想体重、基础代谢与每日热量、体脂率估算、每日饮水建议、血压与心率解读、睡眠时长评估（免费）
-- [常用单位换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-converter.html)：5 个单位工具同页：长度、重量、面积体积、温度压力、数据带宽（免费）
+- [常用单位换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-converter.html)：6 个单位工具同页：长度、重量、面积体积、温度压力、数据与带宽、速度配速（免费）
 - [哈希校验工具](https://screscent.github.io/xiaoning-ai-tools/tools/hash-checker.html)：本地计算 SHA-256/384/512，文本与文件校验对比（免费）
 - [番茄专注与计时合集](https://screscent.github.io/xiaoning-ai-tools/tools/pomodoro-timer.html)：6 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划、番茄周期规划、每日专注目标（免费）
 - [科学计算与函数合集](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：5 个计算工具同页：科学计算、函数常数、统计概率、计算历史、矩阵运算（免费）
@@ -215,7 +215,7 @@
 - [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：5 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算（免费）
 - [随机密码短语生成器](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：易记词组合成密码短语，含熵值估算与强度评级（免费）
 - [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：6 个图片工具同页：EXIF、信息、批量、自查、定位、一键清除元数据（免费）
-- [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：5 个正则工具同页：匹配测试、批量替换、捕获组、常用速查、批量提取与清洗（免费）
+- [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：6 个正则工具同页：匹配测试、批量替换、捕获组、常用速查、批量提取与清洗、逐段解释（免费）
 - [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：5 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘、目标拆解（免费）
 - [标识符与密钥生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-secret-kit.html)：6 个生成工具同页：UUID、短ID、令牌、密钥、ULID、密码短语（免费）
 - [跨时区会议时间换算器](https://screscent.github.io/xiaoning-ai-tools/tools/timezone-meeting.html)：一个时间换算多时区本地时刻与时差，夏令时自动（免费）
