@@ -9344,5 +9344,28 @@
     "title": "工具C 衣物尺码"
    }
   ]
+ },
+ {
+  "id": "j272vmxyyi",
+  "name": "地铁与公交换乘速查合集",
+  "desc": "3 个通勤工具同页：换乘时间、票价与月票、末班车",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://j272vmxyyi.app.weavefox.cn",
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "transfer",
+    "title": "工具A 换乘时间"
+   },
+   {
+    "key": "fare",
+    "title": "工具B 票价与月票"
+   },
+   {
+    "key": "night",
+    "title": "工具C 末班车"
+   }
+  ]
  }
 ]
