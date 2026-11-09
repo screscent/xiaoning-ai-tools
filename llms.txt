@@ -183,7 +183,7 @@
 - [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：6 个记账工具同页：流水、分类、月度、导出、预算、月度趋势与同比（免费）
 - [手绘与标注合集](https://screscent.github.io/xiaoning-ai-tools/tools/draw-annotate.html)：6 个绘图工具同页：画板、标注、流程、签名、图例、画布模板（免费）
 - [社交图片切图与比例合集](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：6 个切图工具同页：九宫格、方图、竖版、横版、圆角、Banner 与安全区（免费）
-- [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：5 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对、本命年（免费）
+- [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：6 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对、本命年、时辰吉时（免费）
 - [图片滤镜与调色合集](https://screscent.github.io/xiaoning-ai-tools/tools/filter-tone.html)：6 个调色工具同页：灰度、模糊、复古、明暗、锐化、色温与色调（免费）
 - [数字转罗马与中文数字](https://screscent.github.io/xiaoning-ai-tools/tools/roman-chinese-numerals.html)：阿拉伯/罗马/中文数字双向转换，含对照表（免费）
 - [决策与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-decider.html)：6 个决策工具同页：随机、加权、投票、抽签、波达计分、决策矩阵（免费）
@@ -197,7 +197,7 @@
 - [世界时钟与时区合集](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：5 个时区工具：多城时钟、时差计算、夏令时判断、会议对照、时间戳互转（免费）
 - [图片打码与隐私遮挡合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：5 个打码工具同页：马赛克、模糊打码、黑块遮挡、裁切隐藏、像素化强度（免费）
 - [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：5 个摩斯工具同页：文本转摩斯、摩斯转文本、音频播放、码表与练习、求救信号与闪光节拍（免费）
-- [复利与定投合集](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：5 个理财工具同页：复利终值、定投收益、目标月存、提取计划、贷款月供与提前还款（免费）
+- [复利与定投合集](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：6 个理财工具同页：复利终值、定投收益、目标月存、提取计划、贷款月供、通胀与实际收益（免费）
 - [CSS 渐变生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：线性/径向/圆锥渐变，实时预览并复制或下载 CSS（免费）
 - [HTTP 状态码速查表](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：30+ 常见状态码速查，支持搜索/分类/排查建议与复制（免费）
 - [折扣与百分比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/discount-calculator.html)：折扣/满减/税率 → 折后价、节省与实付，含计算过程（免费）
@@ -224,7 +224,7 @@
 - [中英混排空格格式化工具](https://screscent.github.io/xiaoning-ai-tools/tools/cjk-spacing.html)：中英文/数字之间自动加空格，全角转半角（免费）
 - [条形码生成器 Code128](https://screscent.github.io/xiaoning-ai-tools/tools/barcode-code128.html)：Code128B/C 与 EAN-13 条码绘制，含校验与导 PNG（免费）
 - [TOTP 动态验证码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：本地计算 2FA 动态验证码，Base32 解码与倒计时（免费）
-- [倒班排班与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：5 个排班工具：三班倒、四班两倒、夜班作息、换班记录、疲劳恢复（免费）
+- [倒班排班与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：6 个排班工具：三班倒、四班两倒、夜班作息、换班记录、疲劳恢复、夜班津贴核算（免费）
 - [纪念日与提醒清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：5 个纪念日工具同页：倒计时、提醒、周年、礼物、周年与周期提醒（免费）
 - [图片转 ICO 图标生成器](https://screscent.github.io/xiaoning-ai-tools/tools/ico-generator.html)：多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载（免费）
 - [SVG 波浪分割线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-wave-divider.html)：调波高波峰生成 SVG 波浪分割线，复制或下载（免费）
