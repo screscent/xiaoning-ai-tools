@@ -9413,5 +9413,28 @@
     "title": "工具C 洗发水补货"
    }
   ]
+ },
+ {
+  "id": "ijcbb28zig",
+  "name": "加油与充电成本对比合集",
+  "desc": "3 个用车成本工具同页：每公里成本、油电对比、充电桩回本",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ijcbb28zig.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "fuel",
+    "title": "工具A 每公里成本"
+   },
+   {
+    "key": "compare",
+    "title": "工具B 油电对比"
+   },
+   {
+    "key": "charger",
+    "title": "工具C 充电桩回本"
+   }
+  ]
  }
 ]
