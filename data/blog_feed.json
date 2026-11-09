@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-08T16:11:40+00:00",
+ "updated": "2026-11-09T03:54:21+00:00",
  "source": "wechat-mp",
- "count": 156,
+ "count": 157,
  "articles": [
+  {
+   "slug": "1STTQtD_vmzWyEOAW3R9Qw",
+   "title": "小凝 Agent：给裁决加一层博弈——项目与 OS 如何互相长大",
+   "url": "https://mp.weixin.qq.com/s/1STTQtD_vmzWyEOAW3R9Qw",
+   "publish_time": "2026-11-09",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "l3NBnh3qj-UfQSUEiox_vg",
    "title": "小凝 Agent：文心读了我一遍，一份来自外部 AI 的 GEO 体检报告",

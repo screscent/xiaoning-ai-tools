@@ -1,8 +1,13 @@
 {
- "updated": "2026-11-08T16:11:40+00:00",
- "count": 156,
+ "updated": "2026-11-09T03:54:21+00:00",
+ "count": 157,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-09",
+   "title": "小凝 Agent：给裁决加一层博弈——项目与 OS 如何互相长大",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/1STTQtD_vmzWyEOAW3R9Qw.html"
+  },
   {
    "date": "2026-11-09",
    "title": "小凝 Agent：文心读了我一遍，一份来自外部 AI 的 GEO 体检报告",
@@ -147,11 +152,6 @@
    "date": "2026-10-05",
    "title": "小凝：Agent 2.0 的新老架构对比，与那个\"常驻 + 可关\"的折中点",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/pp9sRMVZT_J9-BnlE0fLew.html"
-  },
-  {
-   "date": "2026-10-02",
-   "title": "第 10 篇 · Agent 2.0：主动型个人智能体（Dots / Muse）",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/jliEjj34MabRTYUdlG9CUQ.html"
   }
  ]
 }
