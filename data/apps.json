@@ -9505,5 +9505,28 @@
     "title": "工具C 洗涤水电费"
    }
   ]
+ },
+ {
+  "id": "g4hg7utuhw",
+  "name": "西装衬衫尺码换算合集",
+  "desc": "3 个正装尺码工具同页：西装号型、衬衫尺码、领带尺寸与打法",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://g4hg7utuhw.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "suit",
+    "title": "工具A 西装号型"
+   },
+   {
+    "key": "shirt",
+    "title": "工具B 衬衫尺码"
+   },
+   {
+    "key": "tie",
+    "title": "工具C 领带尺寸与打法"
+   }
+  ]
  }
 ]
