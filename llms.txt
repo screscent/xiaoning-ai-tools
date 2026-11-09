@@ -277,7 +277,7 @@
 - [十六进制文件查看器](https://screscent.github.io/xiaoning-ai-tools/tools/hex-viewer.html)：本地读文件或粘贴文本转十六进制转储与 ASCII（免费）
 - [家庭药品与保质期提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/medicine-expiry.html)：按有效期分级正常/临期/过期并算剩余天数（免费）
 - [旅行预算与花费合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-budget.html)：4 个旅行工具同页：总预算、每日预算、住宿分摊、省钱对比（免费）
-- [每周菜单与采购计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/weekly-menu.html)：4 个菜单工具同页：七天排菜、采购汇总、库存临期、花费估算（免费）
+- [每周菜单与采购计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/weekly-menu.html)：5 个菜单工具同页：七天菜单排布、分品类采购汇总、库存与临期、食材花费与人均、周餐预算（免费）
 - [URL 清理与参数合集](https://screscent.github.io/xiaoning-ai-tools/tools/url-cleaner.html)：5 个链接工具：追踪参数清理、参数解析、链接重建、分享前检查、UTM 构建（免费）
 - [CSS 开关切换组件生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-switch.html)：纯 CSS 开关实时预览，生成含 checked 状态代码（免费）
 - [JSON 转 TypeScript 接口生成器](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-ts.html)：粘贴 JSON 自动推导类型并生成 TypeScript interface（免费）
@@ -479,7 +479,7 @@
 - [月子护理与产后恢复合集](https://screscent.github.io/xiaoning-ai-tools/tools/postpartum-meal-care-recovery-kit.html)：4 个月子与产后工具同页：月子餐热量配比、月嫂与月子中心花销预算、恢复周程与复查节点、月嫂面试与合同要点（免费）
 - [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：4 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引、报修与维修基金（免费）
 - [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：4 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账、售后与结算测算（免费）
-- [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：4 个乒乓球工具同页：胶皮与底板搭配、发球与旋转术语、计分与赛制、训练计划与强度（免费）
+- [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：5 个乒乓球工具同页：器材搭配、旋转术语、赛制计分、训练计划、回合统计（免费）
 - [室内空气与温湿度合集](https://screscent.github.io/xiaoning-ai-tools/tools/indoor-air-humidity.html)：5 个室内环境工具同页：甲醛浓度与国标判定、净化器适用面积、温湿度与体感舒适度、新风与换气、霉菌与除湿（免费）
 - [公积金医保与津贴计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/housing-fund-medical-maternity.html)：6 个社保福利工具同页：公积金贷款额度、医保报销自付、生育津贴与产假工资、失业金测算、公积金提取、个税与专项扣除（免费）
 - [垃圾分类与回收变现合集](https://screscent.github.io/xiaoning-ai-tools/tools/waste-sorting-recycling.html)：5 个垃圾分类工具同页：分类速查、可回收物估价、大件垃圾清运、厨余堆肥、分类桶配置（免费）
@@ -488,7 +488,7 @@
 - [日语五十音入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/japanese-kana-romaji-dictation.html)：5 个日语入门工具同页：五十音速查、假名罗马音互转、假名听写练习、数量词与助数词、动词变形（免费）
 - [人情往来与红包计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gift-money-banquet-redpacket-ledger.html)：5 个人情往来工具同页：份子钱参考、婚礼酒席预算、红包记账回礼、年度人情预算、婚宴席位编排（免费）
 - [滑板飞盘与射箭入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/skateboard-frisbee-archery.html)：5 个轻运动入门工具同页：滑板尺寸与桥距、飞盘距离与盘型、射箭磅数与箭长、射箭靶纸与记分、护具与场地安全（免费）
-- [保险保额与缴费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/insurance-coverage-premium.html)：4 个保险测算工具同页：重疾保额需求、寿险保额需求、年缴月缴对比、理赔材料与时效（免费）
+- [保险保额与缴费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/insurance-coverage-premium.html)：5 个保险测算工具同页：重疾保额、寿险保额、年缴月缴对比、理赔材料、保费占比（免费）
 
 ## 博客（156 篇）
 - [小凝 Agent：文心读了我一遍，一份来自外部 AI 的 GEO 体检报告](https://screscent.github.io/xiaoning-ai-tools/blog/l3NBnh3qj-UfQSUEiox_vg.html)：2026-11-09｜外部 AI 把「小凝」读完，写了一份体检报告。它读对了什么，又认错了什么，以及 GEO 到底是什么。
