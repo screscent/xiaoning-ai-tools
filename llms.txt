@@ -453,11 +453,11 @@
 - [乐理与音准速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/music-theory-kit.html)：5 个乐理工具：音阶调号、音程频率、和弦构成、节奏拍号、BPM 与节拍时值（免费）
 - [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：5 个钓鱼工具：线组搭配、饵料速查、装备清单、鱼口评估、线号与拉力换算（免费）
 - [台球计分与角度合集](https://screscent.github.io/xiaoning-ai-tools/tools/billiards-kit.html)：5 个台球工具：计分与规则、击球角度换算、装备与皮头、球台规格与照明、击球力度与走位（免费）
-- [保龄球计分与换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bowling-kit.html)：4 个保龄球工具同页：十局计分、让分与净分、球重球速换算、球道与瓶位（免费）
+- [保龄球计分与换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bowling-kit.html)：5 个保龄球工具同页：十局计分、让分与净分、球重球速换算、球道与瓶位、局均分与稳定性（免费）
 - [纸张尺寸与印刷出血合集](https://screscent.github.io/xiaoning-ai-tools/tools/paper-print-bleed.html)：5 个印刷工具同页：纸张尺寸、出血与安全边距、分辨率换算、折页与拼版规划、开数与印张换算（免费）
 - [元素周期表与化学计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/element-chemistry.html)：5 个化学工具同页：元素速查、摩尔质量与物质的量、溶液浓度换算、气体定律与分压、pH 与缓冲溶液（免费）
 - [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：5 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼、灯位与回路规划、照明功率与电费（免费）
-- [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：4 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期（免费）
+- [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：5 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期、轮胎周长与转数（免费）
 - [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：5 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比、Wi-Fi 覆盖（免费）
 - [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：5 个水族工具同页：鱼缸容积、换水比例、加热棒功率、水草照明、换水排程（免费）
 - [家庭光伏与储能收益合集](https://screscent.github.io/xiaoning-ai-tools/tools/solar-storage-kit.html)：6 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益、补贴与并网、倾角与朝向（免费）
@@ -470,7 +470,7 @@
 - [语言学习进度与复习合集](https://screscent.github.io/xiaoning-ai-tools/tools/language-vocab-plan-review-kit.html)：5 个学习工具同页：词汇量与等级对照、学习时间规划、记忆曲线与复习量、考试分数对照、常用短语练习（免费）
 - [桌游与棋牌计分规则合集](https://screscent.github.io/xiaoning-ai-tools/tools/board-game-score-rules-kit.html)：5 个桌游工具同页：多人计分板、开局配置推荐、常见桌游规则速查、回合计时与时长控制、身份局配置（免费）
 - [学车考驾照费用与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/driving-license-cost-hours-exam-kit.html)：5 个学车工具同页：费用拆解、学时与进度、科目考试要点、补考与重练预算、拿证规划（免费）
-- [家庭组网与网线速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-network-cable-kit.html)：4 个组网工具同页：网线线序、宽带速率、WiFi 覆盖、组网方案与预算（免费）
+- [家庭组网与网线速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-network-cable-kit.html)：5 个组网工具同页：网线线序、宽带速率、WiFi 覆盖、组网方案与预算、下载时间估算（免费）
 - [居家适老化改造速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-aging-friendly-renovation-kit.html)：5 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关、改造预算、防滑门槛（免费）
 - [家政与保洁报价合集](https://screscent.github.io/xiaoning-ai-tools/tools/housekeeping-cleaning-quote-kit.html)：4 个家政工具同页：开荒保洁、日常保洁、家电清洗、玻璃与纱窗清洗（免费）
 - [数据分析与统计速算合集](https://screscent.github.io/xiaoning-ai-tools/tools/data-analysis-statistics-kit.html)：4 个统计工具同页：样本量与置信区间、A/B 显著性、描述统计与离散度、相关性与回归速算（免费）
