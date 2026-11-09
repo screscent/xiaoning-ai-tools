@@ -9436,5 +9436,28 @@
     "title": "工具C 充电桩回本"
    }
   ]
+ },
+ {
+  "id": "dzmpgcslwd",
+  "name": "空气炸锅与微波炉用时换算合集",
+  "desc": "3 个加热用时工具同页：空炸温度时间换算、微波加热时长、解冻时长",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dzmpgcslwd.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "airfryer",
+    "title": "工具A 空炸时间换算"
+   },
+   {
+    "key": "microwave",
+    "title": "工具B 微波加热时长"
+   },
+   {
+    "key": "thaw",
+    "title": "工具C 解冻时长"
+   }
+  ]
  }
 ]
