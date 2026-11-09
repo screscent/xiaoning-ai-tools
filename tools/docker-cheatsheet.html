@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Docker 命令与实战速查 - 效率生活 免费工具 | 小凝 AI 工具集</title>
-<meta name="description" content="5 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份、Compose 文件。Docker 命令与实战速查：5 个 Docker 工具同页：容器运行与排障 + 镜像构建与清理 + 网络端口与连通 + 数据卷挂载与备份 + Compose 文件，危险命令单独标注。">
+<meta name="description" content="6 个 Docker 工具同页：容器、镜像、网络、数据卷、Compose、清理与磁盘占用。Docker 命令与实战速查：5 个 Docker 工具同页：容器运行与排障 + 镜像构建与清理 + 网络端口与连通 + 数据卷挂载与备份 + Compose 文件，危险命令单独标注。完全免费，浏览器即开即用。">
 <link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Docker 命令与实战速查 - 效率生活 免费工具 | 小凝 AI 工具集">
-<meta property="og:description" content="5 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份、Compose 文件。Docker 命令与实战速查：5 个 Docker 工具同页：容器运行与排障 + 镜像构建与清理 + 网络端口与连通 + 数据卷挂载与备份 + Compose 文件，危险命令单独标注。">
+<meta property="og:description" content="6 个 Docker 工具同页：容器、镜像、网络、数据卷、Compose、清理与磁盘占用。Docker 命令与实战速查：5 个 Docker 工具同页：容器运行与排障 + 镜像构建与清理 + 网络端口与连通 + 数据卷挂载与备份 + Compose 文件，危险命令单独标注。完全免费，浏览器即开即用。">
 <meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="../assets/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Docker 命令与实战速查", "description": "5 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份、Compose 文件", "applicationCategory": "实用工具", "operatingSystem": "Web", "url": "https://ekrwstvhte.app.weavefox.cn", "inLanguage": "zh-CN", "offers": {"@type": "Offer", "price": 0, "priceCurrency": "CNY"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Docker 命令与实战速查", "description": "6 个 Docker 工具同页：容器、镜像、网络、数据卷、Compose、清理与磁盘占用", "applicationCategory": "实用工具", "operatingSystem": "Web", "url": "https://ekrwstvhte.app.weavefox.cn", "inLanguage": "zh-CN", "offers": {"@type": "Offer", "price": 0, "priceCurrency": "CNY"}, "isPartOf": {"@type": "WebSite", "name": "小凝 AI 工具集", "url": "https://screscent.github.io/xiaoning-ai-tools/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "工具怎么收费？", "acceptedAnswer": {"@type": "Answer", "text": "AI 工具在 WeaveFox 应用内按需解锁，单个 ¥1–¥3；「实用工具」里的纯前端工具完全免费。首次使用需手机号注册，注册免费。"}}, {"@type": "Question", "name": "需要安装 App 吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。浏览器打开链接即可使用，手机和电脑都能用。"}}, {"@type": "Question", "name": "我填写的内容会被保存吗？", "acceptedAnswer": {"@type": "Answer", "text": "内容仅用于本次生成。请不要填写身份证号、银行卡号、密码等敏感信息。"}}, {"@type": "Question", "name": "prune 会删掉正在用的镜像吗？", "acceptedAnswer": {"@type": "Answer", "text": "不会删运行中容器依赖的镜像，但会删未使用镜像、停止容器与悬空卷；执行前先 docker ps -a 确认，危险命令已标注。"}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "小凝 AI 工具集", "item": "https://screscent.github.io/xiaoning-ai-tools/"}, {"@type": "ListItem", "position": 2, "name": "实用工具", "item": "https://screscent.github.io/xiaoning-ai-tools/categories/utility.html"}, {"@type": "ListItem", "position": 3, "name": "Docker 命令与实战速查", "item": "https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html"}]}</script>
 </head>
@@ -29,7 +29,7 @@
 <article>
   <h1>Docker 命令与实战速查<small>效率生活</small></h1>
   <p class="hook">Docker 命令参数太多，看日志、清空间、进容器、查网络、备份卷每次都要现查。</p>
-  <p class="lede"><strong>Docker 命令与实战速查</strong> 是一个即开即用的纯前端免费工具：5 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份、Compose 文件。不需要安装，浏览器打开就能用。</p>
+  <p class="lede"><strong>Docker 命令与实战速查</strong> 是一个即开即用的纯前端免费工具：6 个 Docker 工具同页：容器、镜像、网络、数据卷、Compose、清理与磁盘占用。不需要安装，浏览器打开就能用。</p>
 
   <h2>谁需要它</h2>
   <ul class="who"><li>研发</li><li>运维</li><li>测试</li></ul>
@@ -55,8 +55,8 @@
   <h2>常见问题</h2>
   <div class="faq"><details><summary>工具怎么收费？</summary><p>AI 工具在 WeaveFox 应用内按需解锁，单个 ¥1–¥3；「实用工具」里的纯前端工具完全免费。首次使用需手机号注册，注册免费。</p></details><details><summary>需要安装 App 吗？</summary><p>不需要。浏览器打开链接即可使用，手机和电脑都能用。</p></details><details><summary>我填写的内容会被保存吗？</summary><p>内容仅用于本次生成。请不要填写身份证号、银行卡号、密码等敏感信息。</p></details><details><summary>prune 会删掉正在用的镜像吗？</summary><p>不会删运行中容器依赖的镜像，但会删未使用镜像、停止容器与悬空卷；执行前先 docker ps -a 确认，危险命令已标注。</p></details></div>
 
-<h2>这个合集包含 5 个工具</h2>
-  <ul class="peers"><li><a href="https://ekrwstvhte.app.weavefox.cn#/container" rel="noopener">容器运行与排障</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/image" rel="noopener">镜像构建与清理</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/network" rel="noopener">网络端口与连通</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/volume" rel="noopener">数据卷挂载与备份</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/compose" rel="noopener">Compose 文件</a><span>直接打开该子工具（hash 深链）</span></li></ul>
+<h2>这个合集包含 6 个工具</h2>
+  <ul class="peers"><li><a href="https://ekrwstvhte.app.weavefox.cn#/container" rel="noopener">工具A 容器</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/image" rel="noopener">工具B 镜像</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/network" rel="noopener">工具C 网络</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/volume" rel="noopener">工具D 数据卷</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/compose" rel="noopener">工具E Compose</a><span>直接打开该子工具（hash 深链）</span></li><li><a href="https://ekrwstvhte.app.weavefox.cn#/cleanup" rel="noopener">工具F 清理与磁盘占用</a><span>直接打开该子工具（hash 深链）</span></li></ul>
 
     <h2>同分类的其他工具</h2>
   <ul class="peers"><li><a href="gift-taboo.html">送礼与礼俗合集</a><span>5 个送礼工具同页：礼物推荐、预算分配、贺卡文案、送礼禁忌、回礼与答谢</span></li><li><a href="random-group-picker.html">随机分组与抽签合集</a><span>6 个分组工具同页：分组、代表、顺序、导出、对阵、随机种子与复现</span></li><li><a href="typing-speed-test.html">打字练习与速度合集</a><span>6 个打字工具同页：速度、错键、练习、趋势、指法、自定义测试文本</span></li></ul>

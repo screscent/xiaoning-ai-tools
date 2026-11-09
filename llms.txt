@@ -297,7 +297,7 @@
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
 - [数字转英文读法](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：整数转英文单词，支持英式 and 与序数词（免费）
 - [HTML 转 Markdown 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/html-to-md.html)：HTML 片段转 Markdown，支持标题/加粗/链接/列表（免费）
-- [节拍器与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/metronome.html)：5 个节拍工具同页：节拍器、毫秒换算、手动测速、速度术语、复节奏与节拍练习（免费）
+- [节拍器与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/metronome.html)：6 个节拍工具同页：节拍器、毫秒换算、打拍测速、术语、复节奏、细分与连音（免费）
 - [CSS 进度条样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-progress.html)：颜色/高度/圆角/条纹可调，实时预览并生成 CSS（免费）
 - [CSV 合并与拆分工具](https://screscent.github.io/xiaoning-ai-tools/tools/csv-merge-split.html)：多份 CSV 按表头合并，按行数或列值拆分后导出（免费）
 - [CSS 文字描边生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-text-stroke.html)：描边颜色/宽度/方式可调，实时预览并生成 CSS（免费）
@@ -357,7 +357,7 @@
 - [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：6 个门票工具同页：单景点门票、多景点合计、城市通票、讲解观光车、儿童票、退改签规则（免费）
 - [昵称与英文名生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/nickname-name-gen.html)：5 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺、账号长度校验（免费）
 - [凯撒与古典密码合集](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：4 个古典密码工具同页：凯撒位移、ROT13、反字母表、维吉尼亚（免费）
-- [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：5 个排期工具同页：甘特图、里程碑、关键路径、燃尽图、人力与工期估算（免费）
+- [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：6 个排期工具同页：甘特、里程碑、关键路径、燃尽、人力、缓冲与机动时间（免费）
 - [界面提示文案合集](https://screscent.github.io/xiaoning-ai-tools/tools/empty-state.html)：5 个界面文案工具同页：空状态、错误页、加载中、成功反馈、文案体检（免费）
 - [图片宽高比与等比缩放计算器](https://screscent.github.io/xiaoning-ai-tools/tools/aspect-ratio.html)：按目标宽度或百分比等比缩放，给出比例化简与面积变化（免费）
 - [手机 App 权限自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/app-permission.html)：按设备与场景生成权限自查清单，标出高风险与设置路径（免费）
@@ -401,7 +401,7 @@
 - [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：6 个 SQL 工具同页：JSON→INSERT、INSERT→JSON、类型推断、关键字与 EXPLAIN 速查、SQL 格式化、连接与聚合，数据与语句一次转通（免费）
 - [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
 - [Git 场景命令合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：5 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并、bisect 定位（免费）
-- [Docker 命令与实战速查](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：5 个 Docker 工具同页：容器运行与排障、镜像构建与清理、网络端口与连通、数据卷挂载与备份、Compose 文件（免费）
+- [Docker 命令与实战速查](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：6 个 Docker 工具同页：容器、镜像、网络、数据卷、Compose、清理与磁盘占用（免费）
 - [Nginx 配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/nginx-snippet-cheatsheet.html)：5 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域、并发估算（免费）
 - [吉他和弦与调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/guitar-chord-fingering.html)：5 个吉他工具：和弦指法、调弦、变调夹、常用进行、弦距与手感调整（免费）
 - [HTTP 接口调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-debug.html)：6 个接口工具同页：状态码速查、Mock JSON 生成、UA 解析、缓存头、CORS 与安全头、重试与超时，调接口本地自查（免费）
