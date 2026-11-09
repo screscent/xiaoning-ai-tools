@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T10:48:02+00:00",
+ "updated": "2026-11-09T10:49:34+00:00",
  "source": "wechat-mp",
  "count": 158,
  "articles": [
@@ -9,7 +9,7 @@
    "url": "https://mp.weixin.qq.com/s/vlERSqnm4u7OeFaiGZX9vQ",
    "publish_time": "2026-11-09",
    "status": "published",
-   "archived": false
+   "archived": true
   },
   {
    "slug": "1STTQtD_vmzWyEOAW3R9Qw",
@@ -1267,5 +1267,6 @@
    "status": "published",
    "archived": true
   }
- ]
+ ],
+ "excluded": []
 }
