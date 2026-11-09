@@ -9390,5 +9390,28 @@
     "title": "工具C 行李规格"
    }
   ]
+ },
+ {
+  "id": "qhnfrustfq",
+  "name": "理发与发型打理合集",
+  "desc": "3 个打理工具同页：剪发预算、染发成本、洗发水补货",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qhnfrustfq.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "trim",
+    "title": "工具A 剪发预算"
+   },
+   {
+    "key": "dye",
+    "title": "工具B 染发成本"
+   },
+   {
+    "key": "shampoo",
+    "title": "工具C 洗发水补货"
+   }
+  ]
  }
 ]
