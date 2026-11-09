@@ -178,7 +178,7 @@
 - [图片水印与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：6 个水印工具同页：文字水印、图片水印、平铺、批量、体积与压缩估算、透明度与位置（免费）
 - [打字练习与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：6 个打字工具同页：速度、错键、练习、趋势、指法、自定义测试文本（免费）
 - [待办与任务管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/local-todo.html)：6 个任务工具同页：待办、例行、回顾、归档、四象限优先级、任务计时与耗时统计（免费）
-- [文本加解密与哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：5 个本地工具：AES 加密、AES 解密、哈希计算、校验对比、HMAC 签名，不上传（免费）
+- [文本加解密与哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：6 个本地安全工具：AES 加密、AES 解密、哈希计算、校验对比、HMAC 签名、密钥派生（免费）
 - [取色与配色提取合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-extract.html)：5 个配色工具同页：取色器、主色提取、CSS 变量导出、配色历史、对比度与无障碍检查（免费）
 - [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：6 个记账工具同页：流水、分类、月度、导出、预算、月度趋势与同比（免费）
 - [手绘与标注合集](https://screscent.github.io/xiaoning-ai-tools/tools/draw-annotate.html)：6 个绘图工具同页：画板、标注、流程、签名、图例、画布模板（免费）
@@ -250,7 +250,7 @@
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：6 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网、端口与协议自查（免费）
 - [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：5 个农历工具：农历转换、节气查询、月相查询、农历生日、节日倒计时（免费）
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
-- [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：5 个开票工具同页：价税分离、税额反算、多税率对照、开票信息、进项抵扣测算（免费）
+- [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：6 个本地税务工具：价税分离、税额反算、多税率对照、开票信息、进项抵扣、三表勾稽校验（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
 - [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：6 个光线工具同页：日出、黄金时刻、昼长、规划、光时、月相与夜空窗口（免费）
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
@@ -259,7 +259,7 @@
 - [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：5 个编码工具同页：Base32 编码、Base32 解码、填充与校验、编码互转、文本十六进制（免费）
 - [中文标点全半角转换器](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：全角半角互转，按标点/数字/空格分范围处理（免费）
 - [AA 分摊与结算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bill-split.html)：5 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录、小费与税费分摊（免费）
-- [日历文件与订阅合集](https://screscent.github.io/xiaoning-ai-tools/tools/ics-calendar.html)：5 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则（免费）
+- [日历文件与订阅合集](https://screscent.github.io/xiaoning-ai-tools/tools/ics-calendar.html)：6 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则、时区转换（免费）
 - [SVG 图表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-chart.html)：柱状/折线/面积图纯 SVG 生成，可下载源码（免费）
 - [批量序列号生成器](https://screscent.github.io/xiaoning-ai-tools/tools/serial-generator.html)：前缀+位数批量生成唯一序列号，含校验位（免费）
 - [装修材料用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/material-estimate.html)：6 个装修工具同页：涂料、瓷砖、地板、壁纸、损耗、装修预算分配（免费）

@@ -1904,7 +1904,8 @@
  {
   "id": "sfw5ysy97s",
   "name": "文本加解密与哈希合集",
-  "desc": "5 个本地工具：AES 加密、AES 解密、哈希计算、校验对比、HMAC 签名，不上传",
+  "desc": "6 个本地安全工具：AES 加密、AES 解密、哈希计算、校验对比、HMAC 签名、密钥派生",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sfw5ysy97s.app.weavefox.cn",
@@ -1929,6 +1930,10 @@
    {
     "key": "hmac",
     "title": "工具E HMAC 签名验签"
+   },
+   {
+    "key": "pbkdf2",
+    "title": "工具F 密钥派生"
    }
   ]
  },
@@ -3605,7 +3610,8 @@
  {
   "id": "x89bsucakb",
   "name": "发票与税额计算合集",
-  "desc": "5 个开票工具同页：价税分离、税额反算、多税率对照、开票信息、进项抵扣测算",
+  "desc": "6 个本地税务工具：价税分离、税额反算、多税率对照、开票信息、进项抵扣、三表勾稽校验",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://x89bsucakb.app.weavefox.cn",
@@ -3630,6 +3636,10 @@
    {
     "key": "deduct",
     "title": "工具E 进项抵扣测算"
+   },
+   {
+    "key": "crosscheck",
+    "title": "工具F 三表勾稽校验"
    }
   ]
  },
@@ -3828,7 +3838,8 @@
  {
   "id": "3xmx4f5af3",
   "name": "日历文件与订阅合集",
-  "desc": "5 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则",
+  "desc": "6 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则、时区转换",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://3xmx4f5af3.app.weavefox.cn",
@@ -3853,6 +3864,10 @@
    {
     "key": "recur",
     "title": "工具E 重复规则"
+   },
+   {
+    "key": "timezone",
+    "title": "工具F 时区转换"
    }
   ]
  },
