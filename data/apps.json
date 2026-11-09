@@ -2766,7 +2766,8 @@
  {
   "id": "2qcwr7qqxb",
   "name": "图片元数据与隐私清理合集",
-  "desc": "5 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查、定位脱敏",
+  "desc": "6 个图片工具同页：EXIF、信息、批量、自查、定位、一键清除元数据",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qcwr7qqxb.app.weavefox.cn",
@@ -2774,23 +2775,27 @@
   "subapps": [
    {
     "key": "exif",
-    "title": "工具A EXIF 查看"
+    "title": "工具A EXIF"
    },
    {
     "key": "meta",
-    "title": "工具B 图片信息"
+    "title": "工具B 信息"
    },
    {
     "key": "batch",
-    "title": "工具C 批量清理"
+    "title": "工具C 批量"
    },
    {
     "key": "privacy",
-    "title": "工具D 隐私自查"
+    "title": "工具D 自查"
    },
    {
     "key": "gps",
-    "title": "工具E 定位脱敏"
+    "title": "工具E 定位"
+   },
+   {
+    "key": "strip",
+    "title": "工具F 一键清除元数据"
    }
   ]
  },
@@ -2859,7 +2864,8 @@
  {
   "id": "2qcjfcqqxb",
   "name": "标识符与密钥生成合集",
-  "desc": "5 个生成工具同页：UUID、短 ID、随机令牌、十六进制密钥、ULID 生成与解析",
+  "desc": "6 个生成工具同页：UUID、短ID、令牌、密钥、ULID、密码短语",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qcjfcqqxb.app.weavefox.cn",
@@ -2867,23 +2873,27 @@
   "subapps": [
    {
     "key": "uuid",
-    "title": "工具A UUID v4"
+    "title": "工具A UUID"
    },
    {
     "key": "shortid",
-    "title": "工具B 短 ID"
+    "title": "工具B 短ID"
    },
    {
     "key": "token",
-    "title": "工具C 随机令牌"
+    "title": "工具C 令牌"
    },
    {
     "key": "secret",
-    "title": "工具D 十六进制密钥"
+    "title": "工具D 密钥"
    },
    {
     "key": "ulid",
-    "title": "工具E ULID 生成"
+    "title": "工具E ULID"
+   },
+   {
+    "key": "password",
+    "title": "工具F 密码短语生成"
    }
   ]
  },
@@ -3207,7 +3217,8 @@
  {
   "id": "3xmx6e5af3",
   "name": "证件与卡号校验合集",
-  "desc": "5 个校验工具同页：身份证、银行卡、统一社会信用代码、联系方式、车架号 VIN 校验",
+  "desc": "6 个校验工具同页：身份证、银行卡、信用代码、联系方式、车架号、护照号规则",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://3xmx6e5af3.app.weavefox.cn",
@@ -3215,11 +3226,11 @@
   "subapps": [
    {
     "key": "idcard",
-    "title": "工具A 身份证校验"
+    "title": "工具A 身份证"
    },
    {
     "key": "bank",
-    "title": "工具B 银行卡校验"
+    "title": "工具B 银行卡"
    },
    {
     "key": "uscc",
@@ -3227,11 +3238,15 @@
    },
    {
     "key": "contact",
-    "title": "工具D 手机与邮箱"
+    "title": "工具D 联系方式"
    },
    {
     "key": "vin",
-    "title": "工具E 车架号 VIN 校验"
+    "title": "工具E 车架号"
+   },
+   {
+    "key": "passport",
+    "title": "工具F 护照号规则速查"
    }
   ]
  },

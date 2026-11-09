@@ -214,10 +214,10 @@
 - [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
 - [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：5 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算（免费）
 - [随机密码短语生成器](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：易记词组合成密码短语，含熵值估算与强度评级（免费）
-- [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：5 个图片工具同页：EXIF 查看与清除、图片信息核对、批量去元数据、隐私风险自查、定位脱敏（免费）
+- [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：6 个图片工具同页：EXIF、信息、批量、自查、定位、一键清除元数据（免费）
 - [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：5 个正则工具同页：匹配测试、批量替换、捕获组、常用速查、批量提取与清洗（免费）
 - [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：5 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘、目标拆解（免费）
-- [标识符与密钥生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-secret-kit.html)：5 个生成工具同页：UUID、短 ID、随机令牌、十六进制密钥、ULID 生成与解析（免费）
+- [标识符与密钥生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-secret-kit.html)：6 个生成工具同页：UUID、短ID、令牌、密钥、ULID、密码短语（免费）
 - [跨时区会议时间换算器](https://screscent.github.io/xiaoning-ai-tools/tools/timezone-meeting.html)：一个时间换算多时区本地时刻与时差，夏令时自动（免费）
 - [CSS 玻璃拟态生成器](https://screscent.github.io/xiaoning-ai-tools/tools/glassmorphism-generator.html)：滑杆调模糊/透明度/圆角，实时预览并复制 CSS（免费）
 - [贷款还款方式对比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/loan-compare.html)：等额本息与等额本金月供/总利息对比，含逐月明细（免费）
@@ -235,7 +235,7 @@
 - [中文简繁转换器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-converter.html)：简繁双向逐字转换，含对照表与未收录提示（免费）
 - [年龄与生日计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/age-calculator.html)：5 个生日工具同页：精确年龄、生日倒计时、届龄节点、生日对比、退休时间与工作年限（免费）
 - [家务分工与轮值合集](https://screscent.github.io/xiaoning-ai-tools/tools/chore-roster.html)：5 个家务工具同页：轮值表、公平度评分、换班与请假、家务清单与频次、外包成本（免费）
-- [证件与卡号校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-card-validator.html)：5 个校验工具同页：身份证、银行卡、统一社会信用代码、联系方式、车架号 VIN 校验（免费）
+- [证件与卡号校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-card-validator.html)：6 个校验工具同页：身份证、银行卡、信用代码、联系方式、车架号、护照号规则（免费）
 - [图片自动裁剪透明边](https://screscent.github.io/xiaoning-ai-tools/tools/trim-transparent.html)：按容差自动裁掉透明边并保留内边距，导出图片（免费）
 - [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：6 个出行工具同页：油耗、油电对比、停车过路、通勤月成本、公交月票、五年总持有（免费）
 - [CSS Flex 与 Grid 布局生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：切换 Flex/Grid 调间距对齐，实时预览并复制 CSS（免费）
