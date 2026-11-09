@@ -9459,5 +9459,28 @@
     "title": "工具C 解冻时长"
    }
   ]
+ },
+ {
+  "id": "frzky4gsra",
+  "name": "供暖与取暖费用计算合集",
+  "desc": "3 个冬季取暖费用工具同页：供暖费核算、电暖器电费、取暖方式对比",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://frzky4gsra.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "heating",
+    "title": "工具A 供暖费核算"
+   },
+   {
+    "key": "heater",
+    "title": "工具B 电暖器电费"
+   },
+   {
+    "key": "compare",
+    "title": "工具C 取暖方式对比"
+   }
+  ]
  }
 ]
