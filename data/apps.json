@@ -3061,11 +3061,12 @@
  {
   "id": "z5wpwyaahj",
   "name": "Token 与鉴权自查合集",
-  "desc": "5 个鉴权工具同页：JWT 解码、声明解释、Authorization 头、Cookie 自查、权限范围",
+  "desc": "6 个鉴权工具同页：JWT 解码、声明解释、Authorization 头、Cookie 自查、权限范围、Token 存储建议",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z5wpwyaahj.app.weavefox.cn",
-  "subcat": "编码转换",
+  "subcat": "安全隐私",
   "subapps": [
    {
     "key": "jwt",
@@ -3073,11 +3074,11 @@
    },
    {
     "key": "claims",
-    "title": "工具B 标准声明解释"
+    "title": "工具B 声明解释"
    },
    {
     "key": "headers",
-    "title": "工具C 请求头生成"
+    "title": "工具C Authorization 头"
    },
    {
     "key": "cookie",
@@ -3086,6 +3087,10 @@
    {
     "key": "scope",
     "title": "工具E 权限范围"
+   },
+   {
+    "key": "storage",
+    "title": "工具F Token 存储建议"
    }
   ]
  },
@@ -3434,7 +3439,8 @@
  {
   "id": "atverkpmpa",
   "name": "IP 与子网计算合集",
-  "desc": "5 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网",
+  "desc": "6 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网、端口与协议自查",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://atverkpmpa.app.weavefox.cn",
@@ -3442,23 +3448,27 @@
   "subapps": [
    {
     "key": "subnet",
-    "title": "工具A 子网掩码与网段"
+    "title": "工具A 子网掩码"
    },
    {
     "key": "cidr",
-    "title": "工具B CIDR 与主机数"
+    "title": "工具B CIDR 反推"
    },
    {
     "key": "private",
-    "title": "工具C 私网与保留地址"
+    "title": "工具C 私网地址"
    },
    {
     "key": "health",
-    "title": "工具D 网关与配置自查"
+    "title": "工具D 网关自查"
    },
    {
     "key": "v6",
-    "title": "工具E IPv6 子网划分"
+    "title": "工具E IPv6 子网"
+   },
+   {
+    "key": "port",
+    "title": "工具F 端口与协议自查"
    }
   ]
  },
@@ -5592,7 +5602,8 @@
  {
   "id": "npcteh2aq6",
   "name": "门票与通行预算合集",
-  "desc": "5 个门票工具同页：单景点门票、多景点合计、城市通票、讲解观光车、儿童票",
+  "desc": "6 个门票工具同页：单景点门票、多景点合计、城市通票、讲解观光车、儿童票、退改签规则",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npcteh2aq6.app.weavefox.cn",
@@ -5616,7 +5627,11 @@
    },
    {
     "key": "child",
-    "title": "工具E 儿童票判定"
+    "title": "工具E 儿童票"
+   },
+   {
+    "key": "refund",
+    "title": "工具F 退改签规则"
    }
   ]
  },

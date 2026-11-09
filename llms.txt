@@ -230,7 +230,7 @@
 - [SVG 波浪分割线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-wave-divider.html)：调波高波峰生成 SVG 波浪分割线，复制或下载（免费）
 - [水电燃气账单计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/utility-tier-calculator.html)：5 个账单工具同页：阶梯电价、阶梯水价、燃气费、峰谷电价、账单分摊与合租结算（免费）
 - [隐私与合规文档合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-policy-generator.html)：5 个合规工具同页：隐私政策、服务条款、Cookie 同意文案、数据处理与共享说明、留存周期（免费）
-- [Token 与鉴权自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/jwt-decoder.html)：5 个鉴权工具同页：JWT 解码、声明解释、Authorization 头、Cookie 自查、权限范围（免费）
+- [Token 与鉴权自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/jwt-decoder.html)：6 个鉴权工具同页：JWT 解码、声明解释、Authorization 头、Cookie 自查、权限范围、Token 存储建议（免费）
 - [CSS 加载动画生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-loading-spinner.html)：四种加载动画调参生成纯 CSS，可复制或下载 HTML（免费）
 - [中文简繁转换器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-converter.html)：简繁双向逐字转换，含对照表与未收录提示（免费）
 - [年龄与生日计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/age-calculator.html)：5 个生日工具同页：精确年龄、生日倒计时、届龄节点、生日对比、退休时间与工作年限（免费）
@@ -247,7 +247,7 @@
 - [中文与拼音处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-pinyin.html)：5 个拼音工具同页：带调拼音、无调首字母、多音字、逐字对照表、拼音排序（免费）
 - [隐私设置自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：4 个隐私自查清单：社交平台、手机权限、浏览器、账号安全（免费）
 - [书签整理与导出合集](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：5 个书签工具同页：解析去重、域名分组、格式转换、浏览器导入导出、书签体检（免费）
-- [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：5 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网（免费）
+- [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：6 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网、端口与协议自查（免费）
 - [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：5 个农历工具：农历转换、节气查询、月相查询、农历生日、节日倒计时（免费）
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
 - [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：5 个开票工具同页：价税分离、税额反算、多税率对照、开票信息、进项抵扣测算（免费）
@@ -354,7 +354,7 @@
 - [储蓄目标达成时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/saving-goal.html)：按月复利推演攒到目标金额所需月数与利息结构（免费）
 - [CSS 背景与纹理生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-pattern.html)：5 个背景纹理工具同页：分隔线、点阵背景、网格条纹、噪点纹理、平铺次数，实时预览并复制 CSS 与 HTML 示例（免费）
 - [睡眠债务与补觉计划计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-debt.html)：按工作日周末睡眠差算累计债务，给出补觉天数与风险提示（免费）
-- [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：5 个门票工具同页：单景点门票、多景点合计、城市通票、讲解观光车、儿童票（免费）
+- [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：6 个门票工具同页：单景点门票、多景点合计、城市通票、讲解观光车、儿童票、退改签规则（免费）
 - [昵称与英文名生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/nickname-name-gen.html)：5 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺、账号长度校验（免费）
 - [凯撒与古典密码合集](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：4 个古典密码工具同页：凯撒位移、ROT13、反字母表、维吉尼亚（免费）
 - [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：5 个排期工具同页：甘特图、里程碑、关键路径、燃尽图、人力与工期估算（免费）
