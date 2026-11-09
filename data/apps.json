@@ -9367,5 +9367,28 @@
     "title": "工具C 末班车"
    }
   ]
+ },
+ {
+  "id": "bcreamk6f9",
+  "name": "高铁与火车出行速查合集",
+  "desc": "3 个铁路出行工具同页：改签费、进站时间、行李规格",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://bcreamk6f9.app.weavefox.cn",
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "fare",
+    "title": "工具A 改签费"
+   },
+   {
+    "key": "station",
+    "title": "工具B 进站时间"
+   },
+   {
+    "key": "luggage",
+    "title": "工具C 行李规格"
+   }
+  ]
  }
 ]
