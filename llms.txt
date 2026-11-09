@@ -426,12 +426,12 @@
 - [居家安全自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-safety-checklist.html)：6 个居家安全工具同页：消防、用电、燃气、水质、空气与应急物资，居家隐患一页查清（免费）
 - [家庭维修与工具速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-repair-quickref.html)：6 个维修工具同页：工具选型、故障排查、安全作业、墙面修补、下水疏通与工具保养（免费）
 - [家装尺寸与材料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-reno-quickref.html)：4 个家装工具同页：空间尺寸与层高、材料用量估算、采光与灯具数量、墙面配色与涂料（免费）
-- [旅行装备与打包速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-gear-kit.html)：5 个出行工具同页：打包清单、装备选型、天气衣物、行李重量与托运合规、旅行预算（免费）
+- [旅行装备与打包速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-gear-kit.html)：6 个出行工具同页：打包清单、装备选型、天气衣物、行李重量与托运合规、旅行预算、出发前检查（免费）
 - [开源素材与授权速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/open-assets-license.html)：5 个素材工具：字体授权、图标来源、音效授权、许可协议对照、授权期限提醒（免费）
 - [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：5 个露营工具：营地选址、安全处置、补给计算、保暖温标、费用分摊（免费）
-- [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：5 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具、咖啡因与就寝（免费）
+- [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：6 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具、咖啡因与就寝、风味调整（免费）
 - [口腔与牙齿护理速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/oral-dental-care.html)：5 个口腔工具：刷牙方案、牙线使用、就诊信号、牙齿美白与敏感护理、含氟牙膏与用量（免费）
-- [居家烘焙换算速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-baking-conversion.html)：5 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算、配方缩放（免费）
+- [居家烘焙换算速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-baking-conversion.html)：6 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算、配方缩放、失败排查（免费）
 - [绿植养护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/plant-care-quickref.html)：5 个绿植工具同页：浇水光照、配土换盆、病虫排查、施肥季节、补光与电费（免费）
 - [眼镜与视力保护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/eyewear-vision-care.html)：5 个视力工具：镜片选择、镜架尺寸、用眼与验光、屏幕用眼与防控、屏幕距离与休息（免费）
 - [居家除螨与过敏防护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/dust-mite-allergy.html)：5 个除螨工具：除螨频率与清洗、过敏原排查、湿度与通风、霉菌控制、湿度与螨虫风险（免费）
