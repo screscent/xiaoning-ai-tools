@@ -340,7 +340,7 @@
 - [护照签证与入境合集](https://screscent.github.io/xiaoning-ai-tools/tools/passport-validity.html)：5 个出入境工具同页：护照余量、签证有效期、停留天数、换发提醒、签证照片（免费）
 - [心率区间与运动强度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：按年龄与静息心率算五档心率区间，给出燃脂推荐范围（免费）
 - [食物热量与运动消耗换算器](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：按 MET 与体重换算消耗某份热量需要的运动分钟数（免费）
-- [签证材料清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-checklist.html)：4 个签证材料清单：旅游、商务、学生、探亲访友（免费）
+- [签证材料清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-checklist.html)：5 个签证材料清单：旅游、商务、学生、探亲访友、工作（免费）
 - [步数与活动目标合集](https://screscent.github.io/xiaoning-ai-tools/tools/step-goal.html)：4 个步数工具同页：步数目标、步幅里程、热量消耗、周计划（免费）
 - [字体搭配与排版比例生成器](https://screscent.github.io/xiaoning-ai-tools/tools/type-scale.html)：按基准字号与字阶比例生成六级字号行高与字体栈（免费）
 - [色盲友好配色检查器](https://screscent.github.io/xiaoning-ai-tools/tools/cvd-checker.html)：模拟四类色觉障碍并重算 WCAG 对比度是否达标（免费）
@@ -474,10 +474,10 @@
 - [居家适老化改造速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-aging-friendly-renovation-kit.html)：5 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关、改造预算、防滑门槛（免费）
 - [家政与保洁报价合集](https://screscent.github.io/xiaoning-ai-tools/tools/housekeeping-cleaning-quote-kit.html)：5 个家政工具同页：开荒保洁、日常保洁、家电清洗、玻璃与纱窗清洗、保洁耗材成本（免费）
 - [数据分析与统计速算合集](https://screscent.github.io/xiaoning-ai-tools/tools/data-analysis-statistics-kit.html)：5 个统计工具同页：样本量与置信区间、A/B 显著性、描述统计与离散度、相关性与回归速算、四分位距（免费）
-- [滑雪装备与雪场费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/ski-gear-resort-cost-kit.html)：4 个滑雪工具同页：雪场费用与雪票预算、装备选购与尺码、雪道难度与安全、租赁与保险预算（免费）
+- [滑雪装备与雪场费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/ski-gear-resort-cost-kit.html)：5 个滑雪工具同页：雪场费用与雪票预算、装备选购与尺码、雪道难度与安全、租赁与保险预算、缆车与雪票组合（免费）
 - [高尔夫入门与打球成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/golf-cost-gear-handicap-kit.html)：4 个高尔夫工具同页：球场费用与练习场预算、球杆选购与握把尺寸、规则与差点计算、下场礼仪与打球节奏（免费）
 - [月子护理与产后恢复合集](https://screscent.github.io/xiaoning-ai-tools/tools/postpartum-meal-care-recovery-kit.html)：5 个月子与产后工具同页：月子餐热量配比、月嫂与月子中心花销预算、恢复周程与复查节点、月嫂面试与合同要点、月子餐采购量（免费）
-- [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：4 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引、报修与维修基金（免费）
+- [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：5 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引、报修基金、车位与停车费（免费）
 - [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：5 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账、售后与结算测算、毛利与盈亏平衡（免费）
 - [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：5 个乒乓球工具同页：器材搭配、旋转术语、赛制计分、训练计划、回合统计（免费）
 - [室内空气与温湿度合集](https://screscent.github.io/xiaoning-ai-tools/tools/indoor-air-humidity.html)：5 个室内环境工具同页：甲醛浓度与国标判定、净化器适用面积、温湿度与体感舒适度、新风与换气、霉菌与除湿（免费）
