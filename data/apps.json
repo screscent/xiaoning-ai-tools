@@ -1665,7 +1665,8 @@
  {
   "id": "frnustgsra",
   "name": "番茄专注与计时合集",
-  "desc": "5 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划、番茄周期规划",
+  "desc": "6 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划、番茄周期规划、每日专注目标",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frnustgsra.app.weavefox.cn",
@@ -1673,23 +1674,27 @@
   "subapps": [
    {
     "key": "pomodoro",
-    "title": "番茄钟"
+    "title": "工具A 番茄钟"
    },
    {
     "key": "breaks",
-    "title": "休息计时"
+    "title": "工具B 休息计时"
    },
    {
     "key": "stats",
-    "title": "专注统计"
+    "title": "工具C 专注统计"
    },
    {
     "key": "plan",
-    "title": "番茄计划"
+    "title": "工具D 番茄计划"
    },
    {
     "key": "cycle",
-    "title": "番茄周期规划"
+    "title": "工具E 周期规划"
+   },
+   {
+    "key": "daily",
+    "title": "工具F 每日专注目标"
    }
   ]
  },
@@ -1772,7 +1777,8 @@
  {
   "id": "mknibarxwr",
   "name": "图片水印与批量处理合集",
-  "desc": "5 个水印工具同页：文字、图片、平铺、批量、体积与压缩估算",
+  "desc": "6 个水印工具同页：文字水印、图片水印、平铺、批量、体积与压缩估算、透明度与位置",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://mknibarxwr.app.weavefox.cn",
@@ -1780,23 +1786,27 @@
   "subapps": [
    {
     "key": "text",
-    "title": "文字水印"
+    "title": "工具A 文字水印"
    },
    {
     "key": "logo",
-    "title": "图片水印"
+    "title": "工具B 图片水印"
    },
    {
     "key": "tile",
-    "title": "平铺水印"
+    "title": "工具C 平铺水印"
    },
    {
     "key": "batch",
-    "title": "批量水印"
+    "title": "工具D 批量处理"
    },
    {
     "key": "compress",
-    "title": "图片体积与压缩估算"
+    "title": "工具E 体积估算"
+   },
+   {
+    "key": "opacity",
+    "title": "工具F 透明度与位置"
    }
   ]
  },
@@ -1969,7 +1979,7 @@
  {
   "id": "j25db4xyyi",
   "name": "手绘与标注合集",
-  "desc": "5 个绘图工具同页：画板、标注、流程、签名、图例与编号规则",
+  "desc": "6 个绘图工具同页：画板、标注、流程、签名、图例、画布模板",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -1978,23 +1988,27 @@
   "subapps": [
    {
     "key": "draw",
-    "title": "工具A 自由画板"
+    "title": "工具A 画板"
    },
    {
     "key": "annotate",
-    "title": "工具B 图片标注"
+    "title": "工具B 标注"
    },
    {
     "key": "flow",
-    "title": "工具C 简易流程图"
+    "title": "工具C 流程"
    },
    {
     "key": "sign",
-    "title": "工具D 手写签名"
+    "title": "工具D 签名"
    },
    {
     "key": "legend",
-    "title": "工具E 图例与编号规则"
+    "title": "工具E 图例"
+   },
+   {
+    "key": "template",
+    "title": "工具F 画布模板"
    }
   ]
  },

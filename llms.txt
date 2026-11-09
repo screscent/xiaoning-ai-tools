@@ -171,17 +171,17 @@
 - [健康指标计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bmi-calorie-calculator.html)：6 个健康计算器同页：BMI 与理想体重、基础代谢与每日热量、体脂率估算、每日饮水建议、血压与心率解读、睡眠时长评估（免费）
 - [常用单位换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-converter.html)：5 个单位工具同页：长度、重量、面积体积、温度压力、数据带宽（免费）
 - [哈希校验工具](https://screscent.github.io/xiaoning-ai-tools/tools/hash-checker.html)：本地计算 SHA-256/384/512，文本与文件校验对比（免费）
-- [番茄专注与计时合集](https://screscent.github.io/xiaoning-ai-tools/tools/pomodoro-timer.html)：5 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划、番茄周期规划（免费）
+- [番茄专注与计时合集](https://screscent.github.io/xiaoning-ai-tools/tools/pomodoro-timer.html)：6 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划、番茄周期规划、每日专注目标（免费）
 - [科学计算与函数合集](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：5 个计算工具同页：科学计算、函数常数、统计概率、计算历史、矩阵运算（免费）
 - [Markdown 写作合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：6 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架、目录生成、导出与打印（免费）
 - [人民币大写金额转换器](https://screscent.github.io/xiaoning-ai-tools/tools/rmb-uppercase.html)：数字金额转中文大写，支持角分与银行汇款式（免费）
-- [图片水印与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：5 个水印工具同页：文字、图片、平铺、批量、体积与压缩估算（免费）
+- [图片水印与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-watermark.html)：6 个水印工具同页：文字水印、图片水印、平铺、批量、体积与压缩估算、透明度与位置（免费）
 - [打字练习与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：5 个打字工具同页：速度测试、错键分析、专项练习、历史成绩趋势、键盘布局与指法（免费）
 - [待办与任务管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/local-todo.html)：6 个任务工具同页：待办、例行、回顾、归档、四象限优先级、任务计时与耗时统计（免费）
 - [文本加解密与哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：5 个本地工具：AES 加密、AES 解密、哈希计算、校验对比、HMAC 签名，不上传（免费）
 - [取色与配色提取合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-extract.html)：5 个配色工具同页：取色器、主色提取、CSS 变量导出、配色历史、对比度与无障碍检查（免费）
 - [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：6 个记账工具同页：流水、分类、月度、导出、预算、月度趋势与同比（免费）
-- [手绘与标注合集](https://screscent.github.io/xiaoning-ai-tools/tools/draw-annotate.html)：5 个绘图工具同页：画板、标注、流程、签名、图例与编号规则（免费）
+- [手绘与标注合集](https://screscent.github.io/xiaoning-ai-tools/tools/draw-annotate.html)：6 个绘图工具同页：画板、标注、流程、签名、图例、画布模板（免费）
 - [社交图片切图与比例合集](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：6 个切图工具同页：九宫格、方图、竖版、横版、圆角、Banner 与安全区（免费）
 - [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：5 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对、本命年（免费）
 - [图片滤镜与调色合集](https://screscent.github.io/xiaoning-ai-tools/tools/filter-tone.html)：5 个调色工具同页：灰度、模糊、复古、明暗、锐化与降噪参数（免费）
