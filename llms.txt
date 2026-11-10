@@ -248,7 +248,7 @@
 - [隐私设置自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：4 个隐私自查清单：社交平台、手机权限、浏览器、账号安全（免费）
 - [书签整理与导出合集](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：5 个书签工具同页：解析去重、域名分组、格式转换、浏览器导入导出、书签体检（免费）
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：6 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网、端口与协议自查（免费）
-- [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：5 个农历工具：农历转换、节气查询、月相查询、农历生日、节日倒计时（免费）
+- [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：6 个农历工具：农历转换、节气查询、月相查询、农历生日、节日倒计时、数九与三伏（免费）
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
 - [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：6 个本地税务工具：价税分离、税额反算、多税率对照、开票信息、进项抵扣、三表勾稽校验（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
@@ -450,7 +450,7 @@
 - [编码检测与乱码修复合集](https://screscent.github.io/xiaoning-ai-tools/tools/encoding-repair-kit.html)：5 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换、Unicode 与实体转换、Base64 体积估算（免费）
 - [游泳配速与训练合集](https://screscent.github.io/xiaoning-ai-tools/tools/swim-training-kit.html)：5 个游泳工具同页：配速与SWOLF、趟数换算、训练计划、泳姿与划频、组间休息（免费）
 - [网球计分与场地换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tennis-kit.html)：5 个网球工具同页：计分与赛制、场地尺寸换算、装备与穿线、训练计划与体能、发球与站位（免费）
-- [乐理与音准速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/music-theory-kit.html)：5 个乐理工具：音阶调号、音程频率、和弦构成、节奏拍号、BPM 与节拍时值（免费）
+- [乐理与音准速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/music-theory-kit.html)：6 个乐理工具：音阶调号、音程频率、和弦构成、节奏拍号、BPM 与节拍时值、移调与变调夹（免费）
 - [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：5 个钓鱼工具：线组搭配、饵料速查、装备清单、鱼口评估、线号与拉力换算（免费）
 - [台球计分与角度合集](https://screscent.github.io/xiaoning-ai-tools/tools/billiards-kit.html)：5 个台球工具：计分与规则、击球角度换算、装备与皮头、球台规格与照明、击球力度与走位（免费）
 - [保龄球计分与换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bowling-kit.html)：5 个保龄球工具同页：十局计分、让分与净分、球重球速换算、球道与瓶位、局均分与稳定性（免费）
@@ -458,7 +458,7 @@
 - [元素周期表与化学计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/element-chemistry.html)：5 个化学工具同页：元素速查、摩尔质量与物质的量、溶液浓度换算、气体定律与分压、pH 与缓冲溶液（免费）
 - [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：5 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼、灯位与回路规划、照明功率与电费（免费）
 - [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：5 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期、轮胎周长与转数（免费）
-- [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：5 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比、Wi-Fi 覆盖（免费）
+- [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：6 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比、Wi-Fi 覆盖、流量超标估算（免费）
 - [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：5 个水族工具同页：鱼缸容积、换水比例、加热棒功率、水草照明、换水排程（免费）
 - [家庭光伏与储能收益合集](https://screscent.github.io/xiaoning-ai-tools/tools/solar-storage-kit.html)：6 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益、补贴与并网、倾角与朝向（免费）
 - [差旅报销与机酒预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/business-trip-expense-kit.html)：6 个差旅工具同页：差旅补贴、机票退改、自驾报销、住宿标准与超标处理、城市差旅标准、制度与审批（免费）
