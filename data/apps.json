@@ -10149,5 +10149,29 @@
     "title": "工具C 施肥与浇水周期"
    }
   ]
+ },
+ {
+  "id": "rdt8374t4r",
+  "name": "车险与理赔自查合集",
+  "desc": "3 个车险工具：保费组合、理赔流程、出险决策",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://rdt8374t4r.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "auto",
+    "title": "工具A 车险保费与险种组合"
+   },
+   {
+    "key": "claim",
+    "title": "工具B 出险理赔流程与材料"
+   },
+   {
+    "key": "ncd",
+    "title": "工具C 出险决策与次年保费"
+   }
+  ]
  }
 ]
