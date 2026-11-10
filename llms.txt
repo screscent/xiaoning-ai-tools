@@ -509,7 +509,8 @@
 - [车险与理赔自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/auto-insurance-claim-ncd-kit.html)：3 个车险工具：保费组合、理赔流程、出险决策（免费）
 - [瓷砖美缝与辅材用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/tile-grout-waterproof-quantity-kit.html)：3 个装修工具：瓷砖用量、美缝剂、防水涂料（免费）
 
-## 博客（160 篇）
+## 博客（161 篇）
+- [小凝 Agent：四层与四个横面：为什么有些东西不能放进任何一层](https://screscent.github.io/xiaoning-ai-tools/blog/NHBfAV20nzaLtCJa7GCD9g.html)：2026-11-10｜承接第 84 期：上一篇讲分层为什么必要，这一篇讲分层做出来是什么形状——四层、四个横面，以及升级时怎么判定一次改动落在哪、会牵动谁。
 - [小凝 Agent：大模型驱动复杂系统的可行性与分层设计](https://screscent.github.io/xiaoning-ai-tools/blog/l90bIY30MsqoSh18kZDOQg.html)：2026-11-10｜天花板不在模型能力，而在三个可计量结构：单次载入量、无验证连续段数、单步可验证比例。
 - [小凝 Agent：常驻 Agent OS 能否迁移到作战指挥系统](https://screscent.github.io/xiaoning-ai-tools/blog/OMVTQmhWEFaCihNLC9iyaw.html)：2026-11-10｜一次基于实证的能力迁移评估：能迁移的是指挥控制的骨架，不是作战的拳头。
 - [小凝 Agent：一个 Agent 的三层进化——内环、外环与自适应](https://screscent.github.io/xiaoning-ai-tools/blog/vlERSqnm4u7OeFaiGZX9vQ.html)：2026-11-09｜博弈跑起来之后，问题从「怎么裁决」变成「怎么进化」。内环攒经验、外环改结构、自适应调数字；项目层与 OS 层再互相沉淀、互相反哺。

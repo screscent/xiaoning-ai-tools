@@ -1,8 +1,13 @@
 {
  "updated": "2026-11-10",
- "count": 160,
+ "count": 161,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-10",
+   "title": "小凝 Agent：四层与四个横面：为什么有些东西不能放进任何一层",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/NHBfAV20nzaLtCJa7GCD9g.html"
+  },
   {
    "date": "2026-11-10",
    "title": "小凝 Agent：大模型驱动复杂系统的可行性与分层设计",
@@ -147,11 +152,6 @@
    "date": "2026-10-10",
    "title": "小凝：绿泡泡通道接入、跨渠道记录融合与通知触发层的技术拆解",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/6jUW0kO5WleE8shKz6yS7A.html"
-  },
-  {
-   "date": "2026-10-09",
-   "title": "小凝：动态矩阵是不是一种高效的记忆压缩？",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/Fod7EwT1GYJAEBSb_1oMmQ.html"
   }
  ]
 }

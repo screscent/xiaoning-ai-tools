@@ -1,8 +1,16 @@
 {
  "updated": "2026-11-10",
  "source": "wechat-mp",
- "count": 160,
+ "count": 161,
  "articles": [
+  {
+   "slug": "NHBfAV20nzaLtCJa7GCD9g",
+   "title": "小凝 Agent：四层与四个横面：为什么有些东西不能放进任何一层",
+   "url": "https://mp.weixin.qq.com/s/NHBfAV20nzaLtCJa7GCD9g",
+   "publish_time": "2026-11-10",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "l90bIY30MsqoSh18kZDOQg",
    "title": "小凝 Agent：大模型驱动复杂系统的可行性与分层设计",
