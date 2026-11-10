@@ -437,7 +437,7 @@
 - [居家除螨与过敏防护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/dust-mite-allergy.html)：6 个除螨工具：除螨频率与清洗、过敏原排查、湿度与通风、霉菌控制、湿度与螨虫风险、床品清洗与晾晒排程（免费）
 - [鞋服尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/shoe-clothing-size.html)：6 个尺码工具同页：鞋码、服装、儿童、对照表、版型测量、品牌尺码对照（免费）
 - [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：6 个衣物工具同页：标签、面料、污渍、熨烫、晾晒收纳、换季收纳清单（免费）
-- [验房与收房检查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-inspection.html)：5 个收房工具同页：验房清单、面积核对、整改跟踪、收房税费、验房工时（免费）
+- [验房与收房检查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-inspection.html)：6 个收房工具同页：验房清单、面积核对、整改跟踪、收房税费、验房工时、收房交接清单（免费）
 - [自行车骑行与维护合集](https://screscent.github.io/xiaoning-ai-tools/tools/cycling-care.html)：6 个骑行工具同页：配速里程、保养周期、装备清单、车架尺寸、链条与飞轮寿命、路线与补给规划（免费）
 - [家居软装尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/soft-furnishing-size.html)：6 个软装工具同页：窗帘、地毯、挂画、沙发、灯具、软装预算分配（免费）
 - [家庭防虫与灭鼠合集](https://screscent.github.io/xiaoning-ai-tools/tools/pest-control-home.html)：6 个防虫工具：蚊虫防治、蟑螂蚂蚁、老鼠封堵、白蚁蛀虫、驱蚊剂浓度与时效、驱虫剂安全用量（免费）
@@ -459,7 +459,7 @@
 - [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：6 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼、灯位与回路规划、照明功率与电费、灯具数量与布灯间距（免费）
 - [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：6 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期、轮胎周长与转数、速度表误差换算（免费）
 - [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：6 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比、Wi-Fi 覆盖、流量超标估算（免费）
-- [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：5 个水族工具同页：鱼缸容积、换水比例、加热棒功率、水草照明、换水排程（免费）
+- [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：6 个水族工具同页：鱼缸容积、换水比例、加热棒功率、水草照明、换水排程、开缸与养水周期（免费）
 - [家庭光伏与储能收益合集](https://screscent.github.io/xiaoning-ai-tools/tools/solar-storage-kit.html)：6 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益、补贴与并网、倾角与朝向（免费）
 - [差旅报销与机酒预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/business-trip-expense-kit.html)：6 个差旅工具同页：差旅补贴、机票退改、自驾报销、住宿标准与超标处理、城市差旅标准、制度与审批（免费）
 - [厨房调味与酱汁配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-seasoning-ratio-kit.html)：6 个下厨调味工具：酱汁配比、腌制盐水浓度、调料替代换算、火候与油温对照、高汤与底味、腌料配比（免费）
@@ -480,7 +480,7 @@
 - [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：5 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引、报修基金、车位与停车费（免费）
 - [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：5 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账、售后与结算测算、毛利与盈亏平衡（免费）
 - [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：5 个乒乓球工具同页：器材搭配、旋转术语、赛制计分、训练计划、回合统计（免费）
-- [室内空气与温湿度合集](https://screscent.github.io/xiaoning-ai-tools/tools/indoor-air-humidity.html)：5 个室内环境工具同页：甲醛浓度与国标判定、净化器适用面积、温湿度与体感舒适度、新风与换气、霉菌与除湿（免费）
+- [室内空气与温湿度合集](https://screscent.github.io/xiaoning-ai-tools/tools/indoor-air-humidity.html)：6 个室内环境工具同页：甲醛判定、净化器面积、温湿度舒适度、新风换气、霉菌除湿、装修后入住时间（免费）
 - [公积金医保与津贴计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/housing-fund-medical-maternity.html)：6 个社保福利工具同页：公积金贷款额度、医保报销自付、生育津贴与产假工资、失业金测算、公积金提取、个税与专项扣除（免费）
 - [垃圾分类与回收变现合集](https://screscent.github.io/xiaoning-ai-tools/tools/waste-sorting-recycling.html)：5 个垃圾分类工具同页：分类速查、可回收物估价、大件垃圾清运、厨余堆肥、分类桶配置（免费）
 - [养老与退休金计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/retirement-pension-fire.html)：5 个养老测算工具同页：养老金缺口、退休金估算、提前退休测算、护理费用测算、退休医疗缺口（免费）
