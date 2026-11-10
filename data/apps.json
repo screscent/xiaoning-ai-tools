@@ -3173,7 +3173,8 @@
  {
   "id": "wn5xhmj8gw",
   "name": "隐私与合规文档合集",
-  "desc": "5 个合规工具同页：隐私政策、服务条款、Cookie 同意文案、数据处理与共享说明、留存周期",
+  "desc": "6 个合规工具同页：隐私政策、服务条款、Cookie 同意文案、数据处理与共享说明、留存周期、同意管理与退出",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://wn5xhmj8gw.app.weavefox.cn",
@@ -3198,6 +3199,10 @@
    {
     "key": "retention",
     "title": "工具E 留存周期"
+   },
+   {
+    "key": "consent",
+    "title": "工具F 同意管理与退出"
    }
   ]
  },
@@ -8722,7 +8727,7 @@
  {
   "id": "uiag6axjku",
   "name": "编码检测与乱码修复合集",
-  "desc": "5 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换、Unicode 与实体转换、Base64 体积估算",
+  "desc": "6 个编码工具同页：编码检测、乱码互修、编码转换、码点与实体、Base64 体积、Base64 与 URL 编码",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -8731,23 +8736,27 @@
   "subapps": [
    {
     "key": "detect",
-    "title": "编码检测"
+    "title": "工具A 编码检测"
    },
    {
     "key": "fix",
-    "title": "乱码修复"
+    "title": "工具B 乱码修复"
    },
    {
     "key": "convert",
-    "title": "编码转换"
+    "title": "工具C 编码转换"
    },
    {
     "key": "unicode",
-    "title": "码点与实体"
+    "title": "工具D 码点与实体"
    },
    {
     "key": "b64size",
     "title": "工具E 体积估算"
+   },
+   {
+    "key": "urlcode",
+    "title": "工具F Base64 编解码"
    }
   ]
  },
@@ -9535,7 +9544,8 @@
  {
   "id": "r3damkzjyr",
   "name": "居家适老化改造速查合集",
-  "desc": "5 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关、改造预算、防滑门槛",
+  "desc": "6 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关、改造预算、防滑门槛、施工顺序与验收",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r3damkzjyr.app.weavefox.cn",
@@ -9543,23 +9553,27 @@
   "subapps": [
    {
     "key": "grab",
-    "title": "扶手与坡道"
+    "title": "工具A 扶手与坡道"
    },
    {
     "key": "bath",
-    "title": "卫浴防滑"
+    "title": "工具B 卫浴防滑"
    },
    {
     "key": "light",
-    "title": "夜灯与开关"
+    "title": "工具C 夜灯与开关"
    },
    {
     "key": "budget",
-    "title": "改造预算"
+    "title": "工具D 改造预算"
    },
    {
     "key": "slip",
     "title": "工具E 防滑门槛"
+   },
+   {
+    "key": "sequence",
+    "title": "工具F 改造施工顺序与验收"
    }
   ]
  },
