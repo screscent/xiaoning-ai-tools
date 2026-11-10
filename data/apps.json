@@ -9981,5 +9981,29 @@
     "title": "工具C 打包工时与人工"
    }
   ]
+ },
+ {
+  "id": "k6l2ljftrk",
+  "name": "宠物出行与寄养计算合集",
+  "desc": "3 个宠物工具：托运费用、寄养对比、出行准备清单",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://k6l2ljftrk.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "travel",
+    "title": "工具A 宠物托运费用"
+   },
+   {
+    "key": "boarding",
+    "title": "工具B 寄养费用与选择"
+   },
+   {
+    "key": "prepare",
+    "title": "工具C 出行准备清单"
+   }
+  ]
  }
 ]
