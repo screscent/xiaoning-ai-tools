@@ -309,7 +309,7 @@
 - [工资与加班费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/overtime-pay.html)：6 个工资工具同页：加班费、节假日加班、夜班津贴、加班上限、个税与到手工资、请假与缺勤扣款（免费）
 - [咖啡因摄入与代谢计算器](https://screscent.github.io/xiaoning-ai-tools/tools/caffeine-metabolism.html)：按半衰期算 4/8/12 小时残留与建议就寝时间（免费）
 - [家庭用药提醒清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/med-reminder.html)：按频次与开始时间生成每日服药时间点、日程表与累计次数（免费）
-- [会议议程与控场合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：5 个开会工具同页：议程生成、发言分配、控场提示、计时、决议与待办（免费）
+- [会议议程与控场合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：6 个开会工具：议程生成、发言分配、控场提示、计时、决议与待办清单、会议纪要模板（免费）
 - [CSS 轮播图样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-carousel.html)：宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML（免费）
 - [呼吸放松计时器](https://screscent.github.io/xiaoning-ai-tools/tools/breathing-timer.html)：4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进（免费）
 - [保养与年检提醒合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-maintenance.html)：4 个车主提醒工具：保养周期、年检到期、保险到期、保养项目清单（免费）
@@ -371,7 +371,7 @@
 - [繁简转换与用词对照器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-tw-cn.html)：繁简互转并对照用词与单字变化，附字数统计（免费）
 - [Base64URL 编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/base64url-codec.html)：URL 安全 Base64 编解码，可去填充与加 data 前缀（免费）
 - [数据备份 3-2-1 自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/backup-321-check.html)：按备份份数异地离线校验四项打分并给出改进动作（免费）
-- [打车费用与通勤速查](https://screscent.github.io/xiaoning-ai-tools/tools/ride-fare-compare.html)：5 个出行工具同页：出租车计价、网约车对比、机场接送、通勤月成本、拼车分摊（免费）
+- [打车费用与通勤速查](https://screscent.github.io/xiaoning-ai-tools/tools/ride-fare-compare.html)：6 个出行工具：出租车计价、网约车对比、机场接送、通勤月成本、拼车分摊、夜间附加费估算（免费）
 - [蛋白质摄入与三餐分配计算器](https://screscent.github.io/xiaoning-ai-tools/tools/protein-split.html)：按体重目标活动量算每日蛋白并均分到每餐，附食物等量对照（免费）
 - [浏览器指纹与隐私暴露自查器](https://screscent.github.io/xiaoning-ai-tools/tools/browser-fingerprint-check.html)：本地读取时区语言屏幕硬件Canvas九项，算熵值并给加固建议（免费）
 - [新能源车续航与充电费用估算器](https://screscent.github.io/xiaoning-ai-tools/tools/ev-range-cost.html)：按气温空调折损算真实续航与电费，判断行程是否需补能（免费）
@@ -384,7 +384,7 @@
 - [引用格式与文献速查](https://screscent.github.io/xiaoning-ai-tools/tools/ref-citation.html)：6 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX、文献去重统计与引用一致性检查（免费）
 - [嘌呤与尿酸饮食速查器](https://screscent.github.io/xiaoning-ai-tools/tools/purine-uric.html)：按人群算每日嘌呤上限，四档食物清单 + 替换建议（免费）
 - [食物升糖指数与血糖负荷计算器](https://screscent.github.io/xiaoning-ai-tools/tools/glycemic-load.html)：算 GI/GL 与分级，给同类替换与三餐搭配（免费）
-- [家庭应急与防灾合集](https://screscent.github.io/xiaoning-ai-tools/tools/family-emergency-kit.html)：5 个应急工具同页：物品清单、应急预案、急救包、停电停水、饮水食物储备（免费）
+- [家庭应急与防灾合集](https://screscent.github.io/xiaoning-ai-tools/tools/family-emergency-kit.html)：6 个应急工具：物品清单、应急预案、急救包、停电停水、饮水食物储备、家庭演练计划（免费）
 - [海淘税费与禁限速查](https://screscent.github.io/xiaoning-ai-tools/tools/parcel-tax-calc.html)：6 个海淘工具：行邮税与到手价、运费与包裹、禁限与申报、退换与售后、行邮税与免税额度、合箱与拆单建议（免费）
 - [合同签署前必查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/contract-precheck.html)：按合同类型给主体、核心条款、风险条款与红线提示（免费）
 - [二手交易交接合集](https://screscent.github.io/xiaoning-ai-tools/tools/secondhand-handover.html)：5 个二手工具：交接单、验收清单、纠纷话术、面交邮寄流程、定价与砍价底线（免费）
