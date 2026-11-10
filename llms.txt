@@ -179,7 +179,7 @@
 - [打字练习与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/typing-speed-test.html)：6 个打字工具同页：速度、错键、练习、趋势、指法、自定义测试文本（免费）
 - [待办与任务管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/local-todo.html)：6 个任务工具同页：待办、例行、回顾、归档、四象限优先级、任务计时与耗时统计（免费）
 - [文本加解密与哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-encrypt.html)：6 个本地安全工具：AES 加密、AES 解密、哈希计算、校验对比、HMAC 签名、密钥派生（免费）
-- [取色与配色提取合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-extract.html)：5 个配色工具同页：取色器、主色提取、CSS 变量导出、配色历史、对比度与无障碍检查（免费）
+- [取色与配色提取合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-extract.html)：6 个配色工具同页：取色器、主色提取、CSS 变量导出、配色历史、对比度与无障碍检查、配色方案生成（免费）
 - [记账与月度分析合集](https://screscent.github.io/xiaoning-ai-tools/tools/ledger-monthly-kit.html)：6 个记账工具同页：流水、分类、月度、导出、预算、月度趋势与同比（免费）
 - [手绘与标注合集](https://screscent.github.io/xiaoning-ai-tools/tools/draw-annotate.html)：6 个绘图工具同页：画板、标注、流程、签名、图例、画布模板（免费）
 - [社交图片切图与比例合集](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：6 个切图工具同页：九宫格、方图、竖版、横版、圆角、Banner 与安全区（免费）
@@ -233,14 +233,14 @@
 - [Token 与鉴权自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/jwt-decoder.html)：6 个鉴权工具同页：JWT 解码、声明解释、Authorization 头、Cookie 自查、权限范围、Token 存储建议（免费）
 - [CSS 加载动画生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-loading-spinner.html)：四种加载动画调参生成纯 CSS，可复制或下载 HTML（免费）
 - [中文简繁转换器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-converter.html)：简繁双向逐字转换，含对照表与未收录提示（免费）
-- [年龄与生日计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/age-calculator.html)：5 个生日工具同页：精确年龄、生日倒计时、届龄节点、生日对比、退休时间与工作年限（免费）
+- [年龄与生日计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/age-calculator.html)：6 个生日工具同页：精确年龄、生日倒计时、届龄节点、生日对比、退休时间与工作年限、生肖与星座速查（免费）
 - [家务分工与轮值合集](https://screscent.github.io/xiaoning-ai-tools/tools/chore-roster.html)：5 个家务工具同页：轮值表、公平度评分、换班与请假、家务清单与频次、外包成本（免费）
 - [证件与卡号校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-card-validator.html)：6 个校验工具同页：身份证、银行卡、信用代码、联系方式、车架号、护照号规则（免费）
 - [图片自动裁剪透明边](https://screscent.github.io/xiaoning-ai-tools/tools/trim-transparent.html)：按容差自动裁掉透明边并保留内边距，导出图片（免费）
 - [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：6 个出行工具同页：油耗、油电对比、停车过路、通勤月成本、公交月票、五年总持有（免费）
 - [CSS Flex 与 Grid 布局生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：切换 Flex/Grid 调间距对齐，实时预览并复制 CSS（免费）
 - [文本行去重与排序工具](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：按行去重排序并统计重复次数，可忽略大小写（免费）
-- [菜谱份量与备餐换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：5 个备餐工具：份量换算、批量备餐、器具尺寸、采购清单、剩菜保存与复热（免费）
+- [菜谱份量与备餐换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：6 个备餐工具：份量换算、批量备餐、器具尺寸、采购清单、剩菜保存与复热、厨房单位换算（免费）
 - [周数与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/iso-week.html)：6 个周数工具：周号查询、周范围、周计划、季度周数、双周迭代、周偏移倒推（免费）
 - [图片转 ASCII 艺术](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：图片转字符画，可选字符集与彩色 HTML 输出（免费）
 - [CSS 霓虹文字效果生成器](https://screscent.github.io/xiaoning-ai-tools/tools/neon-text.html)：调色与发光强度生成霓虹 text-shadow，可复制下载（免费）
