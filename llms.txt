@@ -288,12 +288,12 @@
 - [睡眠周期与就寝时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-cycle.html)：按 90 分钟周期倒推就寝时间，含入睡耗时（免费）
 - [打印尺寸与像素换算器](https://screscent.github.io/xiaoning-ai-tools/tools/print-size-px.html)：毫米尺寸与 DPI 换算像素，含 A4/名片等预设（免费）
 - [XML 格式化与压缩器](https://screscent.github.io/xiaoning-ai-tools/tools/xml-format.html)：XML 逐层缩进美化与单行压缩，含统计与错误提示（免费）
-- [Markdown 目录与锚点合集](https://screscent.github.io/xiaoning-ai-tools/tools/md-toc-anchor.html)：5 个文档工具同页：目录生成、锚点、内链、大纲、批量标题锚点（免费）
+- [Markdown 目录与锚点合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-toc-anchor-consistency-kit.html)：6 个文档工具：目录生成、锚点提取、内链检查、大纲互转、批量标题锚点、目录一致性检查（免费）
 - [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：6 个换汇工具：双向换算、多币种折算、手续费到账、现钞与刷卡、境外刷卡、点差成本（免费）
 - [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算（免费）
 - [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：5 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算、训练区间（免费）
 - [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：4 个路径工具同页：JSONPath、JSON Pointer、点号路径与路径生成，结果可复制（免费）
-- [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema.html)：5 个 Schema 工具同页：生成、校验、示例数据、字段说明与 TS 类型生成，可复制（免费）
+- [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema-validate-mock-kit.html)：6 个 Schema 工具：Schema 生成、Schema 校验、示例数据、字段说明、TS 类型、模拟数据批量生成（免费）
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
 - [数字转英文读法](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：整数转英文单词，支持英式 and 与序数词（免费）
 - [HTML 转 Markdown 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/html-to-md.html)：HTML 片段转 Markdown，支持标题/加粗/链接/列表（免费）
@@ -303,7 +303,7 @@
 - [CSS 文字描边生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-text-stroke.html)：描边颜色/宽度/方式可调，实时预览并生成 CSS（免费）
 - [YAML 与 JSON 双向转换器](https://screscent.github.io/xiaoning-ai-tools/tools/yaml-json-convert.html)：YAML ⇄ JSON 双向转换，缩进可调并定位错误行号（免费）
 - [TOML 与 JSON 双向转换器](https://screscent.github.io/xiaoning-ai-tools/tools/toml-json-convert.html)：TOML 与 JSON 互转，支持表/数组表并定位错误行号（免费）
-- [工时与时长计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/duration-hours.html)：5 个工时工具同页：时长累加、起止时间差、单位换算、工时表统计、工时扣休（免费）
+- [工时与时长计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/work-hours-duration-cost-kit.html)：6 个工时工具：时长累加、起止时间差、单位换算、工时表统计、工时扣休、工时成本核算（免费）
 - [文本大小写批量转换器](https://screscent.github.io/xiaoning-ai-tools/tools/text-case-convert.html)：五种大小写模式逐行批量转换，含空格归并与自定义替换（免费）
 - [CSS 动画缓动曲线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-easing.html)：调节四个控制点生成 cubic-bezier，实时预览并导出 CSS（免费）
 - [工资与加班费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/overtime-pay.html)：6 个工资工具同页：加班费、节假日加班、夜班津贴、加班上限、个税与到手工资、请假与缺勤扣款（免费）
