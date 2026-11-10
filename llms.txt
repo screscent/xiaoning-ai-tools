@@ -281,15 +281,15 @@
 - [URL 清理与参数合集](https://screscent.github.io/xiaoning-ai-tools/tools/url-cleaner.html)：5 个链接工具：追踪参数清理、参数解析、链接重建、分享前检查、UTM 构建（免费）
 - [CSS 开关切换组件生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-switch.html)：纯 CSS 开关实时预览，生成含 checked 状态代码（免费）
 - [JSON 转 TypeScript 接口生成器](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-ts.html)：粘贴 JSON 自动推导类型并生成 TypeScript interface（免费）
-- [增长与经营指标合集](https://screscent.github.io/xiaoning-ai-tools/tools/growth-metrics.html)：5 个经营指标工具同页：CAGR、同比环比、72 法则、盈亏平衡、留存 LTV（免费）
+- [增长与经营指标合集](https://screscent.github.io/xiaoning-ai-tools/tools/growth-metrics.html)：6 个指标工具：CAGR、同比环比、72法则、盈亏平衡、留存LTV、回本周期测算（免费）
 - [Favicon 与站点图标生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-favicon.html)：4 个图标工具同页：文字、Emoji、SVG 与 Manifest 配置，生成 favicon 可复制代码（免费）
-- [满减与优惠叠加合集](https://screscent.github.io/xiaoning-ai-tools/tools/coupon-stack.html)：5 个优惠工具同页：满减凑单、优惠券、会员折扣、积分抵扣、叠加顺序（免费）
+- [满减与优惠叠加合集](https://screscent.github.io/xiaoning-ai-tools/tools/coupon-stack.html)：6 个优惠工具：满减凑单、优惠券、会员折扣、积分抵扣、叠加顺序、储值折扣（免费）
 - [SQL 格式化与美化器](https://screscent.github.io/xiaoning-ai-tools/tools/sql-formatter.html)：SQL 关键字换行缩进美化，支持大小写与逗号换行（免费）
 - [睡眠周期与就寝时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-cycle.html)：按 90 分钟周期倒推就寝时间，含入睡耗时（免费）
 - [打印尺寸与像素换算器](https://screscent.github.io/xiaoning-ai-tools/tools/print-size-px.html)：毫米尺寸与 DPI 换算像素，含 A4/名片等预设（免费）
 - [XML 格式化与压缩器](https://screscent.github.io/xiaoning-ai-tools/tools/xml-format.html)：XML 逐层缩进美化与单行压缩，含统计与错误提示（免费）
 - [Markdown 目录与锚点合集](https://screscent.github.io/xiaoning-ai-tools/tools/md-toc-anchor.html)：5 个文档工具同页：目录生成、锚点、内链、大纲、批量标题锚点（免费）
-- [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：5 个换汇工具同页：双向换算、多币种折算、手续费到账、现钞对比、境外刷卡（免费）
+- [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：6 个换汇工具：双向换算、多币种折算、手续费到账、现钞与刷卡、境外刷卡、点差成本（免费）
 - [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算（免费）
 - [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：5 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算、训练区间（免费）
 - [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：4 个路径工具同页：JSONPath、JSON Pointer、点号路径与路径生成，结果可复制（免费）
