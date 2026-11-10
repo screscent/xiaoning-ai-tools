@@ -8824,7 +8824,8 @@
  {
   "id": "4gfi47btnf",
   "name": "钓鱼线组与装备合集",
-  "desc": "5 个钓鱼工具：线组搭配、饵料速查、装备清单、鱼口评估、线号与拉力换算",
+  "desc": "6 个钓鱼工具：线组搭配、饵料速查、装备清单、鱼口评估、线号与拉力换算、鱼线绑法与结强",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://4gfi47btnf.app.weavefox.cn",
@@ -8832,15 +8833,15 @@
   "subapps": [
    {
     "key": "rig",
-    "title": "线组搭配"
+    "title": "工具A 线组搭配"
    },
    {
     "key": "bait",
-    "title": "饵料速查"
+    "title": "工具B 饵料速查"
    },
    {
     "key": "gear",
-    "title": "装备清单"
+    "title": "工具C 装备清单"
    },
    {
     "key": "pressure",
@@ -8849,6 +8850,10 @@
    {
     "key": "line",
     "title": "工具E 线号与拉力换算"
+   },
+   {
+    "key": "knot",
+    "title": "工具F 鱼线绑法与结强"
    }
   ]
  },
@@ -9403,7 +9408,8 @@
  {
   "id": "urweqddyk8",
   "name": "桌游与棋牌计分规则合集",
-  "desc": "5 个桌游工具同页：多人计分板、开局配置推荐、常见桌游规则速查、回合计时与时长控制、身份局配置",
+  "desc": "6 个桌游工具同页：多人计分板、开局配置推荐、常见桌游规则速查、回合计时与时长控制、身份局配置、牌类胜负概率",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://urweqddyk8.app.weavefox.cn",
@@ -9411,23 +9417,27 @@
   "subapps": [
    {
     "key": "score",
-    "title": "多人计分板"
+    "title": "工具A 多人计分板"
    },
    {
     "key": "setup",
-    "title": "开局配置推荐"
+    "title": "工具B 开局配置推荐"
    },
    {
     "key": "rules",
-    "title": "常见桌游规则速查"
+    "title": "工具C 常见桌游规则速查"
    },
    {
     "key": "timer",
-    "title": "回合计时与时长控制"
+    "title": "工具D 回合计时与时长控制"
    },
    {
     "key": "roles",
-    "title": "身份局配置"
+    "title": "工具E 身份局配置"
+   },
+   {
+    "key": "odds",
+    "title": "工具F 牌类胜负概率"
    }
   ]
  },
@@ -9528,7 +9538,8 @@
  {
   "id": "j28nvjxyyi",
   "name": "家政与保洁报价合集",
-  "desc": "5 个家政工具同页：开荒保洁、日常保洁、家电清洗、玻璃与纱窗清洗、保洁耗材成本",
+  "desc": "6 个家政工具同页：开荒保洁、日常保洁、家电清洗、玻璃与纱窗清洗、保洁耗材成本、保洁验收清单",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://j28nvjxyyi.app.weavefox.cn",
@@ -9536,23 +9547,27 @@
   "subapps": [
    {
     "key": "deep",
-    "title": "开荒保洁"
+    "title": "工具A 开荒保洁"
    },
    {
     "key": "daily",
-    "title": "日常保洁"
+    "title": "工具B 日常保洁"
    },
    {
     "key": "appliance",
-    "title": "家电清洗"
+    "title": "工具C 家电清洗"
    },
    {
     "key": "window",
-    "title": "玻璃清洗"
+    "title": "工具D 玻璃清洗"
    },
    {
     "key": "materials",
-    "title": "保洁耗材成本"
+    "title": "工具E 保洁耗材成本"
+   },
+   {
+    "key": "inspect",
+    "title": "工具F 保洁验收清单"
    }
   ]
  },
