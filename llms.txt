@@ -438,10 +438,10 @@
 - [鞋服尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/shoe-clothing-size.html)：6 个尺码工具同页：鞋码、服装、儿童、对照表、版型测量、品牌尺码对照（免费）
 - [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：6 个衣物工具同页：标签、面料、污渍、熨烫、晾晒收纳、换季收纳清单（免费）
 - [验房与收房检查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-inspection.html)：5 个收房工具同页：验房清单、面积核对、整改跟踪、收房税费、验房工时（免费）
-- [自行车骑行与维护合集](https://screscent.github.io/xiaoning-ai-tools/tools/cycling-care.html)：5 个骑行工具同页：配速里程、保养周期、装备清单、车架尺寸、链条与飞轮寿命（免费）
+- [自行车骑行与维护合集](https://screscent.github.io/xiaoning-ai-tools/tools/cycling-care.html)：6 个骑行工具同页：配速里程、保养周期、装备清单、车架尺寸、链条与飞轮寿命、路线与补给规划（免费）
 - [家居软装尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/soft-furnishing-size.html)：6 个软装工具同页：窗帘、地毯、挂画、沙发、灯具、软装预算分配（免费）
-- [家庭防虫与灭鼠合集](https://screscent.github.io/xiaoning-ai-tools/tools/pest-control-home.html)：5 个防虫工具：蚊虫防治、蟑螂蚂蚁、老鼠封堵、白蚁蛀虫、驱蚊剂浓度与时效（免费）
-- [数码外设选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/digital-peripherals.html)：5 个数码工具同页：显示器选型、键盘轴体、鼠标握姿、耳机与音箱、桌面布置与线材（免费）
+- [家庭防虫与灭鼠合集](https://screscent.github.io/xiaoning-ai-tools/tools/pest-control-home.html)：6 个防虫工具：蚊虫防治、蟑螂蚂蚁、老鼠封堵、白蚁蛀虫、驱蚊剂浓度与时效、驱虫剂安全用量（免费）
+- [数码外设选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/digital-peripherals.html)：6 个数码工具同页：显示器选型、键盘轴体、鼠标握姿、耳机与音箱、桌面布置与线材、整机搭配预算校验（免费）
 - [羽毛球入门与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/badminton-start.html)：5 个羽毛球工具同页：场地规则、球拍磅数、用球选择、计分与赛制、场地成本（免费）
 - [家用打印机与耗材合集](https://screscent.github.io/xiaoning-ai-tools/tools/printer-supplies.html)：5 个打印机工具同页：机型选型、耗材成本、纸张选择、故障排查、共享与网络打印（免费）
 - [网页 Meta 与分享卡片合集](https://screscent.github.io/xiaoning-ai-tools/tools/meta-share-kit.html)：5 个 Meta 工具同页：OG 标签、分享卡片预览、JSON-LD 结构化数据、长度校验、图片尺寸校验（免费）
