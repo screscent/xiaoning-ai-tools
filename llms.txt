@@ -444,7 +444,7 @@
 - [数码外设选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/digital-peripherals.html)：6 个数码工具同页：显示器选型、键盘轴体、鼠标握姿、耳机与音箱、桌面布置与线材、整机搭配预算校验（免费）
 - [羽毛球入门与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/badminton-start.html)：6 个羽毛球工具同页：场地规则、球拍磅数、用球选择、计分与赛制、场地成本、场地预约与费用分摊（免费）
 - [家用打印机与耗材合集](https://screscent.github.io/xiaoning-ai-tools/tools/printer-supplies.html)：6 个打印机工具同页：机型选型、耗材成本、纸张选择、故障排查、共享与网络打印、照片打印与纸张克重（免费）
-- [网页 Meta 与分享卡片合集](https://screscent.github.io/xiaoning-ai-tools/tools/meta-share-kit.html)：6 个 Meta 工具同页：OG 标签、分享卡片预览、JSON-LD 结构化数据、长度校验、图片尺寸校验、社交平台预览模拟（免费）
+- [网页 Meta 与分享卡片合集](https://screscent.github.io/xiaoning-ai-tools/tools/meta-share-kit.html)：6 个 Meta 工具同页：OG 标签、分享卡片预览、JSON-LD 结构化数据、长度校验、图片尺寸校验、平台预览模拟（免费）
 - [提交信息与变更日志合集](https://screscent.github.io/xiaoning-ai-tools/tools/commit-changelog-kit.html)：6 个提交规范工具：提交信息生成、类型速查、变更日志、commitlint 配置、PR 描述模板、分支命名规范（免费）
 - [JSON 转多语言模型合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-models-kit.html)：5 个多语言工具同页：Go 结构体、Java 类、Python 模型、多语言键名规范、Swift 模型（免费）
 - [编码检测与乱码修复合集](https://screscent.github.io/xiaoning-ai-tools/tools/encoding-repair-kit.html)：5 个编码工具同页：编码检测、GBK 与 UTF-8 乱码互修、编码转换、Unicode 与实体转换、Base64 体积估算（免费）
