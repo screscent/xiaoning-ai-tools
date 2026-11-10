@@ -1458,7 +1458,8 @@
  {
   "id": "lymnmkjxel",
   "name": "日期计算与间隔合集",
-  "desc": "5 个日期工具：间隔计算、日期推算、星期推算、日期比较、工作日计算",
+  "desc": "6 个日期工具：间隔计算、日期推算、星期推算、日期比较、工作日计算、工期换算",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://lymnmkjxel.app.weavefox.cn",
@@ -1466,7 +1467,7 @@
   "subapps": [
    {
     "key": "diff",
-    "title": "工具A 日期间隔"
+    "title": "工具A 间隔计算"
    },
    {
     "key": "add",
@@ -1482,7 +1483,11 @@
    },
    {
     "key": "workday",
-    "title": "工作日计算"
+    "title": "工具E 工作日计算"
+   },
+   {
+    "key": "duration",
+    "title": "工具F 工期换算"
    }
   ]
  },
@@ -5756,7 +5761,7 @@
  {
   "id": "k6bmafftrk",
   "name": "CSS 背景与纹理生成合集",
-  "desc": "5 个背景纹理工具同页：分隔线、点阵背景、网格条纹、噪点纹理、平铺次数，实时预览并复制 CSS 与 HTML 示例",
+  "desc": "6 个背景纹理工具同页：分隔线、点阵背景、网格条纹、噪点纹理、平铺次数、渐变背景",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -5765,23 +5770,27 @@
   "subapps": [
    {
     "key": "divider",
-    "title": "分隔线"
+    "title": "工具A 分隔线"
    },
    {
     "key": "dots",
-    "title": "点阵背景"
+    "title": "工具B 点阵背景"
    },
    {
     "key": "grid",
-    "title": "网格条纹"
+    "title": "工具C 网格条纹"
    },
    {
     "key": "noise",
-    "title": "噪点纹理"
+    "title": "工具D 噪点纹理"
    },
    {
     "key": "repeatcount",
-    "title": "平铺次数"
+    "title": "工具E 平铺次数"
+   },
+   {
+    "key": "gradient",
+    "title": "工具F 渐变背景生成"
    }
   ]
  },
@@ -7885,7 +7894,8 @@
  {
   "id": "pzxwdjqyzx",
   "name": "露营与户外安全速查合集",
-  "desc": "5 个露营工具：营地选址、安全处置、补给计算、保暖温标、费用分摊",
+  "desc": "6 个露营工具：营地选址、安全处置、补给计算、保暖温标、费用分摊、无信号应急预案",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://pzxwdjqyzx.app.weavefox.cn",
@@ -7905,11 +7915,15 @@
    },
    {
     "key": "heat",
-    "title": "工具D 露营保暖与温标选择"
+    "title": "工具D 保暖温标"
    },
    {
     "key": "cost",
-    "title": "工具E 营地费用与人均分摊"
+    "title": "工具E 费用分摊"
+   },
+   {
+    "key": "emergency",
+    "title": "工具F 无信号应急预案"
    }
   ]
  },

@@ -163,7 +163,7 @@
 - [Markdown 表格排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-table.html)：6 个表格工具同页：CSV 转表格、文本转表格、表格转 HTML、对齐调整、表格转 JSON、列表与嵌套，列多也不乱（免费）
 - [数字进制转换器](https://screscent.github.io/xiaoning-ai-tools/tools/number-base-converter.html)：二/八/十/十六进制互转，位宽与位模式展示（免费）
 - [命名与大小写转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/naming-converter.html)：6 个文本工具同页：五种命名风格、四种大小写、拆词与缩写、URL slug 与安全文件名、批量转换、常量与配置命名（免费）
-- [日期计算与间隔合集](https://screscent.github.io/xiaoning-ai-tools/tools/date-calculator.html)：5 个日期工具：间隔计算、日期推算、星期推算、日期比较、工作日计算（免费）
+- [日期计算与间隔合集](https://screscent.github.io/xiaoning-ai-tools/tools/date-calculator.html)：6 个日期工具：间隔计算、日期推算、星期推算、日期比较、工作日计算、工期换算（免费）
 - [文本统计与阅读时长合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-stats.html)：6 个文本工具同页：字符与字数统计、阅读与演讲时长、阅读进度、词频 Top10、段落与最长行、重复行与相似句（免费）
 - [图片裁剪器](https://screscent.github.io/xiaoning-ai-tools/tools/image-cropper.html)：本地裁剪头像/封面/商品图，比例尺寸自选可下载（免费）
 - [密码与账号安全合集](https://screscent.github.io/xiaoning-ai-tools/tools/password-generator.html)：6 个安全工具同页：密码生成、强度检测、PIN 码、口令短语、两步验证与恢复码、泄露自查与应急（免费）
@@ -352,7 +352,7 @@
 - [月度预算配额分配器](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-budget.html)：按收入与比例拆分配额，校验占比合计与结余（免费）
 - [预产期与孕周计算器](https://screscent.github.io/xiaoning-ai-tools/tools/due-date.html)：按末次月经与周期算预产期、孕周天数与进度百分比（免费）
 - [储蓄目标达成时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/saving-goal.html)：按月复利推演攒到目标金额所需月数与利息结构（免费）
-- [CSS 背景与纹理生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-pattern.html)：5 个背景纹理工具同页：分隔线、点阵背景、网格条纹、噪点纹理、平铺次数，实时预览并复制 CSS 与 HTML 示例（免费）
+- [CSS 背景与纹理生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-pattern.html)：6 个背景纹理工具同页：分隔线、点阵背景、网格条纹、噪点纹理、平铺次数、渐变背景（免费）
 - [睡眠债务与补觉计划计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-debt.html)：按工作日周末睡眠差算累计债务，给出补觉天数与风险提示（免费）
 - [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：6 个门票工具同页：单景点门票、多景点合计、城市通票、讲解观光车、儿童票、退改签规则（免费）
 - [昵称与英文名生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/nickname-name-gen.html)：5 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺、账号长度校验（免费）
@@ -428,7 +428,7 @@
 - [家装尺寸与材料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-reno-quickref.html)：4 个家装工具同页：空间尺寸与层高、材料用量估算、采光与灯具数量、墙面配色与涂料（免费）
 - [旅行装备与打包速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-gear-kit.html)：6 个出行工具同页：打包清单、装备选型、天气衣物、行李重量与托运合规、旅行预算、出发前检查（免费）
 - [开源素材与授权速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/open-assets-license.html)：6 个工具同页：字体、图标、音频、许可、到期、署名与致谢模板（免费）
-- [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：5 个露营工具：营地选址、安全处置、补给计算、保暖温标、费用分摊（免费）
+- [露营与户外安全速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-outdoor-safety.html)：6 个露营工具：营地选址、安全处置、补给计算、保暖温标、费用分摊、无信号应急预案（免费）
 - [咖啡与茶饮冲煮速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/coffee-tea-brewing.html)：6 个饮品工具同页：手冲与意式、茶叶冲泡、粉水比、豆子与器具、咖啡因与就寝、风味调整（免费）
 - [口腔与牙齿护理速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/oral-dental-care.html)：5 个口腔工具：刷牙方案、牙线使用、就诊信号、牙齿美白与敏感护理、含氟牙膏与用量（免费）
 - [居家烘焙换算速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-baking-conversion.html)：6 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算、配方缩放、失败排查（免费）
