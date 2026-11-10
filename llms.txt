@@ -434,7 +434,7 @@
 - [居家烘焙换算速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-baking-conversion.html)：6 个烘焙工具同页：粉油糖换算、模具尺寸、烤箱温度、温度与时间换算、配方缩放、失败排查（免费）
 - [绿植养护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/plant-care-quickref.html)：6 个绿植工具同页：浇水光照、配土换盆、病虫排查、施肥季节、补光与电费、出门养护（免费）
 - [眼镜与视力保护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/eyewear-vision-care.html)：6 个视力工具：镜片选择、镜架尺寸、用眼与验光、屏幕用眼与防控、屏幕距离与休息、镜片折射率（免费）
-- [居家除螨与过敏防护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/dust-mite-allergy.html)：5 个除螨工具：除螨频率与清洗、过敏原排查、湿度与通风、霉菌控制、湿度与螨虫风险（免费）
+- [居家除螨与过敏防护速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/dust-mite-allergy.html)：6 个除螨工具：除螨频率与清洗、过敏原排查、湿度与通风、霉菌控制、湿度与螨虫风险、床品清洗与晾晒排程（免费）
 - [鞋服尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/shoe-clothing-size.html)：6 个尺码工具同页：鞋码、服装、儿童、对照表、版型测量、品牌尺码对照（免费）
 - [衣物洗护与面料速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/laundry-care.html)：6 个衣物工具同页：标签、面料、污渍、熨烫、晾晒收纳、换季收纳清单（免费）
 - [验房与收房检查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-inspection.html)：5 个收房工具同页：验房清单、面积核对、整改跟踪、收房税费、验房工时（免费）
@@ -456,8 +456,8 @@
 - [保龄球计分与换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bowling-kit.html)：5 个保龄球工具同页：十局计分、让分与净分、球重球速换算、球道与瓶位、局均分与稳定性（免费）
 - [纸张尺寸与印刷出血合集](https://screscent.github.io/xiaoning-ai-tools/tools/paper-print-bleed.html)：6 个印刷工具同页：纸张、出血、DPI、折页、开数印张、印量与成本（免费）
 - [元素周期表与化学计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/element-chemistry.html)：6 个化学工具同页：元素速查、摩尔质量与物质的量、溶液浓度换算、气体定律与分压、pH 与缓冲溶液、稀释与配液计算（免费）
-- [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：5 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼、灯位与回路规划、照明功率与电费（免费）
-- [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：5 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期、轮胎周长与转数（免费）
+- [色温与照明计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/lighting-color-temp.html)：6 个照明工具同页：色温与灯泡选择、照度与灯位估算、显色与护眼、灯位与回路规划、照明功率与电费、灯具数量与布灯间距（免费）
+- [轮胎规格与轮毂换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tire-size-wheel.html)：6 个轮胎工具同页：规格解读、轮毂升级适配、胎压与载重、磨损与更换周期、轮胎周长与转数、速度表误差换算（免费）
 - [手机套餐与流量成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mobile-plan-cost.html)：6 个通信工具同页：套餐成本、流量估算、换套餐决策、宽带与流量卡对比、Wi-Fi 覆盖、流量超标估算（免费）
 - [鱼缸水族与水质养护合集](https://screscent.github.io/xiaoning-ai-tools/tools/aquarium-tank-water.html)：5 个水族工具同页：鱼缸容积、换水比例、加热棒功率、水草照明、换水排程（免费）
 - [家庭光伏与储能收益合集](https://screscent.github.io/xiaoning-ai-tools/tools/solar-storage-kit.html)：6 个光伏工具同页：发电量估算、回本周期、储能配置、电费账单与省电收益、补贴与并网、倾角与朝向（免费）
