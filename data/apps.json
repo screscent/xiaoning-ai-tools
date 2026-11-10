@@ -10101,5 +10101,29 @@
     "title": "工具C 床品尺寸与换洗"
    }
   ]
+ },
+ {
+  "id": "mkgezyrxwr",
+  "name": "卫浴五金与浴室用品合集",
+  "desc": "3 个卫浴工具：花洒水压、龙头角阀、地漏防臭",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://mkgezyrxwr.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "shower",
+    "title": "工具A 花洒与水压适配"
+   },
+   {
+    "key": "faucet",
+    "title": "工具B 水龙头与角阀规格"
+   },
+   {
+    "key": "drain",
+    "title": "工具C 地漏与防臭选择"
+   }
+  ]
  }
 ]
