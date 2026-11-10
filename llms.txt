@@ -474,9 +474,9 @@
 - [居家适老化改造速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-aging-friendly-renovation-kit.html)：6 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关、改造预算、防滑门槛、施工顺序与验收（免费）
 - [家政与保洁报价合集](https://screscent.github.io/xiaoning-ai-tools/tools/housekeeping-cleaning-quote-kit.html)：6 个家政工具同页：开荒保洁、日常保洁、家电清洗、玻璃与纱窗清洗、保洁耗材成本、保洁验收清单（免费）
 - [数据分析与统计速算合集](https://screscent.github.io/xiaoning-ai-tools/tools/data-analysis-statistics-kit.html)：6 个统计工具：样本量与置信区间、A/B 显著性、描述统计与离散度、相关性、四分位距、比例与误差区间（免费）
-- [滑雪装备与雪场费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/ski-gear-resort-cost-kit.html)：5 个滑雪工具同页：雪场费用与雪票预算、装备选购与尺码、雪道难度与安全、租赁与保险预算、缆车与雪票组合（免费）
-- [高尔夫入门与打球成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/golf-cost-gear-handicap-kit.html)：5 个高尔夫工具同页：球场费用、球杆与握把、规则与差点、下场礼仪、练习场计划（免费）
-- [月子护理与产后恢复合集](https://screscent.github.io/xiaoning-ai-tools/tools/postpartum-meal-care-recovery-kit.html)：5 个月子与产后工具同页：月子餐热量配比、月嫂与月子中心花销预算、恢复周程与复查节点、月嫂面试与合同要点、月子餐采购量（免费）
+- [滑雪装备与雪场费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/ski-gear-resort-cost-kit.html)：6 个滑雪工具同页：雪场费用、装备尺码、雪道安全、租赁保险、缆车雪票、雪镜与分层穿衣（免费）
+- [高尔夫入门与打球成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/golf-cost-gear-handicap-kit.html)：6 个高尔夫工具同页：球场费用、球杆握把、规则差点、下场礼仪、练习场计划、开球台与球位（免费）
+- [月子护理与产后恢复合集](https://screscent.github.io/xiaoning-ai-tools/tools/postpartum-meal-care-recovery-kit.html)：6 个月子与产后工具同页：月子餐配比、花销预算、恢复周程、月嫂要点、采购量、采购清单与预算（免费）
 - [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：6 个物业事务工具同页：物业费核算、邻里噪声处理、维权流程、报修基金、车位停车费、装修报备与噪音时段（免费）
 - [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：6 个社区团购工具同页：开团成本、自提点排班、团长佣金、售后结算、毛利盈亏、团长招募与培训（免费）
 - [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：6 个乒乓球工具同页：器材搭配、旋转术语、赛制计分、训练计划、回合统计、发球与接发球（免费）
