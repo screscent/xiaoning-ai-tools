@@ -6967,7 +6967,8 @@
  {
   "id": "sfb4eqy97s",
   "name": "Nginx 配置合集",
-  "desc": "5 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域、并发估算",
+  "desc": "6 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域、并发估算与上游负载均衡",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sfb4eqy97s.app.weavefox.cn",
@@ -6975,54 +6976,63 @@
   "subapps": [
    {
     "key": "proxy",
-    "title": "反向代理"
+    "title": "工具A 反向代理"
    },
    {
     "key": "https",
-    "title": "HTTPS 与证书"
+    "title": "工具B HTTPS 与证书"
    },
    {
     "key": "cache",
-    "title": "缓存与压缩"
+    "title": "工具C 缓存与压缩"
    },
    {
     "key": "limit",
-    "title": "限流与跨域"
+    "title": "工具D 限流与跨域"
    },
    {
     "key": "concurrency",
-    "title": "并发与连接数估算"
+    "title": "工具E 并发与连接数估算"
+   },
+   {
+    "key": "upstream",
+    "title": "工具F 上游与负载均衡"
    }
   ]
  },
  {
   "id": "mksvlrrxwr",
   "name": "吉他和弦与调试合集",
-  "desc": "5 个吉他工具：和弦指法、调弦、变调夹、常用进行、弦距与手感调整",
+  "desc": "6 个吉他工具：和弦指法、调弦、变调夹、常用进行、弦距与手感调整、音阶指板速查",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://mksvlrrxwr.app.weavefox.cn",
-  "subcat": "效率生活",
+  "subcat": "生活健康",
   "subapps": [
    {
     "key": "chord",
-    "title": "和弦指法"
+    "title": "工具A 和弦指法"
    },
    {
     "key": "tuning",
-    "title": "调弦"
+    "title": "工具B 调弦"
    },
    {
     "key": "capo",
-    "title": "变调夹"
+    "title": "工具C 变调夹"
    },
    {
     "key": "progression",
-    "title": "常用进行"
+    "title": "工具D 常用进行"
    },
    {
     "key": "setup",
     "title": "工具E 弦距与手感调整"
+   },
+   {
+    "key": "scale",
+    "title": "工具F 音阶指板速查"
    }
   ]
  },
@@ -7309,19 +7319,20 @@
  {
   "id": "dvgx7igy5d",
   "name": "API 设计与 OpenAPI 速查合集",
-  "desc": "5 个接口工具：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容、限流与重试估算",
+  "desc": "6 个接口工具：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容、限流与重试估算、幂等设计检查",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dvgx7igy5d.app.weavefox.cn",
-  "subcat": "效率生活",
+  "subcat": "编码转换",
   "subapps": [
    {
     "key": "rest",
-    "title": "工具A REST命名"
+    "title": "工具A REST 命名"
    },
    {
     "key": "openapi",
-    "title": "工具B OpenAPI片段"
+    "title": "工具B OpenAPI 片段"
    },
    {
     "key": "error",
@@ -7334,6 +7345,10 @@
    {
     "key": "ratelimit",
     "title": "工具E 限流与重试估算"
+   },
+   {
+    "key": "idempotency",
+    "title": "工具F 幂等设计检查"
    }
   ]
  },

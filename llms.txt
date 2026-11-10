@@ -402,8 +402,8 @@
 - [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
 - [Git 场景命令合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：6 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并、bisect 定位、reflog 救援（免费）
 - [Docker 命令与实战速查](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：6 个 Docker 工具同页：容器、镜像、网络、数据卷、Compose、清理与磁盘占用（免费）
-- [Nginx 配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/nginx-snippet-cheatsheet.html)：5 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域、并发估算（免费）
-- [吉他和弦与调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/guitar-chord-fingering.html)：5 个吉他工具：和弦指法、调弦、变调夹、常用进行、弦距与手感调整（免费）
+- [Nginx 配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/nginx-snippet-cheatsheet.html)：6 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域、并发估算与上游负载均衡（免费）
+- [吉他和弦与调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/guitar-chord-fingering.html)：6 个吉他工具：和弦指法、调弦、变调夹、常用进行、弦距与手感调整、音阶指板速查（免费）
 - [HTTP 接口调试合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-debug.html)：6 个接口工具同页：状态码速查、Mock JSON 生成、UA 解析、缓存头、CORS 与安全头、重试与超时，调接口本地自查（免费）
 - [Linux 运维速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/linux-ops.html)：6 个工具：命令、权限、端口、磁盘、进程、用户与 sudo（免费）
 - [服务器排障速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/server-ops.html)：6 个工具：SSH、systemd、日志、Nginx 5xx、DNS、CPU 内存（免费）
@@ -412,7 +412,7 @@
 - [Git 分支与冲突处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-branch.html)：6 个 Git 工具同页：分支、冲突、变基、拣选回滚、Worktree 并行、暂存与找回（免费）
 - [GitHub 协作与 Actions 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/github-actions.html)：6 个 GitHub 协作工具同页：PR 与 Review 流程、Actions 工作流与矩阵构建、Issue 模板、发布与回滚、分支保护与合并策略、模板与提交规范，团队协作对齐（免费）
 - [前端性能与 Core Web Vitals 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/web-perf.html)：6 个性能工具同页：CWV、打包体积、缓存与加载、图片与资源、交互与 INP、渲染与 SSR（免费）
-- [API 设计与 OpenAPI 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/api-design.html)：5 个接口工具：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容、限流与重试估算（免费）
+- [API 设计与 OpenAPI 速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/api-design.html)：6 个接口工具：REST 命名、OpenAPI 片段、错误码与分页、版本与兼容、限流与重试估算、幂等设计检查（免费）
 - [测试与质量速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/test-quality.html)：6 个测试工具同页：用例、Mock、质量门禁、覆盖率、不稳定测试、E2E 与自动化（免费）
 - [AI 应用开发速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-app-dev-quickref.html)：6 个 AI 开发工具同页：Prompt、Token 成本、模型参数、RAG、向量相似度、输出校验，接大模型前一页对齐（免费）
 - [数据可视化与图表选型合集](https://screscent.github.io/xiaoning-ai-tools/tools/dataviz-quickref.html)：6 个可视化工具同页：图表选型、配色、布局、可访问性、表格数字、数据口径，做图前先定选型（免费）
