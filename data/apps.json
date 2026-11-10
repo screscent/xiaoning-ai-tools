@@ -10077,5 +10077,29 @@
     "title": "工具C 砧板尺寸与材质"
    }
   ]
+ },
+ {
+  "id": "ekgnlfvhte",
+  "name": "床垫与枕头选购合集",
+  "desc": "3 个睡眠工具：床垫尺寸、枕头高度、床品换洗",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ekgnlfvhte.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "mattress",
+    "title": "工具A 床垫尺寸与硬度"
+   },
+   {
+    "key": "pillow",
+    "title": "工具B 枕头高度与材质"
+   },
+   {
+    "key": "bedding",
+    "title": "工具C 床品尺寸与换洗"
+   }
+  ]
  }
 ]
