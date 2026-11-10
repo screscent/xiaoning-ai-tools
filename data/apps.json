@@ -8547,7 +8547,7 @@
  {
   "id": "pusczi3a4t",
   "name": "羽毛球入门与装备合集",
-  "desc": "5 个羽毛球工具同页：场地规则、球拍磅数、用球选择、计分与赛制、场地成本",
+  "desc": "6 个羽毛球工具同页：场地规则、球拍磅数、用球选择、计分与赛制、场地成本、场地预约与费用分摊",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -8573,13 +8573,18 @@
    {
     "key": "cost",
     "title": "工具E 场地与用球成本"
+   },
+   {
+    "key": "booking",
+    "title": "工具F 场地预约与费用分摊"
    }
   ]
  },
  {
   "id": "glrfuqcqng",
   "name": "家用打印机与耗材合集",
-  "desc": "5 个打印机工具同页：机型选型、耗材成本、纸张选择、故障排查、共享与网络打印",
+  "desc": "6 个打印机工具同页：机型选型、耗材成本、纸张选择、故障排查、共享与网络打印、照片打印与纸张克重",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://glrfuqcqng.app.weavefox.cn",
@@ -8587,30 +8592,34 @@
   "subapps": [
    {
     "key": "printer",
-    "title": "机型选型"
+    "title": "工具A 机型选型"
    },
    {
     "key": "cost",
-    "title": "耗材成本"
+    "title": "工具B 耗材成本"
    },
    {
     "key": "paper",
-    "title": "纸张选择"
+    "title": "工具C 纸张选择"
    },
    {
     "key": "fault",
-    "title": "故障排查"
+    "title": "工具D 故障排查"
    },
    {
     "key": "share",
-    "title": "共享与网络打印"
+    "title": "工具E 共享与网络打印"
+   },
+   {
+    "key": "photo",
+    "title": "工具F 照片打印与纸张克重"
    }
   ]
  },
  {
   "id": "cj4ckze3pc",
   "name": "网页 Meta 与分享卡片合集",
-  "desc": "5 个 Meta 工具同页：OG 标签、分享卡片预览、JSON-LD 结构化数据、长度校验、图片尺寸校验",
+  "desc": "6 个 Meta 工具同页：OG 标签、分享卡片预览、JSON-LD 结构化数据、长度校验、图片尺寸校验、社交平台预览模拟",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -8619,15 +8628,15 @@
   "subapps": [
    {
     "key": "og",
-    "title": "OG 标签"
+    "title": "工具A OG 标签"
    },
    {
     "key": "card",
-    "title": "分享卡片"
+    "title": "工具B 分享卡片"
    },
    {
     "key": "jsonld",
-    "title": "JSON-LD"
+    "title": "工具C JSON-LD"
    },
    {
     "key": "length",
@@ -8636,6 +8645,10 @@
    {
     "key": "ogsize",
     "title": "工具E OG 图片尺寸校验"
+   },
+   {
+    "key": "preview",
+    "title": "工具F 社交平台预览模拟"
    }
   ]
  },
