@@ -10173,5 +10173,29 @@
     "title": "工具C 出险决策与次年保费"
    }
   ]
+ },
+ {
+  "id": "qhn3thstfq",
+  "name": "瓷砖美缝与辅材用量合集",
+  "desc": "3 个装修工具：瓷砖用量、美缝剂、防水涂料",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qhn3thstfq.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "tile",
+    "title": "工具A 瓷砖数量与损耗"
+   },
+   {
+    "key": "grout",
+    "title": "工具B 美缝剂用量与颜色"
+   },
+   {
+    "key": "waterproof",
+    "title": "工具C 防水涂料用量"
+   }
+  ]
  }
 ]
