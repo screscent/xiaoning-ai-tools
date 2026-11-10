@@ -10005,5 +10005,29 @@
     "title": "工具C 出行准备清单"
    }
   ]
+ },
+ {
+  "id": "g4htuntuhw",
+  "name": "家电清洗与保养周期合集",
+  "desc": "3 个家电工具：空调清洗、洗衣机清洗、冰箱清洁",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://g4htuntuhw.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "ac",
+    "title": "工具A 空调清洗费用与周期"
+   },
+   {
+    "key": "washer",
+    "title": "工具B 洗衣机清洗与耗材"
+   },
+   {
+    "key": "fridge",
+    "title": "工具C 冰箱清洁与除味"
+   }
+  ]
  }
 ]
