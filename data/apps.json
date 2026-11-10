@@ -9301,7 +9301,8 @@
  {
   "id": "wnevwaj8gw",
   "name": "露营装备与营地费用合集",
-  "desc": "5 个露营工具同页：装备清单与预算、营地费用与人均、用水用电与食材、装载与打包清单、往返路程油耗",
+  "desc": "6 个露营工具同页：装备清单、营地费用、用水用电、装载打包、往返油耗、营火与炊具燃料",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://wnevwaj8gw.app.weavefox.cn",
@@ -9309,23 +9310,27 @@
   "subapps": [
    {
     "key": "gear",
-    "title": "装备清单与预算"
+    "title": "工具A 装备清单与预算"
    },
    {
     "key": "site",
-    "title": "营地费用与人均"
+    "title": "工具B 营地费用与人均"
    },
    {
     "key": "water",
-    "title": "用水用电与食材"
+    "title": "工具C 用水用电与食材"
    },
    {
     "key": "pack",
-    "title": "装载与打包清单"
+    "title": "工具D 装载与打包清单"
    },
    {
     "key": "route",
-    "title": "往返路程油耗"
+    "title": "工具E 往返路程油耗"
+   },
+   {
+    "key": "fire",
+    "title": "工具F 营火与炊具燃料"
    }
   ]
  },
@@ -9506,7 +9511,8 @@
  {
   "id": "fwvfegyqkh",
   "name": "学车考驾照费用与进度合集",
-  "desc": "5 个学车工具同页：费用拆解、学时与进度、科目考试要点、补考与重练预算、拿证规划",
+  "desc": "6 个学车工具同页：费用拆解、学时进度、科目要点、补考预算、拿证规划、预约与考场策略",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://fwvfegyqkh.app.weavefox.cn",
@@ -9514,30 +9520,34 @@
   "subapps": [
    {
     "key": "cost",
-    "title": "费用拆解"
+    "title": "工具A 费用拆解"
    },
    {
     "key": "hours",
-    "title": "学时与进度"
+    "title": "工具B 学时与进度"
    },
    {
     "key": "exam",
-    "title": "科目要点"
+    "title": "工具C 科目要点"
    },
    {
     "key": "retake",
-    "title": "补考预算"
+    "title": "工具D 补考预算"
    },
    {
     "key": "timeline",
     "title": "工具E 拿证规划"
+   },
+   {
+    "key": "booking",
+    "title": "工具F 预约与考场策略"
    }
   ]
  },
  {
   "id": "m9wdqfue9a",
   "name": "家庭组网与网线速查合集",
-  "desc": "5 个组网工具同页：网线线序、宽带速率、WiFi 覆盖、组网方案与预算、下载时间估算",
+  "desc": "6 个组网工具同页：网线线序、速率换算、覆盖信道、组网方案、下载时间、光猫与路由摆放",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -9546,23 +9556,27 @@
   "subapps": [
    {
     "key": "line",
-    "title": "网线线序"
+    "title": "工具A 网线线序"
    },
    {
     "key": "speed",
-    "title": "速率换算"
+    "title": "工具B 速率换算"
    },
    {
     "key": "cover",
-    "title": "覆盖信道"
+    "title": "工具C 覆盖信道"
    },
    {
     "key": "mesh",
-    "title": "组网方案"
+    "title": "工具D 组网方案"
    },
    {
     "key": "dlestim",
-    "title": "下载时间估算"
+    "title": "工具E 下载时间估算"
+   },
+   {
+    "key": "placement",
+    "title": "工具F 光猫与路由摆放"
    }
   ]
  },
