@@ -10053,5 +10053,29 @@
     "title": "工具C 血脂血糖解读"
    }
   ]
+ },
+ {
+  "id": "dvbwtigy5d",
+  "name": "厨房锅具与刀具选购合集",
+  "desc": "3 个厨房工具：锅具尺寸、刀具配置、砧板材质",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://dvbwtigy5d.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "pan",
+    "title": "工具A 锅具尺寸与材质"
+   },
+   {
+    "key": "knife",
+    "title": "工具B 刀具配置与磨刀角度"
+   },
+   {
+    "key": "board",
+    "title": "工具C 砧板尺寸与材质"
+   }
+  ]
  }
 ]
