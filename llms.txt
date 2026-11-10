@@ -212,11 +212,11 @@
 - [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：6 个本地脱敏工具：手机/证件/邮箱打码、批量处理、分享前自查、规则自定义、哈希脱敏（免费）
 - [颜色名称查询](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色（免费）
 - [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
-- [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：5 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算（免费）
+- [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：6 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算、请假最优组合（免费）
 - [随机密码短语生成器](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：易记词组合成密码短语，含熵值估算与强度评级（免费）
 - [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：6 个图片工具同页：EXIF、信息、批量、自查、定位、一键清除元数据（免费）
 - [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：6 个正则工具同页：匹配测试、批量替换、捕获组、常用速查、批量提取与清洗、逐段解释（免费）
-- [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：5 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘、目标拆解（免费）
+- [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：6 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘、目标拆解、打卡提醒文案（免费）
 - [标识符与密钥生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-secret-kit.html)：6 个生成工具同页：UUID、短ID、令牌、密钥、ULID、密码短语（免费）
 - [跨时区会议时间换算器](https://screscent.github.io/xiaoning-ai-tools/tools/timezone-meeting.html)：一个时间换算多时区本地时刻与时差，夏令时自动（免费）
 - [CSS 玻璃拟态生成器](https://screscent.github.io/xiaoning-ai-tools/tools/glassmorphism-generator.html)：滑杆调模糊/透明度/圆角，实时预览并复制 CSS（免费）
@@ -225,7 +225,7 @@
 - [条形码生成器 Code128](https://screscent.github.io/xiaoning-ai-tools/tools/barcode-code128.html)：Code128B/C 与 EAN-13 条码绘制，含校验与导 PNG（免费）
 - [TOTP 动态验证码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：本地计算 2FA 动态验证码，Base32 解码与倒计时（免费）
 - [倒班排班与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：6 个排班工具：三班倒、四班两倒、夜班作息、换班记录、疲劳恢复、夜班津贴核算（免费）
-- [纪念日与提醒清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：5 个纪念日工具同页：倒计时、提醒、周年、礼物、周年与周期提醒（免费）
+- [纪念日与提醒清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：6 个纪念日工具同页：倒计时、提醒、周年、礼物、周期提醒、年度纪念日历（免费）
 - [图片转 ICO 图标生成器](https://screscent.github.io/xiaoning-ai-tools/tools/ico-generator.html)：多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载（免费）
 - [SVG 波浪分割线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-wave-divider.html)：调波高波峰生成 SVG 波浪分割线，复制或下载（免费）
 - [水电燃气账单计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/utility-tier-calculator.html)：6 个账单工具同页：电费、水费、燃气、峰谷、分摊、年度账单预算（免费）
