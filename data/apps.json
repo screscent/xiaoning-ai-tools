@@ -10125,5 +10125,29 @@
     "title": "工具C 地漏与防臭选择"
    }
   ]
+ },
+ {
+  "id": "puzcrj3a4t",
+  "name": "花盆与土壤配比合集",
+  "desc": "3 个园艺工具：花盆尺寸、土壤配比、施肥浇水",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://puzcrj3a4t.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "pot",
+    "title": "工具A 花盆尺寸与材质"
+   },
+   {
+    "key": "soil",
+    "title": "工具B 土壤配比"
+   },
+   {
+    "key": "fertilize",
+    "title": "工具C 施肥与浇水周期"
+   }
+  ]
  }
 ]
