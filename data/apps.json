@@ -8768,7 +8768,8 @@
  {
   "id": "ijtkz98zig",
   "name": "游泳配速与训练合集",
-  "desc": "5 个游泳工具同页：配速与SWOLF、趟数换算、训练计划、泳姿与划频、组间休息",
+  "desc": "6 个游泳工具同页：配速与 SWOLF、趟数换算、训练计划、泳姿与划频、组间休息、转身与出发技巧",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ijtkz98zig.app.weavefox.cn",
@@ -8776,23 +8777,27 @@
   "subapps": [
    {
     "key": "pace",
-    "title": "配速与SWOLF"
+    "title": "工具A 配速与SWOLF"
    },
    {
     "key": "turns",
-    "title": "趟数换算"
+    "title": "工具B 趟数换算"
    },
    {
     "key": "plan",
-    "title": "训练计划"
+    "title": "工具C 训练计划"
    },
    {
     "key": "stroke",
-    "title": "泳姿与划频"
+    "title": "工具D 泳姿与划频"
    },
    {
     "key": "rest",
     "title": "工具E 组间休息"
+   },
+   {
+    "key": "turn",
+    "title": "工具F 转身与出发技巧"
    }
   ]
  },
@@ -9358,7 +9363,8 @@
  {
   "id": "dvr26ygy5d",
   "name": "观星入门与望远镜合集",
-  "desc": "5 个观星工具同页：月相与观星时机、极限星等与望远镜、观星地点与光害、天体观测清单、观测计划",
+  "desc": "6 个观星工具同页：月相与观星时机、极限星等与望远镜、观星地点与光害、天体观测清单、观测计划、星座识别与星图",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dvr26ygy5d.app.weavefox.cn",
@@ -9366,23 +9372,27 @@
   "subapps": [
    {
     "key": "moon",
-    "title": "月相与观星时机"
+    "title": "工具A 月相与观星时机"
    },
    {
     "key": "limit",
-    "title": "极限星等与望远镜"
+    "title": "工具B 极限星等与望远镜"
    },
    {
     "key": "site",
-    "title": "观星地点与光害"
+    "title": "工具C 观星地点与光害"
    },
    {
     "key": "target",
-    "title": "天体观测清单"
+    "title": "工具D 天体观测清单"
    },
    {
     "key": "plan",
-    "title": "观测计划"
+    "title": "工具E 观测计划"
+   },
+   {
+    "key": "constellation",
+    "title": "工具F 星座识别与星图"
    }
   ]
  },
@@ -9762,7 +9772,7 @@
  {
   "id": "vfgaw6lsqf",
   "name": "邻里与物业事务合集",
-  "desc": "5 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引、报修基金、车位与停车费",
+  "desc": "6 个物业事务工具同页：物业费核算、邻里噪声处理、维权流程、报修基金、车位停车费、装修报备与噪音时段",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -9771,23 +9781,27 @@
   "subapps": [
    {
     "key": "fee",
-    "title": "物业费与公摊核算"
+    "title": "工具A 物业费与公摊核算"
    },
    {
     "key": "noise",
-    "title": "邻里噪声与纠纷处理"
+    "title": "工具B 邻里噪声与纠纷处理"
    },
    {
     "key": "rights",
-    "title": "业主维权流程指引"
+    "title": "工具C 业主维权流程指引"
    },
    {
     "key": "repair",
-    "title": "报修基金"
+    "title": "工具D 报修基金"
    },
    {
     "key": "parking",
     "title": "工具E 车位与停车费"
+   },
+   {
+    "key": "renovation",
+    "title": "工具F 装修报备与噪音时段"
    }
   ]
  },

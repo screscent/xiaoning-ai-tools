@@ -448,7 +448,7 @@
 - [提交信息与变更日志合集](https://screscent.github.io/xiaoning-ai-tools/tools/commit-changelog-kit.html)：6 个提交规范工具：提交信息生成、类型速查、变更日志、commitlint 配置、PR 描述模板、分支命名规范（免费）
 - [JSON 转多语言模型合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-models-kit.html)：5 个多语言工具同页：Go 结构体、Java 类、Python 模型、多语言键名规范、Swift 模型（免费）
 - [编码检测与乱码修复合集](https://screscent.github.io/xiaoning-ai-tools/tools/encoding-repair-kit.html)：6 个编码工具同页：编码检测、乱码互修、编码转换、码点与实体、Base64 体积、Base64 与 URL 编码（免费）
-- [游泳配速与训练合集](https://screscent.github.io/xiaoning-ai-tools/tools/swim-training-kit.html)：5 个游泳工具同页：配速与SWOLF、趟数换算、训练计划、泳姿与划频、组间休息（免费）
+- [游泳配速与训练合集](https://screscent.github.io/xiaoning-ai-tools/tools/swim-training-kit.html)：6 个游泳工具同页：配速与 SWOLF、趟数换算、训练计划、泳姿与划频、组间休息、转身与出发技巧（免费）
 - [网球计分与场地换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tennis-kit.html)：5 个网球工具同页：计分与赛制、场地尺寸换算、装备与穿线、训练计划与体能、发球与站位（免费）
 - [乐理与音准速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/music-theory-kit.html)：6 个乐理工具：音阶调号、音程频率、和弦构成、节奏拍号、BPM 与节拍时值、移调与变调夹（免费）
 - [钓鱼线组与装备合集](https://screscent.github.io/xiaoning-ai-tools/tools/fishing-tackle-kit.html)：6 个钓鱼工具：线组搭配、饵料速查、装备清单、鱼口评估、线号与拉力换算、鱼线绑法与结强（免费）
@@ -465,7 +465,7 @@
 - [厨房调味与酱汁配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-seasoning-ratio-kit.html)：6 个下厨调味工具：酱汁配比、腌制盐水浓度、调料替代换算、火候与油温对照、高汤与底味、腌料配比（免费）
 - [露营装备与营地费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/camping-gear-site-kit.html)：5 个露营工具同页：装备清单与预算、营地费用与人均、用水用电与食材、装载与打包清单、往返路程油耗（免费）
 - [攀岩与抱石入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/climbing-grade-gear-gym-kit.html)：5 个攀岩工具同页：难度等级换算、装备清单与预算、岩馆费用与训练量、训练计划与伤病预防、练后恢复（免费）
-- [观星入门与望远镜合集](https://screscent.github.io/xiaoning-ai-tools/tools/stargazing-moon-limit-site-kit.html)：5 个观星工具同页：月相与观星时机、极限星等与望远镜、观星地点与光害、天体观测清单、观测计划（免费）
+- [观星入门与望远镜合集](https://screscent.github.io/xiaoning-ai-tools/tools/stargazing-moon-limit-site-kit.html)：6 个观星工具同页：月相与观星时机、极限星等与望远镜、观星地点与光害、天体观测清单、观测计划、星座识别与星图（免费）
 - [潜水与浮潜费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/diving-gear-gas-trip-kit.html)：6 个潜水工具同页：装备清单与预算、气瓶用气时长、行程费用与人均、安全停留与紧急处置、配重与浮力、潜水日志（免费）
 - [语言学习进度与复习合集](https://screscent.github.io/xiaoning-ai-tools/tools/language-vocab-plan-review-kit.html)：6 个学习工具同页：词汇量与等级对照、学习时间规划、记忆曲线与复习量、考试分数对照、常用短语练习、每日学习时长分配（免费）
 - [桌游与棋牌计分规则合集](https://screscent.github.io/xiaoning-ai-tools/tools/board-game-score-rules-kit.html)：6 个桌游工具同页：多人计分板、开局配置推荐、常见桌游规则速查、回合计时与时长控制、身份局配置、牌类胜负概率（免费）
@@ -477,7 +477,7 @@
 - [滑雪装备与雪场费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/ski-gear-resort-cost-kit.html)：5 个滑雪工具同页：雪场费用与雪票预算、装备选购与尺码、雪道难度与安全、租赁与保险预算、缆车与雪票组合（免费）
 - [高尔夫入门与打球成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/golf-cost-gear-handicap-kit.html)：5 个高尔夫工具同页：球场费用、球杆与握把、规则与差点、下场礼仪、练习场计划（免费）
 - [月子护理与产后恢复合集](https://screscent.github.io/xiaoning-ai-tools/tools/postpartum-meal-care-recovery-kit.html)：5 个月子与产后工具同页：月子餐热量配比、月嫂与月子中心花销预算、恢复周程与复查节点、月嫂面试与合同要点、月子餐采购量（免费）
-- [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：5 个邻里与物业工具同页：物业费与公摊核算、邻里噪声与纠纷处理、业主维权流程指引、报修基金、车位与停车费（免费）
+- [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：6 个物业事务工具同页：物业费核算、邻里噪声处理、维权流程、报修基金、车位停车费、装修报备与噪音时段（免费）
 - [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：5 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账、售后与结算测算、毛利与盈亏平衡（免费）
 - [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：6 个乒乓球工具同页：器材搭配、旋转术语、赛制计分、训练计划、回合统计、发球与接发球（免费）
 - [室内空气与温湿度合集](https://screscent.github.io/xiaoning-ai-tools/tools/indoor-air-humidity.html)：6 个室内环境工具同页：甲醛判定、净化器面积、温湿度舒适度、新风换气、霉菌除湿、装修后入住时间（免费）
