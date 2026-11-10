@@ -322,8 +322,8 @@
 - [网盘与下载带宽合集](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：6 个传输工具同页：下载时间、上传时间、带宽换算、体积压缩、延迟与加速、流量与超额费用（免费）
 - [体脂率与腰臀比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/body-fat-waist.html)：按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险（免费）
 - [防晒霜用量与补涂计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sunscreen-dose.html)：按面部面积与 SPF 算单次用量、有效时长与补涂次数（免费）
-- [行李额与超重费合集](https://screscent.github.io/xiaoning-ai-tools/tools/baggage-allowance.html)：5 个航班行李工具：手提额度、托运额度、超重费、航司对比、丢失与理赔（免费）
-- [证件照尺寸与排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-photo-spec.html)：5 个证件照工具同页：尺寸查询、像素换算、相纸排版、底色要求与合规自查（免费）
+- [行李额与超重费合集](https://screscent.github.io/xiaoning-ai-tools/tools/baggage-allowance-overweight-packing-kit.html)：6 个行李工具：手提额度、托运额度、超重费、航司对比、丢失与理赔、打包清单与称重（免费）
+- [证件照尺寸与排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-photo-size-layout-print-kit.html)：6 个证件照工具：尺寸、像素换算、排版张数、背景要求、合规自查、打印店交接单（免费）
 - [家电保养与滤芯更换提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/appliance-care.html)：按家电类型与上次保养日推算下次保养与耗材更换（免费）
 - [房租押金与水电结算计算器](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：按租金押金月数水电与违约扣款算应退押金与清单（免费）
 - [屏幕使用与护眼休息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/eye-break-plan.html)：按屏幕时长与间隔生成 20-20-20 休息提醒时间表（免费）
