@@ -277,8 +277,8 @@
 - [十六进制文件查看器](https://screscent.github.io/xiaoning-ai-tools/tools/hex-viewer.html)：本地读文件或粘贴文本转十六进制转储与 ASCII（免费）
 - [家庭药品与保质期提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/medicine-expiry.html)：按有效期分级正常/临期/过期并算剩余天数（免费）
 - [旅行预算与花费合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-budget.html)：6 个旅行工具：总预算与占比、每日预算、住宿分摊、省钱方案、门票预算、保险与延误赔付（免费）
-- [每周菜单与采购计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/weekly-menu.html)：5 个菜单工具同页：七天菜单排布、分品类采购汇总、库存与临期、食材花费与人均、周餐预算（免费）
-- [URL 清理与参数合集](https://screscent.github.io/xiaoning-ai-tools/tools/url-cleaner.html)：5 个链接工具：追踪参数清理、参数解析、链接重建、分享前检查、UTM 构建（免费）
+- [每周菜单与采购计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/weekly-menu.html)：6 个菜单工具同页：七天菜单排布、分品类采购汇总、库存与临期、食材花费与人均、周餐预算、备餐分装计划（免费）
+- [URL 清理与参数合集](https://screscent.github.io/xiaoning-ai-tools/tools/url-cleaner.html)：6 个链接工具：追踪参数清理、参数解析、链接重建、分享前检查、UTM 构建、追踪参数识别（免费）
 - [CSS 开关切换组件生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-switch.html)：纯 CSS 开关实时预览，生成含 checked 状态代码（免费）
 - [JSON 转 TypeScript 接口生成器](https://screscent.github.io/xiaoning-ai-tools/tools/json-to-ts.html)：粘贴 JSON 自动推导类型并生成 TypeScript interface（免费）
 - [增长与经营指标合集](https://screscent.github.io/xiaoning-ai-tools/tools/growth-metrics.html)：6 个指标工具：CAGR、同比环比、72法则、盈亏平衡、留存LTV、回本周期测算（免费）
@@ -291,7 +291,7 @@
 - [Markdown 目录与锚点合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-toc-anchor-consistency-kit.html)：6 个文档工具：目录生成、锚点提取、内链检查、大纲互转、批量标题锚点、目录一致性检查（免费）
 - [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：6 个换汇工具：双向换算、多币种折算、手续费到账、现钞与刷卡、境外刷卡、点差成本（免费）
 - [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算（免费）
-- [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：5 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算、训练区间（免费）
+- [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：6 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算、训练区间、恢复与训练负荷（免费）
 - [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：4 个路径工具同页：JSONPath、JSON Pointer、点号路径与路径生成，结果可复制（免费）
 - [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema-validate-mock-kit.html)：6 个 Schema 工具：Schema 生成、Schema 校验、示例数据、字段说明、TS 类型、模拟数据批量生成（免费）
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
