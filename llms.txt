@@ -195,13 +195,13 @@
 - [密码强度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/password-strength.html)：本地评估密码强度、熵值与改进建议（免费）
 - [思维导图与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/mind-map-generator.html)：6 个思维工具同页：导图、大纲、模板、导出、Mermaid 转写、清单与待办大纲（免费）
 - [世界时钟与时区合集](https://screscent.github.io/xiaoning-ai-tools/tools/world-clock.html)：5 个时区工具：多城时钟、时差计算、夏令时判断、会议对照、时间戳互转（免费）
-- [图片打码与隐私遮挡合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：5 个打码工具同页：马赛克、模糊打码、黑块遮挡、裁切隐藏、像素化强度（免费）
-- [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：5 个摩斯工具同页：文本转摩斯、摩斯转文本、音频播放、码表与练习、求救信号与闪光节拍（免费）
+- [图片打码与隐私遮挡合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：6 个打码工具同页：马赛克、模糊打码、黑块遮挡、裁切隐藏、像素化强度、文本敏感信息脱敏（免费）
+- [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：6 个摩斯工具同页：文本转摩斯、摩斯转文本、音频播放、码表与练习、求救信号与闪光节拍、通联简语速查（免费）
 - [复利与定投合集](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：6 个理财工具同页：复利终值、定投收益、目标月存、提取计划、贷款月供、通胀与实际收益（免费）
 - [CSS 渐变生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：线性/径向/圆锥渐变，实时预览并复制或下载 CSS（免费）
 - [HTTP 状态码速查表](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：30+ 常见状态码速查，支持搜索/分类/排查建议与复制（免费）
 - [折扣与百分比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/discount-calculator.html)：折扣/满减/税率 → 折后价、节省与实付，含计算过程（免费）
-- [Cron 表达式工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：5 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查、自然语言转规则（免费）
+- [Cron 表达式工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：6 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查、自然语言转规则、批量表达式体检（免费）
 - [图片拼接与拼图合集](https://screscent.github.io/xiaoning-ai-tools/tools/stitch-grid.html)：6 个拼图工具同页：纵向、横向、宫格、边框、间距、拼图比例预设（免费）
 - [HTML 实体编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/html-entity-codec.html)：HTML 特殊字符实体编码/解码，支持引号与换行（免费）
 - [单价与多规格比价合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-price-comparator.html)：6 个比价工具同页：单位价、规格、多件、会员价、优惠叠加、历史价格记录（免费）
