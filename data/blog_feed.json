@@ -1,8 +1,16 @@
 {
  "updated": "2026-11-10",
  "source": "wechat-mp",
- "count": 159,
+ "count": 160,
  "articles": [
+  {
+   "slug": "l90bIY30MsqoSh18kZDOQg",
+   "title": "小凝 Agent：大模型驱动复杂系统的可行性与分层设计",
+   "url": "https://mp.weixin.qq.com/s/l90bIY30MsqoSh18kZDOQg",
+   "publish_time": "2026-11-10",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "OMVTQmhWEFaCihNLC9iyaw",
    "title": "小凝 Agent：常驻 Agent OS 能否迁移到作战指挥系统",
