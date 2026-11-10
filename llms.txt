@@ -478,7 +478,7 @@
 - [高尔夫入门与打球成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/golf-cost-gear-handicap-kit.html)：5 个高尔夫工具同页：球场费用、球杆与握把、规则与差点、下场礼仪、练习场计划（免费）
 - [月子护理与产后恢复合集](https://screscent.github.io/xiaoning-ai-tools/tools/postpartum-meal-care-recovery-kit.html)：5 个月子与产后工具同页：月子餐热量配比、月嫂与月子中心花销预算、恢复周程与复查节点、月嫂面试与合同要点、月子餐采购量（免费）
 - [邻里与物业事务合集](https://screscent.github.io/xiaoning-ai-tools/tools/neighbor-property-fee-noise-rights-kit.html)：6 个物业事务工具同页：物业费核算、邻里噪声处理、维权流程、报修基金、车位停车费、装修报备与噪音时段（免费）
-- [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：5 个社区团购运营工具同页：开团成本分摊核算、自提点排班清单、团长佣金对账、售后与结算测算、毛利与盈亏平衡（免费）
+- [社区团购运营合集](https://screscent.github.io/xiaoning-ai-tools/tools/community-group-buy-cost-pickup-commission-kit.html)：6 个社区团购工具同页：开团成本、自提点排班、团长佣金、售后结算、毛利盈亏、团长招募与培训（免费）
 - [乒乓球入门与器材合集](https://screscent.github.io/xiaoning-ai-tools/tools/pingpong-gear-spin-score.html)：6 个乒乓球工具同页：器材搭配、旋转术语、赛制计分、训练计划、回合统计、发球与接发球（免费）
 - [室内空气与温湿度合集](https://screscent.github.io/xiaoning-ai-tools/tools/indoor-air-humidity.html)：6 个室内环境工具同页：甲醛判定、净化器面积、温湿度舒适度、新风换气、霉菌除湿、装修后入住时间（免费）
 - [公积金医保与津贴计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/housing-fund-medical-maternity.html)：6 个社保福利工具同页：公积金贷款额度、医保报销自付、生育津贴与产假工资、失业金测算、公积金提取、个税与专项扣除（免费）
@@ -486,8 +486,8 @@
 - [养老与退休金计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/retirement-pension-fire.html)：6 个养老测算工具同页：养老金缺口、退休金估算、提前退休测算、护理费用测算、退休医疗缺口、退休后月度支出（免费）
 - [家庭用水与水垢计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/water-hardness-filter-softener.html)：6 个家庭用水工具：水质硬度判定、滤芯成本测算、软水盐耗估算、用水量与水费、漏水检测与损耗、水费与阶梯计价（免费）
 - [日语五十音入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/japanese-kana-romaji-dictation.html)：6 个日语入门工具同页：五十音速查、假名罗马音互转、假名听写练习、数量词与助数词、动词变形、常用寒暄与敬语（免费）
-- [人情往来与红包计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gift-money-banquet-redpacket-ledger.html)：5 个人情往来工具同页：份子钱参考、婚礼酒席预算、红包记账回礼、年度人情预算、婚宴席位编排（免费）
-- [滑板飞盘与射箭入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/skateboard-frisbee-archery.html)：5 个轻运动入门工具同页：滑板尺寸与桥距、飞盘距离与盘型、射箭磅数与箭长、射箭靶纸与记分、护具与场地安全（免费）
+- [人情往来与红包计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gift-money-banquet-redpacket-ledger.html)：6 个人情往来工具同页：份子钱参考、婚礼酒席预算、红包记账、年度人情预算、婚宴席位、节日送礼预算（免费）
+- [滑板飞盘与射箭入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/skateboard-frisbee-archery.html)：6 个轻运动入门工具同页：滑板尺寸、飞盘盘型、射箭磅数、靶纸记分、护具安全、器材保养与更换（免费）
 - [保险保额与缴费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/insurance-coverage-premium.html)：6 个保险测算工具同页：重疾保额、寿险保额、年缴月缴对比、理赔材料、保费占比、保单现金价值估算（免费）
 - [母婴护理与开销合集](https://screscent.github.io/xiaoning-ai-tools/tools/parenting-care-collection.html)：3 个母婴工具同页：疫苗时间表、尿布开销、衣物尺码（免费）
 - [地铁与公交换乘速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/metro-transfer-collection.html)：3 个通勤工具同页：换乘时间、票价与月票、末班车（免费）
