@@ -6354,7 +6354,7 @@
  {
   "id": "g42maetuhw",
   "name": "引用格式与文献速查",
-  "desc": "5 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX 与文献去重统计",
+  "desc": "6 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX、文献去重统计与引用一致性检查",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -6380,6 +6380,10 @@
    {
     "key": "dedupe",
     "title": "工具E 参考文献去重统计"
+   },
+   {
+    "key": "citecheck",
+    "title": "工具F 引用格式一致性检查"
    }
   ]
  },
@@ -6438,7 +6442,8 @@
  {
   "id": "npxsuh2aq6",
   "name": "海淘税费与禁限速查",
-  "desc": "5 个海淘工具：行邮税与到手价、运费与包裹、禁限与申报、退换与售后、行邮税与免税额度",
+  "desc": "6 个海淘工具：行邮税与到手价、运费与包裹、禁限与申报、退换与售后、行邮税与免税额度、合箱与拆单建议",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npxsuh2aq6.app.weavefox.cn",
@@ -6463,6 +6468,10 @@
    {
     "key": "duty",
     "title": "工具E 行邮税与免税额度"
+   },
+   {
+    "key": "bundle",
+    "title": "工具F 合箱与拆单建议"
    }
   ]
  },
@@ -6886,32 +6895,36 @@
  {
   "id": "ury5ezdyk8",
   "name": "Git 场景命令合集",
-  "desc": "5 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并、bisect 定位",
+  "desc": "6 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并、bisect 定位、reflog 救援",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ury5ezdyk8.app.weavefox.cn",
   "subcat": "效率生活",
-  "tag": "免费",
   "subapps": [
    {
     "key": "undo",
-    "title": "撤销与回退"
+    "title": "工具A 撤销与回退"
    },
    {
     "key": "branch",
-    "title": "分支与找回"
+    "title": "工具B 分支与找回"
    },
    {
     "key": "stash",
-    "title": "暂存与切换"
+    "title": "工具C 暂存与切换"
    },
    {
     "key": "conflict",
-    "title": "冲突与合并"
+    "title": "工具D 冲突与合并"
    },
    {
     "key": "bisect",
-    "title": "bisect 定位"
+    "title": "工具E bisect 定位"
+   },
+   {
+    "key": "reflog",
+    "title": "工具F reflog 救援流程"
    }
   ]
  },
