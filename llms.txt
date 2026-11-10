@@ -316,7 +316,7 @@
 - [文本空行清理与重复行统计器](https://screscent.github.io/xiaoning-ai-tools/tools/text-lines-clean.html)：清理空行、去重并统计重复行次数，保留首次出现顺序（免费）
 - [时差调整与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/jetlag-plan.html)：5 个出行作息工具：向东倒时差、向西倒时差、作息调整表、落地建议、小睡与咖啡因窗口（免费）
 - [久坐提醒与拉伸计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议（免费）
-- [任务优先级与四象限合集](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：5 个优先级工具同页：四象限、评分、时间块、清单导出与周复盘（免费）
+- [任务优先级与四象限合集](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：6 个工具，全部本地运行：四象限分区、优先级评分、时间块排期、清单导出、周复盘、委派与等待清单（免费）
 - [停车费与停车时长计算器](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：按入场出场时间与首小时/后续单价算停车时长与费用（免费）
 - [快递运费与包裹成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：4 个物流工具同页：首重续重运费、体积重抛比、保价理赔、退换寄回成本（免费）
 - [网盘与下载带宽合集](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：6 个传输工具同页：下载时间、上传时间、带宽换算、体积压缩、延迟与加速、流量与超额费用（免费）
@@ -332,7 +332,7 @@
 - [转机时间与衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/transfer-time.html)：4 个航班转机工具：最短转机时间、转机够不够、行李直挂、过夜转机（免费）
 - [洗手计时与步骤提示器](https://screscent.github.io/xiaoning-ai-tools/tools/handwash-timer.html)：20 秒倒计时配七步提示，流动水与皂液要点（免费）
 - [小费与账单分摊计算器](https://screscent.github.io/xiaoning-ai-tools/tools/tip-split.html)：按账单与小费比例算总额，支持服务费与每人取整分摊（免费）
-- [文件批量重命名合集](https://screscent.github.io/xiaoning-ai-tools/tools/batch-rename.html)：5 个改名工具同页：规则模板、序号补零、批量替换、对照预览、目录结构模板（免费）
+- [文件批量重命名合集](https://screscent.github.io/xiaoning-ai-tools/tools/batch-rename.html)：6 个改名工具：规则模板、序号与补零、批量查找替换、新旧名对照预览、目录结构模板、重名冲突检查（免费）
 - [时间块规划合集](https://screscent.github.io/xiaoning-ai-tools/tools/time-block-week.html)：5 个时间工具同页：时间块排程、精力峰值分配、每周容量与超载预警、周复盘、打断与会议成本（免费）
 - [行李打包清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/travel-packing-list.html)：按天数季节与出行类型生成分类打包清单，可勾选核对（免费）
 - [数码续航与充电合集](https://screscent.github.io/xiaoning-ai-tools/tools/battery-charge-time.html)：6 个数码工具同页：充电用时、充电宝容量、笔记本续航、电池健康、快充协议、充电器选型，续航充电速查（免费）
@@ -340,7 +340,7 @@
 - [护照签证与入境合集](https://screscent.github.io/xiaoning-ai-tools/tools/passport-validity.html)：5 个出入境工具同页：护照余量、签证有效期、停留天数、换发提醒、签证照片（免费）
 - [心率区间与运动强度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：按年龄与静息心率算五档心率区间，给出燃脂推荐范围（免费）
 - [食物热量与运动消耗换算器](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：按 MET 与体重换算消耗某份热量需要的运动分钟数（免费）
-- [签证材料清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-checklist.html)：5 个签证材料清单：旅游、商务、学生、探亲访友、工作（免费）
+- [签证材料清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-checklist.html)：6 个工具：旅游 / 商务 / 学生 / 探亲访友 / 工作签证材料、办理时间线（免费）
 - [步数与活动目标合集](https://screscent.github.io/xiaoning-ai-tools/tools/step-goal.html)：4 个步数工具同页：步数目标、步幅里程、热量消耗、周计划（免费）
 - [字体搭配与排版比例生成器](https://screscent.github.io/xiaoning-ai-tools/tools/type-scale.html)：按基准字号与字阶比例生成六级字号行高与字体栈（免费）
 - [色盲友好配色检查器](https://screscent.github.io/xiaoning-ai-tools/tools/cvd-checker.html)：模拟四类色觉障碍并重算 WCAG 对比度是否达标（免费）
