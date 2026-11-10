@@ -328,7 +328,7 @@
 - [房租押金与水电结算计算器](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：按租金押金月数水电与违约扣款算应退押金与清单（免费）
 - [屏幕使用与护眼休息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/eye-break-plan.html)：按屏幕时长与间隔生成 20-20-20 休息提醒时间表（免费）
 - [CSS 骨架屏占位生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-skeleton.html)：块数/高度/圆角/颜色可调，实时预览并导出骨架屏 CSS（免费）
-- [噪音分贝与听力保护速查](https://screscent.github.io/xiaoning-ai-tools/tools/noise-hearing.html)：5 个噪音工具同页：分贝对照、听力安全时长、家电噪音、隔音耳塞、噪声剂量（免费）
+- [噪音分贝与听力保护速查](https://screscent.github.io/xiaoning-ai-tools/tools/noise-decibel-hearing-protection-kit.html)：6 个噪音工具：分贝对照、听力安全、家电噪音、隔音耳塞、噪声剂量、全屋排查（免费）
 - [转机时间与衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/transfer-time.html)：4 个航班转机工具：最短转机时间、转机够不够、行李直挂、过夜转机（免费）
 - [洗手计时与步骤提示器](https://screscent.github.io/xiaoning-ai-tools/tools/handwash-timer.html)：20 秒倒计时配七步提示，流动水与皂液要点（免费）
 - [小费与账单分摊计算器](https://screscent.github.io/xiaoning-ai-tools/tools/tip-split.html)：按账单与小费比例算总额，支持服务费与每人取整分摊（免费）
@@ -347,7 +347,7 @@
 - [时薪与通勤成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/hourly-wage.html)：4 个时薪工具同页：实际时薪、通勤成本、涨薪换算、城市对比（免费）
 - [通胀与购买力合集](https://screscent.github.io/xiaoning-ai-tools/tools/inflation-power.html)：4 个通胀工具同页：购买力、存款收益、工资涨幅、目标金额（免费）
 - [邮箱签名与名片合集](https://screscent.github.io/xiaoning-ai-tools/tools/email-signature.html)：4 个名片工具同页：邮箱签名、名片文案、社交简介、vCard（免费）
-- [账单日与免息期合集](https://screscent.github.io/xiaoning-ai-tools/tools/card-billing.html)：5 个信用卡工具：账单日规划、免息期计算、还款日提醒、分期成本、最低还款利息（免费）
+- [账单日与免息期合集](https://screscent.github.io/xiaoning-ai-tools/tools/credit-card-billing-grace-repay-kit.html)：6 个信用卡工具：账单日规划、免息期、还款日提醒、分期成本、最低还款利息、还款规划（免费）
 - [长文本摘要与压缩率计算器](https://screscent.github.io/xiaoning-ai-tools/tools/text-summary.html)：确定性抽取式摘要，给出字数压缩率与句子段落统计（免费）
 - [月度预算配额分配器](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-budget.html)：按收入与比例拆分配额，校验占比合计与结余（免费）
 - [预产期与孕周计算器](https://screscent.github.io/xiaoning-ai-tools/tools/due-date.html)：按末次月经与周期算预产期、孕周天数与进度百分比（免费）
@@ -358,7 +358,7 @@
 - [昵称与英文名生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/nickname-name-gen.html)：5 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺、账号长度校验（免费）
 - [凯撒与古典密码合集](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：4 个古典密码工具同页：凯撒位移、ROT13、反字母表、维吉尼亚（免费）
 - [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：6 个排期工具同页：甘特、里程碑、关键路径、燃尽、人力、缓冲与机动时间（免费）
-- [界面提示文案合集](https://screscent.github.io/xiaoning-ai-tools/tools/empty-state.html)：5 个界面文案工具同页：空状态、错误页、加载中、成功反馈、文案体检（免费）
+- [界面提示文案合集](https://screscent.github.io/xiaoning-ai-tools/tools/ui-microcopy-onboarding-kit.html)：6 个文案工具：空状态、错误页、加载中、成功反馈、文案体检、引导文案组合（免费）
 - [图片宽高比与等比缩放计算器](https://screscent.github.io/xiaoning-ai-tools/tools/aspect-ratio.html)：按目标宽度或百分比等比缩放，给出比例化简与面积变化（免费）
 - [手机 App 权限自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/app-permission.html)：按设备与场景生成权限自查清单，标出高风险与设置路径（免费）
 - [编号与缩进整理合集](https://screscent.github.io/xiaoning-ai-tools/tools/number-indent.html)：5 个文本整理工具同页：重新编号、缩进规范、大纲层级、去编号空行、缩进宽度换算（免费）
