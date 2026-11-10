@@ -246,7 +246,7 @@
 - [CSS 霓虹文字效果生成器](https://screscent.github.io/xiaoning-ai-tools/tools/neon-text.html)：调色与发光强度生成霓虹 text-shadow，可复制下载（免费）
 - [中文与拼音处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-pinyin.html)：6 个拼音工具：带调拼音、无调与首字母、多音字、逐字对照表、拼音排序、声韵拆解（免费）
 - [隐私设置自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：4 个隐私自查清单：社交平台、手机权限、浏览器、账号安全（免费）
-- [书签整理与导出合集](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：5 个书签工具同页：解析去重、域名分组、格式转换、浏览器导入导出、书签体检（免费）
+- [书签整理与导出合集](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：6 个书签工具同页：书签解析与去重、按域名分组、转表格与 JSON、导出浏览器书签、书签体检、分类与标签整理（免费）
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：6 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网、端口与协议自查（免费）
 - [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：6 个农历工具：农历转换、节气查询、月相查询、农历生日、节日倒计时、数九与三伏（免费）
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
@@ -473,7 +473,7 @@
 - [家庭组网与网线速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-network-cable-kit.html)：5 个组网工具同页：网线线序、宽带速率、WiFi 覆盖、组网方案与预算、下载时间估算（免费）
 - [居家适老化改造速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-aging-friendly-renovation-kit.html)：5 个适老工具同页：扶手坡道、卫浴防滑、夜灯开关、改造预算、防滑门槛（免费）
 - [家政与保洁报价合集](https://screscent.github.io/xiaoning-ai-tools/tools/housekeeping-cleaning-quote-kit.html)：5 个家政工具同页：开荒保洁、日常保洁、家电清洗、玻璃与纱窗清洗、保洁耗材成本（免费）
-- [数据分析与统计速算合集](https://screscent.github.io/xiaoning-ai-tools/tools/data-analysis-statistics-kit.html)：5 个统计工具同页：样本量与置信区间、A/B 显著性、描述统计与离散度、相关性与回归速算、四分位距（免费）
+- [数据分析与统计速算合集](https://screscent.github.io/xiaoning-ai-tools/tools/data-analysis-statistics-kit.html)：6 个统计工具：样本量与置信区间、A/B 显著性、描述统计与离散度、相关性、四分位距、比例与误差区间（免费）
 - [滑雪装备与雪场费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/ski-gear-resort-cost-kit.html)：5 个滑雪工具同页：雪场费用与雪票预算、装备选购与尺码、雪道难度与安全、租赁与保险预算、缆车与雪票组合（免费）
 - [高尔夫入门与打球成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/golf-cost-gear-handicap-kit.html)：5 个高尔夫工具同页：球场费用、球杆与握把、规则与差点、下场礼仪、练习场计划（免费）
 - [月子护理与产后恢复合集](https://screscent.github.io/xiaoning-ai-tools/tools/postpartum-meal-care-recovery-kit.html)：5 个月子与产后工具同页：月子餐热量配比、月嫂与月子中心花销预算、恢复周程与复查节点、月嫂面试与合同要点、月子餐采购量（免费）
@@ -484,7 +484,7 @@
 - [公积金医保与津贴计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/housing-fund-medical-maternity.html)：6 个社保福利工具同页：公积金贷款额度、医保报销自付、生育津贴与产假工资、失业金测算、公积金提取、个税与专项扣除（免费）
 - [垃圾分类与回收变现合集](https://screscent.github.io/xiaoning-ai-tools/tools/waste-sorting-recycling.html)：5 个垃圾分类工具同页：分类速查、可回收物估价、大件垃圾清运、厨余堆肥、分类桶配置（免费）
 - [养老与退休金计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/retirement-pension-fire.html)：5 个养老测算工具同页：养老金缺口、退休金估算、提前退休测算、护理费用测算、退休医疗缺口（免费）
-- [家庭用水与水垢计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/water-hardness-filter-softener.html)：5 个家庭用水工具同页：水质硬度判定、滤芯成本测算、软水盐耗估算、用水量与水费、漏水检测与损耗（免费）
+- [家庭用水与水垢计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/water-hardness-filter-softener.html)：6 个家庭用水工具：水质硬度判定、滤芯成本测算、软水盐耗估算、用水量与水费、漏水检测与损耗、水费与阶梯计价（免费）
 - [日语五十音入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/japanese-kana-romaji-dictation.html)：5 个日语入门工具同页：五十音速查、假名罗马音互转、假名听写练习、数量词与助数词、动词变形（免费）
 - [人情往来与红包计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gift-money-banquet-redpacket-ledger.html)：5 个人情往来工具同页：份子钱参考、婚礼酒席预算、红包记账回礼、年度人情预算、婚宴席位编排（免费）
 - [滑板飞盘与射箭入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/skateboard-frisbee-archery.html)：5 个轻运动入门工具同页：滑板尺寸与桥距、飞盘距离与盘型、射箭磅数与箭长、射箭靶纸与记分、护具与场地安全（免费）
