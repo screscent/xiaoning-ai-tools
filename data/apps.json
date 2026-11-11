@@ -10911,5 +10911,29 @@
     "title": "工具C 异地迁入"
    }
   ]
+ },
+ {
+  "id": "5c3x9bt6g5",
+  "name": "高速通行费与 ETC 合集",
+  "desc": "3 个自驾工具同页：过路费估算、ETC 折扣与发票、节假日免费判定",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://5c3x9bt6g5.app.weavefox.cn",
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "toll",
+    "title": "工具A 过路费估算"
+   },
+   {
+    "key": "etc",
+    "title": "工具B ETC 折扣与发票"
+   },
+   {
+    "key": "holiday",
+    "title": "工具C 节假日免费"
+   }
+  ]
  }
 ]
