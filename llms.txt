@@ -292,7 +292,7 @@
 - [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：6 个换汇工具：双向换算、多币种折算、手续费到账、现钞与刷卡、境外刷卡、点差成本（免费）
 - [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：5 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算、提分目标（免费）
 - [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：6 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算、训练区间、恢复与训练负荷（免费）
-- [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：5 个 JSON 路径工具同页：JSONPath、JSON Pointer、点号路径、路径生成、Schema 校验（免费）
+- [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：6 个 JSON 路径工具同页：JSONPath、Pointer、点号路径、路径生成、Schema 校验、扁平化还原（免费）
 - [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema-validate-mock-kit.html)：6 个 Schema 工具：Schema 生成、Schema 校验、示例数据、字段说明、TS 类型、模拟数据批量生成（免费）
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
 - [数字转英文读法](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：整数转英文单词，支持英式 and 与序数词（免费）
@@ -318,7 +318,7 @@
 - [久坐提醒与拉伸计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议（免费）
 - [任务优先级与四象限合集](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：6 个工具，全部本地运行：四象限分区、优先级评分、时间块排期、清单导出、周复盘、委派与等待清单（免费）
 - [停车费与停车时长计算器](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：按入场出场时间与首小时/后续单价算停车时长与费用（免费）
-- [快递运费与包裹成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：5 个物流工具同页：首重续重运费、体积重抛比、保价理赔、退换寄回成本、时效与延误赔付（免费）
+- [快递运费与包裹成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：6 个物流工具同页：首重续重、体积重抛比、保价理赔、退换寄回、时效赔付、合并寄送对比（免费）
 - [网盘与下载带宽合集](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：6 个传输工具同页：下载时间、上传时间、带宽换算、体积压缩、延迟与加速、流量与超额费用（免费）
 - [体脂率与腰臀比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/body-fat-waist.html)：按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险（免费）
 - [防晒霜用量与补涂计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sunscreen-dose.html)：按面部面积与 SPF 算单次用量、有效时长与补涂次数（免费）
@@ -345,7 +345,7 @@
 - [字体搭配与排版比例生成器](https://screscent.github.io/xiaoning-ai-tools/tools/type-scale.html)：按基准字号与字阶比例生成六级字号行高与字体栈（免费）
 - [色盲友好配色检查器](https://screscent.github.io/xiaoning-ai-tools/tools/cvd-checker.html)：模拟四类色觉障碍并重算 WCAG 对比度是否达标（免费）
 - [时薪与通勤成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/hourly-wage.html)：5 个时薪工具同页：实际时薪、通勤成本、涨薪换算、城市对比、通勤方式对比（免费）
-- [通胀与购买力合集](https://screscent.github.io/xiaoning-ai-tools/tools/inflation-power.html)：4 个通胀工具同页：购买力、存款收益、工资涨幅、目标金额（免费）
+- [通胀与购买力合集](https://screscent.github.io/xiaoning-ai-tools/tools/inflation-power.html)：5 个通胀工具同页：购买力、存款收益、工资涨幅、目标金额、退休购买力（免费）
 - [邮箱签名与名片合集](https://screscent.github.io/xiaoning-ai-tools/tools/email-signature.html)：5 个名片工具同页：邮箱签名、名片文案、社交简介、vCard、邮件结尾礼仪（免费）
 - [账单日与免息期合集](https://screscent.github.io/xiaoning-ai-tools/tools/credit-card-billing-grace-repay-kit.html)：6 个信用卡工具：账单日规划、免息期、还款日提醒、分期成本、最低还款利息、还款规划（免费）
 - [长文本摘要与压缩率计算器](https://screscent.github.io/xiaoning-ai-tools/tools/text-summary.html)：确定性抽取式摘要，给出字数压缩率与句子段落统计（免费）
