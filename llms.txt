@@ -519,7 +519,8 @@
 - [留学申请费用与时间线合集](https://screscent.github.io/xiaoning-ai-tools/tools/study-abroad-cost-timeline-funds-kit.html)：3 个留学工具同页：费用预算、申请时间线、资金准备（免费）
 - [智能家居设备与耗电合集](https://screscent.github.io/xiaoning-ai-tools/tools/smart-home-power-gateway-sensor-kit.html)：3 个智能家居工具同页：待机耗电、网关协议、传感器布点（免费）
 
-## 博客（161 篇）
+## 博客（162 篇）
+- [小凝 Agent：从作战指挥决策体系到项目框架](https://screscent.github.io/xiaoning-ai-tools/blog/kIgEGY4Zz6Wza333OxqR-w.html)：2026-11-11｜作战指挥给骨架，小凝 AgentOS 给边界，项目给血肉，最后长出一个可复用的项目框架。
 - [小凝 Agent：四层与四个横面：为什么有些东西不能放进任何一层](https://screscent.github.io/xiaoning-ai-tools/blog/NHBfAV20nzaLtCJa7GCD9g.html)：2026-11-10｜承接第 84 期：上一篇讲分层为什么必要，这一篇讲分层做出来是什么形状——四层、四个横面，以及升级时怎么判定一次改动落在哪、会牵动谁。
 - [小凝 Agent：大模型驱动复杂系统的可行性与分层设计](https://screscent.github.io/xiaoning-ai-tools/blog/l90bIY30MsqoSh18kZDOQg.html)：2026-11-10｜天花板不在模型能力，而在三个可计量结构：单次载入量、无验证连续段数、单步可验证比例。
 - [小凝 Agent：常驻 Agent OS 能否迁移到作战指挥系统](https://screscent.github.io/xiaoning-ai-tools/blog/OMVTQmhWEFaCihNLC9iyaw.html)：2026-11-10｜一次基于实证的能力迁移评估：能迁移的是指挥控制的骨架，不是作战的拳头。

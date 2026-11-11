@@ -1,8 +1,13 @@
 {
- "updated": "2026-11-10",
- "count": 161,
+ "updated": "2026-11-11",
+ "count": 162,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-11",
+   "title": "小凝 Agent：从作战指挥决策体系到项目框架",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/kIgEGY4Zz6Wza333OxqR-w.html"
+  },
   {
    "date": "2026-11-10",
    "title": "小凝 Agent：四层与四个横面：为什么有些东西不能放进任何一层",
@@ -147,11 +152,6 @@
    "date": "2026-10-11",
    "title": "小凝：接管绿泡泡后的工程化操作--GUI 通道的常驻感知、角色分工、提速工程与人机边界技术拆解",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/k3UFB-Mg2b9eoKMBk46KpQ.html"
-  },
-  {
-   "date": "2026-10-10",
-   "title": "小凝：绿泡泡通道接入、跨渠道记录融合与通知触发层的技术拆解",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/6jUW0kO5WleE8shKz6yS7A.html"
   }
  ]
 }

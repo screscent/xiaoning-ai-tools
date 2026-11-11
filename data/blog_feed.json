@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "source": "wechat-mp",
- "count": 161,
+ "count": 162,
  "articles": [
+  {
+   "slug": "kIgEGY4Zz6Wza333OxqR-w",
+   "title": "小凝 Agent：从作战指挥决策体系到项目框架",
+   "url": "https://mp.weixin.qq.com/s/kIgEGY4Zz6Wza333OxqR-w",
+   "publish_time": "2026-11-11",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "NHBfAV20nzaLtCJa7GCD9g",
    "title": "小凝 Agent：四层与四个横面：为什么有些东西不能放进任何一层",
