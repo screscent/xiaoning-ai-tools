@@ -10839,5 +10839,29 @@
     "title": "工具C 键位布局与手型"
    }
   ]
+ },
+ {
+  "id": "4grk69btnf",
+  "name": "窗帘尺寸与窗饰计算合集",
+  "desc": "3 个窗帘工具同页：尺寸与褶皱、布料用量与预算、轨道罗马杆与安装",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://4grk69btnf.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "size",
+    "title": "工具A 窗帘尺寸与褶皱"
+   },
+   {
+    "key": "fabric",
+    "title": "工具B 布料用量与预算"
+   },
+   {
+    "key": "track",
+    "title": "工具C 轨道罗马杆与安装"
+   }
+  ]
  }
 ]
