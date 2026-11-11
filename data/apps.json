@@ -10959,5 +10959,29 @@
     "title": "工具C 散热兼容"
    }
   ]
+ },
+ {
+  "id": "c7xp2xegmi",
+  "name": "留学申请费用与时间线合集",
+  "desc": "3 个留学工具同页：费用预算、申请时间线、资金准备",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7xp2xegmi.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "cost",
+    "title": "工具A 费用预算"
+   },
+   {
+    "key": "timeline",
+    "title": "工具B 申请时间线"
+   },
+   {
+    "key": "proof",
+    "title": "工具C 资金准备"
+   }
+  ]
  }
 ]
