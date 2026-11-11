@@ -501,7 +501,7 @@
 - [纸箱与打包耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/boxes-packing-supply-labor-kit.html)：4 个打包准备工具同页：纸箱数量与箱型、打包耗材用量、打包工时与人工、胶带缓冲用量（免费）
 - [宠物出行与寄养计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/pet-travel-boarding-prepare-kit.html)：6 个宠物工具同页：托运费用、寄养对比、出行准备、航空箱尺寸、车内防暑、出行适应训练（免费）
 - [家电清洗与保养周期合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-appliance-cleaning-cycle-kit.html)：4 个家电工具：空调清洗、洗衣机清洗、冰箱清洁、油烟机清洗（免费）
-- [体检报告指标解读合集](https://screscent.github.io/xiaoning-ai-tools/tools/health-check-report-marker-guide-kit.html)：5 个解读工具同页：血常规、肝肾功能、血脂血糖、尿常规、凝血炎症（免费）
+- [体检报告指标解读合集](https://screscent.github.io/xiaoning-ai-tools/tools/health-check-report-marker-guide-kit.html)：6 个解读工具同页：血常规、肝肾功能、血脂血糖、尿常规、凝血炎症、维生素微量元素（免费）
 - [厨房锅具与刀具选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-cookware-knife-board-kit.html)：4 个厨房工具：锅具尺寸、刀具配置、砧板材质、锅盖蒸屉适配（免费）
 - [床垫与枕头选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/mattress-pillow-bedding-buying-kit.html)：6 个睡眠工具同页：床垫尺寸、枕头高度、床品换洗、床垫保护清洁、试睡退换、床品除螨（免费）
 - [卫浴五金与浴室用品合集](https://screscent.github.io/xiaoning-ai-tools/tools/bathroom-hardware-fixture-buying-kit.html)：6 个卫浴工具同页：花洒水压、龙头角阀、地漏防臭、浴室收纳、除垢滤芯、防滑扶手（免费）
@@ -509,14 +509,14 @@
 - [车险与理赔自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/auto-insurance-claim-ncd-kit.html)：4 个车险工具：保费组合、理赔流程、出险决策、事故快处清单（免费）
 - [瓷砖美缝与辅材用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/tile-grout-waterproof-quantity-kit.html)：4 个装修工具：瓷砖用量、美缝剂、防水涂料、踢脚线与门槛石（免费）
 - [显示器参数与选购计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/monitor-ppi-refresh-distance-kit.html)：6 个显示器工具同页：分辨率与 PPI、刷新率与帧率、尺寸与视距、色域与色准、支架与升降、校色与验收（免费）
-- [AI 提示词与上下文计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-prompt-token-context-cost-kit.html)：5 个提示词工具同页：Token 估算、上下文规划、采样成本、提示词缓存、提示词评测（免费）
+- [AI 提示词与上下文计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-prompt-token-context-cost-kit.html)：6 个提示词工具同页：Token 估算、上下文规划、采样成本、提示词缓存、提示词评测、提示词安全（免费）
 - [键鼠手感与灵敏度配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/mouse-keyboard-dpi-polling-layout-kit.html)：4 个键鼠工具同页：DPI 与灵敏度、回报率与延迟、键位布局与手型、宏与按键冲突（免费）
 - [窗帘尺寸与窗饰计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/curtain-size-fabric-track-kit.html)：6 个窗帘工具同页：尺寸褶皱、布料预算、轨道安装、清洗保养、遮光隔热、电动窗帘（免费）
 - [家具尺寸与入户搬运合集](https://screscent.github.io/xiaoning-ai-tools/tools/furniture-doorway-stair-elevator-kit.html)：6 个入户工具同页：门洞、楼梯、电梯、搬运人数、搬运防护、旧家具处理（免费）
 - [汽车过户与上牌费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/vehicle-transfer-plate-move-kit.html)：6 个车务工具同页：过户税费、上牌保险、异地迁入、保险过户、车贷月供、二手车验车（免费）
 - [高速通行费与 ETC 合集](https://screscent.github.io/xiaoning-ai-tools/tools/highway-toll-etc-holiday-kit.html)：6 个自驾工具同页：过路费、ETC、节假日免费、服务区休息、景区停车、油耗油费（免费）
 - [电脑装机与硬件兼容合集](https://screscent.github.io/xiaoning-ai-tools/tools/pc-build-psu-case-cooler-kit.html)：6 个装机工具同页：电源、机箱、散热、升级瓶颈、噪音静音、开机自检（免费）
-- [留学申请费用与时间线合集](https://screscent.github.io/xiaoning-ai-tools/tools/study-abroad-cost-timeline-funds-kit.html)：5 个留学工具同页：费用预算、申请时间线、资金准备、选校梯度、申请材料与时间（免费）
+- [留学申请费用与时间线合集](https://screscent.github.io/xiaoning-ai-tools/tools/study-abroad-cost-timeline-funds-kit.html)：6 个留学工具同页：费用预算、申请时间线、资金准备、选校梯度、申请材料、行前清单行李（免费）
 - [智能家居设备与耗电合集](https://screscent.github.io/xiaoning-ai-tools/tools/smart-home-power-gateway-sensor-kit.html)：5 个智能家居工具同页：待机耗电、网关协议、传感器布点、场景联动、全屋网络布点（免费）
 
 ## 博客（162 篇）
