@@ -10754,5 +10754,29 @@
     "title": "工具D 踢脚线门槛石"
    }
   ]
+ },
+ {
+  "id": "9pstsar8kd",
+  "name": "显示器参数与选购计算合集",
+  "desc": "3 个显示器工具同页：分辨率与 PPI、刷新率与帧率匹配、尺寸与视距推荐",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://9pstsar8kd.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "ppi",
+    "title": "工具A 分辨率PPI计算"
+   },
+   {
+    "key": "hz",
+    "title": "工具B 刷新率与帧率匹配"
+   },
+   {
+    "key": "size",
+    "title": "工具C 尺寸与视距推荐"
+   }
+  ]
  }
 ]
