@@ -508,9 +508,9 @@
 - [花盆与土壤配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/flower-pot-soil-fertilize-kit.html)：4 个园艺工具同页：花盆尺寸、土壤配比、施肥浇水、换盆修根（免费）
 - [车险与理赔自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/auto-insurance-claim-ncd-kit.html)：4 个车险工具：保费组合、理赔流程、出险决策、事故快处清单（免费）
 - [瓷砖美缝与辅材用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/tile-grout-waterproof-quantity-kit.html)：4 个装修工具：瓷砖用量、美缝剂、防水涂料、踢脚线与门槛石（免费）
-- [显示器参数与选购计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/monitor-ppi-refresh-distance-kit.html)：3 个显示器工具同页：分辨率与 PPI、刷新率与帧率匹配、尺寸与视距推荐（免费）
-- [AI 提示词与上下文计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-prompt-token-context-cost-kit.html)：3 个提示词工具同页：Token 字数估算、上下文窗口规划、采样参数与成本（免费）
-- [键鼠手感与灵敏度配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/mouse-keyboard-dpi-polling-layout-kit.html)：3 个键鼠工具同页：DPI 与灵敏度换算、回报率与延迟、键位布局与手型（免费）
+- [显示器参数与选购计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/monitor-ppi-refresh-distance-kit.html)：4 个显示器工具同页：分辨率与 PPI、刷新率与帧率、尺寸与视距、色域与色准（免费）
+- [AI 提示词与上下文计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-prompt-token-context-cost-kit.html)：4 个提示词工具同页：Token 估算、上下文规划、采样成本、提示词缓存（免费）
+- [键鼠手感与灵敏度配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/mouse-keyboard-dpi-polling-layout-kit.html)：4 个键鼠工具同页：DPI 与灵敏度、回报率与延迟、键位布局与手型、宏与按键冲突（免费）
 - [窗帘尺寸与窗饰计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/curtain-size-fabric-track-kit.html)：3 个窗帘工具同页：尺寸与褶皱、布料用量与预算、轨道罗马杆与安装（免费）
 - [家具尺寸与入户搬运合集](https://screscent.github.io/xiaoning-ai-tools/tools/furniture-doorway-stair-elevator-kit.html)：3 个入户工具同页：沙发与门洞尺寸、柜体与楼梯转角、电梯与入户通道（免费）
 - [汽车过户与上牌费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/vehicle-transfer-plate-move-kit.html)：3 个车务工具同页：过户税费、上牌与保险、异地迁入费用（免费）
