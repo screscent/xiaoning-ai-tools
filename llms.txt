@@ -496,16 +496,16 @@
 - [加油与充电成本对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-ev-cost-collection.html)：4 个用车成本工具同页：每公里成本、油电对比、充电桩回本、充电桩功率与时间（免费）
 - [空气炸锅与微波炉用时换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/airfryer-microwave-thaw-time-kit.html)：4 个加热用时工具同页：空炸温度时间换算、微波加热时长、解冻时长、烤箱温度换算（免费）
 - [供暖与取暖费用计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/heating-cost-compare-kit.html)：4 个冬季取暖费用工具同页：供暖费核算、电暖器电费、取暖方式对比、门窗保温损耗（免费）
-- [洗碗机容量与耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/dishwasher-capacity-supply-runtime-kit.html)：4 个洗碗机工具同页：容量与餐具量、耗材月成本、洗涤水电费、摆放与装载（免费）
+- [洗碗机容量与耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/dishwasher-capacity-supply-runtime-kit.html)：5 个洗碗机工具同页：容量与餐具量、耗材月成本、洗涤水电费、摆放与装载、烘干与储存（免费）
 - [西装衬衫尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/suit-shirt-tie-size-kit.html)：4 个正装尺码工具同页：西装号型、衬衫尺码、领带尺寸与打法、外套马甲尺码（免费）
 - [纸箱与打包耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/boxes-packing-supply-labor-kit.html)：4 个打包准备工具同页：纸箱数量与箱型、打包耗材用量、打包工时与人工、胶带缓冲用量（免费）
-- [宠物出行与寄养计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/pet-travel-boarding-prepare-kit.html)：4 个宠物出行工具同页：托运费用、寄养对比、出行准备、航空箱尺寸（免费）
+- [宠物出行与寄养计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/pet-travel-boarding-prepare-kit.html)：5 个宠物出行工具同页：托运费用、寄养对比、出行准备、航空箱尺寸、车内防暑（免费）
 - [家电清洗与保养周期合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-appliance-cleaning-cycle-kit.html)：4 个家电工具：空调清洗、洗衣机清洗、冰箱清洁、油烟机清洗（免费）
 - [体检报告指标解读合集](https://screscent.github.io/xiaoning-ai-tools/tools/health-check-report-marker-guide-kit.html)：4 个解读工具同页：血常规、肝肾功能、血脂血糖、尿常规（免费）
 - [厨房锅具与刀具选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-cookware-knife-board-kit.html)：4 个厨房工具：锅具尺寸、刀具配置、砧板材质、锅盖蒸屉适配（免费）
 - [床垫与枕头选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/mattress-pillow-bedding-buying-kit.html)：4 个睡眠工具同页：床垫尺寸、枕头高度、床品换洗、床垫保护清洁（免费）
 - [卫浴五金与浴室用品合集](https://screscent.github.io/xiaoning-ai-tools/tools/bathroom-hardware-fixture-buying-kit.html)：4 个卫浴工具同页：花洒水压、龙头角阀、地漏防臭、浴室收纳（免费）
-- [花盆与土壤配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/flower-pot-soil-fertilize-kit.html)：4 个园艺工具同页：花盆尺寸、土壤配比、施肥浇水、换盆修根（免费）
+- [花盆与土壤配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/flower-pot-soil-fertilize-kit.html)：5 个园艺工具同页：花盆尺寸、土壤配比、施肥浇水、换盆修根、浇水频率（免费）
 - [车险与理赔自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/auto-insurance-claim-ncd-kit.html)：4 个车险工具：保费组合、理赔流程、出险决策、事故快处清单（免费）
 - [瓷砖美缝与辅材用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/tile-grout-waterproof-quantity-kit.html)：4 个装修工具：瓷砖用量、美缝剂、防水涂料、踢脚线与门槛石（免费）
 - [显示器参数与选购计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/monitor-ppi-refresh-distance-kit.html)：4 个显示器工具同页：分辨率与 PPI、刷新率与帧率、尺寸与视距、色域与色准（免费）
