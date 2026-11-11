@@ -489,13 +489,13 @@
 - [人情往来与红包计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gift-money-banquet-redpacket-ledger.html)：6 个人情往来工具同页：份子钱参考、婚礼酒席预算、红包记账、年度人情预算、婚宴席位、节日送礼预算（免费）
 - [滑板飞盘与射箭入门合集](https://screscent.github.io/xiaoning-ai-tools/tools/skateboard-frisbee-archery.html)：6 个轻运动入门工具同页：滑板尺寸、飞盘盘型、射箭磅数、靶纸记分、护具安全、器材保养与更换（免费）
 - [保险保额与缴费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/insurance-coverage-premium.html)：6 个保险测算工具同页：重疾保额、寿险保额、年缴月缴对比、理赔材料、保费占比、保单现金价值估算（免费）
-- [母婴护理与开销合集](https://screscent.github.io/xiaoning-ai-tools/tools/parenting-care-collection.html)：4 个母婴工具同页：疫苗时间表、尿布开销、衣物尺码、辅食添加与喂养量（免费）
+- [母婴护理与开销合集](https://screscent.github.io/xiaoning-ai-tools/tools/parenting-care-collection.html)：5 个母婴工具同页：疫苗时间表、尿布开销、衣物尺码、辅食喂养、奶粉冲调（免费）
 - [地铁与公交换乘速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/metro-transfer-collection.html)：5 个通勤工具同页：换乘时间、票价与月票、末班车、换乘步行时间、无障碍换乘（免费）
 - [高铁与火车出行速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/rail-travel-collection.html)：5 个铁路出行工具同页：改签费、进站时间、行李规格、儿童票与优惠、座位选择（免费）
-- [理发与发型打理合集](https://screscent.github.io/xiaoning-ai-tools/tools/haircare-budget-collection.html)：4 个打理工具同页：剪发预算、染发成本、洗发水补货、烫发护理预算（免费）
+- [理发与发型打理合集](https://screscent.github.io/xiaoning-ai-tools/tools/haircare-budget-collection.html)：5 个打理工具同页：剪发预算、染发成本、洗发水补货、烫发护理、造型产品用量（免费）
 - [加油与充电成本对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-ev-cost-collection.html)：5 个用车成本工具同页：每公里成本、油电对比、充电桩回本、充电功率与时间、长途补能规划（免费）
 - [空气炸锅与微波炉用时换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/airfryer-microwave-thaw-time-kit.html)：5 个加热用时工具同页：空炸温度时间、微波加热、解冻时长、烤箱温度、剩菜复热（免费）
-- [供暖与取暖费用计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/heating-cost-compare-kit.html)：4 个冬季取暖费用工具同页：供暖费核算、电暖器电费、取暖方式对比、门窗保温损耗（免费）
+- [供暖与取暖费用计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/heating-cost-compare-kit.html)：5 个冬季取暖工具同页：供暖费核算、电暖器电费、取暖方式对比、门窗保温损耗、暖气片片数（免费）
 - [洗碗机容量与耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/dishwasher-capacity-supply-runtime-kit.html)：6 个洗碗机工具同页：容量与餐具量、耗材月成本、洗涤水电费、摆放与装载、烘干与储存、预冲洗预处理（免费）
 - [西装衬衫尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/suit-shirt-tie-size-kit.html)：5 个正装尺码工具同页：西装号型、衬衫尺码、领带尺寸与打法、外套马甲尺码、皮鞋尺码（免费）
 - [纸箱与打包耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/boxes-packing-supply-labor-kit.html)：5 个打包准备工具同页：纸箱数量与箱型、打包耗材用量、打包工时与人工、胶带缓冲用量、体积重（免费）
