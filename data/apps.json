@@ -10887,5 +10887,29 @@
     "title": "工具C 电梯与入户通道"
    }
   ]
+ },
+ {
+  "id": "npbgbd2aq6",
+  "name": "汽车过户与上牌费用合集",
+  "desc": "3 个车务工具同页：过户税费、上牌与保险、异地迁入费用",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://npbgbd2aq6.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "transfer",
+    "title": "工具A 过户税费"
+   },
+   {
+    "key": "plate",
+    "title": "工具B 上牌与保险"
+   },
+   {
+    "key": "move",
+    "title": "工具C 异地迁入"
+   }
+  ]
  }
 ]
