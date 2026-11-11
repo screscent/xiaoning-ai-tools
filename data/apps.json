@@ -10778,5 +10778,29 @@
     "title": "工具C 尺寸与视距推荐"
    }
   ]
+ },
+ {
+  "id": "c7xbcvegmi",
+  "name": "AI 提示词与上下文计算合集",
+  "desc": "3 个提示词工具同页：Token 字数估算、上下文窗口规划、采样参数与成本",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://c7xbcvegmi.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "token",
+    "title": "工具A Token字数估算"
+   },
+   {
+    "key": "context",
+    "title": "工具B 上下文窗口规划"
+   },
+   {
+    "key": "sampling",
+    "title": "工具C 采样参数与成本"
+   }
+  ]
  }
 ]
