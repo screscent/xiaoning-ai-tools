@@ -205,7 +205,7 @@
 - [图片拼接与拼图合集](https://screscent.github.io/xiaoning-ai-tools/tools/stitch-grid.html)：6 个拼图工具同页：纵向、横向、宫格、边框、间距、拼图比例预设（免费）
 - [HTML 实体编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/html-entity-codec.html)：HTML 特殊字符实体编码/解码，支持引号与换行（免费）
 - [单价与多规格比价合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-price-comparator.html)：6 个比价工具同页：单位价、规格、多件、会员价、优惠叠加、历史价格记录（免费）
-- [图片圆角与边框合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-round-corner.html)：4 个图片工具同页：圆角、边框、圆形头像、投影（免费）
+- [图片圆角与边框合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-round-corner.html)：5 个图片工具同页：圆角、边框、圆形头像、投影、安全边距与出血线（免费）
 - [CSS 阴影生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-shadow-generator.html)：滑块调偏移/模糊/扩散，实时预览并复制 box-shadow（免费）
 - [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：6 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义、正则转义与常用式（免费）
 - [Markdown 转纯文本](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：Markdown → 纯文本，可去列表符号/代码块并下载 txt（免费）
@@ -245,7 +245,7 @@
 - [图片转 ASCII 艺术](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：图片转字符画，可选字符集与彩色 HTML 输出（免费）
 - [CSS 霓虹文字效果生成器](https://screscent.github.io/xiaoning-ai-tools/tools/neon-text.html)：调色与发光强度生成霓虹 text-shadow，可复制下载（免费）
 - [中文与拼音处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-pinyin.html)：6 个拼音工具：带调拼音、无调与首字母、多音字、逐字对照表、拼音排序、声韵拆解（免费）
-- [隐私设置自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：4 个隐私自查清单：社交平台、手机权限、浏览器、账号安全（免费）
+- [隐私设置自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：5 个隐私自查清单：社交平台、手机权限、浏览器、账号安全、双重验证 MFA（免费）
 - [书签整理与导出合集](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：6 个书签工具同页：书签解析与去重、按域名分组、转表格与 JSON、导出浏览器书签、书签体检、分类与标签整理（免费）
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：6 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网、端口与协议自查（免费）
 - [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：6 个农历工具：农历转换、节气查询、月相查询、农历生日、节日倒计时、数九与三伏（免费）
@@ -510,7 +510,7 @@
 - [瓷砖美缝与辅材用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/tile-grout-waterproof-quantity-kit.html)：4 个装修工具：瓷砖用量、美缝剂、防水涂料、踢脚线与门槛石（免费）
 - [显示器参数与选购计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/monitor-ppi-refresh-distance-kit.html)：6 个显示器工具同页：分辨率与 PPI、刷新率与帧率、尺寸与视距、色域与色准、支架与升降、校色与验收（免费）
 - [AI 提示词与上下文计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-prompt-token-context-cost-kit.html)：6 个提示词工具同页：Token 估算、上下文规划、采样成本、提示词缓存、提示词评测、提示词安全（免费）
-- [键鼠手感与灵敏度配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/mouse-keyboard-dpi-polling-layout-kit.html)：4 个键鼠工具同页：DPI 与灵敏度、回报率与延迟、键位布局与手型、宏与按键冲突（免费）
+- [键鼠手感与灵敏度配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/mouse-keyboard-dpi-polling-layout-kit.html)：5 个键鼠工具同页：DPI 与灵敏度、回报率与延迟、键位布局与手型、宏与按键冲突、eDPI 换算（免费）
 - [窗帘尺寸与窗饰计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/curtain-size-fabric-track-kit.html)：6 个窗帘工具同页：尺寸褶皱、布料预算、轨道安装、清洗保养、遮光隔热、电动窗帘（免费）
 - [家具尺寸与入户搬运合集](https://screscent.github.io/xiaoning-ai-tools/tools/furniture-doorway-stair-elevator-kit.html)：6 个入户工具同页：门洞、楼梯、电梯、搬运人数、搬运防护、旧家具处理（免费）
 - [汽车过户与上牌费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/vehicle-transfer-plate-move-kit.html)：6 个车务工具同页：过户税费、上牌保险、异地迁入、保险过户、车贷月供、二手车验车（免费）
