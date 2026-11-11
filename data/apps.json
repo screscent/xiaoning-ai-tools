@@ -1167,7 +1167,8 @@
  {
   "id": "m9lqr6ue9a",
   "name": "JSON 工具合集",
-  "desc": "6 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、JSON 与 XML、结构统计、两段差异对比，键路径级定位",
+  "desc": "6 个 JSON 工具同页：格式化、压缩、YAML、统计、对比、XML",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://m9lqr6ue9a.app.weavefox.cn",
@@ -1246,7 +1247,8 @@
  {
   "id": "keye5ddudk",
   "name": "编码转换工具合集",
-  "desc": "6 个编码工具同页：Base64、URL 与参数表、进制转换、SHA-256/384/512 哈希、Base58、cURL 转代码，调试接口一页搞定",
+  "desc": "6 个编码工具同页：Base64、URL、进制、哈希、Base58、cURL 转代码",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://keye5ddudk.app.weavefox.cn",
@@ -3714,7 +3716,7 @@
  {
   "id": "x89bsucakb",
   "name": "发票与税额计算合集",
-  "desc": "6 个本地税务工具：价税分离、税额反算、多税率对照、开票信息、进项抵扣、三表勾稽校验",
+  "desc": "6 个发票工具同页：拆分、税额、税率、开票信息、抵扣、交叉核对",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",

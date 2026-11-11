@@ -151,10 +151,10 @@
 - [图片压缩与批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-compressor.html)：6 个图片工具同页：单图压缩、批量统一压缩、压缩前后对比、画质档位建议、尺寸缩放限制、WebP 格式选择（免费）
 - [房贷与购房成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/mortgage-calculator.html)：6 个房贷工具同页：提前还款、利率月供、购房能力、二手房税费、租房买房对比、中介与过户杂费（免费）
 - [二维码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：文本网址 → 本地生成 PNG，免费（免费）
-- [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：6 个 JSON 工具同页：格式化校验、压缩转义、JSON 与 YAML、JSON 与 XML、结构统计、两段差异对比，键路径级定位（免费）
+- [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：6 个 JSON 工具同页：格式化、压缩、YAML、统计、对比、XML（免费）
 - [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：6 个 CSV 工具同页：CSV→JSON、JSON→CSV、表格预览、分隔符检测、列筛选重排、编码与换行清洗，字段多时先挑列再转换（免费）
 - [文本批量处理](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：批量去重、查找替换、排序与前后缀，本地处理（免费）
-- [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：6 个编码工具同页：Base64、URL 与参数表、进制转换、SHA-256/384/512 哈希、Base58、cURL 转代码，调试接口一页搞定（免费）
+- [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：6 个编码工具同页：Base64、URL、进制、哈希、Base58、cURL 转代码（免费）
 - [URL 编解码与参数解析器](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：URL 编码/解码 + 查询参数解析与地址分解（免费）
 - [时间戳与日期工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/timestamp-converter.html)：6 个时间工具同页：时间戳转换、时区换算、时区缩写与 UTC 偏移、ISO·RFC 格式、ISO 周数与季节、Cron 解析，排期与对时一个页面搞定（免费）
 - [图片格式转换器](https://screscent.github.io/xiaoning-ai-tools/tools/image-format-converter.html)：PNG/JPG/WebP 互转，质量/尺寸可调，本地处理（免费）
@@ -250,7 +250,7 @@
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：6 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网、端口与协议自查（免费）
 - [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：6 个农历工具：农历转换、节气查询、月相查询、农历生日、节日倒计时、数九与三伏（免费）
 - [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
-- [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：6 个本地税务工具：价税分离、税额反算、多税率对照、开票信息、进项抵扣、三表勾稽校验（免费）
+- [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：6 个发票工具同页：拆分、税额、税率、开票信息、抵扣、交叉核对（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
 - [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：6 个光线工具同页：日出、黄金时刻、昼长、规划、光时、月相与夜空窗口（免费）
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
