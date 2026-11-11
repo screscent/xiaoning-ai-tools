@@ -504,7 +504,7 @@
 - [体检报告指标解读合集](https://screscent.github.io/xiaoning-ai-tools/tools/health-check-report-marker-guide-kit.html)：4 个解读工具同页：血常规、肝肾功能、血脂血糖、尿常规（免费）
 - [厨房锅具与刀具选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-cookware-knife-board-kit.html)：4 个厨房工具：锅具尺寸、刀具配置、砧板材质、锅盖蒸屉适配（免费）
 - [床垫与枕头选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/mattress-pillow-bedding-buying-kit.html)：5 个睡眠工具同页：床垫尺寸、枕头高度、床品换洗、床垫保护清洁、试睡退换（免费）
-- [卫浴五金与浴室用品合集](https://screscent.github.io/xiaoning-ai-tools/tools/bathroom-hardware-fixture-buying-kit.html)：4 个卫浴工具同页：花洒水压、龙头角阀、地漏防臭、浴室收纳（免费）
+- [卫浴五金与浴室用品合集](https://screscent.github.io/xiaoning-ai-tools/tools/bathroom-hardware-fixture-buying-kit.html)：5 个卫浴工具同页：花洒水压、龙头角阀、地漏防臭、浴室收纳、除垢滤芯（免费）
 - [花盆与土壤配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/flower-pot-soil-fertilize-kit.html)：5 个园艺工具同页：花盆尺寸、土壤配比、施肥浇水、换盆修根、浇水频率（免费）
 - [车险与理赔自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/auto-insurance-claim-ncd-kit.html)：4 个车险工具：保费组合、理赔流程、出险决策、事故快处清单（免费）
 - [瓷砖美缝与辅材用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/tile-grout-waterproof-quantity-kit.html)：4 个装修工具：瓷砖用量、美缝剂、防水涂料、踢脚线与门槛石（免费）
@@ -515,9 +515,9 @@
 - [家具尺寸与入户搬运合集](https://screscent.github.io/xiaoning-ai-tools/tools/furniture-doorway-stair-elevator-kit.html)：4 个入户工具同页：门洞、楼梯、电梯、搬运人数（免费）
 - [汽车过户与上牌费用合集](https://screscent.github.io/xiaoning-ai-tools/tools/vehicle-transfer-plate-move-kit.html)：4 个车务工具同页：过户税费、上牌与保险、异地迁入、保险过户退保（免费）
 - [高速通行费与 ETC 合集](https://screscent.github.io/xiaoning-ai-tools/tools/highway-toll-etc-holiday-kit.html)：4 个自驾工具同页：过路费估算、ETC 折扣、节假日免费、服务区休息规划（免费）
-- [电脑装机与硬件兼容合集](https://screscent.github.io/xiaoning-ai-tools/tools/pc-build-psu-case-cooler-kit.html)：5 个装机工具同页：电源、机箱、散热、升级瓶颈、噪音静音（免费）
+- [电脑装机与硬件兼容合集](https://screscent.github.io/xiaoning-ai-tools/tools/pc-build-psu-case-cooler-kit.html)：6 个装机工具同页：电源、机箱、散热、升级瓶颈、噪音静音、开机自检（免费）
 - [留学申请费用与时间线合集](https://screscent.github.io/xiaoning-ai-tools/tools/study-abroad-cost-timeline-funds-kit.html)：4 个留学工具同页：费用预算、申请时间线、资金准备、选校梯度清单（免费）
-- [智能家居设备与耗电合集](https://screscent.github.io/xiaoning-ai-tools/tools/smart-home-power-gateway-sensor-kit.html)：4 个智能家居工具同页：待机耗电、网关协议、传感器布点、场景联动清单（免费）
+- [智能家居设备与耗电合集](https://screscent.github.io/xiaoning-ai-tools/tools/smart-home-power-gateway-sensor-kit.html)：5 个智能家居工具同页：待机耗电、网关协议、传感器布点、场景联动、全屋网络布点（免费）
 
 ## 博客（162 篇）
 - [小凝 Agent：从作战指挥决策体系到项目框架](https://screscent.github.io/xiaoning-ai-tools/blog/kIgEGY4Zz6Wza333OxqR-w.html)：2026-11-11｜作战指挥给骨架，小凝 AgentOS 给边界，项目给血肉，最后长出一个可复用的项目框架。
