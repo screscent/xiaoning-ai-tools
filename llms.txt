@@ -502,12 +502,12 @@
 - [宠物出行与寄养计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/pet-travel-boarding-prepare-kit.html)：6 个宠物工具同页：托运费用、寄养对比、出行准备、航空箱尺寸、车内防暑、出行适应训练（免费）
 - [家电清洗与保养周期合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-appliance-cleaning-cycle-kit.html)：5 个家电工具：空调清洗、洗衣机清洗、冰箱清洁、油烟机清洗、净水滤芯周期（免费）
 - [体检报告指标解读合集](https://screscent.github.io/xiaoning-ai-tools/tools/health-check-report-marker-guide-kit.html)：6 个解读工具同页：血常规、肝肾功能、血脂血糖、尿常规、凝血炎症、维生素微量元素（免费）
-- [厨房锅具与刀具选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-cookware-knife-board-kit.html)：4 个厨房工具：锅具尺寸、刀具配置、砧板材质、锅盖蒸屉适配（免费）
+- [厨房锅具与刀具选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-cookware-knife-board-kit.html)：5 个厨房工具同页：锅具尺寸材质、刀具配置、砧板材质、锅盖蒸屉适配、锅具容量与份量（免费）
 - [床垫与枕头选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/mattress-pillow-bedding-buying-kit.html)：6 个睡眠工具同页：床垫尺寸、枕头高度、床品换洗、床垫保护清洁、试睡退换、床品除螨（免费）
 - [卫浴五金与浴室用品合集](https://screscent.github.io/xiaoning-ai-tools/tools/bathroom-hardware-fixture-buying-kit.html)：6 个卫浴工具同页：花洒水压、龙头角阀、地漏防臭、浴室收纳、除垢滤芯、防滑扶手（免费）
 - [花盆与土壤配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/flower-pot-soil-fertilize-kit.html)：6 个园艺工具同页：花盆尺寸、土壤配比、施肥浇水、换盆修根、浇水频率、病虫害处理（免费）
-- [车险与理赔自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/auto-insurance-claim-ncd-kit.html)：4 个车险工具：保费组合、理赔流程、出险决策、事故快处清单（免费）
-- [瓷砖美缝与辅材用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/tile-grout-waterproof-quantity-kit.html)：4 个装修工具：瓷砖用量、美缝剂、防水涂料、踢脚线与门槛石（免费）
+- [车险与理赔自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/auto-insurance-claim-ncd-kit.html)：5 个车险工具同页：保费险种组合、理赔流程材料、出险决策、事故快处清单、出险自付与免赔（免费）
+- [瓷砖美缝与辅材用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/tile-grout-waterproof-quantity-kit.html)：5 个装修工具同页：瓷砖数量与损耗、美缝剂用量、防水涂料、踢脚线门槛石、留缝与美缝用量（免费）
 - [显示器参数与选购计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/monitor-ppi-refresh-distance-kit.html)：6 个显示器工具同页：分辨率与 PPI、刷新率与帧率、尺寸与视距、色域与色准、支架与升降、校色与验收（免费）
 - [AI 提示词与上下文计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-prompt-token-context-cost-kit.html)：6 个提示词工具同页：Token 估算、上下文规划、采样成本、提示词缓存、提示词评测、提示词安全（免费）
 - [键鼠手感与灵敏度配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/mouse-keyboard-dpi-polling-layout-kit.html)：5 个键鼠工具同页：DPI 与灵敏度、回报率与延迟、键位布局与手型、宏与按键冲突、eDPI 换算（免费）
