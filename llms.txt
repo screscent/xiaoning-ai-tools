@@ -491,10 +491,10 @@
 - [保险保额与缴费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/insurance-coverage-premium.html)：6 个保险测算工具同页：重疾保额、寿险保额、年缴月缴对比、理赔材料、保费占比、保单现金价值估算（免费）
 - [母婴护理与开销合集](https://screscent.github.io/xiaoning-ai-tools/tools/parenting-care-collection.html)：4 个母婴工具同页：疫苗时间表、尿布开销、衣物尺码、辅食添加与喂养量（免费）
 - [地铁与公交换乘速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/metro-transfer-collection.html)：4 个通勤工具同页：换乘时间、票价与月票、末班车、换乘步行时间（免费）
-- [高铁与火车出行速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/rail-travel-collection.html)：3 个铁路出行工具同页：改签费、进站时间、行李规格（免费）
+- [高铁与火车出行速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/rail-travel-collection.html)：4 个铁路出行工具同页：改签费、进站时间、行李规格、儿童票与优惠（免费）
 - [理发与发型打理合集](https://screscent.github.io/xiaoning-ai-tools/tools/haircare-budget-collection.html)：3 个打理工具同页：剪发预算、染发成本、洗发水补货（免费）
 - [加油与充电成本对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-ev-cost-collection.html)：4 个用车成本工具同页：每公里成本、油电对比、充电桩回本、充电桩功率与时间（免费）
-- [空气炸锅与微波炉用时换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/airfryer-microwave-thaw-time-kit.html)：3 个加热用时工具同页：空炸温度时间换算、微波加热时长、解冻时长（免费）
+- [空气炸锅与微波炉用时换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/airfryer-microwave-thaw-time-kit.html)：4 个加热用时工具同页：空炸温度时间换算、微波加热时长、解冻时长、烤箱温度换算（免费）
 - [供暖与取暖费用计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/heating-cost-compare-kit.html)：3 个冬季取暖费用工具同页：供暖费核算、电暖器电费、取暖方式对比（免费）
 - [洗碗机容量与耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/dishwasher-capacity-supply-runtime-kit.html)：3 个洗碗机工具同页：容量与餐具量、耗材月成本、洗涤水电费（免费）
 - [西装衬衫尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/suit-shirt-tie-size-kit.html)：3 个正装尺码工具同页：西装号型、衬衫尺码、领带尺寸与打法（免费）
@@ -507,7 +507,7 @@
 - [卫浴五金与浴室用品合集](https://screscent.github.io/xiaoning-ai-tools/tools/bathroom-hardware-fixture-buying-kit.html)：3 个卫浴工具：花洒水压、龙头角阀、地漏防臭（免费）
 - [花盆与土壤配比合集](https://screscent.github.io/xiaoning-ai-tools/tools/flower-pot-soil-fertilize-kit.html)：3 个园艺工具：花盆尺寸、土壤配比、施肥浇水（免费）
 - [车险与理赔自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/auto-insurance-claim-ncd-kit.html)：3 个车险工具：保费组合、理赔流程、出险决策（免费）
-- [瓷砖美缝与辅材用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/tile-grout-waterproof-quantity-kit.html)：3 个装修工具：瓷砖用量、美缝剂、防水涂料（免费）
+- [瓷砖美缝与辅材用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/tile-grout-waterproof-quantity-kit.html)：4 个装修工具：瓷砖用量、美缝剂、防水涂料、踢脚线与门槛石（免费）
 
 ## 博客（161 篇）
 - [小凝 Agent：四层与四个横面：为什么有些东西不能放进任何一层](https://screscent.github.io/xiaoning-ai-tools/blog/NHBfAV20nzaLtCJa7GCD9g.html)：2026-11-10｜承接第 84 期：上一篇讲分层为什么必要，这一篇讲分层做出来是什么形状——四层、四个横面，以及升级时怎么判定一次改动落在哪、会牵动谁。
