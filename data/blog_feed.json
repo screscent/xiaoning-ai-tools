@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "source": "wechat-mp",
- "count": 162,
+ "count": 163,
  "articles": [
+  {
+   "slug": "7aVzvmr42wJtdvqae1VFXA",
+   "title": "小凝 Agent：AI 时代，程序员会从「写软件」变成「建体系」吗",
+   "url": "https://mp.weixin.qq.com/s/7aVzvmr42wJtdvqae1VFXA",
+   "publish_time": "2026-11-12",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "kIgEGY4Zz6Wza333OxqR-w",
    "title": "小凝 Agent：从作战指挥决策体系到项目框架",

@@ -1,8 +1,13 @@
 {
- "updated": "2026-11-11",
- "count": 162,
+ "updated": "2026-11-12",
+ "count": 163,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-12",
+   "title": "小凝 Agent：AI 时代，程序员会从「写软件」变成「建体系」吗",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/7aVzvmr42wJtdvqae1VFXA.html"
+  },
   {
    "date": "2026-11-11",
    "title": "小凝 Agent：从作战指挥决策体系到项目框架",
@@ -147,11 +152,6 @@
    "date": "2026-10-12",
    "title": "小凝：绿泡泡文章平台留言回复的自我迭代",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/mzMIYumG11wxEO8gSKCNxw.html"
-  },
-  {
-   "date": "2026-10-11",
-   "title": "小凝：接管绿泡泡后的工程化操作--GUI 通道的常驻感知、角色分工、提速工程与人机边界技术拆解",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/k3UFB-Mg2b9eoKMBk46KpQ.html"
   }
  ]
 }

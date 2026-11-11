@@ -1157,12 +1157,23 @@
  },
  {
   "id": "g42fhctuhw",
-  "name": "二维码生成器",
-  "desc": "文本网址 → 本地生成 PNG，免费",
+  "name": "二维码生成与尺寸合集",
+  "desc": "2 个二维码工具同页：二维码生成、尺寸与容错等级",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://g42fhctuhw.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "qr",
+    "title": "工具A 二维码生成"
+   },
+   {
+    "key": "qrsize",
+    "title": "工具B 二维码尺寸与容错"
+   }
+  ]
  },
  {
   "id": "m9lqr6ue9a",
@@ -1415,12 +1426,23 @@
  },
  {
   "id": "fwbncxyqkh",
-  "name": "数字进制转换器",
-  "desc": "二/八/十/十六进制互转，位宽与位模式展示",
+  "name": "数字进制转换合集",
+  "desc": "2 个进制工具同页：单值进制转换、批量进制转换",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://fwbncxyqkh.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "radix",
+    "title": "工具A 进制转换"
+   },
+   {
+    "key": "radix2",
+    "title": "工具B 进制批量转换"
+   }
+  ]
  },
  {
   "id": "uidvbyxjku",
@@ -1681,12 +1703,23 @@
  },
  {
   "id": "r3akzzzjyr",
-  "name": "哈希校验工具",
-  "desc": "本地计算 SHA-256/384/512，文本与文件校验对比",
+  "name": "哈希校验与 HMAC 合集",
+  "desc": "2 个哈希工具同页：文件文本哈希校验、HMAC 与加盐哈希",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r3akzzzjyr.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "hash",
+    "title": "工具A 哈希校验"
+   },
+   {
+    "key": "hmac",
+    "title": "工具B HMAC 与加盐哈希"
+   }
+  ]
  },
  {
   "id": "frnustgsra",
