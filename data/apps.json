@@ -10802,5 +10802,29 @@
     "title": "工具C 采样参数与成本"
    }
   ]
+ },
+ {
+  "id": "qhpmbistfq",
+  "name": "键鼠手感与灵敏度配置合集",
+  "desc": "3 个键鼠工具同页：DPI 与灵敏度换算、回报率与延迟、键位布局与手型",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qhpmbistfq.app.weavefox.cn",
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "dpi",
+    "title": "工具A DPI与灵敏度换算"
+   },
+   {
+    "key": "polling",
+    "title": "工具B 回报率与延迟"
+   },
+   {
+    "key": "layout",
+    "title": "工具C 键位布局与手型"
+   }
+  ]
  }
 ]
