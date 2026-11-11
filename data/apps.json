@@ -10983,5 +10983,29 @@
     "title": "工具C 资金准备"
    }
   ]
+ },
+ {
+  "id": "ygsemtz2jf",
+  "name": "智能家居设备与耗电合集",
+  "desc": "3 个智能家居工具同页：待机耗电、网关协议、传感器布点",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://ygsemtz2jf.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "power",
+    "title": "工具A 待机耗电评估"
+   },
+   {
+    "key": "gateway",
+    "title": "工具B 网关协议"
+   },
+   {
+    "key": "sensor",
+    "title": "工具C 传感器布点"
+   }
+  ]
  }
 ]
