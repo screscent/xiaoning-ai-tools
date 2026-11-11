@@ -10935,5 +10935,29 @@
     "title": "工具C 节假日免费"
    }
   ]
+ },
+ {
+  "id": "keb6padudk",
+  "name": "电脑装机与硬件兼容合集",
+  "desc": "3 个装机工具同页：电源功率估算、机箱尺寸兼容、散热器与风道",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://keb6padudk.app.weavefox.cn",
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "psu",
+    "title": "工具A 电源功率"
+   },
+   {
+    "key": "case",
+    "title": "工具B 机箱尺寸"
+   },
+   {
+    "key": "cooler",
+    "title": "工具C 散热兼容"
+   }
+  ]
  }
 ]
