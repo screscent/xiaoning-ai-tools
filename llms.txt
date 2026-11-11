@@ -312,7 +312,7 @@
 - [会议议程与控场合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：6 个开会工具：议程生成、发言分配、控场提示、计时、决议与待办清单、会议纪要模板（免费）
 - [CSS 轮播图样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-carousel.html)：宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML（免费）
 - [呼吸放松计时器](https://screscent.github.io/xiaoning-ai-tools/tools/breathing-timer.html)：4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进（免费）
-- [保养与年检提醒合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-maintenance.html)：4 个车主提醒工具：保养周期、年检到期、保险到期、保养项目清单（免费）
+- [保养与年检提醒合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-maintenance.html)：5 个车主提醒工具：保养周期、年检到期、保险到期、保养项目清单、轮胎更换判断（免费）
 - [文本空行清理与重复行统计器](https://screscent.github.io/xiaoning-ai-tools/tools/text-lines-clean.html)：清理空行、去重并统计重复行次数，保留首次出现顺序（免费）
 - [时差调整与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/jetlag-plan.html)：5 个出行作息工具：向东倒时差、向西倒时差、作息调整表、落地建议、小睡与咖啡因窗口（免费）
 - [久坐提醒与拉伸计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议（免费）
@@ -492,13 +492,13 @@
 - [母婴护理与开销合集](https://screscent.github.io/xiaoning-ai-tools/tools/parenting-care-collection.html)：4 个母婴工具同页：疫苗时间表、尿布开销、衣物尺码、辅食添加与喂养量（免费）
 - [地铁与公交换乘速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/metro-transfer-collection.html)：4 个通勤工具同页：换乘时间、票价与月票、末班车、换乘步行时间（免费）
 - [高铁与火车出行速查合集](https://screscent.github.io/xiaoning-ai-tools/tools/rail-travel-collection.html)：4 个铁路出行工具同页：改签费、进站时间、行李规格、儿童票与优惠（免费）
-- [理发与发型打理合集](https://screscent.github.io/xiaoning-ai-tools/tools/haircare-budget-collection.html)：3 个打理工具同页：剪发预算、染发成本、洗发水补货（免费）
+- [理发与发型打理合集](https://screscent.github.io/xiaoning-ai-tools/tools/haircare-budget-collection.html)：4 个打理工具同页：剪发预算、染发成本、洗发水补货、烫发护理预算（免费）
 - [加油与充电成本对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-ev-cost-collection.html)：4 个用车成本工具同页：每公里成本、油电对比、充电桩回本、充电桩功率与时间（免费）
 - [空气炸锅与微波炉用时换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/airfryer-microwave-thaw-time-kit.html)：4 个加热用时工具同页：空炸温度时间换算、微波加热时长、解冻时长、烤箱温度换算（免费）
 - [供暖与取暖费用计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/heating-cost-compare-kit.html)：4 个冬季取暖费用工具同页：供暖费核算、电暖器电费、取暖方式对比、门窗保温损耗（免费）
 - [洗碗机容量与耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/dishwasher-capacity-supply-runtime-kit.html)：3 个洗碗机工具同页：容量与餐具量、耗材月成本、洗涤水电费（免费）
 - [西装衬衫尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/suit-shirt-tie-size-kit.html)：3 个正装尺码工具同页：西装号型、衬衫尺码、领带尺寸与打法（免费）
-- [纸箱与打包耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/boxes-packing-supply-labor-kit.html)：3 个打包准备工具同页：纸箱数量与箱型、打包耗材用量、打包工时与人工（免费）
+- [纸箱与打包耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/boxes-packing-supply-labor-kit.html)：4 个打包准备工具同页：纸箱数量与箱型、打包耗材用量、打包工时与人工、胶带缓冲用量（免费）
 - [宠物出行与寄养计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/pet-travel-boarding-prepare-kit.html)：3 个宠物工具：托运费用、寄养对比、出行准备清单（免费）
 - [家电清洗与保养周期合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-appliance-cleaning-cycle-kit.html)：4 个家电工具：空调清洗、洗衣机清洗、冰箱清洁、油烟机清洗（免费）
 - [体检报告指标解读合集](https://screscent.github.io/xiaoning-ai-tools/tools/health-check-report-marker-guide-kit.html)：3 个解读工具：血常规、肝肾功能、血脂血糖（免费）
