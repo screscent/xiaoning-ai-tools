@@ -3796,7 +3796,8 @@
  {
   "id": "tbnvznmk3t",
   "name": "行李打包清单合集",
-  "desc": "4 个出行清单：商务出差、海岛度假、户外徒步、亲子出行",
+  "desc": "5 个出行清单：商务出差、海岛度假、户外徒步、亲子出行、安检与液体限制",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://tbnvznmk3t.app.weavefox.cn",
@@ -3817,6 +3818,10 @@
    {
     "key": "family",
     "title": "工具D 亲子出行"
+   },
+   {
+    "key": "security",
+    "title": "工具E 安检与液体限制"
    }
   ]
  },
@@ -4688,7 +4693,7 @@
  {
   "id": "9paqwhr8kd",
   "name": "JSON 路径查询合集",
-  "desc": "4 个路径工具同页：JSONPath、JSON Pointer、点号路径与路径生成，结果可复制",
+  "desc": "5 个 JSON 路径工具同页：JSONPath、JSON Pointer、点号路径、路径生成、Schema 校验",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -4710,6 +4715,10 @@
    {
     "key": "build",
     "title": "路径生成器"
+   },
+   {
+    "key": "schema",
+    "title": "工具E Schema 校验"
    }
   ]
  },
@@ -5685,7 +5694,7 @@
  {
   "id": "puhfd93a4t",
   "name": "步数与活动目标合集",
-  "desc": "4 个步数工具同页：步数目标、步幅里程、热量消耗、周计划",
+  "desc": "5 个步数工具同页：步数目标、步幅里程、热量消耗、周计划、配速与步频",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -5707,6 +5716,10 @@
    {
     "key": "plan",
     "title": "周计划"
+   },
+   {
+    "key": "cadence",
+    "title": "工具E 配速与步频"
    }
   ]
  },

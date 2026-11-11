@@ -254,7 +254,7 @@
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
 - [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：6 个光线工具同页：日出、黄金时刻、昼长、规划、光时、月相与夜空窗口（免费）
 - [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
-- [行李打包清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：4 个出行清单：商务出差、海岛度假、户外徒步、亲子出行（免费）
+- [行李打包清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：5 个出行清单：商务出差、海岛度假、户外徒步、亲子出行、安检与液体限制（免费）
 - [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：6 个几何工具同页：平面、立体、圆与角、土方、刷漆用量、坡度与排水（免费）
 - [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：6 个编码工具：Base32 编码、解码、填充校验、编码互转、文本十六进制、Crockford Base32（免费）
 - [中文标点全半角转换器](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：全角半角互转，按标点/数字/空格分范围处理（免费）
@@ -292,7 +292,7 @@
 - [汇率换算与换汇成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/manual-fx.html)：6 个换汇工具：双向换算、多币种折算、手续费到账、现钞与刷卡、境外刷卡、点差成本（免费）
 - [成绩与 GPA 换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/gpa-calc.html)：4 个成绩工具同页：百分制与 GPA、学分加权、排名百分位、成绩单换算（免费）
 - [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：6 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算、训练区间、恢复与训练负荷（免费）
-- [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：4 个路径工具同页：JSONPath、JSON Pointer、点号路径与路径生成，结果可复制（免费）
+- [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：5 个 JSON 路径工具同页：JSONPath、JSON Pointer、点号路径、路径生成、Schema 校验（免费）
 - [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema-validate-mock-kit.html)：6 个 Schema 工具：Schema 生成、Schema 校验、示例数据、字段说明、TS 类型、模拟数据批量生成（免费）
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
 - [数字转英文读法](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：整数转英文单词，支持英式 and 与序数词（免费）
@@ -341,7 +341,7 @@
 - [心率区间与运动强度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：按年龄与静息心率算五档心率区间，给出燃脂推荐范围（免费）
 - [食物热量与运动消耗换算器](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：按 MET 与体重换算消耗某份热量需要的运动分钟数（免费）
 - [签证材料清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-checklist.html)：6 个工具：旅游 / 商务 / 学生 / 探亲访友 / 工作签证材料、办理时间线（免费）
-- [步数与活动目标合集](https://screscent.github.io/xiaoning-ai-tools/tools/step-goal.html)：4 个步数工具同页：步数目标、步幅里程、热量消耗、周计划（免费）
+- [步数与活动目标合集](https://screscent.github.io/xiaoning-ai-tools/tools/step-goal.html)：5 个步数工具同页：步数目标、步幅里程、热量消耗、周计划、配速与步频（免费）
 - [字体搭配与排版比例生成器](https://screscent.github.io/xiaoning-ai-tools/tools/type-scale.html)：按基准字号与字阶比例生成六级字号行高与字体栈（免费）
 - [色盲友好配色检查器](https://screscent.github.io/xiaoning-ai-tools/tools/cvd-checker.html)：模拟四类色觉障碍并重算 WCAG 对比度是否达标（免费）
 - [时薪与通勤成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/hourly-wage.html)：4 个时薪工具同页：实际时薪、通勤成本、涨薪换算、城市对比（免费）
