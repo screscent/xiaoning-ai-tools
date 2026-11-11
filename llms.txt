@@ -356,7 +356,7 @@
 - [睡眠债务与补觉计划计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-debt.html)：按工作日周末睡眠差算累计债务，给出补觉天数与风险提示（免费）
 - [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：6 个门票工具同页：单景点门票、多景点合计、城市通票、讲解观光车、儿童票、退改签规则（免费）
 - [昵称与英文名生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/nickname-name-gen.html)：6 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺、账号长度校验、英文名含义与来源（免费）
-- [凯撒与古典密码合集](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：4 个古典密码工具同页：凯撒位移、ROT13、反字母表、维吉尼亚（免费）
+- [凯撒与古典密码合集](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：5 个古典密码工具同页：凯撒位移、ROT13、反字母表、维吉尼亚、栅栏密码（免费）
 - [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：6 个排期工具同页：甘特、里程碑、关键路径、燃尽、人力、缓冲与机动时间（免费）
 - [界面提示文案合集](https://screscent.github.io/xiaoning-ai-tools/tools/ui-microcopy-onboarding-kit.html)：6 个文案工具：空状态、错误页、加载中、成功反馈、文案体检、引导文案组合（免费）
 - [图片宽高比与等比缩放计算器](https://screscent.github.io/xiaoning-ai-tools/tools/aspect-ratio.html)：按目标宽度或百分比等比缩放，给出比例化简与面积变化（免费）
@@ -498,9 +498,9 @@
 - [供暖与取暖费用计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/heating-cost-compare-kit.html)：4 个冬季取暖费用工具同页：供暖费核算、电暖器电费、取暖方式对比、门窗保温损耗（免费）
 - [洗碗机容量与耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/dishwasher-capacity-supply-runtime-kit.html)：6 个洗碗机工具同页：容量与餐具量、耗材月成本、洗涤水电费、摆放与装载、烘干与储存、预冲洗预处理（免费）
 - [西装衬衫尺码换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/suit-shirt-tie-size-kit.html)：4 个正装尺码工具同页：西装号型、衬衫尺码、领带尺寸与打法、外套马甲尺码（免费）
-- [纸箱与打包耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/boxes-packing-supply-labor-kit.html)：4 个打包准备工具同页：纸箱数量与箱型、打包耗材用量、打包工时与人工、胶带缓冲用量（免费）
+- [纸箱与打包耗材计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/boxes-packing-supply-labor-kit.html)：5 个打包准备工具同页：纸箱数量与箱型、打包耗材用量、打包工时与人工、胶带缓冲用量、体积重（免费）
 - [宠物出行与寄养计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/pet-travel-boarding-prepare-kit.html)：6 个宠物工具同页：托运费用、寄养对比、出行准备、航空箱尺寸、车内防暑、出行适应训练（免费）
-- [家电清洗与保养周期合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-appliance-cleaning-cycle-kit.html)：4 个家电工具：空调清洗、洗衣机清洗、冰箱清洁、油烟机清洗（免费）
+- [家电清洗与保养周期合集](https://screscent.github.io/xiaoning-ai-tools/tools/home-appliance-cleaning-cycle-kit.html)：5 个家电工具：空调清洗、洗衣机清洗、冰箱清洁、油烟机清洗、净水滤芯周期（免费）
 - [体检报告指标解读合集](https://screscent.github.io/xiaoning-ai-tools/tools/health-check-report-marker-guide-kit.html)：6 个解读工具同页：血常规、肝肾功能、血脂血糖、尿常规、凝血炎症、维生素微量元素（免费）
 - [厨房锅具与刀具选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/kitchen-cookware-knife-board-kit.html)：4 个厨房工具：锅具尺寸、刀具配置、砧板材质、锅盖蒸屉适配（免费）
 - [床垫与枕头选购合集](https://screscent.github.io/xiaoning-ai-tools/tools/mattress-pillow-bedding-buying-kit.html)：6 个睡眠工具同页：床垫尺寸、枕头高度、床品换洗、床垫保护清洁、试睡退换、床品除螨（免费）
