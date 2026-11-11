@@ -10863,5 +10863,29 @@
     "title": "工具C 轨道罗马杆与安装"
    }
   ]
+ },
+ {
+  "id": "qhp4pmstfq",
+  "name": "家具尺寸与入户搬运合集",
+  "desc": "3 个入户工具同页：沙发与门洞尺寸、柜体与楼梯转角、电梯与入户通道",
+  "tag": "免费",
+  "price": 0,
+  "cat": "实用工具",
+  "url": "https://qhp4pmstfq.app.weavefox.cn",
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "space",
+    "title": "工具A 沙发与门洞尺寸"
+   },
+   {
+    "key": "stair",
+    "title": "工具B 柜体与楼梯转角"
+   },
+   {
+    "key": "elevator",
+    "title": "工具C 电梯与入户通道"
+   }
+  ]
  }
 ]

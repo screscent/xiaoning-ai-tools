@@ -1,6 +1,6 @@
 # 小凝 AI 工具集
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 496 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 497 个工具。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
@@ -13,7 +13,7 @@
 - [研发效率](https://screscent.github.io/xiaoning-ai-tools/categories/dev.html)：测试用例、PRD、SQL 优化、API 文档与正则生成，减少研发过程中的重复劳动。（16 个）
 - [生活家庭](https://screscent.github.io/xiaoning-ai-tools/categories/life.html)：菜谱、旅行、装修预算、家庭账本与节日祝福，处理生活里的琐碎决策。（19 个）
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
-- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（365 个）
+- [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（366 个）
 
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
@@ -512,6 +512,7 @@
 - [AI 提示词与上下文计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ai-prompt-token-context-cost-kit.html)：3 个提示词工具同页：Token 字数估算、上下文窗口规划、采样参数与成本（免费）
 - [键鼠手感与灵敏度配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/mouse-keyboard-dpi-polling-layout-kit.html)：3 个键鼠工具同页：DPI 与灵敏度换算、回报率与延迟、键位布局与手型（免费）
 - [窗帘尺寸与窗饰计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/curtain-size-fabric-track-kit.html)：3 个窗帘工具同页：尺寸与褶皱、布料用量与预算、轨道罗马杆与安装（免费）
+- [家具尺寸与入户搬运合集](https://screscent.github.io/xiaoning-ai-tools/tools/furniture-doorway-stair-elevator-kit.html)：3 个入户工具同页：沙发与门洞尺寸、柜体与楼梯转角、电梯与入户通道（免费）
 
 ## 博客（161 篇）
 - [小凝 Agent：四层与四个横面：为什么有些东西不能放进任何一层](https://screscent.github.io/xiaoning-ai-tools/blog/NHBfAV20nzaLtCJa7GCD9g.html)：2026-11-10｜承接第 84 期：上一篇讲分层为什么必要，这一篇讲分层做出来是什么形状——四层、四个横面，以及升级时怎么判定一次改动落在哪、会牵动谁。
