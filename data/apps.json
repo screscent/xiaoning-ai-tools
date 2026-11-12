@@ -6807,13 +6807,23 @@
  },
  {
   "id": "urkyphdyk8",
-  "name": "数据备份 3-2-1 自查清单生成器",
-  "desc": "按备份份数异地离线校验四项打分并给出改进动作",
+  "name": "数据备份与备份计划合集",
+  "desc": "2 个备份工具同页：3-2-1 自查清单、按数据类型生成备份计划",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://urkyphdyk8.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "plan321",
+    "title": "工具A 3-2-1自查"
+   },
+   {
+    "key": "backup3",
+    "title": "工具B 备份计划"
+   }
+  ]
  },
  {
   "id": "c7rpgyegmi",
@@ -6903,13 +6913,23 @@
  },
  {
   "id": "pz7bebqyzx",
-  "name": "膳食纤维与蔬果份量计算器",
-  "desc": "按年龄性别算每日纤维目标，拆成蔬菜水果份数并给食物对照",
+  "name": "膳食纤维与蔬果份量合集",
+  "desc": "2 个饮食工具同页：膳食纤维与蔬果份量计算、每日蔬果分配计划",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://pz7bebqyzx.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "fiber",
+    "title": "工具A 纤维份量"
+   },
+   {
+    "key": "vegplan",
+    "title": "工具B 蔬果计划"
+   }
+  ]
  },
  {
   "id": "dzfwjnslwd",
@@ -6979,13 +6999,23 @@
  },
  {
   "id": "ja4c4jkp5e",
-  "name": "Wi-Fi 与路由器安全自查清单生成器",
-  "desc": "按加密方式与六项配置打分，给出扣分项与整改路径",
+  "name": "Wi-Fi 安全与端口自查合集",
+  "desc": "2 个网络安全工具同页：Wi-Fi 与路由器自查、开放端口暴露自查",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ja4c4jkp5e.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "wifi",
+    "title": "工具A Wi-Fi自查"
+   },
+   {
+    "key": "ports",
+    "title": "工具B 端口自查"
+   }
+  ]
  },
  {
   "id": "rdqhhg4t4r",

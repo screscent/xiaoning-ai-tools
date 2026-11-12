@@ -370,16 +370,16 @@
 - [两步验证与恢复码合集](https://screscent.github.io/xiaoning-ai-tools/tools/recovery-codes.html)：2 个安全工具同页：两步验证码生成、备用恢复码生成（免费）
 - [繁简转换与用词对照器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-tw-cn.html)：繁简互转并对照用词与单字变化，附字数统计（免费）
 - [Base64URL 与 HMAC 哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64url-codec.html)：2 个编码工具同页：Base64URL 编解码、HMAC 消息认证哈希（免费）
-- [数据备份 3-2-1 自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/backup-321-check.html)：按备份份数异地离线校验四项打分并给出改进动作（免费）
+- [数据备份与备份计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/backup-321-check.html)：2 个备份工具同页：3-2-1 自查清单、按数据类型生成备份计划（免费）
 - [打车费用与通勤速查](https://screscent.github.io/xiaoning-ai-tools/tools/ride-fare-compare.html)：6 个出行工具：出租车计价、网约车对比、机场接送、通勤月成本、拼车分摊、夜间附加费估算（免费）
 - [蛋白质摄入与食物换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/protein-split.html)：2 个饮食工具同页：蛋白质摄入与三餐分配、常见食物蛋白换算（免费）
 - [浏览器指纹与隐私暴露自查器](https://screscent.github.io/xiaoning-ai-tools/tools/browser-fingerprint-check.html)：本地读取时区语言屏幕硬件Canvas九项，算熵值并给加固建议（免费）
 - [新能源车续航与车险合集](https://screscent.github.io/xiaoning-ai-tools/tools/ev-range-cost.html)：2 个用车工具同页：续航与充电费用估算、车险保费估算（免费）
-- [膳食纤维与蔬果份量计算器](https://screscent.github.io/xiaoning-ai-tools/tools/fiber-veggie.html)：按年龄性别算每日纤维目标，拆成蔬菜水果份数并给食物对照（免费）
+- [膳食纤维与蔬果份量合集](https://screscent.github.io/xiaoning-ai-tools/tools/fiber-veggie.html)：2 个饮食工具同页：膳食纤维与蔬果份量计算、每日蔬果分配计划（免费）
 - [平台图片尺寸与规格速查](https://screscent.github.io/xiaoning-ai-tools/tools/social-platform-image-size-kit.html)：6 个尺寸工具：社交、电商、视频、网页、封面、头像与缩略图（免费）
 - [航班值机与转机衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/flight-boarding-timeline.html)：2 个出行工具同页：值机与登机时间倒推、转机最短衔接时间（免费）
 - [钙与维生素 D 摄入计算器](https://screscent.github.io/xiaoning-ai-tools/tools/calcium-vitd.html)：按年龄性别算每日钙目标，估算奶豆摄入缺口与补充份数（免费）
-- [Wi-Fi 与路由器安全自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/wifi-security-check.html)：按加密方式与六项配置打分，给出扣分项与整改路径（免费）
+- [Wi-Fi 安全与端口自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/wifi-security-check.html)：2 个网络安全工具同页：Wi-Fi 与路由器自查、开放端口暴露自查（免费）
 - [在线小工具合集（字数·进制·折扣·日期差·颜色·单位）](https://screscent.github.io/xiaoning-ai-tools/tools/mini-tools-collection.html)：一个页面装 6 个常用小工具，hash 直链可直达子工具（免费）
 - [引用格式与文献速查](https://screscent.github.io/xiaoning-ai-tools/tools/ref-citation.html)：6 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX、文献去重统计与引用一致性检查（免费）
 - [嘌呤尿酸与饮水目标合集](https://screscent.github.io/xiaoning-ai-tools/tools/purine-uric.html)：2 个健康工具同页：嘌呤与尿酸饮食速查、每日饮水目标与分时提醒（免费）
