@@ -226,7 +226,7 @@
 - [TOTP 验证码与备份码清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：2 个两步验证工具同页：TOTP 动态码、备份码清点（免费）
 - [倒班排班与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：6 个排班工具：三班倒、四班两倒、夜班作息、换班记录、疲劳恢复、夜班津贴核算（免费）
 - [纪念日与提醒清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：6 个纪念日工具同页：倒计时、提醒、周年、礼物、周期提醒、年度纪念日历（免费）
-- [图片转 ICO 图标生成器](https://screscent.github.io/xiaoning-ai-tools/tools/ico-generator.html)：多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载（免费）
+- [ICO 图标与多尺寸打包合集](https://screscent.github.io/xiaoning-ai-tools/tools/ico-generator.html)：2 个图标工具同页：单图转 ICO、多尺寸打包导出（免费）
 - [SVG 波浪分割线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-wave-divider.html)：调波高波峰生成 SVG 波浪分割线，复制或下载（免费）
 - [水电燃气账单计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/utility-tier-calculator.html)：6 个账单工具同页：电费、水费、燃气、峰谷、分摊、年度账单预算（免费）
 - [隐私与合规文档合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-policy-generator.html)：6 个合规工具同页：隐私政策、服务条款、Cookie 同意文案、数据处理与共享说明、留存周期、同意管理与退出（免费）
@@ -263,7 +263,7 @@
 - [SVG 图表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-chart.html)：柱状/折线/面积图纯 SVG 生成，可下载源码（免费）
 - [批量序列号生成器](https://screscent.github.io/xiaoning-ai-tools/tools/serial-generator.html)：前缀+位数批量生成唯一序列号，含校验位（免费）
 - [装修材料用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/material-estimate.html)：6 个装修工具同页：涂料、瓷砖、地板、壁纸、损耗、装修预算分配（免费）
-- [文章字数与稿费计算器](https://screscent.github.io/xiaoning-ai-tools/tools/word-fee.html)：按字数千字单价算稿费，含加急倍数与阅读时长（免费）
+- [字数稿费与阅读进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/word-fee.html)：2 个写作工具同页：字数与稿费计算、阅读时长与进度（免费）
 - [Unicode 码点查询与统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/unicode-codepoint.html)：2 个编码工具同页：码点字节查询、文本码点统计（免费）
 - [敏感词本地过滤检测器](https://screscent.github.io/xiaoning-ai-tools/tools/sensitive-filter.html)：内置 80 条分类词库+自定义词，本地过滤并统计（免费）
 - [每日饮水与作息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/daily-plan.html)：按体重活动量算饮水量并生成分时作息表（免费）
@@ -284,7 +284,7 @@
 - [增长与经营指标合集](https://screscent.github.io/xiaoning-ai-tools/tools/growth-metrics.html)：6 个指标工具：CAGR、同比环比、72法则、盈亏平衡、留存LTV、回本周期测算（免费）
 - [Favicon 与站点图标生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-favicon.html)：5 个图标工具同页：文字、Emoji、SVG、Manifest、ICO 尺寸与检查，生成 favicon 可复制代码（免费）
 - [满减与优惠叠加合集](https://screscent.github.io/xiaoning-ai-tools/tools/coupon-stack.html)：6 个优惠工具：满减凑单、优惠券、会员折扣、积分抵扣、叠加顺序、储值折扣（免费）
-- [SQL 格式化与美化器](https://screscent.github.io/xiaoning-ai-tools/tools/sql-formatter.html)：SQL 关键字换行缩进美化，支持大小写与逗号换行（免费）
+- [SQL 格式化与缩进规范合集](https://screscent.github.io/xiaoning-ai-tools/tools/sql-formatter.html)：2 个 SQL 工具同页：格式化美化、缩进与关键字规范（免费）
 - [睡眠周期与就寝时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-cycle.html)：按 90 分钟周期倒推就寝时间，含入睡耗时（免费）
 - [打印尺寸与像素换算器](https://screscent.github.io/xiaoning-ai-tools/tools/print-size-px.html)：毫米尺寸与 DPI 换算像素，含 A4/名片等预设（免费）
 - [XML 格式化与压缩转义合集](https://screscent.github.io/xiaoning-ai-tools/tools/xml-format.html)：2 个 XML 工具同页：格式化美化、压缩与实体转义（免费）

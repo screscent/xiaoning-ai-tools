@@ -3279,12 +3279,23 @@
  },
  {
   "id": "r3ar3ezjyr",
-  "name": "图片转 ICO 图标生成器",
-  "desc": "多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载",
+  "name": "ICO 图标与多尺寸打包合集",
+  "desc": "2 个图标工具同页：单图转 ICO、多尺寸打包导出",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r3ar3ezjyr.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "ico",
+    "title": "工具A 单图转 ICO"
+   },
+   {
+    "key": "multisize",
+    "title": "工具B 多尺寸打包"
+   }
+  ]
  },
  {
   "id": "frnfr2gsra",
@@ -4224,13 +4235,23 @@
  },
  {
   "id": "5cunqft6g5",
-  "name": "文章字数与稿费计算器",
-  "desc": "按字数千字单价算稿费，含加急倍数与阅读时长",
+  "name": "字数稿费与阅读进度合集",
+  "desc": "2 个写作工具同页：字数与稿费计算、阅读时长与进度",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://5cunqft6g5.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "fee",
+    "title": "工具A 字数稿费"
+   },
+   {
+    "key": "reading",
+    "title": "工具B 阅读进度"
+   }
+  ]
  },
  {
   "id": "kezwhcdudk",
@@ -4737,13 +4758,23 @@
  },
  {
   "id": "ija4mt8zig",
-  "name": "SQL 格式化与美化器",
-  "desc": "SQL 关键字换行缩进美化，支持大小写与逗号换行",
+  "name": "SQL 格式化与缩进规范合集",
+  "desc": "2 个 SQL 工具同页：格式化美化、缩进与关键字规范",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ija4mt8zig.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "sqlfmt",
+    "title": "工具A SQL 格式化"
+   },
+   {
+    "key": "indent",
+    "title": "工具B 缩进规范"
+   }
+  ]
  },
  {
   "id": "2qelpaqqxb",
