@@ -362,14 +362,14 @@
 - [图片宽高比与裁剪合集](https://screscent.github.io/xiaoning-ai-tools/tools/aspect-ratio.html)：2 个图片工具同页：宽高比与等比缩放、按比例裁剪导出（免费）
 - [App 权限与隐私泄露自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/app-permission.html)：2 个安全自查工具同页：手机 App 权限清单、隐私泄露自查（免费）
 - [编号与缩进整理合集](https://screscent.github.io/xiaoning-ai-tools/tools/number-indent.html)：6 个文本整理工具同页：重新编号、缩进规范、大纲层级、去编号空行、缩进宽度换算、Markdown 层级检查（免费）
-- [相机曝光与景深换算器](https://screscent.github.io/xiaoning-ai-tools/tools/exposure-dof.html)：按光圈快门 ISO 算 EV，并估算景深边界与超焦距（免费）
+- [相机曝光与图片体积合集](https://screscent.github.io/xiaoning-ai-tools/tools/exposure-dof.html)：2 个图片工具同页：曝光与景深换算、图片体积估算（免费）
 - [租车费用与押金合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-rental-cost-deposit-kit.html)：6 个租车工具：租金附加费、押金预授权、保险免赔、车型对比、超里程费、租车总成本对照（免费）
 - [体温与血压记录趋势计算器](https://screscent.github.io/xiaoning-ai-tools/tools/vitals-trend.html)：解析记录行给出均值极值异常次数与趋势判断（免费）
 - [区间与排期统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/date-range.html)：6 个区间工具：区间天数、周期排期、分段统计、重叠判断、区间合并、空档与间隙统计（免费）
 - [图片体积与位深估算合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-size-bitdepth-estimate-kit.html)：6 个估算工具：位深体积、内存占用、压缩比、色彩数、批量压缩体积、打印 DPI（免费）
-- [二次验证恢复码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/recovery-codes.html)：本地随机生成分组恢复码，附熵估算与重复检测（免费）
+- [两步验证与恢复码合集](https://screscent.github.io/xiaoning-ai-tools/tools/recovery-codes.html)：2 个安全工具同页：两步验证码生成、备用恢复码生成（免费）
 - [繁简转换与用词对照器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-tw-cn.html)：繁简互转并对照用词与单字变化，附字数统计（免费）
-- [Base64URL 编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/base64url-codec.html)：URL 安全 Base64 编解码，可去填充与加 data 前缀（免费）
+- [Base64URL 与 HMAC 哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64url-codec.html)：2 个编码工具同页：Base64URL 编解码、HMAC 消息认证哈希（免费）
 - [数据备份 3-2-1 自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/backup-321-check.html)：按备份份数异地离线校验四项打分并给出改进动作（免费）
 - [打车费用与通勤速查](https://screscent.github.io/xiaoning-ai-tools/tools/ride-fare-compare.html)：6 个出行工具：出租车计价、网约车对比、机场接送、通勤月成本、拼车分摊、夜间附加费估算（免费）
 - [蛋白质摄入与三餐分配计算器](https://screscent.github.io/xiaoning-ai-tools/tools/protein-split.html)：按体重目标活动量算每日蛋白并均分到每餐，附食物等量对照（免费）

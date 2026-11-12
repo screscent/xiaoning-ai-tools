@@ -6609,13 +6609,23 @@
  },
  {
   "id": "dzff47slwd",
-  "name": "相机曝光与景深换算器",
-  "desc": "按光圈快门 ISO 算 EV，并估算景深边界与超焦距",
+  "name": "相机曝光与图片体积合集",
+  "desc": "2 个图片工具同页：曝光与景深换算、图片体积估算",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzff47slwd.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "exposure",
+    "title": "工具A 曝光景深"
+   },
+   {
+    "key": "volume",
+    "title": "工具B 体积估算"
+   }
+  ]
  },
  {
   "id": "ny88zypkdd",
@@ -6737,13 +6747,23 @@
  },
  {
   "id": "glfgebcqng",
-  "name": "二次验证恢复码生成器",
-  "desc": "本地随机生成分组恢复码，附熵估算与重复检测",
+  "name": "两步验证与恢复码合集",
+  "desc": "2 个安全工具同页：两步验证码生成、备用恢复码生成",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://glfgebcqng.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "backupcode",
+    "title": "工具A 恢复码"
+   },
+   {
+    "key": "totp",
+    "title": "工具B 两步验证"
+   }
+  ]
  },
  {
   "id": "rdqya64t4r",
@@ -6757,13 +6777,23 @@
  },
  {
   "id": "ztb2uwhvkt",
-  "name": "Base64URL 编解码器",
-  "desc": "URL 安全 Base64 编解码，可去填充与加 data 前缀",
+  "name": "Base64URL 与 HMAC 哈希合集",
+  "desc": "2 个编码工具同页：Base64URL 编解码、HMAC 消息认证哈希",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ztb2uwhvkt.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "b64url",
+    "title": "工具A Base64URL"
+   },
+   {
+    "key": "hmac",
+    "title": "工具B HMAC哈希"
+   }
+  ]
  },
  {
   "id": "urkyphdyk8",
