@@ -2626,12 +2626,23 @@
  },
  {
   "id": "9pyjxqr8kd",
-  "name": "CSS 渐变生成器",
-  "desc": "线性/径向/圆锥渐变，实时预览并复制或下载 CSS",
+  "name": "CSS 渐变生成与预设合集",
+  "desc": "2 个渐变工具同页：自定义渐变生成、20 组预设对比",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://9pyjxqr8kd.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "gradient",
+    "title": "工具A 渐变生成"
+   },
+   {
+    "key": "presets",
+    "title": "工具B 预设对比"
+   }
+  ]
  },
  {
   "id": "qsexkmnhme",
@@ -2644,12 +2655,23 @@
  },
  {
   "id": "z56yswaahj",
-  "name": "折扣与百分比计算器",
-  "desc": "折扣/满减/税率 → 折后价、节省与实付，含计算过程",
+  "name": "折扣计算与批量到手价合集",
+  "desc": "2 个折扣工具同页：单件折扣计算、多行批量到手价",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z56yswaahj.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "discount",
+    "title": "工具A 折扣计算"
+   },
+   {
+    "key": "batch",
+    "title": "工具B 批量到手价"
+   }
+  ]
  },
  {
   "id": "safjgk9xrs",
@@ -4256,13 +4278,23 @@
  },
  {
   "id": "c7rsb3egmi",
-  "name": "CSS 表格样式生成器",
-  "desc": "调色圆角斑马纹实时生成表格 CSS/HTML",
+  "name": "CSS 表格样式与斑马纹合集",
+  "desc": "2 个表格工具同页：表格样式生成、斑马纹与紧凑预设",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://c7rsb3egmi.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "table",
+    "title": "工具A 表格样式"
+   },
+   {
+    "key": "zebra",
+    "title": "工具B 斑马纹预设"
+   }
+  ]
  },
  {
   "id": "4gswjgbtnf",

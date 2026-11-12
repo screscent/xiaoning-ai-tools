@@ -198,9 +198,9 @@
 - [图片打码与隐私遮挡合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：6 个打码工具同页：马赛克、模糊打码、黑块遮挡、裁切隐藏、像素化强度、文本敏感信息脱敏（免费）
 - [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：6 个摩斯工具同页：文本转摩斯、摩斯转文本、音频播放、码表与练习、求救信号与闪光节拍、通联简语速查（免费）
 - [复利与定投合集](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：6 个理财工具同页：复利终值、定投收益、目标月存、提取计划、贷款月供、通胀与实际收益（免费）
-- [CSS 渐变生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：线性/径向/圆锥渐变，实时预览并复制或下载 CSS（免费）
+- [CSS 渐变生成与预设合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：2 个渐变工具同页：自定义渐变生成、20 组预设对比（免费）
 - [HTTP 状态码速查表](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：30+ 常见状态码速查，支持搜索/分类/排查建议与复制（免费）
-- [折扣与百分比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/discount-calculator.html)：折扣/满减/税率 → 折后价、节省与实付，含计算过程（免费）
+- [折扣计算与批量到手价合集](https://screscent.github.io/xiaoning-ai-tools/tools/discount-calculator.html)：2 个折扣工具同页：单件折扣计算、多行批量到手价（免费）
 - [Cron 表达式工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：6 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查、自然语言转规则、批量表达式体检（免费）
 - [图片拼接与拼图合集](https://screscent.github.io/xiaoning-ai-tools/tools/stitch-grid.html)：6 个拼图工具同页：纵向、横向、宫格、边框、间距、拼图比例预设（免费）
 - [HTML 实体编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/html-entity-codec.html)：HTML 特殊字符实体编码/解码，支持引号与换行（免费）
@@ -268,7 +268,7 @@
 - [敏感词本地过滤检测器](https://screscent.github.io/xiaoning-ai-tools/tools/sensitive-filter.html)：内置 80 条分类词库+自定义词，本地过滤并统计（免费）
 - [每日饮水与作息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/daily-plan.html)：按体重活动量算饮水量并生成分时作息表（免费）
 - [节假日与调休合集](https://screscent.github.io/xiaoning-ai-tools/tools/holiday-calendar.html)：6 个假期工具：放假安排、调休标注、拼假规划、假期倒计时、加班费、明细测算（免费）
-- [CSS 表格样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-table.html)：调色圆角斑马纹实时生成表格 CSS/HTML（免费）
+- [CSS 表格样式与斑马纹合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-table.html)：2 个表格工具同页：表格样式生成、斑马纹与紧凑预设（免费）
 - [文本改写与降重合集](https://screscent.github.io/xiaoning-ai-tools/tools/synonym-rewrite.html)：6 个文本工具：同义替换、强度改写、同义词表、改写对照、降重评分、标点语病自查（免费）
 - [个税与到手工资合集](https://screscent.github.io/xiaoning-ai-tools/tools/salary-tax.html)：6 个税务工具：工资个税、年终奖对比、专项扣除、五险一金、年度汇算、副业收入测算（免费）
 - [会议排期与时段合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-conflict.html)：6 个排期工具：冲突检测、空档查找、时段推荐、占用清单、时段投票、议程时长分配（免费）
