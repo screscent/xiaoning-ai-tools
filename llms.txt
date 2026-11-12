@@ -260,7 +260,7 @@
 - [标点全半角与空白规范合集](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：2 个文本工具同页：标点全半角转换、空白与标点规范（免费）
 - [AA 分摊与结算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bill-split.html)：6 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录、小费与税费分摊、拼单与优惠分摊（免费）
 - [日历文件与订阅合集](https://screscent.github.io/xiaoning-ai-tools/tools/ics-calendar.html)：6 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则、时区转换（免费）
-- [SVG 图表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-chart.html)：柱状/折线/面积图纯 SVG 生成，可下载源码（免费）
+- [SVG 图表与折线图合集](https://screscent.github.io/xiaoning-ai-tools/tools/svg-chart.html)：2 个图表工具同页：SVG 图表生成、折线图生成（免费）
 - [批量序列号与恢复码合集](https://screscent.github.io/xiaoning-ai-tools/tools/serial-generator.html)：2 个安全工具同页：批量序列号生成、恢复码生成（免费）
 - [装修材料用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/material-estimate.html)：6 个装修工具同页：涂料、瓷砖、地板、壁纸、损耗、装修预算分配（免费）
 - [字数稿费与阅读进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/word-fee.html)：2 个写作工具同页：字数与稿费计算、阅读时长与进度（免费）
@@ -285,7 +285,7 @@
 - [Favicon 与站点图标生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-favicon.html)：5 个图标工具同页：文字、Emoji、SVG、Manifest、ICO 尺寸与检查，生成 favicon 可复制代码（免费）
 - [满减与优惠叠加合集](https://screscent.github.io/xiaoning-ai-tools/tools/coupon-stack.html)：6 个优惠工具：满减凑单、优惠券、会员折扣、积分抵扣、叠加顺序、储值折扣（免费）
 - [SQL 格式化与缩进规范合集](https://screscent.github.io/xiaoning-ai-tools/tools/sql-formatter.html)：2 个 SQL 工具同页：格式化美化、缩进与关键字规范（免费）
-- [睡眠周期与就寝时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-cycle.html)：按 90 分钟周期倒推就寝时间，含入睡耗时（免费）
+- [睡眠周期与起床时间合集](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-cycle.html)：2 个睡眠工具同页：睡眠周期计算、起床时间反推（免费）
 - [打印尺寸与证件照换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/print-size-px.html)：2 个图片工具同页：打印尺寸像素换算、证件照尺寸对照（免费）
 - [XML 格式化与压缩转义合集](https://screscent.github.io/xiaoning-ai-tools/tools/xml-format.html)：2 个 XML 工具同页：格式化美化、压缩与实体转义（免费）
 - [Markdown 目录与锚点合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-toc-anchor-consistency-kit.html)：6 个文档工具：目录生成、锚点提取、内链检查、大纲互转、批量标题锚点、目录一致性检查（免费）
@@ -310,7 +310,7 @@
 - [咖啡因摄入与代谢计算器](https://screscent.github.io/xiaoning-ai-tools/tools/caffeine-metabolism.html)：按半衰期算 4/8/12 小时残留与建议就寝时间（免费）
 - [用药提醒与间隔计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/med-reminder.html)：2 个用药工具同页：家庭用药提醒清单、服药间隔与下次时间（免费）
 - [会议议程与控场合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：6 个开会工具：议程生成、发言分配、控场提示、计时、决议与待办清单、会议纪要模板（免费）
-- [CSS 轮播图样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-carousel.html)：宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML（免费）
+- [轮播图与指示点样式合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-carousel.html)：2 个样式工具同页：轮播图样式生成、指示点与自动播放（免费）
 - [呼吸放松计时器](https://screscent.github.io/xiaoning-ai-tools/tools/breathing-timer.html)：4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进（免费）
 - [保养与年检提醒合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-maintenance.html)：5 个车主提醒工具：保养周期、年检到期、保险到期、保养项目清单、轮胎更换判断（免费）
 - [文本清理与重复行统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-lines-clean.html)：2 个文本工具同页：空行清理与统计、重复行分组计数（免费）

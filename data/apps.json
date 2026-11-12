@@ -4287,13 +4287,23 @@
  },
  {
   "id": "tbnjpnmk3t",
-  "name": "SVG 图表生成器",
-  "desc": "柱状/折线/面积图纯 SVG 生成，可下载源码",
+  "name": "SVG 图表与折线图合集",
+  "desc": "2 个图表工具同页：SVG 图表生成、折线图生成",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://tbnjpnmk3t.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "chart",
+    "title": "工具A SVG图表"
+   },
+   {
+    "key": "linechart",
+    "title": "工具B 折线图"
+   }
+  ]
  },
  {
   "id": "bcyaubk6f9",
@@ -4936,13 +4946,23 @@
  },
  {
   "id": "2qelpaqqxb",
-  "name": "睡眠周期与就寝时间计算器",
-  "desc": "按 90 分钟周期倒推就寝时间，含入睡耗时",
+  "name": "睡眠周期与起床时间合集",
+  "desc": "2 个睡眠工具同页：睡眠周期计算、起床时间反推",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qelpaqqxb.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "cycle",
+    "title": "工具A 睡眠周期"
+   },
+   {
+    "key": "wake",
+    "title": "工具B 起床反推"
+   }
+  ]
  },
  {
   "id": "m9jbktue9a",
@@ -5562,13 +5582,23 @@
  },
  {
   "id": "fr2tregsra",
-  "name": "CSS 轮播图样式生成器",
-  "desc": "宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML",
+  "name": "轮播图与指示点样式合集",
+  "desc": "2 个样式工具同页：轮播图样式生成、指示点与自动播放",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://fr2tregsra.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "carousel",
+    "title": "工具A 轮播图"
+   },
+   {
+    "key": "dots",
+    "title": "工具B 指示点"
+   }
+  ]
  },
  {
   "id": "ny8rttpkdd",
