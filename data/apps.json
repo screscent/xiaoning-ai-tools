@@ -6883,13 +6883,23 @@
  },
  {
   "id": "glfmcmcqng",
-  "name": "浏览器指纹与隐私暴露自查器",
-  "desc": "本地读取时区语言屏幕硬件Canvas九项，算熵值并给加固建议",
+  "name": "浏览器指纹与隐私评分合集",
+  "desc": "2 个隐私工具同页：浏览器指纹与暴露自查、隐私暴露评分与建议",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://glfmcmcqng.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "fingerprint",
+    "title": "工具A 指纹自查"
+   },
+   {
+    "key": "privacyscore",
+    "title": "工具B 隐私评分"
+   }
+  ]
  },
  {
   "id": "fr2qywgsra",
@@ -6989,13 +6999,23 @@
  },
  {
   "id": "dzfvf2slwd",
-  "name": "钙与维生素 D 摄入计算器",
-  "desc": "按年龄性别算每日钙目标，估算奶豆摄入缺口与补充份数",
+  "name": "钙与维生素 D 摄入合集",
+  "desc": "2 个营养工具同页：钙与维生素 D 摄入计算、维生素 D 补充建议",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzfvf2slwd.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "calcium",
+    "title": "工具A 钙摄入"
+   },
+   {
+    "key": "vitd",
+    "title": "工具B 维D建议"
+   }
+  ]
  },
  {
   "id": "ja4c4jkp5e",
@@ -7501,13 +7521,23 @@
  },
  {
   "id": "wn3agsj8gw",
-  "name": "文字转语音朗读器",
-  "desc": "粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长",
+  "name": "文字朗读与倒计时清单合集",
+  "desc": "2 个效率工具同页：文字转语音朗读、事项倒计时清单",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
+  "url": "https://wn3agsj8gw.app.weavefox.cn",
   "subcat": "效率生活",
-  "url": "https://wn3agsj8gw.app.weavefox.cn"
+  "subapps": [
+   {
+    "key": "tts",
+    "title": "工具A 文字朗读"
+   },
+   {
+    "key": "countdown",
+    "title": "工具B 倒计时"
+   }
+  ]
  },
  {
   "id": "z5hujmaahj",

@@ -373,12 +373,12 @@
 - [数据备份与备份计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/backup-321-check.html)：2 个备份工具同页：3-2-1 自查清单、按数据类型生成备份计划（免费）
 - [打车费用与通勤速查](https://screscent.github.io/xiaoning-ai-tools/tools/ride-fare-compare.html)：6 个出行工具：出租车计价、网约车对比、机场接送、通勤月成本、拼车分摊、夜间附加费估算（免费）
 - [蛋白质摄入与食物换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/protein-split.html)：2 个饮食工具同页：蛋白质摄入与三餐分配、常见食物蛋白换算（免费）
-- [浏览器指纹与隐私暴露自查器](https://screscent.github.io/xiaoning-ai-tools/tools/browser-fingerprint-check.html)：本地读取时区语言屏幕硬件Canvas九项，算熵值并给加固建议（免费）
+- [浏览器指纹与隐私评分合集](https://screscent.github.io/xiaoning-ai-tools/tools/browser-fingerprint-check.html)：2 个隐私工具同页：浏览器指纹与暴露自查、隐私暴露评分与建议（免费）
 - [新能源车续航与车险合集](https://screscent.github.io/xiaoning-ai-tools/tools/ev-range-cost.html)：2 个用车工具同页：续航与充电费用估算、车险保费估算（免费）
 - [膳食纤维与蔬果份量合集](https://screscent.github.io/xiaoning-ai-tools/tools/fiber-veggie.html)：2 个饮食工具同页：膳食纤维与蔬果份量计算、每日蔬果分配计划（免费）
 - [平台图片尺寸与规格速查](https://screscent.github.io/xiaoning-ai-tools/tools/social-platform-image-size-kit.html)：6 个尺寸工具：社交、电商、视频、网页、封面、头像与缩略图（免费）
 - [航班值机与转机衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/flight-boarding-timeline.html)：2 个出行工具同页：值机与登机时间倒推、转机最短衔接时间（免费）
-- [钙与维生素 D 摄入计算器](https://screscent.github.io/xiaoning-ai-tools/tools/calcium-vitd.html)：按年龄性别算每日钙目标，估算奶豆摄入缺口与补充份数（免费）
+- [钙与维生素 D 摄入合集](https://screscent.github.io/xiaoning-ai-tools/tools/calcium-vitd.html)：2 个营养工具同页：钙与维生素 D 摄入计算、维生素 D 补充建议（免费）
 - [Wi-Fi 安全与端口自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/wifi-security-check.html)：2 个网络安全工具同页：Wi-Fi 与路由器自查、开放端口暴露自查（免费）
 - [在线小工具合集（字数·进制·折扣·日期差·颜色·单位）](https://screscent.github.io/xiaoning-ai-tools/tools/mini-tools-collection.html)：一个页面装 6 个常用小工具，hash 直链可直达子工具（免费）
 - [引用格式与文献速查](https://screscent.github.io/xiaoning-ai-tools/tools/ref-citation.html)：6 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX、文献去重统计与引用一致性检查（免费）
@@ -395,7 +395,7 @@
 - [育儿喂养与成长计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/parenting-collection.html)：6 个育儿工具同页：奶粉冲调、辅食添加、生长发育、睡眠作息、喂养与采购清单、入园与托育准备，hash 直链可直达（免费）
 - [租房居住成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/rent-cost-collection.html)：6 个租房工具同页：押金退还、水电分摊、通勤成本、搬家费用、退租交接清单、合租费用分摊（免费）
 - [家居清洗与家电维护计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/homecare-collection.html)：6 个家务工具同页：滤芯更换、洗衣机清洁、空调清洗、以旧换新、家电寿命、家电耗电（免费）
-- [文字转语音朗读器](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：粘贴文字一键朗读：可选音色、调语速音调音量，实时统计字数与预计时长（免费）
+- [文字朗读与倒计时清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/tts-reader.html)：2 个效率工具同页：文字转语音朗读、事项倒计时清单（免费）
 - [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：6 个编码工具同页：二维码内容、条形码校验、校验位查询、vCard 名片、WiFi 连接码、容量与版本（免费）
 - [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：6 个有氧工具同页：静息心率、VO2max、心率区间、训练负荷比、跨项目等效、训练计划（免费）
 - [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：6 个 SQL 工具同页：JSON→INSERT、INSERT→JSON、类型推断、关键字与 EXPLAIN 速查、SQL 格式化、连接与聚合，数据与语句一次转通（免费）
