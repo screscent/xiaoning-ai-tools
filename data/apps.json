@@ -3365,12 +3365,23 @@
  },
  {
   "id": "frnfr2gsra",
-  "name": "SVG 波浪分割线生成器",
-  "desc": "调波高波峰生成 SVG 波浪分割线，复制或下载",
+  "name": "SVG 分割线生成合集",
+  "desc": "2 个样式工具同页：波浪分割线、斜切分割线",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frnfr2gsra.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "wave",
+    "title": "工具A 波浪线"
+   },
+   {
+    "key": "diagonal",
+    "title": "工具B 斜切线"
+   }
+  ]
  },
  {
   "id": "qseqsqnhme",
@@ -3672,12 +3683,23 @@
  },
  {
   "id": "2qes9dqqxb",
-  "name": "文本行去重与排序工具",
-  "desc": "按行去重排序并统计重复次数，可忽略大小写",
+  "name": "文本行去重排序与统计合集",
+  "desc": "2 个文本工具同页：行去重与排序、文本行统计",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qes9dqqxb.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "dedupe",
+    "title": "工具A 行去重排序"
+   },
+   {
+    "key": "linestat",
+    "title": "工具B 行统计"
+   }
+  ]
  },
  {
   "id": "7b3nvgweb7",
@@ -4265,13 +4287,23 @@
  },
  {
   "id": "bcyaubk6f9",
-  "name": "批量序列号生成器",
-  "desc": "前缀+位数批量生成唯一序列号，含校验位",
+  "name": "批量序列号与恢复码合集",
+  "desc": "2 个安全工具同页：批量序列号生成、恢复码生成",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bcyaubk6f9.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "serial",
+    "title": "工具A 序列号"
+   },
+   {
+    "key": "recovery",
+    "title": "工具B 恢复码"
+   }
+  ]
  },
  {
   "id": "z5wwxxaahj",

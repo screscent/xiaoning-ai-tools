@@ -227,7 +227,7 @@
 - [倒班排班与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：6 个排班工具：三班倒、四班两倒、夜班作息、换班记录、疲劳恢复、夜班津贴核算（免费）
 - [纪念日与提醒清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：6 个纪念日工具同页：倒计时、提醒、周年、礼物、周期提醒、年度纪念日历（免费）
 - [ICO 图标与多尺寸打包合集](https://screscent.github.io/xiaoning-ai-tools/tools/ico-generator.html)：2 个图标工具同页：单图转 ICO、多尺寸打包导出（免费）
-- [SVG 波浪分割线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-wave-divider.html)：调波高波峰生成 SVG 波浪分割线，复制或下载（免费）
+- [SVG 分割线生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/svg-wave-divider.html)：2 个样式工具同页：波浪分割线、斜切分割线（免费）
 - [水电燃气账单计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/utility-tier-calculator.html)：6 个账单工具同页：电费、水费、燃气、峰谷、分摊、年度账单预算（免费）
 - [隐私与合规文档合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-policy-generator.html)：6 个合规工具同页：隐私政策、服务条款、Cookie 同意文案、数据处理与共享说明、留存周期、同意管理与退出（免费）
 - [Token 与鉴权自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/jwt-decoder.html)：6 个鉴权工具同页：JWT 解码、声明解释、Authorization 头、Cookie 自查、权限范围、Token 存储建议（免费）
@@ -239,7 +239,7 @@
 - [图片自动裁剪透明边](https://screscent.github.io/xiaoning-ai-tools/tools/trim-transparent.html)：按容差自动裁掉透明边并保留内边距，导出图片（免费）
 - [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：6 个出行工具同页：油耗、油电对比、停车过路、通勤月成本、公交月票、五年总持有（免费）
 - [CSS Flex 与 Grid 布局生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：切换 Flex/Grid 调间距对齐，实时预览并复制 CSS（免费）
-- [文本行去重与排序工具](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：按行去重排序并统计重复次数，可忽略大小写（免费）
+- [文本行去重排序与统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：2 个文本工具同页：行去重与排序、文本行统计（免费）
 - [菜谱份量与备餐换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：6 个备餐工具：份量换算、批量备餐、器具尺寸、采购清单、剩菜保存与复热、厨房单位换算（免费）
 - [周数与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/iso-week.html)：6 个周数工具：周号查询、周范围、周计划、季度周数、双周迭代、周偏移倒推（免费）
 - [图片转 ASCII 艺术](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：图片转字符画，可选字符集与彩色 HTML 输出（免费）
@@ -261,7 +261,7 @@
 - [AA 分摊与结算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bill-split.html)：6 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录、小费与税费分摊、拼单与优惠分摊（免费）
 - [日历文件与订阅合集](https://screscent.github.io/xiaoning-ai-tools/tools/ics-calendar.html)：6 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则、时区转换（免费）
 - [SVG 图表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-chart.html)：柱状/折线/面积图纯 SVG 生成，可下载源码（免费）
-- [批量序列号生成器](https://screscent.github.io/xiaoning-ai-tools/tools/serial-generator.html)：前缀+位数批量生成唯一序列号，含校验位（免费）
+- [批量序列号与恢复码合集](https://screscent.github.io/xiaoning-ai-tools/tools/serial-generator.html)：2 个安全工具同页：批量序列号生成、恢复码生成（免费）
 - [装修材料用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/material-estimate.html)：6 个装修工具同页：涂料、瓷砖、地板、壁纸、损耗、装修预算分配（免费）
 - [字数稿费与阅读进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/word-fee.html)：2 个写作工具同页：字数与稿费计算、阅读时长与进度（免费）
 - [Unicode 码点查询与统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/unicode-codepoint.html)：2 个编码工具同页：码点字节查询、文本码点统计（免费）
