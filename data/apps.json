@@ -4933,13 +4933,23 @@
  },
  {
   "id": "mkpwgxrxwr",
-  "name": "CSS 开关切换组件生成器",
-  "desc": "纯 CSS 开关实时预览，生成含 checked 状态代码",
+  "name": "开关切换与开关组合集",
+  "desc": "2 个样式工具同页：开关组件生成、开关组样式",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://mkpwgxrxwr.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "toggle",
+    "title": "工具A 开关组件"
+   },
+   {
+    "key": "togglegroup",
+    "title": "工具B 开关组"
+   }
+  ]
  },
  {
   "id": "ja45jzkp5e",
@@ -5495,13 +5505,23 @@
  },
  {
   "id": "qhwm67stfq",
-  "name": "CSS 文字描边生成器",
-  "desc": "描边颜色/宽度/方式可调，实时预览并生成 CSS",
+  "name": "文字描边与多层描边合集",
+  "desc": "2 个样式工具同页：文字描边生成、多层描边叠加",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qhwm67stfq.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "stroke",
+    "title": "工具A 文字描边"
+   },
+   {
+    "key": "multistroke",
+    "title": "工具B 多层描边"
+   }
+  ]
  },
  {
   "id": "9pahqsr8kd",
