@@ -2978,12 +2978,23 @@
  },
  {
   "id": "qsew9znhme",
-  "name": "随机密码短语生成器",
-  "desc": "易记词组合成密码短语，含熵值估算与强度评级",
+  "name": "密码短语与 PIN 备份码合集",
+  "desc": "2 个口令工具同页：密码短语生成、PIN 与备份码",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qsew9znhme.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "passphrase",
+    "title": "工具A 密码短语"
+   },
+   {
+    "key": "pin",
+    "title": "工具B PIN 备份码"
+   }
+  ]
  },
  {
   "id": "2qcwr7qqxb",
@@ -4725,13 +4736,23 @@
  },
  {
   "id": "tbndpgmk3t",
-  "name": "XML 格式化与压缩器",
-  "desc": "XML 逐层缩进美化与单行压缩，含统计与错误提示",
+  "name": "XML 格式化与压缩转义合集",
+  "desc": "2 个 XML 工具同页：格式化美化、压缩与实体转义",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://tbndpgmk3t.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "xmlfmt",
+    "title": "工具A XML 格式化"
+   },
+   {
+    "key": "xmlmin",
+    "title": "工具B 压缩转义"
+   }
+  ]
  },
  {
   "id": "rdq9yv4t4r",
@@ -5043,13 +5064,23 @@
  },
  {
   "id": "9pahqsr8kd",
-  "name": "YAML 与 JSON 双向转换器",
-  "desc": "YAML ⇄ JSON 双向转换，缩进可调并定位错误行号",
+  "name": "YAML JSON 转换与结构统计合集",
+  "desc": "2 个数据工具同页：YAML↔JSON 转换、结构字段统计",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://9pahqsr8kd.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "yamljson",
+    "title": "工具A YAML↔JSON"
+   },
+   {
+    "key": "structure",
+    "title": "工具B 结构统计"
+   }
+  ]
  },
  {
   "id": "rdqxau4t4r",
