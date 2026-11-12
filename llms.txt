@@ -339,7 +339,7 @@
 - [到期管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/contract-renewal.html)：6 个到期工具同页：合同续签、证件换发、保险续保、车辆年检、驾驶证记分换证、会员订阅，到期前该办什么一页算清（免费）
 - [护照签证与入境合集](https://screscent.github.io/xiaoning-ai-tools/tools/passport-validity.html)：6 个工具：护照余量、签证有效期、停留天数、换发提醒、签证照片、转机与过境签证（免费）
 - [心率区间与配速步频合集](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：2 个运动工具同页：心率区间与强度、目标配速与步频换算（免费）
-- [食物热量与运动消耗换算器](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：按 MET 与体重换算消耗某份热量需要的运动分钟数（免费）
+- [食物热量与数据单位合集](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：2 个换算工具同页：食物热量与运动消耗、KB/MB/GB 数据单位换算（免费）
 - [签证材料清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-checklist.html)：6 个工具：旅游 / 商务 / 学生 / 探亲访友 / 工作签证材料、办理时间线（免费）
 - [步数与活动目标合集](https://screscent.github.io/xiaoning-ai-tools/tools/step-goal.html)：5 个步数工具同页：步数目标、步幅里程、热量消耗、周计划、配速与步频（免费）
 - [字体搭配与排版比例生成器](https://screscent.github.io/xiaoning-ai-tools/tools/type-scale.html)：按基准字号与字阶比例生成六级字号行高与字体栈（免费）
@@ -350,8 +350,8 @@
 - [账单日与免息期合集](https://screscent.github.io/xiaoning-ai-tools/tools/credit-card-billing-grace-repay-kit.html)：6 个信用卡工具：账单日规划、免息期、还款日提醒、分期成本、最低还款利息、还款规划（免费）
 - [长文本摘要与压缩率计算器](https://screscent.github.io/xiaoning-ai-tools/tools/text-summary.html)：确定性抽取式摘要，给出字数压缩率与句子段落统计（免费）
 - [月度预算配额分配器](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-budget.html)：按收入与比例拆分配额，校验占比合计与结余（免费）
-- [预产期与孕周计算器](https://screscent.github.io/xiaoning-ai-tools/tools/due-date.html)：按末次月经与周期算预产期、孕周天数与进度百分比（免费）
-- [储蓄目标达成时间计算器](https://screscent.github.io/xiaoning-ai-tools/tools/saving-goal.html)：按月复利推演攒到目标金额所需月数与利息结构（免费）
+- [预产期孕周与滤芯周期合集](https://screscent.github.io/xiaoning-ai-tools/tools/due-date.html)：2 个生活工具同页：预产期与孕周计算、滤芯更换周期提醒（免费）
+- [储蓄目标与计算历史合集](https://screscent.github.io/xiaoning-ai-tools/tools/saving-goal.html)：2 个理财工具同页：储蓄目标达成时间、计算历史记录与复用（免费）
 - [CSS 背景与纹理生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-pattern.html)：6 个背景纹理工具同页：分隔线、点阵背景、网格条纹、噪点纹理、平铺次数、渐变背景（免费）
 - [睡眠债务与补觉计划计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-debt.html)：按工作日周末睡眠差算累计债务，给出补觉天数与风险提示（免费）
 - [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：6 个门票工具同页：单景点门票、多景点合计、城市通票、讲解观光车、儿童票、退改签规则（免费）
