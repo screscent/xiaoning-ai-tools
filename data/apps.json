@@ -2924,12 +2924,23 @@
  },
  {
   "id": "z56hl3aahj",
-  "name": "颜色名称查询",
-  "desc": "HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色",
+  "name": "颜色名称查询与明暗对比合集",
+  "desc": "2 个颜色工具同页：颜色名称查询、明暗与对比度",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://z56hl3aahj.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "name",
+    "title": "工具A 颜色名称"
+   },
+   {
+    "key": "contrast",
+    "title": "工具B 明暗对比"
+   }
+  ]
  },
  {
   "id": "ygj23az2jf",
@@ -3142,12 +3153,23 @@
  },
  {
   "id": "k64e8lftrk",
-  "name": "跨时区会议时间换算器",
-  "desc": "一个时间换算多时区本地时刻与时差，夏令时自动",
+  "name": "时区会议换算与时区缩写合集",
+  "desc": "2 个时区工具同页：跨时区会议换算、时区缩写速查",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://k64e8lftrk.app.weavefox.cn",
-  "subcat": "时间日期"
+  "subcat": "时间日期",
+  "subapps": [
+   {
+    "key": "meeting",
+    "title": "工具A 会议换算"
+   },
+   {
+    "key": "abbr",
+    "title": "工具B 时区缩写"
+   }
+  ]
  },
  {
   "id": "jarc8vkp5e",
@@ -3160,12 +3182,23 @@
  },
  {
   "id": "sfwn9wy97s",
-  "name": "贷款还款方式对比计算器",
-  "desc": "等额本息与等额本金月供/总利息对比，含逐月明细",
+  "name": "贷款对比与提前还款合集",
+  "desc": "2 个贷款工具同页：还款方式对比、提前还款测算",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sfwn9wy97s.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "compare",
+    "title": "工具A 还款对比"
+   },
+   {
+    "key": "prepay",
+    "title": "工具B 提前还款"
+   }
+  ]
  },
  {
   "id": "j258a6xyyi",

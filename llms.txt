@@ -210,7 +210,7 @@
 - [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：6 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义、正则转义与常用式（免费）
 - [Markdown 转纯文本](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：Markdown → 纯文本，可去列表符号/代码块并下载 txt（免费）
 - [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：6 个本地脱敏工具：手机/证件/邮箱打码、批量处理、分享前自查、规则自定义、哈希脱敏（免费）
-- [颜色名称查询](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：HEX/RGB/HSL → 中文颜色名与相近色，80+ 内置色（免费）
+- [颜色名称查询与明暗对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：2 个颜色工具同页：颜色名称查询、明暗与对比度（免费）
 - [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
 - [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：6 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算、请假最优组合（免费）
 - [密码短语与 PIN 备份码合集](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：2 个口令工具同页：密码短语生成、PIN 与备份码（免费）
@@ -218,9 +218,9 @@
 - [正则测试与替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/regex-tester.html)：6 个正则工具同页：匹配测试、批量替换、捕获组、常用速查、批量提取与清洗、逐段解释（免费）
 - [习惯养成与打卡合集](https://screscent.github.io/xiaoning-ai-tools/tools/habit-tracker.html)：6 个习惯工具同页：打卡日历、连续与断签规则、21/30 天挑战、周月复盘、目标拆解、打卡提醒文案（免费）
 - [标识符与密钥生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/uuid-secret-kit.html)：6 个生成工具同页：UUID、短ID、令牌、密钥、ULID、密码短语（免费）
-- [跨时区会议时间换算器](https://screscent.github.io/xiaoning-ai-tools/tools/timezone-meeting.html)：一个时间换算多时区本地时刻与时差，夏令时自动（免费）
+- [时区会议换算与时区缩写合集](https://screscent.github.io/xiaoning-ai-tools/tools/timezone-meeting.html)：2 个时区工具同页：跨时区会议换算、时区缩写速查（免费）
 - [CSS 玻璃拟态生成器](https://screscent.github.io/xiaoning-ai-tools/tools/glassmorphism-generator.html)：滑杆调模糊/透明度/圆角，实时预览并复制 CSS（免费）
-- [贷款还款方式对比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/loan-compare.html)：等额本息与等额本金月供/总利息对比，含逐月明细（免费）
+- [贷款对比与提前还款合集](https://screscent.github.io/xiaoning-ai-tools/tools/loan-compare.html)：2 个贷款工具同页：还款方式对比、提前还款测算（免费）
 - [中英混排与引用一致性合集](https://screscent.github.io/xiaoning-ai-tools/tools/cjk-spacing.html)：2 个排版工具同页：中英混排空格、引用格式一致性（免费）
 - [条码生成与尺寸校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/barcode-code128.html)：2 个条码工具同页：Code128 生成、条码尺寸与校验（免费）
 - [TOTP 验证码与备份码清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：2 个两步验证工具同页：TOTP 动态码、备份码清点（免费）
