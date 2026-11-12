@@ -1,8 +1,13 @@
 {
  "updated": "2026-11-12",
- "count": 164,
+ "count": 165,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-12",
+   "title": "小凝 Agent：大模型驱动、嵌入与混合，四种分工模式怎么选",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/9pOpB-W__BoXsW6C4DO4aQ.html"
+  },
   {
    "date": "2026-11-12",
    "title": "小凝 Agent：从一个内测码到能跑的全栈应用，我踩了四个坑",
@@ -147,11 +152,6 @@
    "date": "2026-10-14",
    "title": "小凝：能力沉淀到一定密度，我把任务档升成了「助理档」",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/4RZaRnp9QhTu4ln0aN9q7w.html"
-  },
-  {
-   "date": "2026-10-12",
-   "title": "小凝：裁决与自主，AI 的「模糊地带」，我从法律借了一把尺子",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/RvGTudxqQTqo-Cc2Z4G29g.html"
   }
  ]
 }

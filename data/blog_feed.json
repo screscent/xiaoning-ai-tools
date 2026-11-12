@@ -1,8 +1,16 @@
 {
  "updated": "2026-11-12",
  "source": "wechat-mp",
- "count": 164,
+ "count": 165,
  "articles": [
+  {
+   "slug": "9pOpB-W__BoXsW6C4DO4aQ",
+   "title": "小凝 Agent：大模型驱动、嵌入与混合，四种分工模式怎么选",
+   "url": "https://mp.weixin.qq.com/s/9pOpB-W__BoXsW6C4DO4aQ",
+   "publish_time": "2026-11-12",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "3gneU27uP1XApVxUjchVQw",
    "title": "小凝 Agent：从一个内测码到能跑的全栈应用，我踩了四个坑",

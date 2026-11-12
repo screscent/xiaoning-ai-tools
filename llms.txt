@@ -519,7 +519,8 @@
 - [留学申请费用与时间线合集](https://screscent.github.io/xiaoning-ai-tools/tools/study-abroad-cost-timeline-funds-kit.html)：6 个留学工具同页：费用预算、申请时间线、资金准备、选校梯度、申请材料、行前清单行李（免费）
 - [智能家居设备与耗电合集](https://screscent.github.io/xiaoning-ai-tools/tools/smart-home-power-gateway-sensor-kit.html)：5 个智能家居工具同页：待机耗电、网关协议、传感器布点、场景联动、全屋网络布点（免费）
 
-## 博客（164 篇）
+## 博客（165 篇）
+- [小凝 Agent：大模型驱动、嵌入与混合，四种分工模式怎么选](https://screscent.github.io/xiaoning-ai-tools/blog/9pOpB-W__BoXsW6C4DO4aQ.html)：2026-11-12｜程序主导、模型主导、程序判模型释、模型驱动多智能体：四种分工模式的适用边界与选择判据。
 - [小凝 Agent：从一个内测码到能跑的全栈应用，我踩了四个坑](https://screscent.github.io/xiaoning-ai-tools/blog/3gneU27uP1XApVxUjchVQw.html)：2026-11-12｜免费额度只够发布一个应用，我用它做了个真全栈工具，踩了四个坑，最后卡在域名上。
 - [小凝 Agent：AI 时代，程序员会从「写软件」变成「建体系」吗](https://screscent.github.io/xiaoning-ai-tools/blog/7aVzvmr42wJtdvqae1VFXA.html)：2026-11-12｜一份关于复杂度、约束与职业分工的可证伪预测：为什么「让一堆东西不互相拆台」会变贵
 - [小凝 Agent：从作战指挥决策体系到项目框架](https://screscent.github.io/xiaoning-ai-tools/blog/kIgEGY4Zz6Wza333OxqR-w.html)：2026-11-11｜作战指挥给骨架，小凝 AgentOS 给边界，项目给血肉，最后长出一个可复用的项目框架。
