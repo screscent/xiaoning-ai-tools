@@ -2802,12 +2802,23 @@
  },
  {
   "id": "ztxnashvkt",
-  "name": "CSS 阴影生成器",
-  "desc": "滑块调偏移/模糊/扩散，实时预览并复制 box-shadow",
+  "name": "CSS 阴影生成与预设对比合集",
+  "desc": "2 个阴影工具同页：自定义阴影生成、5 档预设对比",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ztxnashvkt.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "shadow",
+    "title": "工具A 阴影生成"
+   },
+   {
+    "key": "preset",
+    "title": "工具B 预设对比"
+   }
+  ]
  },
  {
   "id": "qse8urnhme",
@@ -3350,12 +3361,23 @@
  },
  {
   "id": "5cuungt6g5",
-  "name": "CSS 加载动画生成器",
-  "desc": "四种加载动画调参生成纯 CSS，可复制或下载 HTML",
+  "name": "加载动画与骨架屏合集",
+  "desc": "2 个动效工具同页：加载动画生成、骨架屏生成",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://5cuungt6g5.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "loader",
+    "title": "工具A 加载动画"
+   },
+   {
+    "key": "skeleton",
+    "title": "工具B 骨架屏"
+   }
+  ]
  },
  {
   "id": "2qepstqqxb",
@@ -4158,13 +4180,23 @@
  },
  {
   "id": "kezwhcdudk",
-  "name": "Unicode 码点与 UTF-8 字节查询器",
-  "desc": "逐字查码点/UTF-8 字节，正确处理 emoji 代理对",
+  "name": "Unicode 码点查询与统计合集",
+  "desc": "2 个编码工具同页：码点字节查询、文本码点统计",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://kezwhcdudk.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "unicode",
+    "title": "工具A 码点查询"
+   },
+   {
+    "key": "codestat",
+    "title": "工具B 码点统计"
+   }
+  ]
  },
  {
   "id": "uisqu2xjku",

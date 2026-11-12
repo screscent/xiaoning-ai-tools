@@ -206,7 +206,7 @@
 - [HTML 实体编解码器](https://screscent.github.io/xiaoning-ai-tools/tools/html-entity-codec.html)：HTML 特殊字符实体编码/解码，支持引号与换行（免费）
 - [单价与多规格比价合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-price-comparator.html)：6 个比价工具同页：单位价、规格、多件、会员价、优惠叠加、历史价格记录（免费）
 - [图片圆角与边框合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-round-corner.html)：5 个图片工具同页：圆角、边框、圆形头像、投影、安全边距与出血线（免费）
-- [CSS 阴影生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-shadow-generator.html)：滑块调偏移/模糊/扩散，实时预览并复制 box-shadow（免费）
+- [CSS 阴影生成与预设对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-shadow-generator.html)：2 个阴影工具同页：自定义阴影生成、5 档预设对比（免费）
 - [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：6 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义、正则转义与常用式（免费）
 - [Markdown 转纯文本](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：Markdown → 纯文本，可去列表符号/代码块并下载 txt（免费）
 - [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：6 个本地脱敏工具：手机/证件/邮箱打码、批量处理、分享前自查、规则自定义、哈希脱敏（免费）
@@ -231,7 +231,7 @@
 - [水电燃气账单计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/utility-tier-calculator.html)：6 个账单工具同页：电费、水费、燃气、峰谷、分摊、年度账单预算（免费）
 - [隐私与合规文档合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-policy-generator.html)：6 个合规工具同页：隐私政策、服务条款、Cookie 同意文案、数据处理与共享说明、留存周期、同意管理与退出（免费）
 - [Token 与鉴权自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/jwt-decoder.html)：6 个鉴权工具同页：JWT 解码、声明解释、Authorization 头、Cookie 自查、权限范围、Token 存储建议（免费）
-- [CSS 加载动画生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-loading-spinner.html)：四种加载动画调参生成纯 CSS，可复制或下载 HTML（免费）
+- [加载动画与骨架屏合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-loading-spinner.html)：2 个动效工具同页：加载动画生成、骨架屏生成（免费）
 - [中文简繁转换器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-converter.html)：简繁双向逐字转换，含对照表与未收录提示（免费）
 - [年龄与生日计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/age-calculator.html)：6 个生日工具同页：精确年龄、生日倒计时、届龄节点、生日对比、退休时间与工作年限、生肖与星座速查（免费）
 - [家务分工与轮值合集](https://screscent.github.io/xiaoning-ai-tools/tools/chore-roster.html)：6 个家务工具同页：轮值表、公平度评分、换班与请假、家务清单与频次、外包成本、家务积分与奖励（免费）
@@ -264,7 +264,7 @@
 - [批量序列号生成器](https://screscent.github.io/xiaoning-ai-tools/tools/serial-generator.html)：前缀+位数批量生成唯一序列号，含校验位（免费）
 - [装修材料用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/material-estimate.html)：6 个装修工具同页：涂料、瓷砖、地板、壁纸、损耗、装修预算分配（免费）
 - [文章字数与稿费计算器](https://screscent.github.io/xiaoning-ai-tools/tools/word-fee.html)：按字数千字单价算稿费，含加急倍数与阅读时长（免费）
-- [Unicode 码点与 UTF-8 字节查询器](https://screscent.github.io/xiaoning-ai-tools/tools/unicode-codepoint.html)：逐字查码点/UTF-8 字节，正确处理 emoji 代理对（免费）
+- [Unicode 码点查询与统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/unicode-codepoint.html)：2 个编码工具同页：码点字节查询、文本码点统计（免费）
 - [敏感词本地过滤检测器](https://screscent.github.io/xiaoning-ai-tools/tools/sensitive-filter.html)：内置 80 条分类词库+自定义词，本地过滤并统计（免费）
 - [每日饮水与作息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/daily-plan.html)：按体重活动量算饮水量并生成分时作息表（免费）
 - [节假日与调休合集](https://screscent.github.io/xiaoning-ai-tools/tools/holiday-calendar.html)：6 个假期工具：放假安排、调休标注、拼假规划、假期倒计时、加班费、明细测算（免费）
