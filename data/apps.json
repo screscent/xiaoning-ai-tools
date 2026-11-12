@@ -4602,13 +4602,23 @@
  },
  {
   "id": "dzf7vmslwd",
-  "name": "家庭药品与保质期提醒表",
-  "desc": "按有效期分级正常/临期/过期并算剩余天数",
+  "name": "家庭药品与药箱清单合集",
+  "desc": "2 个用药工具同页：药品保质期提醒、家庭药箱分类清单",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzf7vmslwd.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "expiry",
+    "title": "工具A 保质期提醒"
+   },
+   {
+    "key": "medcabinet",
+    "title": "工具B 药箱清单"
+   }
+  ]
  },
  {
   "id": "r36xfxzjyr",
@@ -5156,13 +5166,23 @@
  },
  {
   "id": "vfmedklsqf",
-  "name": "HTML 转 Markdown 转换器",
-  "desc": "HTML 片段转 Markdown，支持标题/加粗/链接/列表",
+  "name": "HTML 与 Markdown 互转合集",
+  "desc": "2 个编码工具同页：HTML 转 Markdown、Markdown 转 HTML",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://vfmedklsqf.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "html2md",
+    "title": "工具A HTML转MD"
+   },
+   {
+    "key": "md2html",
+    "title": "工具B MD转HTML"
+   }
+  ]
  },
  {
   "id": "2qeyjmqqxb",
@@ -5202,13 +5222,23 @@
  },
  {
   "id": "7b3ecrweb7",
-  "name": "CSS 进度条样式生成器",
-  "desc": "颜色/高度/圆角/条纹可调，实时预览并生成 CSS",
+  "name": "进度条与环形进度合集",
+  "desc": "2 个样式工具同页：线性进度条生成、环形进度生成",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://7b3ecrweb7.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "bar",
+    "title": "工具A 线性进度"
+   },
+   {
+    "key": "ring",
+    "title": "工具B 环形进度"
+   }
+  ]
  },
  {
   "id": "2qe6kzqqxb",
