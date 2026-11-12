@@ -331,14 +331,14 @@
 - [噪音分贝与听力保护速查](https://screscent.github.io/xiaoning-ai-tools/tools/noise-decibel-hearing-protection-kit.html)：6 个噪音工具：分贝对照、听力安全、家电噪音、隔音耳塞、噪声剂量、全屋排查（免费）
 - [转机时间与衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/transfer-time.html)：5 个航班转机工具：最短转机时间、转机够不够、行李直挂、过夜转机、衔接安全余量（免费）
 - [洗手计时与步骤提示器](https://screscent.github.io/xiaoning-ai-tools/tools/handwash-timer.html)：20 秒倒计时配七步提示，流动水与皂液要点（免费）
-- [小费与账单分摊计算器](https://screscent.github.io/xiaoning-ai-tools/tools/tip-split.html)：按账单与小费比例算总额，支持服务费与每人取整分摊（免费）
+- [账单分摊与折扣计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tip-split.html)：2 个计算工具同页：小费与账单分摊、折扣与到手价计算（免费）
 - [文件批量重命名合集](https://screscent.github.io/xiaoning-ai-tools/tools/batch-rename.html)：6 个改名工具：规则模板、序号与补零、批量查找替换、新旧名对照预览、目录结构模板、重名冲突检查（免费）
 - [时间块规划合集](https://screscent.github.io/xiaoning-ai-tools/tools/time-block-week.html)：6 个时间工具：排程、精力、容量、复盘、打断与会议成本、深度任务块设计（免费）
-- [行李打包清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/travel-packing-list.html)：按天数季节与出行类型生成分类打包清单，可勾选核对（免费）
+- [行李打包与件数估算合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-packing-list.html)：2 个出行工具同页：行李打包清单生成、按天数与天气估算件数（免费）
 - [数码续航与充电合集](https://screscent.github.io/xiaoning-ai-tools/tools/battery-charge-time.html)：6 个数码工具同页：充电用时、充电宝容量、笔记本续航、电池健康、快充协议、充电器选型，续航充电速查（免费）
 - [到期管理合集](https://screscent.github.io/xiaoning-ai-tools/tools/contract-renewal.html)：6 个到期工具同页：合同续签、证件换发、保险续保、车辆年检、驾驶证记分换证、会员订阅，到期前该办什么一页算清（免费）
 - [护照签证与入境合集](https://screscent.github.io/xiaoning-ai-tools/tools/passport-validity.html)：6 个工具：护照余量、签证有效期、停留天数、换发提醒、签证照片、转机与过境签证（免费）
-- [心率区间与运动强度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：按年龄与静息心率算五档心率区间，给出燃脂推荐范围（免费）
+- [心率区间与配速步频合集](https://screscent.github.io/xiaoning-ai-tools/tools/hr-zones.html)：2 个运动工具同页：心率区间与强度、目标配速与步频换算（免费）
 - [食物热量与运动消耗换算器](https://screscent.github.io/xiaoning-ai-tools/tools/calorie-exercise.html)：按 MET 与体重换算消耗某份热量需要的运动分钟数（免费）
 - [签证材料清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/visa-checklist.html)：6 个工具：旅游 / 商务 / 学生 / 探亲访友 / 工作签证材料、办理时间线（免费）
 - [步数与活动目标合集](https://screscent.github.io/xiaoning-ai-tools/tools/step-goal.html)：5 个步数工具同页：步数目标、步幅里程、热量消耗、周计划、配速与步频（免费）

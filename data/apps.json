@@ -5831,13 +5831,23 @@
  },
  {
   "id": "ztbcauhvkt",
-  "name": "小费与账单分摊计算器",
-  "desc": "按账单与小费比例算总额，支持服务费与每人取整分摊",
+  "name": "账单分摊与折扣计算合集",
+  "desc": "2 个计算工具同页：小费与账单分摊、折扣与到手价计算",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ztbcauhvkt.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "split",
+    "title": "工具A 账单分摊"
+   },
+   {
+    "key": "discount",
+    "title": "工具B 折扣计算"
+   }
+  ]
  },
  {
   "id": "atvl9kpmpa",
@@ -5913,13 +5923,23 @@
  },
  {
   "id": "ny83nwpkdd",
-  "name": "行李打包清单生成器",
-  "desc": "按天数季节与出行类型生成分类打包清单，可勾选核对",
+  "name": "行李打包与件数估算合集",
+  "desc": "2 个出行工具同页：行李打包清单生成、按天数与天气估算件数",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ny83nwpkdd.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "packlist",
+    "title": "工具A 打包清单"
+   },
+   {
+    "key": "packcount",
+    "title": "工具B 件数估算"
+   }
+  ]
  },
  {
   "id": "rdqxu54t4r",
@@ -6031,13 +6051,23 @@
  },
  {
   "id": "hmn8b3fxk9",
-  "name": "心率区间与运动强度计算器",
-  "desc": "按年龄与静息心率算五档心率区间，给出燃脂推荐范围",
+  "name": "心率区间与配速步频合集",
+  "desc": "2 个运动工具同页：心率区间与强度、目标配速与步频换算",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://hmn8b3fxk9.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "hr",
+    "title": "工具A 心率区间"
+   },
+   {
+    "key": "pace",
+    "title": "工具B 配速步频"
+   }
+  ]
  },
  {
   "id": "atvkckpmpa",
