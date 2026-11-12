@@ -221,8 +221,8 @@
 - [跨时区会议时间换算器](https://screscent.github.io/xiaoning-ai-tools/tools/timezone-meeting.html)：一个时间换算多时区本地时刻与时差，夏令时自动（免费）
 - [CSS 玻璃拟态生成器](https://screscent.github.io/xiaoning-ai-tools/tools/glassmorphism-generator.html)：滑杆调模糊/透明度/圆角，实时预览并复制 CSS（免费）
 - [贷款还款方式对比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/loan-compare.html)：等额本息与等额本金月供/总利息对比，含逐月明细（免费）
-- [中英混排空格格式化工具](https://screscent.github.io/xiaoning-ai-tools/tools/cjk-spacing.html)：中英文/数字之间自动加空格，全角转半角（免费）
-- [条形码生成器 Code128](https://screscent.github.io/xiaoning-ai-tools/tools/barcode-code128.html)：Code128B/C 与 EAN-13 条码绘制，含校验与导 PNG（免费）
+- [中英混排与引用一致性合集](https://screscent.github.io/xiaoning-ai-tools/tools/cjk-spacing.html)：2 个排版工具同页：中英混排空格、引用格式一致性（免费）
+- [条码生成与尺寸校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/barcode-code128.html)：2 个条码工具同页：Code128 生成、条码尺寸与校验（免费）
 - [TOTP 验证码与备份码清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：2 个两步验证工具同页：TOTP 动态码、备份码清点（免费）
 - [倒班排班与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：6 个排班工具：三班倒、四班两倒、夜班作息、换班记录、疲劳恢复、夜班津贴核算（免费）
 - [纪念日与提醒清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：6 个纪念日工具同页：倒计时、提醒、周年、礼物、周期提醒、年度纪念日历（免费）
@@ -299,7 +299,7 @@
 - [HTML 转 Markdown 转换器](https://screscent.github.io/xiaoning-ai-tools/tools/html-to-md.html)：HTML 片段转 Markdown，支持标题/加粗/链接/列表（免费）
 - [节拍器与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/metronome.html)：6 个节拍工具同页：节拍器、毫秒换算、打拍测速、术语、复节奏、细分与连音（免费）
 - [CSS 进度条样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-progress.html)：颜色/高度/圆角/条纹可调，实时预览并生成 CSS（免费）
-- [CSV 合并与拆分工具](https://screscent.github.io/xiaoning-ai-tools/tools/csv-merge-split.html)：多份 CSV 按表头合并，按行数或列值拆分后导出（免费）
+- [CSV 合并拆分与结构统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-merge-split.html)：2 个 CSV 工具同页：合并拆分、列结构统计（免费）
 - [CSS 文字描边生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-text-stroke.html)：描边颜色/宽度/方式可调，实时预览并生成 CSS（免费）
 - [YAML JSON 转换与结构统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/yaml-json-convert.html)：2 个数据工具同页：YAML↔JSON 转换、结构字段统计（免费）
 - [TOML 与 JSON 双向转换器](https://screscent.github.io/xiaoning-ai-tools/tools/toml-json-convert.html)：TOML 与 JSON 互转，支持表/数组表并定位错误行号（免费）

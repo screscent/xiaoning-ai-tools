@@ -3169,21 +3169,43 @@
  },
  {
   "id": "j258a6xyyi",
-  "name": "中英混排空格格式化工具",
-  "desc": "中英文/数字之间自动加空格，全角转半角",
+  "name": "中英混排与引用一致性合集",
+  "desc": "2 个排版工具同页：中英混排空格、引用格式一致性",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://j258a6xyyi.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "spacing",
+    "title": "工具A 中英混排"
+   },
+   {
+    "key": "citecheck",
+    "title": "工具B 引用一致性"
+   }
+  ]
  },
  {
   "id": "ewrulmixkx",
-  "name": "条形码生成器 Code128",
-  "desc": "Code128B/C 与 EAN-13 条码绘制，含校验与导 PNG",
+  "name": "条码生成与尺寸校验合集",
+  "desc": "2 个条码工具同页：Code128 生成、条码尺寸与校验",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ewrulmixkx.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "code128",
+    "title": "工具A Code128"
+   },
+   {
+    "key": "sizecheck",
+    "title": "工具B 尺寸校验"
+   }
+  ]
  },
  {
   "id": "atwrmjpmpa",
@@ -5106,13 +5128,23 @@
  },
  {
   "id": "2qe6kzqqxb",
-  "name": "CSV 合并与拆分工具",
-  "desc": "多份 CSV 按表头合并，按行数或列值拆分后导出",
+  "name": "CSV 合并拆分与结构统计合集",
+  "desc": "2 个 CSV 工具同页：合并拆分、列结构统计",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qe6kzqqxb.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "merge",
+    "title": "工具A 合并拆分"
+   },
+   {
+    "key": "csvstat",
+    "title": "工具B 结构统计"
+   }
+  ]
  },
  {
   "id": "qhwm67stfq",
