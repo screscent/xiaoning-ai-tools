@@ -3250,12 +3250,23 @@
  },
  {
   "id": "jarc8vkp5e",
-  "name": "CSS 玻璃拟态生成器",
-  "desc": "滑杆调模糊/透明度/圆角，实时预览并复制 CSS",
+  "name": "玻璃拟态与卡片样式合集",
+  "desc": "2 个样式工具同页：玻璃拟态生成、毛玻璃卡片样式",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://jarc8vkp5e.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "glass",
+    "title": "工具A 玻璃拟态"
+   },
+   {
+    "key": "glasscard",
+    "title": "工具B 毛玻璃卡片"
+   }
+  ]
  },
  {
   "id": "sfwn9wy97s",
@@ -4135,13 +4146,23 @@
  },
  {
   "id": "bcykmjk6f9",
-  "name": "CSS 按钮样式生成器",
-  "desc": "调色与圆角实时生成按钮 CSS/HTML，含 hover",
+  "name": "按钮样式与幽灵按钮合集",
+  "desc": "2 个样式工具同页：按钮样式生成、幽灵按钮生成",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bcykmjk6f9.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "button",
+    "title": "工具A 按钮样式"
+   },
+   {
+    "key": "ghost",
+    "title": "工具B 幽灵按钮"
+   }
+  ]
  },
  {
   "id": "bnxzbrnsmb",
@@ -5636,13 +5657,23 @@
  },
  {
   "id": "vfmbddlsqf",
-  "name": "咖啡因摄入与代谢计算器",
-  "desc": "按半衰期算 4/8/12 小时残留与建议就寝时间",
+  "name": "咖啡因代谢与残留曲线合集",
+  "desc": "2 个健康工具同页：咖啡因摄入计算、体内残留曲线",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://vfmbddlsqf.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "intake",
+    "title": "工具A 摄入计算"
+   },
+   {
+    "key": "decay",
+    "title": "工具B 残留曲线"
+   }
+  ]
  },
  {
   "id": "dzfmynslwd",
