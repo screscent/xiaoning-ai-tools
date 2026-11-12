@@ -1,8 +1,16 @@
 {
  "updated": "2026-11-12",
  "source": "wechat-mp",
- "count": 163,
+ "count": 164,
  "articles": [
+  {
+   "slug": "3gneU27uP1XApVxUjchVQw",
+   "title": "小凝 Agent：从一个内测码到能跑的全栈应用，我踩了四个坑",
+   "url": "https://mp.weixin.qq.com/s/3gneU27uP1XApVxUjchVQw",
+   "publish_time": "2026-11-12",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "7aVzvmr42wJtdvqae1VFXA",
    "title": "小凝 Agent：AI 时代，程序员会从「写软件」变成「建体系」吗",
