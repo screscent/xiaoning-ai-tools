@@ -3187,12 +3187,23 @@
  },
  {
   "id": "atwrmjpmpa",
-  "name": "TOTP 动态验证码生成器",
-  "desc": "本地计算 2FA 动态验证码，Base32 解码与倒计时",
+  "name": "TOTP 验证码与备份码清单合集",
+  "desc": "2 个两步验证工具同页：TOTP 动态码、备份码清点",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://atwrmjpmpa.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "totp",
+    "title": "工具A TOTP 动态码"
+   },
+   {
+    "key": "backup",
+    "title": "工具B 备份码清单"
+   }
+  ]
  },
  {
   "id": "dzkmanslwd",
@@ -4065,13 +4076,23 @@
  },
  {
   "id": "lyrudrjxel",
-  "name": "中文标点全半角转换器",
-  "desc": "全角半角互转，按标点/数字/空格分范围处理",
+  "name": "标点全半角与空白规范合集",
+  "desc": "2 个文本工具同页：标点全半角转换、空白与标点规范",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://lyrudrjxel.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "punct",
+    "title": "工具A 全半角转换"
+   },
+   {
+    "key": "whitespace",
+    "title": "工具B 空白规范"
+   }
+  ]
  },
  {
   "id": "urkuxmdyk8",
@@ -4454,13 +4475,23 @@
  },
  {
   "id": "qsiducnhme",
-  "name": "十六进制文件查看器",
-  "desc": "本地读文件或粘贴文本转十六进制转储与 ASCII",
+  "name": "十六进制查看与 Base64 合集",
+  "desc": "2 个编码工具同页：十六进制查看、Base64 编解码",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qsiducnhme.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "hex",
+    "title": "工具A 十六进制查看"
+   },
+   {
+    "key": "base64",
+    "title": "工具B Base64 编解码"
+   }
+  ]
  },
  {
   "id": "dzf7vmslwd",

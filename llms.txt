@@ -223,7 +223,7 @@
 - [贷款还款方式对比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/loan-compare.html)：等额本息与等额本金月供/总利息对比，含逐月明细（免费）
 - [中英混排空格格式化工具](https://screscent.github.io/xiaoning-ai-tools/tools/cjk-spacing.html)：中英文/数字之间自动加空格，全角转半角（免费）
 - [条形码生成器 Code128](https://screscent.github.io/xiaoning-ai-tools/tools/barcode-code128.html)：Code128B/C 与 EAN-13 条码绘制，含校验与导 PNG（免费）
-- [TOTP 动态验证码生成器](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：本地计算 2FA 动态验证码，Base32 解码与倒计时（免费）
+- [TOTP 验证码与备份码清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：2 个两步验证工具同页：TOTP 动态码、备份码清点（免费）
 - [倒班排班与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：6 个排班工具：三班倒、四班两倒、夜班作息、换班记录、疲劳恢复、夜班津贴核算（免费）
 - [纪念日与提醒清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：6 个纪念日工具同页：倒计时、提醒、周年、礼物、周期提醒、年度纪念日历（免费）
 - [图片转 ICO 图标生成器](https://screscent.github.io/xiaoning-ai-tools/tools/ico-generator.html)：多尺寸裁剪圆角并打包 ICO，附 PNG 逐张下载（免费）
@@ -257,7 +257,7 @@
 - [行李打包清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：5 个出行清单：商务出差、海岛度假、户外徒步、亲子出行、安检与液体限制（免费）
 - [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：6 个几何工具同页：平面、立体、圆与角、土方、刷漆用量、坡度与排水（免费）
 - [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：6 个编码工具：Base32 编码、解码、填充校验、编码互转、文本十六进制、Crockford Base32（免费）
-- [中文标点全半角转换器](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：全角半角互转，按标点/数字/空格分范围处理（免费）
+- [标点全半角与空白规范合集](https://screscent.github.io/xiaoning-ai-tools/tools/punctuation-convert.html)：2 个文本工具同页：标点全半角转换、空白与标点规范（免费）
 - [AA 分摊与结算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bill-split.html)：6 个分摊工具同页：AA 均分与尾差、按项分摊、最少转账结算、历史记录、小费与税费分摊、拼单与优惠分摊（免费）
 - [日历文件与订阅合集](https://screscent.github.io/xiaoning-ai-tools/tools/ics-calendar.html)：6 个日历工具：ICS 生成、事件编辑、订阅说明、提醒参数、重复规则、时区转换（免费）
 - [SVG 图表生成器](https://screscent.github.io/xiaoning-ai-tools/tools/svg-chart.html)：柱状/折线/面积图纯 SVG 生成，可下载源码（免费）
@@ -274,7 +274,7 @@
 - [会议排期与时段合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-conflict.html)：6 个排期工具：冲突检测、空档查找、时段推荐、占用清单、时段投票、议程时长分配（免费）
 - [CSS 徽章与标签样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-badge.html)：四种徽章样式实时预览并生成 CSS/HTML（免费）
 - [Web 安全响应头合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-headers.html)：4 个 Web 安全工具：响应头检查、CSP 生成、Cookie 属性、HSTS 配置（免费）
-- [十六进制文件查看器](https://screscent.github.io/xiaoning-ai-tools/tools/hex-viewer.html)：本地读文件或粘贴文本转十六进制转储与 ASCII（免费）
+- [十六进制查看与 Base64 合集](https://screscent.github.io/xiaoning-ai-tools/tools/hex-viewer.html)：2 个编码工具同页：十六进制查看、Base64 编解码（免费）
 - [家庭药品与保质期提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/medicine-expiry.html)：按有效期分级正常/临期/过期并算剩余天数（免费）
 - [旅行预算与花费合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-budget.html)：6 个旅行工具：总预算与占比、每日预算、住宿分摊、省钱方案、门票预算、保险与延误赔付（免费）
 - [每周菜单与采购计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/weekly-menu.html)：6 个菜单工具同页：七天菜单排布、分品类采购汇总、库存与临期、食材花费与人均、周餐预算、备餐分装计划（免费）
