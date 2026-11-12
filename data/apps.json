@@ -1415,12 +1415,23 @@
  },
  {
   "id": "7bpyp2web7",
-  "name": "颜色转换与对比度检测器",
-  "desc": "HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测",
+  "name": "颜色转换与对比度合集",
+  "desc": "2 个设计工具同页：颜色格式转换、WCAG 对比度检测",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://7bpyp2web7.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "convert",
+    "title": "工具A 颜色转换"
+   },
+   {
+    "key": "contrast",
+    "title": "工具B 对比度"
+   }
+  ]
  },
  {
   "id": "x8slbmcakb",
@@ -2356,12 +2367,23 @@
  },
  {
   "id": "bcsb5nk6f9",
-  "name": "配色方案生成器",
-  "desc": "互补/邻近/三角等配色规则，一键复制色卡",
+  "name": "配色方案与变体合集",
+  "desc": "2 个设计工具同页：配色方案生成、明暗变体生成",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bcsb5nk6f9.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "scheme",
+    "title": "工具A 配色方案"
+   },
+   {
+    "key": "palette",
+    "title": "工具B 明暗变体"
+   }
+  ]
  },
  {
   "id": "qse3gvnhme",
@@ -2769,12 +2791,23 @@
  },
  {
   "id": "dzkfeyslwd",
-  "name": "HTML 实体编解码器",
-  "desc": "HTML 特殊字符实体编码/解码，支持引号与换行",
+  "name": "HTML 实体与常用符号合集",
+  "desc": "2 个编码工具同页：HTML 实体编解码、常用实体速查",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzkfeyslwd.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "codec",
+    "title": "工具A 实体编解码"
+   },
+   {
+    "key": "entities",
+    "title": "工具B 实体速查"
+   }
+  ]
  },
  {
   "id": "r3a6wazjyr",
