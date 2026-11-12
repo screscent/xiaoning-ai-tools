@@ -5881,13 +5881,23 @@
  },
  {
   "id": "rdqjum4t4r",
-  "name": "洗手计时与步骤提示器",
-  "desc": "20 秒倒计时配七步提示，流动水与皂液要点",
+  "name": "洗手计时与步骤提示合集",
+  "desc": "2 个卫生工具同页：20 秒洗手计时、分场景洗手步骤提示",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://rdqjum4t4r.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "wash",
+    "title": "工具A 洗手计时"
+   },
+   {
+    "key": "washsteps",
+    "title": "工具B 洗手步骤"
+   }
+  ]
  },
  {
   "id": "ztbcauhvkt",
@@ -6411,13 +6421,23 @@
  },
  {
   "id": "2qethzqqxb",
-  "name": "月度预算配额分配器",
-  "desc": "按收入与比例拆分配额，校验占比合计与结余",
+  "name": "月度预算与配额分配合集",
+  "desc": "2 个理财工具同页：月度预算汇总、50/30/20 预算配额分配",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://2qethzqqxb.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "monthly",
+    "title": "工具A 月度预算"
+   },
+   {
+    "key": "budget",
+    "title": "工具B 配额分配"
+   }
+  ]
  },
  {
   "id": "4gsndabtnf",
@@ -7373,13 +7393,23 @@
  },
  {
   "id": "keyyhvdudk",
-  "name": "合同签署前必查清单生成器",
-  "desc": "按合同类型给主体、核心条款、风险条款与红线提示",
+  "name": "合同签署与条款自查合集",
+  "desc": "2 个合同工具同页：签署前必查清单、关键条款缺失自查",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://keyyhvdudk.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "checklist",
+    "title": "工具A 签署清单"
+   },
+   {
+    "key": "contract",
+    "title": "工具B 条款自查"
+   }
+  ]
  },
  {
   "id": "dzkttqslwd",

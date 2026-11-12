@@ -330,7 +330,7 @@
 - [骨架屏与阴影生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-skeleton.html)：2 个设计工具同页：CSS 骨架屏占位、CSS 阴影生成与复制（免费）
 - [噪音分贝与听力保护速查](https://screscent.github.io/xiaoning-ai-tools/tools/noise-decibel-hearing-protection-kit.html)：6 个噪音工具：分贝对照、听力安全、家电噪音、隔音耳塞、噪声剂量、全屋排查（免费）
 - [转机时间与衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/transfer-time.html)：5 个航班转机工具：最短转机时间、转机够不够、行李直挂、过夜转机、衔接安全余量（免费）
-- [洗手计时与步骤提示器](https://screscent.github.io/xiaoning-ai-tools/tools/handwash-timer.html)：20 秒倒计时配七步提示，流动水与皂液要点（免费）
+- [洗手计时与步骤提示合集](https://screscent.github.io/xiaoning-ai-tools/tools/handwash-timer.html)：2 个卫生工具同页：20 秒洗手计时、分场景洗手步骤提示（免费）
 - [账单分摊与折扣计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/tip-split.html)：2 个计算工具同页：小费与账单分摊、折扣与到手价计算（免费）
 - [文件批量重命名合集](https://screscent.github.io/xiaoning-ai-tools/tools/batch-rename.html)：6 个改名工具：规则模板、序号与补零、批量查找替换、新旧名对照预览、目录结构模板、重名冲突检查（免费）
 - [时间块规划合集](https://screscent.github.io/xiaoning-ai-tools/tools/time-block-week.html)：6 个时间工具：排程、精力、容量、复盘、打断与会议成本、深度任务块设计（免费）
@@ -349,7 +349,7 @@
 - [邮箱签名与名片合集](https://screscent.github.io/xiaoning-ai-tools/tools/email-signature.html)：5 个名片工具同页：邮箱签名、名片文案、社交简介、vCard、邮件结尾礼仪（免费）
 - [账单日与免息期合集](https://screscent.github.io/xiaoning-ai-tools/tools/credit-card-billing-grace-repay-kit.html)：6 个信用卡工具：账单日规划、免息期、还款日提醒、分期成本、最低还款利息、还款规划（免费）
 - [文本摘要与增删统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-summary.html)：2 个文本工具同页：长文本摘要与压缩率、两版本文本增删改统计（免费）
-- [月度预算配额分配器](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-budget.html)：按收入与比例拆分配额，校验占比合计与结余（免费）
+- [月度预算与配额分配合集](https://screscent.github.io/xiaoning-ai-tools/tools/monthly-budget.html)：2 个理财工具同页：月度预算汇总、50/30/20 预算配额分配（免费）
 - [预产期孕周与滤芯周期合集](https://screscent.github.io/xiaoning-ai-tools/tools/due-date.html)：2 个生活工具同页：预产期与孕周计算、滤芯更换周期提醒（免费）
 - [储蓄目标与计算历史合集](https://screscent.github.io/xiaoning-ai-tools/tools/saving-goal.html)：2 个理财工具同页：储蓄目标达成时间、计算历史记录与复用（免费）
 - [CSS 背景与纹理生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-pattern.html)：6 个背景纹理工具同页：分隔线、点阵背景、网格条纹、噪点纹理、平铺次数、渐变背景（免费）
@@ -386,7 +386,7 @@
 - [血糖负荷与低 GI 替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/glycemic-load.html)：2 个控糖工具同页：GI 与血糖负荷计算、低 GI 食物替换建议（免费）
 - [家庭应急与防灾合集](https://screscent.github.io/xiaoning-ai-tools/tools/family-emergency-kit.html)：6 个应急工具：物品清单、应急预案、急救包、停电停水、饮水食物储备、家庭演练计划（免费）
 - [海淘税费与禁限速查](https://screscent.github.io/xiaoning-ai-tools/tools/parcel-tax-calc.html)：6 个海淘工具：行邮税与到手价、运费与包裹、禁限与申报、退换与售后、行邮税与免税额度、合箱与拆单建议（免费）
-- [合同签署前必查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/contract-precheck.html)：按合同类型给主体、核心条款、风险条款与红线提示（免费）
+- [合同签署与条款自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/contract-precheck.html)：2 个合同工具同页：签署前必查清单、关键条款缺失自查（免费）
 - [二手交易交接合集](https://screscent.github.io/xiaoning-ai-tools/tools/secondhand-handover.html)：6 个二手工具：交接单、验机、纠纷、流程、定价、保修交接说明（免费）
 - [家用电器选购计算合集（空调·冰箱·洗衣机·电视·热水器·净水）](https://screscent.github.io/xiaoning-ai-tools/tools/home-appliance-picker.html)：一个页面装 6 个家电选购计算器，按面积/人数/距离算清该买多大，hash 直链可直达（免费）
 - [职场权益与离职计算合集（补偿·试用期·竞业·年假）](https://screscent.github.io/xiaoning-ai-tools/tools/workrights-collection.html)：6 个职场计算器同页：离职补偿 N/N+1/2N、试用期合规自查、竞业限制补偿、年假与未休折算、社保公积金与到手工资、病假工资与医疗期，一个页面算清离职、每月到手和病假能拿多少（免费）
