@@ -238,11 +238,11 @@
 - [证件与卡号校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-card-validator.html)：6 个校验工具同页：身份证、银行卡、信用代码、联系方式、车架号、护照号规则（免费）
 - [透明边裁剪与批量清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/trim-transparent.html)：2 个图片工具同页：单品透明边裁剪、批量裁剪清单（免费）
 - [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：6 个出行工具同页：油耗、油电对比、停车过路、通勤月成本、公交月票、五年总持有（免费）
-- [CSS Flex 与 Grid 布局生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：切换 Flex/Grid 调间距对齐，实时预览并复制 CSS（免费）
+- [Flex 与 Grid 布局合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：2 个布局工具同页：Flex 布局生成、Grid 网格模板（免费）
 - [文本行去重排序与统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：2 个文本工具同页：行去重与排序、文本行统计（免费）
 - [菜谱份量与备餐换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：6 个备餐工具：份量换算、批量备餐、器具尺寸、采购清单、剩菜保存与复热、厨房单位换算（免费）
 - [周数与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/iso-week.html)：6 个周数工具：周号查询、周范围、周计划、季度周数、双周迭代、周偏移倒推（免费）
-- [图片转 ASCII 艺术](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：图片转字符画，可选字符集与彩色 HTML 输出（免费）
+- [ASCII 艺术与字符画合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：2 个图片工具同页：图片转 ASCII、字符画参数调节（免费）
 - [霓虹文字与边框效果合集](https://screscent.github.io/xiaoning-ai-tools/tools/neon-text.html)：2 个样式工具同页：霓虹文字生成、霓虹边框生成（免费）
 - [中文与拼音处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-pinyin.html)：6 个拼音工具：带调拼音、无调与首字母、多音字、逐字对照表、拼音排序、声韵拆解（免费）
 - [隐私设置自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/privacy-checklist.html)：5 个隐私自查清单：社交平台、手机权限、浏览器、账号安全、双重验证 MFA（免费）
@@ -272,7 +272,7 @@
 - [文本改写与降重合集](https://screscent.github.io/xiaoning-ai-tools/tools/synonym-rewrite.html)：6 个文本工具：同义替换、强度改写、同义词表、改写对照、降重评分、标点语病自查（免费）
 - [个税与到手工资合集](https://screscent.github.io/xiaoning-ai-tools/tools/salary-tax.html)：6 个税务工具：工资个税、年终奖对比、专项扣除、五险一金、年度汇算、副业收入测算（免费）
 - [会议排期与时段合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-conflict.html)：6 个排期工具：冲突检测、空档查找、时段推荐、占用清单、时段投票、议程时长分配（免费）
-- [CSS 徽章与标签样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-badge.html)：四种徽章样式实时预览并生成 CSS/HTML（免费）
+- [徽章与标签样式合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-badge.html)：2 个样式工具同页：徽章样式生成、标签组样式（免费）
 - [Web 安全响应头合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-headers.html)：4 个 Web 安全工具：响应头检查、CSP 生成、Cookie 属性、HSTS 配置（免费）
 - [十六进制查看与 Base64 合集](https://screscent.github.io/xiaoning-ai-tools/tools/hex-viewer.html)：2 个编码工具同页：十六进制查看、Base64 编解码（免费）
 - [家庭药品与药箱清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/medicine-expiry.html)：2 个用药工具同页：药品保质期提醒、家庭药箱分类清单（免费）

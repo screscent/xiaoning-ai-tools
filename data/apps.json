@@ -3685,12 +3685,23 @@
  },
  {
   "id": "ja46pmkp5e",
-  "name": "CSS Flex 与 Grid 布局生成器",
-  "desc": "切换 Flex/Grid 调间距对齐，实时预览并复制 CSS",
+  "name": "Flex 与 Grid 布局合集",
+  "desc": "2 个布局工具同页：Flex 布局生成、Grid 网格模板",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ja46pmkp5e.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "flex",
+    "title": "工具A Flex布局"
+   },
+   {
+    "key": "grid",
+    "title": "工具B Grid网格"
+   }
+  ]
  },
  {
   "id": "2qes9dqqxb",
@@ -3786,12 +3797,23 @@
  },
  {
   "id": "bnxqa6nsmb",
-  "name": "图片转 ASCII 艺术",
-  "desc": "图片转字符画，可选字符集与彩色 HTML 输出",
+  "name": "ASCII 艺术与字符画合集",
+  "desc": "2 个图片工具同页：图片转 ASCII、字符画参数调节",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://bnxqa6nsmb.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "image",
+    "title": "工具A 图片转字符"
+   },
+   {
+    "key": "asciiart",
+    "title": "工具B 字符画参数"
+   }
+  ]
  },
  {
   "id": "atvxmfpmpa",
@@ -4629,13 +4651,23 @@
  },
  {
   "id": "fwk3ajyqkh",
-  "name": "CSS 徽章与标签样式生成器",
-  "desc": "四种徽章样式实时预览并生成 CSS/HTML",
+  "name": "徽章与标签样式合集",
+  "desc": "2 个样式工具同页：徽章样式生成、标签组样式",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://fwk3ajyqkh.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "badge",
+    "title": "工具A 徽章样式"
+   },
+   {
+    "key": "taggroup",
+    "title": "工具B 标签组"
+   }
+  ]
  },
  {
   "id": "x89sejcakb",
