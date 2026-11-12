@@ -6533,23 +6533,43 @@
  },
  {
   "id": "ewzrj3ixkx",
-  "name": "图片宽高比与等比缩放计算器",
-  "desc": "按目标宽度或百分比等比缩放，给出比例化简与面积变化",
+  "name": "图片宽高比与裁剪合集",
+  "desc": "2 个图片工具同页：宽高比与等比缩放、按比例裁剪导出",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ewzrj3ixkx.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "aspect",
+    "title": "工具A 宽高等比"
+   },
+   {
+    "key": "crop",
+    "title": "工具B 图片裁剪"
+   }
+  ]
  },
  {
   "id": "glfhwvcqng",
-  "name": "手机 App 权限自查清单生成器",
-  "desc": "按设备与场景生成权限自查清单，标出高风险与设置路径",
+  "name": "App 权限与隐私泄露自查合集",
+  "desc": "2 个安全自查工具同页：手机 App 权限清单、隐私泄露自查",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://glfhwvcqng.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "perm",
+    "title": "工具A 权限清单"
+   },
+   {
+    "key": "leakcheck",
+    "title": "工具B 泄露自查"
+   }
+  ]
  },
  {
   "id": "kezy8adudk",
@@ -7476,12 +7496,23 @@
  },
  {
   "id": "r3vc8lzjyr",
-  "name": "发票抬头与税号校验器",
-  "desc": "校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍",
+  "name": "发票校验与开票信息合集",
+  "desc": "2 个开票工具同页：抬头税号校验、开票信息生成",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://r3vc8lzjyr.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "tax",
+    "title": "工具A 抬头校验"
+   },
+   {
+    "key": "invoice",
+    "title": "工具B 开票信息"
+   }
+  ]
  },
  {
   "id": "ury5ezdyk8",

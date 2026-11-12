@@ -359,8 +359,8 @@
 - [凯撒与古典密码合集](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：5 个古典密码工具同页：凯撒位移、ROT13、反字母表、维吉尼亚、栅栏密码（免费）
 - [项目排期与进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/gantt-cpm.html)：6 个排期工具同页：甘特、里程碑、关键路径、燃尽、人力、缓冲与机动时间（免费）
 - [界面提示文案合集](https://screscent.github.io/xiaoning-ai-tools/tools/ui-microcopy-onboarding-kit.html)：6 个文案工具：空状态、错误页、加载中、成功反馈、文案体检、引导文案组合（免费）
-- [图片宽高比与等比缩放计算器](https://screscent.github.io/xiaoning-ai-tools/tools/aspect-ratio.html)：按目标宽度或百分比等比缩放，给出比例化简与面积变化（免费）
-- [手机 App 权限自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/app-permission.html)：按设备与场景生成权限自查清单，标出高风险与设置路径（免费）
+- [图片宽高比与裁剪合集](https://screscent.github.io/xiaoning-ai-tools/tools/aspect-ratio.html)：2 个图片工具同页：宽高比与等比缩放、按比例裁剪导出（免费）
+- [App 权限与隐私泄露自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/app-permission.html)：2 个安全自查工具同页：手机 App 权限清单、隐私泄露自查（免费）
 - [编号与缩进整理合集](https://screscent.github.io/xiaoning-ai-tools/tools/number-indent.html)：6 个文本整理工具同页：重新编号、缩进规范、大纲层级、去编号空行、缩进宽度换算、Markdown 层级检查（免费）
 - [相机曝光与景深换算器](https://screscent.github.io/xiaoning-ai-tools/tools/exposure-dof.html)：按光圈快门 ISO 算 EV，并估算景深边界与超焦距（免费）
 - [租车费用与押金合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-rental-cost-deposit-kit.html)：6 个租车工具：租金附加费、押金预授权、保险免赔、车型对比、超里程费、租车总成本对照（免费）
@@ -399,7 +399,7 @@
 - [二维码与条形码识别合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-barcode-scan.html)：6 个编码工具同页：二维码内容、条形码校验、校验位查询、vCard 名片、WiFi 连接码、容量与版本（免费）
 - [有氧能力与训练强度合集](https://screscent.github.io/xiaoning-ai-tools/tools/aerobic-training.html)：6 个有氧工具同页：静息心率、VO2max、心率区间、训练负荷比、跨项目等效、训练计划（免费）
 - [JSON 与 SQL 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-sql-convert.html)：6 个 SQL 工具同页：JSON→INSERT、INSERT→JSON、类型推断、关键字与 EXPLAIN 速查、SQL 格式化、连接与聚合，数据与语句一次转通（免费）
-- [发票抬头与税号校验器](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：校验企业名称与纳税人识别号格式，输出校验位结果与可复制的规范抬头，报销开票前先自查一遍（免费）
+- [发票校验与开票信息合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-title-check.html)：2 个开票工具同页：抬头税号校验、开票信息生成（免费）
 - [Git 场景命令合集](https://screscent.github.io/xiaoning-ai-tools/tools/git-scenario-cheatsheet.html)：6 个 Git 场景工具同页：撤销与回退、分支与找回、暂存与切换、冲突与合并、bisect 定位、reflog 救援（免费）
 - [Docker 命令与实战速查](https://screscent.github.io/xiaoning-ai-tools/tools/docker-cheatsheet.html)：6 个 Docker 工具同页：容器、镜像、网络、数据卷、Compose、清理与磁盘占用（免费）
 - [Nginx 配置合集](https://screscent.github.io/xiaoning-ai-tools/tools/nginx-snippet-cheatsheet.html)：6 个 Nginx 工具同页：反向代理、HTTPS 证书、缓存压缩、限流跨域、并发估算与上游负载均衡（免费）
