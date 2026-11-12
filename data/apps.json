@@ -6665,13 +6665,23 @@
  },
  {
   "id": "puhhek3a4t",
-  "name": "体温与血压记录趋势计算器",
-  "desc": "解析记录行给出均值极值异常次数与趋势判断",
+  "name": "体温血压记录与指标解读合集",
+  "desc": "2 个健康工具同页：体温与血压趋势记录、血压分级与建议解读",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://puhhek3a4t.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "vitals",
+    "title": "工具A 趋势记录"
+   },
+   {
+    "key": "bpadvice",
+    "title": "工具B 血压解读"
+   }
+  ]
  },
  {
   "id": "ijapvv8zig",
@@ -6939,13 +6949,23 @@
  },
  {
   "id": "atvsvxpmpa",
-  "name": "航班值机与登机时间倒推器",
-  "desc": "按起飞时间倒推出门到登机的七个节点，并评估时间松紧",
+  "name": "航班值机与转机衔接合集",
+  "desc": "2 个出行工具同页：值机与登机时间倒推、转机最短衔接时间",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://atvsvxpmpa.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "checkin",
+    "title": "工具A 值机倒推"
+   },
+   {
+    "key": "transfer",
+    "title": "工具B 转机衔接"
+   }
+  ]
  },
  {
   "id": "dzfvf2slwd",
@@ -7041,13 +7061,23 @@
  },
  {
   "id": "keygufdudk",
-  "name": "嘌呤与尿酸饮食速查器",
-  "desc": "按人群算每日嘌呤上限，四档食物清单 + 替换建议",
+  "name": "嘌呤尿酸与饮水目标合集",
+  "desc": "2 个健康工具同页：嘌呤与尿酸饮食速查、每日饮水目标与分时提醒",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://keygufdudk.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "purine",
+    "title": "工具A 嘌呤速查"
+   },
+   {
+    "key": "watergoal",
+    "title": "工具B 饮水目标"
+   }
+  ]
  },
  {
   "id": "dvzcccgy5d",

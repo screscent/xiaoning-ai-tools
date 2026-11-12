@@ -364,7 +364,7 @@
 - [编号与缩进整理合集](https://screscent.github.io/xiaoning-ai-tools/tools/number-indent.html)：6 个文本整理工具同页：重新编号、缩进规范、大纲层级、去编号空行、缩进宽度换算、Markdown 层级检查（免费）
 - [相机曝光与图片体积合集](https://screscent.github.io/xiaoning-ai-tools/tools/exposure-dof.html)：2 个图片工具同页：曝光与景深换算、图片体积估算（免费）
 - [租车费用与押金合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-rental-cost-deposit-kit.html)：6 个租车工具：租金附加费、押金预授权、保险免赔、车型对比、超里程费、租车总成本对照（免费）
-- [体温与血压记录趋势计算器](https://screscent.github.io/xiaoning-ai-tools/tools/vitals-trend.html)：解析记录行给出均值极值异常次数与趋势判断（免费）
+- [体温血压记录与指标解读合集](https://screscent.github.io/xiaoning-ai-tools/tools/vitals-trend.html)：2 个健康工具同页：体温与血压趋势记录、血压分级与建议解读（免费）
 - [区间与排期统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/date-range.html)：6 个区间工具：区间天数、周期排期、分段统计、重叠判断、区间合并、空档与间隙统计（免费）
 - [图片体积与位深估算合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-size-bitdepth-estimate-kit.html)：6 个估算工具：位深体积、内存占用、压缩比、色彩数、批量压缩体积、打印 DPI（免费）
 - [两步验证与恢复码合集](https://screscent.github.io/xiaoning-ai-tools/tools/recovery-codes.html)：2 个安全工具同页：两步验证码生成、备用恢复码生成（免费）
@@ -377,12 +377,12 @@
 - [新能源车续航与车险合集](https://screscent.github.io/xiaoning-ai-tools/tools/ev-range-cost.html)：2 个用车工具同页：续航与充电费用估算、车险保费估算（免费）
 - [膳食纤维与蔬果份量计算器](https://screscent.github.io/xiaoning-ai-tools/tools/fiber-veggie.html)：按年龄性别算每日纤维目标，拆成蔬菜水果份数并给食物对照（免费）
 - [平台图片尺寸与规格速查](https://screscent.github.io/xiaoning-ai-tools/tools/social-platform-image-size-kit.html)：6 个尺寸工具：社交、电商、视频、网页、封面、头像与缩略图（免费）
-- [航班值机与登机时间倒推器](https://screscent.github.io/xiaoning-ai-tools/tools/flight-boarding-timeline.html)：按起飞时间倒推出门到登机的七个节点，并评估时间松紧（免费）
+- [航班值机与转机衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/flight-boarding-timeline.html)：2 个出行工具同页：值机与登机时间倒推、转机最短衔接时间（免费）
 - [钙与维生素 D 摄入计算器](https://screscent.github.io/xiaoning-ai-tools/tools/calcium-vitd.html)：按年龄性别算每日钙目标，估算奶豆摄入缺口与补充份数（免费）
 - [Wi-Fi 与路由器安全自查清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/wifi-security-check.html)：按加密方式与六项配置打分，给出扣分项与整改路径（免费）
 - [在线小工具合集（字数·进制·折扣·日期差·颜色·单位）](https://screscent.github.io/xiaoning-ai-tools/tools/mini-tools-collection.html)：一个页面装 6 个常用小工具，hash 直链可直达子工具（免费）
 - [引用格式与文献速查](https://screscent.github.io/xiaoning-ai-tools/tools/ref-citation.html)：6 个引用工具同页：GB/T 7714、APA 7、MLA 9、BibTeX、文献去重统计与引用一致性检查（免费）
-- [嘌呤与尿酸饮食速查器](https://screscent.github.io/xiaoning-ai-tools/tools/purine-uric.html)：按人群算每日嘌呤上限，四档食物清单 + 替换建议（免费）
+- [嘌呤尿酸与饮水目标合集](https://screscent.github.io/xiaoning-ai-tools/tools/purine-uric.html)：2 个健康工具同页：嘌呤与尿酸饮食速查、每日饮水目标与分时提醒（免费）
 - [血糖负荷与低 GI 替换合集](https://screscent.github.io/xiaoning-ai-tools/tools/glycemic-load.html)：2 个控糖工具同页：GI 与血糖负荷计算、低 GI 食物替换建议（免费）
 - [家庭应急与防灾合集](https://screscent.github.io/xiaoning-ai-tools/tools/family-emergency-kit.html)：6 个应急工具：物品清单、应急预案、急救包、停电停水、饮水食物储备、家庭演练计划（免费）
 - [海淘税费与禁限速查](https://screscent.github.io/xiaoning-ai-tools/tools/parcel-tax-calc.html)：6 个海淘工具：行邮税与到手价、运费与包裹、禁限与申报、退换与售后、行邮税与免税额度、合箱与拆单建议（免费）
