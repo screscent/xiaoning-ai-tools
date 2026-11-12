@@ -295,17 +295,17 @@
 - [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：6 个 JSON 路径工具同页：JSONPath、Pointer、点号路径、路径生成、Schema 校验、扁平化还原（免费）
 - [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema-validate-mock-kit.html)：6 个 Schema 工具：Schema 生成、Schema 校验、示例数据、字段说明、TS 类型、模拟数据批量生成（免费）
 - [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
-- [数字转英文读法](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：整数转英文单词，支持英式 and 与序数词（免费）
+- [数字读法与人民币大写合集](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：2 个文本工具同页：数字转英文读法、数字转人民币大写（免费）
 - [HTML 与 Markdown 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/html-to-md.html)：2 个编码工具同页：HTML 转 Markdown、Markdown 转 HTML（免费）
 - [节拍器与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/metronome.html)：6 个节拍工具同页：节拍器、毫秒换算、打拍测速、术语、复节奏、细分与连音（免费）
 - [进度条与环形进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-progress.html)：2 个样式工具同页：线性进度条生成、环形进度生成（免费）
 - [CSV 合并拆分与结构统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-merge-split.html)：2 个 CSV 工具同页：合并拆分、列结构统计（免费）
 - [CSS 文字描边生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-text-stroke.html)：描边颜色/宽度/方式可调，实时预览并生成 CSS（免费）
 - [YAML JSON 转换与结构统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/yaml-json-convert.html)：2 个数据工具同页：YAML↔JSON 转换、结构字段统计（免费）
-- [TOML 与 JSON 双向转换器](https://screscent.github.io/xiaoning-ai-tools/tools/toml-json-convert.html)：TOML 与 JSON 互转，支持表/数组表并定位错误行号（免费）
+- [TOML 与 JSON YAML 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/toml-json-convert.html)：2 个编码工具同页：TOML 转 JSON、JSON 转 YAML（免费）
 - [工时与时长计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/work-hours-duration-cost-kit.html)：6 个工时工具：时长累加、起止时间差、单位换算、工时表统计、工时扣休、工时成本核算（免费）
 - [文本大小写与命名风格合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-case-convert.html)：2 个文本工具同页：大小写批量转换、命名风格转换（免费）
-- [CSS 动画缓动曲线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-easing.html)：调节四个控制点生成 cubic-bezier，实时预览并导出 CSS（免费）
+- [缓动曲线与关键帧合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-easing.html)：2 个样式工具同页：缓动曲线生成、关键帧动画生成（免费）
 - [工资与加班费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/overtime-pay.html)：6 个工资工具同页：加班费、节假日加班、夜班津贴、加班上限、个税与到手工资、请假与缺勤扣款（免费）
 - [咖啡因摄入与代谢计算器](https://screscent.github.io/xiaoning-ai-tools/tools/caffeine-metabolism.html)：按半衰期算 4/8/12 小时残留与建议就寝时间（免费）
 - [用药提醒与间隔计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/med-reminder.html)：2 个用药工具同页：家庭用药提醒清单、服药间隔与下次时间（免费）
