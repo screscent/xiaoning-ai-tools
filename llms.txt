@@ -317,15 +317,15 @@
 - [时差调整与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/jetlag-plan.html)：5 个出行作息工具：向东倒时差、向西倒时差、作息调整表、落地建议、小睡与咖啡因窗口（免费）
 - [久坐提醒与拉伸计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议（免费）
 - [任务优先级与四象限合集](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：6 个工具，全部本地运行：四象限分区、优先级评分、时间块排期、清单导出、周复盘、委派与等待清单（免费）
-- [停车费与停车时长计算器](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：按入场出场时间与首小时/后续单价算停车时长与费用（免费）
+- [停车费用与可停时长合集](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：2 个停车工具同页：停车费与时长计算、按预算反算可停时长（免费）
 - [快递运费与包裹成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：6 个物流工具同页：首重续重、体积重抛比、保价理赔、退换寄回、时效赔付、合并寄送对比（免费）
 - [网盘与下载带宽合集](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：6 个传输工具同页：下载时间、上传时间、带宽换算、体积压缩、延迟与加速、流量与超额费用（免费）
-- [体脂率与腰臀比计算器](https://screscent.github.io/xiaoning-ai-tools/tools/body-fat-waist.html)：按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险（免费）
+- [体脂腰臀比与 VO2max 合集](https://screscent.github.io/xiaoning-ai-tools/tools/body-fat-waist.html)：2 个健康工具同页：体脂率与腰臀比计算、VO2max 最大摄氧量估算（免费）
 - [防晒霜用量与补涂计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sunscreen-dose.html)：按面部面积与 SPF 算单次用量、有效时长与补涂次数（免费）
 - [行李额与超重费合集](https://screscent.github.io/xiaoning-ai-tools/tools/baggage-allowance-overweight-packing-kit.html)：6 个行李工具：手提额度、托运额度、超重费、航司对比、丢失与理赔、打包清单与称重（免费）
 - [证件照尺寸与排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-photo-size-layout-print-kit.html)：6 个证件照工具：尺寸、像素换算、排版张数、背景要求、合规自查、打印店交接单（免费）
 - [家电保养与滤芯更换提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/appliance-care.html)：按家电类型与上次保养日推算下次保养与耗材更换（免费）
-- [房租押金与水电结算计算器](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：按租金押金月数水电与违约扣款算应退押金与清单（免费）
+- [房租押金与水电分摊合集](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：2 个租房工具同页：押金与水电结算、水电费用分摊计算（免费）
 - [屏幕使用与护眼休息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/eye-break-plan.html)：按屏幕时长与间隔生成 20-20-20 休息提醒时间表（免费）
 - [CSS 骨架屏占位生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-skeleton.html)：块数/高度/圆角/颜色可调，实时预览并导出骨架屏 CSS（免费）
 - [噪音分贝与听力保护速查](https://screscent.github.io/xiaoning-ai-tools/tools/noise-decibel-hearing-protection-kit.html)：6 个噪音工具：分贝对照、听力安全、家电噪音、隔音耳塞、噪声剂量、全屋排查（免费）

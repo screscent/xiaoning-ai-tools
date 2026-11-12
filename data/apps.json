@@ -5539,13 +5539,23 @@
  },
  {
   "id": "npcsur2aq6",
-  "name": "停车费与停车时长计算器",
-  "desc": "按入场出场时间与首小时/后续单价算停车时长与费用",
+  "name": "停车费用与可停时长合集",
+  "desc": "2 个停车工具同页：停车费与时长计算、按预算反算可停时长",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npcsur2aq6.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "parking",
+    "title": "工具A 停车费用"
+   },
+   {
+    "key": "duration",
+    "title": "工具B 可停时长"
+   }
+  ]
  },
  {
   "id": "z5wgaqaahj",
@@ -5621,13 +5631,23 @@
  },
  {
   "id": "ektq3cvhte",
-  "name": "体脂率与腰臀比计算器",
-  "desc": "按身高体重腰围颈围估算 BMI、体脂率与腰臀比风险",
+  "name": "体脂腰臀比与 VO2max 合集",
+  "desc": "2 个健康工具同页：体脂率与腰臀比计算、VO2max 最大摄氧量估算",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ektq3cvhte.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "bodyfat",
+    "title": "工具A 体脂腰臀"
+   },
+   {
+    "key": "vo2max",
+    "title": "工具B VO2max"
+   }
+  ]
  },
  {
   "id": "3xmlz85af3",
@@ -5723,13 +5743,23 @@
  },
  {
   "id": "atvvufpmpa",
-  "name": "房租押金与水电结算计算器",
-  "desc": "按租金押金月数水电与违约扣款算应退押金与清单",
+  "name": "房租押金与水电分摊合集",
+  "desc": "2 个租房工具同页：押金与水电结算、水电费用分摊计算",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://atvvufpmpa.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "deposit",
+    "title": "工具A 押金结算"
+   },
+   {
+    "key": "utilitysplit",
+    "title": "工具B 水电分摊"
+   }
+  ]
  },
  {
   "id": "qsiaupnhme",
