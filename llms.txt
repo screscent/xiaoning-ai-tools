@@ -313,9 +313,9 @@
 - [CSS 轮播图样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-carousel.html)：宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML（免费）
 - [呼吸放松计时器](https://screscent.github.io/xiaoning-ai-tools/tools/breathing-timer.html)：4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进（免费）
 - [保养与年检提醒合集](https://screscent.github.io/xiaoning-ai-tools/tools/car-maintenance.html)：5 个车主提醒工具：保养周期、年检到期、保险到期、保养项目清单、轮胎更换判断（免费）
-- [文本空行清理与重复行统计器](https://screscent.github.io/xiaoning-ai-tools/tools/text-lines-clean.html)：清理空行、去重并统计重复行次数，保留首次出现顺序（免费）
+- [文本清理与重复行统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-lines-clean.html)：2 个文本工具同页：空行清理与统计、重复行分组计数（免费）
 - [时差调整与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/jetlag-plan.html)：5 个出行作息工具：向东倒时差、向西倒时差、作息调整表、落地建议、小睡与咖啡因窗口（免费）
-- [久坐提醒与拉伸计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议（免费）
+- [久坐提醒与拉伸计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/sitting-breaks.html)：2 个健康工具同页：久坐提醒与拉伸计划、按部位生成拉伸动作清单（免费）
 - [任务优先级与四象限合集](https://screscent.github.io/xiaoning-ai-tools/tools/eisenhower-matrix.html)：6 个工具，全部本地运行：四象限分区、优先级评分、时间块排期、清单导出、周复盘、委派与等待清单（免费）
 - [停车费用与可停时长合集](https://screscent.github.io/xiaoning-ai-tools/tools/parking-fee.html)：2 个停车工具同页：停车费与时长计算、按预算反算可停时长（免费）
 - [快递运费与包裹成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：6 个物流工具同页：首重续重、体积重抛比、保价理赔、退换寄回、时效赔付、合并寄送对比（免费）
@@ -327,7 +327,7 @@
 - [家电保养与滤芯更换提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/appliance-care.html)：按家电类型与上次保养日推算下次保养与耗材更换（免费）
 - [房租押金与水电分摊合集](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：2 个租房工具同页：押金与水电结算、水电费用分摊计算（免费）
 - [屏幕使用与护眼休息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/eye-break-plan.html)：按屏幕时长与间隔生成 20-20-20 休息提醒时间表（免费）
-- [CSS 骨架屏占位生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-skeleton.html)：块数/高度/圆角/颜色可调，实时预览并导出骨架屏 CSS（免费）
+- [骨架屏与阴影生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-skeleton.html)：2 个设计工具同页：CSS 骨架屏占位、CSS 阴影生成与复制（免费）
 - [噪音分贝与听力保护速查](https://screscent.github.io/xiaoning-ai-tools/tools/noise-decibel-hearing-protection-kit.html)：6 个噪音工具：分贝对照、听力安全、家电噪音、隔音耳塞、噪声剂量、全屋排查（免费）
 - [转机时间与衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/transfer-time.html)：5 个航班转机工具：最短转机时间、转机够不够、行李直挂、过夜转机、衔接安全余量（免费）
 - [洗手计时与步骤提示器](https://screscent.github.io/xiaoning-ai-tools/tools/handwash-timer.html)：20 秒倒计时配七步提示，流动水与皂液要点（免费）

@@ -5452,13 +5452,23 @@
  },
  {
   "id": "say4uq9xrs",
-  "name": "文本空行清理与重复行统计器",
-  "desc": "清理空行、去重并统计重复行次数，保留首次出现顺序",
+  "name": "文本清理与重复行统计合集",
+  "desc": "2 个文本工具同页：空行清理与统计、重复行分组计数",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://say4uq9xrs.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "clean",
+    "title": "工具A 空行清理"
+   },
+   {
+    "key": "repeat",
+    "title": "工具B 重复行"
+   }
+  ]
  },
  {
   "id": "qhwajtstfq",
@@ -5493,13 +5503,23 @@
  },
  {
   "id": "c7rfzsegmi",
-  "name": "久坐提醒与拉伸计划生成器",
-  "desc": "按间隔生成起身提醒时间点，含午休跳过与三段拉伸建议",
+  "name": "久坐提醒与拉伸计划合集",
+  "desc": "2 个健康工具同页：久坐提醒与拉伸计划、按部位生成拉伸动作清单",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://c7rfzsegmi.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "sit",
+    "title": "工具A 久坐提醒"
+   },
+   {
+    "key": "stretch",
+    "title": "工具B 拉伸清单"
+   }
+  ]
  },
  {
   "id": "4gs8yrbtnf",
@@ -5773,13 +5793,23 @@
  },
  {
   "id": "npcr5f2aq6",
-  "name": "CSS 骨架屏占位生成器",
-  "desc": "块数/高度/圆角/颜色可调，实时预览并导出骨架屏 CSS",
+  "name": "骨架屏与阴影生成合集",
+  "desc": "2 个设计工具同页：CSS 骨架屏占位、CSS 阴影生成与复制",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://npcr5f2aq6.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "skeleton",
+    "title": "工具A 骨架屏"
+   },
+   {
+    "key": "shadow",
+    "title": "工具B 阴影生成"
+   }
+  ]
  },
  {
   "id": "z5wef2aahj",
