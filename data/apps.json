@@ -3630,12 +3630,23 @@
  },
  {
   "id": "g4q4xktuhw",
-  "name": "图片自动裁剪透明边",
-  "desc": "按容差自动裁掉透明边并保留内边距，导出图片",
+  "name": "透明边裁剪与批量清单合集",
+  "desc": "2 个图片工具同页：单品透明边裁剪、批量裁剪清单",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://g4q4xktuhw.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "trim",
+    "title": "工具A 透明边裁剪"
+   },
+   {
+    "key": "batchtrim",
+    "title": "工具B 批量清单"
+   }
+  ]
  },
  {
   "id": "bcycnrk6f9",
@@ -3784,12 +3795,23 @@
  },
  {
   "id": "atvxmfpmpa",
-  "name": "CSS 霓虹文字效果生成器",
-  "desc": "调色与发光强度生成霓虹 text-shadow，可复制下载",
+  "name": "霓虹文字与边框效果合集",
+  "desc": "2 个样式工具同页：霓虹文字生成、霓虹边框生成",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://atvxmfpmpa.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "text",
+    "title": "工具A 霓虹文字"
+   },
+   {
+    "key": "neonborder",
+    "title": "工具B 霓虹边框"
+   }
+  ]
  },
  {
   "id": "7b3qgqweb7",
@@ -5602,13 +5624,23 @@
  },
  {
   "id": "ny8rttpkdd",
-  "name": "呼吸放松计时器",
-  "desc": "4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进",
+  "name": "呼吸放松与节奏合集",
+  "desc": "2 个放松工具同页：呼吸放松计时、4-7-8 呼吸节奏",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ny8rttpkdd.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "timer",
+    "title": "工具A 呼吸计时"
+   },
+   {
+    "key": "box",
+    "title": "工具B 478呼吸"
+   }
+  ]
  },
  {
   "id": "puhc8q3a4t",
