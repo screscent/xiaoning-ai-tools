@@ -1248,12 +1248,23 @@
  },
  {
   "id": "urjnzsdyk8",
-  "name": "文本批量处理",
-  "desc": "批量去重、查找替换、排序与前后缀，本地处理",
+  "name": "文本批量处理合集",
+  "desc": "2 个文本工具同页：批量处理、文本转表格",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://urjnzsdyk8.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "text",
+    "title": "工具A 文本批量处理"
+   },
+   {
+    "key": "t2table",
+    "title": "工具B 文本转表格"
+   }
+  ]
  },
  {
   "id": "keye5ddudk",
@@ -1293,12 +1304,23 @@
  },
  {
   "id": "frnp3wgsra",
-  "name": "URL 编解码与参数解析器",
-  "desc": "URL 编码/解码 + 查询参数解析与地址分解",
+  "name": "URL 编解码与参数解析合集",
+  "desc": "2 个编码工具同页：URL 编解码、Base32 编解码",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://frnp3wgsra.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "url",
+    "title": "工具A URL 编解码"
+   },
+   {
+    "key": "base32",
+    "title": "工具B Base32 编解码"
+   }
+  ]
  },
  {
   "id": "urjhfedyk8",
@@ -1337,12 +1359,23 @@
  },
  {
   "id": "dvz878gy5d",
-  "name": "图片格式转换器",
-  "desc": "PNG/JPG/WebP 互转，质量/尺寸可调，本地处理",
+  "name": "图片格式转换合集",
+  "desc": "2 个图片工具同页：格式转换、尺寸缩放",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dvz878gy5d.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "convert",
+    "title": "工具A 格式转换"
+   },
+   {
+    "key": "resize",
+    "title": "工具B 尺寸缩放"
+   }
+  ]
  },
  {
   "id": "wn3a9fj8gw",

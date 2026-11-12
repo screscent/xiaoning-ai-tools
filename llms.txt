@@ -153,11 +153,11 @@
 - [二维码生成与尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：2 个二维码工具同页：二维码生成、尺寸与容错等级（免费）
 - [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：6 个 JSON 工具同页：格式化、压缩、YAML、统计、对比、XML（免费）
 - [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：6 个 CSV 工具同页：CSV→JSON、JSON→CSV、表格预览、分隔符检测、列筛选重排、编码与换行清洗，字段多时先挑列再转换（免费）
-- [文本批量处理](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：批量去重、查找替换、排序与前后缀，本地处理（免费）
+- [文本批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：2 个文本工具同页：批量处理、文本转表格（免费）
 - [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：6 个编码工具同页：Base64、URL、进制、哈希、Base58、cURL 转代码（免费）
-- [URL 编解码与参数解析器](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：URL 编码/解码 + 查询参数解析与地址分解（免费）
+- [URL 编解码与参数解析合集](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：2 个编码工具同页：URL 编解码、Base32 编解码（免费）
 - [时间戳与日期工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/timestamp-converter.html)：6 个时间工具同页：时间戳转换、时区换算、时区缩写与 UTC 偏移、ISO·RFC 格式、ISO 周数与季节、Cron 解析，排期与对时一个页面搞定（免费）
-- [图片格式转换器](https://screscent.github.io/xiaoning-ai-tools/tools/image-format-converter.html)：PNG/JPG/WebP 互转，质量/尺寸可调，本地处理（免费）
+- [图片格式转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-format-converter.html)：2 个图片工具同页：格式转换、尺寸缩放（免费）
 - [文本差异与合并合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-diff.html)：6 个文本工具同页：逐行对比、三路合并、unified 补丁、增删改统计、词级差异、空白与标点规范（免费）
 - [颜色转换与对比度检测器](https://screscent.github.io/xiaoning-ai-tools/tools/color-contrast.html)：HEX/RGB/HSL 互转 + WCAG AA/AAA 对比度检测（免费）
 - [Markdown 表格排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-table.html)：6 个表格工具同页：CSV 转表格、文本转表格、表格转 HTML、对齐调整、表格转 JSON、列表与嵌套，列多也不乱（免费）
