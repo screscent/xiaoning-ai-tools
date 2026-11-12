@@ -5783,13 +5783,23 @@
  },
  {
   "id": "qsiaupnhme",
-  "name": "屏幕使用与护眼休息计划生成器",
-  "desc": "按屏幕时长与间隔生成 20-20-20 休息提醒时间表",
+  "name": "屏幕使用与护眼休息合集",
+  "desc": "2 个护眼工具同页：屏幕使用与休息计划、20-20-20 护眼提醒",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qsiaupnhme.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "screen",
+    "title": "工具A 屏幕计划"
+   },
+   {
+    "key": "eyerest",
+    "title": "工具B 护眼提醒"
+   }
+  ]
  },
  {
   "id": "npcr5f2aq6",
@@ -6517,13 +6527,23 @@
  },
  {
   "id": "qsixiqnhme",
-  "name": "睡眠债务与补觉计划计算器",
-  "desc": "按工作日周末睡眠差算累计债务，给出补觉天数与风险提示",
+  "name": "睡眠债务与补觉计划合集",
+  "desc": "2 个睡眠工具同页：睡眠债务计算、补觉日程安排",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qsixiqnhme.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "debt",
+    "title": "工具A 睡眠债务"
+   },
+   {
+    "key": "sleepdebt",
+    "title": "工具B 补觉安排"
+   }
+  ]
  },
  {
   "id": "npcteh2aq6",
@@ -6947,13 +6967,23 @@
  },
  {
   "id": "rdqya64t4r",
-  "name": "繁简转换与用词对照器",
-  "desc": "繁简互转并对照用词与单字变化，附字数统计",
+  "name": "繁简转换与用词对照合集",
+  "desc": "2 个文本工具同页：繁简转换、两岸用词对照查询",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://rdqya64t4r.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "convert",
+    "title": "工具A 繁简转换"
+   },
+   {
+    "key": "wordmap",
+    "title": "工具B 用词对照"
+   }
+  ]
  },
  {
   "id": "ztb2uwhvkt",

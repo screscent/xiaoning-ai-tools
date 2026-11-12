@@ -326,7 +326,7 @@
 - [证件照尺寸与排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-photo-size-layout-print-kit.html)：6 个证件照工具：尺寸、像素换算、排版张数、背景要求、合规自查、打印店交接单（免费）
 - [家电保养与滤芯更换提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/appliance-care.html)：按家电类型与上次保养日推算下次保养与耗材更换（免费）
 - [房租押金与水电分摊合集](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：2 个租房工具同页：押金与水电结算、水电费用分摊计算（免费）
-- [屏幕使用与护眼休息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/eye-break-plan.html)：按屏幕时长与间隔生成 20-20-20 休息提醒时间表（免费）
+- [屏幕使用与护眼休息合集](https://screscent.github.io/xiaoning-ai-tools/tools/eye-break-plan.html)：2 个护眼工具同页：屏幕使用与休息计划、20-20-20 护眼提醒（免费）
 - [骨架屏与阴影生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-skeleton.html)：2 个设计工具同页：CSS 骨架屏占位、CSS 阴影生成与复制（免费）
 - [噪音分贝与听力保护速查](https://screscent.github.io/xiaoning-ai-tools/tools/noise-decibel-hearing-protection-kit.html)：6 个噪音工具：分贝对照、听力安全、家电噪音、隔音耳塞、噪声剂量、全屋排查（免费）
 - [转机时间与衔接合集](https://screscent.github.io/xiaoning-ai-tools/tools/transfer-time.html)：5 个航班转机工具：最短转机时间、转机够不够、行李直挂、过夜转机、衔接安全余量（免费）
@@ -353,7 +353,7 @@
 - [预产期孕周与滤芯周期合集](https://screscent.github.io/xiaoning-ai-tools/tools/due-date.html)：2 个生活工具同页：预产期与孕周计算、滤芯更换周期提醒（免费）
 - [储蓄目标与计算历史合集](https://screscent.github.io/xiaoning-ai-tools/tools/saving-goal.html)：2 个理财工具同页：储蓄目标达成时间、计算历史记录与复用（免费）
 - [CSS 背景与纹理生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-pattern.html)：6 个背景纹理工具同页：分隔线、点阵背景、网格条纹、噪点纹理、平铺次数、渐变背景（免费）
-- [睡眠债务与补觉计划计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-debt.html)：按工作日周末睡眠差算累计债务，给出补觉天数与风险提示（免费）
+- [睡眠债务与补觉计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/sleep-debt.html)：2 个睡眠工具同页：睡眠债务计算、补觉日程安排（免费）
 - [门票与通行预算合集](https://screscent.github.io/xiaoning-ai-tools/tools/ticket-budget.html)：6 个门票工具同页：单景点门票、多景点合计、城市通票、讲解观光车、儿童票、退改签规则（免费）
 - [昵称与英文名生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/nickname-name-gen.html)：6 个起名工具同页：中文昵称、社交账号、英文名、品牌店铺、账号长度校验、英文名含义与来源（免费）
 - [凯撒与古典密码合集](https://screscent.github.io/xiaoning-ai-tools/tools/caesar-rot.html)：5 个古典密码工具同页：凯撒位移、ROT13、反字母表、维吉尼亚、栅栏密码（免费）
@@ -368,7 +368,7 @@
 - [区间与排期统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/date-range.html)：6 个区间工具：区间天数、周期排期、分段统计、重叠判断、区间合并、空档与间隙统计（免费）
 - [图片体积与位深估算合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-size-bitdepth-estimate-kit.html)：6 个估算工具：位深体积、内存占用、压缩比、色彩数、批量压缩体积、打印 DPI（免费）
 - [两步验证与恢复码合集](https://screscent.github.io/xiaoning-ai-tools/tools/recovery-codes.html)：2 个安全工具同页：两步验证码生成、备用恢复码生成（免费）
-- [繁简转换与用词对照器](https://screscent.github.io/xiaoning-ai-tools/tools/zh-tw-cn.html)：繁简互转并对照用词与单字变化，附字数统计（免费）
+- [繁简转换与用词对照合集](https://screscent.github.io/xiaoning-ai-tools/tools/zh-tw-cn.html)：2 个文本工具同页：繁简转换、两岸用词对照查询（免费）
 - [Base64URL 与 HMAC 哈希合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64url-codec.html)：2 个编码工具同页：Base64URL 编解码、HMAC 消息认证哈希（免费）
 - [数据备份与备份计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/backup-321-check.html)：2 个备份工具同页：3-2-1 自查清单、按数据类型生成备份计划（免费）
 - [打车费用与通勤速查](https://screscent.github.io/xiaoning-ai-tools/tools/ride-fare-compare.html)：6 个出行工具：出租车计价、网约车对比、机场接送、通勤月成本、拼车分摊、夜间附加费估算（免费）
