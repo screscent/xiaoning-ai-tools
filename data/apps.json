@@ -2244,12 +2244,23 @@
  },
  {
   "id": "keybxzdudk",
-  "name": "数字转罗马与中文数字",
-  "desc": "阿拉伯/罗马/中文数字双向转换，含对照表",
+  "name": "罗马数字与中文数字合集",
+  "desc": "2 个数字工具同页：数字转罗马与中文、罗马数字反解",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://keybxzdudk.app.weavefox.cn",
-  "subcat": "计算换算"
+  "subcat": "计算换算",
+  "subapps": [
+   {
+    "key": "numeral",
+    "title": "工具A 数字转写"
+   },
+   {
+    "key": "roman",
+    "title": "工具B 罗马反解"
+   }
+  ]
  },
  {
   "id": "dvznbegy5d",
@@ -2646,12 +2657,23 @@
  },
  {
   "id": "qsexkmnhme",
-  "name": "HTTP 状态码速查表",
-  "desc": "30+ 常见状态码速查，支持搜索/分类/排查建议与复制",
+  "name": "HTTP 状态码与请求头合集",
+  "desc": "2 个编码工具同页：状态码速查、常见请求响应头",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qsexkmnhme.app.weavefox.cn",
-  "subcat": "编码转换"
+  "subcat": "编码转换",
+  "subapps": [
+   {
+    "key": "status",
+    "title": "工具A 状态码"
+   },
+   {
+    "key": "headers",
+    "title": "工具B 请求响应头"
+   }
+  ]
  },
  {
   "id": "z56yswaahj",
@@ -2879,12 +2901,23 @@
  },
  {
   "id": "qse7ptnhme",
-  "name": "Markdown 转纯文本",
-  "desc": "Markdown → 纯文本，可去列表符号/代码块并下载 txt",
+  "name": "Markdown 转文本与大纲合集",
+  "desc": "2 个文本工具同页：Markdown 转纯文本、标题大纲提取",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qse7ptnhme.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "plain",
+    "title": "工具A 转纯文本"
+   },
+   {
+    "key": "outline",
+    "title": "工具B 标题大纲"
+   }
+  ]
  },
  {
   "id": "npxiz82aq6",

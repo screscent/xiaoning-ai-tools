@@ -185,7 +185,7 @@
 - [社交图片切图与比例合集](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：6 个切图工具同页：九宫格、方图、竖版、横版、圆角、Banner 与安全区（免费）
 - [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：6 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对、本命年、时辰吉时（免费）
 - [图片滤镜与调色合集](https://screscent.github.io/xiaoning-ai-tools/tools/filter-tone.html)：6 个调色工具同页：灰度、模糊、复古、明暗、锐化、色温与色调（免费）
-- [数字转罗马与中文数字](https://screscent.github.io/xiaoning-ai-tools/tools/roman-chinese-numerals.html)：阿拉伯/罗马/中文数字双向转换，含对照表（免费）
+- [罗马数字与中文数字合集](https://screscent.github.io/xiaoning-ai-tools/tools/roman-chinese-numerals.html)：2 个数字工具同页：数字转罗马与中文、罗马数字反解（免费）
 - [决策与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-decider.html)：6 个决策工具同页：随机、加权、投票、抽签、波达计分、决策矩阵（免费）
 - [图片转 DataURL 与压缩合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-dataurl.html)：2 个图片工具同页：转 DataURL、单图压缩（免费）
 - [秒表与计时记录合集](https://screscent.github.io/xiaoning-ai-tools/tools/stopwatch-lap.html)：6 个计时工具同页：秒表、分段、对比、导出、间歇、多段倒计时（免费）
@@ -199,7 +199,7 @@
 - [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：6 个摩斯工具同页：文本转摩斯、摩斯转文本、音频播放、码表与练习、求救信号与闪光节拍、通联简语速查（免费）
 - [复利与定投合集](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：6 个理财工具同页：复利终值、定投收益、目标月存、提取计划、贷款月供、通胀与实际收益（免费）
 - [CSS 渐变生成与预设合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：2 个渐变工具同页：自定义渐变生成、20 组预设对比（免费）
-- [HTTP 状态码速查表](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：30+ 常见状态码速查，支持搜索/分类/排查建议与复制（免费）
+- [HTTP 状态码与请求头合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：2 个编码工具同页：状态码速查、常见请求响应头（免费）
 - [折扣计算与批量到手价合集](https://screscent.github.io/xiaoning-ai-tools/tools/discount-calculator.html)：2 个折扣工具同页：单件折扣计算、多行批量到手价（免费）
 - [Cron 表达式工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：6 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查、自然语言转规则、批量表达式体检（免费）
 - [图片拼接与拼图合集](https://screscent.github.io/xiaoning-ai-tools/tools/stitch-grid.html)：6 个拼图工具同页：纵向、横向、宫格、边框、间距、拼图比例预设（免费）
@@ -208,7 +208,7 @@
 - [图片圆角与边框合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-round-corner.html)：5 个图片工具同页：圆角、边框、圆形头像、投影、安全边距与出血线（免费）
 - [CSS 阴影生成与预设对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-shadow-generator.html)：2 个阴影工具同页：自定义阴影生成、5 档预设对比（免费）
 - [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：6 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义、正则转义与常用式（免费）
-- [Markdown 转纯文本](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：Markdown → 纯文本，可去列表符号/代码块并下载 txt（免费）
+- [Markdown 转文本与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：2 个文本工具同页：Markdown 转纯文本、标题大纲提取（免费）
 - [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：6 个本地脱敏工具：手机/证件/邮箱打码、批量处理、分享前自查、规则自定义、哈希脱敏（免费）
 - [颜色名称查询与明暗对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：2 个颜色工具同页：颜色名称查询、明暗与对比度（免费）
 - [图片旋转翻转与图片水印合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：2 个图片工具同页：图片旋转翻转、图片水印添加（免费）
