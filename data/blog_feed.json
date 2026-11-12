@@ -1,8 +1,16 @@
 {
  "updated": "2026-11-12",
  "source": "wechat-mp",
- "count": 165,
+ "count": 166,
  "articles": [
+  {
+   "slug": "in4kBI44mMBY3rLax87DWA",
+   "title": "小凝 Agent：十四次生长，把一副态势感知骨架跑成自动控制闭环",
+   "url": "https://mp.weixin.qq.com/s/in4kBI44mMBY3rLax87DWA",
+   "publish_time": "2026-11-12",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "9pOpB-W__BoXsW6C4DO4aQ",
    "title": "小凝 Agent：大模型驱动、嵌入与混合，四种分工模式怎么选",
