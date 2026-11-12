@@ -6159,23 +6159,43 @@
  },
  {
   "id": "sayevp9xrs",
-  "name": "字体搭配与排版比例生成器",
-  "desc": "按基准字号与字阶比例生成六级字号行高与字体栈",
+  "name": "字体排版与渐变生成合集",
+  "desc": "2 个设计工具同页：字体搭配与排版比例、CSS 渐变生成与复制",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://sayevp9xrs.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "typo",
+    "title": "工具A 字体排版"
+   },
+   {
+    "key": "gradient",
+    "title": "工具B 渐变生成"
+   }
+  ]
  },
  {
   "id": "9pavh8r8kd",
-  "name": "色盲友好配色检查器",
-  "desc": "模拟四类色觉障碍并重算 WCAG 对比度是否达标",
+  "name": "色盲配色与图标尺寸合集",
+  "desc": "2 个设计工具同页：色盲友好配色检查、图标尺寸覆盖检查",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://9pavh8r8kd.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "cvd",
+    "title": "工具A 色盲配色"
+   },
+   {
+    "key": "icocheck",
+    "title": "工具B 图标尺寸"
+   }
+  ]
  },
  {
   "id": "r36jfpzjyr",
@@ -6311,13 +6331,23 @@
  },
  {
   "id": "ja4gvvkp5e",
-  "name": "长文本摘要与压缩率计算器",
-  "desc": "确定性抽取式摘要，给出字数压缩率与句子段落统计",
+  "name": "文本摘要与增删统计合集",
+  "desc": "2 个文本工具同页：长文本摘要与压缩率、两版本文本增删改统计",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ja4gvvkp5e.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "summary",
+    "title": "工具A 摘要压缩"
+   },
+   {
+    "key": "diffstat",
+    "title": "工具B 增删统计"
+   }
+  ]
  },
  {
   "id": "2qethzqqxb",
