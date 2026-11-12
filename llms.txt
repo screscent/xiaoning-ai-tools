@@ -308,7 +308,7 @@
 - [CSS 动画缓动曲线生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-easing.html)：调节四个控制点生成 cubic-bezier，实时预览并导出 CSS（免费）
 - [工资与加班费计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/overtime-pay.html)：6 个工资工具同页：加班费、节假日加班、夜班津贴、加班上限、个税与到手工资、请假与缺勤扣款（免费）
 - [咖啡因摄入与代谢计算器](https://screscent.github.io/xiaoning-ai-tools/tools/caffeine-metabolism.html)：按半衰期算 4/8/12 小时残留与建议就寝时间（免费）
-- [家庭用药提醒清单生成器](https://screscent.github.io/xiaoning-ai-tools/tools/med-reminder.html)：按频次与开始时间生成每日服药时间点、日程表与累计次数（免费）
+- [用药提醒与间隔计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/med-reminder.html)：2 个用药工具同页：家庭用药提醒清单、服药间隔与下次时间（免费）
 - [会议议程与控场合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-agenda.html)：6 个开会工具：议程生成、发言分配、控场提示、计时、决议与待办清单、会议纪要模板（免费）
 - [CSS 轮播图样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-carousel.html)：宽高/圆角/间隔可调，实时预览并导出轮播 CSS 与 HTML（免费）
 - [呼吸放松计时器](https://screscent.github.io/xiaoning-ai-tools/tools/breathing-timer.html)：4-7-8 与箱式呼吸，分阶段倒计时并按轮次推进（免费）
@@ -321,10 +321,10 @@
 - [快递运费与包裹成本合集](https://screscent.github.io/xiaoning-ai-tools/tools/express-freight.html)：6 个物流工具同页：首重续重、体积重抛比、保价理赔、退换寄回、时效赔付、合并寄送对比（免费）
 - [网盘与下载带宽合集](https://screscent.github.io/xiaoning-ai-tools/tools/download-time.html)：6 个传输工具同页：下载时间、上传时间、带宽换算、体积压缩、延迟与加速、流量与超额费用（免费）
 - [体脂腰臀比与 VO2max 合集](https://screscent.github.io/xiaoning-ai-tools/tools/body-fat-waist.html)：2 个健康工具同页：体脂率与腰臀比计算、VO2max 最大摄氧量估算（免费）
-- [防晒霜用量与补涂计算器](https://screscent.github.io/xiaoning-ai-tools/tools/sunscreen-dose.html)：按面部面积与 SPF 算单次用量、有效时长与补涂次数（免费）
+- [防晒用量与紫外线建议合集](https://screscent.github.io/xiaoning-ai-tools/tools/sunscreen-dose.html)：2 个防晒工具同页：防晒霜用量与补涂计算、紫外线指数与防晒建议（免费）
 - [行李额与超重费合集](https://screscent.github.io/xiaoning-ai-tools/tools/baggage-allowance-overweight-packing-kit.html)：6 个行李工具：手提额度、托运额度、超重费、航司对比、丢失与理赔、打包清单与称重（免费）
 - [证件照尺寸与排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/id-photo-size-layout-print-kit.html)：6 个证件照工具：尺寸、像素换算、排版张数、背景要求、合规自查、打印店交接单（免费）
-- [家电保养与滤芯更换提醒表](https://screscent.github.io/xiaoning-ai-tools/tools/appliance-care.html)：按家电类型与上次保养日推算下次保养与耗材更换（免费）
+- [家电保养与周期提醒合集](https://screscent.github.io/xiaoning-ai-tools/tools/appliance-care.html)：2 个家务工具同页：滤芯更换提醒表、家电保养周期表（免费）
 - [房租押金与水电分摊合集](https://screscent.github.io/xiaoning-ai-tools/tools/deposit-settle.html)：2 个租房工具同页：押金与水电结算、水电费用分摊计算（免费）
 - [屏幕使用与护眼休息合集](https://screscent.github.io/xiaoning-ai-tools/tools/eye-break-plan.html)：2 个护眼工具同页：屏幕使用与休息计划、20-20-20 护眼提醒（免费）
 - [骨架屏与阴影生成合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-skeleton.html)：2 个设计工具同页：CSS 骨架屏占位、CSS 阴影生成与复制（免费）

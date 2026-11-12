@@ -5354,13 +5354,23 @@
  },
  {
   "id": "dzfmynslwd",
-  "name": "家庭用药提醒清单生成器",
-  "desc": "按频次与开始时间生成每日服药时间点、日程表与累计次数",
+  "name": "用药提醒与间隔计算合集",
+  "desc": "2 个用药工具同页：家庭用药提醒清单、服药间隔与下次时间",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dzfmynslwd.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "medlist",
+    "title": "工具A 用药清单"
+   },
+   {
+    "key": "doseinterval",
+    "title": "工具B 服药间隔"
+   }
+  ]
  },
  {
   "id": "ny89vhpkdd",
@@ -5671,13 +5681,23 @@
  },
  {
   "id": "3xmlz85af3",
-  "name": "防晒霜用量与补涂计算器",
-  "desc": "按面部面积与 SPF 算单次用量、有效时长与补涂次数",
+  "name": "防晒用量与紫外线建议合集",
+  "desc": "2 个防晒工具同页：防晒霜用量与补涂计算、紫外线指数与防晒建议",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://3xmlz85af3.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "sunscreen",
+    "title": "工具A 防晒用量"
+   },
+   {
+    "key": "uvindex",
+    "title": "工具B 紫外线建议"
+   }
+  ]
  },
  {
   "id": "g4qemytuhw",
@@ -5753,13 +5773,23 @@
  },
  {
   "id": "hmncr5fxk9",
-  "name": "家电保养与滤芯更换提醒表",
-  "desc": "按家电类型与上次保养日推算下次保养与耗材更换",
+  "name": "家电保养与周期提醒合集",
+  "desc": "2 个家务工具同页：滤芯更换提醒表、家电保养周期表",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://hmncr5fxk9.app.weavefox.cn",
-  "subcat": "效率生活"
+  "subcat": "效率生活",
+  "subapps": [
+   {
+    "key": "reminder",
+    "title": "工具A 滤芯提醒"
+   },
+   {
+    "key": "appliance",
+    "title": "工具B 保养周期"
+   }
+  ]
  },
  {
   "id": "atvvufpmpa",
