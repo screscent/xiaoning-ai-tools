@@ -6843,13 +6843,23 @@
  },
  {
   "id": "ewz3cuixkx",
-  "name": "蛋白质摄入与三餐分配计算器",
-  "desc": "按体重目标活动量算每日蛋白并均分到每餐，附食物等量对照",
+  "name": "蛋白质摄入与食物换算合集",
+  "desc": "2 个饮食工具同页：蛋白质摄入与三餐分配、常见食物蛋白换算",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ewz3cuixkx.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "protein",
+    "title": "工具A 蛋白摄入"
+   },
+   {
+    "key": "foodswap",
+    "title": "工具B 食物换算"
+   }
+  ]
  },
  {
   "id": "glfmcmcqng",
@@ -6863,13 +6873,23 @@
  },
  {
   "id": "fr2qywgsra",
-  "name": "新能源车续航与充电费用估算器",
-  "desc": "按气温空调折损算真实续航与电费，判断行程是否需补能",
+  "name": "新能源车续航与车险合集",
+  "desc": "2 个用车工具同页：续航与充电费用估算、车险保费估算",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://fr2qywgsra.app.weavefox.cn",
-  "subcat": "出行旅行"
+  "subcat": "出行旅行",
+  "subapps": [
+   {
+    "key": "range",
+    "title": "工具A 续航费用"
+   },
+   {
+    "key": "insurance",
+    "title": "工具B 车险保费"
+   }
+  ]
  },
  {
   "id": "pz7bebqyzx",
@@ -7031,13 +7051,23 @@
  },
  {
   "id": "dvzcccgy5d",
-  "name": "食物升糖指数与血糖负荷计算器",
-  "desc": "算 GI/GL 与分级，给同类替换与三餐搭配",
+  "name": "血糖负荷与低 GI 替换合集",
+  "desc": "2 个控糖工具同页：GI 与血糖负荷计算、低 GI 食物替换建议",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://dvzcccgy5d.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "gi",
+    "title": "工具A 血糖负荷"
+   },
+   {
+    "key": "gidiet",
+    "title": "工具B 低GI替换"
+   }
+  ]
  },
  {
   "id": "ekgaqhvhte",
