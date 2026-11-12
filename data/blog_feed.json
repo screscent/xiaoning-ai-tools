@@ -1,8 +1,16 @@
 {
  "updated": "2026-11-12",
  "source": "wechat-mp",
- "count": 166,
+ "count": 167,
  "articles": [
+  {
+   "slug": "ft2Q5zfRvx16gRTg834ZVA",
+   "title": "小凝 Agent：模式不够用之后，我给系统补了一层体系视角",
+   "url": "https://mp.weixin.qq.com/s/ft2Q5zfRvx16gRTg834ZVA",
+   "publish_time": "2026-11-12",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "in4kBI44mMBY3rLax87DWA",
    "title": "小凝 Agent：十四次生长，把一副态势感知骨架跑成自动控制闭环",
