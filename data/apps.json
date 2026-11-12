@@ -2944,12 +2944,23 @@
  },
  {
   "id": "ygj23az2jf",
-  "name": "图片旋转与翻转工具",
-  "desc": "本地旋转 90/180/270° 与水平垂直翻转，导出 PNG",
+  "name": "图片旋转翻转与图片水印合集",
+  "desc": "2 个图片工具同页：图片旋转翻转、图片水印添加",
+  "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ygj23az2jf.app.weavefox.cn",
-  "subcat": "图片处理"
+  "subcat": "图片处理",
+  "subapps": [
+   {
+    "key": "rotate",
+    "title": "工具A 旋转翻转"
+   },
+   {
+    "key": "watermark",
+    "title": "工具B 图片水印"
+   }
+  ]
  },
  {
   "id": "ztxq59hvkt",
@@ -4028,13 +4039,23 @@
  },
  {
   "id": "mkplawrxwr",
-  "name": "钓鱼链接识别自查",
-  "desc": "本地规则检测 IP 直连/长路径/可疑词，出风险评分",
+  "name": "钓鱼链接自查与分享自查合集",
+  "desc": "2 个安全自查工具同页：钓鱼链接识别、分享链接自查",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://mkplawrxwr.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "phish",
+    "title": "工具A 钓鱼自查"
+   },
+   {
+    "key": "sharecheck",
+    "title": "工具B 分享自查"
+   }
+  ]
  },
  {
   "id": "tbnvznmk3t",
@@ -4340,13 +4361,23 @@
  },
  {
   "id": "vfmdv3lsqf",
-  "name": "每日饮水与作息计划生成器",
-  "desc": "按体重活动量算饮水量并生成分时作息表",
+  "name": "饮水作息与周计划合集",
+  "desc": "2 个计划工具同页：每日饮水与作息计划、一周计划表",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://vfmdv3lsqf.app.weavefox.cn",
-  "subcat": "生活健康"
+  "subcat": "生活健康",
+  "subapps": [
+   {
+    "key": "water",
+    "title": "工具A 饮水作息"
+   },
+   {
+    "key": "weekplan",
+    "title": "工具B 周计划"
+   }
+  ]
  },
  {
   "id": "fwkzfxyqkh",

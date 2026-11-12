@@ -211,7 +211,7 @@
 - [Markdown 转纯文本](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：Markdown → 纯文本，可去列表符号/代码块并下载 txt（免费）
 - [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：6 个本地脱敏工具：手机/证件/邮箱打码、批量处理、分享前自查、规则自定义、哈希脱敏（免费）
 - [颜色名称查询与明暗对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：2 个颜色工具同页：颜色名称查询、明暗与对比度（免费）
-- [图片旋转与翻转工具](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：本地旋转 90/180/270° 与水平垂直翻转，导出 PNG（免费）
+- [图片旋转翻转与图片水印合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：2 个图片工具同页：图片旋转翻转、图片水印添加（免费）
 - [工作日与假期天数合集](https://screscent.github.io/xiaoning-ai-tools/tools/workday-counter.html)：6 个考勤工具：工作日天数、假期余额、截止日推算、月度工作日、加班与调休折算、请假最优组合（免费）
 - [密码短语与 PIN 备份码合集](https://screscent.github.io/xiaoning-ai-tools/tools/passphrase-generator.html)：2 个口令工具同页：密码短语生成、PIN 与备份码（免费）
 - [图片元数据与隐私清理合集](https://screscent.github.io/xiaoning-ai-tools/tools/exif-viewer-cleaner.html)：6 个图片工具同页：EXIF、信息、批量、自查、定位、一键清除元数据（免费）
@@ -253,7 +253,7 @@
 - [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：6 个发票工具同页：拆分、税额、税率、开票信息、抵扣、交叉核对（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
 - [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：6 个光线工具同页：日出、黄金时刻、昼长、规划、光时、月相与夜空窗口（免费）
-- [钓鱼链接识别自查](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：本地规则检测 IP 直连/长路径/可疑词，出风险评分（免费）
+- [钓鱼链接自查与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/phishing-check.html)：2 个安全自查工具同页：钓鱼链接识别、分享链接自查（免费）
 - [行李打包清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/packing-list.html)：5 个出行清单：商务出差、海岛度假、户外徒步、亲子出行、安检与液体限制（免费）
 - [面积体积与几何计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/area-volume.html)：6 个几何工具同页：平面、立体、圆与角、土方、刷漆用量、坡度与排水（免费）
 - [Base32 与编码校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/base32.html)：6 个编码工具：Base32 编码、解码、填充校验、编码互转、文本十六进制、Crockford Base32（免费）
@@ -266,7 +266,7 @@
 - [字数稿费与阅读进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/word-fee.html)：2 个写作工具同页：字数与稿费计算、阅读时长与进度（免费）
 - [Unicode 码点查询与统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/unicode-codepoint.html)：2 个编码工具同页：码点字节查询、文本码点统计（免费）
 - [敏感词本地过滤检测器](https://screscent.github.io/xiaoning-ai-tools/tools/sensitive-filter.html)：内置 80 条分类词库+自定义词，本地过滤并统计（免费）
-- [每日饮水与作息计划生成器](https://screscent.github.io/xiaoning-ai-tools/tools/daily-plan.html)：按体重活动量算饮水量并生成分时作息表（免费）
+- [饮水作息与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/daily-plan.html)：2 个计划工具同页：每日饮水与作息计划、一周计划表（免费）
 - [节假日与调休合集](https://screscent.github.io/xiaoning-ai-tools/tools/holiday-calendar.html)：6 个假期工具：放假安排、调休标注、拼假规划、假期倒计时、加班费、明细测算（免费）
 - [CSS 表格样式与斑马纹合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-table.html)：2 个表格工具同页：表格样式生成、斑马纹与紧凑预设（免费）
 - [文本改写与降重合集](https://screscent.github.io/xiaoning-ai-tools/tools/synonym-rewrite.html)：6 个文本工具：同义替换、强度改写、同义词表、改写对照、降重评分、标点语病自查（免费）
