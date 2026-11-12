@@ -249,7 +249,7 @@
 - [书签整理与导出合集](https://screscent.github.io/xiaoning-ai-tools/tools/bookmark-html.html)：6 个书签工具同页：书签解析与去重、按域名分组、转表格与 JSON、导出浏览器书签、书签体检、分类与标签整理（免费）
 - [IP 与子网计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/subnet-calculator.html)：6 个网络工具同页：子网掩码、CIDR 反推、私网地址、网关自查、IPv6 子网、端口与协议自查（免费）
 - [农历与节气查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/lunar-calendar.html)：6 个农历工具：农历转换、节气查询、月相查询、农历生日、节日倒计时、数九与三伏（免费）
-- [文本词频统计与关键词提取](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：分词统计词频与 Top20 关键词，含标签词云（免费）
+- [词频统计与关键词提取合集](https://screscent.github.io/xiaoning-ai-tools/tools/word-frequency.html)：2 个文本工具同页：词频统计、关键词提取（免费）
 - [发票与税额计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/invoice-tax.html)：6 个发票工具同页：拆分、税额、税率、开票信息、抵扣、交叉核对（免费）
 - [CSS 按钮样式生成器](https://screscent.github.io/xiaoning-ai-tools/tools/css-button.html)：调色与圆角实时生成按钮 CSS/HTML，含 hover（免费）
 - [日出日落与光线时刻合集](https://screscent.github.io/xiaoning-ai-tools/tools/sun-times.html)：6 个光线工具同页：日出、黄金时刻、昼长、规划、光时、月相与夜空窗口（免费）
@@ -265,7 +265,7 @@
 - [装修材料用量合集](https://screscent.github.io/xiaoning-ai-tools/tools/material-estimate.html)：6 个装修工具同页：涂料、瓷砖、地板、壁纸、损耗、装修预算分配（免费）
 - [字数稿费与阅读进度合集](https://screscent.github.io/xiaoning-ai-tools/tools/word-fee.html)：2 个写作工具同页：字数与稿费计算、阅读时长与进度（免费）
 - [Unicode 码点查询与统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/unicode-codepoint.html)：2 个编码工具同页：码点字节查询、文本码点统计（免费）
-- [敏感词本地过滤检测器](https://screscent.github.io/xiaoning-ai-tools/tools/sensitive-filter.html)：内置 80 条分类词库+自定义词，本地过滤并统计（免费）
+- [敏感词检测与脱敏合集](https://screscent.github.io/xiaoning-ai-tools/tools/sensitive-filter.html)：2 个安全工具同页：敏感词检测、敏感词替换脱敏（免费）
 - [饮水作息与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/daily-plan.html)：2 个计划工具同页：每日饮水与作息计划、一周计划表（免费）
 - [节假日与调休合集](https://screscent.github.io/xiaoning-ai-tools/tools/holiday-calendar.html)：6 个假期工具：放假安排、调休标注、拼假规划、假期倒计时、加班费、明细测算（免费）
 - [CSS 表格样式与斑马纹合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-table.html)：2 个表格工具同页：表格样式生成、斑马纹与紧凑预设（免费）
@@ -294,7 +294,7 @@
 - [跑步配速与完赛预测合集](https://screscent.github.io/xiaoning-ai-tools/tools/pace-finish.html)：6 个跑步工具同页：配速换算、完赛预测、分段配速、爬升折算、训练区间、恢复与训练负荷（免费）
 - [JSON 路径查询合集](https://screscent.github.io/xiaoning-ai-tools/tools/jsonpath.html)：6 个 JSON 路径工具同页：JSONPath、Pointer、点号路径、路径生成、Schema 校验、扁平化还原（免费）
 - [JSON Schema 与校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-schema-validate-mock-kit.html)：6 个 Schema 工具：Schema 生成、Schema 校验、示例数据、字段说明、TS 类型、模拟数据批量生成（免费）
-- [颜色混合与透明度计算器](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：两色按比例混合并叠加背景，输出 HEX/RGB（免费）
+- [颜色混合与叠加计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-mix.html)：2 个设计工具同页：颜色混合计算、透明度叠加（免费）
 - [数字读法与人民币大写合集](https://screscent.github.io/xiaoning-ai-tools/tools/num-to-words.html)：2 个文本工具同页：数字转英文读法、数字转人民币大写（免费）
 - [HTML 与 Markdown 互转合集](https://screscent.github.io/xiaoning-ai-tools/tools/html-to-md.html)：2 个编码工具同页：HTML 转 Markdown、Markdown 转 HTML（免费）
 - [节拍器与速度合集](https://screscent.github.io/xiaoning-ai-tools/tools/metronome.html)：6 个节拍工具同页：节拍器、毫秒换算、打拍测速、术语、复节奏、细分与连音（免费）

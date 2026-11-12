@@ -3969,13 +3969,23 @@
  },
  {
   "id": "ny8guqpkdd",
-  "name": "文本词频统计与关键词提取",
-  "desc": "分词统计词频与 Top20 关键词，含标签词云",
+  "name": "词频统计与关键词提取合集",
+  "desc": "2 个文本工具同页：词频统计、关键词提取",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://ny8guqpkdd.app.weavefox.cn",
-  "subcat": "文本处理"
+  "subcat": "文本处理",
+  "subapps": [
+   {
+    "key": "freq",
+    "title": "工具A 词频统计"
+   },
+   {
+    "key": "keyword",
+    "title": "工具B 关键词提取"
+   }
+  ]
  },
  {
   "id": "x89bsucakb",
@@ -4383,13 +4393,23 @@
  },
  {
   "id": "uisqu2xjku",
-  "name": "敏感词本地过滤检测器",
-  "desc": "内置 80 条分类词库+自定义词，本地过滤并统计",
+  "name": "敏感词检测与脱敏合集",
+  "desc": "2 个安全工具同页：敏感词检测、敏感词替换脱敏",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://uisqu2xjku.app.weavefox.cn",
-  "subcat": "安全隐私"
+  "subcat": "安全隐私",
+  "subapps": [
+   {
+    "key": "detect",
+    "title": "工具A 敏感词检测"
+   },
+   {
+    "key": "mask",
+    "title": "工具B 替换脱敏"
+   }
+  ]
  },
  {
   "id": "vfmdv3lsqf",
@@ -5178,13 +5198,23 @@
  },
  {
   "id": "qhwvgdstfq",
-  "name": "颜色混合与透明度计算器",
-  "desc": "两色按比例混合并叠加背景，输出 HEX/RGB",
+  "name": "颜色混合与叠加计算合集",
+  "desc": "2 个设计工具同页：颜色混合计算、透明度叠加",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
   "url": "https://qhwvgdstfq.app.weavefox.cn",
-  "subcat": "设计绘图"
+  "subcat": "设计绘图",
+  "subapps": [
+   {
+    "key": "mix",
+    "title": "工具A 颜色混合"
+   },
+   {
+    "key": "blend",
+    "title": "工具B 透明度叠加"
+   }
+  ]
  },
  {
   "id": "c7rkj6egmi",
