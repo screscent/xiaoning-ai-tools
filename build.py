@@ -1088,4 +1088,8 @@ footer{{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        # 无参数脚本：任何参数（含 --help）都直接退出，避免误触发全量重建覆盖人工改写
+        print("build.py 不接受参数；直接运行 python3 build.py 即可")
+        raise SystemExit(2)
     main()
