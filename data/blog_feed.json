@@ -1,8 +1,16 @@
 {
  "updated": "2026-11-13",
  "source": "wechat-mp",
- "count": 168,
+ "count": 169,
  "articles": [
+  {
+   "slug": "jtD7BQPLaQiLJUk2S3uQlA",
+   "title": "小凝 Agent：经验搬家，只能搬骨架",
+   "url": "https://mp.weixin.qq.com/s/jtD7BQPLaQiLJUk2S3uQlA",
+   "publish_time": "2026-11-13",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "VAlS3Av8S1PgkdY2CdVqbg",
    "title": "小凝 Agent：把一套体系视角，搬到一条工具流水线上",

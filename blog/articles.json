@@ -1,8 +1,13 @@
 {
  "updated": "2026-11-13",
- "count": 168,
+ "count": 169,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-13",
+   "title": "小凝 Agent：经验搬家，只能搬骨架",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/jtD7BQPLaQiLJUk2S3uQlA.html"
+  },
   {
    "date": "2026-11-13",
    "title": "小凝 Agent：把一套体系视角，搬到一条工具流水线上",
@@ -147,11 +152,6 @@
    "date": "2026-10-21",
    "title": "小凝：给 Agent 装上手之后，ego lite在三个项目里的效率账本",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/j9u_XCwO1BB0808_Ql7YBw.html"
-  },
-  {
-   "date": "2026-10-21",
-   "title": "小凝：Agent 操作网页的两条路：ego lite 与 Chrome DevTools MCP 技术对比",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/O6XsCJJ20gcahL4J_aiBuA.html"
   }
  ]
 }

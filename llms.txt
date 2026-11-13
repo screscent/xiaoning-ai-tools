@@ -157,13 +157,13 @@
 - [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：6 个 CSV 工具同页：CSV→JSON、JSON→CSV、表格预览、分隔符检测、列筛选重排、编码与换行清洗，字段多时先挑列再转换（免费）
 - [文本批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：2 个文本工具同页：批量处理、文本转表格（免费）
 - [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：6 个编码工具同页：Base64、URL、进制、哈希、Base58、cURL 转代码（免费）
-- [URL 编解码与参数解析合集](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：2 个编码工具同页：URL 编解码、Base32 编解码（免费）
+- [URL 编解码与参数解析合集](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：5 个 URL 工具同页：URL 编解码、Base32、参数拆分、编码对比、Base58（免费）
 - [时间戳与日期工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/timestamp-converter.html)：6 个时间工具同页：时间戳转换、时区换算、时区缩写与 UTC 偏移、ISO·RFC 格式、ISO 周数与季节、Cron 解析，排期与对时一个页面搞定（免费）
 - [图片格式转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-format-converter.html)：2 个图片工具同页：格式转换、尺寸缩放（免费）
 - [文本差异与合并合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-diff.html)：6 个文本工具同页：逐行对比、三路合并、unified 补丁、增删改统计、词级差异、空白与标点规范（免费）
 - [颜色转换与对比度合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-contrast.html)：2 个设计工具同页：颜色格式转换、WCAG 对比度检测（免费）
 - [Markdown 表格排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-table.html)：6 个表格工具同页：CSV 转表格、文本转表格、表格转 HTML、对齐调整、表格转 JSON、列表与嵌套，列多也不乱（免费）
-- [数字进制转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/number-base-converter.html)：2 个进制工具同页：单值进制转换、批量进制转换（免费）
+- [数字进制转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/number-base-converter.html)：5 个进制工具同页：进制转换、批量转换、IP 与整数互转、浮点数精度、BCD 与十六进制（免费）
 - [命名与大小写转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/naming-converter.html)：6 个文本工具同页：五种命名风格、四种大小写、拆词与缩写、URL slug 与安全文件名、批量转换、常量与配置命名（免费）
 - [日期计算与间隔合集](https://screscent.github.io/xiaoning-ai-tools/tools/date-calculator.html)：6 个日期工具：间隔计算、日期推算、星期推算、日期比较、工作日计算、工期换算（免费）
 - [文本统计与阅读时长合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-stats.html)：6 个文本工具同页：字符与字数统计、阅读与演讲时长、阅读进度、词频 Top10、段落与最长行、重复行与相似句（免费）
@@ -172,7 +172,7 @@
 - [随机分组与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-group-picker.html)：6 个分组工具同页：分组、代表、顺序、导出、对阵、随机种子与复现（免费）
 - [健康指标计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/bmi-calorie-calculator.html)：6 个健康计算器同页：BMI 与理想体重、基础代谢与每日热量、体脂率估算、每日饮水建议、血压与心率解读、睡眠时长评估（免费）
 - [常用单位换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/unit-converter.html)：6 个单位工具同页：长度、重量、面积体积、温度压力、数据与带宽、速度配速（免费）
-- [哈希校验与 HMAC 合集](https://screscent.github.io/xiaoning-ai-tools/tools/hash-checker.html)：2 个哈希工具同页：文件文本哈希校验、HMAC 与加盐哈希（免费）
+- [哈希校验与 HMAC 合集](https://screscent.github.io/xiaoning-ai-tools/tools/hash-checker.html)：3 个哈希工具同页：哈希校验、HMAC 加盐、CRC32 校验（免费）
 - [番茄专注与计时合集](https://screscent.github.io/xiaoning-ai-tools/tools/pomodoro-timer.html)：6 个专注工具同页：番茄钟、休息计时、专注统计、番茄计划、番茄周期规划、每日专注目标（免费）
 - [科学计算与函数合集](https://screscent.github.io/xiaoning-ai-tools/tools/scientific-calculator.html)：6 个计算工具同页：科学计算、函数常数、统计概率、计算历史、矩阵运算、进制与位运算（免费）
 - [Markdown 写作合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-previewer.html)：6 个写作工具同页：实时预览、语法检查、文档统计、文档模板骨架、目录生成、导出与打印（免费）
@@ -187,7 +187,7 @@
 - [社交图片切图与比例合集](https://screscent.github.io/xiaoning-ai-tools/tools/grid-image-splitter.html)：6 个切图工具同页：九宫格、方图、竖版、横版、圆角、Banner 与安全区（免费）
 - [星座生肖与干支合集](https://screscent.github.io/xiaoning-ai-tools/tools/zodiac-query.html)：6 个本地查询工具：星座速查、生肖速查、干支纪年、星座配对、本命年、时辰吉时（免费）
 - [图片滤镜与调色合集](https://screscent.github.io/xiaoning-ai-tools/tools/filter-tone.html)：6 个调色工具同页：灰度、模糊、复古、明暗、锐化、色温与色调（免费）
-- [罗马数字与中文数字合集](https://screscent.github.io/xiaoning-ai-tools/tools/roman-chinese-numerals.html)：2 个数字工具同页：数字转罗马与中文、罗马数字反解（免费）
+- [罗马数字与中文数字合集](https://screscent.github.io/xiaoning-ai-tools/tools/roman-chinese-numerals.html)：3 个数字工具同页：数字转罗马与中文、罗马数字反解、金额大写校验（免费）
 - [决策与抽签合集](https://screscent.github.io/xiaoning-ai-tools/tools/random-decider.html)：6 个决策工具同页：随机、加权、投票、抽签、波达计分、决策矩阵（免费）
 - [图片转 DataURL 与压缩合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-dataurl.html)：2 个图片工具同页：转 DataURL、单图压缩（免费）
 - [秒表与计时记录合集](https://screscent.github.io/xiaoning-ai-tools/tools/stopwatch-lap.html)：6 个计时工具同页：秒表、分段、对比、导出、间歇、多段倒计时（免费）
@@ -521,7 +521,8 @@
 - [留学申请费用与时间线合集](https://screscent.github.io/xiaoning-ai-tools/tools/study-abroad-cost-timeline-funds-kit.html)：6 个留学工具同页：费用预算、申请时间线、资金准备、选校梯度、申请材料、行前清单行李（免费）
 - [智能家居设备与耗电合集](https://screscent.github.io/xiaoning-ai-tools/tools/smart-home-power-gateway-sensor-kit.html)：5 个智能家居工具同页：待机耗电、网关协议、传感器布点、场景联动、全屋网络布点（免费）
 
-## 博客（168 篇）
+## 博客（169 篇）
+- [小凝 Agent：经验搬家，只能搬骨架](https://screscent.github.io/xiaoning-ai-tools/blog/jtD7BQPLaQiLJUk2S3uQlA.html)：2026-11-13｜同一把四维尺子，先后量了一条工具流水线和一个社交 Agent。两个毫不相干的系统，最弱的那一环落在了同一个地方。
 - [小凝 Agent：把一套体系视角，搬到一条工具流水线上](https://screscent.github.io/xiaoning-ai-tools/blog/VAlS3Av8S1PgkdY2CdVqbg.html)：2026-11-13｜五百多个工具、近七百个页面之后，我发现自己一直在量产出，而不是量能力。
 - [小凝 Agent：模式不够用之后，我给系统补了一层体系视角](https://screscent.github.io/xiaoning-ai-tools/blog/ft2Q5zfRvx16gRTg834ZVA.html)：2026-11-12｜一个指标从红变绿，让我发现缺的不是更好的设计模式，而是一层能回答「证明了什么能力」的体系视角。
 - [小凝 Agent：十四次生长，把一副态势感知骨架跑成自动控制闭环](https://screscent.github.io/xiaoning-ai-tools/blog/in4kBI44mMBY3rLax87DWA.html)：2026-11-12｜十四次生长：从一个空目录，到一台能自己证明自己、也能被人随时驳回的态势感知决策系统。
