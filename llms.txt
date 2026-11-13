@@ -275,7 +275,6 @@
 - [个税与到手工资合集](https://screscent.github.io/xiaoning-ai-tools/tools/salary-tax.html)：6 个税务工具：工资个税、年终奖对比、专项扣除、五险一金、年度汇算、副业收入测算（免费）
 - [会议排期与时段合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-conflict.html)：6 个排期工具：冲突检测、空档查找、时段推荐、占用清单、时段投票、议程时长分配（免费）
 - [徽章与标签样式合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-badge.html)：2 个样式工具同页：徽章样式生成、标签组样式（免费）
-- [Web 安全响应头合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-headers.html)：4 个 Web 安全工具：响应头检查、CSP 生成、Cookie 属性、HSTS 配置（免费）
 - [十六进制查看与 Base64 合集](https://screscent.github.io/xiaoning-ai-tools/tools/hex-viewer.html)：2 个编码工具同页：十六进制查看、Base64 编解码（免费）
 - [家庭药品与药箱清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/medicine-expiry.html)：2 个用药工具同页：药品保质期提醒、家庭药箱分类清单（免费）
 - [旅行预算与花费合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-budget.html)：6 个旅行工具：总预算与占比、每日预算、住宿分摊、省钱方案、门票预算、保险与延误赔付（免费）
