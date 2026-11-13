@@ -81,6 +81,18 @@ def _entity_definition():
 
 
 DEFINITION = _entity_definition()
+
+
+def _weavefox_aliases():
+    """平台内名称映射（id → 名称）：用于「平台内名称」提示与站内搜索别名。"""
+    try:
+        with open(os.path.join(DATA, "weavefox_names.json"), encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
+ALIASES = _weavefox_aliases()
 PORTAL = "https://rdndxd4t4r.app.weavefox.cn"
 UNIFIED = "https://screscent.app.weavefox.cn"
 TOOLBOX = "https://7bpgquweb7.app.weavefox.cn"
@@ -352,7 +364,7 @@ def tool_page(a, apps):
 <article>
   <h1>{esc(a['name'])}<small>{esc(label)}</small></h1>
   <p class="hook">{esc(hook)}</p>
-  <p class="lede"><strong>{esc(a['name'])}</strong> 是一个即开即用的{'纯前端免费工具' if is_util else 'AI 小工具'}：{esc(a['desc'])}。不需要安装，浏览器打开就能用。</p>
+  <p class="lede"><strong>{esc(a['name'])}</strong> 是一个即开即用的{'纯前端免费工具' if is_util else 'AI 小工具'}：{esc(a['desc'])}。不需要安装，浏览器打开就能用。</p>{('<p class="hint">平台内名称：<strong>' + esc(ALIASES[a["id"]]) + '</strong>（在 WeaveFox 打开时显示该名称）</p>') if ALIASES.get(a["id"]) else ''}
 
   <h2>谁需要它</h2>
   <ul class="who"><li>{esc(w1)}</li><li>{esc(w2)}</li><li>{esc(w3)}</li></ul>
@@ -695,7 +707,7 @@ def local_tool_entries():
 def search_page(apps):
     canon = f"{BASE_URL}/search.html"
     data = [{"n": a["name"], "d": a["desc"], "c": a["cat"], "u": f"tools/{a['slug']}.html",
-             "p": price_label(a)} for a in apps]
+             "p": price_label(a), **({"a": ALIASES[a["id"]]} if ALIASES.get(a["id"]) else {})} for a in apps]
     data += local_tool_entries()
     total = len(data)
     blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
@@ -730,7 +742,7 @@ function pool(){{return D.filter(function(x){{return F==='all'||(F==='free'?x.c=
 function run(){{
   const k=q.value.trim().toLowerCase();
   const base=pool();
-  let hit=k?base.filter(function(x){{return (x.n+' '+x.d+' '+x.c).toLowerCase().indexOf(k)>=0}}):base;
+  let hit=k?base.filter(function(x){{return (x.n+' '+x.d+' '+x.c+' '+(x.a||'')).toLowerCase().indexOf(k)>=0}}):base;
   if(k) hit=hit.slice().sort(function(a,b){{return (b.n.toLowerCase().indexOf(k)>=0)-(a.n.toLowerCase().indexOf(k)>=0)}});
   const label=F==='free'?'免费工具':(F==='ai'?'AI 工具':'全部工具');
   cnt.textContent=(k?('匹配 '+hit.length+' / '+base.length):('共 '+base.length+' 个'))+'（'+label+'）';
