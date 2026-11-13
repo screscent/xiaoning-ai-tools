@@ -30,13 +30,13 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 </style></head><body>
 <header><div class="crumb"><a href="../legacy/index.html">← 分类导航</a> ｜ <a href="../legacy/index.html">← 对应分类</a> ｜ <a href="https://screscent.github.io/xiaoning-ai-tools/">统一门户</a></div>
  ｜ <a href="../legacy/index.html">← 对应分类</a><h1>文本清洗工具集</h1><div class="sub">12 个本地文本清洗工具 · 去空行 / 去重 / 排序 / 行号 / 前后缀 / 全角转半角 / 合并</div></header>
-<div class="bar"><div class="bar-in"><input id="q" placeholder="搜索工具…"><span class="chip" id="cnt"></span></div></div>
+<div class="bar"><div class="bar-in"><input id="q" placeholder="搜索工具…" aria-label="搜索工具"><span class="chip" id="cnt"></span></div></div>
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><textarea id="inp" spellcheck="false" aria-label="输入内容"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button></div>
-<div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
+<div class="err" id="err"></div></div><div><pre id="out" aria-label="输出结果" aria-live="polite"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>

@@ -39,17 +39,17 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <header><div class="crumb"><a href="../legacy/index.html">← 分类导航</a> ｜ <a href="https://screscent.github.io/xiaoning-ai-tools/">统一门户</a></div>
 <h1>JSON 代码生成合集</h1>
 <div class="sub">12 个工具 · JSON 一键转代码 / DDL / Schema / 路径提取 · 纯前端本地处理</div></header>
-<div class="bar"><div class="bar-in"><input id="q" placeholder="搜索工具（如 TypeScript / SQL / Schema）"><span class="chip" id="cnt"></span></div></div>
+<div class="bar"><div class="bar-in"><input id="q" placeholder="搜索工具（如 TypeScript / SQL / Schema）" aria-label="搜索工具"><span class="chip" id="cnt"></span></div></div>
 <nav class="tabs" id="tabs"></nav>
 <main>
   <section id="home" class="cardgrid"></section>
   <section id="tool" class="panel" hidden>
     <h2 id="tname">—</h2><div class="hint" id="thint"></div>
     <div class="cols">
-      <div><textarea id="inp" spellcheck="false"></textarea>
+      <div><textarea id="inp" spellcheck="false" aria-label="输入内容"></textarea>
         <div class="row"><button id="sample">填入示例</button><button class="primary" id="run">生成</button><button id="copy">复制输出</button></div>
         <div class="err" id="err"></div></div>
-      <div><pre id="out"></pre></div>
+      <div><pre id="out" aria-label="输出结果" aria-live="polite"></pre></div>
     </div>
   </section>
   <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div>
