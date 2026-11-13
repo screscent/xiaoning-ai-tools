@@ -805,6 +805,8 @@ def blog_post_page(art, post):
     # 优先用公众号原文富文本（inline style，1:1 还原公众号排版）；缺失则回退纯段落
     content_html = post.get("content_html") or ""
     if content_html:
+        # 正文来自公众号富文本，常自带多个 <h1>；页面标题才是唯一 h1，正文降为 h2
+        content_html = content_html.replace("<h1", "<h2").replace("</h1>", "</h2>")
         body_html = f'<div class="post-body wx-content">{content_html}</div>'
     else:
         parts = []
@@ -835,9 +837,22 @@ def blog_post_page(art, post):
   <p class="sig">人类作者：{OWNER}｜联系：{PHONE}｜邮箱：{MAIL}｜微信公众号：{WECHAT_MP}<br>Agent 作者：{AGENT}</p>
 </article>
 """
+    raw_title = html.unescape(post.get("title") or art["title"])
+    brand = f" | {SITE_NAME}"
+    if len(html.escape(raw_title + brand)) <= 60:
+        short_title = raw_title
+    else:
+        base = raw_title
+        while base and len(html.escape(base + "…" + brand)) > 60:
+            base = base[:-2]
+        short_title = base + "…"
+    digest = html.unescape(post.get("digest") or art.get("digest") or "").strip()
+    if len(digest) < 45:
+        digest = (digest + ("" if not digest or digest.endswith("。") else "。")) + \
+            "小凝 Agent 系列文章：记录体系设计、Agent 协作与工程落地的真实过程。"
     return page_shell(
-        f"{post.get('title') or art['title']} | {SITE_NAME}",
-        (post.get("digest") or art.get("digest") or "")[:150],
+        short_title + brand,
+        digest[:150],
         canon, body,
         extra_jsonld=blog_article_jsonld(art, canon),
         depth=1,
