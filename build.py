@@ -15,14 +15,14 @@ DATA = os.path.join(HERE, "data")
 APPS_JSON = os.path.join(DATA, "apps.json")
 BLOG_FEED = os.path.join(DATA, "blog_feed.json")
 BLOG_POSTS = os.path.join(DATA, "blog_posts")
-REPORTS_SRC = os.path.join(os.path.dirname(HERE), "reports-src")  # 源文件不放进站点目录，避免被 Pages 当页面重复部署
+REPORTS_SRC = os.path.join(DATA, "reports")  # 源文件以 .html.txt 存放：仓库自包含，且不会被 Pages 当页面重复发布
 REPORTS = [
     {
         "slug": "xiaoning-os-v16.6",
         "title": "小凝体系深度评估报告 v16.6",
         "desc": "OS 四层 × 人格体系 × 18 模块 × 双项目实证：八维评分 93.4，并与 2026 主流 Agent、工程范式与研究逐项对照。",
         "date": "2026-11-08",
-        "file": "xiaoning-os-v16.6.html",
+        "file": "xiaoning-os-v16.6.html.txt",
     }
 ]
 sys.path.insert(0, DATA)
