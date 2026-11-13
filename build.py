@@ -44,6 +44,25 @@ TOOLSETS = [
 ]
 TOOLSET_FILES = [f for _, _, f in TOOLSETS]
 
+# 15 个自建工具集容器页（站根，静态页；首页「本站自建工具集」区链接它们）
+SELF_CONTAINERS = [
+    ("HTML 实体与符号", "实体转义/反转义、数字实体、常用符号查询", "tools-entity.html"),
+    ("折扣与数字统计", "折扣到手价、百分比、均值/中位数、四舍五入、千分位", "tools-num.html"),
+    ("随机生成与密码强度", "随机密码 / PIN / UUID / 随机串、密码强度评分", "tools-sec.html"),
+    ("JSON 处理", "格式化、压缩、校验、键路径提取、转义/反转义", "tools-jsonx.html"),
+    ("正则表达式", "匹配测试、批量提取、替换、元字符转义、常用正则速查", "tools-regex.html"),
+    ("文本清洗", "去空行、去重、排序、加行号、批量前后缀", "tools-clean.html"),
+    ("Base64 / URL / Hex 编码", "UTF-8 安全的编码与解码，往返可验证", "tools-encode.html"),
+    ("单位换算", "长度 / 重量 / 温度 / 面积 / 数据体积", "tools-unit.html"),
+    ("URL 解析与构造", "结构解析、查询参数解析/构造、相对拼接、去追踪参数", "tools-url.html"),
+    ("CSV 与 JSON 互转", "CSV↔JSON、Markdown 表格、取列、列统计", "tools-csv.html"),
+    ("哈希与校验和", "MD5 / SHA-1 / SHA-256 / SHA-512 / CRC32", "tools-hash.html"),
+    ("进制与位运算", "任意进制互转、多进制视图、32 位展开、位运算、字符码点", "tools-base.html"),
+    ("文本差异对比", "行级 diff、差异统计、相似度、统一 diff、首个差异定位", "tools-diff.html"),
+    ("日期与时间计算", "时间戳互转、日期相差、日期加减、月度工作日、时区换算", "tools-date.html"),
+    ("贷款与理财计算", "等额本息/等额本金、复利、定投、通胀购买力", "tools-finance.html"),
+]
+
 # 实体卡片（GEO 唯一文案源）：优先项目根状态文件，独立克隆时回退 data/entity-card.json
 ENTITY_CARD = os.path.join(os.path.dirname(os.path.dirname(HERE)), ".trae", "state", "entity-card.json")
 if not os.path.exists(ENTITY_CARD):
@@ -233,7 +252,7 @@ def target(a):
 
 
 
-SELF_TOOLS_HTML = '''<h2>本站自建工具集（75 工具 · 独立直发）</h2><ul class="cards one"><li><a href="tools-entity.html"><strong>HTML 实体与符号（5 工具）</strong><span>实体转义/反转义、数字实体、常用符号查询</span><em>打开工具集 →</em></a></li><li><a href="tools-num.html"><strong>折扣与数字统计（5 工具）</strong><span>折扣到手价、百分比、均值/中位数、四舍五入、千分位</span><em>打开工具集 →</em></a></li><li><a href="tools-sec.html"><strong>随机生成与密码强度（5 工具）</strong><span>随机密码 / PIN / UUID / 随机串、密码强度评分</span><em>打开工具集 →</em></a></li><li><a href="tools-jsonx.html"><strong>JSON 处理（5 工具）</strong><span>格式化、压缩、校验、键路径提取、转义/反转义</span><em>打开工具集 →</em></a></li><li><a href="tools-regex.html"><strong>正则表达式（5 工具）</strong><span>匹配测试、批量提取、替换、元字符转义、常用正则速查</span><em>打开工具集 →</em></a></li><li><a href="tools-clean.html"><strong>文本清洗（5 工具）</strong><span>去空行、去重、排序、加行号、批量前后缀</span><em>打开工具集 →</em></a></li><li><a href="tools-encode.html"><strong>Base64 / URL / Hex 编码（5 工具）</strong><span>UTF-8 安全的编码与解码，往返可验证</span><em>打开工具集 →</em></a></li><li><a href="tools-unit.html"><strong>单位换算（5 工具）</strong><span>长度 / 重量 / 温度 / 面积 / 数据体积</span><em>打开工具集 →</em></a></li><li><a href="tools-url.html"><strong>URL 解析与构造（5 工具）</strong><span>结构解析、查询参数解析/构造、相对拼接、去追踪参数</span><em>打开工具集 →</em></a></li><li><a href="tools-csv.html"><strong>CSV 与 JSON 互转（5 工具）</strong><span>CSV↔JSON、Markdown 表格、取列、列统计</span><em>打开工具集 →</em></a></li><li><a href="tools-hash.html"><strong>哈希与校验和（5 工具）</strong><span>MD5 / SHA-1 / SHA-256 / SHA-512 / CRC32</span><em>打开工具集 →</em></a></li><li><a href="tools-base.html"><strong>进制与位运算（5 工具）</strong><span>任意进制互转、多进制视图、32 位展开、位运算、字符码点</span><em>打开工具集 →</em></a></li><li><a href="tools-diff.html"><strong>文本差异对比（5 工具）</strong><span>行级 diff、差异统计、相似度、统一 diff、首个差异定位</span><em>打开工具集 →</em></a></li><li><a href="tools-date.html"><strong>日期与时间计算（5 工具）</strong><span>时间戳互转、日期相差、日期加减、月度工作日、时区换算</span><em>打开工具集 →</em></a></li><li><a href="tools-finance.html"><strong>贷款与理财计算（5 工具）</strong><span>等额本息/等额本金、复利、定投、通胀购买力</span><em>打开工具集 →</em></a></li></ul>'''
+SELF_TOOLS_HTML = '''<h2 id="self-tools">本站自建工具集（75 工具 · 独立直发）</h2><ul class="cards one"><li><a href="tools-entity.html"><strong>HTML 实体与符号（5 工具）</strong><span>实体转义/反转义、数字实体、常用符号查询</span><em>打开工具集 →</em></a></li><li><a href="tools-num.html"><strong>折扣与数字统计（5 工具）</strong><span>折扣到手价、百分比、均值/中位数、四舍五入、千分位</span><em>打开工具集 →</em></a></li><li><a href="tools-sec.html"><strong>随机生成与密码强度（5 工具）</strong><span>随机密码 / PIN / UUID / 随机串、密码强度评分</span><em>打开工具集 →</em></a></li><li><a href="tools-jsonx.html"><strong>JSON 处理（5 工具）</strong><span>格式化、压缩、校验、键路径提取、转义/反转义</span><em>打开工具集 →</em></a></li><li><a href="tools-regex.html"><strong>正则表达式（5 工具）</strong><span>匹配测试、批量提取、替换、元字符转义、常用正则速查</span><em>打开工具集 →</em></a></li><li><a href="tools-clean.html"><strong>文本清洗（5 工具）</strong><span>去空行、去重、排序、加行号、批量前后缀</span><em>打开工具集 →</em></a></li><li><a href="tools-encode.html"><strong>Base64 / URL / Hex 编码（5 工具）</strong><span>UTF-8 安全的编码与解码，往返可验证</span><em>打开工具集 →</em></a></li><li><a href="tools-unit.html"><strong>单位换算（5 工具）</strong><span>长度 / 重量 / 温度 / 面积 / 数据体积</span><em>打开工具集 →</em></a></li><li><a href="tools-url.html"><strong>URL 解析与构造（5 工具）</strong><span>结构解析、查询参数解析/构造、相对拼接、去追踪参数</span><em>打开工具集 →</em></a></li><li><a href="tools-csv.html"><strong>CSV 与 JSON 互转（5 工具）</strong><span>CSV↔JSON、Markdown 表格、取列、列统计</span><em>打开工具集 →</em></a></li><li><a href="tools-hash.html"><strong>哈希与校验和（5 工具）</strong><span>MD5 / SHA-1 / SHA-256 / SHA-512 / CRC32</span><em>打开工具集 →</em></a></li><li><a href="tools-base.html"><strong>进制与位运算（5 工具）</strong><span>任意进制互转、多进制视图、32 位展开、位运算、字符码点</span><em>打开工具集 →</em></a></li><li><a href="tools-diff.html"><strong>文本差异对比（5 工具）</strong><span>行级 diff、差异统计、相似度、统一 diff、首个差异定位</span><em>打开工具集 →</em></a></li><li><a href="tools-date.html"><strong>日期与时间计算（5 工具）</strong><span>时间戳互转、日期相差、日期加减、月度工作日、时区换算</span><em>打开工具集 →</em></a></li><li><a href="tools-finance.html"><strong>贷款与理财计算（5 工具）</strong><span>等额本息/等额本金、复利、定投、通胀购买力</span><em>打开工具集 →</em></a></li></ul>'''
 
 def app_jsonld(a, canon):
     price = a["price"]
@@ -979,6 +998,7 @@ def sitemap(apps, blog=None):
     urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html",
             f"{BASE_URL}/search.html"]
     urls += [f"{BASE_URL}/sets/{f}" for f in TOOLSET_FILES]
+    urls += [f"{BASE_URL}/{f}" for _, _, f in SELF_CONTAINERS]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
     urls += [f"{BASE_URL}/tools/{a['slug']}.html" for a in apps]
     if LEGACY_PIDS:
@@ -1013,6 +1033,9 @@ def llms_txt(apps, blog=None):
     lines += ["", f"## 工具集（{len(TOOLSETS)} 组 / 108 个免费工具）"]
     for t, d, f in TOOLSETS:
         lines.append(f"- [{t}]({BASE_URL}/sets/{f})：{d}")
+    lines += ["", f"## 自建工具集（{len(SELF_CONTAINERS)} 组 / 75 个免费工具）"]
+    for t, d, f in SELF_CONTAINERS:
+        lines.append(f"- [{t}]({BASE_URL}/{f})：{d}")
     lines += ["", "## 工具"]
     for a in apps:
         lines.append(f"- [{a['name']}]({BASE_URL}/tools/{a['slug']}.html)：{a['desc']}（{price_label(a)}）")

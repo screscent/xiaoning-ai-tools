@@ -28,6 +28,23 @@
 - [隐私与口令](https://screscent.github.io/xiaoning-ai-tools/sets/tools-privacy.html)：手机号 / 身份证 / 邮箱 / 卡号脱敏，密码强度、熵与隐私扫描
 - [出行换算](https://screscent.github.io/xiaoning-ai-tools/sets/tools-travel.html)：时差 / 飞行时长 / 油耗 / 多人分摊 / 签证停留期 / 打包清单
 
+## 自建工具集（15 组 / 75 个免费工具）
+- [HTML 实体与符号](https://screscent.github.io/xiaoning-ai-tools/tools-entity.html)：实体转义/反转义、数字实体、常用符号查询
+- [折扣与数字统计](https://screscent.github.io/xiaoning-ai-tools/tools-num.html)：折扣到手价、百分比、均值/中位数、四舍五入、千分位
+- [随机生成与密码强度](https://screscent.github.io/xiaoning-ai-tools/tools-sec.html)：随机密码 / PIN / UUID / 随机串、密码强度评分
+- [JSON 处理](https://screscent.github.io/xiaoning-ai-tools/tools-jsonx.html)：格式化、压缩、校验、键路径提取、转义/反转义
+- [正则表达式](https://screscent.github.io/xiaoning-ai-tools/tools-regex.html)：匹配测试、批量提取、替换、元字符转义、常用正则速查
+- [文本清洗](https://screscent.github.io/xiaoning-ai-tools/tools-clean.html)：去空行、去重、排序、加行号、批量前后缀
+- [Base64 / URL / Hex 编码](https://screscent.github.io/xiaoning-ai-tools/tools-encode.html)：UTF-8 安全的编码与解码，往返可验证
+- [单位换算](https://screscent.github.io/xiaoning-ai-tools/tools-unit.html)：长度 / 重量 / 温度 / 面积 / 数据体积
+- [URL 解析与构造](https://screscent.github.io/xiaoning-ai-tools/tools-url.html)：结构解析、查询参数解析/构造、相对拼接、去追踪参数
+- [CSV 与 JSON 互转](https://screscent.github.io/xiaoning-ai-tools/tools-csv.html)：CSV↔JSON、Markdown 表格、取列、列统计
+- [哈希与校验和](https://screscent.github.io/xiaoning-ai-tools/tools-hash.html)：MD5 / SHA-1 / SHA-256 / SHA-512 / CRC32
+- [进制与位运算](https://screscent.github.io/xiaoning-ai-tools/tools-base.html)：任意进制互转、多进制视图、32 位展开、位运算、字符码点
+- [文本差异对比](https://screscent.github.io/xiaoning-ai-tools/tools-diff.html)：行级 diff、差异统计、相似度、统一 diff、首个差异定位
+- [日期与时间计算](https://screscent.github.io/xiaoning-ai-tools/tools-date.html)：时间戳互转、日期相差、日期加减、月度工作日、时区换算
+- [贷款与理财计算](https://screscent.github.io/xiaoning-ai-tools/tools-finance.html)：等额本息/等额本金、复利、定投、通胀购买力
+
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
 - [SEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/seo-audit.html)：网址 6 项基础检查与修复建议（¥1）
