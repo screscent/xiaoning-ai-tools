@@ -815,6 +815,19 @@ def sitemap(apps, blog=None):
     urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html"]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
     urls += [f"{BASE_URL}/tools/{a['slug']}.html" for a in apps]
+    ledger = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+                          ".trae/state/legacy_pages.jsonl")
+    if os.path.exists(ledger):
+        pids = set()
+        for line in open(ledger, encoding="utf-8"):
+            line = line.strip()
+            if not line:
+                continue
+            row = json.loads(line)
+            if row.get("ok") and not row.get("snapshot_only"):
+                pids.add(row["pid"])
+        urls.append(f"{BASE_URL}/legacy/")
+        urls += [f"{BASE_URL}/legacy/{p}.html" for p in sorted(pids)]
     urls += [f"{BASE_URL}/reports/"] + [f"{BASE_URL}/reports/{r['slug']}.html" for r in REPORTS]
     blog_posts = []
     if blog and blog.get("articles"):
@@ -824,7 +837,7 @@ def sitemap(apps, blog=None):
     blog_url = f"{BASE_URL}/blog/"
     items = "".join(
         f"<url><loc>{x}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq>"
-        f"<priority>{'1.0' if x == BASE_URL + '/' else '0.9' if x == blog_url else '0.8' if '/categories/' in x else '0.7'}</priority></url>"
+        f"<priority>{'1.0' if x == BASE_URL + '/' else '0.9' if x == blog_url else '0.8' if '/categories/' in x else '0.6' if '/legacy/' in x else '0.7'}</priority></url>"
         for x in urls
     )
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{items}</urlset>\n'
