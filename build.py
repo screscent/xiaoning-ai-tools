@@ -15,7 +15,7 @@ DATA = os.path.join(HERE, "data")
 APPS_JSON = os.path.join(DATA, "apps.json")
 BLOG_FEED = os.path.join(DATA, "blog_feed.json")
 BLOG_POSTS = os.path.join(DATA, "blog_posts")
-REPORTS_SRC = os.path.join(DATA, "reports")
+REPORTS_SRC = os.path.join(os.path.dirname(HERE), "reports-src")  # 源文件不放进站点目录，避免被 Pages 当页面重复部署
 REPORTS = [
     {
         "slug": "xiaoning-os-v16.6",
@@ -1114,7 +1114,7 @@ footer{{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:
 <footer>© 2026 月牙寂 · 小凝工具库</footer></div></body></html>"""
     w("reports/index.html", reports_index)
 
-    # 深度报告：独立页面（保留报告自身设计），从 data/reports 注入返回条与结构化数据
+    # 深度报告：独立页面（保留报告自身设计），从 ../reports-src 注入返回条与结构化数据
     if REPORTS:
         os.makedirs(os.path.join(HERE, "reports"), exist_ok=True)
         for r in REPORTS:
