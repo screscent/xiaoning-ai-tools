@@ -482,7 +482,7 @@ def unified_page(apps, blog=None):
     ts_html = "".join(
         f'<li><a href="sets/{f}"><strong>{esc(t)}（12 工具）</strong>'
         f'<span>{esc(d)}</span><em>打开工具集 →</em></a></li>' for t, d, f in TOOLSETS)
-    toolset_html = f'<h2>本地工具集（108 个工具 · GitHub 自建）</h2><ul class="cards one">{ts_html}</ul>'
+    toolset_html = f'<h2 id="tool-sets">本地工具集（108 个工具 · GitHub 自建）</h2><ul class="cards one">{ts_html}</ul>'
     report_html = ""
     if REPORTS:
         cards = "".join(
