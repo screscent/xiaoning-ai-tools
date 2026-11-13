@@ -28,7 +28,7 @@ details{max-width:1180px;margin:0 auto;padding:0 16px 20px;color:#6b7280;font-si
 footer{max-width:1180px;margin:0 auto;padding:18px 16px 40px;color:#6b7280;font-size:12px;border-top:1px solid #e5e7eb}
 footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 </style></head><body>
-<header><div class="crumb"><a href="index.html">← 分类导航</a> ｜ <a href="https://screscent.github.io/xiaoning-ai-tools/">统一门户</a></div>
+<header><div class="crumb"><a href="https://screscent.github.io/xiaoning-ai-tools/index.html">← 分类导航</a> ｜ <a href="https://screscent.github.io/xiaoning-ai-tools/">统一门户</a></div>
 <h1>日期与时间计算工具合集</h1><div class="sub">5 个日期工具 · 时间戳互转 / 日期差 / 日期加减 / 工作日 / 时区换算 · 纯前端本地处理</div></header>
 <div class="bar"><div class="bar-in"><input id="q" placeholder="搜索工具…"><span class="chip" id="cnt"></span></div></div>
 <nav class="tabs" id="tabs"></nav>
@@ -249,6 +249,12 @@ function dateDiff2(s){const p=s.trim().split(/[\s,，]+/);if(p.length<2)return '
 function dateAdd(s){const m=s.trim().match(/^(\d{4}-\d{2}-\d{2})\s*([+-]\d+)$/);if(!m)return '格式：2026-01-01 +30';const d=new Date(m[1]+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+(+m[2]));return m[1]+' '+m[2]+' 天 → '+d.toISOString().slice(0,10)+'（周'+'日一二三四五六'[d.getUTCDay()]+'）'}
 function workdays(s){const m=s.trim().match(/^(\d{4})-(\d{2})$/);if(!m)return '格式：2026-11';const y=+m[1],mo=+m[2]-1;const days=new Date(Date.UTC(y,mo+1,0)).getUTCDate();let n=0;for(let d=1;d<=days;d++){const wd=new Date(Date.UTC(y,mo,d)).getUTCDay();if(wd>=1&&wd<=5)n++}return y+'-'+String(mo+1).padStart(2,'0')+' 工作日 '+n+' 天（周一~周五，未扣法定节假日）'}
 function tzConv(s){const m=s.trim().match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2})(?::(\d{2}))?\s*([+-]\d{2}:?\d{2})\s*([+-]\d{2}:?\d{2})$/);if(!m)return '格式：2026-01-01 12:00 +08:00 -05:00';const off=v=>{const sign=v[0]==='-'?-1:1;return sign*((+v.slice(1,3))*60+(+v.slice(-2)))};const p=m[1].split('-'),q=m[2].split(':');const wall=Date.UTC(+p[0],+p[1]-1,+p[2],+q[0],+q[1],+(m[3]||0));const utc=wall-off(m[4])*60000;const tgt=new Date(utc+off(m[5])*60000).toISOString().slice(0,16).replace('T',' ');return '源: '+m[1]+' '+m[2]+' (UTC'+m[4]+')\n目标: '+tgt+' (UTC'+m[5]+')\nUTC: '+new Date(utc).toISOString().slice(0,16).replace('T',' ')+'Z'}
+function parseNums(s){return s.trim().split(/[\s,，]+/).map(Number)}
+function loanPmt(s){const p=parseNums(s);if(p.length<3||p.some(x=>!isFinite(x)))return '格式：1000000,4.2,30（本金,年利率%,年数）';const P=p[0],rate=p[1],years=p[2];const r=rate/100/12,n=Math.round(years*12);if(P<=0||n<=0)return '(本金与年数需大于 0)';const m=r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);const total=m*n;return '月供 '+m.toFixed(2)+'\n总还款 '+total.toFixed(2)+'\n总利息 '+(total-P).toFixed(2)+'\n期数 '+n}
+function loanPrincipal(s){const p=parseNums(s);if(p.length<3||p.some(x=>!isFinite(x)))return '格式：1000000,4.2,30（本金,年利率%,年数）';const P=p[0],rate=p[1],years=p[2];const r=rate/100/12,n=Math.round(years*12);if(P<=0||n<=0)return '(本金与年数需大于 0)';const head=P/n+P*r;const last=P/n+(P/n)*r;const totalInt=P*r*(n+1)/2;return '首月 '+head.toFixed(2)+'\n末月 '+last.toFixed(2)+'\n总利息 '+totalInt.toFixed(2)+'\n总还款 '+(P+totalInt).toFixed(2)}
+function compound(s){const p=parseNums(s);if(p.length<3)return '格式：10000,5,10（本金,年利率%,年数）';const P=p[0],r=p[1]/100,y=p[2];return '终值 '+(P*Math.pow(1+r,y)).toFixed(2)+'\n收益 '+(P*Math.pow(1+r,y)-P).toFixed(2)}
+function sip(s){const p=parseNums(s);if(p.length<3)return '格式：1000,5,10（每月投入,年化%,年数）';const M=p[0],r=p[1]/100/12,n=Math.round(p[2]*12);const fv=r===0?M*n:M*(Math.pow(1+r,n)-1)/r;return '期末总值 '+fv.toFixed(2)+'\n累计投入 '+(M*n).toFixed(2)+'\n收益 '+(fv-M*n).toFixed(2)}
+function inflation(s){const p=parseNums(s);if(p.length<3)return '格式：1000000,3,10（金额,通胀%,年数）';const P=p[0],i=p[1]/100,y=p[2];const now=P/Math.pow(1+i,y);return y+' 年后的 '+P+' 元\n≈ 现在 '+now.toFixed(2)+' 元购买力\n缩水 '+(P-now).toFixed(2)+' 元'}
 
 
 const GEN={ ts:dateTs,diff:dateDiff2,add:dateAdd,workdays:workdays,tz:tzConv };
