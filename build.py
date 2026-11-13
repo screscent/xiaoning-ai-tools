@@ -390,9 +390,15 @@ def category_page(cat, apps):
             for i, a in enumerate(items)
         ]},
     }, ensure_ascii=False)
+    if cat == "实用工具":
+        _title = f"实用工具（{len(items)} 个免费本地工具）| {SITE_NAME}"
+        _desc = f"{lead} 共 {len(items)} 个纯前端工具，浏览器本地运行，免费、数据不上传。"
+    else:
+        _title = f"{cat} AI 工具（{len(items)} 个）| {SITE_NAME}"
+        _desc = f"{lead} 共 {len(items)} 个工具，浏览器即开即用，单个 ¥1–¥3 解锁。"
     return page_shell(
-        f"{cat} AI 工具（{len(items)} 个）| {SITE_NAME}",
-        f"{lead} 共 {len(items)} 个工具，浏览器即开即用，单个 ¥1–¥3 解锁。",
+        _title,
+        _desc,
         canon, body,
         extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>',
         depth=1,
@@ -657,8 +663,8 @@ def pricing_page(apps):
 {common_faq_block()}
 <p class="cta"><a class="btn" href="{esc(u(PORTAL, 'portal', 'pricing'))}" rel="noopener">进入工具集</a></p>
 """
-    return page_shell(f"价格与使用说明 | {SITE_NAME}",
-                      "小凝 AI 工具集价格：单个工具 ¥1–¥3，手机号注册免费，支付宝扫码解锁。",
+    return page_shell(f"价格与使用说明 · 免费与付费 | {SITE_NAME}",
+                      "小凝 AI 工具集价格：单个工具 ¥1–¥3，手机号注册免费，支付宝扫码解锁；免费工具箱全部本地运行，无需注册与支付。",
                       canon, body)
 
 
@@ -1078,19 +1084,19 @@ def main():
         for r in REPORTS)
     reports_index = f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>深度报告 · 小凝工具库</title>
-<meta name="description" content="小凝体系的深度评估与审计报告：方法论、架构、质量与运营复盘。">
+<title>深度报告 · 小凝体系评估与审计 | 小凝 AI 工具集</title>
+<meta name="description" content="小凝体系的深度评估与审计报告：方法论、架构、质量与运营复盘，含 v16.6 八维评分 93.4 与主流 Agent 对照。">
 <link rel="canonical" href="{BASE_URL}/reports/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:title" content="深度报告 · 小凝工具库">
+<meta property="og:title" content="深度报告 · 小凝体系评估与审计 | 小凝 AI 工具集">
 <meta property="og:description" content="小凝体系的深度评估与审计报告：方法论、架构、质量与运营复盘。">
 <meta property="og:url" content="{BASE_URL}/reports/">
 <meta property="og:image" content="{BASE_URL}/legacy/assets/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="675">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="深度报告 · 小凝工具库">
+<meta name="twitter:title" content="深度报告 · 小凝体系评估与审计 | 小凝 AI 工具集">
 <meta name="twitter:image" content="{BASE_URL}/legacy/assets/og-cover.jpg">
 <style>
 :root{{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--bg:#f7f8fa}}
