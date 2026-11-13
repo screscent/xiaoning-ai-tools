@@ -417,7 +417,7 @@ def category_page(cat, apps):
 <h1>{esc(cat)} AI 工具<small>{len(items)} 个</small></h1>
 <p class="lede">{esc(lead)}</p>
 <ul class="cards">{cards}</ul>
-<p class="cta"><a class="btn ghost" href="../index.html">查看全部 {len(apps)} 个工具</a></p>
+<p class="cta"><a class="btn ghost" href="../index.html">查看全部工具入口 →</a></p>
 """
     jsonld = json.dumps({
         "@context": "https://schema.org",
