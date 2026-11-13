@@ -50,7 +50,9 @@ function run(){
     return '<li><a href="'+x.u+'"><strong>'+esc(x.n)+'</strong><span>'+esc(x.d)+'</span><em>'+esc(x.c)+' · '+esc(x.p)+'</em></a></li>';
   }).join('')+(hit.length>80?'<li><p class="hint">仅显示前 80 条，请输入更具体的关键词。</p></li>':'');
 }
-q.addEventListener('input',run);run();
+q.addEventListener('input',run);
+q.addEventListener('keydown',function(e){if(e.key==='Enter'){var a=res.querySelector('a');if(a)location.href=a.getAttribute('href');}});
+run();
 </script>
 
 </main>
