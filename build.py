@@ -496,7 +496,7 @@ def unified_page(apps, blog=None):
             f'<span>{esc(r["desc"])}</span><em>阅读报告 →</em></a></li>'
             for r in REPORTS
         )
-        report_html = f'<h2>深度报告</h2><ul class="cards one">{cards}</ul>'
+        report_html = f'<h2>深度报告</h2><ul class="cards one">{cards}</ul><p class="cta"><a class="btn ghost" href="reports/index.html">全部报告 →</a></p>'
     jsonld = json.dumps({
         "@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME,
         "url": canon, "inLanguage": "zh-CN",
