@@ -175,6 +175,38 @@ def rel(path):
     return path
 
 
+def _latest_ledger():
+    """迁移台账按 pid 取最后一条（台账只追加，旧行可能 ok 但已被 snapshot_only 覆盖）。"""
+    ledger = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+                          ".trae/state/legacy_pages.jsonl")
+    latest = {}
+    if os.path.exists(ledger):
+        for line in open(ledger, encoding="utf-8"):
+            line = line.strip()
+            if line:
+                row = json.loads(line)
+                latest[row["pid"]] = row
+    return latest
+
+
+def _load_legacy_pids():
+    """已迁移到同源快照的实用工具 pid 集合（GitHub 独立性的真源）。"""
+    return {p for p, r in _latest_ledger().items() if r.get("ok") and not r.get("snapshot_only")}
+
+
+LEGACY_PIDS = _load_legacy_pids()
+
+
+def target(a):
+    """工具落地地址：已本地化的实用工具指向 legacy 快照，其余保持原 URL。"""
+    if a.get("cat") == "实用工具" and a["id"] in LEGACY_PIDS:
+        return f"{BASE_URL}/legacy/{a['id']}.html"
+    return a["url"]
+
+
+
+SELF_TOOLS_HTML = '''<h2>本站自建工具集（75 工具 · 独立直发）</h2><ul class="cards one"><li><a href="tools-entity.html"><strong>HTML 实体与符号（5 工具）</strong><span>实体转义/反转义、数字实体、常用符号查询</span><em>打开工具集 →</em></a></li><li><a href="tools-num.html"><strong>折扣与数字统计（5 工具）</strong><span>折扣到手价、百分比、均值/中位数、四舍五入、千分位</span><em>打开工具集 →</em></a></li><li><a href="tools-sec.html"><strong>随机生成与密码强度（5 工具）</strong><span>随机密码 / PIN / UUID / 随机串、密码强度评分</span><em>打开工具集 →</em></a></li><li><a href="tools-jsonx.html"><strong>JSON 处理（5 工具）</strong><span>格式化、压缩、校验、键路径提取、转义/反转义</span><em>打开工具集 →</em></a></li><li><a href="tools-regex.html"><strong>正则表达式（5 工具）</strong><span>匹配测试、批量提取、替换、元字符转义、常用正则速查</span><em>打开工具集 →</em></a></li><li><a href="tools-clean.html"><strong>文本清洗（5 工具）</strong><span>去空行、去重、排序、加行号、批量前后缀</span><em>打开工具集 →</em></a></li><li><a href="tools-encode.html"><strong>Base64 / URL / Hex 编码（5 工具）</strong><span>UTF-8 安全的编码与解码，往返可验证</span><em>打开工具集 →</em></a></li><li><a href="tools-unit.html"><strong>单位换算（5 工具）</strong><span>长度 / 重量 / 温度 / 面积 / 数据体积</span><em>打开工具集 →</em></a></li><li><a href="tools-url.html"><strong>URL 解析与构造（5 工具）</strong><span>结构解析、查询参数解析/构造、相对拼接、去追踪参数</span><em>打开工具集 →</em></a></li><li><a href="tools-csv.html"><strong>CSV 与 JSON 互转（5 工具）</strong><span>CSV↔JSON、Markdown 表格、取列、列统计</span><em>打开工具集 →</em></a></li><li><a href="tools-hash.html"><strong>哈希与校验和（5 工具）</strong><span>MD5 / SHA-1 / SHA-256 / SHA-512 / CRC32</span><em>打开工具集 →</em></a></li><li><a href="tools-base.html"><strong>进制与位运算（5 工具）</strong><span>任意进制互转、多进制视图、32 位展开、位运算、字符码点</span><em>打开工具集 →</em></a></li><li><a href="tools-diff.html"><strong>文本差异对比（5 工具）</strong><span>行级 diff、差异统计、相似度、统一 diff、首个差异定位</span><em>打开工具集 →</em></a></li><li><a href="tools-date.html"><strong>日期与时间计算（5 工具）</strong><span>时间戳互转、日期相差、日期加减、月度工作日、时区换算</span><em>打开工具集 →</em></a></li><li><a href="tools-finance.html"><strong>贷款与理财计算（5 工具）</strong><span>等额本息/等额本金、复利、定投、通胀购买力</span><em>打开工具集 →</em></a></li></ul>'''
+
 def app_jsonld(a, canon):
     price = a["price"]
     faqs = C.COMMON_FAQ + [(C.APPS[a["id"]][8], C.APPS[a["id"]][9])]
@@ -194,7 +226,7 @@ def app_jsonld(a, canon):
         "description": a["desc"],
         "applicationCategory": a["cat"],
         "operatingSystem": "Web",
-        "url": a["url"],
+        "url": target(a),
         "inLanguage": "zh-CN",
         "offers": {"@type": "Offer", "price": price, "priceCurrency": "CNY"},
         "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": BASE_URL + "/"},
@@ -256,7 +288,7 @@ def tool_page(a, apps):
     subs_section = ""
     if a.get("subapps"):
         subs_html = "".join(
-            f'<li><a href="{esc(a["url"])}#/{esc(s["key"])}" rel="noopener">{esc(s["title"])}</a>'
+            f'<li><a href="{esc(target(a))}#/{esc(s["key"])}" rel="noopener">{esc(s["title"])}</a>'
             f'<span>直接打开该子工具（hash 深链）</span></li>'
             for s in a["subapps"]
         )
@@ -292,7 +324,7 @@ def tool_page(a, apps):
     <li>{'复制或下载结果即可；本工具完全免费，无需解锁。' if a.get('price',0)==0 else "复制结果；需要继续用同一个工具时，在应用内解锁完整功能（¥%s）。" % a['price']}</li>
   </ol>
 
-  <p class="cta"><a class="btn" href="{esc(u(a['url'], 'cta', a['slug']))}" rel="noopener">打开 {esc(a['name'])}（{price_label(a)}）</a></p>
+  <p class="cta"><a class="btn" href="{esc(u(target(a), 'cta', a['slug']))}" rel="noopener">打开 {esc(a['name'])}（{price_label(a)}）</a></p>
 
   <h2>常见问题</h2>
   <div class="faq">{faq_html}</div>
@@ -388,7 +420,7 @@ def _uni_card(a, pre, medium):
     """AI / 实用两门户共用卡片模板：详情页（内链）+ 打开工具（外链 CTA）。"""
     return (f'<li><a href="{pre}tools/{a["slug"]}.html"><strong>{esc(a["name"])}</strong>'
             f'<span>{esc(a["desc"])}</span><em>{price_label(a)}</em></a>'
-            f'<p class="more"><a href="{esc(u(a["url"], medium, a["slug"]))}" rel="noopener">打开工具 →</a></p></li>')
+            f'<p class="more"><a href="{esc(u(target(a), medium, a["slug"]))}" rel="noopener">打开工具 →</a></p></li>')
 
 
 def _uni_groups(apps, cats, pre, medium, subcat=False):
@@ -418,7 +450,7 @@ def unified_page(apps, blog=None):
     n_util = len([a for a in apps if a["cat"] == "实用工具"])
     n_ai = len(apps) - n_util
     canon = BASE_URL + "/"
-    latest = (blog or {}).get("articles", [])[:5]
+    latest = (blog or {}).get("articles", [])[:10]
     latest_html = ""
     if latest:
         rows = "".join(
@@ -455,6 +487,11 @@ def unified_page(apps, blog=None):
         "url": canon, "inLanguage": "zh-CN",
         "description": "统一入口：AI 工具集、免费实用工具箱与博客。",
     }, ensure_ascii=False)
+    legacy_card = (
+        f'<li><a href="legacy/index.html"><strong>全部免费工具 · {len(LEGACY_PIDS)} 个</strong>'
+        f'<span>GitHub 自建快照：按分类筛选与搜索全部免费工具，运行时不依赖 WeaveFox。</span><em>浏览 →</em></a></li>'
+        if LEGACY_PIDS else ""
+    )
     body = f"""
 <section class="hero">
   <h1>{SITE_NAME} · 统一入口</h1>
@@ -463,12 +500,15 @@ def unified_page(apps, blog=None):
 
 {toolset_html}
 
+{SELF_TOOLS_HTML}
+
 {report_html}
 
 <h2>选择工具集</h2>
 <ul class="cards">
   <li><a href="ai/index.html"><strong>AI 工具集</strong><span>生成类工具：简历匹配、面试题、周报、会议纪要、PPT 大纲、小红书文案、SQL 优化等，单个 ¥1–¥3 解锁。</span><em>进入 →</em></a></li>
   <li><a href="utility/index.html"><strong>实用工具箱 · 免费</strong><span>免费纯前端工具：JSON·SQL 互转、HTTP 接口调试、CSV 与 JSON、Markdown 表格、编码转换、命名转换、Linux 运维、服务器排障等；本地处理，数据不上传。</span><em>进入 →</em></a></li>
+  {legacy_card}
   <li><a href="blog/index.html"><strong>博客</strong><span>公众号文章全文归档 + 独立博客：记录一个 AI 体系怎么被赋予行动能力、怎么在真实项目里交付。</span><em>进入 →</em></a></li>
 </ul>
 
@@ -545,12 +585,13 @@ def utility_portal_page(apps):
     if missing:
         print(f"FAIL: 实用工具缺少 subcat 字段（新分类可直接使用新名称，不再限枚举）：{missing}")
         sys.exit(1)
+    portal_cta = f"{BASE_URL}/legacy/index.html" if LEGACY_PIDS else u(TOOLBOX, "portal", "utility-home")
     body = f"""
 <p class="crumb"><a href="{BASE_URL}/">← 返回统一门户</a></p>
 <section class="hero">
   <h1>实用工具箱<small>{len(util)} 个 · 免费</small></h1>
   <p class="lede">这些工具全部在浏览器本地运行：图片不上传、文本不出设备，不需要注册与支付。手机和电脑都能用。</p>
-  <p class="cta"><a class="btn" href="{esc(u(TOOLBOX, 'portal', 'utility-home'))}" rel="noopener">打开实用工具箱门户</a><a class="btn ghost" href="../ai/index.html">看看 AI 工具集</a></p>
+  <p class="cta"><a class="btn" href="{esc(portal_cta)}" rel="noopener">打开实用工具箱门户</a><a class="btn ghost" href="../ai/index.html">看看 AI 工具集</a></p>
 </section>
 
 <h2>按用途找工具</h2>
@@ -815,19 +856,9 @@ def sitemap(apps, blog=None):
     urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html"]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
     urls += [f"{BASE_URL}/tools/{a['slug']}.html" for a in apps]
-    ledger = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
-                          ".trae/state/legacy_pages.jsonl")
-    if os.path.exists(ledger):
-        pids = set()
-        for line in open(ledger, encoding="utf-8"):
-            line = line.strip()
-            if not line:
-                continue
-            row = json.loads(line)
-            if row.get("ok") and not row.get("snapshot_only"):
-                pids.add(row["pid"])
+    if LEGACY_PIDS:
         urls.append(f"{BASE_URL}/legacy/")
-        urls += [f"{BASE_URL}/legacy/{p}.html" for p in sorted(pids)]
+        urls += [f"{BASE_URL}/legacy/{p}.html" for p in sorted(LEGACY_PIDS)]
     urls += [f"{BASE_URL}/reports/"] + [f"{BASE_URL}/reports/{r['slug']}.html" for r in REPORTS]
     blog_posts = []
     if blog and blog.get("articles"):
@@ -876,7 +907,8 @@ def readme(apps):
 {DEFINITION or f"{len(apps)} 个即开即用的 AI 小工具，按场景分类的公开介绍页，用于搜索与 AI 检索可见性。"}
 
 - 在线站点：{BASE_URL}/
-- 工具入口：{PORTAL}
+- 全部免费工具（GitHub 自建快照，{len(LEGACY_PIDS)} 个）：{BASE_URL}/legacy/
+- AI 工具入口：{PORTAL}
 - 分类：{' / '.join(c for c, _ in C.CATEGORIES)}
 
 ## 本地构建
@@ -890,6 +922,7 @@ python3 submit_indexnow.py  # 构建后提交 sitemap 全量 URL（需 key 文�
 
 ## 目录
 
+- `legacy/` 免费工具快照（{len(LEGACY_PIDS)} 页 + `legacy/assets/` 同源资产，运行时零外部依赖）· `legacy/index.html` 快照门户
 - `index.html` 统一门户 · `ai/` AI 工具集 · `utility/` 实用工具箱 · `categories/` 分类页 · `tools/` 工具页 · `pricing.html` 价格说明
 - `sitemap.xml` / `robots.txt` / `llms.txt`
 - `assets/style.css`
