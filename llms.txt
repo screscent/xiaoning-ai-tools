@@ -17,6 +17,17 @@
 - [亲子宠物](https://screscent.github.io/xiaoning-ai-tools/categories/family-pet.html)：辅食、睡前故事、亲子沟通、兴趣班与宠物喂养，给家长和养宠人一份可照做的方案。（14 个）
 - [实用工具](https://screscent.github.io/xiaoning-ai-tools/categories/utility.html)：图片压缩、房贷计算、二维码生成——纯前端本地处理，数据不上传，完全免费。（370 个）
 
+## 工具集（9 组 / 108 个免费工具）
+- [JSON 代码生成](https://screscent.github.io/xiaoning-ai-tools/sets/json-codegen.html)：由 JSON 生成 TS/Go/Java/Python/PHP/Rust/Kotlin/Swift/C#/SQL DDL/JSON Schema/路径
+- [编码与哈希](https://screscent.github.io/xiaoning-ai-tools/sets/tools-codec.html)：Base64 / URL / Hex / 二进制 / ROT13 / 凯撒 / 摩斯 / 罗马数字
+- [时间与日期](https://screscent.github.io/xiaoning-ai-tools/sets/tools-time.html)：时间戳 / 日期差 / ISO 周数 / 年龄 / 倒计时 / 工作日 / 时区换算
+- [文本清洗](https://screscent.github.io/xiaoning-ai-tools/sets/tools-text.html)：去空行 / 去重 / 排序 / 行号 / 前后缀 / 全角转半角 / 空格合并
+- [颜色与 CSS](https://screscent.github.io/xiaoning-ai-tools/sets/tools-color.html)：HEX↔RGB↔HSL / 变亮变暗 / 对比度 / 色阶 / 渐变 / 阴影
+- [数学计算](https://screscent.github.io/xiaoning-ai-tools/sets/tools-math.html)：百分比 / 折扣 / BMI / 公约数 / 公倍数 / 质数 / 阶乘 / 统计 / 比例分配
+- [图片尺寸与体积](https://screscent.github.io/xiaoning-ai-tools/sets/tools-image.html)：像素 / 比例 / DPI / Base64 体积 / 裁剪 / 九宫格切图
+- [隐私与口令](https://screscent.github.io/xiaoning-ai-tools/sets/tools-privacy.html)：手机号 / 身份证 / 邮箱 / 卡号脱敏，密码强度、熵与隐私扫描
+- [出行换算](https://screscent.github.io/xiaoning-ai-tools/sets/tools-travel.html)：时差 / 飞行时长 / 油耗 / 多人分摊 / 签证停留期 / 打包清单
+
 ## 工具
 - [GEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/geo-audit.html)：品牌 AI 可见性自查评分与优化建议（¥1）
 - [SEO 体检小工具](https://screscent.github.io/xiaoning-ai-tools/tools/seo-audit.html)：网址 6 项基础检查与修复建议（¥1）

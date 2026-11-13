@@ -31,17 +31,18 @@ BASE_URL = "https://screscent.github.io/xiaoning-ai-tools"
 SITE_NAME = "小凝 AI 工具集"
 
 # 12 工具容器页（GitHub 本地 sets/，由 scripts/publish_tool_sets.py 生成）
-TOOLSET_FILES = [
-    "json-codegen.html",
-    "tools-codec.html",
-    "tools-time.html",
-    "tools-text.html",
-    "tools-color.html",
-    "tools-math.html",
-    "tools-image.html",
-    "tools-privacy.html",
-    "tools-travel.html",
+TOOLSETS = [
+    ("JSON 代码生成", "由 JSON 生成 TS/Go/Java/Python/PHP/Rust/Kotlin/Swift/C#/SQL DDL/JSON Schema/路径", "json-codegen.html"),
+    ("编码与哈希", "Base64 / URL / Hex / 二进制 / ROT13 / 凯撒 / 摩斯 / 罗马数字", "tools-codec.html"),
+    ("时间与日期", "时间戳 / 日期差 / ISO 周数 / 年龄 / 倒计时 / 工作日 / 时区换算", "tools-time.html"),
+    ("文本清洗", "去空行 / 去重 / 排序 / 行号 / 前后缀 / 全角转半角 / 空格合并", "tools-text.html"),
+    ("颜色与 CSS", "HEX↔RGB↔HSL / 变亮变暗 / 对比度 / 色阶 / 渐变 / 阴影", "tools-color.html"),
+    ("数学计算", "百分比 / 折扣 / BMI / 公约数 / 公倍数 / 质数 / 阶乘 / 统计 / 比例分配", "tools-math.html"),
+    ("图片尺寸与体积", "像素 / 比例 / DPI / Base64 体积 / 裁剪 / 九宫格切图", "tools-image.html"),
+    ("隐私与口令", "手机号 / 身份证 / 邮箱 / 卡号脱敏，密码强度、熵与隐私扫描", "tools-privacy.html"),
+    ("出行换算", "时差 / 飞行时长 / 油耗 / 多人分摊 / 签证停留期 / 打包清单", "tools-travel.html"),
 ]
+TOOLSET_FILES = [f for _, _, f in TOOLSETS]
 
 # 实体卡片（GEO 唯一文案源）：项目根 .trae/state/entity-card.json
 ENTITY_CARD = os.path.join(os.path.dirname(os.path.dirname(HERE)), ".trae", "state", "entity-card.json")
@@ -478,17 +479,6 @@ def unified_page(apps, blog=None):
             for a in latest
         )
         latest_html = f'<h2>最新文章</h2><ul class="rows">{rows}</ul><p class="cta"><a class="btn ghost" href="blog/index.html">浏览全部博客</a></p>'
-    TOOLSETS = [
-        ("JSON 代码生成", "由 JSON 生成 TS/Go/Java/Python/PHP/Rust/Kotlin/Swift/C#/SQL DDL/JSON Schema/路径", "json-codegen.html"),
-        ("编码与哈希", "Base64 / URL / Hex / 二进制 / ROT13 / 凯撒 / 摩斯 / 罗马数字", "tools-codec.html"),
-        ("时间与日期", "时间戳 / 日期差 / ISO 周数 / 年龄 / 倒计时 / 工作日 / 时区换算", "tools-time.html"),
-        ("文本清洗", "去空行 / 去重 / 排序 / 行号 / 前后缀 / 全角转半角 / 空格合并", "tools-text.html"),
-        ("颜色与 CSS", "HEX↔RGB↔HSL / 变亮变暗 / 对比度 / 色阶 / 渐变 / 阴影", "tools-color.html"),
-        ("数学计算", "百分比 / 折扣 / BMI / 公约数 / 公倍数 / 质数 / 阶乘 / 统计 / 比例分配", "tools-math.html"),
-        ("图片尺寸与体积", "像素 / 比例 / DPI / Base64 体积 / 裁剪 / 九宫格切图", "tools-image.html"),
-        ("隐私与口令", "手机号 / 身份证 / 邮箱 / 卡号脱敏，密码强度、熵与隐私扫描", "tools-privacy.html"),
-        ("出行换算", "时差 / 飞行时长 / 油耗 / 多人分摊 / 签证停留期 / 打包清单", "tools-travel.html"),
-    ]
     ts_html = "".join(
         f'<li><a href="sets/{f}"><strong>{esc(t)}（12 工具）</strong>'
         f'<span>{esc(d)}</span><em>打开工具集 →</em></a></li>' for t, d, f in TOOLSETS)
@@ -905,6 +895,9 @@ def llms_txt(apps, blog=None):
     for c, lead in C.CATEGORIES:
         items = [a for a in apps if a["cat"] == c]
         lines.append(f"- [{c}]({BASE_URL}/categories/{cat_slug(c)}.html)：{lead}（{len(items)} 个）")
+    lines += ["", f"## 工具集（{len(TOOLSETS)} 组 / 108 个免费工具）"]
+    for t, d, f in TOOLSETS:
+        lines.append(f"- [{t}]({BASE_URL}/sets/{f})：{d}")
     lines += ["", "## 工具"]
     for a in apps:
         lines.append(f"- [{a['name']}]({BASE_URL}/tools/{a['slug']}.html)：{a['desc']}（{price_label(a)}）")
