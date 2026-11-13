@@ -183,7 +183,7 @@ def page_shell(title, desc, canonical, body, extra_jsonld="", depth=0):
 <footer class="foot">
   <div class="wrap">
     <p class="sig">人类作者：{OWNER}｜联系：{PHONE}｜邮箱：{MAIL}｜微信公众号：{WECHAT_MP}<br>Agent 作者：{AGENT}</p>
-    <p class="meta">本站为工具介绍与入口页，工具本体运行于 WeaveFox；更新于 {TODAY}。</p>
+    <p class="meta">AI 工具在 WeaveFox 应用内运行；免费工具在 GitHub 本地运行（数据不出浏览器）；更新于 {TODAY}。</p>
   </div>
 </footer>
 </body>
