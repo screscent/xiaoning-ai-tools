@@ -1,0 +1,75 @@
+{
+  "schema": "aihinet.entity-card@1",
+  "as_of": "2026-11-13",
+  "purpose": "GEO 实体一致性的唯一文案源。所有门户/静态站/llms.txt/长文/agent 索引从此渲染，禁止各写一句。",
+  "drift_rule": "全站只允许本文件存在 1 处定义句；其余出现必须逐字一致；不一致即 C3 判红。",
+  "brand": "小凝 AI 工具集",
+  "definition": "小凝 AI 工具集：按场景分类的在线工具库，免费工具直接可用，AI 生成类 ¥1–¥3 解锁。",
+  "entry": {
+    "portal": "https://screscent.app.weavefox.cn",
+    "ai_tools": "https://rdndxd4t4r.app.weavefox.cn",
+    "free_tools": "https://7bpgquweb7.app.weavefox.cn",
+    "agent_tools": "https://mksm9qrxwr.app.weavefox.cn",
+    "category_site": "https://bcbftfk6f9.app.weavefox.cn",
+    "public_site": "https://screscent.github.io/xiaoning-ai-tools/"
+  },
+  "categories": {
+    "structure_source": "deliverables/category-pages/index.html（12 分类页，检索结构）",
+    "primary_terms": ["职场办公", "求职面试", "学生教育", "自媒体运营", "电商客服", "研发效率", "生活家庭", "亲子宠物"],
+    "note": "primary_terms 是 GEO 对外文案的 8 个主品类词，不等同于 12 个分类页；分类结构以 structure_source 为准"
+  },
+  "price": {
+    "range": "¥1–¥3",
+    "rule": "免费工具页显示「免费」，不出现「¥0 解锁」；具体价格以 apps.json 为准，卡片不写价格区间以外的营销词"
+  },
+  "signature": {
+    "human": "月牙寂（龚浩华）",
+    "agent": "月绡凝（小凝）",
+    "form": "人类作者 × Agent 作者（人机协作）",
+    "contact_fields": ["联系", "邮箱", "微信公众号：月牙寂"]
+  },
+  "objects": [
+    {
+      "id": "human_free",
+      "name": "人 · 免费工具",
+      "entry": "分类站 / 实用工具箱（FROZEN 只读）/ 工具集",
+      "promise": "一次看全、按用途找得到、点开即用",
+      "success": "周增量使用（portal_views.jsonl）",
+      "degrade": "分类站不可用 → 回旧库只读入口；不删 URL"
+    },
+    {
+      "id": "human_paid",
+      "name": "人 · 付费 AI",
+      "entry": "AI 工具集（131 卡）",
+      "promise": "输入 → 输出，¥1–¥3 解锁，支付宝扫码",
+      "success": "实收订单数 / 转化率",
+      "degrade": "支付不可用 → 登记待付，不留空壳页面"
+    },
+    {
+      "id": "agent",
+      "name": "Agent 调用方",
+      "entry": "Agent 工具集（30 条 + 本地工具集 6 链）",
+      "promise": "免登录、确定性输出、可批量调用",
+      "success": "被调用次数 / 接入方数",
+      "degrade": "能力下架 → 保留 URL 返回说明页，不 404"
+    },
+    {
+      "id": "crawler",
+      "name": "搜索 / AI 抓取器",
+      "entry": "GitHub 静态站（685 页）+ 博客（167 篇）",
+      "promise": "可抓正文、有结构化数据、同一实体的描述一致",
+      "success": "收录页数 / GEO 提及率",
+      "degrade": "平台改版 → 静态站兜底；页面只降级不删除"
+    }
+  ],
+  "consumers": [
+    "deliverables/xiaoning-ai-tools-site/build.py（llms_txt / sitemap 同源生成）",
+    "docs/13 §6.1 实体一致性卡片",
+    "GitHub /blog/ 与对外长文",
+    ".trae/state/agent_tools.json（agent 侧索引）"
+  ],
+  "known_gaps": [
+    "build.py 当前未读取本文件（读 content.py 固定文案）→ 接线属 O3 后续，需 1 次构建 + 发布",
+    "GEO 20 问基线未建立 → definition 的实际提及率不可测"
+  ]
+}

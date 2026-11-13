@@ -44,8 +44,10 @@ TOOLSETS = [
 ]
 TOOLSET_FILES = [f for _, _, f in TOOLSETS]
 
-# 实体卡片（GEO 唯一文案源）：项目根 .trae/state/entity-card.json
+# 实体卡片（GEO 唯一文案源）：优先项目根状态文件，独立克隆时回退 data/entity-card.json
 ENTITY_CARD = os.path.join(os.path.dirname(os.path.dirname(HERE)), ".trae", "state", "entity-card.json")
+if not os.path.exists(ENTITY_CARD):
+    ENTITY_CARD = os.path.join(DATA, "entity-card.json")
 
 
 def _entity_definition():
@@ -196,9 +198,15 @@ def rel(path):
 
 
 def _latest_ledger():
-    """迁移台账按 pid 取最后一条（台账只追加，旧行可能 ok 但已被 snapshot_only 覆盖）。"""
-    ledger = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
-                          ".trae/state/legacy_pages.jsonl")
+    """迁移台账按 pid 取最后一条（台账只追加，旧行可能 ok 但已被 snapshot_only 覆盖）。
+
+    优先读项目根台账（迁移过程实时更新）；仓库单独克隆时回退到 data/legacy_pages.jsonl 快照，
+    保证 site 仓可独立重建，不会静默丢失 370 个本地快照页。
+    """
+    live = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+                        ".trae/state/legacy_pages.jsonl")
+    local = os.path.join(HERE, "data", "legacy_pages.jsonl")
+    ledger = live if os.path.exists(live) else local
     latest = {}
     if os.path.exists(ledger):
         for line in open(ledger, encoding="utf-8"):
