@@ -617,13 +617,24 @@ def ai_portal_page(apps):
     )
 
 
+def local_set_cards(pre=""):
+    """本地工具集入口卡片（15 个自建容器 + 9 个 12 工具集），供工具箱页复用。"""
+    rows = [f'<li><a href="{pre}{f}"><strong>{esc(t)}（5 工具）</strong><span>{esc(d)}</span>'
+            f'<em>打开工具集 →</em></a></li>' for t, d, f in SELF_CONTAINERS]
+    rows += [f'<li><a href="{pre}sets/{f}"><strong>{esc(t)}（12 工具）</strong><span>{esc(d)}</span>'
+             f'<em>打开工具集 →</em></a></li>' for t, d, f in TOOLSETS]
+    return '<ul class="cards one">' + "".join(rows) + '</ul>'
+
+
 def utility_portal_page(apps):
     util = [a for a in apps if a["cat"] == "实用工具"]
+    n_local = len(local_tool_entries())
+    total = len(util) + n_local
     canon = f"{BASE_URL}/utility/"
     jsonld = json.dumps({
-        "@context": "https://schema.org", "@type": "CollectionPage", "name": f"实用工具箱（{len(util)} 个 · 免费）",
+        "@context": "https://schema.org", "@type": "CollectionPage", "name": f"实用工具箱（{total} 个 · 免费）",
         "url": canon, "inLanguage": "zh-CN",
-        "description": "纯前端免费工具：JSON·SQL 互转、HTTP 接口调试、CSV 与 JSON、Markdown 表格、编码转换、命名转换、Linux 运维、服务器排障等；本地处理，数据不上传。",
+        "description": f"纯前端免费工具共 {total} 个：{len(util)} 个目录工具 + 本地工具集 {n_local} 个（JSON/SQL、编码、文本、日期、哈希、图片、财务等）；本地处理，数据不上传。",
     }, ensure_ascii=False)
     missing = [a["name"] for a in util if not a.get("subcat")]
     if missing:
@@ -633,28 +644,31 @@ def utility_portal_page(apps):
     body = f"""
 <p class="crumb"><a href="{BASE_URL}/">← 返回统一门户</a></p>
 <section class="hero">
-  <h1>实用工具箱<small>{len(util)} 个 · 免费</small></h1>
-  <p class="lede">这些工具全部在浏览器本地运行：图片不上传、文本不出设备，不需要注册与支付。手机和电脑都能用。</p>
+  <h1>实用工具箱<small>{total} 个 · 免费</small></h1>
+  <p class="lede">这些工具全部在浏览器本地运行：图片不上传、文本不出设备，不需要注册与支付。手机和电脑都能用；除 {len(util)} 个目录工具外，还含 {n_local} 个 GitHub 自建工具集小工具。</p>
   <p class="cta"><a class="btn" href="{esc(portal_cta)}" rel="noopener">打开实用工具箱门户</a><a class="btn ghost" href="../ai/index.html">看看 AI 工具集</a></p>
 </section>
 
 <h2>按用途找工具</h2>
 <ul class="cards">{_util_cat_cards(util)}</ul>
 
+<h2 id="local-sets">本地工具集（{len(SELF_CONTAINERS) + len(TOOLSETS)} 组 / {n_local} 个工具 · GitHub 自建）</h2>
+{local_set_cards("../")}
+
 <h2>全部实用工具</h2>
 {_uni_groups(util, util_subcat_order(util), "../", "utility", subcat=True)}
 
 <h2>怎么用</h2>
 <ol class="steps">
-  <li>点卡片查看工具说明，或直接点「打开工具」进入 WeaveFox 工具页。</li>
+  <li>点卡片查看工具说明，或直接点「打开工具」进入工具页（GitHub 本地托管，不再依赖原平台）。</li>
   <li>按提示选择参数或上传文件，处理全部在浏览器本地完成。</li>
   <li>下载结果即可；完全免费，无解锁与登录。</li>
 </ol>
 {common_faq_block()}
 """
     return page_shell(
-        f"实用工具箱（{len(util)} 个免费纯前端工具）| {SITE_NAME}",
-        "免费纯前端工具：JSON·SQL 互转、HTTP 接口调试、CSV 与 JSON、Markdown 表格、编码转换、命名转换、Linux 运维、服务器排障等；浏览器本地处理，数据不上传，无需注册与支付。",
+        f"实用工具箱（{total} 个免费工具）| {SITE_NAME}",
+        f"免费纯前端工具共 {total} 个：{len(util)} 个目录工具 + 本地工具集 {n_local} 个（JSON/SQL、编码、文本、日期、哈希、图片、财务等）；浏览器本地处理，数据不上传，无需注册与支付。",
         canon, body,
         extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>',
         depth=1,
