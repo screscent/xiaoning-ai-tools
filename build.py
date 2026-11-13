@@ -29,6 +29,21 @@ sys.path.insert(0, DATA)
 
 BASE_URL = "https://screscent.github.io/xiaoning-ai-tools"
 SITE_NAME = "小凝 AI 工具集"
+
+# 实体卡片（GEO 唯一文案源）：项目根 .trae/state/entity-card.json
+ENTITY_CARD = os.path.join(os.path.dirname(os.path.dirname(HERE)), ".trae", "state", "entity-card.json")
+
+
+def _entity_definition():
+    """读实体卡片的定义句；缺失时回退空串（构建不依赖它，但会少一句统一文案）。"""
+    try:
+        with open(ENTITY_CARD, encoding="utf-8") as f:
+            return (json.load(f).get("definition") or "").strip()
+    except (OSError, ValueError):
+        return ""
+
+
+DEFINITION = _entity_definition()
 PORTAL = "https://rdndxd4t4r.app.weavefox.cn"
 UNIFIED = "https://screscent.app.weavefox.cn"
 TOOLBOX = "https://7bpgquweb7.app.weavefox.cn"
@@ -465,7 +480,7 @@ def unified_page(apps, blog=None):
 """
     return page_shell(
         f"{SITE_NAME} - 统一入口（AI 工具集 + 实用工具箱 + 博客）",
-        "统一入口：AI 工具集（单个 ¥1–¥3 解锁）、免费实用工具箱（JSON·SQL、HTTP 调试、编码与命名转换等）与博客，浏览器即开即用。",
+        (DEFINITION + " 统一入口：AI 工具集、免费实用工具箱与博客。") if DEFINITION else "统一入口：AI 工具集（单个 ¥1–¥3 解锁）、免费实用工具箱（JSON·SQL、HTTP 调试、编码与命名转换等）与博客，浏览器即开即用。",
         canon, body,
         extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>',
         depth=0,
@@ -813,7 +828,10 @@ def sitemap(apps, blog=None):
 
 
 def llms_txt(apps, blog=None):
-    lines = [f"# {SITE_NAME}", "",
+    lines = [f"# {SITE_NAME}", ""]
+    if DEFINITION:
+        lines += [f"> {DEFINITION}", ""]
+    lines += [
              f"> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 {len(apps)} 个工具。",
              f"> 统一入口：{BASE_URL}/ ｜ AI 工具集：{BASE_URL}/ai/ ｜ 实用工具箱：{BASE_URL}/utility/ ｜ 博客：{BASE_URL}/blog/",
              f"> WeaveFox 统一门户：{UNIFIED} ｜ AI 工具集：{PORTAL} ｜ 实用工具箱：{TOOLBOX}", "", "## 分类"]
@@ -839,7 +857,7 @@ def llms_txt(apps, blog=None):
 def readme(apps):
     return f"""# {SITE_NAME} · 工具介绍站
 
-{len(apps)} 个即开即用的 AI 小工具，按场景分类的公开介绍页，用于搜索与 AI 检索可见性。
+{DEFINITION or f"{len(apps)} 个即开即用的 AI 小工具，按场景分类的公开介绍页，用于搜索与 AI 检索可见性。"}
 
 - 在线站点：{BASE_URL}/
 - 工具入口：{PORTAL}
