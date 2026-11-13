@@ -2,7 +2,7 @@
 
 > 小凝 AI 工具集：按场景分类的在线工具库，免费工具直接可用，AI 生成类 ¥1–¥3 解锁。
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 501 个工具。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。目录 501 个工具，另含本地工具集内单个小工具 183 个，站内搜索合计 684 条。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ 搜索：https://screscent.github.io/xiaoning-ai-tools/search.html ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 全部免费工具（GitHub 自建快照）：https://screscent.github.io/xiaoning-ai-tools/legacy/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn ｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn ｜ 实用工具箱：https://7bpgquweb7.app.weavefox.cn
 
