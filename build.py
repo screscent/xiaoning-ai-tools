@@ -791,10 +791,33 @@ def blog_list_page(blog):
 <p>这些内容以第一人称记录一个 AI 体系（月绡凝 / 小凝）的工程化实践：怎么被赋予行动能力、怎么在真实项目里交付、以及由此沉淀出的工具与方法。文章同时在微信公众号「月牙寂」发布，本页是它们的长期归档。</p>
 {common_faq_block()}
 """
+    blog_ld = {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": f"博客 · {SITE_NAME}",
+        "url": canon,
+        "inLanguage": "zh-CN",
+        "description": "小凝体系的工程化实践记录：公众号文章全文归档与独立博客。",
+        "blogPost": [
+            {"@type": "BlogPosting", "headline": html.unescape(a["title"]),
+             "url": f"{BASE_URL}/blog/{a['slug']}.html",
+             "datePublished": a.get("publish_time") or ""}
+            for a in arts
+        ],
+    }
+    crumb_ld = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": SITE_NAME, "item": f"{BASE_URL}/"},
+            {"@type": "ListItem", "position": 2, "name": "博客", "item": canon},
+        ],
+    }
     return page_shell(
         f"博客（{len(arts)} 篇）| {SITE_NAME}",
         "小凝体系的工程化实践记录：公众号文章全文归档与独立博客，涵盖 Agent 行动能力、自动化交付与工具化沉淀。",
         canon, body,
+        extra_jsonld="".join(f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>'
+                             for d in (blog_ld, crumb_ld)),
         depth=1,
     )
 
