@@ -1046,8 +1046,9 @@ def sitemap(apps, blog=None):
         blog_posts = [a["slug"] for a in blog["articles"] if a.get("slug")]
         urls += [f"{BASE_URL}/blog/{s}.html" for s in blog_posts]
     blog_url = f"{BASE_URL}/blog/"
+    # 不写 lastmod：全量重建会把 1082 条都标成“今天更新”，属错误信号（无法逐页维护时按规范应省略）
     items = "".join(
-        f"<url><loc>{x}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq>"
+        f"<url><loc>{x}</loc><changefreq>weekly</changefreq>"
         f"<priority>{'1.0' if x == BASE_URL + '/' else '0.9' if x == blog_url else '0.8' if '/categories/' in x else '0.6' if '/legacy/' in x else '0.7'}</priority></url>"
         for x in urls
     )
