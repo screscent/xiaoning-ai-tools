@@ -6,7 +6,9 @@
 """
 import json
 import os
+import glob
 import html
+import re
 import sys
 import datetime
 
@@ -659,22 +661,41 @@ def utility_portal_page(apps):
     )
 
 
+def local_tool_entries():
+    """站内本地工具集里的单个工具 → 搜索条目（sets/*.html 与站根 tools-*.html）。"""
+    out = []
+    for pattern, prefix in (("sets/*.html", "sets/"), ("tools-*.html", "")):
+        for p in sorted(glob.glob(os.path.join(HERE, pattern))):
+            s = open(p, encoding="utf-8").read()
+            m = re.search(r"<title>(.*?)</title>", s, re.S)
+            page = (m.group(1) if m else "").split(" · ")[0].strip()
+            items = re.findall(r'"key":\s*"([^"]+)"\s*,\s*"name":\s*"([^"]+)"', s)
+            if not items:
+                items = re.findall(r"\bkey:\s*['\"]([^'\"]+)['\"]\s*,\s*name:\s*['\"]([^'\"]+)['\"]", s)
+            for k, n in items:
+                out.append({"n": n, "d": f"{page}里的本地小工具", "c": "实用工具",
+                            "g": f"工具集 · {page}", "u": f"{prefix}{os.path.basename(p)}#/{k}", "p": "免费"})
+    return out
+
+
 def search_page(apps):
     canon = f"{BASE_URL}/search.html"
     data = [{"n": a["name"], "d": a["desc"], "c": a["cat"], "u": f"tools/{a['slug']}.html",
              "p": price_label(a)} for a in apps]
+    data += local_tool_entries()
+    total = len(data)
     blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     jsonld = json.dumps({
         "@context": "https://schema.org", "@type": "WebPage",
-        "name": f"搜索全部工具（{len(apps)} 个）| {SITE_NAME}",
+        "name": f"搜索全部工具（{total} 个）| {SITE_NAME}",
         "url": canon, "inLanguage": "zh-CN",
-        "description": f"在 {len(apps)} 个工具中按名称、描述或分类即时筛选，免费工具直接打开，AI 工具 ¥1–¥3 解锁。",
+        "description": f"在 {total} 个工具中按名称、描述或分类即时筛选，免费工具直接打开，AI 工具 ¥1–¥3 解锁。",
     }, ensure_ascii=False)
     body = f"""
 <style>.chipbtn{{cursor:pointer;border:1px solid #d9dde3;background:#fff;border-radius:999px;padding:6px 12px;font-size:13px}}.chipbtn.on{{background:#4338ca;border-color:#4338ca;color:#fff}}</style>
 <section class="hero">
-  <h1>搜索工具<small>{len(apps)} 个</small></h1>
-  <p class="lede">输入关键词，按名称、描述或分类即时筛选。免费工具直接打开；AI 工具单个 ¥1–¥3 解锁。</p>
+  <h1>搜索工具<small>{total} 个</small></h1>
+  <p class="lede">输入关键词，按名称、描述或分类即时筛选。免费工具直接打开（含工具集里的单个小工具）；AI 工具单个 ¥1–¥3 解锁。</p>
 </section>
 <div class="cards one"><li><input id="q" type="search" placeholder="试试：JSON / 简历 / 时间戳 / 图片" aria-label="搜索工具" style="width:100%;padding:12px 14px;border:1px solid #d9dde3;border-radius:10px;font-size:15px"></li></div>
 <div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0">
@@ -700,7 +721,7 @@ function run(){{
   const label=F==='free'?'免费工具':(F==='ai'?'AI 工具':'全部工具');
   cnt.textContent=(k?('匹配 '+hit.length+' / '+base.length):('共 '+base.length+' 个'))+'（'+label+'）';
   res.innerHTML=hit.slice(0,80).map(function(x){{
-    return '<li><a href="'+x.u+'"><strong>'+esc(x.n)+'</strong><span>'+esc(x.d)+'</span><em>'+esc(x.c)+' · '+esc(x.p)+'</em></a></li>';
+    return '<li><a href="'+x.u+'"><strong>'+esc(x.n)+'</strong><span>'+esc(x.d)+'</span><em>'+esc(x.g||x.c)+' · '+esc(x.p)+'</em></a></li>';
   }}).join('')+(hit.length>80?'<li><p class="hint">仅显示前 80 条，请输入更具体的关键词。</p></li>':'');
 }}
 document.querySelectorAll('.chipbtn.f').forEach(function(b){{
@@ -715,8 +736,8 @@ q.addEventListener('keydown',function(e){{if(e.key==='Enter'){{var a=res.querySe
 run();
 </script>
 """
-    return page_shell(f"搜索全部工具（{len(apps)} 个）| {SITE_NAME}",
-                      f"在 {len(apps)} 个工具中按名称、描述或分类即时筛选：免费工具直接打开，AI 工具单个 ¥1–¥3 解锁，浏览器即开即用。",
+    return page_shell(f"搜索全部工具（{total} 个）| {SITE_NAME}",
+                      f"在 {total} 个工具中按名称、描述或分类即时筛选：免费工具直接打开（含工具集内小工具），AI 工具单个 ¥1–¥3 解锁，浏览器即开即用。",
                       canon, body,
                       extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>')
 
