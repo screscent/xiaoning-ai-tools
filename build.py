@@ -434,11 +434,14 @@ def unified_page(apps, blog=None):
         ("文本清洗", "去空行 / 去重 / 排序 / 行号 / 前后缀 / 全角转半角 / 空格合并", "tools-text.html"),
         ("颜色与 CSS", "HEX↔RGB↔HSL / 变亮变暗 / 对比度 / 色阶 / 渐变 / 阴影", "tools-color.html"),
         ("数学计算", "百分比 / 折扣 / BMI / 公约数 / 公倍数 / 质数 / 阶乘 / 统计 / 比例分配", "tools-math.html"),
+        ("图片尺寸与体积", "像素 / 比例 / DPI / Base64 体积 / 裁剪 / 九宫格切图", "tools-image.html"),
+        ("隐私与口令", "手机号 / 身份证 / 邮箱 / 卡号脱敏，密码强度、熵与隐私扫描", "tools-privacy.html"),
+        ("出行换算", "时差 / 飞行时长 / 油耗 / 多人分摊 / 签证停留期 / 打包清单", "tools-travel.html"),
     ]
     ts_html = "".join(
         f'<li><a href="https://bcbftfk6f9.app.weavefox.cn/{f}" rel="noopener"><strong>{esc(t)}（12 工具）</strong>'
         f'<span>{esc(d)}</span><em>打开工具集 →</em></a></li>' for t, d, f in TOOLSETS)
-    toolset_html = f'<h2>本地工具集（72 个工具）</h2><ul class="cards one">{ts_html}</ul>'
+    toolset_html = f'<h2>本地工具集（108 个工具）</h2><ul class="cards one">{ts_html}</ul>'
     report_html = ""
     if REPORTS:
         cards = "".join(
