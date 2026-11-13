@@ -3,7 +3,8 @@
 小凝 AI 工具集：按场景分类的在线工具库，免费工具直接可用，AI 生成类 ¥1–¥3 解锁。
 
 - 在线站点：https://screscent.github.io/xiaoning-ai-tools/
-- 工具入口：https://rdndxd4t4r.app.weavefox.cn
+- 全部免费工具（GitHub 自建快照，371 个）：https://screscent.github.io/xiaoning-ai-tools/legacy/
+- AI 工具入口：https://rdndxd4t4r.app.weavefox.cn
 - 分类：职场办公 / 求职面试 / 学生教育 / 自媒体运营 / 电商客服 / 研发效率 / 生活家庭 / 亲子宠物 / 实用工具
 
 ## 本地构建
@@ -18,6 +19,7 @@ python3 submit_indexnow.py  # 构建后提交 sitemap 全量 URL（需 key 文�
 ## 目录
 
 - `index.html` 统一门户 · `ai/` AI 工具集 · `utility/` 实用工具箱 · `categories/` 分类页 · `tools/` 工具页 · `pricing.html` 价格说明
+- `legacy/` 免费工具快照（371 页 + `legacy/assets/` 同源资产，运行时零外部依赖）· `legacy/index.html` 快照门户
 - `sitemap.xml` / `robots.txt` / `llms.txt`
 - `assets/style.css`
 - 更新流程见项目 `docs/14-公开站更新SOP.md`
