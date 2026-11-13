@@ -412,6 +412,18 @@ def unified_page(apps, blog=None):
             for a in latest
         )
         latest_html = f'<h2>最新文章</h2><ul class="rows">{rows}</ul><p class="cta"><a class="btn ghost" href="blog/index.html">浏览全部博客</a></p>'
+    TOOLSETS = [
+        ("JSON 代码生成", "由 JSON 生成 TS/Go/Java/Python/PHP/Rust/Kotlin/Swift/C#/SQL DDL/JSON Schema/路径", "json-codegen.html"),
+        ("编码与哈希", "Base64 / URL / Hex / 二进制 / ROT13 / 凯撒 / 摩斯 / 罗马数字", "tools-codec.html"),
+        ("时间与日期", "时间戳 / 日期差 / ISO 周数 / 年龄 / 倒计时 / 工作日 / 时区换算", "tools-time.html"),
+        ("文本清洗", "去空行 / 去重 / 排序 / 行号 / 前后缀 / 全角转半角 / 空格合并", "tools-text.html"),
+        ("颜色与 CSS", "HEX↔RGB↔HSL / 变亮变暗 / 对比度 / 色阶 / 渐变 / 阴影", "tools-color.html"),
+        ("数学计算", "百分比 / 折扣 / BMI / 公约数 / 公倍数 / 质数 / 阶乘 / 统计 / 比例分配", "tools-math.html"),
+    ]
+    ts_html = "".join(
+        f'<li><a href="https://bcbftfk6f9.app.weavefox.cn/{f}" rel="noopener"><strong>{esc(t)}（12 工具）</strong>'
+        f'<span>{esc(d)}</span><em>打开工具集 →</em></a></li>' for t, d, f in TOOLSETS)
+    toolset_html = f'<h2>本地工具集（72 个工具）</h2><ul class="cards one">{ts_html}</ul>'
     report_html = ""
     if REPORTS:
         cards = "".join(
@@ -430,6 +442,8 @@ def unified_page(apps, blog=None):
   <h1>{SITE_NAME} · 统一入口</h1>
   <p class="lede">三类内容，一个入口：<strong>AI 工具集</strong>负责把材料变成可直接使用的结果；<strong>实用工具箱</strong>用纯前端完成转换与计算，完全免费、数据不上传；<strong>博客</strong>归档方法与复盘。</p>
 </section>
+
+{toolset_html}
 
 {report_html}
 
