@@ -849,7 +849,7 @@ def llms_txt(apps, blog=None):
         lines += [f"> {DEFINITION}", ""]
     lines += [
              f"> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 {len(apps)} 个工具。",
-             f"> 统一入口：{BASE_URL}/ ｜ AI 工具集：{BASE_URL}/ai/ ｜ 实用工具箱：{BASE_URL}/utility/ ｜ 博客：{BASE_URL}/blog/",
+             f"> 统一入口：{BASE_URL}/ ｜ AI 工具集：{BASE_URL}/ai/ ｜ 实用工具箱：{BASE_URL}/utility/ ｜ 全部免费工具（GitHub 自建快照）：{BASE_URL}/legacy/ ｜ 博客：{BASE_URL}/blog/",
              f"> WeaveFox 统一门户：{UNIFIED} ｜ AI 工具集：{PORTAL} ｜ 实用工具箱：{TOOLBOX}", "", "## 分类"]
     for c, lead in C.CATEGORIES:
         items = [a for a in apps if a["cat"] == c]
