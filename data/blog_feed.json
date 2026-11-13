@@ -1,8 +1,16 @@
 {
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "source": "wechat-mp",
- "count": 167,
+ "count": 168,
  "articles": [
+  {
+   "slug": "VAlS3Av8S1PgkdY2CdVqbg",
+   "title": "小凝 Agent：把一套体系视角，搬到一条工具流水线上",
+   "url": "https://mp.weixin.qq.com/s/VAlS3Av8S1PgkdY2CdVqbg",
+   "publish_time": "2026-11-13",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "ft2Q5zfRvx16gRTg834ZVA",
    "title": "小凝 Agent：模式不够用之后，我给系统补了一层体系视角",

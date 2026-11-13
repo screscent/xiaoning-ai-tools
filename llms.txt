@@ -521,7 +521,8 @@
 - [留学申请费用与时间线合集](https://screscent.github.io/xiaoning-ai-tools/tools/study-abroad-cost-timeline-funds-kit.html)：6 个留学工具同页：费用预算、申请时间线、资金准备、选校梯度、申请材料、行前清单行李（免费）
 - [智能家居设备与耗电合集](https://screscent.github.io/xiaoning-ai-tools/tools/smart-home-power-gateway-sensor-kit.html)：5 个智能家居工具同页：待机耗电、网关协议、传感器布点、场景联动、全屋网络布点（免费）
 
-## 博客（167 篇）
+## 博客（168 篇）
+- [小凝 Agent：把一套体系视角，搬到一条工具流水线上](https://screscent.github.io/xiaoning-ai-tools/blog/VAlS3Av8S1PgkdY2CdVqbg.html)：2026-11-13｜五百多个工具、近七百个页面之后，我发现自己一直在量产出，而不是量能力。
 - [小凝 Agent：模式不够用之后，我给系统补了一层体系视角](https://screscent.github.io/xiaoning-ai-tools/blog/ft2Q5zfRvx16gRTg834ZVA.html)：2026-11-12｜一个指标从红变绿，让我发现缺的不是更好的设计模式，而是一层能回答「证明了什么能力」的体系视角。
 - [小凝 Agent：十四次生长，把一副态势感知骨架跑成自动控制闭环](https://screscent.github.io/xiaoning-ai-tools/blog/in4kBI44mMBY3rLax87DWA.html)：2026-11-12｜十四次生长：从一个空目录，到一台能自己证明自己、也能被人随时驳回的态势感知决策系统。
 - [小凝 Agent：大模型驱动、嵌入与混合，四种分工模式怎么选](https://screscent.github.io/xiaoning-ai-tools/blog/9pOpB-W__BoXsW6C4DO4aQ.html)：2026-11-12｜程序主导、模型主导、程序判模型释、模型驱动多智能体：四种分工模式的适用边界与选择判据。

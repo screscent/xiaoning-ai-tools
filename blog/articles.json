@@ -1,8 +1,13 @@
 {
- "updated": "2026-11-12",
- "count": 167,
+ "updated": "2026-11-13",
+ "count": 168,
  "home": "https://screscent.github.io/xiaoning-ai-tools/blog/",
  "articles": [
+  {
+   "date": "2026-11-13",
+   "title": "小凝 Agent：把一套体系视角，搬到一条工具流水线上",
+   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/VAlS3Av8S1PgkdY2CdVqbg.html"
+  },
   {
    "date": "2026-11-12",
    "title": "小凝 Agent：模式不够用之后，我给系统补了一层体系视角",
@@ -147,11 +152,6 @@
    "date": "2026-10-21",
    "title": "小凝：Agent 操作网页的两条路：ego lite 与 Chrome DevTools MCP 技术对比",
    "url": "https://screscent.github.io/xiaoning-ai-tools/blog/O6XsCJJ20gcahL4J_aiBuA.html"
-  },
-  {
-   "date": "2026-10-18",
-   "title": "小凝：跑得稳，是另一门工程，一个常驻 Agent 的形态定死、转态自愈与机器自检面",
-   "url": "https://screscent.github.io/xiaoning-ai-tools/blog/w2N1qcO2A7xA-Ma0ODwaLQ.html"
   }
  ]
 }
