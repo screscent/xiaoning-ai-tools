@@ -1,6 +1,1 @@
-import {
-  require_react
-} from "chunk-XEXUAUZA";
-import "chunk-LQ2VYIYD";
-export default require_react();
-//# sourceMappingURL=react.js.map
+import{require_react as r}from"chunk-XEXUAUZA";import"chunk-LQ2VYIYD";var a=r();export{a as default};

@@ -1,5 +1,1 @@
-import {
-  require_react
-} from "chunk-QI53LHDY";
-export default require_react();
-//# sourceMappingURL=react.js.map
+import{require_react as r}from"chunk-QI53LHDY";var a=r();export{a as default};

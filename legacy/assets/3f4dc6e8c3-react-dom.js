@@ -1,6 +1,1 @@
-import {
-  require_react_dom
-} from "chunk-LLOTBQCN";
-import "chunk-QI53LHDY";
-export default require_react_dom();
-//# sourceMappingURL=react-dom.js.map
+import{require_react_dom as r}from"chunk-LLOTBQCN";import"chunk-QI53LHDY";var t=r();export{t as default};
