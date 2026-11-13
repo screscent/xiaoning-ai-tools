@@ -644,11 +644,17 @@ def search_page(apps):
         "description": f"在 {len(apps)} 个工具中按名称、描述或分类即时筛选，免费工具直接打开，AI 工具 ¥1–¥3 解锁。",
     }, ensure_ascii=False)
     body = f"""
+<style>.chipbtn{{cursor:pointer;border:1px solid #d9dde3;background:#fff;border-radius:999px;padding:6px 12px;font-size:13px}}.chipbtn.on{{background:#4338ca;border-color:#4338ca;color:#fff}}</style>
 <section class="hero">
   <h1>搜索工具<small>{len(apps)} 个</small></h1>
   <p class="lede">输入关键词，按名称、描述或分类即时筛选。免费工具直接打开；AI 工具单个 ¥1–¥3 解锁。</p>
 </section>
 <div class="cards one"><li><input id="q" type="search" placeholder="试试：JSON / 简历 / 时间戳 / 图片" aria-label="搜索工具" style="width:100%;padding:12px 14px;border:1px solid #d9dde3;border-radius:10px;font-size:15px"></li></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0">
+  <button class="chipbtn f on" data-f="all" aria-pressed="true">全部</button>
+  <button class="chipbtn f" data-f="free" aria-pressed="false">免费工具</button>
+  <button class="chipbtn f" data-f="ai" aria-pressed="false">AI 工具</button>
+</div>
 <p class="hint" id="cnt" style="margin:10px 0;color:#6b7280"></p>
 <ul class="cards one" id="results"></ul>
 <p class="cta"><a class="btn ghost" href="ai/index.html">AI 工具集</a><a class="btn ghost" href="utility/index.html">实用工具箱</a><a class="btn ghost" href="legacy/index.html">全部免费工具</a></p>
@@ -656,15 +662,27 @@ def search_page(apps):
 <script>
 const D={blob};
 const q=document.getElementById('q'),cnt=document.getElementById('cnt'),res=document.getElementById('results');
+let F='all';
 function esc(s){{return s.replace(/[&<>"]/g,function(c){{return {{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]}})}}
+function pool(){{return D.filter(function(x){{return F==='all'||(F==='free'?x.c==='实用工具':x.c!=='实用工具')}})}}
 function run(){{
   const k=q.value.trim().toLowerCase();
-  const hit=k?D.filter(function(x){{return (x.n+' '+x.d+' '+x.c).toLowerCase().indexOf(k)>=0}}):D;
-  cnt.textContent=k?('匹配 '+hit.length+' / '+D.length):('共 '+D.length+' 个工具');
+  const base=pool();
+  let hit=k?base.filter(function(x){{return (x.n+' '+x.d+' '+x.c).toLowerCase().indexOf(k)>=0}}):base;
+  if(k) hit=hit.slice().sort(function(a,b){{return (b.n.toLowerCase().indexOf(k)>=0)-(a.n.toLowerCase().indexOf(k)>=0)}});
+  const label=F==='free'?'免费工具':(F==='ai'?'AI 工具':'全部工具');
+  cnt.textContent=(k?('匹配 '+hit.length+' / '+base.length):('共 '+base.length+' 个'))+'（'+label+'）';
   res.innerHTML=hit.slice(0,80).map(function(x){{
     return '<li><a href="'+x.u+'"><strong>'+esc(x.n)+'</strong><span>'+esc(x.d)+'</span><em>'+esc(x.c)+' · '+esc(x.p)+'</em></a></li>';
   }}).join('')+(hit.length>80?'<li><p class="hint">仅显示前 80 条，请输入更具体的关键词。</p></li>':'');
 }}
+document.querySelectorAll('.chipbtn.f').forEach(function(b){{
+  b.addEventListener('click',function(){{
+    F=b.getAttribute('data-f');
+    document.querySelectorAll('.chipbtn.f').forEach(function(x){{x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b?'true':'false')}});
+    run();
+  }});
+}});
 q.addEventListener('input',run);
 q.addEventListener('keydown',function(e){{if(e.key==='Enter'){{var a=res.querySelector('a');if(a)location.href=a.getAttribute('href');}}}});
 run();
