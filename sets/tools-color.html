@@ -1,0 +1,124 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>颜色与 CSS 工具集</title><link rel="canonical" href="https://screscent.github.io/xiaoning-ai-tools/sets/tools-.html"><meta name="robots" content="index, follow"><meta name="description" content="颜色与 CSS 工具集：12 个本地颜色工具 · HEX/RGB/HSL / 明暗 / 对比度 / 色阶 / 渐变 / 阴影。纯前端本地运行，免费、数据不上传。"><meta property="og:type" content="article"><meta property="og:title" content="颜色与 CSS 工具集"><meta property="og:description" content="颜色与 CSS 工具集：12 个本地颜色工具 · HEX/RGB/HSL / 明暗 / 对比度 / 色阶 / 渐变 / 阴影。纯前端本地运行，免费、数据不上传。"><meta property="og:url" content="https://screscent.github.io/xiaoning-ai-tools/sets/tools-.html"><meta property="og:image" content="https://screscent.github.io/xiaoning-ai-tools/legacy/assets/og-cover.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="颜色与 CSS 工具集"><meta name="twitter:image" content="https://screscent.github.io/xiaoning-ai-tools/legacy/assets/og-cover.jpg"><style>
+*{box-sizing:border-box}body{margin:0;font:14px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#1f2329;background:#f7f8fa}
+a{color:inherit;text-decoration:none}header{max-width:1180px;margin:0 auto;padding:20px 16px 8px}
+.crumb{font-size:12px;color:#8a9099}h1{font-size:22px;margin:8px 0 4px}.sub{color:#5c6370;font-size:13px}
+.bar{position:sticky;top:0;z-index:9;background:rgba(247,248,250,.96);backdrop-filter:blur(8px);padding:10px 16px;border-bottom:1px solid #e5e7eb}
+.bar-in{max-width:1180px;margin:0 auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+input{flex:1;min-width:200px;padding:9px 12px;border:1px solid #d9dde3;border-radius:10px;font-size:14px;background:#fff}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;padding:12px 16px;max-width:1180px;margin:0 auto}
+nav.tabs a{font-size:12px;padding:5px 10px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;color:#374151}
+nav.tabs a.on{background:#4338ca;color:#fff;border-color:#4338ca}
+main{max-width:1180px;margin:0 auto;padding:6px 16px 40px}
+.panel{background:#fff;border:1px solid #e8ebef;border-radius:12px;padding:14px}
+.panel h2{margin:0 0 4px;font-size:16px}.panel .hint{color:#6b7280;font-size:12px;margin-bottom:10px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:820px){.cols{grid-template-columns:1fr}}
+textarea{width:100%;min-height:280px;padding:10px 12px;border:1px solid #d9dde3;border-radius:10px;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;resize:vertical;background:#fbfcfe}
+pre{margin:0;min-height:280px;max-height:520px;overflow:auto;padding:10px 12px;border:1px solid #e5e7eb;border-radius:10px;background:#0f172a;color:#e2e8f0;font:12.5px/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}
+.row{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}
+button{cursor:pointer;border:1px solid #d9dde3;background:#fff;border-radius:9px;padding:7px 12px;font-size:13px}
+button.primary{background:#4338ca;border-color:#4338ca;color:#fff}
+.err{color:#b91c1c;font-size:12px;margin-top:6px;min-height:16px}
+.chip{font-size:11px;padding:2px 8px;border-radius:999px;background:#eef2ff;color:#4338ca}
+.cardgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.card{background:#fff;border:1px solid #e8ebef;border-radius:12px;padding:12px 14px}
+.card h3{margin:0 0 4px;font-size:14px}.card p{margin:0 0 8px;color:#6b7280;font-size:12px;min-height:30px}
+details{max-width:1180px;margin:0 auto;padding:0 16px 20px;color:#6b7280;font-size:12px}
+footer{max-width:1180px;margin:0 auto;padding:18px 16px 40px;color:#6b7280;font-size:12px;border-top:1px solid #e5e7eb}
+footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+</style></head><body>
+<header><div class="crumb"><a href="../legacy/index.html">← 分类导航</a> ｜ <a href="../legacy/index.html">← 对应分类</a> ｜ <a href="https://screscent.github.io/xiaoning-ai-tools/">统一门户</a></div>
+ ｜ <a href="../legacy/index.html">← 对应分类</a><h1>颜色与 CSS 工具集</h1><div class="sub">12 个本地颜色工具 · HEX/RGB/HSL / 明暗 / 对比度 / 色阶 / 渐变 / 阴影</div></header>
+<div class="bar"><div class="bar-in"><input id="q" placeholder="搜索工具…"><span class="chip" id="cnt"></span></div></div>
+<nav class="tabs" id="tabs"></nav>
+<main><section id="home" class="cardgrid"></section>
+<section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
+<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button></div>
+<div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
+<div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
+<details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制。</div></details>
+<footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
+<script>
+const TOOLS=[{"key": "hex2rgb", "name": "HEX 转 RGB", "desc": "#RRGGBB → rgb()", "impl": "cHex2Rgb"}, {"key": "rgb2hex", "name": "RGB 转 HEX", "desc": "12,34,56 → #0c2238", "impl": "cRgb2Hex"}, {"key": "hex2hsl", "name": "HEX 转 HSL", "desc": "#RRGGBB → hsl()", "impl": "cHex2Hsl"}, {"key": "hsl2hex", "name": "HSL 转 HEX", "desc": "210, 40%, 50% → #hex", "impl": "cHsl2Hex"}, {"key": "lighten", "name": "变亮", "desc": "#hex 与百分比（首行/同行）", "impl": "cLighten"}, {"key": "darken", "name": "变暗", "desc": "#hex 与百分比", "impl": "cDarken"}, {"key": "rgba", "name": "转 RGBA", "desc": "#hex 与透明度", "impl": "cRgba"}, {"key": "contrast", "name": "对比度检测", "desc": "两个颜色，逗号分隔", "impl": "cContrast"}, {"key": "luminance", "name": "相对亮度", "desc": "#hex → 0~1", "impl": "cLum"}, {"key": "palette", "name": "明暗色阶", "desc": "#hex → 5 档色阶", "impl": "cPalette"}, {"key": "gradient", "name": "渐变 CSS", "desc": "两个颜色 → linear-gradient", "impl": "cGradient"}, {"key": "shadow", "name": "阴影 CSS", "desc": "示例输入 → box-shadow", "impl": "cShadow"}];
+
+function b64e(s){return btoa(unescape(encodeURIComponent(s)))}
+function b64d(s){return decodeURIComponent(escape(atob(s.trim())))}
+function urlE(s){return encodeURIComponent(s)}
+function urlD(s){return decodeURIComponent(s)}
+function hexE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(16).padStart(2,'0')).join('')}
+function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
+function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
+function binD(s){const a=s.trim().split(/\s+/).filter(Boolean);return new TextDecoder().decode(new Uint8Array(a.map(b=>parseInt(b,2))))}
+function rot13(s){return s.replace(/[a-zA-Z]/g,c=>String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26))}
+function caesar(s){return s.replace(/[a-zA-Z]/g,c=>{const b=c<='Z'?65:97;return String.fromCharCode((c.charCodeAt(0)-b+3)%26+b)})}
+const MORSE={A:'.-',B:'-...',C:'-.-.',D:'-..',E:'.',F:'..-.',G:'--.',H:'....',I:'..',J:'.---',K:'-.-',L:'.-..',M:'--',N:'-.',O:'---',P:'.--.',Q:'--.-',R:'.-.',S:'...',T:'-',U:'..-',V:'...-',W:'.--',X:'-..-',Y:'-.--',Z:'--..',0:'-----',1:'.----',2:'..---',3:'...--',4:'....-',5:'.....',6:'-....',7:'--...',8:'---..',9:'----.'};
+function morseE(s){return s.toUpperCase().split('').map(c=>c===' '?'/':(MORSE[c]||'')).filter(Boolean).join(' ')}
+function romanE(s){const n=parseInt(s.trim());if(!n||n<1||n>3999)return '(请输入 1~3999)';const m=[[1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],[100,'C'],[90,'XC'],[50,'L'],[40,'XL'],[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']];let x=n,r='';for(const [v,sym] of m){while(x>=v){r+=sym;x-=v}}return r}
+function romanD(s){const map={I:1,V:5,X:10,L:50,C:100,D:500,M:1000};let t=s.toUpperCase().trim(),n=0;for(let i=0;i<t.length;i++){const c=map[t[i]]||0,d=map[t[i+1]]||0;n+=c<d?-c:c}return n||'(无效罗马数字)'}
+function uuid(){return crypto.randomUUID?crypto.randomUUID():'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()*16|0;return (c==='x'?r:(r&0x3|0x8)).toString(16)})}
+function tsInfo(s){const t=s.trim();const n=/^\d+$/.test(t)?Number(t):NaN;if(isNaN(n)){const d=new Date(t);if(isNaN(d))return '(无法解析)';return `秒: ${Math.floor(d.getTime()/1000)}\n毫秒: ${d.getTime()}\nISO: ${d.toISOString()}`}const ms=t.length>=13?n:n*1000;const d=new Date(ms);return `ISO: ${d.toISOString()}\n本地: ${d.toLocaleString('zh-CN')}\n秒: ${Math.floor(ms/1000)}`}
+function jsonEsc(s){return JSON.stringify(s)}
+function jsonUnesc(s){try{return JSON.parse(s)}catch(e){return '(无效 JSON 字符串)'}}
+function htmlEsc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function htmlUnesc(s){const d=document.createElement('textarea');d.innerHTML=s;return d.value}
+function ts2iso(s){const t=s.trim();const n=/^\d+$/.test(t)?Number(t):NaN;const d=isNaN(n)?new Date(t):new Date(t.length>=13?n:n*1000);if(isNaN(d))return '(无法解析)';return `ISO: ${d.toISOString()}\n本地: ${d.toLocaleString('zh-CN')}\n秒: ${Math.floor(d.getTime()/1000)}`}
+function date2ts(s){const d=new Date(s.trim());if(isNaN(d))return '(无法解析)';return `秒: ${Math.floor(d.getTime()/1000)}\n毫秒: ${d.getTime()}`}
+function daysBetween(s){const p=s.split(/[,，]/);if(p.length<2)return '格式：2026-01-01,2026-12-31';const a=new Date(p[0].trim()),b=new Date(p[1].trim());if(isNaN(a)||isNaN(b))return '(日期无效)';return `相差 ${Math.round((b-a)/86400000)} 天`}
+function addDays(s){const m=s.trim().match(/^(\d{4}-\d{2}-\d{2})\s*([+-]?\d+)$/);if(!m)return '格式：2026-01-01 +30';const d=new Date(m[1]);d.setDate(d.getDate()+Number(m[2]));return d.toISOString().slice(0,10)+' '+['周日','周一','周二','周三','周四','周五','周六'][d.getDay()]}
+function weekNo(s){const d=new Date(s.trim());if(isNaN(d))return '(日期无效)';const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));const day=t.getUTCDay()||7;t.setUTCDate(t.getUTCDate()+4-day);const y0=new Date(Date.UTC(t.getUTCFullYear(),0,1));return 'ISO 周数：'+Math.ceil(((t-y0)/86400000+1)/7)}
+function weekday(s){const d=new Date(s.trim());if(isNaN(d))return '(日期无效)';return ['周日','周一','周二','周三','周四','周五','周六'][d.getDay()]}
+function age(s){const d=new Date(s.trim());if(isNaN(d))return '(日期无效)';const n=new Date();let y=n.getFullYear()-d.getFullYear();const m=n.getMonth()-d.getMonth();if(m<0||(m===0&&n.getDate()<d.getDate()))y--;const days=Math.floor((n-d)/86400000);return `年龄：${y} 岁\n累计天数：${days}`}
+function countdown(s){const d=new Date(s.trim());if(isNaN(d))return '(日期无效)';let ms=d-new Date();const sign=ms<0?'已过 ':-'';ms=Math.abs(ms);const dd=Math.floor(ms/86400000);const hh=Math.floor(ms%86400000/3600000);return `${sign}${dd} 天 ${hh} 小时`}
+function workdays(s){const m=s.trim().match(/^(\d{4})-(\d{2})$/);if(!m)return '格式：2026-11';const y=+m[1],mo=+m[2];const last=new Date(y,mo,0).getDate();let n=0;for(let d=1;d<=last;d++){const w=new Date(y,mo-1,d).getDay();if(w!==0&&w!==6)n++}return `${m[1]}-${m[2]} 工作日：${n} 天（不含法定节假日调休）`}
+function duration(s){let n=Number(s.trim());if(isNaN(n))return '(请输入秒数)';const h=Math.floor(n/3600),m=Math.floor(n%3600/60),sec=n%60;return `${h} 小时 ${m} 分 ${sec} 秒`}
+function monthdays(s){const m=s.trim().match(/^(\d{4})-(\d{1,2})$/);if(!m)return '格式：2026-11';const y=+m[1],mo=+m[2];const n=new Date(y,mo,0).getDate();return `${m[1]}-${String(mo).padStart(2,'0')} 共 ${n} 天`}
+function tz(s){const m=s.trim().match(/^(.+?)\s*,\s*([+-]?\d+(?:\.\d+)?)\s*,\s*([+-]?\d+(?:\.\d+)?)$/);if(!m)return '格式：2026-01-01 10:00, +8, -5';const d=new Date(m[1]);if(isNaN(d))return '(时间无效)';const diff=(Number(m[3])-Number(m[2]))*3600000;const t=new Date(d.getTime()+diff);return `源：${m[1]} (UTC${m[2]})\n目标：${t.toISOString().replace('T',' ').slice(0,16)} (UTC${m[3]})`}
+
+function tTrim(s){return s.split(/\r?\n/).map(x=>x.trim()).join('\n')}
+function tNoEmpty(s){return s.split(/\r?\n/).filter(x=>x.trim()).join('\n')}
+function tDedupe(s){const seen=new Set();return s.split(/\r?\n/).filter(x=>{if(seen.has(x))return false;seen.add(x);return true}).join('\n')}
+function tSort(s){return s.split(/\r?\n/).sort((a,b)=>a.localeCompare(b,'zh')).join('\n')}
+function tLineNo(s){return s.split(/\r?\n/).map((x,i)=>`${i+1}. ${x}`).join('\n')}
+function tAffix(s){const lines=s.split(/\r?\n/);const [pre,suf]=(lines.shift()||'|').split('|');return lines.map(x=>pre+x+(suf||'')).join('\n')}
+function tUpper(s){return s.toUpperCase()}
+function tLower(s){return s.toLowerCase()}
+function tTab(s){const lines=s.split(/\r?\n/);const n=Number((lines.shift()||'4').trim())||4;return lines.map(x=>x.replace(/\t/g,' '.repeat(n))).join('\n')}
+function tFull2Half(s){return s.replace(/[\uFF01-\uFF5E]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xFEE0)).replace(/\u3000/g,' ')}
+function tSqueeze(s){return s.split(/\r?\n/).map(x=>x.replace(/[ \t]+/g,' ').trim()).join('\n')}
+function tJoin(s){const lines=s.split(/\r?\n/);const sep=lines.shift()||',';return lines.filter(x=>x.trim()).join(sep)}
+
+function cHex2Rgb(s){const h=s.trim().replace('#','');if(!/^[0-9a-fA-F]{6}$/.test(h))return '(请输入 #RRGGBB)';return `rgb(${parseInt(h.slice(0,2),16)}, ${parseInt(h.slice(2,4),16)}, ${parseInt(h.slice(4,6),16)})`}
+function cRgb2Hex(s){const m=s.match(/(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(!m)return '格式：12,34,56';return '#'+[m[1],m[2],m[3]].map(x=>Math.max(0,Math.min(255,+x)).toString(16).padStart(2,'0')).join('')}
+function rgbOf(h){h=h.replace('#','');return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)]}
+function cHex2Hsl(s){const [r,g,b]=rgbOf(s.trim()).map(x=>x/255);const mx=Math.max(r,g,b),mn=Math.min(r,g,b);let h=0,sat=0,l=(mx+mn)/2;if(mx!==mn){const d=mx-mn;sat=l>0.5?d/(2-mx-mn):d/(mx+mn);h=mx===r?((g-b)/d+(g<b?6:0)):mx===g?((b-r)/d+2):((r-g)/d+4);h*=60}return `hsl(${Math.round(h)}, ${Math.round(sat*100)}%, ${Math.round(l*100)}%)`}
+function cHsl2Hex(s){const m=s.match(/(\d+)\s*,\s*(\d+)%?\s*,\s*(\d+)%?/);if(!m)return '格式：210, 40%, 50%';let h=+m[1]/360,sat=+m[2]/100,l=+m[3]/100;const f=n=>{const k=(n+h*12)%12;const a=sat*Math.min(l,1-l);return Math.round((l-a*Math.max(-1,Math.min(k-3,9-k,1)))*255).toString(16).padStart(2,'0')};return '#'+f(0)+f(8)+f(4)}
+function shift(h,p){let [r,g,b]=rgbOf(h);const f=v=>Math.max(0,Math.min(255,Math.round(v+255*p))).toString(16).padStart(2,'0');return '#'+f(r)+f(g)+f(b)}
+function cLighten(s){const [h,p]=s.split(/[\s,]+/);return shift(h.trim(), (Number(p)||10)/100)}
+function cDarken(s){const [h,p]=s.split(/[\s,]+/);return shift(h.trim(), -(Number(p)||10)/100)}
+function cRgba(s){const [h,a]=s.split(/[\s,]+/);const [r,g,b]=rgbOf(h.trim());return `rgba(${r}, ${g}, ${b}, ${Number(a)||0.5})`}
+function lum(h){const c=rgbOf(h).map(v=>{v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4)});return 0.2126*c[0]+0.7152*c[1]+0.0722*c[2]}
+function cContrast(s){const p=s.split(/[\s,]+/);if(p.length<2)return '格式：#000000, #ffffff';const [a,b]=p.map(x=>lum(x.trim())).sort((x,y)=>y-x);return `对比度 ${((a+0.05)/(b+0.05)).toFixed(2)} : 1`}
+function cLum(s){return `相对亮度 ${lum(s.trim()).toFixed(4)}`}
+function cPalette(s){const h=s.trim();const steps=[-0.3,-0.15,0,0.15,0.3];return steps.map(p=>`${(p*100).toFixed(0).padStart(4)}%  ${shift(h,p)}`).join('\n')}
+function cGradient(s){const p=s.split(/[\s,]+/);if(p.length<2)return '格式：#ff0000, #0000ff';return `background: linear-gradient(90deg, ${p[0]} 0%, ${p[1]} 100%);`}
+function cShadow(s){return `box-shadow: 0 8px 24px rgba(0,0,0,0.12);\n/* 输入示例：0 8 24 #000 0.12 */`}
+
+
+const GEN={ hex2rgb:cHex2Rgb,rgb2hex:cRgb2Hex,hex2hsl:cHex2Hsl,hsl2hex:cHsl2Hex,lighten:cLighten,darken:cDarken,rgba:cRgba,contrast:cContrast,luminance:cLum,palette:cPalette,gradient:cGradient,shadow:cShadow };
+const $=s=>document.querySelector(s);
+function route(){const k=(location.hash||'').replace(/^#\//,'');const t=TOOLS.find(x=>x.key===k);
+document.querySelectorAll('nav.tabs a').forEach(a=>a.classList.toggle('on',a.dataset.k===k));
+if(!t){$('#home').hidden=false;$('#tool').hidden=true;return}
+$('#home').hidden=true;$('#tool').hidden=false;$('#tname').textContent=t.name;$('#thint').textContent=t.desc;
+$('#err').textContent='';$('#out').textContent='';}
+function run(){const k=(location.hash||'').replace(/^#\//,'');const f=GEN[k];if(!f)return;
+try{$('#err').textContent='';$('#out').textContent=String(f($('#inp').value))}catch(e){$('#err').textContent='失败：'+e.message}}
+$('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#cnt').textContent=TOOLS.length+' 个工具';
+$('#run').onclick=run;$('#copy').onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
+$('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
+window.addEventListener('hashchange',route);route();
+</script></body></html>

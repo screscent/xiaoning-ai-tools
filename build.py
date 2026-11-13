@@ -30,6 +30,19 @@ sys.path.insert(0, DATA)
 BASE_URL = "https://screscent.github.io/xiaoning-ai-tools"
 SITE_NAME = "小凝 AI 工具集"
 
+# 12 工具容器页（GitHub 本地 sets/，由 scripts/publish_tool_sets.py 生成）
+TOOLSET_FILES = [
+    "json-codegen.html",
+    "tools-codec.html",
+    "tools-time.html",
+    "tools-text.html",
+    "tools-color.html",
+    "tools-math.html",
+    "tools-image.html",
+    "tools-privacy.html",
+    "tools-travel.html",
+]
+
 # 实体卡片（GEO 唯一文案源）：项目根 .trae/state/entity-card.json
 ENTITY_CARD = os.path.join(os.path.dirname(os.path.dirname(HERE)), ".trae", "state", "entity-card.json")
 
@@ -477,9 +490,9 @@ def unified_page(apps, blog=None):
         ("出行换算", "时差 / 飞行时长 / 油耗 / 多人分摊 / 签证停留期 / 打包清单", "tools-travel.html"),
     ]
     ts_html = "".join(
-        f'<li><a href="https://bcbftfk6f9.app.weavefox.cn/{f}" rel="noopener"><strong>{esc(t)}（12 工具）</strong>'
+        f'<li><a href="sets/{f}"><strong>{esc(t)}（12 工具）</strong>'
         f'<span>{esc(d)}</span><em>打开工具集 →</em></a></li>' for t, d, f in TOOLSETS)
-    toolset_html = f'<h2>本地工具集（108 个工具）</h2><ul class="cards one">{ts_html}</ul>'
+    toolset_html = f'<h2>本地工具集（108 个工具 · GitHub 自建）</h2><ul class="cards one">{ts_html}</ul>'
     report_html = ""
     if REPORTS:
         cards = "".join(
@@ -860,6 +873,7 @@ def report_page(r):
 
 def sitemap(apps, blog=None):
     urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html"]
+    urls += [f"{BASE_URL}/sets/{f}" for f in TOOLSET_FILES]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
     urls += [f"{BASE_URL}/tools/{a['slug']}.html" for a in apps]
     if LEGACY_PIDS:
@@ -1074,6 +1088,17 @@ def main():
 <title>深度报告 · 小凝工具库</title>
 <meta name="description" content="小凝体系的深度评估与审计报告：方法论、架构、质量与运营复盘。">
 <link rel="canonical" href="{BASE_URL}/reports/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="深度报告 · 小凝工具库">
+<meta property="og:description" content="小凝体系的深度评估与审计报告：方法论、架构、质量与运营复盘。">
+<meta property="og:url" content="{BASE_URL}/reports/">
+<meta property="og:image" content="{BASE_URL}/legacy/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="深度报告 · 小凝工具库">
+<meta name="twitter:image" content="{BASE_URL}/legacy/assets/og-cover.jpg">
 <style>
 :root{{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--bg:#f7f8fa}}
 *{{box-sizing:border-box}}body{{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--fg);background:#fff}}
