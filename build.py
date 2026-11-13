@@ -150,7 +150,7 @@ def page_shell(title, desc, canonical, body, extra_jsonld="", depth=0):
     nav = f"""<header class="top">
   <div class="wrap">
     <a class="brand" href="{pre}index.html">{SITE_NAME}</a>
-    <nav><a href="{pre}index.html">统一门户</a><a href="{pre}ai/index.html">AI 工具集</a><a href="{pre}utility/index.html">实用工具箱</a><a href="{pre}blog/index.html">博客</a><a href="{pre}pricing.html">价格与使用</a></nav>
+    <nav><a href="{pre}index.html">统一门户</a><a href="{pre}search.html">搜索</a><a href="{pre}ai/index.html">AI 工具集</a><a href="{pre}utility/index.html">实用工具箱</a><a href="{pre}blog/index.html">博客</a><a href="{pre}pricing.html">价格与使用</a></nav>
   </div>
 </header>"""
     return f"""<!DOCTYPE html>
@@ -632,6 +632,48 @@ def utility_portal_page(apps):
     )
 
 
+def search_page(apps):
+    canon = f"{BASE_URL}/search.html"
+    data = [{"n": a["name"], "d": a["desc"], "c": a["cat"], "u": f"tools/{a['slug']}.html",
+             "p": price_label(a)} for a in apps]
+    blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+    jsonld = json.dumps({
+        "@context": "https://schema.org", "@type": "WebPage",
+        "name": f"搜索全部工具（{len(apps)} 个）| {SITE_NAME}",
+        "url": canon, "inLanguage": "zh-CN",
+        "description": f"在 {len(apps)} 个工具中按名称、描述或分类即时筛选，免费工具直接打开，AI 工具 ¥1–¥3 解锁。",
+    }, ensure_ascii=False)
+    body = f"""
+<section class="hero">
+  <h1>搜索工具<small>{len(apps)} 个</small></h1>
+  <p class="lede">输入关键词，按名称、描述或分类即时筛选。免费工具直接打开；AI 工具单个 ¥1–¥3 解锁。</p>
+</section>
+<div class="cards one"><li><input id="q" type="search" placeholder="试试：JSON / 简历 / 时间戳 / 图片" aria-label="搜索工具" style="width:100%;padding:12px 14px;border:1px solid #d9dde3;border-radius:10px;font-size:15px"></li></div>
+<p class="hint" id="cnt" style="margin:10px 0;color:#6b7280"></p>
+<ul class="cards one" id="results"></ul>
+<p class="cta"><a class="btn ghost" href="ai/index.html">AI 工具集</a><a class="btn ghost" href="utility/index.html">实用工具箱</a><a class="btn ghost" href="legacy/index.html">全部免费工具</a></p>
+<noscript><p>需要开启 JavaScript 才能使用即时搜索；也可以直接浏览 <a href="utility/index.html">实用工具箱</a> 或 <a href="ai/index.html">AI 工具集</a>。</p></noscript>
+<script>
+const D={blob};
+const q=document.getElementById('q'),cnt=document.getElementById('cnt'),res=document.getElementById('results');
+function esc(s){{return s.replace(/[&<>"]/g,function(c){{return {{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]}})}}
+function run(){{
+  const k=q.value.trim().toLowerCase();
+  const hit=k?D.filter(function(x){{return (x.n+' '+x.d+' '+x.c).toLowerCase().indexOf(k)>=0}}):D;
+  cnt.textContent=k?('匹配 '+hit.length+' / '+D.length):('共 '+D.length+' 个工具');
+  res.innerHTML=hit.slice(0,80).map(function(x){{
+    return '<li><a href="'+x.u+'"><strong>'+esc(x.n)+'</strong><span>'+esc(x.d)+'</span><em>'+esc(x.c)+' · '+esc(x.p)+'</em></a></li>';
+  }}).join('')+(hit.length>80?'<li><p class="hint">仅显示前 80 条，请输入更具体的关键词。</p></li>':'');
+}}
+q.addEventListener('input',run);run();
+</script>
+"""
+    return page_shell(f"搜索全部工具（{len(apps)} 个）| {SITE_NAME}",
+                      f"在 {len(apps)} 个工具中按名称、描述或分类即时筛选：免费工具直接打开，AI 工具单个 ¥1–¥3 解锁，浏览器即开即用。",
+                      canon, body,
+                      extra_jsonld=f'<script type="application/ld+json">{jsonld}</script>')
+
+
 def common_faq_block():
     rows = "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in C.COMMON_FAQ)
     return f'<h2>常见问题</h2><div class="faq">{rows}</div>'
@@ -868,7 +910,8 @@ def report_page(r):
 
 
 def sitemap(apps, blog=None):
-    urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html"]
+    urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html",
+            f"{BASE_URL}/search.html"]
     urls += [f"{BASE_URL}/sets/{f}" for f in TOOLSET_FILES]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
     urls += [f"{BASE_URL}/tools/{a['slug']}.html" for a in apps]
@@ -896,7 +939,7 @@ def llms_txt(apps, blog=None):
         lines += [f"> {DEFINITION}", ""]
     lines += [
              f"> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。共 {len(apps)} 个工具。",
-             f"> 统一入口：{BASE_URL}/ ｜ AI 工具集：{BASE_URL}/ai/ ｜ 实用工具箱：{BASE_URL}/utility/ ｜ 全部免费工具（GitHub 自建快照）：{BASE_URL}/legacy/ ｜ 博客：{BASE_URL}/blog/",
+             f"> 统一入口：{BASE_URL}/ ｜ 搜索：{BASE_URL}/search.html ｜ AI 工具集：{BASE_URL}/ai/ ｜ 实用工具箱：{BASE_URL}/utility/ ｜ 全部免费工具（GitHub 自建快照）：{BASE_URL}/legacy/ ｜ 博客：{BASE_URL}/blog/",
              f"> WeaveFox 统一门户：{UNIFIED} ｜ AI 工具集：{PORTAL} ｜ 实用工具箱：{TOOLBOX}", "", "## 分类"]
     for c, lead in C.CATEGORIES:
         items = [a for a in apps if a["cat"] == c]
@@ -1053,6 +1096,7 @@ def main():
     w("ai/index.html", ai_portal_page(apps))
     w("utility/index.html", utility_portal_page(apps))
     w("pricing.html", pricing_page(apps))
+    w("search.html", search_page(apps))
     for c, _ in C.CATEGORIES:
         w(f"categories/{cat_slug(c)}.html", category_page(c, apps))
     for a in apps:
