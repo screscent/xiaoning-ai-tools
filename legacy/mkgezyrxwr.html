@@ -61,33 +61,11 @@
       }
     </style>
     <!-- Baidu Analytics -->
-    <script>
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement('script');
-        hm.src = 'https://hm.baidu.com/hm.js?7dd4e161c7691199cb7c8c3331e86f3c';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
+    
     <!-- Tracert -->
-    <script>
-      (() => {
-        window.TracertCmdCache=window.TracertCmdCache||[];var t=window.Tracert||{_isRenderInit:!0,call:function(){window.TracertCmdCache.push(arguments)}},f=["call","start","config","logPv","info","err","click","expo","pageName","pageState","time","timeEnd","parse","checkExpo","stringify","report","set","before"];for(let i=0;i<f.length;i++){(function(fn){t[fn]=function(){var a=[],l=arguments.length;for (var j=0;j<l;j++) {a.push(arguments[j])}a.unshift(fn);window.TracertCmdCache.push(a)}})(f[i])}window.Tracert=t;window._to=window._to||{};
-        window.Tracert?.call?.('set', {
-          autoLogPv: false,
-          autoExpo:false,
-          spmAPos: 'a5366',
-          spmBPos: 'b161473'
-        });
-        window.Tracert?.call?.('logPv', { weavefoxLabAppId: 'mkgezyrxwr', weavefoxLabAppTitle: '量水卫浴' });
-        var s = document.createElement('script');
-        s.src = 'https://ur.alipay.com/tracert_a5366.js';
-        document.head.appendChild(s);
-      })();
-    </script>
+    
     <!-- Yuyan Monitor, Before body -->
-    <script crossorigin src="https://gw.alipayobjects.com/os/lib/alipay/yuyan-monitor-sdk/1.1.0/dist/index.umd.min.js" ></script>
+    
     <script>
       var yuyanMonitor = new window.YuyanMonitor({
         yuyanId: '180020010001298110',
@@ -108,7 +86,7 @@
       // 简化的环境变量设置
       window.process = { env: { NODE_ENV: "production" } };
     </script>
-    <script id="gravity-tailwind-css" src="https://gw.alipayobjects.com/os/lib/tailwindcss/browser/4.1.11/dist/index.global.js"></script>
+    <script id="gravity-tailwind-css" src="./assets/tailwind-browser-4.1.11.js"></script>
   </head>
 
   <body>
