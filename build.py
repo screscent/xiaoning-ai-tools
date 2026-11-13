@@ -783,7 +783,7 @@ def sitemap(apps, blog=None):
     urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html"]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
     urls += [f"{BASE_URL}/tools/{a['slug']}.html" for a in apps]
-    urls += [f"{BASE_URL}/reports/{r['slug']}.html" for r in REPORTS]
+    urls += [f"{BASE_URL}/reports/"] + [f"{BASE_URL}/reports/{r['slug']}.html" for r in REPORTS]
     blog_posts = []
     if blog and blog.get("articles"):
         urls.append(f"{BASE_URL}/blog/")
@@ -975,6 +975,39 @@ def main():
                 if os.path.isfile(src):
                     with open(src, "rb") as rf, open(os.path.join(dst_assets, f), "wb") as of:
                         of.write(rf.read())
+
+    # 深度报告索引 /reports/index.html
+    os.makedirs(os.path.join(HERE, "reports"), exist_ok=True)
+    rcards = "".join(
+        f'<a class="rcard" href="{esc(r["slug"])}.html"><h3>{esc(r["title"])}</h3>'
+        f'<p>{esc(r["desc"])}</p><span class="rmeta">{esc(r["date"])}</span></a>'
+        for r in REPORTS)
+    reports_index = f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>深度报告 · 小凝工具库</title>
+<meta name="description" content="小凝体系的深度评估与审计报告：方法论、架构、质量与运营复盘。">
+<link rel="canonical" href="{BASE_URL}/reports/">
+<style>
+:root{{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--bg:#f7f8fa}}
+*{{box-sizing:border-box}}body{{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--fg);background:#fff}}
+.wrap{{max-width:960px;margin:0 auto;padding:32px 20px 64px}}
+.top{{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}}
+.top a{{color:var(--muted);text-decoration:none;font-size:14px}}
+h1{{font-size:30px;margin:12px 0 6px}}
+.lead{{color:var(--muted);margin:0 0 28px}}
+.grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}}
+.rcard{{display:block;border:1px solid var(--line);border-radius:12px;padding:18px;text-decoration:none;color:inherit;background:var(--bg);transition:.15s}}
+.rcard:hover{{border-color:#111827;transform:translateY(-2px)}}
+.rcard h3{{margin:0 0 8px;font-size:17px}}
+.rcard p{{margin:0 0 10px;color:var(--muted);font-size:14px}}
+.rmeta{{font-size:12px;color:var(--muted)}}
+footer{{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}}
+</style></head><body><div class="wrap">
+<div class="top"><a href="../index.html">← 返回工具库</a><a href="../blog/index.html">博客</a></div>
+<h1>深度报告</h1><p class="lead">方法论、架构、质量与运营复盘。人类作者：月牙寂（龚浩华）｜Agent 作者：月绡凝（小凝）</p>
+<div class="grid">{rcards}</div>
+<footer>© 2026 月牙寂 · 小凝工具库</footer></div></body></html>"""
+    w("reports/index.html", reports_index)
 
     # 深度报告：独立页面（保留报告自身设计），从 data/reports 注入返回条与结构化数据
     if REPORTS:
