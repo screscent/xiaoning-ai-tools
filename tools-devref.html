@@ -1497,6 +1497,54 @@ function fpxRel(s){
   }).join('\n');
 }
 
+// ===== 图片处理（本地 canvas：压缩 / 转格式 / 缩略图 / 信息）=====
+function imLoad(src){
+  return new Promise((res,rej)=>{
+    const img=new Image();
+    img.onload=()=>res(img);
+    img.onerror=()=>rej(new Error('图片解码失败'));
+    img.src=src;
+  });
+}
+function imDraw(img,w,h){
+  const c=document.createElement('canvas');
+  c.width=w;c.height=h;
+  c.getContext('2d').drawImage(img,0,0,w,h);
+  return c;
+}
+async function imInfo(src){
+  const img=await imLoad(src);
+  const c=imDraw(img,img.width,img.height);
+  const jpg=c.toDataURL('image/jpeg',0.8);
+  return '尺寸: '+img.width+'×'+img.height+
+    '\n宽高比: '+(img.width/img.height).toFixed(3)+
+    '\n原图体积: ~'+Math.round(src.length*0.75/1024)+' KB'+
+    '\nJPEG 0.8 估算: ~'+Math.round(jpg.length*0.75/1024)+' KB'+
+    '\n总像素: '+(img.width*img.height/1e6).toFixed(2)+' MP';
+}
+async function imJpeg(src){
+  const img=await imLoad(src);
+  const c=imDraw(img,img.width,img.height);
+  return {kind:'image',dataUrl:c.toDataURL('image/jpeg',0.8),name:'compressed.jpg'};
+}
+async function imPng(src){
+  const img=await imLoad(src);
+  const c=imDraw(img,img.width,img.height);
+  return {kind:'image',dataUrl:c.toDataURL('image/png'),name:'converted.png'};
+}
+async function imWebp(src){
+  const img=await imLoad(src);
+  const c=imDraw(img,img.width,img.height);
+  return {kind:'image',dataUrl:c.toDataURL('image/webp',0.9),name:'converted.webp'};
+}
+async function imThumb(src){
+  const img=await imLoad(src);
+  const r=Math.min(1,1280/Math.max(img.width,img.height));
+  const w=Math.max(1,Math.round(img.width*r)),h=Math.max(1,Math.round(img.height*r));
+  const c=imDraw(img,w,h);
+  return {kind:'image',dataUrl:c.toDataURL('image/jpeg',0.85),name:'thumb_'+w+'x'+h+'.jpg'};
+}
+
 // ===== 代码生成（JSON → TypeScript / Go / Python / Java / SQL）=====
 function cgInfer(v){
   if(v===null)return {t:'null'};
@@ -1812,24 +1860,38 @@ function mdTasks(s){
 
 const GEN={ http:httpStatus,mime:mimeType,cron:cronExplain,git:gitHelp,port:portLookup };
 const $=s=>document.querySelector(s);
+const IMGMODE=false;const IMG={src:''};
 function route(){const k=(location.hash||'').replace(/^#\//,'');const t=TOOLS.find(x=>x.key===k);
 document.querySelectorAll('nav.tabs a').forEach(a=>a.classList.toggle('on',a.dataset.k===k));
 if(!t){$('#home').hidden=false;$('#tool').hidden=true;return}
 $('#home').hidden=true;$('#tool').hidden=false;$('#tname').textContent=t.name;$('#thint').textContent=t.desc;
 $('#err').textContent='';$('#out').textContent='';}
 function run(){const k=(location.hash||'').replace(/^#\//,'');const f=GEN[k];if(!f)return;
-try{$('#err').textContent='';const r=f($('#inp').value);if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(v=>{$('#out').textContent=String(v)}).catch(e=>{$('#err').textContent='失败：'+e.message});}else{$('#out').textContent=String(r)}}catch(e){$('#err').textContent='失败：'+e.message}}
+const arg=IMGMODE?IMG.src:$('#inp').value;
+if(IMGMODE&&!arg){$('#err').textContent='请先选择图片';return}
+try{$('#err').textContent='';const r=f(arg);
+const show=v=>{
+ if(v&&typeof v==='object'&&v.dataUrl){
+  $('#imgout').src=v.dataUrl;$('#imgout').style.display='block';$('#out').textContent='';$('#out').style.display='none';
+  const dl=$('#dl');if(dl){dl.href=v.dataUrl;dl.download=v.name||'result';dl.hidden=false}
+ }else{
+  const io=$('#imgout');if(io)io.style.display='none';const dl=$('#dl');if(dl)dl.hidden=true;
+  $('#out').style.display='block';$('#out').textContent=String(v);
+ }
+};
+if(r&&typeof r.then==='function'){$('#out').style.display='block';$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
+}catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
 $('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
-$('#run').onclick=run;$('#copy').onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
+$('#run').onclick=run;const cp=$('#copy');if(cp)cp.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
 $('#pick').onclick=()=>$('#file').click();
-$('#file').onchange=()=>{const f=$('#file').files&&$('#file').files[0];if(!f)return;
-if(f.size>2097152){$('#err').textContent='文件超过 2MB，请分段或改用粘贴';return}
+$('#file').onchange=()=>{{const f=$('#file').files&&$('#file').files[0];if(!f)return;
+if(f.size>2097152){{$('#err').textContent='文件超过 2MB，请分段或改用粘贴';return}}
 const r=new FileReader();
-r.onload=()=>{$('#inp').value=String(r.result);$('#fname').textContent=f.name+' · '+Math.max(1,Math.round(f.size/1024))+' KB';run()};
-r.onerror=()=>{$('#err').textContent='文件读取失败'};
-r.readAsText(f,'utf-8')};
+r.onload=()=>{{$('#inp').value=String(r.result);$('#fname').textContent=f.name+' · '+Math.max(1,Math.round(f.size/1024))+' KB';run()}};
+r.onerror=()=>{{$('#err').textContent='文件读取失败'}};
+r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
 </script></body></html>
