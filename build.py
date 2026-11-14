@@ -57,7 +57,7 @@ SELF_CONTAINERS = [
     ("Base64 / URL / Hex 编码", "UTF-8 安全的编码与解码，往返可验证", "tools-encode.html"),
     ("单位换算", "长度 / 重量 / 温度 / 面积 / 数据体积", "tools-unit.html"),
     ("URL 解析与构造", "结构解析、查询参数解析/构造、相对拼接、去追踪参数", "tools-url.html"),
-    ("CSV 与 JSON 互转", "CSV↔JSON、Markdown 表格、取列、列统计", "tools-csv.html"),
+    ("CSV 与表格处理", "CSV↔JSON、Markdown 表格、去重、排序、取列、改名、过滤", "tools-csv.html"),
     ("哈希与校验和", "MD5 / SHA-1 / SHA-256 / SHA-512 / CRC32", "tools-hash.html"),
     ("进制与位运算", "任意进制互转、多进制视图、32 位展开、位运算、字符码点", "tools-base.html"),
     ("文本差异对比", "行级 diff、差异统计、相似度、统一 diff、首个差异定位", "tools-diff.html"),
