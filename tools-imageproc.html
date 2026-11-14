@@ -1574,6 +1574,73 @@ async function imSquare(s){
   return {kind:'image',dataUrl:c.toDataURL('image/jpeg',0.9),name:'square_'+side+'.jpg'};
 }
 
+// ===== 文本分析（字数与阅读时长 / 词频 / 段落句 / 标点 / 重复）=====
+function taStats(s){
+  const t=String(s);if(!t.trim())return '粘贴一段文本，统计字数与阅读时长';
+  const cjk=(t.match(/[\u4e00-\u9fa5]/g)||[]).length;
+  const words=(t.match(/[A-Za-z][A-Za-z'-]*/g)||[]).length;
+  const nums=(t.match(/\d+(?:\.\d+)?/g)||[]).length;
+  const punct=(t.match(/[，。！？；：、,.!?;:'"“”‘’（）()\[\]【】《》<>—\-…]/g)||[]).length;
+  const chars=t.replace(/\s/g,'').length;
+  const lines=t.split(/\r?\n/).filter(x=>x.trim()).length;
+  const paras=t.split(/\n\s*\n/).filter(x=>x.trim()).length;
+  const mins=cjk/300+words/200;
+  const read=mins<1?Math.max(1,Math.round(mins*60))+' 秒':mins.toFixed(1)+' 分钟';
+  return '总字符（不含空白）: '+chars+'\n中文字: '+cjk+'\n英文词: '+words+'\n数字: '+nums+
+    '\n标点: '+punct+'\n非空行: '+lines+'\n段落: '+paras+'\n预计阅读: '+read;
+}
+function taTop(s){
+  const lines=String(s).split(/\r?\n/);
+  let n=10;
+  if(/^\d+$/.test((lines[0]||'').trim())){n=Math.max(1,Math.min(50,+lines[0].trim()));lines.shift()}
+  const t=lines.join('\n').trim();if(!t)return '首行可写 TopN（如 20），其后粘贴文本';
+  const stop=new Set(['的','了','和','是','在','我','有','就','不','人','都','一','上','也','很','到','说','要','去','你','会','着','这','那','与','及','或','而','被','把','让','对','从','为','以','于','中','之','其','并','等','个','可以','需要','进行','通过','这个','那个','什么','怎么','如何']);
+  const freq=new Map();
+  for(const seg of (t.match(/[\u4e00-\u9fa5]{2,}/g)||[])){
+    for(let i=0;i<seg.length-1;i++){const g=seg.slice(i,i+2);if(stop.has(g))continue;freq.set(g,(freq.get(g)||0)+1)}
+  }
+  for(const w of (t.toLowerCase().match(/[a-z][a-z0-9_+-]{2,}/g)||[])){
+    if(['the','and','for','with','that','this','from','are','was','were','have','has','had','not','but','you','your','can','will','would','should','there','their','they','them','then','than','into','about','over','under','more','most','some','such','only','also','been','being','when','what','which','who','how','why','all','any','each','other','our','out','use','using','used'].includes(w))continue;
+    freq.set(w,(freq.get(w)||0)+1);
+  }
+  const top=[...freq.entries()].sort((a,b)=>b[1]-a[1]).slice(0,n);
+  if(!top.length)return '未提取到关键词（文本过短或无有效词）';
+  const max=top[0][1];
+  return 'Top '+top.length+' 词频（权重=词频/最高词频）\n'+top.map(([k,v],i)=>String(i+1).padStart(2)+'. '+k+'  ×'+v+'  权重 '+(v/max).toFixed(2)).join('\n');
+}
+function taPara(s){
+  const t=String(s).trim();if(!t)return '粘贴文本，统计段落与句子';
+  const paras=t.split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);
+  const sents=t.split(/[。！？!?；;]+/).map(x=>x.trim()).filter(Boolean);
+  const lens=sents.map(x=>x.length);
+  const avg=lens.length?(lens.reduce((a,b)=>a+b,0)/lens.length).toFixed(1):'0';
+  const long=sents[lens.indexOf(Math.max(...lens))]||'';
+  return '段落: '+paras.length+'\n句子: '+sents.length+'\n平均句长: '+avg+' 字'+
+    '\n最长句: '+(long.length||0)+' 字\n'+(long?'最长句内容: '+long.slice(0,60):'');
+}
+function taPunct(s){
+  const t=String(s);if(!t.trim())return '粘贴文本，统计标点';
+  const cjkP=/[，。！？；：、（）【】《》“”‘’…—]/g;
+  const enP=/[,.!?;:'"()\[\]<>-]/g;
+  const n1=(t.match(cjkP)||[]).length,n2=(t.match(enP)||[]).length;
+  const chars=t.replace(/\s/g,'').length||1;
+  const map=new Map();
+  (t.match(/[，。！？；：、,.!?;:'"()（）【】《》“”‘’…—\-]/g)||[]).forEach(c=>map.set(c,(map.get(c)||0)+1));
+  const rows=[...map.entries()].sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+' ×'+v);
+  return '中文标点: '+n1+'\n英文标点: '+n2+'\n标点密度: '+(100*(n1+n2)/chars).toFixed(1)+'%'+
+    '\n'+(rows.length?rows.join('｜'):'(无标点)');
+}
+function taDup(s){
+  const lines=String(s).split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  if(!lines.length)return '每行一句或一条，检测重复';
+  const cnt=new Map();lines.forEach(x=>cnt.set(x,(cnt.get(x)||0)+1));
+  const dup=[...cnt.entries()].filter(([,v])=>v>1).sort((a,b)=>b[1]-a[1]);
+  const dupLines=lines.length-new Set(lines).size;
+  return '总行数: '+lines.length+'\n唯一行: '+new Set(lines).size+'\n重复行数: '+dupLines+
+    '\n重复占比: '+Math.round(dupLines/lines.length*100)+'%'+
+    (dup.length?'\n重复明细: '+dup.slice(0,10).map(([k,v])=>k.slice(0,20)+' ×'+v).join('｜'):'\n无重复内容');
+}
+
 // ===== 代码生成（JSON → TypeScript / Go / Python / Java / SQL）=====
 function cgInfer(v){
   if(v===null)return {t:'null'};
