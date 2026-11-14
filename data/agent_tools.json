@@ -1,0 +1,242 @@
+[
+ {
+  "group": "汇总报告",
+  "title": "Markdown 标题大纲",
+  "purpose": "从长文/文档提取标题层级，便于 agent 快速定位章节",
+  "input": "Markdown 文本",
+  "output": "缩进大纲 + 各级数量",
+  "gh": "tools-agent.html#/outline"
+ },
+ {
+  "group": "汇总报告",
+  "title": "Markdown 转 HTML",
+  "purpose": "把报告/说明转成可嵌入的 HTML 片段",
+  "input": "Markdown 文本",
+  "output": "HTML 片段",
+  "gh": "tools-agent.html#/md2html"
+ },
+ {
+  "group": "汇总报告",
+  "title": "关键词提取",
+  "purpose": "从需求/评论/文章中提取高频词，辅助选题与归因",
+  "input": "中文或英文段落",
+  "output": "Top10 关键词 + 权重",
+  "gh": "tools-agent.html#/keyword"
+ },
+ {
+  "group": "汇总报告",
+  "title": "SVG 折线图生成",
+  "purpose": "把数值序列快速变成可嵌入的 SVG 折线图",
+  "input": "逗号分隔数值",
+  "output": "SVG（轴/线/点）+ 最大最小值",
+  "gh": "tools-agent.html#/linechart"
+ },
+ {
+  "group": "汇总报告",
+  "title": "字符与字数统计",
+  "purpose": "核对文案/日志长度、段落数与最长行",
+  "input": "任意文本",
+  "output": "字符/词/段落统计",
+  "gh": "tools-clean.html#/stat"
+ },
+ {
+  "group": "汇总报告",
+  "title": "SVG 图表生成",
+  "purpose": "把数值与标签变成可嵌入的 SVG 图表，用于汇总报告",
+  "input": "数值 / 标签",
+  "output": "SVG 图表代码",
+  "gh": "tools-agent.html#/chart"
+ },
+ {
+  "group": "批处理",
+  "title": "文本行统计",
+  "purpose": "日志/清单行数、空行、重复行与最长行快速体检",
+  "input": "多行文本",
+  "output": "总行/非空/空行/重复/Top3",
+  "gh": "tools-clean.html#/stat"
+ },
+ {
+  "group": "批处理",
+  "title": "批量裁剪清单",
+  "purpose": "把文件列表变成可勾选的批处理检查清单，防漏项",
+  "input": "文件名列表（每行一个）",
+  "output": "带检查点与进度的清单",
+  "gh": "tools-agent.html#/batchlist"
+ },
+ {
+  "group": "批处理",
+  "title": "命名风格转换",
+  "purpose": "批量生成 camel/snake/kebab 等命名，供代码与配置使用",
+  "input": "每行一个英文词组/变量名",
+  "output": "五种命名风格",
+  "gh": "tools-agent.html#/casestyle"
+ },
+ {
+  "group": "批处理",
+  "title": "恢复码生成",
+  "purpose": "本地生成分组恢复码，供 agent 初始化测试数据（勿外传）",
+  "input": "组数 / 每组字符数",
+  "output": "XXXX-XXXX-XXXX 分组码",
+  "gh": "tools-agent.html#/recovery"
+ },
+ {
+  "group": "批处理",
+  "title": "CSV 转 JSON",
+  "purpose": "把表格/日志 CSV 变成 JSON 数组，供 agent 结构化处理",
+  "input": "CSV 文本",
+  "output": "JSON 数组",
+  "gh": "tools-csv.html#/csv2json"
+ },
+ {
+  "group": "批处理",
+  "title": "批量正则提取",
+  "purpose": "从日志/长文本按规则批量抽字段，减少人工翻查",
+  "input": "正则 + 多行文本",
+  "output": "提取结果列表",
+  "gh": "tools-regex.html#/ex"
+ },
+ {
+  "group": "批处理",
+  "title": "UUID/ULID 生成",
+  "purpose": "批量生成测试用唯一标识",
+  "input": "数量 / 类型",
+  "output": "UUID/ULID 列表",
+  "gh": "tools-sec.html#/uuid"
+ },
+ {
+  "group": "校验核对",
+  "title": "HTTP 请求响应头速查",
+  "purpose": "排查接口/跨域/缓存问题时快速查头含义",
+  "input": "关键词（如 Authorization）",
+  "output": "头名 / 分类 / 说明 / 示例",
+  "gh": "tools-agent.html#/headers"
+ },
+ {
+  "group": "校验核对",
+  "title": "JSON 转 Zod Schema",
+  "purpose": "由真实响应快速生成校验 schema，辅助接口契约核对",
+  "input": "JSON 对象",
+  "output": "z.object 嵌套 schema 代码",
+  "gh": "tools-agent.html#/zod"
+ },
+ {
+  "group": "校验核对",
+  "title": "JSON 格式化美化",
+  "purpose": "把压缩或混乱 JSON 展开为 2 空格缩进，供 agent 读写配置与响应",
+  "input": "压缩/混乱 JSON",
+  "output": "缩进格式化 JSON + 校验结果",
+  "gh": "tools-jsonx.html#/fmt"
+ },
+ {
+  "group": "校验核对",
+  "title": "JSON 结构对比",
+  "purpose": "两份 JSON 的键值差异，用于接口响应漂移与配置变更核对",
+  "input": "两段 JSON",
+  "output": "新增/删除/修改差异列表",
+  "gh": "tools-agent.html#/structdiff"
+ },
+ {
+  "group": "校验核对",
+  "title": "哈希摘要计算",
+  "purpose": "生成 MD5/SHA 摘要，用于文件与内容一致性校验",
+  "input": "文本",
+  "output": "多算法摘要值",
+  "gh": "tools-hash.html#/md5"
+ },
+ {
+  "group": "校验核对",
+  "title": "HMAC 与加盐哈希",
+  "purpose": "计算接口签名，排查签名不一致问题",
+  "input": "密钥 + 消息",
+  "output": "HMAC/加盐摘要",
+  "gh": "tools-agent.html#/hmac"
+ },
+ {
+  "group": "校验核对",
+  "title": "正则测试",
+  "purpose": "验证正则匹配与捕获组，避免误匹配与漏匹配",
+  "input": "正则 + 样本文本",
+  "output": "匹配结果 / 捕获组",
+  "gh": "tools-regex.html#/test"
+ },
+ {
+  "group": "校验核对",
+  "title": "文本逐行对比",
+  "purpose": "两版本文本逐行差异，核对改动范围与遗漏",
+  "input": "两段文本",
+  "output": "逐行差异 + 增删统计",
+  "gh": "tools-diff.html#/diff"
+ },
+ {
+  "group": "校验核对",
+  "title": "转义与正则转义",
+  "purpose": "生成安全的 HTML/正则转义字符串，防注入与匹配失败",
+  "input": "原始文本",
+  "output": "转义后文本",
+  "gh": "tools-regex.html#/esc"
+ },
+ {
+  "group": "校验核对",
+  "title": "JWT 解码",
+  "purpose": "解析 JWT 头/载荷与过期时间，排查鉴权与登录态问题",
+  "input": "JWT 字符串",
+  "output": "header / payload / 过期时间",
+  "gh": "tools-agent.html#/jwt"
+ },
+ {
+  "group": "格式转换",
+  "title": "JSON 转 YAML",
+  "purpose": "配置与样例在 JSON/YAML 间转换，供 agent 写入配置文件",
+  "input": "JSON 文本",
+  "output": "2 空格缩进 YAML",
+  "gh": "tools-agent.html#/j2yaml"
+ },
+ {
+  "group": "格式转换",
+  "title": "环形进度生成",
+  "purpose": "生成 conic-gradient 环形进度代码，用于状态卡片",
+  "input": "百分比 / 尺寸 / 线宽 / 颜色",
+  "output": "CSS + 实时预览",
+  "gh": "tools-agent.html#/ring"
+ },
+ {
+  "group": "格式转换",
+  "title": "JSON 转 CSV",
+  "purpose": "把 JSON 数组导出为 CSV，便于表格核对与交付",
+  "input": "JSON 数组",
+  "output": "CSV 文本（含表头）",
+  "gh": "tools-csv.html#/json2csv"
+ },
+ {
+  "group": "格式转换",
+  "title": "Base64 编解码",
+  "purpose": "处理 token/图片/配置里的 Base64 字符串",
+  "input": "文本或 Base64",
+  "output": "编码/解码结果",
+  "gh": "sets/tools-codec.html#/b64e"
+ },
+ {
+  "group": "格式转换",
+  "title": "时间戳转换",
+  "purpose": "秒/毫秒时间戳与日期互转，排障时对齐时间线",
+  "input": "时间戳或日期时间",
+  "output": "本地/UTC 时间对照",
+  "gh": "sets/tools-time.html#/ts2iso"
+ },
+ {
+  "group": "格式转换",
+  "title": "表格转 JSON",
+  "purpose": "把 Markdown/文本表格转 JSON，供脚本与接口消费",
+  "input": "表格文本",
+  "output": "JSON 数组",
+  "gh": "tools-agent.html#/table2json"
+ },
+ {
+  "group": "格式转换",
+  "title": "HTML 实体编解码",
+  "purpose": "处理网页文本里的实体转义，还原可读文本",
+  "input": "含实体文本",
+  "output": "明文 / 实体文本",
+  "gh": "tools-entity.html#/entenc"
+ }
+]

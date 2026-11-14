@@ -63,6 +63,7 @@ SELF_CONTAINERS = [
     ("文本差异对比", "行级 diff、差异统计、相似度、统一 diff、首个差异定位", "tools-diff.html"),
     ("日期与时间计算", "时间戳互转、日期相差、日期加减、月度工作日、时区换算", "tools-date.html"),
     ("贷款与理财计算", "等额本息/等额本金、复利、定投、通胀购买力", "tools-finance.html"),
+    ("Agent 工具集", "汇总报告 / 批处理 / 校验核对 / 格式转换：16 个 agent 优先工具", "tools-agent.html"),
 ]
 
 # 实体卡片（GEO 唯一文案源）：优先项目根状态文件，独立克隆时回退 data/entity-card.json
@@ -638,6 +639,46 @@ def local_set_cards(pre=""):
     return '<ul class="cards one">' + "".join(rows) + '</ul>'
 
 
+def agent_page():
+    items = json.load(open(os.path.join(HERE, "data/agent_tools.json"), encoding="utf-8"))
+    groups = ["汇总报告", "批处理", "校验核对", "格式转换"]
+    pre = "../"
+    def card(it):
+        link = it.get("gh") or ""
+        href = pre + link if link else ""
+        cta = f'<a href="{href}">打开 GitHub 版 →</a>' if href else '<span class="muted">迁移中</span>'
+        return (f'<article class="card"><h3>{esc(it["title"])}</h3>'
+                f'<p>{esc(it["purpose"])}</p>'
+                f'<p class="kv"><span>输入</span>{esc(it["input"])}</p>'
+                f'<p class="kv"><span>输出</span>{esc(it["output"])}</p>'
+                f'<div class="row">{cta}</div></article>')
+    sections = []
+    for g in groups:
+        rows = [it for it in items if it["group"] == g]
+        sections.append(f'<h2>{esc(g)}（{len(rows)} 个）</h2><div class="cards">{ "".join(card(it) for it in rows) }</div>')
+    body = f"""<main class="wrap">
+<div class="crumb"><a href="{pre}index.html">统一门户</a> / Agent 工具集</div>
+<h1>Agent 工具集 <small>30 个 · 纯前端本地处理</small></h1>
+<p class="lede">agent 优先：汇总报告 / 批处理 / 校验核对 / 格式转换。每个工具都给出「输入 → 输出」契约，可直接在浏览器打开，也可由 agent 按 #/key 直达。</p>
+<p class="hook">已从 WeaveFox 迁移到 GitHub 主站；全部本地计算，不上传数据。</p>
+{''.join(sections)}
+<h2>调用方式</h2>
+<div class="example">① 人类：点击任一工具卡片，输入后点「运行」；② agent：<code>tools-agent.html#/&lt;key&gt;</code> 直达对应工具页；③ 全部工具纯前端，可离线使用。</div>
+<p class="crumb">共 {len(items)} 个工具 · 4 个分组</p>
+</main>"""
+    canon = f"{BASE_URL}/agent/"
+    ld = ('<script type="application/ld+json">' + json.dumps({
+        "@context": "https://schema.org", "@type": "CollectionPage",
+        "name": "Agent 工具集", "url": canon,
+        "description": "30 个 agent 优先的纯前端工具：汇总报告、批处理、校验核对、格式转换。",
+        "mainEntity": {"@type": "ItemList", "numberOfItems": len(items), "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": it["title"]} for i, it in enumerate(items)]}
+    }, ensure_ascii=False) + '</script>')
+    return page_shell("Agent 工具集（30 个 · 纯前端本地处理）| 小凝 AI 工具集",
+                      "30 个 agent 优先的纯前端工具：Markdown 大纲/转 HTML、关键词提取、SVG 图表、Zod、JSON 结构对比、HMAC、JWT、YAML、表格转 JSON。本地计算不上传。",
+                      canon, body, ld, depth=1)
+
+
 def utility_portal_page(apps):
     util = [a for a in apps if a["cat"] == "实用工具"]
     n_local = len(local_tool_entries())
@@ -1043,7 +1084,7 @@ def report_page(r):
 
 def sitemap(apps, blog=None):
     urls = [BASE_URL + "/", f"{BASE_URL}/ai/", f"{BASE_URL}/utility/", f"{BASE_URL}/pricing.html",
-            f"{BASE_URL}/search.html"]
+            f"{BASE_URL}/search.html", f"{BASE_URL}/agent/"]
     urls += [f"{BASE_URL}/sets/{f}" for f in TOOLSET_FILES]
     urls += [f"{BASE_URL}/{f}" for _, _, f in SELF_CONTAINERS]
     urls += [f"{BASE_URL}/categories/{cat_slug(c)}.html" for c, _ in C.CATEGORIES]
@@ -1086,6 +1127,8 @@ def llms_txt(apps, blog=None):
     lines += ["", f"## 自建工具集（{len(SELF_CONTAINERS)} 组 / 75 个免费工具）"]
     for t, d, f in SELF_CONTAINERS:
         lines.append(f"- [{t}]({BASE_URL}/{f})：{d}")
+    lines += ["", "## Agent 工具集（30 个 · 纯前端）"]
+    lines.append(f"- [Agent 工具集]({BASE_URL}/agent/)：汇总报告 / 批处理 / 校验核对 / 格式转换，含 Markdown 大纲、关键词、SVG 图表、Zod、JSON 结构对比、HMAC、JWT、YAML、表格转 JSON")
     lines += ["", "## 工具"]
     for a in apps:
         lines.append(f"- [{a['name']}]({BASE_URL}/tools/{a['slug']}.html)：{a['desc']}（{price_label(a)}）")
@@ -1176,6 +1219,9 @@ table ul{margin:0;padding-left:18px}
 .cards strong{display:block}
 .cards span{display:block;color:var(--muted);font-size:14px;margin-top:4px}
 .cards em{display:block;color:var(--accent);font-style:normal;font-size:13px;margin-top:8px}
+.card .kv{font-size:13px;color:#3a3a3e;margin:4px 0}
+.card .kv span{display:inline-block;min-width:34px;color:var(--muted);margin-right:6px}
+.muted{color:var(--muted);font-size:13px}
 .rows{list-style:none;padding:0}
 .rows li{display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--line);padding:9px 0}
 .rows a{color:var(--fg);font-weight:600;text-decoration:none;min-width:150px}
@@ -1224,6 +1270,7 @@ def main():
     os.makedirs(os.path.join(HERE, "utility"), exist_ok=True)
     os.makedirs(os.path.join(HERE, "tools"), exist_ok=True)
     os.makedirs(os.path.join(HERE, "categories"), exist_ok=True)
+    os.makedirs(os.path.join(HERE, "agent"), exist_ok=True)
     os.makedirs(os.path.join(HERE, "assets"), exist_ok=True)
 
     def w(relpath, text):
@@ -1236,6 +1283,7 @@ def main():
     w("utility/index.html", utility_portal_page(apps))
     w("pricing.html", pricing_page(apps))
     w("search.html", search_page(apps))
+    w("agent/index.html", agent_page())
     for c, _ in C.CATEGORIES:
         w(f"categories/{cat_slug(c)}.html", category_page(c, apps))
     for a in apps:
