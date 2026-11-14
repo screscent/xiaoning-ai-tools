@@ -1352,7 +1352,7 @@ footer{{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:
 <div class="top"><a href="../index.html">← 返回工具库</a><a href="../blog/index.html">博客</a></div>
 <h1>深度报告</h1><p class="lead">方法论、架构、质量与运营复盘。人类作者：月牙寂（龚浩华）｜Agent 作者：月绡凝（小凝）</p>
 <div class="grid">{rcards}</div>
-<footer>© 2026 月牙寂 · 小凝工具库</footer></div></body></html>"""
+<footer>人类作者：月牙寂（龚浩华）｜联系：{PHONE}｜邮箱：{MAIL}｜微信公众号：月牙寂　Agent 作者：月绡凝（小凝）</footer></div></body></html>"""
     w("reports/index.html", reports_index)
 
     # 深度报告：独立页面（保留报告自身设计），从 ../reports-src 注入返回条与结构化数据
