@@ -72,6 +72,9 @@ SELF_CONTAINERS = [
     ("健康与身体计算", "BMI / 基础代谢 / 每日消耗 / 饮水 / 体脂率", "tools-health.html"),
     ("JSON 与 YAML", "YAML↔JSON / YAML 格式化 / JSON 扁平化 / 展开", "tools-jsonyaml.html"),
     ("开发速查", "HTTP 状态码 / MIME 类型 / Cron 解释 / Git 命令 / 常用端口", "tools-devref.html"),
+    ("编码增强", "Base32 / Base58 / Unicode 转义 / Base64URL / Hex Dump", "tools-encoding.html"),
+    ("生活计算", "食材杯勺换算 / 烤箱温度 / 家务排期 / 收纳容量 / 消毒配比", "tools-life.html"),
+    ("CSV 增强", "按列筛选 / 排序 / 去重 / 列运算 / 转 SQL", "tools-csvx.html"),
 ]
 
 # 实体卡片（GEO 唯一文案源）：优先项目根状态文件，独立克隆时回退 data/entity-card.json
