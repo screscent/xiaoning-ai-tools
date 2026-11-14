@@ -35,10 +35,10 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
 <div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
-<div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button></div>
+<div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
-<details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制。</div></details>
+<details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
 const TOOLS=[{"key": "csv", "name": "Markdown 表格转 CSV", "desc": "解析首个表格块，自动跳过对齐分隔行", "impl": "mdTableCsv"}, {"key": "json", "name": "Markdown 表格转 JSON", "desc": "表头作键，数字/布尔自动转换", "impl": "mdTableJson"}, {"key": "outline", "name": "提取标题大纲", "desc": "按 # 层级缩进列出所有标题", "impl": "mdOutline"}, {"key": "links", "name": "提取链接与图片", "desc": "列出链接/图片的文字与地址，附裸链接", "impl": "mdLinks"}, {"key": "tasks", "name": "任务清单统计", "desc": "统计 - [ ] / - [x] 数量与完成率", "impl": "mdTasks"}];
@@ -1305,6 +1305,198 @@ function csvzSql(s){
   return t.rows.map(r=>'INSERT INTO '+table+' ('+t.header.join(', ')+') VALUES ('+r.map(esc).join(', ')+');').join('\n')
 }
 
+// ===== CSV 再增强（列拆分 / 列合并 / HTML / JSON Lines / 列值替换）=====
+function cswSplit(s){
+  const {cfg,body}=csvzHead(s);const m=cfg.match(/^([^=]+)=(.+)$/);
+  if(!m)return '首行写「列名=分隔符」，如 tags=|，其后为 CSV';
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const i=t.header.indexOf(m[1].trim());if(i<0)return '列不存在：'+m[1];
+  const parts=t.rows.map(r=>String(r[i]||'').split(m[2]));
+  const n=Math.max(...parts.map(p=>p.length));
+  const head=t.header.slice();
+  head.splice(i,1,...Array.from({length:n},(_,k)=>m[1].trim()+'_'+(k+1)));
+  const rows=t.rows.map((r,k)=>{
+    const out=r.slice();
+    out.splice(i,1,...Array.from({length:n},(_,j)=>parts[k][j]||''));
+    return out;
+  });
+  return csvzOut(head,rows)+'\n\n拆分为 '+n+' 列（原 '+t.rows.length+' 行）';
+}
+function cswMerge(s){
+  const {cfg,body}=csvzHead(s);const m=cfg.match(/^([^=]+)=(.+)$/);
+  if(!m)return '首行写「新列=列A+列B」，其后为 CSV';
+  const cols=m[2].split('+').map(x=>x.trim()).filter(Boolean);
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const idx=cols.map(c=>t.header.indexOf(c));if(idx.some(i=>i<0))return '列不存在：'+cols.join('/');
+  const rows=t.rows.map(r=>[...r,idx.map(i=>r[i]||'').join('')]);
+  return csvzOut([...t.header,m[1].trim()],rows);
+}
+function cswHtml(s){
+  let {cfg,body}=csvzHead(s);
+  if(cfg.includes(',')){body=cfg+'\n'+body;cfg=''}
+  const t=csvzParse(body);if(!t)return '首行可选标题（留空行表示无标题），其后为 CSV';
+  const esc=v=>String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const title=cfg.trim();
+  return (title?'<h2>'+esc(title)+'</h2>\n':'')+
+    '<table>\n<thead><tr>'+t.header.map(h=>'<th>'+esc(h)+'</th>').join('')+'</tr></thead>\n<tbody>\n'+
+    t.rows.map(r=>'<tr>'+t.header.map((_,i)=>'<td>'+esc(r[i]===undefined?'':r[i])+'</td>').join('')+'</tr>').join('\n')+
+    '\n</tbody>\n</table>';
+}
+function cswNl(s){
+  const t=csvzParse(String(s));if(!t)return '粘贴带表头的 CSV';
+  return t.rows.map(r=>{
+    const o={};t.header.forEach((h,i)=>o[h]=r[i]===undefined?'':r[i]);
+    return JSON.stringify(o);
+  }).join('\n');
+}
+function cswReplace(s){
+  const {cfg,body}=csvzHead(s);const m=cfg.match(/^([^=]+)=([\s\S]*?)=>([\s\S]*)$/);
+  if(!m)return '首行写「列名=旧值=>新值」，其后为 CSV';
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const i=t.header.indexOf(m[1].trim());if(i<0)return '列不存在：'+m[1];
+  let n=0;
+  const rows=t.rows.map(r=>{
+    const c=[...r];if(c[i]===m[2]){c[i]=m[3];n++}return c;
+  });
+  return csvzOut(t.header,rows)+'\n\n替换 '+n+' 处';
+}
+
+// ===== 路径与文件（解析 / 重命名预览 / 斜杠 / 大小 / 拼接）=====
+function fpParse(s){
+  const p=s.trim();if(!p)return '请输入文件路径';
+  const n=p.replace(/\\/g,'/');
+  const abs=n.startsWith('/')||/^[A-Za-z]:\//.test(n);
+  const segs=n.split('/').filter(Boolean);
+  const file=segs.length?segs[segs.length-1]:'';
+  const i=file.lastIndexOf('.');
+  const ext=i>0?file.slice(i+1):'';
+  const stem=i>0?file.slice(0,i):file;
+  const dir=n.slice(0,Math.max(0,n.lastIndexOf('/')))||(abs?'/':'');
+  return '路径: '+p+'\n绝对路径: '+(abs?'是':'否')+'\n目录: '+dir+
+    '\n文件名: '+file+'\n主名: '+stem+'\n扩展名: '+(ext||'(无)')+'\n层级: '+segs.length;
+}
+function fpRename(s){
+  const lines=String(s).split(/\r?\n/);
+  const cfg=(lines.shift()||'').split('|');
+  const pre=cfg[0]||'',suf=cfg[1]||'';
+  const names=lines.map(x=>x.trim()).filter(Boolean);
+  if(!names.length)return '首行「前缀|后缀」，其后每行一个文件名';
+  return names.map((x,i)=>{
+    const k=x.lastIndexOf('.');
+    const stem=k>0?x.slice(0,k):x,ext=k>0?x.slice(k):'';
+    return (i+1)+'. '+pre+stem+suf+ext;
+  }).join('\n')+'\n\n共 '+names.length+' 个（仅预览，不修改文件）';
+}
+function fpSlash(s){
+  const p=s.trim();if(!p)return '请输入路径';
+  const unix=p.replace(/\\/g,'/').replace(/\/{2,}/g,'/');
+  const win=unix.replace(/\//g,'\\');
+  return 'Unix: '+unix+'\nWindows: '+win;
+}
+function fpSize(s){
+  const t=String(s).trim().toLowerCase();
+  const m=t.match(/^([\d.]+)\s*(b|kb|mb|gb|tb|k|m|g|t)?$/);
+  if(!m)return '格式：1536 或 1.5 GB';
+  const units={b:1,kb:1024,k:1024,mb:1048576,m:1048576,gb:1073741824,g:1073741824,tb:1099511627776,t:1099511627776};
+  const bytes=Number(m[1])*(units[m[2]||'b']||1);
+  const fmt=n=>n>=1099511627776?(n/1099511627776).toFixed(2)+' TB':n>=1073741824?(n/1073741824).toFixed(2)+' GB':n>=1048576?(n/1048576).toFixed(2)+' MB':n>=1024?(n/1024).toFixed(2)+' KB':n+' B';
+  return '输入: '+m[1]+' '+(m[2]||'B').toUpperCase()+'\n字节: '+Math.round(bytes)+
+    '\n格式化: '+fmt(bytes)+'\n1024 进制: '+(bytes/1024).toFixed(2)+' KB';
+}
+function fpJoin(s){
+  const lines=String(s).split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  if(!lines.length)return '每行「基准路径, 相对路径」，如 /a/b/c.txt, ../d.txt';
+  return lines.map(line=>{
+    const i=line.search(/[,，]/);
+    if(i<0)return line+' → (缺少逗号)';
+    const base=line.slice(0,i).trim().replace(/\\/g,'/');
+    const rel=line.slice(i+1).trim().replace(/\\/g,'/');
+    if(rel.startsWith('/'))return line+' → '+rel;
+    const abs=base.startsWith('/')||/^[A-Za-z]:\//.test(base);
+    const segs=base.split('/').filter(Boolean);
+    if(!base.endsWith('/'))segs.pop();
+    for(const part of rel.split('/')){
+      if(!part||part==='.')continue;
+      if(part==='..'){if(segs.length)segs.pop();continue}
+      segs.push(part);
+    }
+    return line+' → '+(abs?'/':'')+segs.join('/');
+  }).join('\n');
+}
+function fpxPattern(pat){
+  const s=pat.replace(/\\/g,'/');
+  let re='^';
+  for(let i=0;i<s.length;i++){
+    const c=s[i];
+    if(c==='*'){
+      if(s[i+1]==='*'){re+='.*';i++}
+      else re+='[^/]*';
+    }else if(c==='?')re+='[^/]';
+    else re+=c.replace(/[.+^${}()|[\]\\]/g,'\\$&');
+  }
+  return new RegExp(re+'$');
+}
+function fpxGlob(s){
+  const lines=String(s).split(/\r?\n/).filter(x=>x.trim()!=='');
+  if(lines.length<2)return '首行写通配符（支持 * ? **），其后每行一个路径';
+  const pat=lines[0].trim();
+  let re;
+  try{re=fpxPattern(pat)}catch(e){return '通配符无效：'+e.message}
+  const hits=lines.slice(1).filter(x=>re.test(x.trim().replace(/\\/g,'/')));
+  return '匹配 '+hits.length+' / '+(lines.length-1)+'\n'+(hits.length?hits.join('\n'):'(无匹配)');
+}
+function fpxExt(s){
+  const lines=String(s).split(/\r?\n/).filter(x=>x.trim()!=='');
+  if(lines.length<2)return '首行写扩展名（逗号分隔，如 .md,.txt），其后每行一个路径';
+  const exts=lines[0].split(/[,，\s]+/).map(x=>x.trim().toLowerCase().replace(/^\./,'')).filter(Boolean);
+  const hits=lines.slice(1).filter(x=>{
+    const m=x.trim().match(/\.([A-Za-z0-9]+)$/);
+    return m&&exts.includes(m[1].toLowerCase());
+  });
+  return '命中 '+hits.length+' / '+(lines.length-1)+'（'+exts.map(e=>'.'+e).join(' ')+'）\n'+(hits.length?hits.join('\n'):'(无匹配)');
+}
+function fpxTree(s){
+  const paths=String(s).split(/\r?\n/).map(x=>x.trim().replace(/\\/g,'/')).filter(Boolean);
+  if(!paths.length)return '每行一个文件路径';
+  const root={};
+  paths.forEach(p=>{
+    let node=root;
+    p.split('/').filter(Boolean).forEach(seg=>{node[seg]=node[seg]||{};node=node[seg]});
+  });
+  const walk=(node,ind)=>Object.keys(node).sort().map(k=>{
+    const kids=Object.keys(node[k]);
+    const line='  '.repeat(ind)+(kids.length?'▸ ':'· ')+k;
+    return kids.length?line+'\n'+walk(node[k],ind+1):line;
+  }).join('\n');
+  return '共 '+paths.length+' 个路径\n'+walk(root,0);
+}
+function fpxExtStat(s){
+  const items=String(s).split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  if(!items.length)return '每行一个文件名或路径';
+  const m=new Map();let none=0;
+  items.forEach(x=>{
+    const mm=x.match(/\.([A-Za-z0-9]+)$/);
+    if(mm)m.set(mm[1].toLowerCase(),(m.get(mm[1].toLowerCase())||0)+1);
+    else none++;
+  });
+  const rows=[...m.entries()].sort((a,b)=>b[1]-a[1]).map(([k,v])=>'.'+k+'  ×'+v);
+  if(none)rows.push('(无扩展名)  ×'+none);
+  return '共 '+items.length+' 个文件 / '+m.size+' 种扩展名\n'+rows.join('\n');
+}
+function fpxRel(s){
+  const paths=String(s).split(/\r?\n/).map(x=>x.trim().replace(/\\/g,'/')).filter(Boolean);
+  if(paths.length<2)return '至少两行路径，自动去掉公共目录前缀';
+  const dirs=paths.map(p=>{const i=p.lastIndexOf('/');return i>=0?p.slice(0,i):''});
+  const segs=dirs[0].split('/').filter(Boolean);
+  let n=0;
+  while(n<segs.length&&dirs.every(d=>d.split('/').filter(Boolean)[n]===segs[n]))n++;
+  const prefix='/'+segs.slice(0,n).join('/');
+  return '公共前缀: '+(n?prefix:'(无)')+'\n'+paths.map(p=>{
+    const rel=p.slice(n?prefix.length+1:0);
+    return p+' → '+rel;
+  }).join('\n');
+}
+
 // ===== 代码生成（JSON → TypeScript / Go / Python / Java / SQL）=====
 function cgInfer(v){
   if(v===null)return {t:'null'};
@@ -1631,6 +1823,13 @@ $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.na
 $('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;$('#copy').onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
+$('#pick').onclick=()=>$('#file').click();
+$('#file').onchange=()=>{const f=$('#file').files&&$('#file').files[0];if(!f)return;
+if(f.size>2097152){$('#err').textContent='文件超过 2MB，请分段或改用粘贴';return}
+const r=new FileReader();
+r.onload=()=>{$('#inp').value=String(r.result);$('#fname').textContent=f.name+' · '+Math.max(1,Math.round(f.size/1024))+' KB';run()};
+r.onerror=()=>{$('#err').textContent='文件读取失败'};
+r.readAsText(f,'utf-8')};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
 </script></body></html>

@@ -35,10 +35,10 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
 <div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
-<div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button></div>
+<div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
-<details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制。</div></details>
+<details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
 const TOOLS=[{"key": "parse", "name": "路径解析", "desc": "拆出目录、文件名、主名、扩展名与层级", "impl": "fpParse"}, {"key": "rename", "name": "批量重命名预览", "desc": "首行「前缀|后缀」，逐行输出新文件名（不改文件）", "impl": "fpRename"}, {"key": "slash", "name": "斜杠互转", "desc": "Windows 反斜杠 ↔ Unix 正斜杠，自动合并重复斜杠", "impl": "fpSlash"}, {"key": "size", "name": "文件大小换算", "desc": "字节或 1.5 GB 等写法 ↔ 字节 / KB / MB / GB", "impl": "fpSize"}, {"key": "join", "name": "路径拼接与规范化", "desc": "每行「基准路径, 相对路径」，解析 . 与 ..", "impl": "fpJoin"}, {"key": "glob", "name": "通配符匹配", "desc": "首行通配符（* ? **），其后逐行路径，筛出命中项", "impl": "fpxGlob"}, {"key": "ext", "name": "按扩展名筛选", "desc": "首行写 .md,.txt 等扩展名，其后逐行路径", "impl": "fpxExt"}, {"key": "tree", "name": "目录树文本化", "desc": "多行路径 → 缩进树，目录/文件不同标记", "impl": "fpxTree"}, {"key": "extstat", "name": "扩展名统计", "desc": "多行文件名 → 按扩展名计数并排序", "impl": "fpxExtStat"}, {"key": "rel", "name": "去公共前缀", "desc": "多行路径 → 自动识别公共目录并输出相对路径", "impl": "fpxRel"}];
@@ -1823,6 +1823,13 @@ $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.na
 $('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;$('#copy').onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
+$('#pick').onclick=()=>$('#file').click();
+$('#file').onchange=()=>{const f=$('#file').files&&$('#file').files[0];if(!f)return;
+if(f.size>2097152){$('#err').textContent='文件超过 2MB，请分段或改用粘贴';return}
+const r=new FileReader();
+r.onload=()=>{$('#inp').value=String(r.result);$('#fname').textContent=f.name+' · '+Math.max(1,Math.round(f.size/1024))+' KB';run()};
+r.onerror=()=>{$('#err').textContent='文件读取失败'};
+r.readAsText(f,'utf-8')};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
 </script></body></html>

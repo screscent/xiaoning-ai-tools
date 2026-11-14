@@ -35,19 +35,14 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
 <div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
-<div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button></div>
+<div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
-<details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制。</div></details>
+<details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
 const TOOLS=[{"key": "http", "name": "HTTP 状态码", "desc": "输入状态码或关键词，返回含义与类别", "impl": "httpStatus"}, {"key": "mime", "name": "MIME 类型", "desc": "扩展名 ↔ MIME 双向查询", "impl": "mimeType"}, {"key": "cron", "name": "Cron 表达式解释", "desc": "5 段表达式逐字段中文解释", "impl": "cronExplain"}, {"key": "git", "name": "Git 命令速查", "desc": "撤销 / 回滚 / 分支 / 合并 / 查看 / 标签 / 暂存", "impl": "gitHelp"}, {"key": "port", "name": "常用端口", "desc": "端口号 ↔ 服务名双向查询", "impl": "portLookup"}];
 
-function b64e(s){return btoa(unescape(encodeURIComponent(s)))}
-function b64d(s){return decodeURIComponent(escape(atob(s.trim())))}
-function urlE(s){return encodeURIComponent(s)}
-function urlD(s){return decodeURIComponent(s)}
-function hexE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(16).padStart(2,'0')).join('')}
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
 function binD(s){const a=s.trim().split(/\s+/).filter(Boolean);return new TextDecoder().decode(new Uint8Array(a.map(b=>parseInt(b,2))))}
@@ -59,7 +54,6 @@ function romanE(s){const n=parseInt(s.trim());if(!n||n<1||n>3999)return '(请输
 function romanD(s){const map={I:1,V:5,X:10,L:50,C:100,D:500,M:1000};let t=s.toUpperCase().trim(),n=0;for(let i=0;i<t.length;i++){const c=map[t[i]]||0,d=map[t[i+1]]||0;n+=c<d?-c:c}return n||'(无效罗马数字)'}
 function uuid(){return crypto.randomUUID?crypto.randomUUID():'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()*16|0;return (c==='x'?r:(r&0x3|0x8)).toString(16)})}
 function tsInfo(s){const t=s.trim();const n=/^\d+$/.test(t)?Number(t):NaN;if(isNaN(n)){const d=new Date(t);if(isNaN(d))return '(无法解析)';return `秒: ${Math.floor(d.getTime()/1000)}\n毫秒: ${d.getTime()}\nISO: ${d.toISOString()}`}const ms=t.length>=13?n:n*1000;const d=new Date(ms);return `ISO: ${d.toISOString()}\n本地: ${d.toLocaleString('zh-CN')}\n秒: ${Math.floor(ms/1000)}`}
-function jsonEsc(s){return JSON.stringify(s)}
 function jsonUnesc(s){try{return JSON.parse(s)}catch(e){return '(无效 JSON 字符串)'}}
 function htmlEsc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function htmlUnesc(s){const d=document.createElement('textarea');d.innerHTML=s;return d.value}
@@ -106,7 +100,6 @@ function weekNo(s){const d=new Date(s.trim());if(isNaN(d))return '(日期无效)
 function weekday(s){const d=new Date(s.trim());if(isNaN(d))return '(日期无效)';return ['周日','周一','周二','周三','周四','周五','周六'][d.getDay()]}
 function age(s){const d=new Date(s.trim());if(isNaN(d))return '(日期无效)';const n=new Date();let y=n.getFullYear()-d.getFullYear();const m=n.getMonth()-d.getMonth();if(m<0||(m===0&&n.getDate()<d.getDate()))y--;const days=Math.floor((n-d)/86400000);return `年龄：${y} 岁\n累计天数：${days}`}
 function countdown(s){const d=new Date(s.trim());if(isNaN(d))return '(日期无效)';let ms=d-new Date();const sign=ms<0?'已过 ':-'';ms=Math.abs(ms);const dd=Math.floor(ms/86400000);const hh=Math.floor(ms%86400000/3600000);return `${sign}${dd} 天 ${hh} 小时`}
-function workdays(s){const m=s.trim().match(/^(\d{4})-(\d{2})$/);if(!m)return '格式：2026-11';const y=+m[1],mo=+m[2];const last=new Date(y,mo,0).getDate();let n=0;for(let d=1;d<=last;d++){const w=new Date(y,mo-1,d).getDay();if(w!==0&&w!==6)n++}return `${m[1]}-${m[2]} 工作日：${n} 天（不含法定节假日调休）`}
 function duration(s){let n=Number(s.trim());if(isNaN(n))return '(请输入秒数)';const h=Math.floor(n/3600),m=Math.floor(n%3600/60),sec=n%60;return `${h} 小时 ${m} 分 ${sec} 秒`}
 function monthdays(s){const m=s.trim().match(/^(\d{4})-(\d{1,2})$/);if(!m)return '格式：2026-11';const y=+m[1],mo=+m[2];const n=new Date(y,mo,0).getDate();return `${m[1]}-${String(mo).padStart(2,'0')} 共 ${n} 天`}
 function tz(s){const m=s.trim().match(/^(.+?)\s*,\s*([+-]?\d+(?:\.\d+)?)\s*,\s*([+-]?\d+(?:\.\d+)?)$/);if(!m)return '格式：2026-01-01 10:00, +8, -5';const d=new Date(m[1]);if(isNaN(d))return '(时间无效)';const diff=(Number(m[3])-Number(m[2]))*3600000;const t=new Date(d.getTime()+diff);return `源：${m[1]} (UTC${m[2]})\n目标：${t.toISOString().replace('T',' ').slice(0,16)} (UTC${m[3]})`}
@@ -1094,6 +1087,728 @@ function portLookup(s){
   return hit.length?hit.map(k=>k+' → '+PORTS[k]).join('\n'):'未收录该服务'
 }
 
+// ===== 日期批处理（时间戳 / 工作日 / 批量加减 / 时区 / 格式化）=====
+function batchTs(s){
+  const rows=s.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  if(!rows.length)return '每行一个时间戳或日期，最多 200 行';
+  const out=rows.slice(0,200).map(x=>{
+    let d;
+    if(/^-?\d+$/.test(x)){const n=Number(x);d=new Date(Math.abs(n)>=1e12?n:n*1000)}
+    else d=new Date(x);
+    if(isNaN(d))return x+' → (无法解析)';
+    return x+' → '+d.toISOString()+' ｜ 本地 '+d.toLocaleString('zh-CN');
+  });
+  return out.join('\n')+(rows.length>200?'\n（已截断到 200 行）':'')
+}
+function workdaysBetween(s){
+  const p=s.split(/[\s,，]+/);if(p.length<2)return '格式：2026-01-01,2026-12-31';
+  const a=new Date(p[0]),b=new Date(p[1]);if(isNaN(a)||isNaN(b))return '(日期无效)';
+  const lo=a<b?a:b,hi=a<b?b:a;let total=0,week=0;
+  for(let d=new Date(lo);d<=hi;d.setDate(d.getDate()+1)){total++;const wd=d.getDay();if(wd===0||wd===6)week++}
+  return '总天数 '+total+'\n工作日 '+(total-week)+'\n周末 '+week+'\n提示：未扣法定节假日'
+}
+function dateAddBatch(s){
+  const rows=s.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  if(!rows.length)return '每行「日期,偏移天数」，如 2026-01-01,+30';
+  return rows.slice(0,200).map(line=>{
+    const m=line.match(/^(\d{4}-\d{2}-\d{2})\s*,\s*([+-]?\d+)$/);
+    if(!m)return line+' → (格式错误)';
+    const d=new Date(m[1]+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+Number(m[2]));
+    return line+' → '+d.toISOString().slice(0,10)+'（周'+'日一二三四五六'[d.getUTCDay()]+'）'
+  }).join('\n')
+}
+function tzBatch(s){
+  const rows=s.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  if(rows.length<2)return '首行写源/目标偏移，如 +08:00,-05:00；其后每行一个时间';
+  const zones=rows[0].split(/[\s,，]+/);
+  if(zones.length<2)return '首行需要两个偏移：+08:00,-05:00';
+  const off=v=>{const m=v.match(/^([+-])(\d{2}):?(\d{2})$/);if(!m)return NaN;return (m[1]==='-'?-1:1)*(+m[2]*60+ +m[3])};
+  const from=off(zones[0]),to=off(zones[1]);
+  if(isNaN(from)||isNaN(to))return '偏移格式：+08:00 / -05:00';
+  return rows.slice(1,201).map(line=>{
+    const m=line.match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2})(?::(\d{2}))?$/);
+    if(!m)return line+' → (格式错误)';
+    const [y,mo,da]=m[1].split('-').map(Number);const [hh,mi]=m[2].split(':').map(Number);
+    const utc=Date.UTC(y,mo-1,da,hh,mi,+(m[3]||0))-from*60000;
+    const t=new Date(utc+to*60000);
+    const p=n=>String(n).padStart(2,'0');
+    return line+' → '+t.getUTCFullYear()+'-'+p(t.getUTCMonth()+1)+'-'+p(t.getUTCDate())+' '+p(t.getUTCHours())+':'+p(t.getUTCMinutes());
+  }).join('\n')
+}
+function dateFmt(s){
+  const i=s.indexOf('\n');
+  let spec='YYYY-MM-DD',body=s;
+  if(i>=0){const first=s.slice(0,i).trim();if(/[YMDHms]/.test(first)&&first.length<=20){spec=first;body=s.slice(i+1)}}
+  const rows=body.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  if(!rows.length)return '首行可写格式（如 YYYY/MM/DD），其后每行一个日期';
+  return rows.slice(0,200).map(line=>{
+    const d=new Date(line);if(isNaN(d))return line+' → (无法解析)';
+    const p=n=>String(n).padStart(2,'0');
+    return line+' → '+spec.replace(/YYYY/g,d.getFullYear()).replace(/MM/g,p(d.getMonth()+1)).replace(/DD/g,p(d.getDate())).replace(/HH/g,p(d.getHours())).replace(/mm/g,p(d.getMinutes())).replace(/ss/g,p(d.getSeconds()));
+  }).join('\n')
+}
+
+// ===== 编码增强（Base32 / Base58 / Unicode 转义 / Base64URL / Hex Dump）=====
+const B32A='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+function b32Encode(s){
+  const b=new TextEncoder().encode(s);let bits=0,val=0,out='';
+  for(const x of b){val=(val<<8)|x;bits+=8;while(bits>=5){out+=B32A[(val>>>(bits-5))&31];bits-=5}}
+  if(bits>0)out+=B32A[(val<<(5-bits))&31];
+  return out
+}
+function b32Decode(s){
+  const t=s.toUpperCase().replace(/=+$/,'').replace(/\s+/g,'');let bits=0,val=0;const out=[];
+  for(const c of t){const k=B32A.indexOf(c);if(k<0)return '非法 Base32 字符：'+c;val=(val<<5)|k;bits+=5;if(bits>=8){out.push((val>>>(bits-8))&255);bits-=8}}
+  try{return new TextDecoder().decode(new Uint8Array(out))}catch(e){return '解码失败'}
+}
+const B58A='123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+function b58Encode(s){
+  const b=new TextEncoder().encode(s);let n=0n;for(const x of b)n=n*256n+BigInt(x);
+  let out='';while(n>0n){out=B58A[Number(n%58n)]+out;n/=58n}
+  for(const x of b){if(x===0)out='1'+out;else break}
+  return out||'1'
+}
+function b58Decode(s){
+  const t=s.trim();let n=0n;
+  for(const c of t){const k=B58A.indexOf(c);if(k<0)return '非法 Base58 字符：'+c;n=n*58n+BigInt(k)}
+  const bytes=[];while(n>0n){bytes.unshift(Number(n%256n));n/=256n}
+  for(const c of t){if(c==='1')bytes.unshift(0);else break}
+  try{return new TextDecoder().decode(new Uint8Array(bytes))}catch(e){return '解码失败'}
+}
+function uniEsc(s){
+  if(!s)return '输入文本，转为 \\uXXXX；以 \\u 开头的输入会反转义';
+  if(/\\u[0-9a-fA-F]{4}/.test(s)&&!/[^\x00-\x7f]/.test(s)){
+    return s.replace(/\\u\{([0-9a-fA-F]+)\}|\\u([0-9a-fA-F]{4})/g,(m,a,b)=>String.fromCodePoint(parseInt(a||b,16)))
+  }
+  return [...s].map(c=>{const cp=c.codePointAt(0);return cp>0xffff?`\\u{${cp.toString(16)}}`:`\\u${cp.toString(16).padStart(4,'0')}`}).join('')
+}
+function b64url(s){
+  const t=s.trim();
+  if(/^[A-Za-z0-9_-]+$/.test(t)&&!/[^\x00-\x7f]/.test(t)&&t.length%4!==1){
+    try{const b=t.replace(/-/g,'+').replace(/_/g,'/');const pad=b+'='.repeat((4-b.length%4)%4);return new TextDecoder().decode(Uint8Array.from(atob(pad),c=>c.charCodeAt(0)))}catch(e){}
+  }
+  const bytes=new TextEncoder().encode(s);let bin='';for(const b of bytes)bin+=String.fromCharCode(b);
+  return btoa(bin).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')
+}
+function hexDump(s){
+  const b=new TextEncoder().encode(s);if(!b.length)return '输入文本以查看十六进制转储';
+  const lines=[];
+  for(let i=0;i<b.length;i+=16){
+    const chunk=[...b.slice(i,i+16)];
+    const hex=chunk.map(x=>x.toString(16).padStart(2,'0')).join(' ');
+    const asc=chunk.map(x=>x>=32&&x<127?String.fromCharCode(x):'.').join('');
+    lines.push(i.toString(16).padStart(8,'0')+'  '+hex.padEnd(47,' ')+'  |'+asc+'|');
+  }
+  return lines.join('\n')+'\n\n字节数 '+b.length
+}
+
+// ===== 生活计算（食材换算 / 烤箱温度 / 家务排期 / 容量 / 消毒配比）=====
+const DENSITY={面粉:120,白砂糖:200,大米:180,水:240,牛奶:245,食用油:224,蜂蜜:340,盐:288,可可粉:85,燕麦:90};
+function ingredient(s){
+  const m=s.trim().match(/^([^,，]+)[,，]\s*([\d.]+)\s*(g|克|ml|毫升|杯|cup)?$/i);
+  if(!m)return '格式：面粉,2（杯）或 面粉,240g；支持 面粉/糖/米/水/牛奶/油/蜂蜜/盐/可可粉/燕麦';
+  const name=m[1].trim(),n=Number(m[2]),unit=(m[3]||'杯').toLowerCase();
+  const d=DENSITY[name];if(!d)return '未收录食材：'+name+'（可用：'+Object.keys(DENSITY).join('/')+'）';
+  if(unit==='g'||unit==='克')return name+' '+n+' g ≈ '+(n/d).toFixed(2)+' 杯（按 1 杯 '+d+' g）';
+  if(unit==='ml'||unit==='毫升')return name+' '+n+' ml ≈ '+(n/d).toFixed(2)+' 杯（按 1 杯 '+d+' g）';
+  return name+' '+n+' 杯 ≈ '+(n*d).toFixed(0)+' g（按 1 杯 '+d+' g）';
+}
+function ovenTemp(s){
+  const t=s.trim().toUpperCase();
+  let m=t.match(/^([\d.]+)\s*C$/);if(m){const c=+m[1];return c+'°C = '+(c*9/5+32).toFixed(0)+'°F ｜ 风炉参考 '+(c-20)+'°C'}
+  m=t.match(/^([\d.]+)\s*F$/);if(m){const f=+m[1];return f+'°F = '+((f-32)*5/9).toFixed(0)+'°C ｜ 风炉参考 '+(((f-32)*5/9)-20).toFixed(0)+'°C'}
+  return '格式：180C 或 350F；输出摄氏度/华氏度与风炉参考'
+}
+function choreSchedule(s){
+  const p=s.split(/[\s,，]+/);if(p.length<3)return '格式：2026-01-01,7,5（起始日,间隔天数,次数）';
+  const d=new Date(p[0]+'T00:00:00Z');const step=+p[1],n=Math.min(+p[2],20);
+  if(isNaN(d)||!step||!n)return '(参数无效)';
+  const out=[];for(let i=1;i<=n;i++){const x=new Date(d.getTime()+i*step*86400000);out.push(x.toISOString().slice(0,10)+'（周'+'日一二三四五六'[x.getUTCDay()]+'）')}
+  return out.join('\n')
+}
+function volumeConv(s){
+  const t=s.trim();
+  let m=t.match(/^([\d.]+),([\d.]+),([\d.]+)$/);
+  if(m){const l=(+m[1])*(+m[2])*(+m[3])/1000;return '体积 '+l.toFixed(2)+' L ｜ '+(l*0.2642).toFixed(2)+' 美制加仑 ｜ '+(l/1000).toFixed(3)+' 立方米'}
+  m=t.match(/^([\d.]+)\s*L$/i);if(m){const l=+m[1];return l+' L = '+(l*1000).toFixed(0)+' ml ｜ '+(l*0.2642).toFixed(2)+' 美制加仑 ｜ 可装 '+(l*4).toFixed(0)+' 个 250ml 盒'}
+  return '格式：60,40,30（长宽高 cm）或 50L'
+}
+function dilution(s){
+  const p=s.split(/[\s,，]+/).map(Number);if(p.length<3)return '格式：5,0.05,500（原液浓度%,目标浓度%,目标体积ml）';
+  const [c0,c1,v]=p;if(!(c0>0&&c1>0&&c1<=c0&&v>0))return '(浓度或体积无效，目标浓度需 ≤ 原液浓度)';
+  const stock=v*c1/c0;return '原液 '+(+stock.toFixed(2))+' ml + 水 '+(+(v-stock).toFixed(2))+' ml\n稀释倍数 '+(c0/c1).toFixed(0)+' 倍（按体积）';
+}
+
+// ===== CSV 增强（筛选 / 排序 / 去重 / 列运算 / 转 SQL）=====
+function csvzParse(text){
+  const lines=text.split(/\r?\n/).filter(x=>x.trim()!=='');
+  if(lines.length<1)return null;
+  const split=l=>l.split(',').map(x=>x.trim());
+  return {header:split(lines[0]),rows:lines.slice(1).map(split)};
+}
+function csvzOut(h,rows){return [h.join(',')].concat(rows.map(r=>r.join(','))).join('\n')}
+function csvzHead(s){
+  const i=s.indexOf('\n');if(i<0)return {cfg:'',body:''};
+  return {cfg:s.slice(0,i).trim(),body:s.slice(i+1)}
+}
+function csvzFilter(s){
+  const {cfg,body}=csvzHead(s);const m=cfg.match(/^([^=]+)=(.+)$/);
+  if(!m)return '首行写「列名=值」，其后为 CSV';
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const i=t.header.indexOf(m[1].trim());if(i<0)return '列不存在：'+m[1];
+  const rows=t.rows.filter(r=>r[i]===m[2].trim());
+  return rows.length?csvzOut(t.header,rows):'无匹配行'
+}
+function csvzSort(s){
+  const {cfg,body}=csvzHead(s);const m=cfg.match(/^([^,，]+)[,，]\s*(asc|desc)?$/i);
+  if(!m)return '首行写「列名,asc|desc」，其后为 CSV';
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const i=t.header.indexOf(m[1].trim());if(i<0)return '列不存在：'+m[1];
+  const dir=(m[2]||'asc').toLowerCase()==='desc'?-1:1;
+  const rows=[...t.rows].sort((a,b)=>{
+    const x=a[i]||'',y=b[i]||'',nx=Number(x),ny=Number(y);
+    if(!isNaN(nx)&&!isNaN(ny))return (nx-ny)*dir;
+    return x.localeCompare(y,'zh')*dir;
+  });
+  return csvzOut(t.header,rows)
+}
+function csvzDedup(s){
+  const {cfg,body}=csvzHead(s);const cols=cfg.split(/[,，]/).map(x=>x.trim()).filter(Boolean);
+  if(!cols.length)return '首行写去重列（可多列，逗号分隔），其后为 CSV';
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const idx=cols.map(c=>t.header.indexOf(c));if(idx.some(i=>i<0))return '列不存在：'+cols.join('/');
+  const seen=new Set();const rows=[];
+  for(const r of t.rows){const k=idx.map(i=>r[i]||'').join('\u0001');if(!seen.has(k)){seen.add(k);rows.push(r)}}
+  return csvzOut(t.header,rows)+'\n\n去重后 '+rows.length+' 行（原 '+t.rows.length+' 行）'
+}
+function csvzMath(s){
+  const {cfg,body}=csvzHead(s);const m=cfg.match(/^([^=]+)=(.+)$/);
+  if(!m)return '首行写「新列=列A+列B」，支持 + - * /，其后为 CSV';
+  const expr=m[2].trim();const e=expr.match(/^([A-Za-z0-9_\u4e00-\u9fa5]+)\s*([+\-*/])\s*([A-Za-z0-9_\u4e00-\u9fa5]+)$/);
+  if(!e)return '表达式只支持两列 + - * /';
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const ia=t.header.indexOf(e[1]),ib=t.header.indexOf(e[3]);
+  if(ia<0||ib<0)return '列不存在：'+e[1]+'/'+e[3];
+  const h=[...t.header,m[1].trim()];
+  const rows=t.rows.map(r=>{
+    const a=Number(r[ia]),b=Number(r[ib]);
+    let v='';if(!isNaN(a)&&!isNaN(b)){v=e[2]==='+'?a+b:e[2]==='-'?a-b:e[2]==='*'?a*b:(b===0?'':a/b)}
+    return [...r,String(v)]
+  });
+  return csvzOut(h,rows)
+}
+function csvzSql(s){
+  const {cfg,body}=csvzHead(s);const table=(cfg||'t').replace(/[^\w]/g,'');
+  if(!table)return '首行写表名，其后为 CSV';
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const esc=v=>"'"+String(v).replace(/'/g,"''")+"'";
+  return t.rows.map(r=>'INSERT INTO '+table+' ('+t.header.join(', ')+') VALUES ('+r.map(esc).join(', ')+');').join('\n')
+}
+
+// ===== CSV 再增强（列拆分 / 列合并 / HTML / JSON Lines / 列值替换）=====
+function cswSplit(s){
+  const {cfg,body}=csvzHead(s);const m=cfg.match(/^([^=]+)=(.+)$/);
+  if(!m)return '首行写「列名=分隔符」，如 tags=|，其后为 CSV';
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const i=t.header.indexOf(m[1].trim());if(i<0)return '列不存在：'+m[1];
+  const parts=t.rows.map(r=>String(r[i]||'').split(m[2]));
+  const n=Math.max(...parts.map(p=>p.length));
+  const head=t.header.slice();
+  head.splice(i,1,...Array.from({length:n},(_,k)=>m[1].trim()+'_'+(k+1)));
+  const rows=t.rows.map((r,k)=>{
+    const out=r.slice();
+    out.splice(i,1,...Array.from({length:n},(_,j)=>parts[k][j]||''));
+    return out;
+  });
+  return csvzOut(head,rows)+'\n\n拆分为 '+n+' 列（原 '+t.rows.length+' 行）';
+}
+function cswMerge(s){
+  const {cfg,body}=csvzHead(s);const m=cfg.match(/^([^=]+)=(.+)$/);
+  if(!m)return '首行写「新列=列A+列B」，其后为 CSV';
+  const cols=m[2].split('+').map(x=>x.trim()).filter(Boolean);
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const idx=cols.map(c=>t.header.indexOf(c));if(idx.some(i=>i<0))return '列不存在：'+cols.join('/');
+  const rows=t.rows.map(r=>[...r,idx.map(i=>r[i]||'').join('')]);
+  return csvzOut([...t.header,m[1].trim()],rows);
+}
+function cswHtml(s){
+  let {cfg,body}=csvzHead(s);
+  if(cfg.includes(',')){body=cfg+'\n'+body;cfg=''}
+  const t=csvzParse(body);if(!t)return '首行可选标题（留空行表示无标题），其后为 CSV';
+  const esc=v=>String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const title=cfg.trim();
+  return (title?'<h2>'+esc(title)+'</h2>\n':'')+
+    '<table>\n<thead><tr>'+t.header.map(h=>'<th>'+esc(h)+'</th>').join('')+'</tr></thead>\n<tbody>\n'+
+    t.rows.map(r=>'<tr>'+t.header.map((_,i)=>'<td>'+esc(r[i]===undefined?'':r[i])+'</td>').join('')+'</tr>').join('\n')+
+    '\n</tbody>\n</table>';
+}
+function cswNl(s){
+  const t=csvzParse(String(s));if(!t)return '粘贴带表头的 CSV';
+  return t.rows.map(r=>{
+    const o={};t.header.forEach((h,i)=>o[h]=r[i]===undefined?'':r[i]);
+    return JSON.stringify(o);
+  }).join('\n');
+}
+function cswReplace(s){
+  const {cfg,body}=csvzHead(s);const m=cfg.match(/^([^=]+)=([\s\S]*?)=>([\s\S]*)$/);
+  if(!m)return '首行写「列名=旧值=>新值」，其后为 CSV';
+  const t=csvzParse(body);if(!t)return 'CSV 为空';
+  const i=t.header.indexOf(m[1].trim());if(i<0)return '列不存在：'+m[1];
+  let n=0;
+  const rows=t.rows.map(r=>{
+    const c=[...r];if(c[i]===m[2]){c[i]=m[3];n++}return c;
+  });
+  return csvzOut(t.header,rows)+'\n\n替换 '+n+' 处';
+}
+
+// ===== 路径与文件（解析 / 重命名预览 / 斜杠 / 大小 / 拼接）=====
+function fpParse(s){
+  const p=s.trim();if(!p)return '请输入文件路径';
+  const n=p.replace(/\\/g,'/');
+  const abs=n.startsWith('/')||/^[A-Za-z]:\//.test(n);
+  const segs=n.split('/').filter(Boolean);
+  const file=segs.length?segs[segs.length-1]:'';
+  const i=file.lastIndexOf('.');
+  const ext=i>0?file.slice(i+1):'';
+  const stem=i>0?file.slice(0,i):file;
+  const dir=n.slice(0,Math.max(0,n.lastIndexOf('/')))||(abs?'/':'');
+  return '路径: '+p+'\n绝对路径: '+(abs?'是':'否')+'\n目录: '+dir+
+    '\n文件名: '+file+'\n主名: '+stem+'\n扩展名: '+(ext||'(无)')+'\n层级: '+segs.length;
+}
+function fpRename(s){
+  const lines=String(s).split(/\r?\n/);
+  const cfg=(lines.shift()||'').split('|');
+  const pre=cfg[0]||'',suf=cfg[1]||'';
+  const names=lines.map(x=>x.trim()).filter(Boolean);
+  if(!names.length)return '首行「前缀|后缀」，其后每行一个文件名';
+  return names.map((x,i)=>{
+    const k=x.lastIndexOf('.');
+    const stem=k>0?x.slice(0,k):x,ext=k>0?x.slice(k):'';
+    return (i+1)+'. '+pre+stem+suf+ext;
+  }).join('\n')+'\n\n共 '+names.length+' 个（仅预览，不修改文件）';
+}
+function fpSlash(s){
+  const p=s.trim();if(!p)return '请输入路径';
+  const unix=p.replace(/\\/g,'/').replace(/\/{2,}/g,'/');
+  const win=unix.replace(/\//g,'\\');
+  return 'Unix: '+unix+'\nWindows: '+win;
+}
+function fpSize(s){
+  const t=String(s).trim().toLowerCase();
+  const m=t.match(/^([\d.]+)\s*(b|kb|mb|gb|tb|k|m|g|t)?$/);
+  if(!m)return '格式：1536 或 1.5 GB';
+  const units={b:1,kb:1024,k:1024,mb:1048576,m:1048576,gb:1073741824,g:1073741824,tb:1099511627776,t:1099511627776};
+  const bytes=Number(m[1])*(units[m[2]||'b']||1);
+  const fmt=n=>n>=1099511627776?(n/1099511627776).toFixed(2)+' TB':n>=1073741824?(n/1073741824).toFixed(2)+' GB':n>=1048576?(n/1048576).toFixed(2)+' MB':n>=1024?(n/1024).toFixed(2)+' KB':n+' B';
+  return '输入: '+m[1]+' '+(m[2]||'B').toUpperCase()+'\n字节: '+Math.round(bytes)+
+    '\n格式化: '+fmt(bytes)+'\n1024 进制: '+(bytes/1024).toFixed(2)+' KB';
+}
+function fpJoin(s){
+  const lines=String(s).split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  if(!lines.length)return '每行「基准路径, 相对路径」，如 /a/b/c.txt, ../d.txt';
+  return lines.map(line=>{
+    const i=line.search(/[,，]/);
+    if(i<0)return line+' → (缺少逗号)';
+    const base=line.slice(0,i).trim().replace(/\\/g,'/');
+    const rel=line.slice(i+1).trim().replace(/\\/g,'/');
+    if(rel.startsWith('/'))return line+' → '+rel;
+    const abs=base.startsWith('/')||/^[A-Za-z]:\//.test(base);
+    const segs=base.split('/').filter(Boolean);
+    if(!base.endsWith('/'))segs.pop();
+    for(const part of rel.split('/')){
+      if(!part||part==='.')continue;
+      if(part==='..'){if(segs.length)segs.pop();continue}
+      segs.push(part);
+    }
+    return line+' → '+(abs?'/':'')+segs.join('/');
+  }).join('\n');
+}
+function fpxPattern(pat){
+  const s=pat.replace(/\\/g,'/');
+  let re='^';
+  for(let i=0;i<s.length;i++){
+    const c=s[i];
+    if(c==='*'){
+      if(s[i+1]==='*'){re+='.*';i++}
+      else re+='[^/]*';
+    }else if(c==='?')re+='[^/]';
+    else re+=c.replace(/[.+^${}()|[\]\\]/g,'\\$&');
+  }
+  return new RegExp(re+'$');
+}
+function fpxGlob(s){
+  const lines=String(s).split(/\r?\n/).filter(x=>x.trim()!=='');
+  if(lines.length<2)return '首行写通配符（支持 * ? **），其后每行一个路径';
+  const pat=lines[0].trim();
+  let re;
+  try{re=fpxPattern(pat)}catch(e){return '通配符无效：'+e.message}
+  const hits=lines.slice(1).filter(x=>re.test(x.trim().replace(/\\/g,'/')));
+  return '匹配 '+hits.length+' / '+(lines.length-1)+'\n'+(hits.length?hits.join('\n'):'(无匹配)');
+}
+function fpxExt(s){
+  const lines=String(s).split(/\r?\n/).filter(x=>x.trim()!=='');
+  if(lines.length<2)return '首行写扩展名（逗号分隔，如 .md,.txt），其后每行一个路径';
+  const exts=lines[0].split(/[,，\s]+/).map(x=>x.trim().toLowerCase().replace(/^\./,'')).filter(Boolean);
+  const hits=lines.slice(1).filter(x=>{
+    const m=x.trim().match(/\.([A-Za-z0-9]+)$/);
+    return m&&exts.includes(m[1].toLowerCase());
+  });
+  return '命中 '+hits.length+' / '+(lines.length-1)+'（'+exts.map(e=>'.'+e).join(' ')+'）\n'+(hits.length?hits.join('\n'):'(无匹配)');
+}
+function fpxTree(s){
+  const paths=String(s).split(/\r?\n/).map(x=>x.trim().replace(/\\/g,'/')).filter(Boolean);
+  if(!paths.length)return '每行一个文件路径';
+  const root={};
+  paths.forEach(p=>{
+    let node=root;
+    p.split('/').filter(Boolean).forEach(seg=>{node[seg]=node[seg]||{};node=node[seg]});
+  });
+  const walk=(node,ind)=>Object.keys(node).sort().map(k=>{
+    const kids=Object.keys(node[k]);
+    const line='  '.repeat(ind)+(kids.length?'▸ ':'· ')+k;
+    return kids.length?line+'\n'+walk(node[k],ind+1):line;
+  }).join('\n');
+  return '共 '+paths.length+' 个路径\n'+walk(root,0);
+}
+function fpxExtStat(s){
+  const items=String(s).split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  if(!items.length)return '每行一个文件名或路径';
+  const m=new Map();let none=0;
+  items.forEach(x=>{
+    const mm=x.match(/\.([A-Za-z0-9]+)$/);
+    if(mm)m.set(mm[1].toLowerCase(),(m.get(mm[1].toLowerCase())||0)+1);
+    else none++;
+  });
+  const rows=[...m.entries()].sort((a,b)=>b[1]-a[1]).map(([k,v])=>'.'+k+'  ×'+v);
+  if(none)rows.push('(无扩展名)  ×'+none);
+  return '共 '+items.length+' 个文件 / '+m.size+' 种扩展名\n'+rows.join('\n');
+}
+function fpxRel(s){
+  const paths=String(s).split(/\r?\n/).map(x=>x.trim().replace(/\\/g,'/')).filter(Boolean);
+  if(paths.length<2)return '至少两行路径，自动去掉公共目录前缀';
+  const dirs=paths.map(p=>{const i=p.lastIndexOf('/');return i>=0?p.slice(0,i):''});
+  const segs=dirs[0].split('/').filter(Boolean);
+  let n=0;
+  while(n<segs.length&&dirs.every(d=>d.split('/').filter(Boolean)[n]===segs[n]))n++;
+  const prefix='/'+segs.slice(0,n).join('/');
+  return '公共前缀: '+(n?prefix:'(无)')+'\n'+paths.map(p=>{
+    const rel=p.slice(n?prefix.length+1:0);
+    return p+' → '+rel;
+  }).join('\n');
+}
+
+// ===== 代码生成（JSON → TypeScript / Go / Python / Java / SQL）=====
+function cgInfer(v){
+  if(v===null)return {t:'null'};
+  if(Array.isArray(v)){
+    let of=null;
+    for(const x of v){const it=cgInfer(x);of=of?cgMerge(of,it):it}
+    return {t:'array',of:of||{t:'any'}};
+  }
+  if(typeof v==='object'){
+    const f={};for(const k of Object.keys(v))f[k]=cgInfer(v[k]);
+    return {t:'object',f};
+  }
+  return {t:typeof v==='number'?'number':typeof v==='boolean'?'boolean':'string'};
+}
+function cgMerge(a,b){
+  if(a.t==='null')return b;if(b.t==='null')return a;
+  if(a.t!==b.t)return {t:'any'};
+  if(a.t==='array')return {t:'array',of:cgMerge(a.of,b.of)};
+  if(a.t==='object'){
+    const f=Object.assign({},a.f);
+    for(const k in b.f)f[k]=f[k]?cgMerge(f[k],b.f[k]):b.f[k];
+    return {t:'object',f};
+  }
+  return a;
+}
+function cgRoot(s){
+  try{
+    const v=JSON.parse(s);
+    if(v===null||typeof v!=='object')return {err:'请输入 JSON 对象或对象数组'};
+    return {v};
+  }catch(e){return {err:'JSON 解析失败：'+e.message}}
+}
+function cgName(s,style){
+  const w=String(s).replace(/([a-z0-9])([A-Z])/g,'$1 $2').split(/[^A-Za-z0-9\u4e00-\u9fa5]+/).filter(Boolean);
+  if(!w.length)return 'Item';
+  if(style==='snake')return w.join('_').toLowerCase();
+  if(style==='camel')return w.map((x,i)=>i?x.charAt(0).toUpperCase()+x.slice(1):x.toLowerCase()).join('');
+  return w.map(x=>x.charAt(0).toUpperCase()+x.slice(1)).join('');
+}
+function cgUniq(){
+  const used={};
+  return base=>{let n=base||'Item',i=2;while(used[n])n=(base||'Item')+i++;used[n]=1;return n};
+}
+function cgTs(s){
+  const r=cgRoot(s);if(r.err)return r.err;
+  const out=[];const uniq=cgUniq();
+  const ty=(node,nm)=>{
+    if(node.t==='string')return 'string';
+    if(node.t==='number')return 'number';
+    if(node.t==='boolean')return 'boolean';
+    if(node.t==='null')return 'null';
+    if(node.t==='any')return 'any';
+    if(node.t==='array')return ty(node.of,nm)+'[]';
+    const u=uniq(nm);
+    const body=Object.keys(node.f).map(k=>{
+      const c=node.f[k];
+      const key=/^[A-Za-z_$][\w$]*$/.test(k)?k:JSON.stringify(k);
+      return '  '+key+': '+ty(c,cgName(k,''))+';';
+    });
+    out.push('export interface '+u+' {\n'+body.join('\n')+'\n}');
+    return u;
+  };
+  const t=ty(cgInfer(r.v),'Root');
+  if(!out.length)return '// 顶层类型：'+t;
+  return out.join('\n\n')+(t==='Root'?'':'\n\n// 顶层类型：'+t);
+}
+function cgGo(s){
+  const r=cgRoot(s);if(r.err)return r.err;
+  const out=[];const uniq=cgUniq();
+  const scalar=n=>n.t==='string'?'string':n.t==='number'?'float64':n.t==='boolean'?'bool':n.t==='array'?'[]'+scalar(n.of):'interface{}';
+  const struct=(node,nm)=>{
+    const u=uniq(nm);
+    const fields=Object.keys(node.f).map(k=>{
+      const c=node.f[k];
+      const fn=cgName(k,'');
+      const t=c.t==='object'?struct(c,fn):c.t==='array'&&c.of.t==='object'?'[]'+struct(c.of,fn):scalar(c);
+      return '    '+fn+' '+t+' `json:"'+k+'"`';
+    });
+    out.push('type '+u+' struct {\n'+(fields.length?fields.join('\n'):'')+'\n}');
+    return u;
+  };
+  const tree=cgInfer(r.v);
+  if(tree.t==='object')struct(tree,'Root');
+  else if(tree.t==='array'&&tree.of.t==='object')out.push('type Root []'+struct(tree.of,'Item'));
+  else return '根节点需为对象或对象数组';
+  return 'package main\n\n'+out.join('\n\n');
+}
+function cgPy(s){
+  const r=cgRoot(s);if(r.err)return r.err;
+  const out=[];const uniq=cgUniq();
+  const scalar=n=>n.t==='string'?'str':n.t==='number'?'float':n.t==='boolean'?'bool':n.t==='array'?'List['+scalar(n.of)+']':'Any';
+  const cls=(node,nm)=>{
+    const u=uniq(nm);
+    const fields=Object.keys(node.f).map(k=>{
+      const c=node.f[k];
+      const t=c.t==='object'?cls(c,cgName(k,'')):c.t==='array'&&c.of.t==='object'?'List['+cls(c.of,cgName(k,''))+']':scalar(c);
+      return '    '+cgName(k,'snake')+': '+t;
+    });
+    out.push('@dataclass\nclass '+u+':\n'+(fields.length?fields.join('\n'):'    pass'));
+    return u;
+  };
+  const tree=cgInfer(r.v);
+  if(tree.t==='object')cls(tree,'Root');
+  else if(tree.t==='array'&&tree.of.t==='object')out.push('Root = List['+cls(tree.of,'Item')+']');
+  else return '根节点需为对象或对象数组';
+  return 'from dataclasses import dataclass\nfrom typing import Any, List\n\n'+out.join('\n\n');
+}
+function cgJava(s){
+  const r=cgRoot(s);if(r.err)return r.err;
+  const out=[];const uniq=cgUniq();
+  const scalar=n=>n.t==='string'?'String':n.t==='number'?'Double':n.t==='boolean'?'Boolean':n.t==='array'?'List<'+scalar(n.of)+'>':'Object';
+  const cls=(node,nm)=>{
+    const u=uniq(nm);
+    const fields=Object.keys(node.f).map(k=>{
+      const c=node.f[k];
+      const t=c.t==='object'?cls(c,cgName(k,'')):c.t==='array'&&c.of.t==='object'?'List<'+cls(c.of,cgName(k,''))+'>':scalar(c);
+      return '    public '+t+' '+cgName(k,'camel')+';';
+    });
+    out.push('public static class '+u+' {\n'+fields.join('\n')+'\n}');
+    return u;
+  };
+  const tree=cgInfer(r.v);
+  if(tree.t==='object')cls(tree,'Root');
+  else if(tree.t==='array'&&tree.of.t==='object')out.push('public static class Root extends ArrayList<'+cls(tree.of,'Item')+'> {}');
+  else return '根节点需为对象或对象数组';
+  return 'import java.util.ArrayList;\nimport java.util.List;\n\npublic class JsonModel {\n'+
+    out.map(x=>x.replace(/^/gm,'    ')).join('\n\n')+'\n}';
+}
+function cgSql(s){
+  const r=cgRoot(s);if(r.err)return r.err;
+  const v=Array.isArray(r.v)?r.v:[r.v];
+  const tree=cgInfer(v);
+  const f=tree.t==='object'?tree.f:(tree.of&&tree.of.t==='object'?tree.of.f:null);
+  if(!f||!Object.keys(f).length)return '请输入对象数组，如 [{"id":1,"name":"a"}]';
+  const col=n=>n.t==='number'?'DOUBLE PRECISION':n.t==='boolean'?'BOOLEAN':n.t==='object'||n.t==='array'?'JSONB':'TEXT';
+  const lines=Object.keys(f).map(k=>'  '+cgName(k,'snake')+' '+col(f[k])+(k==='id'?' PRIMARY KEY':''));
+  return 'CREATE TABLE data_table (\n'+lines.join(',\n')+'\n);';
+}
+
+// ===== 网络计算（IPv4 子网 / 掩码 / 整数 / 分类 / 网段关系）=====
+function ipToInt(s){
+  const p=String(s).trim().split('.');
+  if(p.length!==4)return null;
+  let n=0;
+  for(const x of p){
+    if(!/^\d{1,3}$/.test(x))return null;
+    const v=Number(x);if(v>255)return null;
+    n=n*256+v;
+  }
+  return n;
+}
+function ipStr(n){
+  n=Math.floor(n)%4294967296;
+  if(n<0)n+=4294967296;
+  return [Math.floor(n/16777216),Math.floor(n/65536)%256,Math.floor(n/256)%256,n%256].join('.');
+}
+function ipMaskBits(bits){
+  bits=Number(bits);
+  if(!Number.isInteger(bits)||bits<0||bits>32)return null;
+  return bits===0?0:(0xFFFFFFFF<<(32-bits))>>>0;
+}
+function ipParseCidr(s){
+  const m=String(s).trim().match(/^([\d.]+)\/(\d{1,2})$/);
+  if(!m)return null;
+  const ip=ipToInt(m[1]),bits=Number(m[2]);
+  if(ip===null||bits>32)return null;
+  const mask=ipMaskBits(bits);
+  const size=Math.pow(2,32-bits);
+  const net=ip-(ip%size);
+  return {ip,bits,mask,net,bcast:net+size-1,size};
+}
+function ipSubnet(s){
+  const c=ipParseCidr(s);
+  if(!c)return '请输入 CIDR，如 192.168.1.10/24';
+  const hosts=c.bits===32?1:(c.bits===31?2:c.size-2);
+  const first=c.bits>=31?c.net:c.net+1;
+  const last=c.bits>=31?c.bcast:c.bcast-1;
+  return '网络地址: '+ipStr(c.net)+'\n广播地址: '+ipStr(c.bcast)+
+    '\n可用范围: '+ipStr(first)+' - '+ipStr(last)+'\n可用主机: '+hosts+
+    '\n子网掩码: '+ipStr(c.mask)+'\n通配符: '+ipStr(4294967295-c.mask);
+}
+function ipMaskConv(s){
+  const t=String(s).trim();
+  if(/^\d{1,2}$/.test(t)){
+    const b=Number(t);
+    if(b>32)return '前缀需 0~32';
+    const m=ipMaskBits(b);
+    return '前缀: /'+b+'\n掩码: '+ipStr(m)+'\n通配符: '+ipStr(4294967295-m)+'\n地址数: '+Math.pow(2,32-b);
+  }
+  const n=ipToInt(t);
+  if(n===null)return '请输入前缀（如 24）或掩码（如 255.255.255.0）';
+  let bits=0,zero=false;
+  for(let i=31;i>=0;i--){const bit=Math.floor(n/Math.pow(2,i))%2;if(bit===1){if(zero)return '掩码不连续：'+t;bits++}else zero=true}
+  return '掩码: '+t+'\n前缀: /'+bits+'\n通配符: '+ipStr(4294967295-n)+'\n地址数: '+Math.pow(2,32-bits);
+}
+function ipIntConv(s){
+  const t=String(s).trim();
+  let n=null;
+  if(/^\d{1,3}(\.\d{1,3}){3}$/.test(t))n=ipToInt(t);
+  else if(/^\d+$/.test(t)&&Number(t)<=4294967295)n=Number(t);
+  else if(/^0x[0-9a-fA-F]{1,8}$/.test(t))n=parseInt(t,16);
+  if(n===null)return '请输入点分 IP、整数或 0x 十六进制';
+  return '点分: '+ipStr(n)+'\n整数: '+n+'\n十六进制: 0x'+n.toString(16).toUpperCase().padStart(8,'0')+
+    '\n二进制: '+n.toString(2).padStart(32,'0').replace(/(.{8})(?=.)/g,'$1.');
+}
+function ipClassify(s){
+  const t=String(s).trim().split('/')[0];
+  const n=ipToInt(t);
+  if(n===null)return '请输入 IPv4 地址';
+  const inR=(a,b)=>n>=ipToInt(a)&&n<=ipToInt(b);
+  let tag='公网地址（可路由）';
+  if(inR('0.0.0.0','0.255.255.255'))tag='本网络（0/8，保留）';
+  else if(inR('10.0.0.0','10.255.255.255'))tag='私有地址（10/8）';
+  else if(inR('100.64.0.0','100.127.255.255'))tag='运营商级 NAT（100.64/10）';
+  else if(inR('127.0.0.0','127.255.255.255'))tag='回环地址（127/8）';
+  else if(inR('169.254.0.0','169.254.255.255'))tag='链路本地（169.254/16）';
+  else if(inR('172.16.0.0','172.31.255.255'))tag='私有地址（172.16/12）';
+  else if(inR('192.0.0.0','192.0.0.255'))tag='IETF 协议保留（192.0.0/24）';
+  else if(inR('192.0.2.0','192.0.2.255'))tag='文档示例（192.0.2/24）';
+  else if(inR('192.168.0.0','192.168.255.255'))tag='私有地址（192.168/16）';
+  else if(inR('198.18.0.0','198.19.255.255'))tag='基准测试（198.18/15）';
+  else if(inR('224.0.0.0','239.255.255.255'))tag='组播地址（224/4）';
+  else if(inR('240.0.0.0','255.255.255.255'))tag='保留 / 广播（240/4）';
+  return t+' → '+tag;
+}
+function ipRangeCheck(s){
+  const parts=String(s).split(/[,，\n]/).map(x=>x.trim()).filter(Boolean);
+  if(parts.length<2)return '格式：网段,IP 或 网段1,网段2';
+  const c1=ipParseCidr(parts[0]);
+  if(!c1)return '第一段不是 CIDR：'+parts[0];
+  if(parts[1].includes('/')){
+    const c2=ipParseCidr(parts[1]);
+    if(!c2)return '第二段 CIDR 无效：'+parts[1];
+    const overlap=c1.net<=c2.bcast&&c2.net<=c1.bcast;
+    return (overlap?'重叠':'不重叠')+'：'+parts[0]+' 与 '+parts[1]+
+      (overlap?'\n交集: '+ipStr(Math.max(c1.net,c2.net))+' - '+ipStr(Math.min(c1.bcast,c2.bcast)):'');
+  }
+  const ip=ipToInt(parts[1]);
+  if(ip===null)return '第二段不是合法 IP：'+parts[1];
+  const hit=ip>=c1.net&&ip<=c1.bcast;
+  return (hit?'在范围内':'不在范围内')+'：'+parts[1]+' ∈ '+parts[0];
+}
+
+// ===== Markdown 处理（表格 / 大纲 / 链接 / 任务清单）=====
+function mdCells(line){
+  let t=line.trim();
+  if(t.startsWith('|'))t=t.slice(1);
+  if(t.endsWith('|'))t=t.slice(0,-1);
+  const out=[];let cur='';
+  for(let i=0;i<t.length;i++){
+    if(t[i]==='\\'&&t[i+1]==='|'){cur+='|';i++;continue}
+    if(t[i]==='|'){out.push(cur.trim());cur='';continue}
+    cur+=t[i];
+  }
+  out.push(cur.trim());
+  return out;
+}
+function mdTable(s){
+  const lines=String(s).split(/\r?\n/).filter(x=>x.trim().includes('|'));
+  if(lines.length<2)return null;
+  const head=mdCells(lines[0]);
+  const sep=mdCells(lines[1]);
+  const hasSep=sep.length>=head.length&&sep.every(c=>/^:?-{2,}:?$/.test(c));
+  const body=lines.slice(hasSep?2:1).map(mdCells).filter(r=>r.some(c=>c!==''));
+  return {head,rows:body};
+}
+function mdTableCsv(s){
+  const t=mdTable(s);
+  if(!t)return '未找到 Markdown 表格（需含 | 的表头与分隔行）';
+  const esc=v=>/[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;
+  const out=[t.head.map(esc).join(',')].concat(t.rows.map(r=>r.map(esc).join(',')));
+  return out.join('\n')+'\n\n共 '+t.rows.length+' 行 / '+t.head.length+' 列';
+}
+function mdTableJson(s){
+  const t=mdTable(s);
+  if(!t)return '未找到 Markdown 表格（需含 | 的表头与分隔行）';
+  const conv=v=>/^-?\d+(\.\d+)?$/.test(v)?Number(v):(v==='true'?true:v==='false'?false:v);
+  const arr=t.rows.map(r=>{
+    const o={};
+    t.head.forEach((h,i)=>{o[h||('col'+(i+1))]=conv(r[i]===undefined?'':r[i])});
+    return o;
+  });
+  return JSON.stringify(arr,null,2);
+}
+function mdOutline(s){
+  const out=[];
+  String(s).split(/\r?\n/).forEach(line=>{
+    const m=line.match(/^(#{1,6})\s+(.+?)\s*#*\s*$/);
+    if(m)out.push('  '.repeat(m[1].length-1)+'H'+m[1].length+' '+m[2]);
+  });
+  return out.length?out.join('\n')+'\n\n共 '+out.length+' 个标题':'未找到 Markdown 标题（# 开头）';
+}
+function mdLinks(s){
+  const text=String(s);const out=[];
+  const re=/!?\[([^\]]*)\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g;let m;
+  while((m=re.exec(text))){
+    const isImg=text.slice(Math.max(0,m.index),m.index+1)==='!';
+    out.push((isImg?'图片':'链接')+' | '+(m[1]||'-')+' | '+m[2]);
+  }
+  const bare=text.replace(/!?\[[^\]]*\]\([^)]*\)/g,' ').match(/https?:\/\/[^\s)>"']+/g)||[];
+  [...new Set(bare)].forEach(u=>out.push('裸链接 | - | '+u));
+  return out.length?out.join('\n')+'\n\n共 '+out.length+' 条':'未找到链接或图片';
+}
+function mdTasks(s){
+  const text=String(s);
+  const done=(text.match(/^\s*[-*+]\s+\[[xX]\]/gm)||[]).length;
+  const todo=(text.match(/^\s*[-*+]\s+\[\s\]/gm)||[]).length;
+  const total=done+todo;
+  if(!total)return '未找到任务清单（- [ ] / - [x]）';
+  return '未完成: '+todo+'\n已完成: '+done+'\n总计: '+total+'\n完成率: '+Math.round(done/total*100)+'%';
+}
+
 
 const GEN={ http:httpStatus,mime:mimeType,cron:cronExplain,git:gitHelp,port:portLookup };
 const $=s=>document.querySelector(s);
@@ -1108,6 +1823,13 @@ $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.na
 $('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;$('#copy').onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
+$('#pick').onclick=()=>$('#file').click();
+$('#file').onchange=()=>{const f=$('#file').files&&$('#file').files[0];if(!f)return;
+if(f.size>2097152){$('#err').textContent='文件超过 2MB，请分段或改用粘贴';return}
+const r=new FileReader();
+r.onload=()=>{$('#inp').value=String(r.result);$('#fname').textContent=f.name+' · '+Math.max(1,Math.round(f.size/1024))+' KB';run()};
+r.onerror=()=>{$('#err').textContent='文件读取失败'};
+r.readAsText(f,'utf-8')};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
 </script></body></html>
