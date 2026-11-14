@@ -70,6 +70,7 @@ SELF_CONTAINERS = [
     ("工程单位换算", "压力 / 功率 / 能量 / 扭矩 / 流量", "tools-engunit.html"),
     ("XML ", "XML 转 JSON / JSON 转 XML / 格式化 / 压缩 / 结构统计", "tools-xml.html"),
     ("健康与身体计算", "BMI / 基础代谢 / 每日消耗 / 饮水 / 体脂率", "tools-health.html"),
+    ("JSON 与 YAML", "YAML↔JSON / YAML 格式化 / JSON 扁平化 / 展开", "tools-jsonyaml.html"),
 ]
 
 # 实体卡片（GEO 唯一文案源）：优先项目根状态文件，独立克隆时回退 data/entity-card.json
