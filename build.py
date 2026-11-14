@@ -68,6 +68,7 @@ SELF_CONTAINERS = [
     ("工资与税费计算", "个税 / 年终奖 / 加班费 / 请假扣款 / 到手反推", "tools-salary.html"),
     ("文本整理与格式", "标点互转 / 中英文空格 / 轻加密 / 去标记 / INI 互转", "tools-textfmt.html"),
     ("工程单位换算", "压力 / 功率 / 能量 / 扭矩 / 流量", "tools-engunit.html"),
+    ("XML ", "XML 转 JSON / JSON 转 XML / 格式化 / 压缩 / 结构统计", "tools-xml.html"),
 ]
 
 # 实体卡片（GEO 唯一文案源）：优先项目根状态文件，独立克隆时回退 data/entity-card.json
