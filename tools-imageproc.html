@@ -34,11 +34,11 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><div class="row"><button id="pick" class="primary">选择图片</button><input type="file" id="file" accept="image/*" hidden><span class="hint" id="fname"></span></div>
+<div class="cols"><div><div class="row"><button id="pick" class="primary">选择图片</button><input type="file" id="file" accept="image/*" multiple hidden><span class="hint" id="fname"></span></div>
 <img id="prev" alt="原图预览" style="max-width:100%;border:1px solid #e5e7eb;border-radius:10px;margin-top:8px;display:none">
 <div class="row"><input id="p" placeholder="参数：宽度 / 质量 / 边长（按工具说明，可空）"></div>
-<div class="row"><button id="run" class="primary">处理</button><a id="dl" class="hint" download hidden>下载结果</a></div>
-<div class="err" id="err"></div></div><div><pre id="out"></pre><img id="imgout" alt="处理结果" style="max-width:100%;border-radius:10px;margin-top:8px;display:none"></div></div></section>
+<div class="row"><button id="run" class="primary">处理</button><span class="hint">可多选图片，逐张处理</span></div>
+<div class="err" id="err"></div></div><div><pre id="out"></pre><div class="cardgrid" id="results"></div></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
@@ -1889,41 +1889,53 @@ function mdTasks(s){
 
 const GEN={ info:imInfo,jpeg:imJpeg,png:imPng,webp:imWebp,thumb:imThumb,resize:imWidth,quality:imQuality,square:imSquare };
 const $=s=>document.querySelector(s);
-const IMGMODE=true;const IMG={src:''};
+const IMGMODE=true;const IMG={list:[]};
 function route(){const k=(location.hash||'').replace(/^#\//,'');const t=TOOLS.find(x=>x.key===k);
 document.querySelectorAll('nav.tabs a').forEach(a=>a.classList.toggle('on',a.dataset.k===k));
 if(!t){$('#home').hidden=false;$('#tool').hidden=true;return}
 $('#home').hidden=true;$('#tool').hidden=false;$('#tname').textContent=t.name;$('#thint').textContent=t.desc;
 $('#err').textContent='';$('#out').textContent='';}
-function run(){const k=(location.hash||'').replace(/^#\//,'');const f=GEN[k];if(!f)return;
-const arg=IMGMODE?{src:IMG.src,param:($('#p')?$('#p').value:'')}:$('#inp').value;
-if(IMGMODE&&!IMG.src){$('#err').textContent='请先选择图片';return}
-try{$('#err').textContent='';const r=f(arg);
-const show=v=>{
- if(v&&typeof v==='object'&&v.dataUrl){
-  $('#imgout').src=v.dataUrl;$('#imgout').style.display='block';$('#out').textContent='';$('#out').style.display='none';
-  const dl=$('#dl');if(dl){dl.href=v.dataUrl;dl.download=v.name||'result';dl.hidden=false}
- }else{
-  const io=$('#imgout');if(io)io.style.display='none';const dl=$('#dl');if(dl)dl.hidden=true;
-  $('#out').style.display='block';$('#out').textContent=String(v);
+async function run(){const k=(location.hash||'').replace(/^#\//,'');const f=GEN[k];if(!f)return;
+if(IMGMODE){
+ if(!IMG.list.length){$('#err').textContent='请先选择图片';return}
+ $('#err').textContent='';$('#out').textContent='';$('#results').textContent='处理中…';
+ const param=$('#p')?$('#p').value:'';const out=[];
+ for(const it of IMG.list){
+  let v;try{v=await f({src:it.src,param})}catch(e){v='失败：'+e.message}
+  out.push({name:it.name,v});
  }
-};
-if(r&&typeof r.then==='function'){$('#out').style.display='block';$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
+ $('#results').innerHTML=out.map(o=>{
+  const base=(o.name.replace(/\.[^.]+$/,'')||'img');
+  if(o.v&&o.v.dataUrl){
+   const dn=base+'_'+o.v.name;
+   return '<div class="card"><img src="'+o.v.dataUrl+'" alt="结果" style="max-width:100%;border-radius:8px"><p style="margin:6px 0">'+o.name+' → '+o.v.name+'</p><a download="'+dn+'" href="'+o.v.dataUrl+'">下载</a></div>';
+  }
+  return '<div class="card"><p style="margin:0 0 6px">'+o.name+'</p><pre style="min-height:60px">'+String(o.v).replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</pre></div>';
+ }).join('');
+ return;
+}
+try{$('#err').textContent='';const r=f($('#inp').value);
+const show=v=>{$('#out').textContent=String(v)};
+if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
 $('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;const cp=$('#copy');if(cp)cp.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
 $('#pick').onclick=()=>$('#file').click();
-$('#file').onchange=()=>{{const f=$('#file').files&&$('#file').files[0];if(!f)return;
-if(f.size>10485760){{$('#err').textContent='图片超过 10MB';return}}
-const r=new FileReader();
-r.onload=()=>{{const s=String(r.result);IMG.src=s;$('#prev').src=s;$('#prev').style.display='block';
-$('#fname').textContent=f.name+' · '+Math.max(1,Math.round(f.size/1024))+' KB';
-$('#err').textContent='';$('#out').textContent='';$('#imgout').style.display='none';
-const dl=$('#dl');if(dl)dl.hidden=true}};
-r.onerror=()=>{{$('#err').textContent='图片读取失败'}};
-r.readAsDataURL(f)}};
+$('#file').onchange=async()=>{
+const fs=[...($('#file').files||[])];if(!fs.length)return;
+const bad=fs.find(f=>f.size>10485760);if(bad){$('#err').textContent='图片超过 10MB：'+bad.name;return}
+const read=f=>new Promise((res,rej)=>{const r=new FileReader();
+r.onload=()=>res({name:f.name,src:String(r.result)});
+r.onerror=()=>rej(new Error('读取失败：'+f.name));r.readAsDataURL(f)});
+try{
+IMG.list=await Promise.all(fs.map(read));
+$('#prev').src=IMG.list[0].src;$('#prev').style.display='block';
+$('#fname').textContent=IMG.list.length+' 张 · 首张 '+IMG.list[0].name;
+$('#err').textContent='';$('#results').innerHTML='';
+}catch(e){$('#err').textContent=e.message}
+};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
 </script></body></html>

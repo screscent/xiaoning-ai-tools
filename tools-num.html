@@ -1497,13 +1497,15 @@ function fpxRel(s){
   }).join('\n');
 }
 
-// ===== 图片处理（本地 canvas：压缩 / 转格式 / 缩略图 / 信息）=====
+// ===== 图片处理（本地 canvas：压缩 / 转格式 / 缩略图 / 信息 / 尺寸参数）=====
+function imSrc(s){return typeof s==='string'?s:(s&&s.src)||''}
+function imParam(s){const v=s&&s.param!==undefined?s.param:'';return String(v).trim()}
 function imLoad(src){
   return new Promise((res,rej)=>{
     const img=new Image();
     img.onload=()=>res(img);
     img.onerror=()=>rej(new Error('图片解码失败'));
-    img.src=src;
+    img.src=imSrc(src);
   });
 }
 function imDraw(img,w,h){
@@ -1512,37 +1514,62 @@ function imDraw(img,w,h){
   c.getContext('2d').drawImage(img,0,0,w,h);
   return c;
 }
-async function imInfo(src){
-  const img=await imLoad(src);
+async function imInfo(s){
+  const img=await imLoad(s);
   const c=imDraw(img,img.width,img.height);
   const jpg=c.toDataURL('image/jpeg',0.8);
   return '尺寸: '+img.width+'×'+img.height+
     '\n宽高比: '+(img.width/img.height).toFixed(3)+
-    '\n原图体积: ~'+Math.round(src.length*0.75/1024)+' KB'+
+    '\n原图体积: ~'+Math.round(imSrc(s).length*0.75/1024)+' KB'+
     '\nJPEG 0.8 估算: ~'+Math.round(jpg.length*0.75/1024)+' KB'+
     '\n总像素: '+(img.width*img.height/1e6).toFixed(2)+' MP';
 }
-async function imJpeg(src){
-  const img=await imLoad(src);
+async function imJpeg(s){
+  const img=await imLoad(s);
   const c=imDraw(img,img.width,img.height);
-  return {kind:'image',dataUrl:c.toDataURL('image/jpeg',0.8),name:'compressed.jpg'};
+  const q=Math.min(1,Math.max(0.1,(Number(imParam(s))||80)/100));
+  return {kind:'image',dataUrl:c.toDataURL('image/jpeg',q),name:'compressed.jpg'};
 }
-async function imPng(src){
-  const img=await imLoad(src);
+async function imPng(s){
+  const img=await imLoad(s);
   const c=imDraw(img,img.width,img.height);
   return {kind:'image',dataUrl:c.toDataURL('image/png'),name:'converted.png'};
 }
-async function imWebp(src){
-  const img=await imLoad(src);
+async function imWebp(s){
+  const img=await imLoad(s);
   const c=imDraw(img,img.width,img.height);
   return {kind:'image',dataUrl:c.toDataURL('image/webp',0.9),name:'converted.webp'};
 }
-async function imThumb(src){
-  const img=await imLoad(src);
+async function imThumb(s){
+  const img=await imLoad(s);
   const r=Math.min(1,1280/Math.max(img.width,img.height));
   const w=Math.max(1,Math.round(img.width*r)),h=Math.max(1,Math.round(img.height*r));
   const c=imDraw(img,w,h);
   return {kind:'image',dataUrl:c.toDataURL('image/jpeg',0.85),name:'thumb_'+w+'x'+h+'.jpg'};
+}
+async function imWidth(s){
+  const img=await imLoad(s);
+  const w=Math.max(1,Math.min(8000,Math.round(Number(imParam(s))||img.width)));
+  const h=Math.max(1,Math.round(img.height*w/img.width));
+  const c=imDraw(img,w,h);
+  return {kind:'image',dataUrl:c.toDataURL('image/jpeg',0.85),name:'resized_'+w+'x'+h+'.jpg'};
+}
+async function imQuality(s){
+  const img=await imLoad(s);
+  const n=Number(imParam(s));
+  const q=n>1?Math.min(100,n)/100:(n>0?n:0.8);
+  const c=imDraw(img,img.width,img.height);
+  return {kind:'image',dataUrl:c.toDataURL('image/jpeg',q),name:'q'+Math.round(q*100)+'.jpg'};
+}
+async function imSquare(s){
+  const img=await imLoad(s);
+  const n=Number(imParam(s));
+  const side=Math.max(1,Math.min(Math.min(img.width,img.height),n>0?Math.round(n):Math.min(img.width,img.height)));
+  const x=Math.round((img.width-side)/2),y=Math.round((img.height-side)/2);
+  const c=document.createElement('canvas');
+  c.width=side;c.height=side;
+  c.getContext('2d').drawImage(img,x,y,side,side,0,0,side,side);
+  return {kind:'image',dataUrl:c.toDataURL('image/jpeg',0.9),name:'square_'+side+'.jpg'};
 }
 
 // ===== 代码生成（JSON → TypeScript / Go / Python / Java / SQL）=====
@@ -1860,26 +1887,34 @@ function mdTasks(s){
 
 const GEN={ pct:pctOf,disc:discPrice,avg:avgMed,round:roundN,thousand:thousand };
 const $=s=>document.querySelector(s);
-const IMGMODE=false;const IMG={src:''};
+const IMGMODE=false;const IMG={list:[]};
 function route(){const k=(location.hash||'').replace(/^#\//,'');const t=TOOLS.find(x=>x.key===k);
 document.querySelectorAll('nav.tabs a').forEach(a=>a.classList.toggle('on',a.dataset.k===k));
 if(!t){$('#home').hidden=false;$('#tool').hidden=true;return}
 $('#home').hidden=true;$('#tool').hidden=false;$('#tname').textContent=t.name;$('#thint').textContent=t.desc;
 $('#err').textContent='';$('#out').textContent='';}
-function run(){const k=(location.hash||'').replace(/^#\//,'');const f=GEN[k];if(!f)return;
-const arg=IMGMODE?IMG.src:$('#inp').value;
-if(IMGMODE&&!arg){$('#err').textContent='请先选择图片';return}
-try{$('#err').textContent='';const r=f(arg);
-const show=v=>{
- if(v&&typeof v==='object'&&v.dataUrl){
-  $('#imgout').src=v.dataUrl;$('#imgout').style.display='block';$('#out').textContent='';$('#out').style.display='none';
-  const dl=$('#dl');if(dl){dl.href=v.dataUrl;dl.download=v.name||'result';dl.hidden=false}
- }else{
-  const io=$('#imgout');if(io)io.style.display='none';const dl=$('#dl');if(dl)dl.hidden=true;
-  $('#out').style.display='block';$('#out').textContent=String(v);
+async function run(){const k=(location.hash||'').replace(/^#\//,'');const f=GEN[k];if(!f)return;
+if(IMGMODE){
+ if(!IMG.list.length){$('#err').textContent='请先选择图片';return}
+ $('#err').textContent='';$('#out').textContent='';$('#results').textContent='处理中…';
+ const param=$('#p')?$('#p').value:'';const out=[];
+ for(const it of IMG.list){
+  let v;try{v=await f({src:it.src,param})}catch(e){v='失败：'+e.message}
+  out.push({name:it.name,v});
  }
-};
-if(r&&typeof r.then==='function'){$('#out').style.display='block';$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
+ $('#results').innerHTML=out.map(o=>{
+  const base=(o.name.replace(/\.[^.]+$/,'')||'img');
+  if(o.v&&o.v.dataUrl){
+   const dn=base+'_'+o.v.name;
+   return '<div class="card"><img src="'+o.v.dataUrl+'" alt="结果" style="max-width:100%;border-radius:8px"><p style="margin:6px 0">'+o.name+' → '+o.v.name+'</p><a download="'+dn+'" href="'+o.v.dataUrl+'">下载</a></div>';
+  }
+  return '<div class="card"><p style="margin:0 0 6px">'+o.name+'</p><pre style="min-height:60px">'+String(o.v).replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</pre></div>';
+ }).join('');
+ return;
+}
+try{$('#err').textContent='';const r=f($('#inp').value);
+const show=v=>{$('#out').textContent=String(v)};
+if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
 $('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
