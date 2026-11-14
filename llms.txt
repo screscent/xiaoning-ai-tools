@@ -2,7 +2,7 @@
 
 > 小凝 AI 工具集：按场景分类的在线工具库，免费工具直接可用，AI 生成类 ¥1–¥3 解锁。
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。目录 501 个工具，另含本地工具集内单个小工具 353 个，站内搜索合计 854 条。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。目录 501 个工具，另含本地工具集内单个小工具 356 个，站内搜索合计 857 条。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ 搜索：https://screscent.github.io/xiaoning-ai-tools/search.html ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 全部免费工具（GitHub 自建快照）：https://screscent.github.io/xiaoning-ai-tools/legacy/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn（仅保留 131 个 AI 付费工具与入口，免费工具均在 GitHub 主站）｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn
 
@@ -28,7 +28,7 @@
 - [隐私与口令](https://screscent.github.io/xiaoning-ai-tools/sets/tools-privacy.html)：手机号 / 身份证 / 邮箱 / 卡号脱敏，密码强度、熵与隐私扫描
 - [出行换算](https://screscent.github.io/xiaoning-ai-tools/sets/tools-travel.html)：时差 / 飞行时长 / 油耗 / 多人分摊 / 签证停留期 / 打包清单
 
-## 自建工具集（33 组 / 245 个免费工具）
+## 自建工具集（33 组 / 248 个免费工具）
 - [HTML 实体与符号](https://screscent.github.io/xiaoning-ai-tools/tools-entity.html)：实体转义/反转义、数字实体、常用符号查询
 - [折扣与数字统计](https://screscent.github.io/xiaoning-ai-tools/tools-num.html)：折扣到手价、百分比、均值/中位数、四舍五入、千分位
 - [随机生成与密码强度](https://screscent.github.io/xiaoning-ai-tools/tools-sec.html)：随机密码 / PIN / UUID / 随机串、密码强度评分
