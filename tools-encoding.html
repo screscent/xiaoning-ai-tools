@@ -1,6 +1,6 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>编码增强</title><meta property="og:image" content="https://screscent.github.io/xiaoning-ai-tools/legacy/assets/og-cover.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><style>
+<title>编码增强 · 在线工具合集（免费纯前端）</title><meta property="og:image" content="https://screscent.github.io/xiaoning-ai-tools/legacy/assets/og-cover.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><style>
 *{box-sizing:border-box}body{margin:0;font:14px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#1f2329;background:#f7f8fa}
 a{color:inherit;text-decoration:none}header{max-width:1180px;margin:0 auto;padding:20px 16px 8px}
 .crumb{font-size:12px;color:#8a9099}h1{font-size:22px;margin:8px 0 4px}.sub{color:#5c6370;font-size:13px}
@@ -148,6 +148,47 @@ function reExtract(s){const [p,t]=s.split('@@');if(t===undefined)return '格式�
 function reReplace(s){const a=s.split('@@');if(a.length<3)return '格式：pattern@@替换@@文本';try{return a[2].replace(new RegExp(a[0],'g'),a[1])}catch(e){return '正则无效：'+e.message}}
 function reEsc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
 function reCount(s){const [p,t]=s.split('@@');if(t===undefined)return '格式：pattern@@text';try{const m=t.match(new RegExp(p,'g'));return '匹配 '+(m?m.length:0)+' 次｜文本长度 '+t.length}catch(e){return '正则无效：'+e.message}}
+function reGroups(s){
+  const i=s.indexOf('@@');
+  if(i<0)return '格式：pattern@@text（可带捕获组 / 命名组）';
+  const p=s.slice(0,i),t=s.slice(i+2);
+  let re;try{re=new RegExp(p,'g')}catch(e){return '正则无效：'+e.message}
+  const rows=[];let n=0;
+  for(const m of t.matchAll(re)){
+    n++;
+    rows.push('#'+n+' 匹配: '+m[0]);
+    if(m.groups)Object.keys(m.groups).forEach(k=>rows.push('  '+k+': '+(m.groups[k]??'')));
+    m.slice(1).forEach((g,k)=>rows.push('  g'+(k+1)+': '+(g??'')));
+    if(n>=50)break;
+  }
+  return rows.length?rows.join('\n')+'\n\n共 '+n+' 处':'(无匹配)';
+}
+function rePreview(s){
+  const a=s.split('@@');
+  if(a.length<3)return '格式：pattern@@替换@@text';
+  const [p,rep,t]=a;
+  let re;try{re=new RegExp(p,'g')}catch(e){return '正则无效：'+e.message}
+  const hits=(t.match(re)||[]).length;
+  const rows=[];let changed=0;
+  for(const line of t.split(/\r?\n/)){
+    if(!new RegExp(p).test(line))continue;
+    changed++;
+    if(changed<=8){
+      rows.push('原: '+line);
+      rows.push('新: '+line.replace(new RegExp(p,'g'),rep));
+      rows.push('');
+    }
+  }
+  return (rows.length?rows.join('\n'):'(无命中行)')+'\n改动 '+changed+' 行 / '+hits+' 处';
+}
+function reSplit(s){
+  const i=s.indexOf('@@');
+  if(i<0)return '格式：pattern@@text';
+  const p=s.slice(0,i),t=s.slice(i+2);
+  let parts;try{parts=t.split(new RegExp(p))}catch(e){return '正则无效：'+e.message}
+  const rows=parts.map(x=>x.trim()).filter(Boolean);
+  return rows.length?rows.join('\n')+'\n\n共 '+rows.length+' 段':'(无内容)';
+}
 function cleanTrim(s){return s.split('\n').map(x=>x.trim()).join('\n')}
 function dropEmpty(s){return s.split('\n').filter(x=>x.trim()).join('\n')}
 function dedupeLines(s){const seen=new Set();return s.split('\n').filter(x=>{if(seen.has(x))return false;seen.add(x);return true}).join('\n')}
@@ -1302,6 +1343,75 @@ function dateFmt(s){
     const p=n=>String(n).padStart(2,'0');
     return line+' → '+spec.replace(/YYYY/g,d.getFullYear()).replace(/MM/g,p(d.getMonth()+1)).replace(/DD/g,p(d.getDate())).replace(/HH/g,p(d.getHours())).replace(/mm/g,p(d.getMinutes())).replace(/ss/g,p(d.getSeconds()));
   }).join('\n')
+}
+function cronSet(expr,lo,hi){
+  const out=new Set();
+  for(const part of String(expr).split(',')){
+    let m;
+    if(part==='*'){for(let i=lo;i<=hi;i++)out.add(i);continue}
+    if((m=part.match(/^\*\/(\d+)$/))){const n=+m[1];if(!n)return null;for(let i=lo;i<=hi;i++)if((i-lo)%n===0)out.add(i);continue}
+    if((m=part.match(/^(\d+)-(\d+)(?:\/(\d+))?$/))){const a=+m[1],b=+m[2],st=m[3]?+m[3]:1;if(!st)return null;for(let i=a;i<=b;i+=st)out.add(i);continue}
+    if(/^\d+$/.test(part)){out.add(+part);continue}
+    return null;
+  }
+  for(const v of out)if(v<lo||v>hi)return null;
+  return out.size?out:null;
+}
+function cronNext(s){
+  const t=String(s).trim();
+  if(!t)return '输入 5 段 cron：分 时 日 月 周';
+  const f=t.split(/\s+/);
+  if(f.length!==5)return '需要 5 段：分 时 日 月 周';
+  const mi=cronSet(f[0],0,59),ho=cronSet(f[1],0,23),da=cronSet(f[2],1,31),mo=cronSet(f[3],1,12),wd=cronSet(f[4],0,6);
+  if(!mi||!ho||!da||!mo||!wd)return '字段非法：分0-59 时0-23 日1-31 月1-12 周0-6';
+  const d=new Date();d.setSeconds(0,0);d.setMinutes(d.getMinutes()+1);
+  const res=[];let guard=0;
+  while(res.length<5&&guard<200000){
+    guard++;
+    if(mo.has(d.getMonth()+1)&&da.has(d.getDate())&&wd.has(d.getDay())&&ho.has(d.getHours())&&mi.has(d.getMinutes()))res.push(new Date(d));
+    d.setMinutes(d.getMinutes()+1);
+  }
+  const p=n=>String(n).padStart(2,'0');
+  const fmt=x=>x.getFullYear()+'-'+p(x.getMonth()+1)+'-'+p(x.getDate())+' '+p(x.getHours())+':'+p(x.getMinutes());
+  return '分['+[...mi].sort((a,b)=>a-b).join(',')+'] 时['+[...ho].sort((a,b)=>a-b).join(',')+']'+
+    '\n接下来 '+res.length+' 次（本地时区）:\n'+(res.length?res.map(fmt).join('\n'):'(搜索上限内无匹配)');
+}
+function tzAbbr(s){
+  const t=String(s).trim().toUpperCase();
+  const MAP={CST:['Asia/Shanghai','America/Chicago'],EST:['America/New_York'],EDT:['America/New_York'],PST:['America/Los_Angeles'],PDT:['America/Los_Angeles'],GMT:['Etc/GMT'],UTC:['UTC'],JST:['Asia/Tokyo'],KST:['Asia/Seoul'],BST:['Europe/London'],CET:['Europe/Paris'],CEST:['Europe/Paris'],IST:['Asia/Kolkata'],AEST:['Australia/Sydney'],AEDT:['Australia/Sydney'],MSK:['Europe/Moscow'],SGT:['Asia/Singapore'],HKT:['Asia/Hong_Kong']};
+  if(!t)return '输入时区缩写，如 CST / EST / JST';
+  const list=MAP[t];
+  if(!list)return '未收录：'+t+'（可试 '+Object.keys(MAP).join(' / ')+'）';
+  const rows=list.map(zn=>{
+    let off='?';
+    try{const p=new Intl.DateTimeFormat('en-US',{timeZone:zn,timeZoneName:'shortOffset'}).formatToParts(new Date()).find(x=>x.type==='timeZoneName');off=p?p.value:off}catch(e){}
+    return zn+'  当前偏移 '+off;
+  });
+  return t+' 对应:\n'+rows.join('\n')+(list.length>1?'\n注意：该缩写存在多义，按目标地区选择':'');
+}
+function weekInfo(s){
+  const m=String(s).trim().match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+  if(!m)return '格式：2026-11-14';
+  const d=new Date(+m[1],+m[2]-1,+m[3]);
+  if(isNaN(d)||d.getMonth()!==+m[2]-1)return '日期无效';
+  const day=(d.getDay()+6)%7;
+  const thu=new Date(d);thu.setDate(d.getDate()-day+3);
+  const y0=new Date(thu.getFullYear(),0,4);
+  const week=1+Math.round(((thu-y0)/86400000-3+((y0.getDay()+6)%7))/7);
+  const start=new Date(d);start.setDate(d.getDate()-day);
+  const end=new Date(start);end.setDate(start.getDate()+6);
+  const doy=Math.floor((d-new Date(d.getFullYear(),0,0))/86400000);
+  const leap=(d.getFullYear()%4===0&&d.getFullYear()%100!==0)||d.getFullYear()%400===0;
+  const total=leap?366:365;
+  const p=n=>String(n).padStart(2,'0');
+  const fmt=x=>x.getFullYear()+'-'+p(x.getMonth()+1)+'-'+p(x.getDate());
+  const names=['周一','周二','周三','周四','周五','周六','周日'];
+  return 'ISO 周: '+d.getFullYear()+'-W'+p(week)+
+    '\n本周: '+fmt(start)+' ~ '+fmt(end)+
+    '\n星期: '+names[day]+
+    '\n季度: Q'+(Math.floor(d.getMonth()/3)+1)+
+    '\n年内第 '+doy+' 天 / 共 '+total+' 天，剩 '+(total-doy)+' 天'+
+    '\n闰年: '+(leap?'是':'否');
 }
 
 // ===== 编码增强（Base32 / Base58 / Unicode 转义 / Base64URL / Hex Dump）=====

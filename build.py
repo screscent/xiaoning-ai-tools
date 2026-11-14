@@ -978,7 +978,7 @@ def blog_list_page(blog):
     }
     return page_shell(
         f"博客（{len(arts)} 篇）| {SITE_NAME}",
-        "小凝体系的工程化实践记录：公众号文章全文归档与独立博客，涵盖 Agent 行动能力、自动化交付与工具化沉淀。",
+        "小凝体系的工程化实践记录：公众号文章全文归档与独立博客，涵盖 Agent 行动能力、自动化交付与工具化沉淀。文章持续更新，可按主题检索阅读。",
         canon, body,
         extra_jsonld="".join(f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>'
                              for d in (blog_ld, crumb_ld)),
@@ -1034,9 +1034,11 @@ def blog_post_page(art, post):
             base = base[:-2]
         short_title = base + "…"
     digest = html.unescape(post.get("digest") or art.get("digest") or "").strip()
-    if len(digest) < 45:
+    if len(digest) < 60:
         digest = (digest + ("" if not digest or digest.endswith("。") else "。")) + \
             "小凝 Agent 系列文章：记录体系设计、Agent 协作与工程落地的真实过程。"
+    if len(digest) < 60:
+        digest += "全文免费阅读，含完整示例与实施要点。"
     return page_shell(
         short_title + brand,
         digest[:150],
@@ -1382,6 +1384,8 @@ def main():
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="深度报告 · 小凝体系评估与审计 | 小凝 AI 工具集">
 <meta name="twitter:image" content="{BASE_URL}/legacy/assets/og-cover.jpg">
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"深度报告 · 小凝体系评估与审计","url":"{BASE_URL}/reports/","description":"小凝体系的深度评估与审计报告：方法论、架构、质量与运营复盘。","inLanguage":"zh-CN","isPartOf":{{"@type":"WebSite","name":"{SITE_NAME}","url":"{BASE_URL}/"}}}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"{SITE_NAME}","item":"{BASE_URL}/"}},{{"@type":"ListItem","position":2,"name":"深度报告","item":"{BASE_URL}/reports/"}}]}}</script>
 <style>
 :root{{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--bg:#f7f8fa}}
 *{{box-sizing:border-box}}body{{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--fg);background:#fff}}
