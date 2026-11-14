@@ -71,6 +71,7 @@ SELF_CONTAINERS = [
     ("XML ", "XML 转 JSON / JSON 转 XML / 格式化 / 压缩 / 结构统计", "tools-xml.html"),
     ("健康与身体计算", "BMI / 基础代谢 / 每日消耗 / 饮水 / 体脂率", "tools-health.html"),
     ("JSON 与 YAML", "YAML↔JSON / YAML 格式化 / JSON 扁平化 / 展开", "tools-jsonyaml.html"),
+    ("开发速查", "HTTP 状态码 / MIME 类型 / Cron 解释 / Git 命令 / 常用端口", "tools-devref.html"),
 ]
 
 # 实体卡片（GEO 唯一文案源）：优先项目根状态文件，独立克隆时回退 data/entity-card.json
