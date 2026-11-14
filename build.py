@@ -1057,7 +1057,11 @@ def report_page(r):
   });
 })();
 </script>"""
-    h = h.replace("</body>", mobile + "\n</body>", 1)
+    h = h.replace("</body>", mobile + "\n" + (
+        '<footer style="max-width:880px;margin:0 auto;padding:18px 22px 40px;border-top:1px solid #e6e6ea;'
+        'font:13px/1.7 -apple-system,BlinkMacSystemFont,\'PingFang SC\',sans-serif;color:#6b6b70">'
+        f'人类作者：{esc(OWNER)}｜联系：{esc(PHONE)}｜邮箱：{esc(MAIL)}｜微信公众号：月牙寂'
+        '　<span style="color:#8a8a90">Agent 作者：月绡凝（小凝）</span></footer>\n</body>'), 1)
     meta = (
         f'<meta name="description" content="{esc(r["desc"])}">'
         f'<link rel="canonical" href="{canon}">'
