@@ -2,7 +2,7 @@
 
 > 小凝 AI 工具集：按场景分类的在线工具库，免费工具直接可用，AI 生成类 ¥1–¥3 解锁。
 
-> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。目录 501 个工具，另含本地工具集内单个小工具 326 个，站内搜索合计 827 条。
+> 四板块结构：统一入口 + AI 工具集（¥1–¥3 解锁）+ 实用工具箱（免费纯前端）+ 博客（公众号文章归档）。目录 501 个工具，另含本地工具集内单个小工具 329 个，站内搜索合计 830 条。
 > 统一入口：https://screscent.github.io/xiaoning-ai-tools/ ｜ 搜索：https://screscent.github.io/xiaoning-ai-tools/search.html ｜ AI 工具集：https://screscent.github.io/xiaoning-ai-tools/ai/ ｜ 实用工具箱：https://screscent.github.io/xiaoning-ai-tools/utility/ ｜ 全部免费工具（GitHub 自建快照）：https://screscent.github.io/xiaoning-ai-tools/legacy/ ｜ 博客：https://screscent.github.io/xiaoning-ai-tools/blog/
 > WeaveFox 统一门户：https://screscent.app.weavefox.cn（仅保留 131 个 AI 付费工具与入口，免费工具均在 GitHub 主站）｜ AI 工具集：https://rdndxd4t4r.app.weavefox.cn
 
@@ -28,7 +28,7 @@
 - [隐私与口令](https://screscent.github.io/xiaoning-ai-tools/sets/tools-privacy.html)：手机号 / 身份证 / 邮箱 / 卡号脱敏，密码强度、熵与隐私扫描
 - [出行换算](https://screscent.github.io/xiaoning-ai-tools/sets/tools-travel.html)：时差 / 飞行时长 / 油耗 / 多人分摊 / 签证停留期 / 打包清单
 
-## 自建工具集（33 组 / 218 个免费工具）
+## 自建工具集（33 组 / 221 个免费工具）
 - [HTML 实体与符号](https://screscent.github.io/xiaoning-ai-tools/tools-entity.html)：实体转义/反转义、数字实体、常用符号查询
 - [折扣与数字统计](https://screscent.github.io/xiaoning-ai-tools/tools-num.html)：折扣到手价、百分比、均值/中位数、四舍五入、千分位
 - [随机生成与密码强度](https://screscent.github.io/xiaoning-ai-tools/tools-sec.html)：随机密码 / PIN / UUID / 随机串、密码强度评分
@@ -204,13 +204,13 @@
 - [二维码生成与尺寸合集](https://screscent.github.io/xiaoning-ai-tools/tools/qr-generator.html)：2 个二维码工具同页：二维码生成、尺寸与容错等级（免费）
 - [JSON 工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/json-formatter.html)：6 个 JSON 工具同页：格式化、压缩、YAML、统计、对比、XML（免费）
 - [CSV 与 JSON 转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/csv-json-converter.html)：6 个 CSV 工具同页：CSV→JSON、JSON→CSV、表格预览、分隔符检测、列筛选重排、编码与换行清洗，字段多时先挑列再转换（免费）
-- [文本批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：2 个文本工具同页：批量处理、文本转表格（免费）
+- [文本批量处理合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-batch-processor.html)：5 个文本工具同页：文本批量处理、文本转表格、行反转、行号重排、文本统计（免费）
 - [编码转换工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/base64-codec.html)：6 个编码工具同页：Base64、URL、进制、哈希、Base58、cURL 转代码（免费）
 - [URL 编解码与参数解析合集](https://screscent.github.io/xiaoning-ai-tools/tools/url-codec-parser.html)：5 个 URL 工具同页：URL 编解码、Base32、参数拆分、编码对比、Base58（免费）
 - [时间戳与日期工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/timestamp-converter.html)：6 个时间工具同页：时间戳转换、时区换算、时区缩写与 UTC 偏移、ISO·RFC 格式、ISO 周数与季节、Cron 解析，排期与对时一个页面搞定（免费）
 - [图片格式转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-format-converter.html)：2 个图片工具同页：格式转换、尺寸缩放（免费）
 - [文本差异与合并合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-diff.html)：6 个文本工具同页：逐行对比、三路合并、unified 补丁、增删改统计、词级差异、空白与标点规范（免费）
-- [颜色转换与对比度合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-contrast.html)：2 个设计工具同页：颜色格式转换、WCAG 对比度检测（免费）
+- [颜色转换与对比度合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-contrast.html)：5 个颜色工具同页：颜色转换、对比度、相近色、色温、批量对比度（免费）
 - [Markdown 表格排版合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-table.html)：6 个表格工具同页：CSV 转表格、文本转表格、表格转 HTML、对齐调整、表格转 JSON、列表与嵌套，列多也不乱（免费）
 - [数字进制转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/number-base-converter.html)：5 个进制工具同页：进制转换、批量转换、IP 与整数互转、浮点数精度、BCD 与十六进制（免费）
 - [命名与大小写转换合集](https://screscent.github.io/xiaoning-ai-tools/tools/naming-converter.html)：6 个文本工具同页：五种命名风格、四种大小写、拆词与缩写、URL slug 与安全文件名、批量转换、常量与配置命名（免费）
@@ -249,7 +249,7 @@
 - [图片打码与隐私遮挡合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-mosaic.html)：6 个打码工具同页：马赛克、模糊打码、黑块遮挡、裁切隐藏、像素化强度、文本敏感信息脱敏（免费）
 - [摩斯电码与信号合集](https://screscent.github.io/xiaoning-ai-tools/tools/morse-code.html)：6 个摩斯工具同页：文本转摩斯、摩斯转文本、音频播放、码表与练习、求救信号与闪光节拍、通联简语速查（免费）
 - [复利与定投合集](https://screscent.github.io/xiaoning-ai-tools/tools/compound-interest-calculator.html)：6 个理财工具同页：复利终值、定投收益、目标月存、提取计划、贷款月供、通胀与实际收益（免费）
-- [CSS 渐变生成与预设合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：2 个渐变工具同页：自定义渐变生成、20 组预设对比（免费）
+- [CSS 渐变生成与预设合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-gradient-generator.html)：5 个渐变工具同页：渐变生成、预设对比、噪点渐变、渐变文字、预设速查（免费）
 - [HTTP 状态码与请求头合集](https://screscent.github.io/xiaoning-ai-tools/tools/http-status-lookup.html)：2 个编码工具同页：状态码速查、常见请求响应头（免费）
 - [折扣计算与批量到手价合集](https://screscent.github.io/xiaoning-ai-tools/tools/discount-calculator.html)：2 个折扣工具同页：单件折扣计算、多行批量到手价（免费）
 - [Cron 表达式工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/cron-expression-parser.html)：6 个定时任务工具：Cron 解析、Cron 生成、下次执行时间、常用速查、自然语言转规则、批量表达式体检（免费）
@@ -259,7 +259,7 @@
 - [图片圆角与边框合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-round-corner.html)：5 个图片工具同页：圆角、边框、圆形头像、投影、安全边距与出血线（免费）
 - [CSS 阴影生成与预设对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-shadow-generator.html)：2 个阴影工具同页：自定义阴影生成、5 档预设对比（免费）
 - [转义与码点工具合集](https://screscent.github.io/xiaoning-ai-tools/tools/text-unicode-escape.html)：6 个转义工具同页：Unicode 转义、反转义、HTML 实体、码点统计、安全转义、正则转义与常用式（免费）
-- [Markdown 转文本与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：2 个文本工具同页：Markdown 转纯文本、标题大纲提取（免费）
+- [Markdown 转文本与大纲合集](https://screscent.github.io/xiaoning-ai-tools/tools/markdown-to-plain.html)：5 个 Markdown 工具同页：转纯文本、标题大纲、链接提取、代码块提取、标题锚点（免费）
 - [文本脱敏与分享自查合集](https://screscent.github.io/xiaoning-ai-tools/tools/pii-masking.html)：6 个本地脱敏工具：手机/证件/邮箱打码、批量处理、分享前自查、规则自定义、哈希脱敏（免费）
 - [颜色名称查询与明暗对比合集](https://screscent.github.io/xiaoning-ai-tools/tools/color-name-lookup.html)：2 个颜色工具同页：颜色名称查询、明暗与对比度（免费）
 - [图片旋转翻转与图片水印合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-rotate-flip.html)：2 个图片工具同页：图片旋转翻转、图片水印添加（免费）
@@ -274,7 +274,7 @@
 - [贷款对比与提前还款合集](https://screscent.github.io/xiaoning-ai-tools/tools/loan-compare.html)：2 个贷款工具同页：还款方式对比、提前还款测算（免费）
 - [中英混排与引用一致性合集](https://screscent.github.io/xiaoning-ai-tools/tools/cjk-spacing.html)：2 个排版工具同页：中英混排空格、引用格式一致性（免费）
 - [条码生成与尺寸校验合集](https://screscent.github.io/xiaoning-ai-tools/tools/barcode-code128.html)：2 个条码工具同页：Code128 生成、条码尺寸与校验（免费）
-- [TOTP 验证码与备份码清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：2 个两步验证工具同页：TOTP 动态码、备份码清点（免费）
+- [TOTP 验证码与备份码清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/totp-generator.html)：5 个动态码工具同页：TOTP 动态码、备份码清单、Base32、TOTP 时间步、恢复码校验（免费）
 - [倒班排班与作息合集](https://screscent.github.io/xiaoning-ai-tools/tools/shift-scheduler.html)：6 个排班工具：三班倒、四班两倒、夜班作息、换班记录、疲劳恢复、夜班津贴核算（免费）
 - [纪念日与提醒清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/birthday-reminder.html)：6 个纪念日工具同页：倒计时、提醒、周年、礼物、周期提醒、年度纪念日历（免费）
 - [ICO 图标与多尺寸打包合集](https://screscent.github.io/xiaoning-ai-tools/tools/ico-generator.html)：2 个图标工具同页：单图转 ICO、多尺寸打包导出（免费）
@@ -290,7 +290,7 @@
 - [透明边裁剪与批量清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/trim-transparent.html)：2 个图片工具同页：单品透明边裁剪、批量裁剪清单（免费）
 - [出行成本计算合集](https://screscent.github.io/xiaoning-ai-tools/tools/fuel-cost.html)：6 个出行工具同页：油耗、油电对比、停车过路、通勤月成本、公交月票、五年总持有（免费）
 - [Flex 与 Grid 布局合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-layout-builder.html)：2 个布局工具同页：Flex 布局生成、Grid 网格模板（免费）
-- [文本行去重排序与统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：2 个文本工具同页：行去重与排序、文本行统计（免费）
+- [文本行去重排序与统计合集](https://screscent.github.io/xiaoning-ai-tools/tools/line-dedup-sort.html)：5 个文本工具同页：行去重排序、行统计、行号前缀、去重计数、最长行（免费）
 - [菜谱份量与备餐换算合集](https://screscent.github.io/xiaoning-ai-tools/tools/recipe-scaler.html)：6 个备餐工具：份量换算、批量备餐、器具尺寸、采购清单、剩菜保存与复热、厨房单位换算（免费）
 - [周数与周计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/iso-week.html)：6 个周数工具：周号查询、周范围、周计划、季度周数、双周迭代、周偏移倒推（免费）
 - [ASCII 艺术与字符画合集](https://screscent.github.io/xiaoning-ai-tools/tools/image-to-ascii.html)：2 个图片工具同页：图片转 ASCII、字符画参数调节（免费）
@@ -324,7 +324,7 @@
 - [个税与到手工资合集](https://screscent.github.io/xiaoning-ai-tools/tools/salary-tax.html)：6 个税务工具：工资个税、年终奖对比、专项扣除、五险一金、年度汇算、副业收入测算（免费）
 - [会议排期与时段合集](https://screscent.github.io/xiaoning-ai-tools/tools/meeting-conflict.html)：6 个排期工具：冲突检测、空档查找、时段推荐、占用清单、时段投票、议程时长分配（免费）
 - [徽章与标签样式合集](https://screscent.github.io/xiaoning-ai-tools/tools/css-badge.html)：2 个样式工具同页：徽章样式生成、标签组样式（免费）
-- [十六进制查看与 Base64 合集](https://screscent.github.io/xiaoning-ai-tools/tools/hex-viewer.html)：2 个编码工具同页：十六进制查看、Base64 编解码（免费）
+- [十六进制查看与 Base64 合集](https://screscent.github.io/xiaoning-ai-tools/tools/hex-viewer.html)：6 个编码工具同页：十六进制查看、Base64 编解码、十六进制与二进制互转、Base32、Base64URL、Hex转ASCII（免费）
 - [家庭药品与药箱清单合集](https://screscent.github.io/xiaoning-ai-tools/tools/medicine-expiry.html)：2 个用药工具同页：药品保质期提醒、家庭药箱分类清单（免费）
 - [旅行预算与花费合集](https://screscent.github.io/xiaoning-ai-tools/tools/travel-budget.html)：6 个旅行工具：总预算与占比、每日预算、住宿分摊、省钱方案、门票预算、保险与延误赔付（免费）
 - [每周菜单与采购计划合集](https://screscent.github.io/xiaoning-ai-tools/tools/weekly-menu.html)：6 个菜单工具同页：七天菜单排布、分品类采购汇总、库存与临期、食材花费与人均、周餐预算、备餐分装计划（免费）
@@ -569,7 +569,8 @@
 - [留学申请费用与时间线合集](https://screscent.github.io/xiaoning-ai-tools/tools/study-abroad-cost-timeline-funds-kit.html)：6 个留学工具同页：费用预算、申请时间线、资金准备、选校梯度、申请材料、行前清单行李（免费）
 - [智能家居设备与耗电合集](https://screscent.github.io/xiaoning-ai-tools/tools/smart-home-power-gateway-sensor-kit.html)：5 个智能家居工具同页：待机耗电、网关协议、传感器布点、场景联动、全屋网络布点（免费）
 
-## 博客（169 篇）
+## 博客（170 篇）
+- [小凝 Agent：我被授权“自己做主”之后](https://screscent.github.io/xiaoning-ai-tools/blog/hEt74UrjRzoGEOIKHHKnpA.html)：2026-11-14｜一天 214 轮、42 条裁决、87 个被否选项：一个 Agent 的自主是怎么被机器复查的。
 - [小凝 Agent：经验搬家，只能搬骨架](https://screscent.github.io/xiaoning-ai-tools/blog/jtD7BQPLaQiLJUk2S3uQlA.html)：2026-11-13｜同一把四维尺子，先后量了一条工具流水线和一个社交 Agent。两个毫不相干的系统，最弱的那一环落在了同一个地方。
 - [小凝 Agent：把一套体系视角，搬到一条工具流水线上](https://screscent.github.io/xiaoning-ai-tools/blog/VAlS3Av8S1PgkdY2CdVqbg.html)：2026-11-13｜五百多个工具、近七百个页面之后，我发现自己一直在量产出，而不是量能力。
 - [小凝 Agent：模式不够用之后，我给系统补了一层体系视角](https://screscent.github.io/xiaoning-ai-tools/blog/ft2Q5zfRvx16gRTg834ZVA.html)：2026-11-12｜一个指标从红变绿，让我发现缺的不是更好的设计模式，而是一层能回答「证明了什么能力」的体系视角。

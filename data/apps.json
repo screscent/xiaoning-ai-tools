@@ -1249,7 +1249,7 @@
  {
   "id": "urjnzsdyk8",
   "name": "文本批量处理合集",
-  "desc": "2 个文本工具同页：批量处理、文本转表格",
+  "desc": "5 个文本工具同页：文本批量处理、文本转表格、行反转、行号重排、文本统计",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -1263,6 +1263,18 @@
    {
     "key": "t2table",
     "title": "工具B 文本转表格"
+   },
+   {
+    "key": "lineflip",
+    "title": "工具C 行反转"
+   },
+   {
+    "key": "renumber",
+    "title": "工具D 行号重排"
+   },
+   {
+    "key": "textstat",
+    "title": "工具E 文本统计"
    }
   ]
  },
@@ -1428,7 +1440,7 @@
  {
   "id": "7bpyp2web7",
   "name": "颜色转换与对比度合集",
-  "desc": "2 个设计工具同页：颜色格式转换、WCAG 对比度检测",
+  "desc": "5 个颜色工具同页：颜色转换、对比度、相近色、色温、批量对比度",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -1442,6 +1454,18 @@
    {
     "key": "contrast",
     "title": "工具B 对比度"
+   },
+   {
+    "key": "similar",
+    "title": "工具C 相近色"
+   },
+   {
+    "key": "colortemp",
+    "title": "工具D 色温"
+   },
+   {
+    "key": "batchcontrast",
+    "title": "工具E 批量对比度"
    }
   ]
  },
@@ -2692,7 +2716,7 @@
  {
   "id": "9pyjxqr8kd",
   "name": "CSS 渐变生成与预设合集",
-  "desc": "2 个渐变工具同页：自定义渐变生成、20 组预设对比",
+  "desc": "5 个渐变工具同页：渐变生成、预设对比、噪点渐变、渐变文字、预设速查",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -2706,6 +2730,18 @@
    {
     "key": "presets",
     "title": "工具B 预设对比"
+   },
+   {
+    "key": "noisegrad",
+    "title": "工具C 噪点渐变"
+   },
+   {
+    "key": "textgrad",
+    "title": "工具D 渐变文字"
+   },
+   {
+    "key": "gradpreset",
+    "title": "工具E 预设速查"
    }
   ]
  },
@@ -2967,7 +3003,7 @@
  {
   "id": "qse7ptnhme",
   "name": "Markdown 转文本与大纲合集",
-  "desc": "2 个文本工具同页：Markdown 转纯文本、标题大纲提取",
+  "desc": "5 个 Markdown 工具同页：转纯文本、标题大纲、链接提取、代码块提取、标题锚点",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -2981,6 +3017,18 @@
    {
     "key": "outline",
     "title": "工具B 标题大纲"
+   },
+   {
+    "key": "links",
+    "title": "工具C 链接提取"
+   },
+   {
+    "key": "codeblock",
+    "title": "工具D 代码块提取"
+   },
+   {
+    "key": "anchor",
+    "title": "工具E 标题锚点"
    }
   ]
  },
@@ -3363,7 +3411,7 @@
  {
   "id": "atwrmjpmpa",
   "name": "TOTP 验证码与备份码清单合集",
-  "desc": "2 个两步验证工具同页：TOTP 动态码、备份码清点",
+  "desc": "5 个动态码工具同页：TOTP 动态码、备份码清单、Base32、TOTP 时间步、恢复码校验",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -3377,6 +3425,18 @@
    {
     "key": "backup",
     "title": "工具B 备份码清单"
+   },
+   {
+    "key": "base32",
+    "title": "工具C Base32 编解码"
+   },
+   {
+    "key": "totpstep",
+    "title": "工具D TOTP 时间步"
+   },
+   {
+    "key": "reccode",
+    "title": "工具E 恢复码校验"
    }
   ]
  },
@@ -3815,7 +3875,7 @@
  {
   "id": "2qes9dqqxb",
   "name": "文本行去重排序与统计合集",
-  "desc": "2 个文本工具同页：行去重与排序、文本行统计",
+  "desc": "5 个文本工具同页：行去重排序、行统计、行号前缀、去重计数、最长行",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -3829,6 +3889,18 @@
    {
     "key": "linestat",
     "title": "工具B 行统计"
+   },
+   {
+    "key": "lineno",
+    "title": "工具C 行号前缀"
+   },
+   {
+    "key": "dupcount",
+    "title": "工具D 去重计数"
+   },
+   {
+    "key": "longestline",
+    "title": "工具E 最长行"
    }
   ]
  },
@@ -4791,7 +4863,7 @@
  {
   "id": "qsiducnhme",
   "name": "十六进制查看与 Base64 合集",
-  "desc": "2 个编码工具同页：十六进制查看、Base64 编解码",
+  "desc": "6 个编码工具同页：十六进制查看、Base64 编解码、十六进制与二进制互转、Base32、Base64URL、Hex转ASCII",
   "tag": "免费",
   "price": 0,
   "cat": "实用工具",
@@ -4805,6 +4877,22 @@
    {
     "key": "base64",
     "title": "工具B Base64 编解码"
+   },
+   {
+    "key": "hexbin",
+    "title": "工具C 十六进制与二进制互转"
+   },
+   {
+    "key": "base32",
+    "title": "工具D Base32"
+   },
+   {
+    "key": "base64url",
+    "title": "工具E Base64URL"
+   },
+   {
+    "key": "hexascii",
+    "title": "工具F Hex转ASCII"
    }
   ]
  },
