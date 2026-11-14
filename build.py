@@ -66,6 +66,7 @@ SELF_CONTAINERS = [
     ("Agent 工具集", "汇总报告 / 批处理 / 校验核对 / 格式转换：16 个 agent 优先工具", "tools-agent.html"),
     ("号码与单据校验", "身份证 / 银行卡 / 统一社会信用代码 / IMEI / 批量联系方式", "tools-verify.html"),
     ("工资与税费计算", "个税 / 年终奖 / 加班费 / 请假扣款 / 到手反推", "tools-salary.html"),
+    ("文本整理与格式", "标点互转 / 中英文空格 / 轻加密 / 去标记 / INI 互转", "tools-textfmt.html"),
 ]
 
 # 实体卡片（GEO 唯一文案源）：优先项目根状态文件，独立克隆时回退 data/entity-card.json
