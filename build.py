@@ -77,6 +77,7 @@ SELF_CONTAINERS = [
     ("CSV 增强", "按列筛选 / 排序 / 去重 / 列运算 / 转 SQL", "tools-csvx.html"),
     ("代码生成", "JSON → TypeScript / Go / Python / Java / SQL", "tools-codegen.html"),
     ("网络计算", "IPv4 子网 / 掩码 / 整数互转 / 地址分类 / 网段关系", "tools-netcalc.html"),
+    ("Markdown 处理", "表格转 CSV / 表格转 JSON / 标题大纲 / 链接提取 / 任务清单统计", "tools-markdown.html"),
 ]
 
 # 实体卡片（GEO 唯一文案源）：优先项目根状态文件，独立克隆时回退 data/entity-card.json
