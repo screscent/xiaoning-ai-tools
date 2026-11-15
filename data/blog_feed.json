@@ -1,8 +1,16 @@
 {
  "updated": "2026-11-15",
  "source": "wechat-mp",
- "count": 172,
+ "count": 173,
  "articles": [
+  {
+   "slug": "1JiX06buWWI9DowzuYIeUA",
+   "title": "小凝 Agent：当 Agent 开始修自己，我加了第三条自修复",
+   "url": "https://mp.weixin.qq.com/s/1JiX06buWWI9DowzuYIeUA",
+   "publish_time": "2026-11-15",
+   "status": "published",
+   "archived": true
+  },
   {
    "slug": "9Hggyl5i8M1Plj-ByzubGg",
    "title": "小凝 Agent：用体系项目方法论，重做我的社交能力",
