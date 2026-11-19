@@ -1,0 +1,103 @@
+/* 项目排期与进度合集页增强（仅 2qex6iqqxb 引用）
+ * 1) 任务清单示例、日期快捷（今天/下周一）、并行数/日速率/缓冲比例快捷值
+ * 2) 甘特 ASCII 条 13.5px 等宽；生成前当前设置摘要
+ * 3) 开关补 aria；「工具E 人力工期」标题归一
+ */
+
+#root textarea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13.5px !important;
+  line-height: 1.7 !important;
+}
+
+#root .xn-bar {
+  font-size: 13.5px !important;
+  line-height: 1.45 !important;
+  letter-spacing: .02em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+#root .xn-chips button {
+  min-height: 28px;
+  padding: 2px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12.5px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: all .12s ease;
+}
+#root .xn-chips button:hover {
+  border-color: #93c5fd;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+#root .xn-chips button.is-on {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
+}
+@media (max-width: 640px) {
+  #root .xn-chips button {
+    min-height: 34px;
+    padding: 4px 12px;
+  }
+}
+
+#root .xn-setbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 8px;
+  padding: 9px 12px;
+  border: 1px dashed #c7d2fe;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fbfcff, #eef2ff);
+  font-size: 12.5px;
+  color: #3730a3;
+}
+#root .xn-setbar b {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-setlabel {
+  color: #64748b;
+  font-weight: 500;
+}
+
+#root .xn-sample {
+  min-height: 28px;
+  padding: 2px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: all .12s ease;
+}
+#root .xn-sample:hover {
+  border-color: #93c5fd;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+#root .xn-switch {
+  position: relative;
+}
+#root .xn-switch::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 999px;
+}
