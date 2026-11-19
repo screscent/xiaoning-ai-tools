@@ -1,0 +1,73 @@
+/* 图片格式转换页增强（仅 dvz878gy5d 引用）
+ * 目标：格式/质量/尺寸带释义、当前设置摘要、结果数字放大、桌面放宽内容列。
+ */
+@media (min-width: 1024px) {
+  #root header,
+  #root main,
+  #root footer {
+    max-width: 1024px !important;
+  }
+}
+
+#root .xn-opt {
+  min-height: 40px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+}
+@media (max-width: 640px) {
+  #root .xn-opt {
+    min-height: 44px !important;
+  }
+}
+
+#root .xn-tip {
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+#root .xn-setbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 8px;
+  padding: 10px 12px;
+  border: 1px dashed #c7d2fe;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fbfcff, #f1f4ff);
+  font-size: 13px;
+  color: #3730a3;
+}
+#root .xn-setbar b {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-setbar .xn-setlabel {
+  color: #64748b;
+  font-weight: 500;
+}
+
+#root .xn-num {
+  font-size: 22px !important;
+  font-weight: 750 !important;
+  letter-spacing: -.01em;
+  font-variant-numeric: tabular-nums;
+  color: #0f172a !important;
+}
+#root .xn-num-sm {
+  font-size: 16px !important;
+  font-weight: 650 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-save {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #047857 !important;
+}
