@@ -69,7 +69,8 @@
     }
     var box = input.parentElement;
     if (!box) return;
-    if (box.__xnChips && box.__xnChips.isConnected) return;
+    var host = box.parentElement || box;
+    if (host.__xnChips && host.__xnChips.isConnected) return;
     var wrap = document.createElement("div");
     wrap.className = "xn-chips";
     [3, 5, 7, 10].forEach(function (v) {
@@ -85,8 +86,8 @@
       };
       wrap.appendChild(b);
     });
-    box.appendChild(wrap);
-    box.__xnChips = wrap;
+    host.appendChild(wrap);
+    host.__xnChips = wrap;
   }
 
   /* ---------- 4. 汇总数字 ---------- */
