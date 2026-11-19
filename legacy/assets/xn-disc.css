@@ -1,0 +1,142 @@
+/* 满减与优惠叠加合集页增强（仅 tbnh7qmk3t 引用）
+ * 1) 顶部 6 个工具 tab：当前项高亮 + aria-current
+ * 2) 工具E/工具F → 工具 05 / 06
+ * 3) 金额输入补语义 aria + 常用值快捷值；列表类输入配「填入示例」
+ * 4) 结果分级：实付/到手 26px、优惠 19px 玫红、折扣率 20px、「相当于 X 折」13px
+ */
+
+#root .min-h-screen {
+  background:
+    radial-gradient(880px 360px at 8% -8%, #ffe4e6 0%, rgba(255, 228, 230, 0) 60%),
+    radial-gradient(760px 340px at 96% 0%, #e0e7ff 0%, rgba(224, 231, 255, 0) 58%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* 工具 tab */
+#root a[href^="#/"] {
+  border-radius: 999px;
+  padding: 4px 12px;
+  transition: all .12s ease;
+}
+#root a[href^="#/"].xn-disc-tab {
+  color: #475569;
+}
+#root a[href^="#/"].xn-disc-tab:hover {
+  background: #fff;
+  color: #1e293b;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, .12);
+}
+#root a[href^="#/"].xn-disc-tab.is-on {
+  background: #1e293b;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, .25);
+}
+#root a[href^="#/"].xn-disc-tab:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* 结果分级 */
+#root .xn-disc-hero {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.02em;
+  color: #4338ca !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-disc-card {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-disc-mid {
+  font-size: 19px !important;
+  font-weight: 750 !important;
+  color: #0f172a !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-disc-save {
+  font-size: 19px !important;
+  font-weight: 750 !important;
+  color: #be123c !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-disc-pct {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-disc-fold {
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  color: #475569 !important;
+}
+#root .xn-disc-detail {
+  font-size: 16px !important;
+  font-weight: 650 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 快捷值胶囊 */
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+#root .xn-chips button {
+  min-height: 28px;
+  padding: 2px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #fff;
+  color: #475569;
+  font-size: 12.5px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: all .12s ease;
+}
+#root .xn-chips button:hover {
+  border-color: #a5b4fc;
+  background: #eef2ff;
+  color: #4338ca;
+}
+#root .xn-chips button.is-on {
+  border-color: #4f46e5;
+  background: #4f46e5;
+  color: #fff;
+}
+
+/* 示例填充按钮 */
+#root .xn-disc-demo {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 28px;
+  padding: 2px 10px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+#root .xn-disc-demo:hover {
+  border-color: #818cf8;
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+@media (max-width: 640px) {
+  #root .xn-chips button,
+  #root .xn-disc-demo {
+    min-height: 34px;
+    padding: 4px 12px;
+  }
+  #root .xn-disc-hero { font-size: 24px !important; }
+}
