@@ -1,0 +1,99 @@
+/* 旅行装备与打包速查合集页增强（仅 4ghafrbtnf 引用）
+ * 1) 工具E → 05；打包条目补 checkbox 语义
+ * 2) 出行天数快捷值；汇总数字层级
+ * 3) 复制清单 38/44px；奶油绿主题
+ */
+
+#root {
+  background: linear-gradient(180deg, #f7fbf5 0, #fafaf9 340px) !important;
+}
+
+/* ---------- 工具 tab ---------- */
+#root a[href^="#/"] {
+  transition: all 0.15s ease;
+}
+#root a[href^="#/"]:not([aria-current="page"]):hover {
+  border-color: #7fd8c9 !important;
+}
+#root a[href^="#/"]:focus-visible {
+  outline: 2px solid #0f6b5c;
+  outline-offset: 2px;
+}
+
+/* ---------- 打包条目 ---------- */
+#root .xn-pack-item {
+  border-radius: 10px;
+}
+#root .xn-pack-item[aria-checked="true"] {
+  background: #f0faf6;
+}
+#root .xn-pack-item span:first-child {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* ---------- 出行天数快捷值 ---------- */
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+#root .xn-chips .xn-chip {
+  min-height: 30px;
+  padding: 4px 12px;
+  border: 1px solid #b9e6d8;
+  border-radius: 999px;
+  background: #f4fbf8;
+  color: #0f6b5c;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.12s ease;
+}
+#root .xn-chips .xn-chip:hover {
+  border-color: #0f6b5c;
+  background: #e7f7f0;
+}
+#root .xn-chips .xn-chip.is-on {
+  background: #0f6b5c;
+  border-color: #0f6b5c;
+  color: #fff;
+}
+
+/* ---------- 汇总数字 ---------- */
+#root .xn-stat {
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  color: #0f513f !important;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
+}
+#root .xn-stat-primary {
+  font-size: 25px !important;
+  color: #0b3b2f !important;
+}
+#root .xn-stat small {
+  font-size: 11px !important;
+  font-weight: 600;
+  color: #6b7f76;
+  margin-left: 2px;
+}
+
+/* ---------- 复制 ---------- */
+#root button.xn-copy {
+  min-height: 38px !important;
+  padding: 0 13px !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
+  border-radius: 9px;
+}
+
+@media (max-width: 640px) {
+  #root .xn-chips .xn-chip { min-height: 34px; padding: 6px 13px; }
+  #root button.xn-copy { min-height: 44px !important; }
+  #root .xn-stat { font-size: 19px !important; }
+  #root .xn-stat-primary { font-size: 24px !important; }
+}
