@@ -1,0 +1,62 @@
+/* 眼镜与视力保护速查合集页增强（仅 2q767tqqxb 引用）
+ * 1) 清掉「工具E / 工具F」占位
+ * 2) 推荐折射率 18px → 24px
+ * 3) 屏幕距离与折射率工具补常用值胶囊；输入 aria 补单位
+ */
+
+/* 本页输入框按设计保持小号：xn-ux 曾把 number 输入抬到 20px 并加 12px 内边距，w-14 内会裁字 */
+#root input[type=number] {
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  width: 68px !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+#root .xn-idx {
+  font-size: 24px !important;
+  font-weight: 750 !important;
+  letter-spacing: -.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+#root .xn-chips button {
+  min-height: 28px;
+  padding: 2px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12.5px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: all .12s ease;
+}
+#root .xn-chips button:hover {
+  border-color: #99f6e4;
+  background: #f0fdfa;
+  color: #0f766e;
+}
+#root .xn-chips button.is-on {
+  border-color: #0f766e;
+  background: #0f766e;
+  color: #fff;
+}
+@media (max-width: 640px) {
+  #root .xn-chips button {
+    min-height: 34px;
+    padding: 4px 12px;
+  }
+}
+
+#root input[type=number]:focus {
+  outline: 2px solid rgba(15, 118, 110, .3);
+  outline-offset: 1px;
+}
