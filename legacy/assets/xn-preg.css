@@ -1,0 +1,107 @@
+/* 预产期孕周与滤芯周期合集页增强（仅 4gsndabtnf 引用）
+ * 1) 两个工具切换按钮补 tab 语义、44px、吸顶
+ * 2) 开关补名称；参考日期/安装日期加「今天」；月经周期快捷值
+ * 3) 复制/清空命名；玫瑰色主题与结果卡层次
+ */
+
+#root {
+  background: linear-gradient(180deg, #fff1f2 0, #fafaf9 330px) !important;
+}
+
+/* ---------- 工具切换 ---------- */
+#root .xn-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+  padding: 7px 4px;
+  background: rgba(250, 250, 249, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #fecdd3;
+}
+#root .xn-tabs button {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  border-radius: 12px !important;
+  font-size: 13px !important;
+  font-weight: 700;
+}
+#root .xn-tabs button[aria-selected="true"] {
+  background: linear-gradient(135deg, #e11d48, #be123c) !important;
+  border-color: #be123c !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px -9px rgba(190, 18, 60, 0.75);
+}
+
+/* ---------- 日期「今天」 ---------- */
+#root .xn-today {
+  min-height: 32px;
+  margin-left: 6px;
+  padding: 0 10px;
+  border: 1px solid #fecdd3;
+  border-radius: 9px;
+  background: #fff1f2;
+  color: #be123c;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#root .xn-today:hover {
+  border-color: #e11d48;
+  background: #ffe4e6;
+}
+
+/* ---------- 快捷值 ---------- */
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 7px;
+}
+#root .xn-chips .xn-chip {
+  min-height: 30px;
+  padding: 4px 11px;
+  border: 1px solid #fecdd3;
+  border-radius: 999px;
+  background: #fff7f8;
+  color: #be123c;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.12s ease;
+}
+#root .xn-chips .xn-chip:hover {
+  border-color: #e11d48;
+  background: #ffe4e6;
+}
+#root .xn-chips .xn-chip.is-on {
+  background: #be123c;
+  border-color: #be123c;
+  color: #fff;
+}
+
+/* ---------- 复制/清空 ---------- */
+#root button.xn-copy {
+  min-height: 38px !important;
+  padding: 0 13px !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
+  border-radius: 9px;
+}
+
+/* ---------- 结果数字 ---------- */
+#root .xn-big {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #881337 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 640px) {
+  #root .xn-tabs button { min-height: 44px !important; }
+  #root .xn-chips .xn-chip { min-height: 34px; padding: 6px 12px; }
+  #root button.xn-copy { min-height: 44px !important; }
+  #root .xn-big { font-size: 24px !important; }
+}
