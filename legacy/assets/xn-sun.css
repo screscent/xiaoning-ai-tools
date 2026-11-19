@@ -1,0 +1,80 @@
+/* 防晒用量与紫外线建议合集页增强（仅 3xmlz85af3 引用）
+ * 1) 两个入口卡补 aria-current；当前卡渐变
+ * 2) UV/时长/规格输入语义；下拉 44px
+ * 3) 结果首项 24px / 其余 20px；复制 38/44px
+ * 4) 阳光暖色渐变
+ */
+
+#root {
+  background: linear-gradient(180deg, #fffbeb 0, #fafaf9 340px) !important;
+}
+
+/* ---------- 入口卡 ---------- */
+#root a[href^="#/"] {
+  transition: all 0.15s ease;
+}
+#root a[href^="#/"]:hover {
+  border-color: #f59e0b !important;
+  box-shadow: 0 10px 24px -18px rgba(180, 83, 9, 0.55);
+}
+#root a[href^="#/"]:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+#root a[href^="#/"][aria-current="page"] {
+  border-color: #f59e0b !important;
+  background: linear-gradient(145deg, #fff7ed, #fffbeb 70%, #ffffff) !important;
+  box-shadow: 0 10px 26px -20px rgba(180, 83, 9, 0.6);
+}
+
+/* ---------- 表单 ---------- */
+#root label {
+  font-size: 13px !important;
+  color: #44403c !important;
+}
+#root input[type="number"] {
+  font-size: 16px !important;
+  min-height: 44px;
+  font-variant-numeric: tabular-nums;
+}
+#root select {
+  min-height: 44px;
+  font-size: 14px !important;
+  font-weight: 600;
+  cursor: pointer;
+}
+#root select:focus {
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.16);
+}
+
+/* ---------- 结果 ---------- */
+#root [data-code-inspect-component="ResultCard"] {
+  background: linear-gradient(160deg, #fffdf5, #fffbeb 65%, #ffffff) !important;
+  border-color: #fde68a !important;
+}
+#root .xn-met {
+  font-size: 20px !important;
+  color: #92400e !important;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.35;
+}
+#root .xn-met-primary {
+  font-size: 24px !important;
+  color: #7c2d12 !important;
+}
+
+/* ---------- 复制 ---------- */
+#root button.xn-copy {
+  min-height: 38px !important;
+  padding: 0 13px !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
+  border-radius: 9px;
+}
+
+@media (max-width: 640px) {
+  #root button.xn-copy { min-height: 44px !important; }
+  #root .xn-met { font-size: 19px !important; }
+  #root .xn-met-primary { font-size: 23px !important; }
+}
