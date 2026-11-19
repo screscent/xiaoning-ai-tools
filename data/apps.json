@@ -1095,27 +1095,27 @@
   "subapps": [
    {
     "key": "compress",
-    "title": "工具A 单图压缩"
+    "title": "单图压缩"
    },
    {
     "key": "batch",
-    "title": "工具B 批量压缩"
+    "title": "批量压缩"
    },
    {
     "key": "compare",
-    "title": "工具C 压缩对比"
+    "title": "压缩对比"
    },
    {
     "key": "quality",
-    "title": "工具D 画质档位"
+    "title": "画质档位"
    },
    {
     "key": "resize",
-    "title": "工具E 尺寸缩放"
+    "title": "尺寸缩放"
    },
    {
     "key": "webp",
-    "title": "工具F WebP 格式选择"
+    "title": "WebP 格式选择"
    }
   ]
  },
@@ -1167,11 +1167,11 @@
   "subapps": [
    {
     "key": "qr",
-    "title": "工具A 二维码生成"
+    "title": "二维码生成"
    },
    {
     "key": "qrsize",
-    "title": "工具B 二维码尺寸与容错"
+    "title": "二维码尺寸与容错"
    }
   ]
  },
@@ -1187,27 +1187,27 @@
   "subapps": [
    {
     "key": "format",
-    "title": "工具A 格式化校验"
+    "title": "格式化校验"
    },
    {
     "key": "minify",
-    "title": "工具B 压缩转义"
+    "title": "压缩转义"
    },
    {
     "key": "yaml",
-    "title": "工具C JSON-YAML"
+    "title": "JSON-YAML"
    },
    {
     "key": "stats",
-    "title": "工具D 结构统计"
+    "title": "结构统计"
    },
    {
     "key": "diff",
-    "title": "工具E 差异对比"
+    "title": "差异对比"
    },
    {
     "key": "xml",
-    "title": "工具F JSON-XML"
+    "title": "JSON-XML"
    }
   ]
  },
@@ -1222,27 +1222,27 @@
   "subapps": [
    {
     "key": "c2j",
-    "title": "工具A CSV转JSON"
+    "title": "CSV转JSON"
    },
    {
     "key": "j2c",
-    "title": "工具B JSON转CSV"
+    "title": "JSON转CSV"
    },
    {
     "key": "preview",
-    "title": "工具C 表格预览"
+    "title": "表格预览"
    },
    {
     "key": "delim",
-    "title": "工具D 分隔符检测"
+    "title": "分隔符检测"
    },
    {
     "key": "columns",
-    "title": "工具E 列筛选"
+    "title": "列筛选"
    },
    {
     "key": "encoding",
-    "title": "工具F 编码与换行"
+    "title": "编码与换行"
    }
   ]
  },
@@ -1258,23 +1258,23 @@
   "subapps": [
    {
     "key": "text",
-    "title": "工具A 文本批量处理"
+    "title": "文本批量处理"
    },
    {
     "key": "t2table",
-    "title": "工具B 文本转表格"
+    "title": "文本转表格"
    },
    {
     "key": "lineflip",
-    "title": "工具C 行反转"
+    "title": "行反转"
    },
    {
     "key": "renumber",
-    "title": "工具D 行号重排"
+    "title": "行号重排"
    },
    {
     "key": "textstat",
-    "title": "工具E 文本统计"
+    "title": "文本统计"
    }
   ]
  },
@@ -1290,27 +1290,27 @@
   "subapps": [
    {
     "key": "base64",
-    "title": "工具A Base64编解码"
+    "title": "Base64编解码"
    },
    {
     "key": "url",
-    "title": "工具B URL编解码"
+    "title": "URL编解码"
    },
    {
     "key": "radix",
-    "title": "工具C 进制转换"
+    "title": "进制转换"
    },
    {
     "key": "hash",
-    "title": "工具D 哈希校验"
+    "title": "哈希校验"
    },
    {
     "key": "base58",
-    "title": "工具E Base58编解码"
+    "title": "Base58编解码"
    },
    {
     "key": "curl",
-    "title": "工具F cURL转代码"
+    "title": "cURL转代码"
    }
   ]
  },
@@ -1326,23 +1326,23 @@
   "subapps": [
    {
     "key": "url",
-    "title": "工具A URL 编解码"
+    "title": "URL 编解码"
    },
    {
     "key": "base32",
-    "title": "工具B Base32 编解码"
+    "title": "Base32 编解码"
    },
    {
     "key": "qsplit",
-    "title": "工具C 参数拆分"
+    "title": "参数拆分"
    },
    {
     "key": "enccmp",
-    "title": "工具D 编码对比"
+    "title": "编码对比"
    },
    {
     "key": "base58",
-    "title": "工具E Base58"
+    "title": "Base58"
    }
   ]
  },
@@ -1357,27 +1357,27 @@
   "subapps": [
    {
     "key": "timestamp",
-    "title": "工具A 时间戳转换"
+    "title": "时间戳转换"
    },
    {
     "key": "timezone",
-    "title": "工具B 时区换算"
+    "title": "时区换算"
    },
    {
     "key": "tzabbr",
-    "title": "工具C 时区缩写"
+    "title": "时区缩写"
    },
    {
     "key": "isofmt",
-    "title": "工具D ISO·RFC"
+    "title": "ISO·RFC"
    },
    {
     "key": "week",
-    "title": "工具E 周数与季节"
+    "title": "周数与季节"
    },
    {
     "key": "cron",
-    "title": "工具F Cron解析"
+    "title": "Cron解析"
    }
   ]
  },
@@ -1393,11 +1393,11 @@
   "subapps": [
    {
     "key": "convert",
-    "title": "工具A 格式转换"
+    "title": "格式转换"
    },
    {
     "key": "resize",
-    "title": "工具B 尺寸缩放"
+    "title": "尺寸缩放"
    }
   ]
  },
@@ -1413,27 +1413,27 @@
   "subapps": [
    {
     "key": "diff",
-    "title": "工具A 逐行对比"
+    "title": "逐行对比"
    },
    {
     "key": "merge",
-    "title": "工具B 三路合并"
+    "title": "三路合并"
    },
    {
     "key": "patch",
-    "title": "工具C unified 补丁"
+    "title": "unified 补丁"
    },
    {
     "key": "stats",
-    "title": "工具D 增删改统计"
+    "title": "增删改统计"
    },
    {
     "key": "word",
-    "title": "工具E 词级差异"
+    "title": "词级差异"
    },
    {
     "key": "clean",
-    "title": "工具F 空白与标点规范"
+    "title": "空白与标点规范"
    }
   ]
  },
@@ -1449,23 +1449,23 @@
   "subapps": [
    {
     "key": "convert",
-    "title": "工具A 颜色转换"
+    "title": "颜色转换"
    },
    {
     "key": "contrast",
-    "title": "工具B 对比度"
+    "title": "对比度"
    },
    {
     "key": "similar",
-    "title": "工具C 相近色"
+    "title": "相近色"
    },
    {
     "key": "colortemp",
-    "title": "工具D 色温"
+    "title": "色温"
    },
    {
     "key": "batchcontrast",
-    "title": "工具E 批量对比度"
+    "title": "批量对比度"
    }
   ]
  },
@@ -1480,27 +1480,27 @@
   "subapps": [
    {
     "key": "csv",
-    "title": "工具A CSV转表格"
+    "title": "CSV转表格"
    },
    {
     "key": "text",
-    "title": "工具B 文本转表格"
+    "title": "文本转表格"
    },
    {
     "key": "html",
-    "title": "工具C 表格转HTML"
+    "title": "表格转HTML"
    },
    {
     "key": "align",
-    "title": "工具D 对齐调整"
+    "title": "对齐调整"
    },
    {
     "key": "t2json",
-    "title": "工具E 表格转JSON"
+    "title": "表格转JSON"
    },
    {
     "key": "list",
-    "title": "工具F 列表与嵌套"
+    "title": "列表与嵌套"
    }
   ]
  },
@@ -1516,23 +1516,23 @@
   "subapps": [
    {
     "key": "radix",
-    "title": "工具A 进制转换"
+    "title": "进制转换"
    },
    {
     "key": "radix2",
-    "title": "工具B 进制批量转换"
+    "title": "进制批量转换"
    },
    {
     "key": "ip",
-    "title": "工具C IP 与整数互转"
+    "title": "IP 与整数互转"
    },
    {
     "key": "float",
-    "title": "工具D 浮点数精度"
+    "title": "浮点数精度"
    },
    {
     "key": "bcd",
-    "title": "工具E BCD 与十六进制"
+    "title": "BCD 与十六进制"
    }
   ]
  },
@@ -1547,27 +1547,27 @@
   "subapps": [
    {
     "key": "case",
-    "title": "工具A 命名风格"
+    "title": "命名风格"
    },
    {
     "key": "upper",
-    "title": "工具B 大小写"
+    "title": "大小写"
    },
    {
     "key": "split",
-    "title": "工具C 拆词缩写"
+    "title": "拆词缩写"
    },
    {
     "key": "slug",
-    "title": "工具D Slug文件名"
+    "title": "Slug文件名"
    },
    {
     "key": "batch",
-    "title": "工具E 批量转换"
+    "title": "批量转换"
    },
    {
     "key": "code",
-    "title": "工具F 常量与配置"
+    "title": "常量与配置"
    }
   ]
  },
@@ -1583,27 +1583,27 @@
   "subapps": [
    {
     "key": "diff",
-    "title": "工具A 间隔计算"
+    "title": "间隔计算"
    },
    {
     "key": "add",
-    "title": "工具B 日期推算"
+    "title": "日期推算"
    },
    {
     "key": "weekday",
-    "title": "工具C 星期推算"
+    "title": "星期推算"
    },
    {
     "key": "compare",
-    "title": "工具D 日期比较"
+    "title": "日期比较"
    },
    {
     "key": "workday",
-    "title": "工具E 工作日计算"
+    "title": "工作日计算"
    },
    {
     "key": "duration",
-    "title": "工具F 工期换算"
+    "title": "工期换算"
    }
   ]
  },
@@ -1618,27 +1618,27 @@
   "subapps": [
    {
     "key": "count",
-    "title": "工具A 字符统计"
+    "title": "字符统计"
    },
    {
     "key": "time",
-    "title": "工具B 阅读时长"
+    "title": "阅读时长"
    },
    {
     "key": "progress",
-    "title": "工具C 阅读进度"
+    "title": "阅读进度"
    },
    {
     "key": "freq",
-    "title": "工具D 词频Top10"
+    "title": "词频Top10"
    },
    {
     "key": "para",
-    "title": "工具E 行与段落"
+    "title": "行与段落"
    },
    {
     "key": "dup",
-    "title": "工具F 重复行检测"
+    "title": "重复行检测"
    }
   ]
  },
@@ -1654,11 +1654,11 @@
   "subapps": [
    {
     "key": "crop",
-    "title": "工具A 图片裁剪"
+    "title": "图片裁剪"
    },
    {
     "key": "avatar",
-    "title": "工具B 圆形头像裁剪"
+    "title": "圆形头像裁剪"
    }
   ]
  },
@@ -1673,27 +1673,27 @@
   "subapps": [
    {
     "key": "password",
-    "title": "工具A 随机密码生成"
+    "title": "随机密码生成"
    },
    {
     "key": "strength",
-    "title": "工具B 强度与熵值评估"
+    "title": "强度与熵值评估"
    },
    {
     "key": "pin",
-    "title": "工具C PIN 与备份码"
+    "title": "PIN 与备份码"
    },
    {
     "key": "passphrase",
-    "title": "工具D 助记口令"
+    "title": "助记口令"
    },
    {
     "key": "2fa",
-    "title": "工具E 两步验证"
+    "title": "两步验证"
    },
    {
     "key": "breach",
-    "title": "工具F 泄露自查"
+    "title": "泄露自查"
    }
   ]
  },
@@ -1709,27 +1709,27 @@
   "subapps": [
    {
     "key": "group",
-    "title": "工具A 随机分组"
+    "title": "随机分组"
    },
    {
     "key": "rep",
-    "title": "工具B 代表抽取"
+    "title": "代表抽取"
    },
    {
     "key": "order",
-    "title": "工具C 顺序抽签"
+    "title": "顺序抽签"
    },
    {
     "key": "export",
-    "title": "工具D 导出"
+    "title": "导出"
    },
    {
     "key": "bracket",
-    "title": "工具E 对阵表"
+    "title": "对阵表"
    },
    {
     "key": "seed",
-    "title": "工具F 随机种子与复现"
+    "title": "随机种子与复现"
    }
   ]
  },
@@ -1744,27 +1744,27 @@
   "subapps": [
    {
     "key": "bmi",
-    "title": "工具A BMI 与理想体重"
+    "title": "BMI 与理想体重"
    },
    {
     "key": "bmr",
-    "title": "工具B 基础代谢与热量"
+    "title": "基础代谢与热量"
    },
    {
     "key": "bodyfat",
-    "title": "工具C 体脂率估算"
+    "title": "体脂率估算"
    },
    {
     "key": "water",
-    "title": "工具D 每日饮水"
+    "title": "每日饮水"
    },
    {
     "key": "heart",
-    "title": "工具E 血压与心率"
+    "title": "血压与心率"
    },
    {
     "key": "sleep",
-    "title": "工具F 睡眠时长"
+    "title": "睡眠时长"
    }
   ]
  },
@@ -1816,15 +1816,15 @@
   "subapps": [
    {
     "key": "hash",
-    "title": "工具A 哈希校验"
+    "title": "哈希校验"
    },
    {
     "key": "hmac",
-    "title": "工具B HMAC 与加盐哈希"
+    "title": "HMAC 与加盐哈希"
    },
    {
     "key": "crc32",
-    "title": "工具C CRC32 校验"
+    "title": "CRC32 校验"
    }
   ]
  },
@@ -1840,27 +1840,27 @@
   "subapps": [
    {
     "key": "pomodoro",
-    "title": "工具A 番茄钟"
+    "title": "番茄钟"
    },
    {
     "key": "breaks",
-    "title": "工具B 休息计时"
+    "title": "休息计时"
    },
    {
     "key": "stats",
-    "title": "工具C 专注统计"
+    "title": "专注统计"
    },
    {
     "key": "plan",
-    "title": "工具D 番茄计划"
+    "title": "番茄计划"
    },
    {
     "key": "cycle",
-    "title": "工具E 周期规划"
+    "title": "周期规划"
    },
    {
     "key": "daily",
-    "title": "工具F 每日专注目标"
+    "title": "每日专注目标"
    }
   ]
  },
@@ -1876,27 +1876,27 @@
   "subapps": [
    {
     "key": "sci",
-    "title": "工具A 科学计算"
+    "title": "科学计算"
    },
    {
     "key": "func",
-    "title": "工具B 函数与常数"
+    "title": "函数与常数"
    },
    {
     "key": "stat",
-    "title": "工具C 统计与概率"
+    "title": "统计与概率"
    },
    {
     "key": "history",
-    "title": "工具D 计算历史"
+    "title": "计算历史"
    },
    {
     "key": "matrix",
-    "title": "工具E 矩阵运算"
+    "title": "矩阵运算"
    },
    {
     "key": "base",
-    "title": "工具F 进制与位运算"
+    "title": "进制与位运算"
    }
   ]
  },
@@ -1912,27 +1912,27 @@
   "subapps": [
    {
     "key": "preview",
-    "title": "工具A 实时预览"
+    "title": "实时预览"
    },
    {
     "key": "lint",
-    "title": "工具B 语法检查"
+    "title": "语法检查"
    },
    {
     "key": "stats",
-    "title": "工具C 文档统计"
+    "title": "文档统计"
    },
    {
     "key": "template",
-    "title": "工具D 模板骨架"
+    "title": "模板骨架"
    },
    {
     "key": "toc",
-    "title": "工具E 目录生成"
+    "title": "目录生成"
    },
    {
     "key": "export",
-    "title": "工具F 导出与打印"
+    "title": "导出与打印"
    }
   ]
  },
@@ -1957,27 +1957,27 @@
   "subapps": [
    {
     "key": "text",
-    "title": "工具A 文字水印"
+    "title": "文字水印"
    },
    {
     "key": "logo",
-    "title": "工具B 图片水印"
+    "title": "图片水印"
    },
    {
     "key": "tile",
-    "title": "工具C 平铺水印"
+    "title": "平铺水印"
    },
    {
     "key": "batch",
-    "title": "工具D 批量处理"
+    "title": "批量处理"
    },
    {
     "key": "compress",
-    "title": "工具E 体积估算"
+    "title": "体积估算"
    },
    {
     "key": "opacity",
-    "title": "工具F 透明度与位置"
+    "title": "透明度与位置"
    }
   ]
  },
@@ -1993,27 +1993,27 @@
   "subapps": [
    {
     "key": "speed",
-    "title": "工具A 速度测试"
+    "title": "速度测试"
    },
    {
     "key": "accuracy",
-    "title": "工具B 错键分析"
+    "title": "错键分析"
    },
    {
     "key": "drill",
-    "title": "工具C 练习"
+    "title": "练习"
    },
    {
     "key": "progress",
-    "title": "工具D 趋势"
+    "title": "趋势"
    },
    {
     "key": "layout",
-    "title": "工具E 指法"
+    "title": "指法"
    },
    {
     "key": "custom",
-    "title": "工具F 自定义测试文本"
+    "title": "自定义测试文本"
    }
   ]
  },
@@ -2029,27 +2029,27 @@
   "subapps": [
    {
     "key": "todo",
-    "title": "工具A 待办"
+    "title": "待办"
    },
    {
     "key": "routine",
-    "title": "工具B 例行"
+    "title": "例行"
    },
    {
     "key": "review",
-    "title": "工具C 回顾"
+    "title": "回顾"
    },
    {
     "key": "archive",
-    "title": "工具D 归档"
+    "title": "归档"
    },
    {
     "key": "eisen",
-    "title": "工具E 四象限优先级"
+    "title": "四象限优先级"
    },
    {
     "key": "timer",
-    "title": "工具F 任务计时与耗时统计"
+    "title": "任务计时与耗时统计"
    }
   ]
  },
@@ -2065,27 +2065,27 @@
   "subapps": [
    {
     "key": "encrypt",
-    "title": "工具A AES 加密"
+    "title": "AES 加密"
    },
    {
     "key": "decrypt",
-    "title": "工具B AES 解密"
+    "title": "AES 解密"
    },
    {
     "key": "hash",
-    "title": "工具C 哈希计算"
+    "title": "哈希计算"
    },
    {
     "key": "verify",
-    "title": "工具D 校验对比"
+    "title": "校验对比"
    },
    {
     "key": "hmac",
-    "title": "工具E HMAC 签名验签"
+    "title": "HMAC 签名验签"
    },
    {
     "key": "pbkdf2",
-    "title": "工具F 密钥派生"
+    "title": "密钥派生"
    }
   ]
  },
@@ -2101,27 +2101,27 @@
   "subapps": [
    {
     "key": "pick",
-    "title": "工具A 单点取色"
+    "title": "单点取色"
    },
    {
     "key": "palette",
-    "title": "工具B 主色提取"
+    "title": "主色提取"
    },
    {
     "key": "css",
-    "title": "工具C CSS 变量导出"
+    "title": "CSS 变量导出"
    },
    {
     "key": "history",
-    "title": "工具D 取色历史"
+    "title": "取色历史"
    },
    {
     "key": "contrast",
-    "title": "工具E 对比度与无障碍检查"
+    "title": "对比度与无障碍检查"
    },
    {
     "key": "harmony",
-    "title": "工具F 配色方案生成"
+    "title": "配色方案生成"
    }
   ]
  },
@@ -2137,27 +2137,27 @@
   "subapps": [
    {
     "key": "ledger",
-    "title": "工具A 流水记录"
+    "title": "流水记录"
    },
    {
     "key": "category",
-    "title": "工具B 分类统计"
+    "title": "分类统计"
    },
    {
     "key": "monthly",
-    "title": "工具C 月度汇总"
+    "title": "月度汇总"
    },
    {
     "key": "export",
-    "title": "工具D 导出"
+    "title": "导出"
    },
    {
     "key": "budget",
-    "title": "工具E 预算"
+    "title": "预算"
    },
    {
     "key": "trend",
-    "title": "工具F 月度趋势与同比"
+    "title": "月度趋势与同比"
    }
   ]
  },
@@ -2173,27 +2173,27 @@
   "subapps": [
    {
     "key": "draw",
-    "title": "工具A 画板"
+    "title": "画板"
    },
    {
     "key": "annotate",
-    "title": "工具B 标注"
+    "title": "标注"
    },
    {
     "key": "flow",
-    "title": "工具C 流程"
+    "title": "流程"
    },
    {
     "key": "sign",
-    "title": "工具D 签名"
+    "title": "签名"
    },
    {
     "key": "legend",
-    "title": "工具E 图例"
+    "title": "图例"
    },
    {
     "key": "template",
-    "title": "工具F 画布模板"
+    "title": "画布模板"
    }
   ]
  },
@@ -2209,27 +2209,27 @@
   "subapps": [
    {
     "key": "grid",
-    "title": "工具A 九宫格切图"
+    "title": "九宫格切图"
    },
    {
     "key": "square",
-    "title": "工具B 方图"
+    "title": "方图"
    },
    {
     "key": "story",
-    "title": "工具C 竖版"
+    "title": "竖版"
    },
    {
     "key": "cover",
-    "title": "工具D 横版"
+    "title": "横版"
    },
    {
     "key": "radius",
-    "title": "工具E 圆角"
+    "title": "圆角"
    },
    {
     "key": "banner",
-    "title": "工具F 横幅与安全区"
+    "title": "横幅与安全区"
    }
   ]
  },
@@ -2245,27 +2245,27 @@
   "subapps": [
    {
     "key": "zodiac",
-    "title": "工具A 星座速查"
+    "title": "星座速查"
    },
    {
     "key": "shengxiao",
-    "title": "工具B 生肖速查"
+    "title": "生肖速查"
    },
    {
     "key": "ganzhi",
-    "title": "工具C 干支纪年"
+    "title": "干支纪年"
    },
    {
     "key": "pair",
-    "title": "工具D 星座配对"
+    "title": "星座配对"
    },
    {
     "key": "benming",
-    "title": "工具E 本命年"
+    "title": "本命年"
    },
    {
     "key": "shichen",
-    "title": "工具F 时辰与吉时"
+    "title": "时辰与吉时"
    }
   ]
  },
@@ -2281,27 +2281,27 @@
   "subapps": [
    {
     "key": "gray",
-    "title": "工具A 灰度"
+    "title": "灰度"
    },
    {
     "key": "blur",
-    "title": "工具B 模糊"
+    "title": "模糊"
    },
    {
     "key": "vintage",
-    "title": "工具C 复古"
+    "title": "复古"
    },
    {
     "key": "tone",
-    "title": "工具D 明暗"
+    "title": "明暗"
    },
    {
     "key": "sharpen",
-    "title": "工具E 锐化"
+    "title": "锐化"
    },
    {
     "key": "temperature",
-    "title": "工具F 色温与色调"
+    "title": "色温与色调"
    }
   ]
  },
@@ -2317,15 +2317,15 @@
   "subapps": [
    {
     "key": "numeral",
-    "title": "工具A 数字转写"
+    "title": "数字转写"
    },
    {
     "key": "roman",
-    "title": "工具B 罗马反解"
+    "title": "罗马反解"
    },
    {
     "key": "rmb",
-    "title": "工具C 金额大写校验"
+    "title": "金额大写校验"
    }
   ]
  },
@@ -2341,27 +2341,27 @@
   "subapps": [
    {
     "key": "random",
-    "title": "工具A 随机"
+    "title": "随机"
    },
    {
     "key": "weighted",
-    "title": "工具B 加权"
+    "title": "加权"
    },
    {
     "key": "vote",
-    "title": "工具C 投票"
+    "title": "投票"
    },
    {
     "key": "picker",
-    "title": "工具D 抽签"
+    "title": "抽签"
    },
    {
     "key": "borda",
-    "title": "工具E 波达计分"
+    "title": "波达计分"
    },
    {
     "key": "matrix",
-    "title": "工具F 决策矩阵打分"
+    "title": "决策矩阵打分"
    }
   ]
  },
@@ -2377,11 +2377,11 @@
   "subapps": [
    {
     "key": "dataurl",
-    "title": "工具A DataURL转换"
+    "title": "DataURL转换"
    },
    {
     "key": "compress",
-    "title": "工具B 单图压缩"
+    "title": "单图压缩"
    }
   ]
  },
@@ -2397,27 +2397,27 @@
   "subapps": [
    {
     "key": "stopwatch",
-    "title": "工具A 秒表"
+    "title": "秒表"
    },
    {
     "key": "laps",
-    "title": "工具B 分段"
+    "title": "分段"
    },
    {
     "key": "compare",
-    "title": "工具C 对比"
+    "title": "对比"
    },
    {
     "key": "export",
-    "title": "工具D 导出"
+    "title": "导出"
    },
    {
     "key": "interval",
-    "title": "工具E 间歇"
+    "title": "间歇"
    },
    {
     "key": "countdown",
-    "title": "工具F 多段倒计时"
+    "title": "多段倒计时"
    }
   ]
  },
@@ -2433,11 +2433,11 @@
   "subapps": [
    {
     "key": "scheme",
-    "title": "工具A 配色方案"
+    "title": "配色方案"
    },
    {
     "key": "palette",
-    "title": "工具B 明暗变体"
+    "title": "明暗变体"
    }
   ]
  },
@@ -2469,11 +2469,11 @@
    },
    {
     "key": "diffscore",
-    "title": "工具E 差异评分与阈值"
+    "title": "差异评分与阈值"
    },
    {
     "key": "report",
-    "title": "工具F 差异报告导出"
+    "title": "差异报告导出"
    }
   ]
  },
@@ -2489,27 +2489,27 @@
   "subapps": [
    {
     "key": "month",
-    "title": "工具A 月历排布"
+    "title": "月历排布"
    },
    {
     "key": "year",
-    "title": "工具B 年历总览"
+    "title": "年历总览"
    },
    {
     "key": "week",
-    "title": "工具C 周数对照"
+    "title": "周数对照"
    },
    {
     "key": "print",
-    "title": "工具D 打印版式"
+    "title": "打印版式"
    },
    {
     "key": "quarter",
-    "title": "工具E 季度财年"
+    "title": "季度财年"
    },
    {
     "key": "progress",
-    "title": "工具F 年度进度统计"
+    "title": "年度进度统计"
    }
   ]
  },
@@ -2525,11 +2525,11 @@
   "subapps": [
    {
     "key": "strength",
-    "title": "工具A 密码强度检测"
+    "title": "密码强度检测"
    },
    {
     "key": "gen",
-    "title": "工具B 随机密码生成"
+    "title": "随机密码生成"
    }
   ]
  },
@@ -2545,27 +2545,27 @@
   "subapps": [
    {
     "key": "map",
-    "title": "工具A 导图"
+    "title": "导图"
    },
    {
     "key": "outline",
-    "title": "工具B 大纲"
+    "title": "大纲"
    },
    {
     "key": "templates",
-    "title": "工具C 模板"
+    "title": "模板"
    },
    {
     "key": "export",
-    "title": "工具D 导出"
+    "title": "导出"
    },
    {
     "key": "mermaid",
-    "title": "工具E Mermaid 转写"
+    "title": "Mermaid 转写"
    },
    {
     "key": "checklist",
-    "title": "工具F 清单与待办大纲"
+    "title": "清单与待办大纲"
    }
   ]
  },
@@ -2581,27 +2581,27 @@
   "subapps": [
    {
     "key": "clock",
-    "title": "工具A 多城时钟"
+    "title": "多城时钟"
    },
    {
     "key": "offset",
-    "title": "工具B 时差计算"
+    "title": "时差计算"
    },
    {
     "key": "dst",
-    "title": "工具C 夏令时判断"
+    "title": "夏令时判断"
    },
    {
     "key": "meet",
-    "title": "工具D 会议对照"
+    "title": "会议对照"
    },
    {
     "key": "convert",
-    "title": "工具E 时间戳与时区互转"
+    "title": "时间戳与时区互转"
    },
    {
     "key": "suntime",
-    "title": "工具F 日出日落估算"
+    "title": "日出日落估算"
    }
   ]
  },
@@ -2617,27 +2617,27 @@
   "subapps": [
    {
     "key": "mosaic",
-    "title": "工具A 马赛克"
+    "title": "马赛克"
    },
    {
     "key": "blur",
-    "title": "工具B 模糊打码"
+    "title": "模糊打码"
    },
    {
     "key": "black",
-    "title": "工具C 黑块遮挡"
+    "title": "黑块遮挡"
    },
    {
     "key": "crop",
-    "title": "工具D 裁切隐藏"
+    "title": "裁切隐藏"
    },
    {
     "key": "pixelate",
-    "title": "工具E 像素化强度"
+    "title": "像素化强度"
    },
    {
     "key": "redact",
-    "title": "工具F 文本敏感信息脱敏"
+    "title": "文本敏感信息脱敏"
    }
   ]
  },
@@ -2653,27 +2653,27 @@
   "subapps": [
    {
     "key": "encode",
-    "title": "工具A 文本转摩斯"
+    "title": "文本转摩斯"
    },
    {
     "key": "decode",
-    "title": "工具B 摩斯转文本"
+    "title": "摩斯转文本"
    },
    {
     "key": "audio",
-    "title": "工具C 摩斯音频播放"
+    "title": "摩斯音频播放"
    },
    {
     "key": "chart",
-    "title": "工具D 码表与练习"
+    "title": "码表与练习"
    },
    {
     "key": "sos",
-    "title": "工具E 求救信号与闪光节拍"
+    "title": "求救信号与闪光节拍"
    },
    {
     "key": "qso",
-    "title": "工具F 通联简语速查"
+    "title": "通联简语速查"
    }
   ]
  },
@@ -2725,23 +2725,23 @@
   "subapps": [
    {
     "key": "gradient",
-    "title": "工具A 渐变生成"
+    "title": "渐变生成"
    },
    {
     "key": "presets",
-    "title": "工具B 预设对比"
+    "title": "预设对比"
    },
    {
     "key": "noisegrad",
-    "title": "工具C 噪点渐变"
+    "title": "噪点渐变"
    },
    {
     "key": "textgrad",
-    "title": "工具D 渐变文字"
+    "title": "渐变文字"
    },
    {
     "key": "gradpreset",
-    "title": "工具E 预设速查"
+    "title": "预设速查"
    }
   ]
  },
@@ -2757,11 +2757,11 @@
   "subapps": [
    {
     "key": "status",
-    "title": "工具A 状态码"
+    "title": "状态码"
    },
    {
     "key": "headers",
-    "title": "工具B 请求响应头"
+    "title": "请求响应头"
    }
   ]
  },
@@ -2777,11 +2777,11 @@
   "subapps": [
    {
     "key": "discount",
-    "title": "工具A 折扣计算"
+    "title": "折扣计算"
    },
    {
     "key": "batch",
-    "title": "工具B 批量到手价"
+    "title": "批量到手价"
    }
   ]
  },
@@ -2797,27 +2797,27 @@
   "subapps": [
    {
     "key": "parse",
-    "title": "工具A Cron 解析"
+    "title": "Cron 解析"
    },
    {
     "key": "build",
-    "title": "工具B Cron 生成"
+    "title": "Cron 生成"
    },
    {
     "key": "next",
-    "title": "工具C 下次执行"
+    "title": "下次执行"
    },
    {
     "key": "cheatsheet",
-    "title": "工具D 常用速查"
+    "title": "常用速查"
    },
    {
     "key": "human",
-    "title": "工具E 自然语言转规则"
+    "title": "自然语言转规则"
    },
    {
     "key": "lint",
-    "title": "工具F 批量表达式体检"
+    "title": "批量表达式体检"
    }
   ]
  },
@@ -2833,27 +2833,27 @@
   "subapps": [
    {
     "key": "vertical",
-    "title": "工具A 纵向拼接"
+    "title": "纵向拼接"
    },
    {
     "key": "horizontal",
-    "title": "工具B 横向拼接"
+    "title": "横向拼接"
    },
    {
     "key": "grid",
-    "title": "工具C 宫格"
+    "title": "宫格"
    },
    {
     "key": "border",
-    "title": "工具D 边框"
+    "title": "边框"
    },
    {
     "key": "gap",
-    "title": "工具E 间距"
+    "title": "间距"
    },
    {
     "key": "ratio",
-    "title": "工具F 拼图比例预设"
+    "title": "拼图比例预设"
    }
   ]
  },
@@ -2869,11 +2869,11 @@
   "subapps": [
    {
     "key": "codec",
-    "title": "工具A 实体编解码"
+    "title": "实体编解码"
    },
    {
     "key": "entities",
-    "title": "工具B 实体速查"
+    "title": "实体速查"
    }
   ]
  },
@@ -2889,27 +2889,27 @@
   "subapps": [
    {
     "key": "unit",
-    "title": "工具A 单位价"
+    "title": "单位价"
    },
    {
     "key": "pack",
-    "title": "工具B 规格"
+    "title": "规格"
    },
    {
     "key": "bulk",
-    "title": "工具C 多件"
+    "title": "多件"
    },
    {
     "key": "member",
-    "title": "工具D 会员价"
+    "title": "会员价"
    },
    {
     "key": "stack",
-    "title": "工具E 优惠叠加"
+    "title": "优惠叠加"
    },
    {
     "key": "history",
-    "title": "工具F 历史价格记录"
+    "title": "历史价格记录"
    }
   ]
  },
@@ -2957,11 +2957,11 @@
   "subapps": [
    {
     "key": "shadow",
-    "title": "工具A 阴影生成"
+    "title": "阴影生成"
    },
    {
     "key": "preset",
-    "title": "工具B 预设对比"
+    "title": "预设对比"
    }
   ]
  },
@@ -2976,27 +2976,27 @@
   "subapps": [
    {
     "key": "escape",
-    "title": "工具A Unicode转义"
+    "title": "Unicode转义"
    },
    {
     "key": "unescape",
-    "title": "工具B 反转义"
+    "title": "反转义"
    },
    {
     "key": "entity",
-    "title": "工具C HTML实体"
+    "title": "HTML实体"
    },
    {
     "key": "codepoint",
-    "title": "工具D 码点统计"
+    "title": "码点统计"
    },
    {
     "key": "xss",
-    "title": "工具E 安全转义"
+    "title": "安全转义"
    },
    {
     "key": "regex",
-    "title": "工具F 正则转义"
+    "title": "正则转义"
    }
   ]
  },
@@ -3012,23 +3012,23 @@
   "subapps": [
    {
     "key": "plain",
-    "title": "工具A 转纯文本"
+    "title": "转纯文本"
    },
    {
     "key": "outline",
-    "title": "工具B 标题大纲"
+    "title": "标题大纲"
    },
    {
     "key": "links",
-    "title": "工具C 链接提取"
+    "title": "链接提取"
    },
    {
     "key": "codeblock",
-    "title": "工具D 代码块提取"
+    "title": "代码块提取"
    },
    {
     "key": "anchor",
-    "title": "工具E 标题锚点"
+    "title": "标题锚点"
    }
   ]
  },
@@ -3044,27 +3044,27 @@
   "subapps": [
    {
     "key": "mask",
-    "title": "工具A 手机脱敏"
+    "title": "手机脱敏"
    },
    {
     "key": "batch",
-    "title": "工具B 批量脱敏"
+    "title": "批量脱敏"
    },
    {
     "key": "rules",
-    "title": "工具C 日志模板"
+    "title": "日志模板"
    },
    {
     "key": "share",
-    "title": "工具D 分享自查"
+    "title": "分享自查"
    },
    {
     "key": "custom",
-    "title": "工具E 规则自定义"
+    "title": "规则自定义"
    },
    {
     "key": "hash",
-    "title": "工具F 哈希脱敏"
+    "title": "哈希脱敏"
    }
   ]
  },
@@ -3080,11 +3080,11 @@
   "subapps": [
    {
     "key": "name",
-    "title": "工具A 颜色名称"
+    "title": "颜色名称"
    },
    {
     "key": "contrast",
-    "title": "工具B 明暗对比"
+    "title": "明暗对比"
    }
   ]
  },
@@ -3100,11 +3100,11 @@
   "subapps": [
    {
     "key": "rotate",
-    "title": "工具A 旋转翻转"
+    "title": "旋转翻转"
    },
    {
     "key": "watermark",
-    "title": "工具B 图片水印"
+    "title": "图片水印"
    }
   ]
  },
@@ -3120,27 +3120,27 @@
   "subapps": [
    {
     "key": "count",
-    "title": "工具A 工作日天数"
+    "title": "工作日天数"
    },
    {
     "key": "leave",
-    "title": "工具B 假期余额"
+    "title": "假期余额"
    },
    {
     "key": "deadline",
-    "title": "工具C 截止日推算"
+    "title": "截止日推算"
    },
    {
     "key": "calendar",
-    "title": "工具D 月度工作日"
+    "title": "月度工作日"
    },
    {
     "key": "overtime",
-    "title": "工具E 加班与调休折算"
+    "title": "加班与调休折算"
    },
    {
     "key": "leaveplan",
-    "title": "工具F 请假最优组合"
+    "title": "请假最优组合"
    }
   ]
  },
@@ -3156,11 +3156,11 @@
   "subapps": [
    {
     "key": "passphrase",
-    "title": "工具A 密码短语"
+    "title": "密码短语"
    },
    {
     "key": "pin",
-    "title": "工具B PIN 备份码"
+    "title": "PIN 备份码"
    }
   ]
  },
@@ -3176,27 +3176,27 @@
   "subapps": [
    {
     "key": "exif",
-    "title": "工具A EXIF"
+    "title": "EXIF"
    },
    {
     "key": "meta",
-    "title": "工具B 信息"
+    "title": "信息"
    },
    {
     "key": "batch",
-    "title": "工具C 批量"
+    "title": "批量"
    },
    {
     "key": "privacy",
-    "title": "工具D 自查"
+    "title": "自查"
    },
    {
     "key": "gps",
-    "title": "工具E 定位"
+    "title": "定位"
    },
    {
     "key": "strip",
-    "title": "工具F 一键清除元数据"
+    "title": "一键清除元数据"
    }
   ]
  },
@@ -3212,27 +3212,27 @@
   "subapps": [
    {
     "key": "test",
-    "title": "工具A 匹配测试"
+    "title": "匹配测试"
    },
    {
     "key": "replace",
-    "title": "工具B 批量替换"
+    "title": "批量替换"
    },
    {
     "key": "groups",
-    "title": "工具C 捕获组"
+    "title": "捕获组"
    },
    {
     "key": "cheatsheet",
-    "title": "工具D 常用正则"
+    "title": "常用正则"
    },
    {
     "key": "extract",
-    "title": "工具E 批量提取与清洗"
+    "title": "批量提取与清洗"
    },
    {
     "key": "explain",
-    "title": "工具F 正则逐段解释"
+    "title": "正则逐段解释"
    }
   ]
  },
@@ -3248,27 +3248,27 @@
   "subapps": [
    {
     "key": "habit",
-    "title": "工具A 习惯打卡日历"
+    "title": "习惯打卡日历"
    },
    {
     "key": "streak",
-    "title": "工具B 连续与断签"
+    "title": "连续与断签"
    },
    {
     "key": "challenge",
-    "title": "工具C 21/30 天挑战"
+    "title": "21/30 天挑战"
    },
    {
     "key": "review",
-    "title": "工具D 周月复盘"
+    "title": "周月复盘"
    },
    {
     "key": "goal",
-    "title": "工具E 目标拆解"
+    "title": "目标拆解"
    },
    {
     "key": "nudge",
-    "title": "工具F 打卡提醒文案"
+    "title": "打卡提醒文案"
    }
   ]
  },
@@ -3284,27 +3284,27 @@
   "subapps": [
    {
     "key": "uuid",
-    "title": "工具A UUID"
+    "title": "UUID"
    },
    {
     "key": "shortid",
-    "title": "工具B 短ID"
+    "title": "短ID"
    },
    {
     "key": "token",
-    "title": "工具C 令牌"
+    "title": "令牌"
    },
    {
     "key": "secret",
-    "title": "工具D 密钥"
+    "title": "密钥"
    },
    {
     "key": "ulid",
-    "title": "工具E ULID"
+    "title": "ULID"
    },
    {
     "key": "password",
-    "title": "工具F 密码短语生成"
+    "title": "密码短语生成"
    }
   ]
  },
@@ -3320,11 +3320,11 @@
   "subapps": [
    {
     "key": "meeting",
-    "title": "工具A 会议换算"
+    "title": "会议换算"
    },
    {
     "key": "abbr",
-    "title": "工具B 时区缩写"
+    "title": "时区缩写"
    }
   ]
  },
@@ -3340,11 +3340,11 @@
   "subapps": [
    {
     "key": "glass",
-    "title": "工具A 玻璃拟态"
+    "title": "玻璃拟态"
    },
    {
     "key": "glasscard",
-    "title": "工具B 毛玻璃卡片"
+    "title": "毛玻璃卡片"
    }
   ]
  },
@@ -3360,11 +3360,11 @@
   "subapps": [
    {
     "key": "compare",
-    "title": "工具A 还款对比"
+    "title": "还款对比"
    },
    {
     "key": "prepay",
-    "title": "工具B 提前还款"
+    "title": "提前还款"
    }
   ]
  },
@@ -3380,11 +3380,11 @@
   "subapps": [
    {
     "key": "spacing",
-    "title": "工具A 中英混排"
+    "title": "中英混排"
    },
    {
     "key": "citecheck",
-    "title": "工具B 引用一致性"
+    "title": "引用一致性"
    }
   ]
  },
@@ -3400,11 +3400,11 @@
   "subapps": [
    {
     "key": "code128",
-    "title": "工具A Code128"
+    "title": "Code128"
    },
    {
     "key": "sizecheck",
-    "title": "工具B 尺寸校验"
+    "title": "尺寸校验"
    }
   ]
  },
@@ -3420,23 +3420,23 @@
   "subapps": [
    {
     "key": "totp",
-    "title": "工具A TOTP 动态码"
+    "title": "TOTP 动态码"
    },
    {
     "key": "backup",
-    "title": "工具B 备份码清单"
+    "title": "备份码清单"
    },
    {
     "key": "base32",
-    "title": "工具C Base32 编解码"
+    "title": "Base32 编解码"
    },
    {
     "key": "totpstep",
-    "title": "工具D TOTP 时间步"
+    "title": "TOTP 时间步"
    },
    {
     "key": "reccode",
-    "title": "工具E 恢复码校验"
+    "title": "恢复码校验"
    }
   ]
  },
@@ -3452,27 +3452,27 @@
   "subapps": [
    {
     "key": "three",
-    "title": "工具A 三班倒"
+    "title": "三班倒"
    },
    {
     "key": "four",
-    "title": "工具B 四班两倒"
+    "title": "四班两倒"
    },
    {
     "key": "night",
-    "title": "工具C 夜班作息"
+    "title": "夜班作息"
    },
    {
     "key": "swap",
-    "title": "工具D 换班记录"
+    "title": "换班记录"
    },
    {
     "key": "rest",
-    "title": "工具E 疲劳恢复"
+    "title": "疲劳恢复"
    },
    {
     "key": "pay",
-    "title": "工具F 夜班津贴核算"
+    "title": "夜班津贴核算"
    }
   ]
  },
@@ -3488,27 +3488,27 @@
   "subapps": [
    {
     "key": "countdown",
-    "title": "工具A 倒计时清单"
+    "title": "倒计时清单"
    },
    {
     "key": "remind",
-    "title": "工具B 提醒设置"
+    "title": "提醒设置"
    },
    {
     "key": "anniversary",
-    "title": "工具C 周年计算"
+    "title": "周年计算"
    },
    {
     "key": "gift",
-    "title": "工具D 礼物备忘"
+    "title": "礼物备忘"
    },
    {
     "key": "cycle",
-    "title": "工具E 周年与周期提醒"
+    "title": "周年与周期提醒"
    },
    {
     "key": "yearmap",
-    "title": "工具F 年度纪念日历"
+    "title": "年度纪念日历"
    }
   ]
  },
@@ -3524,11 +3524,11 @@
   "subapps": [
    {
     "key": "ico",
-    "title": "工具A 单图转 ICO"
+    "title": "单图转 ICO"
    },
    {
     "key": "multisize",
-    "title": "工具B 多尺寸打包"
+    "title": "多尺寸打包"
    }
   ]
  },
@@ -3544,11 +3544,11 @@
   "subapps": [
    {
     "key": "wave",
-    "title": "工具A 波浪线"
+    "title": "波浪线"
    },
    {
     "key": "diagonal",
-    "title": "工具B 斜切线"
+    "title": "斜切线"
    }
   ]
  },
@@ -3564,27 +3564,27 @@
   "subapps": [
    {
     "key": "power",
-    "title": "工具A 电费"
+    "title": "电费"
    },
    {
     "key": "water",
-    "title": "工具B 水费"
+    "title": "水费"
    },
    {
     "key": "gas",
-    "title": "工具C 燃气"
+    "title": "燃气"
    },
    {
     "key": "tou",
-    "title": "工具D 峰谷"
+    "title": "峰谷"
    },
    {
     "key": "split",
-    "title": "工具E 分摊"
+    "title": "分摊"
    },
    {
     "key": "budget",
-    "title": "工具F 年度账单预算"
+    "title": "年度账单预算"
    }
   ]
  },
@@ -3600,27 +3600,27 @@
   "subapps": [
    {
     "key": "policy",
-    "title": "工具A 隐私政策"
+    "title": "隐私政策"
    },
    {
     "key": "terms",
-    "title": "工具B 服务条款"
+    "title": "服务条款"
    },
    {
     "key": "cookie",
-    "title": "工具C Cookie 文案"
+    "title": "Cookie 文案"
    },
    {
     "key": "dpa",
-    "title": "工具D 数据处理"
+    "title": "数据处理"
    },
    {
     "key": "retention",
-    "title": "工具E 留存周期"
+    "title": "留存周期"
    },
    {
     "key": "consent",
-    "title": "工具F 同意管理与退出"
+    "title": "同意管理与退出"
    }
   ]
  },
@@ -3636,27 +3636,27 @@
   "subapps": [
    {
     "key": "jwt",
-    "title": "工具A JWT 解码"
+    "title": "JWT 解码"
    },
    {
     "key": "claims",
-    "title": "工具B 声明解释"
+    "title": "声明解释"
    },
    {
     "key": "headers",
-    "title": "工具C 请求头"
+    "title": "请求头"
    },
    {
     "key": "cookie",
-    "title": "工具D Cookie 自查"
+    "title": "Cookie 自查"
    },
    {
     "key": "scope",
-    "title": "工具E 权限范围"
+    "title": "权限范围"
    },
    {
     "key": "storage",
-    "title": "工具F Token 存储建议"
+    "title": "Token 存储建议"
    }
   ]
  },
@@ -3672,11 +3672,11 @@
   "subapps": [
    {
     "key": "loader",
-    "title": "工具A 加载动画"
+    "title": "加载动画"
    },
    {
     "key": "skeleton",
-    "title": "工具B 骨架屏"
+    "title": "骨架屏"
    }
   ]
  },
@@ -3701,27 +3701,27 @@
   "subapps": [
    {
     "key": "age",
-    "title": "工具A 精确年龄"
+    "title": "精确年龄"
    },
    {
     "key": "countdown",
-    "title": "工具B 生日倒计时"
+    "title": "生日倒计时"
    },
    {
     "key": "milestone",
-    "title": "工具C 届龄提醒"
+    "title": "届龄提醒"
    },
    {
     "key": "compare",
-    "title": "工具D 年龄对比"
+    "title": "年龄对比"
    },
    {
     "key": "retire",
-    "title": "工具E 退休时间与工作年限"
+    "title": "退休时间与工作年限"
    },
    {
     "key": "zodiac",
-    "title": "工具F 生肖与星座速查"
+    "title": "生肖与星座速查"
    }
   ]
  },
@@ -3737,27 +3737,27 @@
   "subapps": [
    {
     "key": "rotation",
-    "title": "工具A 轮值表"
+    "title": "轮值表"
    },
    {
     "key": "fairness",
-    "title": "工具B 公平度评分"
+    "title": "公平度评分"
    },
    {
     "key": "swap",
-    "title": "工具C 换班与请假"
+    "title": "换班与请假"
    },
    {
     "key": "checklist",
-    "title": "工具D 家务清单"
+    "title": "家务清单"
    },
    {
     "key": "cost",
-    "title": "工具E 外包成本"
+    "title": "外包成本"
    },
    {
     "key": "points",
-    "title": "工具F 家务积分与奖励"
+    "title": "家务积分与奖励"
    }
   ]
  },
@@ -3773,27 +3773,27 @@
   "subapps": [
    {
     "key": "idcard",
-    "title": "工具A 身份证"
+    "title": "身份证"
    },
    {
     "key": "bank",
-    "title": "工具B 银行卡"
+    "title": "银行卡"
    },
    {
     "key": "uscc",
-    "title": "工具C 信用代码"
+    "title": "信用代码"
    },
    {
     "key": "contact",
-    "title": "工具D 联系方式"
+    "title": "联系方式"
    },
    {
     "key": "vin",
-    "title": "工具E 车架号"
+    "title": "车架号"
    },
    {
     "key": "passport",
-    "title": "工具F 护照号规则速查"
+    "title": "护照号规则速查"
    }
   ]
  },
@@ -3809,11 +3809,11 @@
   "subapps": [
    {
     "key": "trim",
-    "title": "工具A 透明边裁剪"
+    "title": "透明边裁剪"
    },
    {
     "key": "batchtrim",
-    "title": "工具B 批量清单"
+    "title": "批量清单"
    }
   ]
  },
@@ -3828,27 +3828,27 @@
   "subapps": [
    {
     "key": "fuel",
-    "title": "工具A 油耗与单次成本"
+    "title": "油耗与单次成本"
    },
    {
     "key": "ev",
-    "title": "工具B 油车与电车对比"
+    "title": "油车与电车对比"
    },
    {
     "key": "parking",
-    "title": "工具C 停车费与过路费"
+    "title": "停车费与过路费"
    },
    {
     "key": "commute",
-    "title": "工具D 通勤月度成本"
+    "title": "通勤月度成本"
    },
    {
     "key": "transit",
-    "title": "工具E 公交月票"
+    "title": "公交月票"
    },
    {
     "key": "tco",
-    "title": "工具F 五年总持有"
+    "title": "五年总持有"
    }
   ]
  },
@@ -3864,11 +3864,11 @@
   "subapps": [
    {
     "key": "flex",
-    "title": "工具A Flex布局"
+    "title": "Flex布局"
    },
    {
     "key": "grid",
-    "title": "工具B Grid网格"
+    "title": "Grid网格"
    }
   ]
  },
@@ -3884,23 +3884,23 @@
   "subapps": [
    {
     "key": "dedupe",
-    "title": "工具A 行去重排序"
+    "title": "行去重排序"
    },
    {
     "key": "linestat",
-    "title": "工具B 行统计"
+    "title": "行统计"
    },
    {
     "key": "lineno",
-    "title": "工具C 行号前缀"
+    "title": "行号前缀"
    },
    {
     "key": "dupcount",
-    "title": "工具D 去重计数"
+    "title": "去重计数"
    },
    {
     "key": "longestline",
-    "title": "工具E 最长行"
+    "title": "最长行"
    }
   ]
  },
@@ -3916,27 +3916,27 @@
   "subapps": [
    {
     "key": "scale",
-    "title": "工具A 份量换算"
+    "title": "份量换算"
    },
    {
     "key": "batch",
-    "title": "工具B 批量备餐"
+    "title": "批量备餐"
    },
    {
     "key": "cookware",
-    "title": "工具C 器具尺寸"
+    "title": "器具尺寸"
    },
    {
     "key": "shopping",
-    "title": "工具D 采购清单"
+    "title": "采购清单"
    },
    {
     "key": "leftover",
-    "title": "工具E 剩菜保存与复热"
+    "title": "剩菜保存与复热"
    },
    {
     "key": "unit",
-    "title": "工具F 厨房单位换算"
+    "title": "厨房单位换算"
    }
   ]
  },
@@ -3952,27 +3952,27 @@
   "subapps": [
    {
     "key": "iso",
-    "title": "工具A 周号查询"
+    "title": "周号查询"
    },
    {
     "key": "weekinfo",
-    "title": "工具B 周范围"
+    "title": "周范围"
    },
    {
     "key": "weekplan",
-    "title": "工具C 周计划"
+    "title": "周计划"
    },
    {
     "key": "quarter",
-    "title": "工具D 季度周数"
+    "title": "季度周数"
    },
    {
     "key": "sprint",
-    "title": "工具E 双周迭代"
+    "title": "双周迭代"
    },
    {
     "key": "offsetweek",
-    "title": "工具F 周偏移倒推"
+    "title": "周偏移倒推"
    }
   ]
  },
@@ -3988,11 +3988,11 @@
   "subapps": [
    {
     "key": "image",
-    "title": "工具A 图片转字符"
+    "title": "图片转字符"
    },
    {
     "key": "asciiart",
-    "title": "工具B 字符画参数"
+    "title": "字符画参数"
    }
   ]
  },
@@ -4008,11 +4008,11 @@
   "subapps": [
    {
     "key": "text",
-    "title": "工具A 霓虹文字"
+    "title": "霓虹文字"
    },
    {
     "key": "neonborder",
-    "title": "工具B 霓虹边框"
+    "title": "霓虹边框"
    }
   ]
  },
@@ -4028,27 +4028,27 @@
   "subapps": [
    {
     "key": "pinyin",
-    "title": "工具A 带调拼音"
+    "title": "带调拼音"
    },
    {
     "key": "plain",
-    "title": "工具B 无调与首字母"
+    "title": "无调与首字母"
    },
    {
     "key": "polyphone",
-    "title": "工具C 多音字"
+    "title": "多音字"
    },
    {
     "key": "table",
-    "title": "工具D 逐字对照表"
+    "title": "逐字对照表"
    },
    {
     "key": "sort",
-    "title": "工具E 拼音排序"
+    "title": "拼音排序"
    },
    {
     "key": "initial",
-    "title": "工具F 声韵拆解"
+    "title": "声韵拆解"
    }
   ]
  },
@@ -4064,23 +4064,23 @@
   "subapps": [
    {
     "key": "social",
-    "title": "工具A 社交隐私"
+    "title": "社交隐私"
    },
    {
     "key": "phone",
-    "title": "工具B 手机权限"
+    "title": "手机权限"
    },
    {
     "key": "browser",
-    "title": "工具C 浏览器隐私"
+    "title": "浏览器隐私"
    },
    {
     "key": "account",
-    "title": "工具D 账号安全"
+    "title": "账号安全"
    },
    {
     "key": "mfa",
-    "title": "工具E 双重验证 MFA"
+    "title": "双重验证 MFA"
    }
   ]
  },
@@ -4096,27 +4096,27 @@
   "subapps": [
    {
     "key": "clean",
-    "title": "工具A 书签解析与去重"
+    "title": "书签解析与去重"
    },
    {
     "key": "group",
-    "title": "工具B 按域名分组"
+    "title": "按域名分组"
    },
    {
     "key": "convert",
-    "title": "工具C 转表格与 JSON"
+    "title": "转表格与 JSON"
    },
    {
     "key": "export",
-    "title": "工具D 导出浏览器书签"
+    "title": "导出浏览器书签"
    },
    {
     "key": "health",
-    "title": "工具E 书签体检"
+    "title": "书签体检"
    },
    {
     "key": "classify",
-    "title": "工具F 书签分类与标签整理"
+    "title": "书签分类与标签整理"
    }
   ]
  },
@@ -4132,27 +4132,27 @@
   "subapps": [
    {
     "key": "subnet",
-    "title": "工具A 子网掩码"
+    "title": "子网掩码"
    },
    {
     "key": "cidr",
-    "title": "工具B CIDR 反推"
+    "title": "CIDR 反推"
    },
    {
     "key": "private",
-    "title": "工具C 私网地址"
+    "title": "私网地址"
    },
    {
     "key": "health",
-    "title": "工具D 网关自查"
+    "title": "网关自查"
    },
    {
     "key": "v6",
-    "title": "工具E IPv6 子网"
+    "title": "IPv6 子网"
    },
    {
     "key": "port",
-    "title": "工具F 端口与协议自查"
+    "title": "端口与协议自查"
    }
   ]
  },
@@ -4168,27 +4168,27 @@
   "subapps": [
    {
     "key": "lunar",
-    "title": "工具A 农历转换"
+    "title": "农历转换"
    },
    {
     "key": "term",
-    "title": "工具B 节气查询"
+    "title": "节气查询"
    },
    {
     "key": "moon",
-    "title": "工具C 月相查询"
+    "title": "月相查询"
    },
    {
     "key": "birthday",
-    "title": "工具D 农历生日"
+    "title": "农历生日"
    },
    {
     "key": "festival",
-    "title": "工具E 节日倒计时"
+    "title": "节日倒计时"
    },
    {
     "key": "seasonal",
-    "title": "工具F 数九与三伏"
+    "title": "数九与三伏"
    }
   ]
  },
@@ -4204,11 +4204,11 @@
   "subapps": [
    {
     "key": "freq",
-    "title": "工具A 词频统计"
+    "title": "词频统计"
    },
    {
     "key": "keyword",
-    "title": "工具B 关键词提取"
+    "title": "关键词提取"
    }
   ]
  },
@@ -4224,27 +4224,27 @@
   "subapps": [
    {
     "key": "split",
-    "title": "工具A 价税分离计算"
+    "title": "价税分离计算"
    },
    {
     "key": "tax",
-    "title": "工具B 税额反算"
+    "title": "税额反算"
    },
    {
     "key": "rate",
-    "title": "工具C 多税率对照"
+    "title": "多税率对照"
    },
    {
     "key": "invoice",
-    "title": "工具D 开票信息生成"
+    "title": "开票信息生成"
    },
    {
     "key": "deduct",
-    "title": "工具E 进项抵扣测算"
+    "title": "进项抵扣测算"
    },
    {
     "key": "crosscheck",
-    "title": "工具F 三表勾稽校验"
+    "title": "三表勾稽校验"
    }
   ]
  },
@@ -4260,11 +4260,11 @@
   "subapps": [
    {
     "key": "button",
-    "title": "工具A 按钮样式"
+    "title": "按钮样式"
    },
    {
     "key": "ghost",
-    "title": "工具B 幽灵按钮"
+    "title": "幽灵按钮"
    }
   ]
  },
@@ -4280,27 +4280,27 @@
   "subapps": [
    {
     "key": "sun",
-    "title": "工具A 日出日落"
+    "title": "日出日落"
    },
    {
     "key": "golden",
-    "title": "工具B 黄金时刻"
+    "title": "黄金时刻"
    },
    {
     "key": "daylight",
-    "title": "工具C 昼长"
+    "title": "昼长"
    },
    {
     "key": "plan",
-    "title": "工具D 拍摄规划"
+    "title": "拍摄规划"
    },
    {
     "key": "city",
-    "title": "工具E 城市光时"
+    "title": "城市光时"
    },
    {
     "key": "moon",
-    "title": "工具F 月相与夜空窗口"
+    "title": "月相与夜空窗口"
    }
   ]
  },
@@ -4316,11 +4316,11 @@
   "subapps": [
    {
     "key": "phish",
-    "title": "工具A 钓鱼自查"
+    "title": "钓鱼自查"
    },
    {
     "key": "sharecheck",
-    "title": "工具B 分享自查"
+    "title": "分享自查"
    }
   ]
  },
@@ -4336,23 +4336,23 @@
   "subapps": [
    {
     "key": "business",
-    "title": "工具A 商务出差"
+    "title": "商务出差"
    },
    {
     "key": "beach",
-    "title": "工具B 海岛度假"
+    "title": "海岛度假"
    },
    {
     "key": "hiking",
-    "title": "工具C 户外徒步"
+    "title": "户外徒步"
    },
    {
     "key": "family",
-    "title": "工具D 亲子出行"
+    "title": "亲子出行"
    },
    {
     "key": "security",
-    "title": "工具E 安检与液体限制"
+    "title": "安检与液体限制"
    }
   ]
  },
@@ -4368,27 +4368,27 @@
   "subapps": [
    {
     "key": "area",
-    "title": "工具A 平面面积"
+    "title": "平面面积"
    },
    {
     "key": "solid",
-    "title": "工具B 立体体积"
+    "title": "立体体积"
    },
    {
     "key": "circle",
-    "title": "工具C 圆与角"
+    "title": "圆与角"
    },
    {
     "key": "concrete",
-    "title": "工具D 土方"
+    "title": "土方"
    },
    {
     "key": "paint",
-    "title": "工具E 刷漆用量"
+    "title": "刷漆用量"
    },
    {
     "key": "slope",
-    "title": "工具F 坡度与排水计算"
+    "title": "坡度与排水计算"
    }
   ]
  },
@@ -4420,11 +4420,11 @@
    },
    {
     "key": "hex",
-    "title": "工具E 文本十六进制"
+    "title": "文本十六进制"
    },
    {
     "key": "crockford",
-    "title": "工具F 无歧义编码"
+    "title": "无歧义编码"
    }
   ]
  },
@@ -4440,11 +4440,11 @@
   "subapps": [
    {
     "key": "punct",
-    "title": "工具A 全半角转换"
+    "title": "全半角转换"
    },
    {
     "key": "whitespace",
-    "title": "工具B 空白规范"
+    "title": "空白规范"
    }
   ]
  },
@@ -4460,27 +4460,27 @@
   "subapps": [
    {
     "key": "split",
-    "title": "工具A AA 均分"
+    "title": "AA 均分"
    },
    {
     "key": "items",
-    "title": "工具B 按项分摊"
+    "title": "按项分摊"
    },
    {
     "key": "settle",
-    "title": "工具C 转账结算"
+    "title": "转账结算"
    },
    {
     "key": "history",
-    "title": "工具D 历史记录"
+    "title": "历史记录"
    },
    {
     "key": "tip",
-    "title": "工具E 小费与税费分摊"
+    "title": "小费与税费分摊"
    },
    {
     "key": "coupon",
-    "title": "工具F 拼单与优惠分摊"
+    "title": "拼单与优惠分摊"
    }
   ]
  },
@@ -4496,27 +4496,27 @@
   "subapps": [
    {
     "key": "ics",
-    "title": "工具A ICS 生成"
+    "title": "ICS 生成"
    },
    {
     "key": "event",
-    "title": "工具B 事件编辑"
+    "title": "事件编辑"
    },
    {
     "key": "subscribe",
-    "title": "工具C 订阅说明"
+    "title": "订阅说明"
    },
    {
     "key": "reminder",
-    "title": "工具D 提醒参数"
+    "title": "提醒参数"
    },
    {
     "key": "recur",
-    "title": "工具E 重复规则"
+    "title": "重复规则"
    },
    {
     "key": "timezone",
-    "title": "工具F 时区转换"
+    "title": "时区转换"
    }
   ]
  },
@@ -4532,11 +4532,11 @@
   "subapps": [
    {
     "key": "chart",
-    "title": "工具A SVG图表"
+    "title": "SVG图表"
    },
    {
     "key": "linechart",
-    "title": "工具B 折线图"
+    "title": "折线图"
    }
   ]
  },
@@ -4552,11 +4552,11 @@
   "subapps": [
    {
     "key": "serial",
-    "title": "工具A 序列号"
+    "title": "序列号"
    },
    {
     "key": "recovery",
-    "title": "工具B 恢复码"
+    "title": "恢复码"
    }
   ]
  },
@@ -4572,27 +4572,27 @@
   "subapps": [
    {
     "key": "paint",
-    "title": "工具A 涂料"
+    "title": "涂料"
    },
    {
     "key": "tile",
-    "title": "工具B 瓷砖"
+    "title": "瓷砖"
    },
    {
     "key": "floor",
-    "title": "工具C 地板"
+    "title": "地板"
    },
    {
     "key": "wallpaper",
-    "title": "工具D 壁纸"
+    "title": "壁纸"
    },
    {
     "key": "waste",
-    "title": "工具E 损耗"
+    "title": "损耗"
    },
    {
     "key": "budget",
-    "title": "工具F 装修预算分配"
+    "title": "装修预算分配"
    }
   ]
  },
@@ -4608,11 +4608,11 @@
   "subapps": [
    {
     "key": "fee",
-    "title": "工具A 字数稿费"
+    "title": "字数稿费"
    },
    {
     "key": "reading",
-    "title": "工具B 阅读进度"
+    "title": "阅读进度"
    }
   ]
  },
@@ -4628,11 +4628,11 @@
   "subapps": [
    {
     "key": "unicode",
-    "title": "工具A 码点查询"
+    "title": "码点查询"
    },
    {
     "key": "codestat",
-    "title": "工具B 码点统计"
+    "title": "码点统计"
    }
   ]
  },
@@ -4648,11 +4648,11 @@
   "subapps": [
    {
     "key": "detect",
-    "title": "工具A 敏感词检测"
+    "title": "敏感词检测"
    },
    {
     "key": "mask",
-    "title": "工具B 替换脱敏"
+    "title": "替换脱敏"
    }
   ]
  },
@@ -4668,11 +4668,11 @@
   "subapps": [
    {
     "key": "water",
-    "title": "工具A 饮水作息"
+    "title": "饮水作息"
    },
    {
     "key": "weekplan",
-    "title": "工具B 周计划"
+    "title": "周计划"
    }
   ]
  },
@@ -4688,27 +4688,27 @@
   "subapps": [
    {
     "key": "holiday",
-    "title": "工具A 放假安排"
+    "title": "放假安排"
    },
    {
     "key": "makeup",
-    "title": "工具B 调休标注"
+    "title": "调休标注"
    },
    {
     "key": "bridge",
-    "title": "工具C 拼假规划"
+    "title": "拼假规划"
    },
    {
     "key": "countdown",
-    "title": "工具D 假期倒计时"
+    "title": "假期倒计时"
    },
    {
     "key": "overtime",
-    "title": "工具E 法定节假日加班费"
+    "title": "法定节假日加班费"
    },
    {
     "key": "pay",
-    "title": "工具F 加班费明细测算"
+    "title": "加班费明细测算"
    }
   ]
  },
@@ -4724,11 +4724,11 @@
   "subapps": [
    {
     "key": "table",
-    "title": "工具A 表格样式"
+    "title": "表格样式"
    },
    {
     "key": "zebra",
-    "title": "工具B 斑马纹预设"
+    "title": "斑马纹预设"
    }
   ]
  },
@@ -4760,11 +4760,11 @@
    },
    {
     "key": "score",
-    "title": "工具E 降重评分"
+    "title": "降重评分"
    },
    {
     "key": "punct",
-    "title": "工具F 标点语病自查"
+    "title": "标点语病自查"
    }
   ]
  },
@@ -4796,11 +4796,11 @@
    },
    {
     "key": "settle",
-    "title": "工具E 年度汇算"
+    "title": "年度汇算"
    },
    {
     "key": "side",
-    "title": "工具F 副业收入测算"
+    "title": "副业收入测算"
    }
   ]
  },
@@ -4816,27 +4816,27 @@
   "subapps": [
    {
     "key": "overlap",
-    "title": "工具A 冲突检测"
+    "title": "冲突检测"
    },
    {
     "key": "free",
-    "title": "工具B 空档查找"
+    "title": "空档查找"
    },
    {
     "key": "slot",
-    "title": "工具C 时段推荐"
+    "title": "时段推荐"
    },
    {
     "key": "busy",
-    "title": "工具D 占用清单"
+    "title": "占用清单"
    },
    {
     "key": "vote",
-    "title": "工具E 时段投票"
+    "title": "时段投票"
    },
    {
     "key": "agenda",
-    "title": "工具F 议程时长分配"
+    "title": "议程时长分配"
    }
   ]
  },
@@ -4852,11 +4852,11 @@
   "subapps": [
    {
     "key": "badge",
-    "title": "工具A 徽章样式"
+    "title": "徽章样式"
    },
    {
     "key": "taggroup",
-    "title": "工具B 标签组"
+    "title": "标签组"
    }
   ]
  },
@@ -4872,27 +4872,27 @@
   "subapps": [
    {
     "key": "hex",
-    "title": "工具A 十六进制查看"
+    "title": "十六进制查看"
    },
    {
     "key": "base64",
-    "title": "工具B Base64 编解码"
+    "title": "Base64 编解码"
    },
    {
     "key": "hexbin",
-    "title": "工具C 十六进制与二进制互转"
+    "title": "十六进制与二进制互转"
    },
    {
     "key": "base32",
-    "title": "工具D Base32"
+    "title": "Base32"
    },
    {
     "key": "base64url",
-    "title": "工具E Base64URL"
+    "title": "Base64URL"
    },
    {
     "key": "hexascii",
-    "title": "工具F Hex转ASCII"
+    "title": "Hex转ASCII"
    }
   ]
  },
@@ -4908,11 +4908,11 @@
   "subapps": [
    {
     "key": "expiry",
-    "title": "工具A 保质期提醒"
+    "title": "保质期提醒"
    },
    {
     "key": "medcabinet",
-    "title": "工具B 药箱清单"
+    "title": "药箱清单"
    }
   ]
  },
@@ -4928,27 +4928,27 @@
   "subapps": [
    {
     "key": "budget",
-    "title": "工具A 总预算与占比"
+    "title": "总预算与占比"
    },
    {
     "key": "daily",
-    "title": "工具B 每日预算"
+    "title": "每日预算"
    },
    {
     "key": "stay",
-    "title": "工具C 住宿分摊"
+    "title": "住宿分摊"
    },
    {
     "key": "save",
-    "title": "工具D 省钱方案对比"
+    "title": "省钱方案对比"
    },
    {
     "key": "tickets",
-    "title": "工具E 门票与景点预算"
+    "title": "门票与景点预算"
    },
    {
     "key": "insurance",
-    "title": "工具F 保险与延误赔付"
+    "title": "保险与延误赔付"
    }
   ]
  },
@@ -4964,27 +4964,27 @@
   "subapps": [
    {
     "key": "menu",
-    "title": "工具A 七天菜单排布"
+    "title": "七天菜单排布"
    },
    {
     "key": "shop",
-    "title": "工具B 分品类采购汇总"
+    "title": "分品类采购汇总"
    },
    {
     "key": "stock",
-    "title": "工具C 库存与临期清单"
+    "title": "库存与临期清单"
    },
    {
     "key": "cost",
-    "title": "工具D 食材花费与人均"
+    "title": "食材花费与人均"
    },
    {
     "key": "budget",
-    "title": "工具E 周餐预算"
+    "title": "周餐预算"
    },
    {
     "key": "mealprep",
-    "title": "工具F 备餐分装计划"
+    "title": "备餐分装计划"
    }
   ]
  },
@@ -5000,27 +5000,27 @@
   "subapps": [
    {
     "key": "clean",
-    "title": "工具A 追踪清理"
+    "title": "追踪清理"
    },
    {
     "key": "parse",
-    "title": "工具B 参数解析"
+    "title": "参数解析"
    },
    {
     "key": "rebuild",
-    "title": "工具C 链接重建"
+    "title": "链接重建"
    },
    {
     "key": "check",
-    "title": "工具D 分享检查"
+    "title": "分享检查"
    },
    {
     "key": "utm",
-    "title": "工具E UTM 链接构建"
+    "title": "UTM 链接构建"
    },
    {
     "key": "track",
-    "title": "工具F 追踪参数识别"
+    "title": "追踪参数识别"
    }
   ]
  },
@@ -5036,11 +5036,11 @@
   "subapps": [
    {
     "key": "toggle",
-    "title": "工具A 开关组件"
+    "title": "开关组件"
    },
    {
     "key": "togglegroup",
-    "title": "工具B 开关组"
+    "title": "开关组"
    }
   ]
  },
@@ -5056,11 +5056,11 @@
   "subapps": [
    {
     "key": "tsiface",
-    "title": "工具A 接口生成"
+    "title": "接口生成"
    },
    {
     "key": "zod",
-    "title": "工具B Zod 校验"
+    "title": "Zod 校验"
    }
   ]
  },
@@ -5076,27 +5076,27 @@
   "subapps": [
    {
     "key": "cagr",
-    "title": "工具A CAGR 复合增长率"
+    "title": "CAGR 复合增长率"
    },
    {
     "key": "yoy",
-    "title": "工具B 同比与环比"
+    "title": "同比与环比"
    },
    {
     "key": "rule72",
-    "title": "工具C 72 法则"
+    "title": "72 法则"
    },
    {
     "key": "breakeven",
-    "title": "工具D 盈亏平衡"
+    "title": "盈亏平衡"
    },
    {
     "key": "ltv",
-    "title": "工具E 留存LTV"
+    "title": "留存LTV"
    },
    {
     "key": "payback",
-    "title": "工具F 回本周期测算"
+    "title": "回本周期测算"
    }
   ]
  },
@@ -5128,7 +5128,7 @@
    },
    {
     "key": "ico",
-    "title": "工具E ICO 尺寸与检查"
+    "title": "ICO 尺寸与检查"
    }
   ]
  },
@@ -5144,27 +5144,27 @@
   "subapps": [
    {
     "key": "full",
-    "title": "工具A 满减凑单"
+    "title": "满减凑单"
    },
    {
     "key": "coupon",
-    "title": "工具B 优惠券"
+    "title": "优惠券"
    },
    {
     "key": "member",
-    "title": "工具C 会员折扣"
+    "title": "会员折扣"
    },
    {
     "key": "points",
-    "title": "工具D 积分抵扣"
+    "title": "积分抵扣"
    },
    {
     "key": "stack",
-    "title": "工具E 优惠叠加顺序"
+    "title": "优惠叠加顺序"
    },
    {
     "key": "giftcard",
-    "title": "工具F 储值折扣"
+    "title": "储值折扣"
    }
   ]
  },
@@ -5180,11 +5180,11 @@
   "subapps": [
    {
     "key": "sqlfmt",
-    "title": "工具A SQL 格式化"
+    "title": "SQL 格式化"
    },
    {
     "key": "indent",
-    "title": "工具B 缩进规范"
+    "title": "缩进规范"
    }
   ]
  },
@@ -5200,11 +5200,11 @@
   "subapps": [
    {
     "key": "cycle",
-    "title": "工具A 睡眠周期"
+    "title": "睡眠周期"
    },
    {
     "key": "wake",
-    "title": "工具B 起床反推"
+    "title": "起床反推"
    }
   ]
  },
@@ -5220,11 +5220,11 @@
   "subapps": [
    {
     "key": "printsize",
-    "title": "工具A 打印尺寸"
+    "title": "打印尺寸"
    },
    {
     "key": "photosize",
-    "title": "工具B 证件照尺寸"
+    "title": "证件照尺寸"
    }
   ]
  },
@@ -5240,11 +5240,11 @@
   "subapps": [
    {
     "key": "xmlfmt",
-    "title": "工具A XML 格式化"
+    "title": "XML 格式化"
    },
    {
     "key": "xmlmin",
-    "title": "工具B 压缩转义"
+    "title": "压缩转义"
    }
   ]
  },
@@ -5260,27 +5260,27 @@
   "subapps": [
    {
     "key": "toc",
-    "title": "工具A 目录生成"
+    "title": "目录生成"
    },
    {
     "key": "anchor",
-    "title": "工具B 锚点提取"
+    "title": "锚点提取"
    },
    {
     "key": "links",
-    "title": "工具C 内链检查"
+    "title": "内链检查"
    },
    {
     "key": "outline",
-    "title": "工具D 大纲互转"
+    "title": "大纲互转"
    },
    {
     "key": "slug",
-    "title": "工具E 批量标题锚点"
+    "title": "批量标题锚点"
    },
    {
     "key": "toccheck",
-    "title": "工具F 目录一致性检查"
+    "title": "目录一致性检查"
    }
   ]
  },
@@ -5296,27 +5296,27 @@
   "subapps": [
    {
     "key": "rate",
-    "title": "工具A 双向汇率换算"
+    "title": "双向汇率换算"
    },
    {
     "key": "multi",
-    "title": "工具B 多币种折算"
+    "title": "多币种折算"
    },
    {
     "key": "fee",
-    "title": "工具C 手续费与到账"
+    "title": "手续费与到账"
    },
    {
     "key": "cash",
-    "title": "工具D 现钞与刷卡"
+    "title": "现钞与刷卡"
    },
    {
     "key": "card",
-    "title": "工具E 境外刷卡汇率"
+    "title": "境外刷卡汇率"
    },
    {
     "key": "spread",
-    "title": "工具F 点差成本"
+    "title": "点差成本"
    }
   ]
  },
@@ -5332,23 +5332,23 @@
   "subapps": [
    {
     "key": "gpa",
-    "title": "工具A 百分制与 GPA"
+    "title": "百分制与 GPA"
    },
    {
     "key": "weighted",
-    "title": "工具B 学分加权"
+    "title": "学分加权"
    },
    {
     "key": "percentile",
-    "title": "工具C 排名百分位"
+    "title": "排名百分位"
    },
    {
     "key": "sheet",
-    "title": "工具D 成绩单换算表"
+    "title": "成绩单换算表"
    },
    {
     "key": "target",
-    "title": "工具E 提分目标换算"
+    "title": "提分目标换算"
    }
   ]
  },
@@ -5364,27 +5364,27 @@
   "subapps": [
    {
     "key": "pace",
-    "title": "工具A 配速与速度换算"
+    "title": "配速与速度换算"
    },
    {
     "key": "finish",
-    "title": "工具B 完赛时间预测"
+    "title": "完赛时间预测"
    },
    {
     "key": "split",
-    "title": "工具C 分段配速表"
+    "title": "分段配速表"
    },
    {
     "key": "elevation",
-    "title": "工具D 爬升折算"
+    "title": "爬升折算"
    },
    {
     "key": "zone",
-    "title": "工具E 训练区间"
+    "title": "训练区间"
    },
    {
     "key": "recovery",
-    "title": "工具F 恢复与训练负荷"
+    "title": "恢复与训练负荷"
    }
   ]
  },
@@ -5416,11 +5416,11 @@
    },
    {
     "key": "schema",
-    "title": "工具E Schema 校验"
+    "title": "Schema 校验"
    },
    {
     "key": "flat",
-    "title": "工具F JSON 扁平化"
+    "title": "JSON 扁平化"
    }
   ]
  },
@@ -5452,11 +5452,11 @@
    },
    {
     "key": "ts",
-    "title": "工具E TS 类型"
+    "title": "TS 类型"
    },
    {
     "key": "mock",
-    "title": "工具F 模拟数据批量生成"
+    "title": "模拟数据批量生成"
    }
   ]
  },
@@ -5472,11 +5472,11 @@
   "subapps": [
    {
     "key": "mix",
-    "title": "工具A 颜色混合"
+    "title": "颜色混合"
    },
    {
     "key": "blend",
-    "title": "工具B 透明度叠加"
+    "title": "透明度叠加"
    }
   ]
  },
@@ -5492,11 +5492,11 @@
   "subapps": [
    {
     "key": "english",
-    "title": "工具A 英文读法"
+    "title": "英文读法"
    },
    {
     "key": "rmb",
-    "title": "工具B 人民币大写"
+    "title": "人民币大写"
    }
   ]
  },
@@ -5512,11 +5512,11 @@
   "subapps": [
    {
     "key": "html2md",
-    "title": "工具A HTML转MD"
+    "title": "HTML转MD"
    },
    {
     "key": "md2html",
-    "title": "工具B MD转HTML"
+    "title": "MD转HTML"
    }
   ]
  },
@@ -5532,27 +5532,27 @@
   "subapps": [
    {
     "key": "metro",
-    "title": "工具A 节拍器"
+    "title": "节拍器"
    },
    {
     "key": "ms",
-    "title": "工具B 毫秒换算"
+    "title": "毫秒换算"
    },
    {
     "key": "tap",
-    "title": "工具C 打拍测速"
+    "title": "打拍测速"
    },
    {
     "key": "terms",
-    "title": "工具D 术语"
+    "title": "术语"
    },
    {
     "key": "poly",
-    "title": "工具E 复节奏"
+    "title": "复节奏"
    },
    {
     "key": "subdiv",
-    "title": "工具F 细分与连音"
+    "title": "细分与连音"
    }
   ]
  },
@@ -5568,11 +5568,11 @@
   "subapps": [
    {
     "key": "bar",
-    "title": "工具A 线性进度"
+    "title": "线性进度"
    },
    {
     "key": "ring",
-    "title": "工具B 环形进度"
+    "title": "环形进度"
    }
   ]
  },
@@ -5588,11 +5588,11 @@
   "subapps": [
    {
     "key": "merge",
-    "title": "工具A 合并拆分"
+    "title": "合并拆分"
    },
    {
     "key": "csvstat",
-    "title": "工具B 结构统计"
+    "title": "结构统计"
    }
   ]
  },
@@ -5608,11 +5608,11 @@
   "subapps": [
    {
     "key": "stroke",
-    "title": "工具A 文字描边"
+    "title": "文字描边"
    },
    {
     "key": "multistroke",
-    "title": "工具B 多层描边"
+    "title": "多层描边"
    }
   ]
  },
@@ -5628,11 +5628,11 @@
   "subapps": [
    {
     "key": "yamljson",
-    "title": "工具A YAML↔JSON"
+    "title": "YAML↔JSON"
    },
    {
     "key": "structure",
-    "title": "工具B 结构统计"
+    "title": "结构统计"
    }
   ]
  },
@@ -5648,11 +5648,11 @@
   "subapps": [
    {
     "key": "toml",
-    "title": "工具A TOML转JSON"
+    "title": "TOML转JSON"
    },
    {
     "key": "yaml",
-    "title": "工具B JSON转YAML"
+    "title": "JSON转YAML"
    }
   ]
  },
@@ -5684,11 +5684,11 @@
    },
    {
     "key": "break",
-    "title": "工具E 工时扣休"
+    "title": "工时扣休"
    },
    {
     "key": "rate",
-    "title": "工具F 工时成本核算"
+    "title": "工时成本核算"
    }
   ]
  },
@@ -5704,11 +5704,11 @@
   "subapps": [
    {
     "key": "caseconv",
-    "title": "工具A 大小写转换"
+    "title": "大小写转换"
    },
    {
     "key": "casestyle",
-    "title": "工具B 命名风格"
+    "title": "命名风格"
    }
   ]
  },
@@ -5724,11 +5724,11 @@
   "subapps": [
    {
     "key": "easing",
-    "title": "工具A 缓动曲线"
+    "title": "缓动曲线"
    },
    {
     "key": "keyframes",
-    "title": "工具B 关键帧"
+    "title": "关键帧"
    }
   ]
  },
@@ -5744,27 +5744,27 @@
   "subapps": [
    {
     "key": "overtime",
-    "title": "工具A 加班费与调休折算"
+    "title": "加班费与调休折算"
    },
    {
     "key": "holiday",
-    "title": "工具B 法定节假日三倍"
+    "title": "法定节假日三倍"
    },
    {
     "key": "nightshift",
-    "title": "工具C 夜班与值班津贴"
+    "title": "夜班与值班津贴"
    },
    {
     "key": "cap",
-    "title": "工具D 加班上限合规"
+    "title": "加班上限合规"
    },
    {
     "key": "tax",
-    "title": "工具E 个税与到手"
+    "title": "个税与到手"
    },
    {
     "key": "leave",
-    "title": "工具F 请假与缺勤"
+    "title": "请假与缺勤"
    }
   ]
  },
@@ -5780,11 +5780,11 @@
   "subapps": [
    {
     "key": "intake",
-    "title": "工具A 摄入计算"
+    "title": "摄入计算"
    },
    {
     "key": "decay",
-    "title": "工具B 残留曲线"
+    "title": "残留曲线"
    }
   ]
  },
@@ -5800,11 +5800,11 @@
   "subapps": [
    {
     "key": "medlist",
-    "title": "工具A 用药清单"
+    "title": "用药清单"
    },
    {
     "key": "doseinterval",
-    "title": "工具B 服药间隔"
+    "title": "服药间隔"
    }
   ]
  },
@@ -5820,27 +5820,27 @@
   "subapps": [
    {
     "key": "agenda",
-    "title": "工具A 议程生成"
+    "title": "议程生成"
    },
    {
     "key": "roles",
-    "title": "工具B 发言分配"
+    "title": "发言分配"
    },
    {
     "key": "host",
-    "title": "工具C 控场提示"
+    "title": "控场提示"
    },
    {
     "key": "timer",
-    "title": "工具D 计时"
+    "title": "计时"
    },
    {
     "key": "decision",
-    "title": "工具E 决议与待办清单"
+    "title": "决议与待办清单"
    },
    {
     "key": "minutes",
-    "title": "工具F 会议纪要模板"
+    "title": "会议纪要模板"
    }
   ]
  },
@@ -5856,11 +5856,11 @@
   "subapps": [
    {
     "key": "carousel",
-    "title": "工具A 轮播图"
+    "title": "轮播图"
    },
    {
     "key": "dots",
-    "title": "工具B 指示点"
+    "title": "指示点"
    }
   ]
  },
@@ -5876,11 +5876,11 @@
   "subapps": [
    {
     "key": "timer",
-    "title": "工具A 呼吸计时"
+    "title": "呼吸计时"
    },
    {
     "key": "box",
-    "title": "工具B 478呼吸"
+    "title": "478呼吸"
    }
   ]
  },
@@ -5896,23 +5896,23 @@
   "subapps": [
    {
     "key": "maintenance",
-    "title": "工具A 保养周期"
+    "title": "保养周期"
    },
    {
     "key": "inspection",
-    "title": "工具B 年检到期"
+    "title": "年检到期"
    },
    {
     "key": "insurance",
-    "title": "工具C 保险到期"
+    "title": "保险到期"
    },
    {
     "key": "reminder",
-    "title": "工具D 保养项目"
+    "title": "保养项目"
    },
    {
     "key": "tire",
-    "title": "工具E 轮胎更换判断"
+    "title": "轮胎更换判断"
    }
   ]
  },
@@ -5928,11 +5928,11 @@
   "subapps": [
    {
     "key": "clean",
-    "title": "工具A 空行清理"
+    "title": "空行清理"
    },
    {
     "key": "repeat",
-    "title": "工具B 重复行"
+    "title": "重复行"
    }
   ]
  },
@@ -5947,23 +5947,23 @@
   "subapps": [
    {
     "key": "east",
-    "title": "工具A 向东倒时差"
+    "title": "向东倒时差"
    },
    {
     "key": "west",
-    "title": "工具B 向西倒时差"
+    "title": "向西倒时差"
    },
    {
     "key": "plan",
-    "title": "工具C 作息调整表"
+    "title": "作息调整表"
    },
    {
     "key": "tips",
-    "title": "工具D 落地建议"
+    "title": "落地建议"
    },
    {
     "key": "nap",
-    "title": "工具E 小睡与咖啡因窗口"
+    "title": "小睡与咖啡因窗口"
    }
   ]
  },
@@ -5979,11 +5979,11 @@
   "subapps": [
    {
     "key": "sit",
-    "title": "工具A 久坐提醒"
+    "title": "久坐提醒"
    },
    {
     "key": "stretch",
-    "title": "工具B 拉伸清单"
+    "title": "拉伸清单"
    }
   ]
  },
@@ -5999,27 +5999,27 @@
   "subapps": [
    {
     "key": "matrix",
-    "title": "工具A 四象限分区"
+    "title": "四象限分区"
    },
    {
     "key": "rule",
-    "title": "工具B 优先级评分"
+    "title": "优先级评分"
    },
    {
     "key": "plan",
-    "title": "工具C 时间块排期"
+    "title": "时间块排期"
    },
    {
     "key": "export",
-    "title": "工具D 清单导出"
+    "title": "清单导出"
    },
    {
     "key": "review",
-    "title": "工具E 周复盘"
+    "title": "周复盘"
    },
    {
     "key": "delegate",
-    "title": "工具F 委派与等待清单"
+    "title": "委派与等待清单"
    }
   ]
  },
@@ -6035,11 +6035,11 @@
   "subapps": [
    {
     "key": "parking",
-    "title": "工具A 停车费用"
+    "title": "停车费用"
    },
    {
     "key": "duration",
-    "title": "工具B 可停时长"
+    "title": "可停时长"
    }
   ]
  },
@@ -6055,27 +6055,27 @@
   "subapps": [
    {
     "key": "freight",
-    "title": "工具A 首重续重运费"
+    "title": "首重续重运费"
    },
    {
     "key": "volumetric",
-    "title": "工具B 体积重与抛比"
+    "title": "体积重与抛比"
    },
    {
     "key": "insured",
-    "title": "工具C 保价与理赔"
+    "title": "保价与理赔"
    },
    {
     "key": "return",
-    "title": "工具D 退换与寄回"
+    "title": "退换与寄回"
    },
    {
     "key": "delay",
-    "title": "工具E 时效与延误赔付"
+    "title": "时效与延误赔付"
    },
    {
     "key": "merge",
-    "title": "工具F 多件合并寄送对比"
+    "title": "多件合并寄送对比"
    }
   ]
  },
@@ -6091,27 +6091,27 @@
   "subapps": [
    {
     "key": "download",
-    "title": "工具A 下载时间"
+    "title": "下载时间"
    },
    {
     "key": "upload",
-    "title": "工具B 上传时间"
+    "title": "上传时间"
    },
    {
     "key": "bandwidth",
-    "title": "工具C 带宽换算"
+    "title": "带宽换算"
    },
    {
     "key": "size",
-    "title": "工具D 体积压缩"
+    "title": "体积压缩"
    },
    {
     "key": "qos",
-    "title": "工具E 延迟与加速"
+    "title": "延迟与加速"
    },
    {
     "key": "traffic",
-    "title": "工具F 流量与超额费用"
+    "title": "流量与超额费用"
    }
   ]
  },
@@ -6127,11 +6127,11 @@
   "subapps": [
    {
     "key": "bodyfat",
-    "title": "工具A 体脂腰臀"
+    "title": "体脂腰臀"
    },
    {
     "key": "vo2max",
-    "title": "工具B VO2max"
+    "title": "VO2max"
    }
   ]
  },
@@ -6147,11 +6147,11 @@
   "subapps": [
    {
     "key": "sunscreen",
-    "title": "工具A 防晒用量"
+    "title": "防晒用量"
    },
    {
     "key": "uvindex",
-    "title": "工具B 紫外线建议"
+    "title": "紫外线建议"
    }
   ]
  },
@@ -6187,7 +6187,7 @@
    },
    {
     "key": "packing",
-    "title": "工具F 打包清单与称重"
+    "title": "打包清单与称重"
    }
   ]
  },
@@ -6203,27 +6203,27 @@
   "subapps": [
    {
     "key": "size",
-    "title": "工具A 常用证件照尺寸"
+    "title": "常用证件照尺寸"
    },
    {
     "key": "px",
-    "title": "工具B 证件照像素换算"
+    "title": "证件照像素换算"
    },
    {
     "key": "sheet",
-    "title": "工具C 相纸排版张数"
+    "title": "相纸排版张数"
    },
    {
     "key": "bg",
-    "title": "工具D 背景与拍摄要求"
+    "title": "背景与拍摄要求"
    },
    {
     "key": "check",
-    "title": "工具E 合规自查"
+    "title": "合规自查"
    },
    {
     "key": "print",
-    "title": "工具F 打印店交接单"
+    "title": "打印店交接单"
    }
   ]
  },
@@ -6239,11 +6239,11 @@
   "subapps": [
    {
     "key": "reminder",
-    "title": "工具A 滤芯提醒"
+    "title": "滤芯提醒"
    },
    {
     "key": "appliance",
-    "title": "工具B 保养周期"
+    "title": "保养周期"
    }
   ]
  },
@@ -6259,11 +6259,11 @@
   "subapps": [
    {
     "key": "deposit",
-    "title": "工具A 押金结算"
+    "title": "押金结算"
    },
    {
     "key": "utilitysplit",
-    "title": "工具B 水电分摊"
+    "title": "水电分摊"
    }
   ]
  },
@@ -6279,11 +6279,11 @@
   "subapps": [
    {
     "key": "screen",
-    "title": "工具A 屏幕计划"
+    "title": "屏幕计划"
    },
    {
     "key": "eyerest",
-    "title": "工具B 护眼提醒"
+    "title": "护眼提醒"
    }
   ]
  },
@@ -6299,11 +6299,11 @@
   "subapps": [
    {
     "key": "skeleton",
-    "title": "工具A 骨架屏"
+    "title": "骨架屏"
    },
    {
     "key": "shadow",
-    "title": "工具B 阴影生成"
+    "title": "阴影生成"
    }
   ]
  },
@@ -6319,27 +6319,27 @@
   "subapps": [
    {
     "key": "db",
-    "title": "工具A 分贝对照"
+    "title": "分贝对照"
    },
    {
     "key": "hearing",
-    "title": "工具B 听力安全时长"
+    "title": "听力安全时长"
    },
    {
     "key": "appliance",
-    "title": "工具C 家电噪音"
+    "title": "家电噪音"
    },
    {
     "key": "insulate",
-    "title": "工具D 隔音与耳塞"
+    "title": "隔音与耳塞"
    },
    {
     "key": "dose",
-    "title": "工具E 噪声剂量"
+    "title": "噪声剂量"
    },
    {
     "key": "homescan",
-    "title": "工具F 全屋噪音排查"
+    "title": "全屋噪音排查"
    }
   ]
  },
@@ -6355,23 +6355,23 @@
   "subapps": [
    {
     "key": "mct",
-    "title": "工具A 最短转机时间"
+    "title": "最短转机时间"
    },
    {
     "key": "check",
-    "title": "工具B 转机够不够"
+    "title": "转机够不够"
    },
    {
     "key": "baggage",
-    "title": "工具C 行李直挂"
+    "title": "行李直挂"
    },
    {
     "key": "overnight",
-    "title": "工具D 过夜转机"
+    "title": "过夜转机"
    },
    {
     "key": "buffer",
-    "title": "工具E 衔接安全余量"
+    "title": "衔接安全余量"
    }
   ]
  },
@@ -6387,11 +6387,11 @@
   "subapps": [
    {
     "key": "wash",
-    "title": "工具A 洗手计时"
+    "title": "洗手计时"
    },
    {
     "key": "washsteps",
-    "title": "工具B 洗手步骤"
+    "title": "洗手步骤"
    }
   ]
  },
@@ -6407,11 +6407,11 @@
   "subapps": [
    {
     "key": "split",
-    "title": "工具A 账单分摊"
+    "title": "账单分摊"
    },
    {
     "key": "discount",
-    "title": "工具B 折扣计算"
+    "title": "折扣计算"
    }
   ]
  },
@@ -6427,27 +6427,27 @@
   "subapps": [
    {
     "key": "rule",
-    "title": "工具A 命名规则模板"
+    "title": "命名规则模板"
    },
    {
     "key": "seq",
-    "title": "工具B 序号与补零"
+    "title": "序号与补零"
    },
    {
     "key": "replace",
-    "title": "工具C 批量查找替换"
+    "title": "批量查找替换"
    },
    {
     "key": "preview",
-    "title": "工具D 新旧名对照预览"
+    "title": "新旧名对照预览"
    },
    {
     "key": "foldertree",
-    "title": "工具E 目录结构模板"
+    "title": "目录结构模板"
    },
    {
     "key": "conflict",
-    "title": "工具F 重名冲突检查"
+    "title": "重名冲突检查"
    }
   ]
  },
@@ -6463,27 +6463,27 @@
   "subapps": [
    {
     "key": "blocks",
-    "title": "工具A 时间块排程"
+    "title": "时间块排程"
    },
    {
     "key": "energy",
-    "title": "工具B 精力分配"
+    "title": "精力分配"
    },
    {
     "key": "capacity",
-    "title": "工具C 容量与超载"
+    "title": "容量与超载"
    },
    {
     "key": "review",
-    "title": "工具D 周复盘"
+    "title": "周复盘"
    },
    {
     "key": "interrupt",
-    "title": "工具E 打断与会议成本"
+    "title": "打断与会议成本"
    },
    {
     "key": "deeptask",
-    "title": "工具F 深度任务块设计"
+    "title": "深度任务块设计"
    }
   ]
  },
@@ -6499,11 +6499,11 @@
   "subapps": [
    {
     "key": "packlist",
-    "title": "工具A 打包清单"
+    "title": "打包清单"
    },
    {
     "key": "packcount",
-    "title": "工具B 件数估算"
+    "title": "件数估算"
    }
   ]
  },
@@ -6519,27 +6519,27 @@
   "subapps": [
    {
     "key": "charge",
-    "title": "工具A 充电用时估算"
+    "title": "充电用时估算"
    },
    {
     "key": "bank",
-    "title": "工具B 充电宝容量与次数"
+    "title": "充电宝容量与次数"
    },
    {
     "key": "laptop",
-    "title": "工具C 笔记本续航"
+    "title": "笔记本续航"
    },
    {
     "key": "battery",
-    "title": "工具D 电池健康与更换"
+    "title": "电池健康与更换"
    },
    {
     "key": "protocol",
-    "title": "工具E 快充协议"
+    "title": "快充协议"
    },
    {
     "key": "charger",
-    "title": "工具F 充电器选型"
+    "title": "充电器选型"
    }
   ]
  },
@@ -6555,27 +6555,27 @@
   "subapps": [
    {
     "key": "contract",
-    "title": "工具A 合同续签"
+    "title": "合同续签"
    },
    {
     "key": "idcard",
-    "title": "工具B 证件换发"
+    "title": "证件换发"
    },
    {
     "key": "insurance",
-    "title": "工具C 保险续保"
+    "title": "保险续保"
    },
    {
     "key": "inspection",
-    "title": "工具D 年检提醒"
+    "title": "年检提醒"
    },
    {
     "key": "license",
-    "title": "工具E 驾驶证记分换证"
+    "title": "驾驶证记分换证"
    },
    {
     "key": "subscription",
-    "title": "工具F 会员订阅"
+    "title": "会员订阅"
    }
   ]
  },
@@ -6591,27 +6591,27 @@
   "subapps": [
    {
     "key": "passport",
-    "title": "工具A 护照余量"
+    "title": "护照余量"
    },
    {
     "key": "visa",
-    "title": "工具B 签证有效期"
+    "title": "签证有效期"
    },
    {
     "key": "stay",
-    "title": "工具C 停留天数"
+    "title": "停留天数"
    },
    {
     "key": "renew",
-    "title": "工具D 换发提醒"
+    "title": "换发提醒"
    },
    {
     "key": "photo",
-    "title": "工具E 签证照片"
+    "title": "签证照片"
    },
    {
     "key": "transit",
-    "title": "工具F 转机与过境签证"
+    "title": "转机与过境签证"
    }
   ]
  },
@@ -6627,11 +6627,11 @@
   "subapps": [
    {
     "key": "hr",
-    "title": "工具A 心率区间"
+    "title": "心率区间"
    },
    {
     "key": "pace",
-    "title": "工具B 配速步频"
+    "title": "配速步频"
    }
   ]
  },
@@ -6647,11 +6647,11 @@
   "subapps": [
    {
     "key": "food",
-    "title": "工具A 热量消耗"
+    "title": "热量消耗"
    },
    {
     "key": "dataunit",
-    "title": "工具B 数据单位"
+    "title": "数据单位"
    }
   ]
  },
@@ -6667,27 +6667,27 @@
   "subapps": [
    {
     "key": "tourist",
-    "title": "工具A 旅游签证"
+    "title": "旅游签证"
    },
    {
     "key": "business",
-    "title": "工具B 商务签证"
+    "title": "商务签证"
    },
    {
     "key": "student",
-    "title": "工具C 学生签证"
+    "title": "学生签证"
    },
    {
     "key": "visit",
-    "title": "工具D 探亲访友"
+    "title": "探亲访友"
    },
    {
     "key": "work",
-    "title": "工具E 工作签证材料"
+    "title": "工作签证材料"
    },
    {
     "key": "timeline",
-    "title": "工具F 办理时间线"
+    "title": "办理时间线"
    }
   ]
  },
@@ -6719,7 +6719,7 @@
    },
    {
     "key": "cadence",
-    "title": "工具E 配速与步频"
+    "title": "配速与步频"
    }
   ]
  },
@@ -6735,11 +6735,11 @@
   "subapps": [
    {
     "key": "typo",
-    "title": "工具A 字体排版"
+    "title": "字体排版"
    },
    {
     "key": "gradient",
-    "title": "工具B 渐变生成"
+    "title": "渐变生成"
    }
   ]
  },
@@ -6755,11 +6755,11 @@
   "subapps": [
    {
     "key": "cvd",
-    "title": "工具A 色盲配色"
+    "title": "色盲配色"
    },
    {
     "key": "icocheck",
-    "title": "工具B 图标尺寸"
+    "title": "图标尺寸"
    }
   ]
  },
@@ -6823,7 +6823,7 @@
    },
    {
     "key": "retire",
-    "title": "工具E 退休购买力测算"
+    "title": "退休购买力测算"
    }
   ]
  },
@@ -6855,7 +6855,7 @@
    },
    {
     "key": "closing",
-    "title": "工具E 邮件结尾礼仪"
+    "title": "邮件结尾礼仪"
    }
   ]
  },
@@ -6871,27 +6871,27 @@
   "subapps": [
    {
     "key": "billing",
-    "title": "工具A 账单日规划"
+    "title": "账单日规划"
    },
    {
     "key": "grace",
-    "title": "工具B 免息期"
+    "title": "免息期"
    },
    {
     "key": "repay",
-    "title": "工具C 还款日提醒"
+    "title": "还款日提醒"
    },
    {
     "key": "installment",
-    "title": "工具D 分期成本"
+    "title": "分期成本"
    },
    {
     "key": "minpay",
-    "title": "工具E 最低还款利息"
+    "title": "最低还款利息"
    },
    {
     "key": "plan50",
-    "title": "工具F 还款规划"
+    "title": "还款规划"
    }
   ]
  },
@@ -6907,11 +6907,11 @@
   "subapps": [
    {
     "key": "summary",
-    "title": "工具A 摘要压缩"
+    "title": "摘要压缩"
    },
    {
     "key": "diffstat",
-    "title": "工具B 增删统计"
+    "title": "增删统计"
    }
   ]
  },
@@ -6927,11 +6927,11 @@
   "subapps": [
    {
     "key": "monthly",
-    "title": "工具A 月度预算"
+    "title": "月度预算"
    },
    {
     "key": "budget",
-    "title": "工具B 配额分配"
+    "title": "配额分配"
    }
   ]
  },
@@ -6947,11 +6947,11 @@
   "subapps": [
    {
     "key": "edd",
-    "title": "工具A 预产孕周"
+    "title": "预产孕周"
    },
    {
     "key": "filter",
-    "title": "工具B 滤芯周期"
+    "title": "滤芯周期"
    }
   ]
  },
@@ -6967,11 +6967,11 @@
   "subapps": [
    {
     "key": "goal",
-    "title": "工具A 储蓄目标"
+    "title": "储蓄目标"
    },
    {
     "key": "history",
-    "title": "工具B 计算历史"
+    "title": "计算历史"
    }
   ]
  },
@@ -6987,27 +6987,27 @@
   "subapps": [
    {
     "key": "divider",
-    "title": "工具A 分隔线"
+    "title": "分隔线"
    },
    {
     "key": "dots",
-    "title": "工具B 点阵背景"
+    "title": "点阵背景"
    },
    {
     "key": "grid",
-    "title": "工具C 网格条纹"
+    "title": "网格条纹"
    },
    {
     "key": "noise",
-    "title": "工具D 噪点纹理"
+    "title": "噪点纹理"
    },
    {
     "key": "repeatcount",
-    "title": "工具E 平铺次数"
+    "title": "平铺次数"
    },
    {
     "key": "gradient",
-    "title": "工具F 渐变背景生成"
+    "title": "渐变背景生成"
    }
   ]
  },
@@ -7023,11 +7023,11 @@
   "subapps": [
    {
     "key": "debt",
-    "title": "工具A 睡眠债务"
+    "title": "睡眠债务"
    },
    {
     "key": "sleepdebt",
-    "title": "工具B 补觉安排"
+    "title": "补觉安排"
    }
   ]
  },
@@ -7043,27 +7043,27 @@
   "subapps": [
    {
     "key": "single",
-    "title": "工具A 单景点门票"
+    "title": "单景点门票"
    },
    {
     "key": "multi",
-    "title": "工具B 多景点合计"
+    "title": "多景点合计"
    },
    {
     "key": "pass",
-    "title": "工具C 城市通票"
+    "title": "城市通票"
    },
    {
     "key": "extras",
-    "title": "工具D 讲解观光车"
+    "title": "讲解观光车"
    },
    {
     "key": "child",
-    "title": "工具E 儿童票"
+    "title": "儿童票"
    },
    {
     "key": "refund",
-    "title": "工具F 退改签规则"
+    "title": "退改签规则"
    }
   ]
  },
@@ -7079,27 +7079,27 @@
   "subapps": [
    {
     "key": "nickname",
-    "title": "工具A 中文昵称生成"
+    "title": "中文昵称生成"
    },
    {
     "key": "username",
-    "title": "工具B 社交账号名生成"
+    "title": "社交账号名生成"
    },
    {
     "key": "english",
-    "title": "工具C 英文名推荐"
+    "title": "英文名推荐"
    },
    {
     "key": "brand",
-    "title": "工具D 品牌与店铺名生成"
+    "title": "品牌与店铺名生成"
    },
    {
     "key": "namelen",
-    "title": "工具E 账号长度校验"
+    "title": "账号长度校验"
    },
    {
     "key": "meaning",
-    "title": "工具F 英文名含义与来源"
+    "title": "英文名含义与来源"
    }
   ]
  },
@@ -7131,7 +7131,7 @@
    },
    {
     "key": "railfence",
-    "title": "工具E 栅栏密码"
+    "title": "栅栏密码"
    }
   ]
  },
@@ -7147,27 +7147,27 @@
   "subapps": [
    {
     "key": "gantt",
-    "title": "工具A 甘特图"
+    "title": "甘特图"
    },
    {
     "key": "milestone",
-    "title": "工具B 里程碑"
+    "title": "里程碑"
    },
    {
     "key": "critical",
-    "title": "工具C 关键路径"
+    "title": "关键路径"
    },
    {
     "key": "burndown",
-    "title": "工具D 燃尽"
+    "title": "燃尽"
    },
    {
     "key": "resource",
-    "title": "工具E 人力"
+    "title": "人力"
    },
    {
     "key": "buffer",
-    "title": "工具F 缓冲与机动时间"
+    "title": "缓冲与机动时间"
    }
   ]
  },
@@ -7199,11 +7199,11 @@
    },
    {
     "key": "tone",
-    "title": "工具E 文案体检"
+    "title": "文案体检"
    },
    {
     "key": "onboarding",
-    "title": "工具F 引导文案组合"
+    "title": "引导文案组合"
    }
   ]
  },
@@ -7219,11 +7219,11 @@
   "subapps": [
    {
     "key": "aspect",
-    "title": "工具A 宽高等比"
+    "title": "宽高等比"
    },
    {
     "key": "crop",
-    "title": "工具B 图片裁剪"
+    "title": "图片裁剪"
    }
   ]
  },
@@ -7239,11 +7239,11 @@
   "subapps": [
    {
     "key": "perm",
-    "title": "工具A 权限清单"
+    "title": "权限清单"
    },
    {
     "key": "leakcheck",
-    "title": "工具B 泄露自查"
+    "title": "泄露自查"
    }
   ]
  },
@@ -7259,27 +7259,27 @@
   "subapps": [
    {
     "key": "number",
-    "title": "工具A 重新编号"
+    "title": "重新编号"
    },
    {
     "key": "indent",
-    "title": "工具B 缩进规范"
+    "title": "缩进规范"
    },
    {
     "key": "outline",
-    "title": "工具C 大纲层级"
+    "title": "大纲层级"
    },
    {
     "key": "clean",
-    "title": "工具D 去编号空行"
+    "title": "去编号空行"
    },
    {
     "key": "tabwidth",
-    "title": "工具E 缩进宽度换算"
+    "title": "缩进宽度换算"
    },
    {
     "key": "mdcheck",
-    "title": "工具F MD 层级检查"
+    "title": "MD 层级检查"
    }
   ]
  },
@@ -7295,11 +7295,11 @@
   "subapps": [
    {
     "key": "exposure",
-    "title": "工具A 曝光景深"
+    "title": "曝光景深"
    },
    {
     "key": "volume",
-    "title": "工具B 体积估算"
+    "title": "体积估算"
    }
   ]
  },
@@ -7315,27 +7315,27 @@
   "subapps": [
    {
     "key": "cost",
-    "title": "工具A 租金附加费"
+    "title": "租金附加费"
    },
    {
     "key": "deposit",
-    "title": "工具B 押金预授权"
+    "title": "押金预授权"
    },
    {
     "key": "insurance",
-    "title": "工具C 保险免赔"
+    "title": "保险免赔"
    },
    {
     "key": "compare",
-    "title": "工具D 车型对比"
+    "title": "车型对比"
    },
    {
     "key": "mileage",
-    "title": "工具E 超里程费"
+    "title": "超里程费"
    },
    {
     "key": "total",
-    "title": "工具F 租车总成本对照"
+    "title": "租车总成本对照"
    }
   ]
  },
@@ -7351,11 +7351,11 @@
   "subapps": [
    {
     "key": "vitals",
-    "title": "工具A 趋势记录"
+    "title": "趋势记录"
    },
    {
     "key": "bpadvice",
-    "title": "工具B 血压解读"
+    "title": "血压解读"
    }
   ]
  },
@@ -7371,27 +7371,27 @@
   "subapps": [
    {
     "key": "range",
-    "title": "工具A 区间天数"
+    "title": "区间天数"
    },
    {
     "key": "cycle",
-    "title": "工具B 周期排期"
+    "title": "周期排期"
    },
    {
     "key": "split",
-    "title": "工具C 分段统计"
+    "title": "分段统计"
    },
    {
     "key": "overlap",
-    "title": "工具D 重叠判断"
+    "title": "重叠判断"
    },
    {
     "key": "merge",
-    "title": "工具E 区间合并"
+    "title": "区间合并"
    },
    {
     "key": "gap",
-    "title": "工具F 空档与间隙统计"
+    "title": "空档与间隙统计"
    }
   ]
  },
@@ -7407,27 +7407,27 @@
   "subapps": [
    {
     "key": "depth",
-    "title": "工具A 位深体积"
+    "title": "位深体积"
    },
    {
     "key": "memory",
-    "title": "工具B 内存占用"
+    "title": "内存占用"
    },
    {
     "key": "ratio",
-    "title": "工具C 压缩比"
+    "title": "压缩比"
    },
    {
     "key": "colors",
-    "title": "工具D 色彩数"
+    "title": "色彩数"
    },
    {
     "key": "shrink",
-    "title": "工具E 批量压缩体积"
+    "title": "批量压缩体积"
    },
    {
     "key": "dpi",
-    "title": "工具F 打印 DPI"
+    "title": "打印 DPI"
    }
   ]
  },
@@ -7443,11 +7443,11 @@
   "subapps": [
    {
     "key": "backupcode",
-    "title": "工具A 恢复码"
+    "title": "恢复码"
    },
    {
     "key": "totp",
-    "title": "工具B 两步验证"
+    "title": "两步验证"
    }
   ]
  },
@@ -7463,11 +7463,11 @@
   "subapps": [
    {
     "key": "convert",
-    "title": "工具A 繁简转换"
+    "title": "繁简转换"
    },
    {
     "key": "wordmap",
-    "title": "工具B 用词对照"
+    "title": "用词对照"
    }
   ]
  },
@@ -7483,11 +7483,11 @@
   "subapps": [
    {
     "key": "b64url",
-    "title": "工具A Base64URL"
+    "title": "Base64URL"
    },
    {
     "key": "hmac",
-    "title": "工具B HMAC哈希"
+    "title": "HMAC哈希"
    }
   ]
  },
@@ -7503,11 +7503,11 @@
   "subapps": [
    {
     "key": "plan321",
-    "title": "工具A 3-2-1自查"
+    "title": "3-2-1自查"
    },
    {
     "key": "backup3",
-    "title": "工具B 备份计划"
+    "title": "备份计划"
    }
   ]
  },
@@ -7523,27 +7523,27 @@
   "subapps": [
    {
     "key": "taxi",
-    "title": "工具A 出租车计价"
+    "title": "出租车计价"
    },
    {
     "key": "ridehail",
-    "title": "工具B 网约车对比"
+    "title": "网约车对比"
    },
    {
     "key": "airport",
-    "title": "工具C 机场接送"
+    "title": "机场接送"
    },
    {
     "key": "commute",
-    "title": "工具D 通勤月成本"
+    "title": "通勤月成本"
    },
    {
     "key": "pool",
-    "title": "工具E 拼车分摊"
+    "title": "拼车分摊"
    },
    {
     "key": "night",
-    "title": "工具F 夜间附加费估算"
+    "title": "夜间附加费估算"
    }
   ]
  },
@@ -7559,11 +7559,11 @@
   "subapps": [
    {
     "key": "protein",
-    "title": "工具A 蛋白摄入"
+    "title": "蛋白摄入"
    },
    {
     "key": "foodswap",
-    "title": "工具B 食物换算"
+    "title": "食物换算"
    }
   ]
  },
@@ -7579,11 +7579,11 @@
   "subapps": [
    {
     "key": "fingerprint",
-    "title": "工具A 指纹自查"
+    "title": "指纹自查"
    },
    {
     "key": "privacyscore",
-    "title": "工具B 隐私评分"
+    "title": "隐私评分"
    }
   ]
  },
@@ -7599,11 +7599,11 @@
   "subapps": [
    {
     "key": "range",
-    "title": "工具A 续航费用"
+    "title": "续航费用"
    },
    {
     "key": "insurance",
-    "title": "工具B 车险保费"
+    "title": "车险保费"
    }
   ]
  },
@@ -7619,11 +7619,11 @@
   "subapps": [
    {
     "key": "fiber",
-    "title": "工具A 纤维份量"
+    "title": "纤维份量"
    },
    {
     "key": "vegplan",
-    "title": "工具B 蔬果计划"
+    "title": "蔬果计划"
    }
   ]
  },
@@ -7639,27 +7639,27 @@
   "subapps": [
    {
     "key": "social",
-    "title": "工具A 社交尺寸"
+    "title": "社交尺寸"
    },
    {
     "key": "ecommerce",
-    "title": "工具B 电商主图"
+    "title": "电商主图"
    },
    {
     "key": "video",
-    "title": "工具C 视频封面"
+    "title": "视频封面"
    },
    {
     "key": "web",
-    "title": "工具D 网页 Banner"
+    "title": "网页 Banner"
    },
    {
     "key": "cover",
-    "title": "工具E 封面与海报尺寸"
+    "title": "封面与海报尺寸"
    },
    {
     "key": "avatar",
-    "title": "工具F 头像与缩略图规格"
+    "title": "头像与缩略图规格"
    }
   ]
  },
@@ -7675,11 +7675,11 @@
   "subapps": [
    {
     "key": "checkin",
-    "title": "工具A 值机倒推"
+    "title": "值机倒推"
    },
    {
     "key": "transfer",
-    "title": "工具B 转机衔接"
+    "title": "转机衔接"
    }
   ]
  },
@@ -7695,11 +7695,11 @@
   "subapps": [
    {
     "key": "calcium",
-    "title": "工具A 钙摄入"
+    "title": "钙摄入"
    },
    {
     "key": "vitd",
-    "title": "工具B 维D建议"
+    "title": "维D建议"
    }
   ]
  },
@@ -7715,11 +7715,11 @@
   "subapps": [
    {
     "key": "wifi",
-    "title": "工具A Wi-Fi自查"
+    "title": "Wi-Fi自查"
    },
    {
     "key": "ports",
-    "title": "工具B 端口自查"
+    "title": "端口自查"
    }
   ]
  },
@@ -7735,27 +7735,27 @@
   "subapps": [
    {
     "key": "word",
-    "title": "工具A 字数统计"
+    "title": "字数统计"
    },
    {
     "key": "base",
-    "title": "工具B 进制转换"
+    "title": "进制转换"
    },
    {
     "key": "percent",
-    "title": "工具C 折扣计算"
+    "title": "折扣计算"
    },
    {
     "key": "date",
-    "title": "工具D 日期差"
+    "title": "日期差"
    },
    {
     "key": "color",
-    "title": "工具E 颜色格式"
+    "title": "颜色格式"
    },
    {
     "key": "unit",
-    "title": "工具F 单位换算"
+    "title": "单位换算"
    }
   ]
  },
@@ -7771,27 +7771,27 @@
   "subapps": [
    {
     "key": "gb",
-    "title": "工具A GB/T 7714"
+    "title": "GB/T 7714"
    },
    {
     "key": "apa",
-    "title": "工具B APA 7"
+    "title": "APA 7"
    },
    {
     "key": "mla",
-    "title": "工具C MLA 9"
+    "title": "MLA 9"
    },
    {
     "key": "bib",
-    "title": "工具D BibTeX"
+    "title": "BibTeX"
    },
    {
     "key": "dedupe",
-    "title": "工具E 参考文献去重统计"
+    "title": "参考文献去重统计"
    },
    {
     "key": "citecheck",
-    "title": "工具F 引用格式一致性检查"
+    "title": "引用格式一致性检查"
    }
   ]
  },
@@ -7807,11 +7807,11 @@
   "subapps": [
    {
     "key": "purine",
-    "title": "工具A 嘌呤速查"
+    "title": "嘌呤速查"
    },
    {
     "key": "watergoal",
-    "title": "工具B 饮水目标"
+    "title": "饮水目标"
    }
   ]
  },
@@ -7827,11 +7827,11 @@
   "subapps": [
    {
     "key": "gi",
-    "title": "工具A 血糖负荷"
+    "title": "血糖负荷"
    },
    {
     "key": "gidiet",
-    "title": "工具B 低GI替换"
+    "title": "低GI替换"
    }
   ]
  },
@@ -7847,27 +7847,27 @@
   "subapps": [
    {
     "key": "kit",
-    "title": "工具A 应急物品清单"
+    "title": "应急物品清单"
    },
    {
     "key": "plan",
-    "title": "工具B 应急预案"
+    "title": "应急预案"
    },
    {
     "key": "firstaid",
-    "title": "工具C 急救包"
+    "title": "急救包"
    },
    {
     "key": "outage",
-    "title": "工具D 停电停水"
+    "title": "停电停水"
    },
    {
     "key": "stock",
-    "title": "工具E 饮水食物储备"
+    "title": "饮水食物储备"
    },
    {
     "key": "drill",
-    "title": "工具F 家庭演练计划"
+    "title": "家庭演练计划"
    }
   ]
  },
@@ -7883,27 +7883,27 @@
   "subapps": [
    {
     "key": "tariff",
-    "title": "工具A 行邮税与到手价"
+    "title": "行邮税与到手价"
    },
    {
     "key": "parcel",
-    "title": "工具B 运费与包裹"
+    "title": "运费与包裹"
    },
    {
     "key": "restricted",
-    "title": "工具C 禁限与申报"
+    "title": "禁限与申报"
    },
    {
     "key": "return",
-    "title": "工具D 退换与售后"
+    "title": "退换与售后"
    },
    {
     "key": "duty",
-    "title": "工具E 行邮税与免税额度"
+    "title": "行邮税与免税额度"
    },
    {
     "key": "bundle",
-    "title": "工具F 合箱与拆单建议"
+    "title": "合箱与拆单建议"
    }
   ]
  },
@@ -7919,11 +7919,11 @@
   "subapps": [
    {
     "key": "checklist",
-    "title": "工具A 签署清单"
+    "title": "签署清单"
    },
    {
     "key": "contract",
-    "title": "工具B 条款自查"
+    "title": "条款自查"
    }
   ]
  },
@@ -7939,27 +7939,27 @@
   "subapps": [
    {
     "key": "handover",
-    "title": "工具A 交接单生成"
+    "title": "交接单生成"
    },
    {
     "key": "checklist",
-    "title": "工具B 验机与验收清单"
+    "title": "验机与验收清单"
    },
    {
     "key": "dispute",
-    "title": "工具C 纠纷应对话术"
+    "title": "纠纷应对话术"
    },
    {
     "key": "process",
-    "title": "工具D 面交邮寄流程"
+    "title": "面交邮寄流程"
    },
    {
     "key": "price",
-    "title": "工具E 定价与砍价底线"
+    "title": "定价与砍价底线"
    },
    {
     "key": "warranty",
-    "title": "工具F 保修交接说明"
+    "title": "保修交接说明"
    }
   ]
  },
@@ -7975,27 +7975,27 @@
   "subapps": [
    {
     "key": "ac",
-    "title": "工具A 空调匹数与制冷量"
+    "title": "空调匹数与制冷量"
    },
    {
     "key": "fridge",
-    "title": "工具B 冰箱容积选型"
+    "title": "冰箱容积选型"
    },
    {
     "key": "washer",
-    "title": "工具C 洗衣机容量选型"
+    "title": "洗衣机容量选型"
    },
    {
     "key": "tv",
-    "title": "工具D 电视尺寸与观看距离"
+    "title": "电视尺寸与观看距离"
    },
    {
     "key": "heater",
-    "title": "工具E 电热水器升数选型"
+    "title": "电热水器升数选型"
    },
    {
     "key": "water",
-    "title": "工具F 净水器通量与滤芯成本"
+    "title": "净水器通量与滤芯成本"
    }
   ]
  },
@@ -8011,27 +8011,27 @@
   "subapps": [
    {
     "key": "severance",
-    "title": "工具A 离职补偿金"
+    "title": "离职补偿金"
    },
    {
     "key": "probation",
-    "title": "工具B 试用期权益"
+    "title": "试用期权益"
    },
    {
     "key": "noncompete",
-    "title": "工具C 竞业限制补偿"
+    "title": "竞业限制补偿"
    },
    {
     "key": "annualleave",
-    "title": "工具D 年假与未休折算"
+    "title": "年假与未休折算"
    },
    {
     "key": "payroll",
-    "title": "工具E 社保公积金与到手工资"
+    "title": "社保公积金与到手工资"
    },
    {
     "key": "sickleave",
-    "title": "工具F 病假工资与医疗期"
+    "title": "病假工资与医疗期"
    }
   ]
  },
@@ -8047,27 +8047,27 @@
   "subapps": [
    {
     "key": "insurance",
-    "title": "工具A 车险保费估算"
+    "title": "车险保费估算"
    },
    {
     "key": "penalty",
-    "title": "工具B 违章罚款记分"
+    "title": "违章罚款记分"
    },
    {
     "key": "inspection",
-    "title": "工具C 年检与保险到期"
+    "title": "年检与保险到期"
    },
    {
     "key": "cost",
-    "title": "工具D 用车成本估算"
+    "title": "用车成本估算"
    },
    {
     "key": "maintenance",
-    "title": "工具E 保养周期与费用"
+    "title": "保养周期与费用"
    },
    {
     "key": "wash",
-    "title": "工具F 洗车与美容花费"
+    "title": "洗车与美容花费"
    }
   ]
  },
@@ -8083,27 +8083,27 @@
   "subapps": [
    {
     "key": "age",
-    "title": "工具A 年龄与寿命换算"
+    "title": "年龄与寿命换算"
    },
    {
     "key": "feed",
-    "title": "工具B 每日喂食量"
+    "title": "每日喂食量"
    },
    {
     "key": "vaccine",
-    "title": "工具C 疫苗驱虫日程"
+    "title": "疫苗驱虫日程"
    },
    {
     "key": "cost",
-    "title": "工具D 年度养宠花费"
+    "title": "年度养宠花费"
    },
    {
     "key": "safety",
-    "title": "工具E 饮食禁忌速查"
+    "title": "饮食禁忌速查"
    },
    {
     "key": "travel",
-    "title": "工具F 出行与托运准备"
+    "title": "出行与托运准备"
    }
   ]
  },
@@ -8119,27 +8119,27 @@
   "subapps": [
    {
     "key": "formula",
-    "title": "工具A 奶粉用量与冲调"
+    "title": "奶粉用量与冲调"
    },
    {
     "key": "solid",
-    "title": "工具B 辅食添加清单"
+    "title": "辅食添加清单"
    },
    {
     "key": "growth",
-    "title": "工具C 生长发育参考"
+    "title": "生长发育参考"
    },
    {
     "key": "sleep",
-    "title": "工具D 睡眠时长与作息"
+    "title": "睡眠时长与作息"
    },
    {
     "key": "shopping",
-    "title": "工具E 喂养与采购清单"
+    "title": "喂养与采购清单"
    },
    {
     "key": "kindergarten",
-    "title": "工具F 入园与托育准备"
+    "title": "入园与托育准备"
    }
   ]
  },
@@ -8155,27 +8155,27 @@
   "subapps": [
    {
     "key": "deposit",
-    "title": "工具A 押金退还与违约"
+    "title": "押金退还与违约"
    },
    {
     "key": "utility",
-    "title": "工具B 水电燃气分摊"
+    "title": "水电燃气分摊"
    },
    {
     "key": "commute",
-    "title": "工具C 通勤成本估算"
+    "title": "通勤成本估算"
    },
    {
     "key": "move",
-    "title": "工具D 搬家费用估算"
+    "title": "搬家费用估算"
    },
    {
     "key": "checklist",
-    "title": "工具E 退租交接清单"
+    "title": "退租交接清单"
    },
    {
     "key": "splitter",
-    "title": "工具F 合租费用分摊"
+    "title": "合租费用分摊"
    }
   ]
  },
@@ -8191,27 +8191,27 @@
   "subapps": [
    {
     "key": "filter",
-    "title": "工具A 滤芯更换周期"
+    "title": "滤芯更换周期"
    },
    {
     "key": "washer",
-    "title": "工具B 洗衣机筒清洁"
+    "title": "洗衣机筒清洁"
    },
    {
     "key": "ac",
-    "title": "工具C 空调清洗费用"
+    "title": "空调清洗费用"
    },
    {
     "key": "tradein",
-    "title": "工具D 以旧换新残值"
+    "title": "以旧换新残值"
    },
    {
     "key": "lifespan",
-    "title": "工具E 家电寿命与更换"
+    "title": "家电寿命与更换"
    },
    {
     "key": "power",
-    "title": "工具F 家电耗电与电费"
+    "title": "家电耗电与电费"
    }
   ]
  },
@@ -8227,11 +8227,11 @@
   "subapps": [
    {
     "key": "tts",
-    "title": "工具A 文字朗读"
+    "title": "文字朗读"
    },
    {
     "key": "countdown",
-    "title": "工具B 倒计时"
+    "title": "倒计时"
    }
   ]
  },
@@ -8246,27 +8246,27 @@
   "subapps": [
    {
     "key": "qr",
-    "title": "工具A 二维码识别"
+    "title": "二维码识别"
    },
    {
     "key": "barcode",
-    "title": "工具B 条形码识别"
+    "title": "条形码识别"
    },
    {
     "key": "checksum",
-    "title": "工具C 校验位计算"
+    "title": "校验位计算"
    },
    {
     "key": "vcard",
-    "title": "工具D vCard名片"
+    "title": "vCard名片"
    },
    {
     "key": "wifi",
-    "title": "工具E WiFi连接码"
+    "title": "WiFi连接码"
    },
    {
     "key": "qrgen",
-    "title": "工具F 容量与版本"
+    "title": "容量与版本"
    }
   ]
  },
@@ -8281,27 +8281,27 @@
   "subapps": [
    {
     "key": "rhr",
-    "title": "工具A 有氧分级"
+    "title": "有氧分级"
    },
    {
     "key": "vo2",
-    "title": "工具B VO2max估算"
+    "title": "VO2max估算"
    },
    {
     "key": "zone",
-    "title": "工具C 心率区间"
+    "title": "心率区间"
    },
    {
     "key": "acwr",
-    "title": "工具D 训练负荷比"
+    "title": "训练负荷比"
    },
    {
     "key": "equiv",
-    "title": "工具E 等效时长"
+    "title": "等效时长"
    },
    {
     "key": "plan",
-    "title": "工具F 训练计划"
+    "title": "训练计划"
    }
   ]
  },
@@ -8316,27 +8316,27 @@
   "subapps": [
    {
     "key": "j2sql",
-    "title": "工具A JSON转SQL"
+    "title": "JSON转SQL"
    },
    {
     "key": "sql2j",
-    "title": "工具B SQL转JSON"
+    "title": "SQL转JSON"
    },
    {
     "key": "types",
-    "title": "工具C 类型推断"
+    "title": "类型推断"
    },
    {
     "key": "quickref",
-    "title": "工具D SQL速查"
+    "title": "SQL速查"
    },
    {
     "key": "sqlfmt",
-    "title": "工具E SQL格式化"
+    "title": "SQL格式化"
    },
    {
     "key": "joins",
-    "title": "工具F 连接与聚合"
+    "title": "连接与聚合"
    }
   ]
  },
@@ -8352,11 +8352,11 @@
   "subapps": [
    {
     "key": "tax",
-    "title": "工具A 抬头校验"
+    "title": "抬头校验"
    },
    {
     "key": "invoice",
-    "title": "工具B 开票信息"
+    "title": "开票信息"
    }
   ]
  },
@@ -8372,27 +8372,27 @@
   "subapps": [
    {
     "key": "undo",
-    "title": "工具A 撤销与回退"
+    "title": "撤销与回退"
    },
    {
     "key": "branch",
-    "title": "工具B 分支与找回"
+    "title": "分支与找回"
    },
    {
     "key": "stash",
-    "title": "工具C 暂存与切换"
+    "title": "暂存与切换"
    },
    {
     "key": "conflict",
-    "title": "工具D 冲突与合并"
+    "title": "冲突与合并"
    },
    {
     "key": "bisect",
-    "title": "工具E bisect 定位"
+    "title": "bisect 定位"
    },
    {
     "key": "reflog",
-    "title": "工具F reflog 救援"
+    "title": "reflog 救援"
    }
   ]
  },
@@ -8408,27 +8408,27 @@
   "subapps": [
    {
     "key": "container",
-    "title": "工具A 容器"
+    "title": "容器"
    },
    {
     "key": "image",
-    "title": "工具B 镜像"
+    "title": "镜像"
    },
    {
     "key": "network",
-    "title": "工具C 网络"
+    "title": "网络"
    },
    {
     "key": "volume",
-    "title": "工具D 数据卷"
+    "title": "数据卷"
    },
    {
     "key": "compose",
-    "title": "工具E Compose"
+    "title": "Compose"
    },
    {
     "key": "cleanup",
-    "title": "工具F 清理与磁盘占用"
+    "title": "清理与磁盘占用"
    }
   ]
  },
@@ -8444,27 +8444,27 @@
   "subapps": [
    {
     "key": "proxy",
-    "title": "工具A 反向代理"
+    "title": "反向代理"
    },
    {
     "key": "https",
-    "title": "工具B HTTPS 与证书"
+    "title": "HTTPS 与证书"
    },
    {
     "key": "cache",
-    "title": "工具C 缓存与压缩"
+    "title": "缓存与压缩"
    },
    {
     "key": "limit",
-    "title": "工具D 限流与跨域"
+    "title": "限流与跨域"
    },
    {
     "key": "concurrency",
-    "title": "工具E 并发与连接数估算"
+    "title": "并发与连接数估算"
    },
    {
     "key": "upstream",
-    "title": "工具F 上游与负载均衡"
+    "title": "上游与负载均衡"
    }
   ]
  },
@@ -8480,27 +8480,27 @@
   "subapps": [
    {
     "key": "chord",
-    "title": "工具A 和弦指法"
+    "title": "和弦指法"
    },
    {
     "key": "tuning",
-    "title": "工具B 调弦"
+    "title": "调弦"
    },
    {
     "key": "capo",
-    "title": "工具C 变调夹"
+    "title": "变调夹"
    },
    {
     "key": "progression",
-    "title": "工具D 常用进行"
+    "title": "常用进行"
    },
    {
     "key": "setup",
-    "title": "工具E 弦距与手感调整"
+    "title": "弦距与手感调整"
    },
    {
     "key": "scale",
-    "title": "工具F 音阶指板速查"
+    "title": "音阶指板速查"
    }
   ]
  },
@@ -8515,27 +8515,27 @@
   "subapps": [
    {
     "key": "status",
-    "title": "工具A 状态码速查"
+    "title": "状态码速查"
    },
    {
     "key": "mock",
-    "title": "工具B Mock数据"
+    "title": "Mock数据"
    },
    {
     "key": "ua",
-    "title": "工具C UA解析"
+    "title": "UA解析"
    },
    {
     "key": "cache",
-    "title": "工具D 缓存头"
+    "title": "缓存头"
    },
    {
     "key": "cors",
-    "title": "工具E CORS"
+    "title": "CORS"
    },
    {
     "key": "retry",
-    "title": "工具F 重试与超时"
+    "title": "重试与超时"
    }
   ]
  },
@@ -8550,27 +8550,27 @@
   "subapps": [
    {
     "key": "cmd",
-    "title": "工具A 常用命令"
+    "title": "常用命令"
    },
    {
     "key": "chmod",
-    "title": "工具B 权限计算"
+    "title": "权限计算"
    },
    {
     "key": "port",
-    "title": "工具C 端口服务"
+    "title": "端口服务"
    },
    {
     "key": "disk",
-    "title": "工具D 磁盘排查"
+    "title": "磁盘排查"
    },
    {
     "key": "process",
-    "title": "工具E 进程排查"
+    "title": "进程排查"
    },
    {
     "key": "user",
-    "title": "工具F 用户与sudo"
+    "title": "用户与sudo"
    }
   ]
  },
@@ -8585,27 +8585,27 @@
   "subapps": [
    {
     "key": "ssh",
-    "title": "工具A SSH连接"
+    "title": "SSH连接"
    },
    {
     "key": "systemd",
-    "title": "工具B 服务管理"
+    "title": "服务管理"
    },
    {
     "key": "log",
-    "title": "工具C 日志排查"
+    "title": "日志排查"
    },
    {
     "key": "nginx",
-    "title": "工具D Nginx排查"
+    "title": "Nginx排查"
    },
    {
     "key": "dns",
-    "title": "工具E DNS排查"
+    "title": "DNS排查"
    },
    {
     "key": "cpu",
-    "title": "工具F CPU内存负载"
+    "title": "CPU内存负载"
    }
   ]
  },
@@ -8620,27 +8620,27 @@
   "subapps": [
    {
     "key": "func",
-    "title": "工具A 常用函数"
+    "title": "常用函数"
    },
    {
     "key": "format",
-    "title": "工具B 格式与验证"
+    "title": "格式与验证"
    },
    {
     "key": "keys",
-    "title": "工具C 快捷键"
+    "title": "快捷键"
    },
    {
     "key": "pivot",
-    "title": "工具D 透视与筛选"
+    "title": "透视与筛选"
    },
    {
     "key": "text",
-    "title": "工具E 文本函数与分列"
+    "title": "文本函数与分列"
    },
    {
     "key": "error",
-    "title": "工具F 报错排查"
+    "title": "报错排查"
    }
   ]
  },
@@ -8655,27 +8655,27 @@
   "subapps": [
    {
     "key": "panel",
-    "title": "工具A 面板速查"
+    "title": "面板速查"
    },
    {
     "key": "keys",
-    "title": "工具B 快捷键"
+    "title": "快捷键"
    },
    {
     "key": "errors",
-    "title": "工具C 报错排查"
+    "title": "报错排查"
    },
    {
     "key": "network",
-    "title": "工具D 网络请求排查"
+    "title": "网络请求排查"
    },
    {
     "key": "perf",
-    "title": "工具E 性能剖析"
+    "title": "性能剖析"
    },
    {
     "key": "memory",
-    "title": "工具F 内存与泄漏"
+    "title": "内存与泄漏"
    }
   ]
  },
@@ -8690,27 +8690,27 @@
   "subapps": [
    {
     "key": "branch",
-    "title": "工具A 分支操作"
+    "title": "分支操作"
    },
    {
     "key": "conflict",
-    "title": "工具B 冲突解决"
+    "title": "冲突解决"
    },
    {
     "key": "rebase",
-    "title": "工具C 变基策略"
+    "title": "变基策略"
    },
    {
     "key": "cherry",
-    "title": "工具D 拣选与回滚"
+    "title": "拣选与回滚"
    },
    {
     "key": "worktree",
-    "title": "工具E Worktree并行"
+    "title": "Worktree并行"
    },
    {
     "key": "stash",
-    "title": "工具F 暂存与找回"
+    "title": "暂存与找回"
    }
   ]
  },
@@ -8725,27 +8725,27 @@
   "subapps": [
    {
     "key": "pr",
-    "title": "工具A PR与Review"
+    "title": "PR与Review"
    },
    {
     "key": "actions",
-    "title": "工具B Actions"
+    "title": "Actions"
    },
    {
     "key": "issue",
-    "title": "工具C Issue模板"
+    "title": "Issue模板"
    },
    {
     "key": "release",
-    "title": "工具D 发布与回滚"
+    "title": "发布与回滚"
    },
    {
     "key": "branch",
-    "title": "工具E 分支保护"
+    "title": "分支保护"
    },
    {
     "key": "template",
-    "title": "工具F 模板规范"
+    "title": "模板规范"
    }
   ]
  },
@@ -8760,27 +8760,27 @@
   "subapps": [
    {
     "key": "cwv",
-    "title": "工具A CWV指标"
+    "title": "CWV指标"
    },
    {
     "key": "bundle",
-    "title": "工具B 打包体积"
+    "title": "打包体积"
    },
    {
     "key": "cache",
-    "title": "工具C 缓存与加载"
+    "title": "缓存与加载"
    },
    {
     "key": "image",
-    "title": "工具D 图片与资源优化"
+    "title": "图片与资源优化"
    },
    {
     "key": "interact",
-    "title": "工具E 交互与 INP"
+    "title": "交互与 INP"
    },
    {
     "key": "ssr",
-    "title": "工具F 渲染与SSR"
+    "title": "渲染与SSR"
    }
   ]
  },
@@ -8796,27 +8796,27 @@
   "subapps": [
    {
     "key": "rest",
-    "title": "工具A REST 命名"
+    "title": "REST 命名"
    },
    {
     "key": "openapi",
-    "title": "工具B OpenAPI 片段"
+    "title": "OpenAPI 片段"
    },
    {
     "key": "error",
-    "title": "工具C 错误码与分页"
+    "title": "错误码与分页"
    },
    {
     "key": "version",
-    "title": "工具D 版本与兼容"
+    "title": "版本与兼容"
    },
    {
     "key": "ratelimit",
-    "title": "工具E 限流与重试估算"
+    "title": "限流与重试估算"
    },
    {
     "key": "idempotency",
-    "title": "工具F 幂等设计检查"
+    "title": "幂等设计检查"
    }
   ]
  },
@@ -8831,27 +8831,27 @@
   "subapps": [
    {
     "key": "case",
-    "title": "工具A 用例设计"
+    "title": "用例设计"
    },
    {
     "key": "mock",
-    "title": "工具B Mock与夹具"
+    "title": "Mock与夹具"
    },
    {
     "key": "gate",
-    "title": "工具C 质量门禁"
+    "title": "质量门禁"
    },
    {
     "key": "coverage",
-    "title": "工具D 覆盖率与回归"
+    "title": "覆盖率与回归"
    },
    {
     "key": "flaky",
-    "title": "工具E 不稳定测试"
+    "title": "不稳定测试"
    },
    {
     "key": "e2e",
-    "title": "工具F E2E与自动化"
+    "title": "E2E与自动化"
    }
   ]
  },
@@ -8867,27 +8867,27 @@
   "subapps": [
    {
     "key": "prompt",
-    "title": "工具A Prompt结构"
+    "title": "Prompt结构"
    },
    {
     "key": "token",
-    "title": "工具B Token与成本"
+    "title": "Token与成本"
    },
    {
     "key": "model",
-    "title": "工具C 模型参数"
+    "title": "模型参数"
    },
    {
     "key": "rag",
-    "title": "工具D RAG 与知识库"
+    "title": "RAG 与知识库"
    },
    {
     "key": "embed",
-    "title": "工具E 向量化与相似度"
+    "title": "向量化与相似度"
    },
    {
     "key": "guard",
-    "title": "工具F 输出校验"
+    "title": "输出校验"
    }
   ]
  },
@@ -8903,27 +8903,27 @@
   "subapps": [
    {
     "key": "chart",
-    "title": "工具A 图表选型"
+    "title": "图表选型"
    },
    {
     "key": "color",
-    "title": "工具B 配色可读性"
+    "title": "配色可读性"
    },
    {
     "key": "layout",
-    "title": "工具C 仪表盘布局"
+    "title": "仪表盘布局"
    },
    {
     "key": "a11y",
-    "title": "工具D 可访问性与标注"
+    "title": "可访问性与标注"
    },
    {
     "key": "table",
-    "title": "工具E 表格与数字展示"
+    "title": "表格与数字展示"
    },
    {
     "key": "clean",
-    "title": "工具F 数据口径"
+    "title": "数据口径"
    }
   ]
  },
@@ -8939,27 +8939,27 @@
   "subapps": [
    {
     "key": "dns",
-    "title": "工具A DNS记录"
+    "title": "DNS记录"
    },
    {
     "key": "https",
-    "title": "工具B HTTPS自查"
+    "title": "HTTPS自查"
    },
    {
     "key": "cache",
-    "title": "工具C CDN缓存"
+    "title": "CDN缓存"
    },
    {
     "key": "mail",
-    "title": "工具D 邮件域名与反垃圾"
+    "title": "邮件域名与反垃圾"
    },
    {
     "key": "whois",
-    "title": "工具E 域名与 whois"
+    "title": "域名与 whois"
    },
    {
     "key": "dnssec",
-    "title": "工具F DNSSEC 排查"
+    "title": "DNSSEC 排查"
    }
   ]
  },
@@ -8975,27 +8975,27 @@
   "subapps": [
    {
     "key": "subtitle",
-    "title": "工具A 字幕时间轴"
+    "title": "字幕时间轴"
    },
    {
     "key": "audio",
-    "title": "工具B 音频参数"
+    "title": "音频参数"
    },
    {
     "key": "video",
-    "title": "工具C 视频编码"
+    "title": "视频编码"
    },
    {
     "key": "codec",
-    "title": "工具D 容器与编码"
+    "title": "容器与编码"
    },
    {
     "key": "noise",
-    "title": "工具E 录音与降噪"
+    "title": "录音与降噪"
    },
    {
     "key": "loudness",
-    "title": "工具F 响度与音量"
+    "title": "响度与音量"
    }
   ]
  },
@@ -9011,27 +9011,27 @@
   "subapps": [
    {
     "key": "visa",
-    "title": "工具A 签证类型与材料"
+    "title": "签证类型与材料"
    },
    {
     "key": "passport",
-    "title": "工具B 护照有效期"
+    "title": "护照有效期"
    },
    {
     "key": "customs",
-    "title": "工具C 海关与禁带"
+    "title": "海关与禁带"
    },
    {
     "key": "visafree",
-    "title": "工具D 免签与落地签"
+    "title": "免签与落地签"
    },
    {
     "key": "transit",
-    "title": "工具E 转机与过境"
+    "title": "转机与过境"
    },
    {
     "key": "arrival",
-    "title": "工具F 入境流程"
+    "title": "入境流程"
    }
   ]
  },
@@ -9047,27 +9047,27 @@
   "subapps": [
    {
     "key": "headline",
-    "title": "工具A 标题公式"
+    "title": "标题公式"
    },
    {
     "key": "struct",
-    "title": "工具B 段落骨架"
+    "title": "段落骨架"
    },
    {
     "key": "tone",
-    "title": "工具C 语气与去 AI 味"
+    "title": "语气与去 AI 味"
    },
    {
     "key": "edit",
-    "title": "工具D 润色清单"
+    "title": "润色清单"
    },
    {
     "key": "outline",
-    "title": "工具E 长文大纲"
+    "title": "长文大纲"
    },
    {
     "key": "seo",
-    "title": "工具F 标题与关键词"
+    "title": "标题与关键词"
    }
   ]
  },
@@ -9083,27 +9083,27 @@
   "subapps": [
    {
     "key": "exposure",
-    "title": "工具A 曝光三要素"
+    "title": "曝光三要素"
    },
    {
     "key": "compose",
-    "title": "工具B 构图法则"
+    "title": "构图法则"
    },
    {
     "key": "lens",
-    "title": "工具C 镜头与焦段"
+    "title": "镜头与焦段"
    },
    {
     "key": "light",
-    "title": "工具D 光线与补光"
+    "title": "光线与补光"
    },
    {
     "key": "color",
-    "title": "工具E 后期与调色"
+    "title": "后期与调色"
    },
    {
     "key": "night",
-    "title": "工具F 夜景与长曝"
+    "title": "夜景与长曝"
    }
   ]
  },
@@ -9119,27 +9119,27 @@
   "subapps": [
    {
     "key": "excel",
-    "title": "工具A Excel 快捷键"
+    "title": "Excel 快捷键"
    },
    {
     "key": "word",
-    "title": "工具B Word 快捷键"
+    "title": "Word 快捷键"
    },
    {
     "key": "browser",
-    "title": "工具C 浏览器快捷键"
+    "title": "浏览器快捷键"
    },
    {
     "key": "ppt",
-    "title": "工具D PPT 快捷键"
+    "title": "PPT 快捷键"
    },
    {
     "key": "pdf",
-    "title": "工具E PDF 阅读与批注"
+    "title": "PDF 阅读与批注"
    },
    {
     "key": "os",
-    "title": "工具F 系统与窗口"
+    "title": "系统与窗口"
    }
   ]
  },
@@ -9155,27 +9155,27 @@
   "subapps": [
    {
     "key": "calorie",
-    "title": "工具A 食物热量"
+    "title": "食物热量"
    },
    {
     "key": "macro",
-    "title": "工具B 宏量配比"
+    "title": "宏量配比"
    },
    {
     "key": "label",
-    "title": "工具C 营养标签"
+    "title": "营养标签"
    },
    {
     "key": "plan",
-    "title": "工具D 一日三餐"
+    "title": "一日三餐"
    },
    {
     "key": "water",
-    "title": "工具E 饮水与补液"
+    "title": "饮水与补液"
    },
    {
     "key": "gi",
-    "title": "工具F 控糖与 GI"
+    "title": "控糖与 GI"
    }
   ]
  },
@@ -9191,27 +9191,27 @@
   "subapps": [
    {
     "key": "fire",
-    "title": "工具A 消防自查"
+    "title": "消防自查"
    },
    {
     "key": "elec",
-    "title": "工具B 用电安全"
+    "title": "用电安全"
    },
    {
     "key": "gas",
-    "title": "工具C 燃气与一氧化碳"
+    "title": "燃气与一氧化碳"
    },
    {
     "key": "water",
-    "title": "工具D 水质与净水"
+    "title": "水质与净水"
    },
    {
     "key": "air",
-    "title": "工具E 空气质量与通风"
+    "title": "空气质量与通风"
    },
    {
     "key": "emergency",
-    "title": "工具F 应急物资与联络"
+    "title": "应急物资与联络"
    }
   ]
  },
@@ -9227,27 +9227,27 @@
   "subapps": [
    {
     "key": "kit",
-    "title": "工具A 维修工具选型"
+    "title": "维修工具选型"
    },
    {
     "key": "fix",
-    "title": "工具B 故障排查顺序"
+    "title": "故障排查顺序"
    },
    {
     "key": "safe",
-    "title": "工具C 安全作业要点"
+    "title": "安全作业要点"
    },
    {
     "key": "paint",
-    "title": "工具D 墙面修补与刷漆"
+    "title": "墙面修补与刷漆"
    },
    {
     "key": "drain",
-    "title": "工具E 下水与马桶疏通"
+    "title": "下水与马桶疏通"
    },
    {
     "key": "toolcare",
-    "title": "工具F 保养与收纳"
+    "title": "保养与收纳"
    }
   ]
  },
@@ -9263,27 +9263,27 @@
   "subapps": [
    {
     "key": "size",
-    "title": "工具A 尺寸与层高"
+    "title": "尺寸与层高"
    },
    {
     "key": "material",
-    "title": "工具B 材料用量"
+    "title": "材料用量"
    },
    {
     "key": "lighting",
-    "title": "工具C 采光与灯具"
+    "title": "采光与灯具"
    },
    {
     "key": "color",
-    "title": "工具D 墙面配色与涂料"
+    "title": "墙面配色与涂料"
    },
    {
     "key": "storage",
-    "title": "工具E 收纳与柜体尺寸"
+    "title": "收纳与柜体尺寸"
    },
    {
     "key": "socket",
-    "title": "工具F 开关插座点位与高度"
+    "title": "开关插座点位与高度"
    }
   ]
  },
@@ -9299,27 +9299,27 @@
   "subapps": [
    {
     "key": "pack",
-    "title": "工具A 打包清单"
+    "title": "打包清单"
    },
    {
     "key": "gear",
-    "title": "工具B 装备选型"
+    "title": "装备选型"
    },
    {
     "key": "weather",
-    "title": "工具C 天气衣物"
+    "title": "天气衣物"
    },
    {
     "key": "weight",
-    "title": "工具D 行李重量"
+    "title": "行李重量"
    },
    {
     "key": "budget",
-    "title": "工具E 旅行预算"
+    "title": "旅行预算"
    },
    {
     "key": "checklist",
-    "title": "工具F 出发前检查清单"
+    "title": "出发前检查清单"
    }
   ]
  },
@@ -9335,27 +9335,27 @@
   "subapps": [
    {
     "key": "font",
-    "title": "工具A 字体"
+    "title": "字体"
    },
    {
     "key": "icon",
-    "title": "工具B 图标"
+    "title": "图标"
    },
    {
     "key": "audio",
-    "title": "工具C 音频"
+    "title": "音频"
    },
    {
     "key": "license",
-    "title": "工具D 许可"
+    "title": "许可"
    },
    {
     "key": "expiry",
-    "title": "工具E 到期"
+    "title": "到期"
    },
    {
     "key": "attribution",
-    "title": "工具F 署名与致谢模板"
+    "title": "署名与致谢模板"
    }
   ]
  },
@@ -9371,27 +9371,27 @@
   "subapps": [
    {
     "key": "camp",
-    "title": "工具A 营地选址"
+    "title": "营地选址"
    },
    {
     "key": "safety",
-    "title": "工具B 安全处置"
+    "title": "安全处置"
    },
    {
     "key": "food",
-    "title": "工具C 补给计算"
+    "title": "补给计算"
    },
    {
     "key": "heat",
-    "title": "工具D 保暖温标"
+    "title": "保暖温标"
    },
    {
     "key": "cost",
-    "title": "工具E 费用分摊"
+    "title": "费用分摊"
    },
    {
     "key": "emergency",
-    "title": "工具F 无信号应急预案"
+    "title": "无信号应急预案"
    }
   ]
  },
@@ -9407,27 +9407,27 @@
   "subapps": [
    {
     "key": "brew",
-    "title": "工具A 手冲与意式"
+    "title": "手冲与意式"
    },
    {
     "key": "tea",
-    "title": "工具B 茶叶冲泡"
+    "title": "茶叶冲泡"
    },
    {
     "key": "ratio",
-    "title": "工具C 粉水比"
+    "title": "粉水比"
    },
    {
     "key": "storage",
-    "title": "工具D 豆子与器具"
+    "title": "豆子与器具"
    },
    {
     "key": "caffeine",
-    "title": "工具E 咖啡因与就寝"
+    "title": "咖啡因与就寝"
    },
    {
     "key": "taste",
-    "title": "工具F 风味调整建议"
+    "title": "风味调整建议"
    }
   ]
  },
@@ -9443,27 +9443,27 @@
   "subapps": [
    {
     "key": "brush",
-    "title": "工具A 刷牙方案"
+    "title": "刷牙方案"
    },
    {
     "key": "floss",
-    "title": "工具B 牙线使用"
+    "title": "牙线使用"
    },
    {
     "key": "dental",
-    "title": "工具C 就诊信号"
+    "title": "就诊信号"
    },
    {
     "key": "whiten",
-    "title": "工具D 牙齿美白与敏感护理"
+    "title": "牙齿美白与敏感护理"
    },
    {
     "key": "fluoride",
-    "title": "工具E 含氟牙膏与用量"
+    "title": "含氟牙膏与用量"
    },
    {
     "key": "checkup",
-    "title": "工具F 复查提醒计划"
+    "title": "复查提醒计划"
    }
   ]
  },
@@ -9479,27 +9479,27 @@
   "subapps": [
    {
     "key": "ingredient",
-    "title": "工具A 粉油糖换算"
+    "title": "粉油糖换算"
    },
    {
     "key": "pan",
-    "title": "工具B 模具尺寸"
+    "title": "模具尺寸"
    },
    {
     "key": "oven",
-    "title": "工具C 烤箱温度"
+    "title": "烤箱温度"
    },
    {
     "key": "time",
-    "title": "工具D 温度与时间"
+    "title": "温度与时间"
    },
    {
     "key": "scale",
-    "title": "工具E 配方缩放"
+    "title": "配方缩放"
    },
    {
     "key": "trouble",
-    "title": "工具F 失败排查"
+    "title": "失败排查"
    }
   ]
  },
@@ -9515,27 +9515,27 @@
   "subapps": [
    {
     "key": "water",
-    "title": "工具A 浇水与光照"
+    "title": "浇水与光照"
    },
    {
     "key": "soil",
-    "title": "工具B 配土与换盆"
+    "title": "配土与换盆"
    },
    {
     "key": "pest",
-    "title": "工具C 病虫排查"
+    "title": "病虫排查"
    },
    {
     "key": "fert",
-    "title": "工具D 施肥与季节"
+    "title": "施肥与季节"
    },
    {
     "key": "light",
-    "title": "工具E 补光灯时长与电费"
+    "title": "补光灯时长与电费"
    },
    {
     "key": "vacation",
-    "title": "工具F 出门期养护"
+    "title": "出门期养护"
    }
   ]
  },
@@ -9551,27 +9551,27 @@
   "subapps": [
    {
     "key": "lens",
-    "title": "工具A 镜片选择"
+    "title": "镜片选择"
    },
    {
     "key": "frame",
-    "title": "工具B 镜架尺寸"
+    "title": "镜架尺寸"
    },
    {
     "key": "eye",
-    "title": "工具C 用眼与验光"
+    "title": "用眼与验光"
    },
    {
     "key": "screen",
-    "title": "工具D 屏幕用眼与防控"
+    "title": "屏幕用眼与防控"
    },
    {
     "key": "screenrest",
-    "title": "工具E 屏幕距离与休息"
+    "title": "屏幕距离与休息"
    },
    {
     "key": "index",
-    "title": "工具F 折射率选择"
+    "title": "折射率选择"
    }
   ]
  },
@@ -9587,27 +9587,27 @@
   "subapps": [
    {
     "key": "mite",
-    "title": "工具A 除螨频率与清洗"
+    "title": "除螨频率与清洗"
    },
    {
     "key": "allergen",
-    "title": "工具B 过敏原排查"
+    "title": "过敏原排查"
    },
    {
     "key": "air",
-    "title": "工具C 湿度与通风"
+    "title": "湿度与通风"
    },
    {
     "key": "mold",
-    "title": "工具D 霉菌与湿度控制"
+    "title": "霉菌与湿度控制"
    },
    {
     "key": "humidity",
-    "title": "工具E 湿度与螨虫风险"
+    "title": "湿度与螨虫风险"
    },
    {
     "key": "laundry",
-    "title": "工具F 床品清洗与晾晒排程"
+    "title": "床品清洗与晾晒排程"
    }
   ]
  },
@@ -9623,27 +9623,27 @@
   "subapps": [
    {
     "key": "shoe",
-    "title": "工具A 鞋码"
+    "title": "鞋码"
    },
    {
     "key": "cloth",
-    "title": "工具B 服装"
+    "title": "服装"
    },
    {
     "key": "kids",
-    "title": "工具C 儿童"
+    "title": "儿童"
    },
    {
     "key": "chart",
-    "title": "工具D 对照表"
+    "title": "对照表"
    },
    {
     "key": "fit",
-    "title": "工具E 版型测量"
+    "title": "版型测量"
    },
    {
     "key": "convert",
-    "title": "工具F 品牌尺码对照"
+    "title": "品牌尺码对照"
    }
   ]
  },
@@ -9659,27 +9659,27 @@
   "subapps": [
    {
     "key": "care",
-    "title": "工具A 标签"
+    "title": "标签"
    },
    {
     "key": "fabric",
-    "title": "工具B 面料"
+    "title": "面料"
    },
    {
     "key": "stain",
-    "title": "工具C 污渍"
+    "title": "污渍"
    },
    {
     "key": "iron",
-    "title": "工具D 熨烫"
+    "title": "熨烫"
    },
    {
     "key": "dry",
-    "title": "工具E 晾晒收纳"
+    "title": "晾晒收纳"
    },
    {
     "key": "storage",
-    "title": "工具F 换季收纳清单"
+    "title": "换季收纳清单"
    }
   ]
  },
@@ -9695,27 +9695,27 @@
   "subapps": [
    {
     "key": "room",
-    "title": "工具A 验房检查清单"
+    "title": "验房检查清单"
    },
    {
     "key": "measure",
-    "title": "工具B 面积与公摊核对"
+    "title": "面积与公摊核对"
    },
    {
     "key": "defect",
-    "title": "工具C 缺陷与整改跟踪"
+    "title": "缺陷与整改跟踪"
    },
    {
     "key": "fees",
-    "title": "工具D 收房税费"
+    "title": "收房税费"
    },
    {
     "key": "hours",
-    "title": "工具E 验房工时"
+    "title": "验房工时"
    },
    {
     "key": "handover",
-    "title": "工具F 收房交接清单"
+    "title": "收房交接清单"
    }
   ]
  },
@@ -9731,27 +9731,27 @@
   "subapps": [
    {
     "key": "pace",
-    "title": "工具A 骑行配速与里程"
+    "title": "骑行配速与里程"
    },
    {
     "key": "maint",
-    "title": "工具B 自行车保养周期"
+    "title": "自行车保养周期"
    },
    {
     "key": "gear",
-    "title": "工具C 骑行装备与安全清单"
+    "title": "骑行装备与安全清单"
    },
    {
     "key": "fit",
-    "title": "工具D 车架尺寸与骑行姿势"
+    "title": "车架尺寸与骑行姿势"
    },
    {
     "key": "chainlife",
-    "title": "工具E 链条与飞轮寿命"
+    "title": "链条与飞轮寿命"
    },
    {
     "key": "route",
-    "title": "工具F 骑行路线与补给规划"
+    "title": "骑行路线与补给规划"
    }
   ]
  },
@@ -9767,27 +9767,27 @@
   "subapps": [
    {
     "key": "curtain",
-    "title": "工具A 窗帘"
+    "title": "窗帘"
    },
    {
     "key": "rug",
-    "title": "工具B 地毯"
+    "title": "地毯"
    },
    {
     "key": "art",
-    "title": "工具C 挂画"
+    "title": "挂画"
    },
    {
     "key": "sofa",
-    "title": "工具D 沙发"
+    "title": "沙发"
    },
    {
     "key": "lamp",
-    "title": "工具E 灯具"
+    "title": "灯具"
    },
    {
     "key": "layout",
-    "title": "工具F 软装预算分配"
+    "title": "软装预算分配"
    }
   ]
  },
@@ -9803,27 +9803,27 @@
   "subapps": [
    {
     "key": "mosquito",
-    "title": "工具A 蚊虫防治要点"
+    "title": "蚊虫防治要点"
    },
    {
     "key": "roach",
-    "title": "工具B 蟑螂蚂蚁防治"
+    "title": "蟑螂蚂蚁防治"
    },
    {
     "key": "rat",
-    "title": "工具C 老鼠封堵与捕鼠"
+    "title": "老鼠封堵与捕鼠"
    },
    {
     "key": "termite",
-    "title": "工具D 白蚁与蛀虫防治"
+    "title": "白蚁与蛀虫防治"
    },
    {
     "key": "repellent",
-    "title": "工具E 驱蚊剂浓度与时效"
+    "title": "驱蚊剂浓度与时效"
    },
    {
     "key": "dose",
-    "title": "工具F 驱虫剂安全用量"
+    "title": "驱虫剂安全用量"
    }
   ]
  },
@@ -9839,27 +9839,27 @@
   "subapps": [
    {
     "key": "monitor",
-    "title": "工具A 显示器选型"
+    "title": "显示器选型"
    },
    {
     "key": "keyboard",
-    "title": "工具B 键盘轴体"
+    "title": "键盘轴体"
    },
    {
     "key": "mouse",
-    "title": "工具C 鼠标握姿"
+    "title": "鼠标握姿"
    },
    {
     "key": "audio",
-    "title": "工具D 耳机与音箱"
+    "title": "耳机与音箱"
    },
    {
     "key": "desk",
-    "title": "工具E 桌面布置与线材"
+    "title": "桌面布置与线材"
    },
    {
     "key": "bundle",
-    "title": "工具F 整机搭配预算校验"
+    "title": "整机搭配预算校验"
    }
   ]
  },
@@ -9875,27 +9875,27 @@
   "subapps": [
    {
     "key": "court",
-    "title": "工具A 场地与规则速查"
+    "title": "场地与规则速查"
    },
    {
     "key": "racket",
-    "title": "工具B 球拍磅数与手胶"
+    "title": "球拍磅数与手胶"
    },
    {
     "key": "shuttle",
-    "title": "工具C 用球与耐打选择"
+    "title": "用球与耐打选择"
    },
    {
     "key": "score",
-    "title": "工具D 计分与赛制速查"
+    "title": "计分与赛制速查"
    },
    {
     "key": "cost",
-    "title": "工具E 场地与用球成本"
+    "title": "场地与用球成本"
    },
    {
     "key": "booking",
-    "title": "工具F 场地预约与费用分摊"
+    "title": "场地预约与费用分摊"
    }
   ]
  },
@@ -9911,27 +9911,27 @@
   "subapps": [
    {
     "key": "printer",
-    "title": "工具A 机型选型"
+    "title": "机型选型"
    },
    {
     "key": "cost",
-    "title": "工具B 耗材成本"
+    "title": "耗材成本"
    },
    {
     "key": "paper",
-    "title": "工具C 纸张选择"
+    "title": "纸张选择"
    },
    {
     "key": "fault",
-    "title": "工具D 故障排查"
+    "title": "故障排查"
    },
    {
     "key": "share",
-    "title": "工具E 共享与网络打印"
+    "title": "共享与网络打印"
    },
    {
     "key": "photo",
-    "title": "工具F 照片打印与纸张克重"
+    "title": "照片打印与纸张克重"
    }
   ]
  },
@@ -9947,27 +9947,27 @@
   "subapps": [
    {
     "key": "og",
-    "title": "工具A OG 标签"
+    "title": "OG 标签"
    },
    {
     "key": "card",
-    "title": "工具B 分享卡片"
+    "title": "分享卡片"
    },
    {
     "key": "jsonld",
-    "title": "工具C JSON-LD"
+    "title": "JSON-LD"
    },
    {
     "key": "length",
-    "title": "工具D 长度校验"
+    "title": "长度校验"
    },
    {
     "key": "ogsize",
-    "title": "工具E OG 图片尺寸校验"
+    "title": "OG 图片尺寸校验"
    },
    {
     "key": "preview",
-    "title": "工具F 社交平台预览模拟"
+    "title": "社交平台预览模拟"
    }
   ]
  },
@@ -10050,27 +10050,27 @@
   "subapps": [
    {
     "key": "detect",
-    "title": "工具A 编码检测"
+    "title": "编码检测"
    },
    {
     "key": "fix",
-    "title": "工具B 乱码修复"
+    "title": "乱码修复"
    },
    {
     "key": "convert",
-    "title": "工具C 编码转换"
+    "title": "编码转换"
    },
    {
     "key": "unicode",
-    "title": "工具D 码点与实体"
+    "title": "码点与实体"
    },
    {
     "key": "b64size",
-    "title": "工具E 体积估算"
+    "title": "体积估算"
    },
    {
     "key": "urlcode",
-    "title": "工具F Base64 编解码"
+    "title": "Base64 编解码"
    }
   ]
  },
@@ -10086,27 +10086,27 @@
   "subapps": [
    {
     "key": "pace",
-    "title": "工具A 配速与SWOLF"
+    "title": "配速与SWOLF"
    },
    {
     "key": "turns",
-    "title": "工具B 趟数换算"
+    "title": "趟数换算"
    },
    {
     "key": "plan",
-    "title": "工具C 训练计划"
+    "title": "训练计划"
    },
    {
     "key": "stroke",
-    "title": "工具D 泳姿与划频"
+    "title": "泳姿与划频"
    },
    {
     "key": "rest",
-    "title": "工具E 组间休息"
+    "title": "组间休息"
    },
    {
     "key": "turn",
-    "title": "工具F 转身与出发技巧"
+    "title": "转身与出发技巧"
    }
   ]
  },
@@ -10165,15 +10165,15 @@
    },
    {
     "key": "rhythm",
-    "title": "工具D 节奏与拍号换算"
+    "title": "节奏与拍号换算"
    },
    {
     "key": "bpm",
-    "title": "工具E BPM 与节拍时值"
+    "title": "BPM 与节拍时值"
    },
    {
     "key": "transpose",
-    "title": "工具F 移调与变调夹"
+    "title": "移调与变调夹"
    }
   ]
  },
@@ -10189,27 +10189,27 @@
   "subapps": [
    {
     "key": "rig",
-    "title": "工具A 线组搭配"
+    "title": "线组搭配"
    },
    {
     "key": "bait",
-    "title": "工具B 饵料速查"
+    "title": "饵料速查"
    },
    {
     "key": "gear",
-    "title": "工具C 装备清单"
+    "title": "装备清单"
    },
    {
     "key": "pressure",
-    "title": "工具D 气压与水温鱼口评估"
+    "title": "气压与水温鱼口评估"
    },
    {
     "key": "line",
-    "title": "工具E 线号与拉力换算"
+    "title": "线号与拉力换算"
    },
    {
     "key": "knot",
-    "title": "工具F 鱼线绑法与结强"
+    "title": "鱼线绑法与结强"
    }
   ]
  },
@@ -10225,27 +10225,27 @@
   "subapps": [
    {
     "key": "score",
-    "title": "工具A 计分与规则"
+    "title": "计分与规则"
    },
    {
     "key": "angle",
-    "title": "工具B 击球角度换算"
+    "title": "击球角度换算"
    },
    {
     "key": "gear",
-    "title": "工具C 装备与皮头"
+    "title": "装备与皮头"
    },
    {
     "key": "table",
-    "title": "工具D 球台规格与照明"
+    "title": "球台规格与照明"
    },
    {
     "key": "power",
-    "title": "工具E 击球力度与走位"
+    "title": "击球力度与走位"
    },
    {
     "key": "rack",
-    "title": "工具F 开球与摆球规范"
+    "title": "开球与摆球规范"
    }
   ]
  },
@@ -10261,27 +10261,27 @@
   "subapps": [
    {
     "key": "score",
-    "title": "工具A 十局计分"
+    "title": "十局计分"
    },
    {
     "key": "handicap",
-    "title": "工具B 让分与净分"
+    "title": "让分与净分"
    },
    {
     "key": "convert",
-    "title": "工具C 球重球速换算"
+    "title": "球重球速换算"
    },
    {
     "key": "lane",
-    "title": "工具D 球道与瓶位"
+    "title": "球道与瓶位"
    },
    {
     "key": "consistency",
-    "title": "工具E 局均分与稳定性"
+    "title": "局均分与稳定性"
    },
    {
     "key": "oil",
-    "title": "工具F 球道油型与球路"
+    "title": "球道油型与球路"
    }
   ]
  },
@@ -10297,27 +10297,27 @@
   "subapps": [
    {
     "key": "paper",
-    "title": "工具A 纸张"
+    "title": "纸张"
    },
    {
     "key": "bleed",
-    "title": "工具B 出血"
+    "title": "出血"
    },
    {
     "key": "dpi",
-    "title": "工具C DPI"
+    "title": "DPI"
    },
    {
     "key": "fold",
-    "title": "工具D 折页"
+    "title": "折页"
    },
    {
     "key": "sheet",
-    "title": "工具E 开数印张"
+    "title": "开数印张"
    },
    {
     "key": "qty",
-    "title": "工具F 印量与成本估算"
+    "title": "印量与成本估算"
    }
   ]
  },
@@ -10333,27 +10333,27 @@
   "subapps": [
    {
     "key": "element",
-    "title": "工具A 元素速查"
+    "title": "元素速查"
    },
    {
     "key": "molar",
-    "title": "工具B 摩尔质量与物质的量"
+    "title": "摩尔质量与物质的量"
    },
    {
     "key": "solution",
-    "title": "工具C 溶液浓度换算"
+    "title": "溶液浓度换算"
    },
    {
     "key": "gas",
-    "title": "工具D 气体定律与分压换算"
+    "title": "气体定律与分压换算"
    },
    {
     "key": "ph",
-    "title": "工具E pH 与缓冲溶液"
+    "title": "pH 与缓冲溶液"
    },
    {
     "key": "dilute",
-    "title": "工具F 稀释与配液计算"
+    "title": "稀释与配液计算"
    }
   ]
  },
@@ -10369,27 +10369,27 @@
   "subapps": [
    {
     "key": "temp",
-    "title": "工具A 色温与灯泡"
+    "title": "色温与灯泡"
    },
    {
     "key": "lux",
-    "title": "工具B 照度与灯位"
+    "title": "照度与灯位"
    },
    {
     "key": "cri",
-    "title": "工具C 显色与护眼"
+    "title": "显色与护眼"
    },
    {
     "key": "layout",
-    "title": "工具D 灯位与回路规划"
+    "title": "灯位与回路规划"
    },
    {
     "key": "watt",
-    "title": "工具E 照明功率与电费"
+    "title": "照明功率与电费"
    },
    {
     "key": "plan",
-    "title": "工具F 灯具数量与布灯间距"
+    "title": "灯具数量与布灯间距"
    }
   ]
  },
@@ -10405,27 +10405,27 @@
   "subapps": [
    {
     "key": "size",
-    "title": "工具A 轮胎规格解读"
+    "title": "轮胎规格解读"
    },
    {
     "key": "upgrade",
-    "title": "工具B 轮毂升级适配"
+    "title": "轮毂升级适配"
    },
    {
     "key": "pressure",
-    "title": "工具C 胎压与载重"
+    "title": "胎压与载重"
    },
    {
     "key": "wear",
-    "title": "工具D 轮胎磨损与更换周期"
+    "title": "轮胎磨损与更换周期"
    },
    {
     "key": "circumference",
-    "title": "工具E 轮胎周长与转数"
+    "title": "轮胎周长与转数"
    },
    {
     "key": "speedo",
-    "title": "工具F 速度表误差换算"
+    "title": "速度表误差换算"
    }
   ]
  },
@@ -10461,7 +10461,7 @@
    },
    {
     "key": "overage",
-    "title": "工具F 流量超标估算"
+    "title": "流量超标估算"
    }
   ]
  },
@@ -10477,27 +10477,27 @@
   "subapps": [
    {
     "key": "volume",
-    "title": "工具A 鱼缸容积与水量"
+    "title": "鱼缸容积与水量"
    },
    {
     "key": "water",
-    "title": "工具B 换水比例估算"
+    "title": "换水比例估算"
    },
    {
     "key": "heater",
-    "title": "工具C 加热棒功率与电费"
+    "title": "加热棒功率与电费"
    },
    {
     "key": "plant",
-    "title": "工具D 水草与照明时长"
+    "title": "水草与照明时长"
    },
    {
     "key": "change",
-    "title": "工具E 换水排程"
+    "title": "换水排程"
    },
    {
     "key": "cycle",
-    "title": "工具F 开缸与养水周期"
+    "title": "开缸与养水周期"
    }
   ]
  },
@@ -10619,27 +10619,27 @@
   "subapps": [
    {
     "key": "gear",
-    "title": "工具A 装备清单与预算"
+    "title": "装备清单与预算"
    },
    {
     "key": "site",
-    "title": "工具B 营地费用与人均"
+    "title": "营地费用与人均"
    },
    {
     "key": "water",
-    "title": "工具C 用水用电与食材"
+    "title": "用水用电与食材"
    },
    {
     "key": "pack",
-    "title": "工具D 装载与打包清单"
+    "title": "装载与打包清单"
    },
    {
     "key": "route",
-    "title": "工具E 往返路程油耗"
+    "title": "往返路程油耗"
    },
    {
     "key": "fire",
-    "title": "工具F 营火与炊具燃料"
+    "title": "营火与炊具燃料"
    }
   ]
  },
@@ -10691,27 +10691,27 @@
   "subapps": [
    {
     "key": "moon",
-    "title": "工具A 月相与观星时机"
+    "title": "月相与观星时机"
    },
    {
     "key": "limit",
-    "title": "工具B 极限星等与望远镜"
+    "title": "极限星等与望远镜"
    },
    {
     "key": "site",
-    "title": "工具C 观星地点与光害"
+    "title": "观星地点与光害"
    },
    {
     "key": "target",
-    "title": "工具D 天体观测清单"
+    "title": "天体观测清单"
    },
    {
     "key": "plan",
-    "title": "工具E 观测计划"
+    "title": "观测计划"
    },
    {
     "key": "constellation",
-    "title": "工具F 星座识别与星图"
+    "title": "星座识别与星图"
    }
   ]
  },
@@ -10762,27 +10762,27 @@
   "subapps": [
    {
     "key": "vocab",
-    "title": "工具A 词汇量与等级对照"
+    "title": "词汇量与等级对照"
    },
    {
     "key": "plan",
-    "title": "工具B 学习时间规划"
+    "title": "学习时间规划"
    },
    {
     "key": "review",
-    "title": "工具C 记忆曲线与复习量"
+    "title": "记忆曲线与复习量"
    },
    {
     "key": "exam",
-    "title": "工具D 考试分数对照"
+    "title": "考试分数对照"
    },
    {
     "key": "phrase",
-    "title": "工具E 常用短语练习"
+    "title": "常用短语练习"
    },
    {
     "key": "daily",
-    "title": "工具F 每日学习时长分配"
+    "title": "每日学习时长分配"
    }
   ]
  },
@@ -10798,27 +10798,27 @@
   "subapps": [
    {
     "key": "score",
-    "title": "工具A 多人计分板"
+    "title": "多人计分板"
    },
    {
     "key": "setup",
-    "title": "工具B 开局配置推荐"
+    "title": "开局配置推荐"
    },
    {
     "key": "rules",
-    "title": "工具C 常见桌游规则速查"
+    "title": "常见桌游规则速查"
    },
    {
     "key": "timer",
-    "title": "工具D 回合计时与时长控制"
+    "title": "回合计时与时长控制"
    },
    {
     "key": "roles",
-    "title": "工具E 身份局配置"
+    "title": "身份局配置"
    },
    {
     "key": "odds",
-    "title": "工具F 牌类胜负概率"
+    "title": "牌类胜负概率"
    }
   ]
  },
@@ -10834,27 +10834,27 @@
   "subapps": [
    {
     "key": "cost",
-    "title": "工具A 费用拆解"
+    "title": "费用拆解"
    },
    {
     "key": "hours",
-    "title": "工具B 学时与进度"
+    "title": "学时与进度"
    },
    {
     "key": "exam",
-    "title": "工具C 科目要点"
+    "title": "科目要点"
    },
    {
     "key": "retake",
-    "title": "工具D 补考预算"
+    "title": "补考预算"
    },
    {
     "key": "timeline",
-    "title": "工具E 拿证规划"
+    "title": "拿证规划"
    },
    {
     "key": "booking",
-    "title": "工具F 预约与考场策略"
+    "title": "预约与考场策略"
    }
   ]
  },
@@ -10870,27 +10870,27 @@
   "subapps": [
    {
     "key": "line",
-    "title": "工具A 网线线序"
+    "title": "网线线序"
    },
    {
     "key": "speed",
-    "title": "工具B 速率换算"
+    "title": "速率换算"
    },
    {
     "key": "cover",
-    "title": "工具C 覆盖信道"
+    "title": "覆盖信道"
    },
    {
     "key": "mesh",
-    "title": "工具D 组网方案"
+    "title": "组网方案"
    },
    {
     "key": "dlestim",
-    "title": "工具E 下载时间估算"
+    "title": "下载时间估算"
    },
    {
     "key": "placement",
-    "title": "工具F 光猫与路由摆放"
+    "title": "光猫与路由摆放"
    }
   ]
  },
@@ -10906,27 +10906,27 @@
   "subapps": [
    {
     "key": "grab",
-    "title": "工具A 扶手与坡道"
+    "title": "扶手与坡道"
    },
    {
     "key": "bath",
-    "title": "工具B 卫浴防滑"
+    "title": "卫浴防滑"
    },
    {
     "key": "light",
-    "title": "工具C 夜灯与开关"
+    "title": "夜灯与开关"
    },
    {
     "key": "budget",
-    "title": "工具D 改造预算"
+    "title": "改造预算"
    },
    {
     "key": "slip",
-    "title": "工具E 防滑门槛"
+    "title": "防滑门槛"
    },
    {
     "key": "sequence",
-    "title": "工具F 改造施工顺序与验收"
+    "title": "改造施工顺序与验收"
    }
   ]
  },
@@ -10942,27 +10942,27 @@
   "subapps": [
    {
     "key": "deep",
-    "title": "工具A 开荒保洁"
+    "title": "开荒保洁"
    },
    {
     "key": "daily",
-    "title": "工具B 日常保洁"
+    "title": "日常保洁"
    },
    {
     "key": "appliance",
-    "title": "工具C 家电清洗"
+    "title": "家电清洗"
    },
    {
     "key": "window",
-    "title": "工具D 玻璃清洗"
+    "title": "玻璃清洗"
    },
    {
     "key": "materials",
-    "title": "工具E 保洁耗材成本"
+    "title": "保洁耗材成本"
    },
    {
     "key": "inspect",
-    "title": "工具F 保洁验收清单"
+    "title": "保洁验收清单"
    }
   ]
  },
@@ -10978,27 +10978,27 @@
   "subapps": [
    {
     "key": "sample",
-    "title": "工具A 样本量与置信区间"
+    "title": "样本量与置信区间"
    },
    {
     "key": "ab",
-    "title": "工具B A/B 显著性"
+    "title": "A/B 显著性"
    },
    {
     "key": "stat",
-    "title": "工具C 描述统计与离散度"
+    "title": "描述统计与离散度"
    },
    {
     "key": "correlation",
-    "title": "工具D 相关性"
+    "title": "相关性"
    },
    {
     "key": "quartile",
-    "title": "工具E 四分位距"
+    "title": "四分位距"
    },
    {
     "key": "proportion",
-    "title": "工具F 比例与误差区间"
+    "title": "比例与误差区间"
    }
   ]
  },
@@ -11014,27 +11014,27 @@
   "subapps": [
    {
     "key": "resort",
-    "title": "工具A 雪场费用与雪票预算"
+    "title": "雪场费用与雪票预算"
    },
    {
     "key": "gear",
-    "title": "工具B 装备选购与尺码"
+    "title": "装备选购与尺码"
    },
    {
     "key": "slope",
-    "title": "工具C 雪道难度与安全"
+    "title": "雪道难度与安全"
    },
    {
     "key": "rental",
-    "title": "工具D 租赁与保险预算"
+    "title": "租赁与保险预算"
    },
    {
     "key": "lift",
-    "title": "工具E 缆车与雪票组合"
+    "title": "缆车与雪票组合"
    },
    {
     "key": "layers",
-    "title": "工具F 雪镜与分层穿衣"
+    "title": "雪镜与分层穿衣"
    }
   ]
  },
@@ -11050,27 +11050,27 @@
   "subapps": [
    {
     "key": "cost",
-    "title": "工具A 球场费用"
+    "title": "球场费用"
    },
    {
     "key": "gear",
-    "title": "工具B 球杆与握把"
+    "title": "球杆与握把"
    },
    {
     "key": "rules",
-    "title": "工具C 规则与差点"
+    "title": "规则与差点"
    },
    {
     "key": "etiquette",
-    "title": "工具D 下场礼仪"
+    "title": "下场礼仪"
    },
    {
     "key": "practice",
-    "title": "工具E 练习场计划与进度"
+    "title": "练习场计划与进度"
    },
    {
     "key": "tee",
-    "title": "工具F 开球台与球位选择"
+    "title": "开球台与球位选择"
    }
   ]
  },
@@ -11086,27 +11086,27 @@
   "subapps": [
    {
     "key": "meal",
-    "title": "工具A 月子餐热量与营养配比"
+    "title": "月子餐热量与营养配比"
    },
    {
     "key": "care",
-    "title": "工具B 月嫂与月子期花销预算"
+    "title": "月嫂与月子期花销预算"
    },
    {
     "key": "recover",
-    "title": "工具C 产后恢复与复查节点"
+    "title": "产后恢复与复查节点"
    },
    {
     "key": "nanny",
-    "title": "工具D 月嫂要点"
+    "title": "月嫂要点"
    },
    {
     "key": "grocery",
-    "title": "工具E 月子餐采购量"
+    "title": "月子餐采购量"
    },
    {
     "key": "shopping",
-    "title": "工具F 月子餐采购清单"
+    "title": "月子餐采购清单"
    }
   ]
  },
@@ -11122,27 +11122,27 @@
   "subapps": [
    {
     "key": "fee",
-    "title": "工具A 物业费与公摊核算"
+    "title": "物业费与公摊核算"
    },
    {
     "key": "noise",
-    "title": "工具B 邻里噪声与纠纷处理"
+    "title": "邻里噪声与纠纷处理"
    },
    {
     "key": "rights",
-    "title": "工具C 业主维权流程指引"
+    "title": "业主维权流程指引"
    },
    {
     "key": "repair",
-    "title": "工具D 报修基金"
+    "title": "报修基金"
    },
    {
     "key": "parking",
-    "title": "工具E 车位与停车费"
+    "title": "车位与停车费"
    },
    {
     "key": "renovation",
-    "title": "工具F 装修报备与噪音时段"
+    "title": "装修报备与噪音时段"
    }
   ]
  },
@@ -11158,27 +11158,27 @@
   "subapps": [
    {
     "key": "cost",
-    "title": "工具A 开团成本分摊核算"
+    "title": "开团成本分摊核算"
    },
    {
     "key": "pickup",
-    "title": "工具B 自提点排班清单"
+    "title": "自提点排班清单"
    },
    {
     "key": "commission",
-    "title": "工具C 团长佣金对账"
+    "title": "团长佣金对账"
    },
    {
     "key": "settle",
-    "title": "工具D 售后结算"
+    "title": "售后结算"
    },
    {
     "key": "margin",
-    "title": "工具E 毛利与盈亏平衡"
+    "title": "毛利与盈亏平衡"
    },
    {
     "key": "recruit",
-    "title": "工具F 团长招募与培训"
+    "title": "团长招募与培训"
    }
   ]
  },
@@ -11194,27 +11194,27 @@
   "subapps": [
    {
     "key": "rubber",
-    "title": "工具A 器材搭配"
+    "title": "器材搭配"
    },
    {
     "key": "spin",
-    "title": "工具B 旋转术语"
+    "title": "旋转术语"
    },
    {
     "key": "score",
-    "title": "工具C 赛制计分"
+    "title": "赛制计分"
    },
    {
     "key": "train",
-    "title": "工具D 训练计划"
+    "title": "训练计划"
    },
    {
     "key": "rally",
-    "title": "工具E 回合统计"
+    "title": "回合统计"
    },
    {
     "key": "serve",
-    "title": "工具F 发球与接发球"
+    "title": "发球与接发球"
    }
   ]
  },
@@ -11230,27 +11230,27 @@
   "subapps": [
    {
     "key": "formaldehyde",
-    "title": "工具A 甲醛浓度与国标判定"
+    "title": "甲醛浓度与国标判定"
    },
    {
     "key": "cadr",
-    "title": "工具B 净化器适用面积"
+    "title": "净化器适用面积"
    },
    {
     "key": "comfort",
-    "title": "工具C 温湿度与体感舒适度"
+    "title": "温湿度与体感舒适度"
    },
    {
     "key": "vent",
-    "title": "工具D 新风与换气"
+    "title": "新风与换气"
    },
    {
     "key": "mold",
-    "title": "工具E 霉菌与除湿"
+    "title": "霉菌与除湿"
    },
    {
     "key": "movein",
-    "title": "工具F 装修后入住时间"
+    "title": "装修后入住时间"
    }
   ]
  },
@@ -11265,27 +11265,27 @@
   "subapps": [
    {
     "key": "fund",
-    "title": "工具A 公积金贷款额度"
+    "title": "公积金贷款额度"
    },
    {
     "key": "medical",
-    "title": "工具B 医保报销自付"
+    "title": "医保报销自付"
    },
    {
     "key": "maternity",
-    "title": "工具C 生育津贴与产假工资"
+    "title": "生育津贴与产假工资"
    },
    {
     "key": "unemploy",
-    "title": "工具D 失业金测算"
+    "title": "失业金测算"
    },
    {
     "key": "withdraw",
-    "title": "工具E 公积金提取"
+    "title": "公积金提取"
    },
    {
     "key": "tax",
-    "title": "工具F 个税与专项扣除"
+    "title": "个税与专项扣除"
    }
   ]
  },
@@ -11301,27 +11301,27 @@
   "subapps": [
    {
     "key": "sort",
-    "title": "工具A 垃圾分类速查"
+    "title": "垃圾分类速查"
    },
    {
     "key": "price",
-    "title": "工具B 可回收物估价"
+    "title": "可回收物估价"
    },
    {
     "key": "bulky",
-    "title": "工具C 大件垃圾清运"
+    "title": "大件垃圾清运"
    },
    {
     "key": "compost",
-    "title": "工具D 厨余堆肥"
+    "title": "厨余堆肥"
    },
    {
     "key": "bucket",
-    "title": "工具E 分类桶配置"
+    "title": "分类桶配置"
    },
    {
     "key": "schedule",
-    "title": "工具F 投放时间与收运表"
+    "title": "投放时间与收运表"
    }
   ]
  },
@@ -11337,27 +11337,27 @@
   "subapps": [
    {
     "key": "gap",
-    "title": "工具A 养老金缺口"
+    "title": "养老金缺口"
    },
    {
     "key": "pension",
-    "title": "工具B 退休金估算"
+    "title": "退休金估算"
    },
    {
     "key": "fire",
-    "title": "工具C 提前退休测算"
+    "title": "提前退休测算"
    },
    {
     "key": "care",
-    "title": "工具D 护理费用测算"
+    "title": "护理费用测算"
    },
    {
     "key": "medgap",
-    "title": "工具E 退休医疗缺口"
+    "title": "退休医疗缺口"
    },
    {
     "key": "spend",
-    "title": "工具F 退休后月度支出"
+    "title": "退休后月度支出"
    }
   ]
  },
@@ -11373,27 +11373,27 @@
   "subapps": [
    {
     "key": "hardness",
-    "title": "工具A 水质硬度判定"
+    "title": "水质硬度判定"
    },
    {
     "key": "filter",
-    "title": "工具B 滤芯成本测算"
+    "title": "滤芯成本测算"
    },
    {
     "key": "softener",
-    "title": "工具C 软水盐耗估算"
+    "title": "软水盐耗估算"
    },
    {
     "key": "usage",
-    "title": "工具D 用水量与水费"
+    "title": "用水量与水费"
    },
    {
     "key": "leak",
-    "title": "工具E 漏水检测与损耗"
+    "title": "漏水检测与损耗"
    },
    {
     "key": "tier",
-    "title": "工具F 水费与阶梯计价"
+    "title": "水费与阶梯计价"
    }
   ]
  },
@@ -11409,27 +11409,27 @@
   "subapps": [
    {
     "key": "kana",
-    "title": "工具A 五十音速查"
+    "title": "五十音速查"
    },
    {
     "key": "romaji",
-    "title": "工具B 假名罗马音互转"
+    "title": "假名罗马音互转"
    },
    {
     "key": "dictation",
-    "title": "工具C 假名听写练习"
+    "title": "假名听写练习"
    },
    {
     "key": "counter",
-    "title": "工具D 数量词与助数词"
+    "title": "数量词与助数词"
    },
    {
     "key": "verb",
-    "title": "工具E 动词变形"
+    "title": "动词变形"
    },
    {
     "key": "greeting",
-    "title": "工具F 常用寒暄与敬语"
+    "title": "常用寒暄与敬语"
    }
   ]
  },
@@ -11445,27 +11445,27 @@
   "subapps": [
    {
     "key": "gift",
-    "title": "工具A 份子钱参考"
+    "title": "份子钱参考"
    },
    {
     "key": "banquet",
-    "title": "工具B 婚礼酒席预算"
+    "title": "婚礼酒席预算"
    },
    {
     "key": "ledger",
-    "title": "工具C 红包记账回礼"
+    "title": "红包记账回礼"
    },
    {
     "key": "annual",
-    "title": "工具D 年度人情预算"
+    "title": "年度人情预算"
    },
    {
     "key": "seat",
-    "title": "工具E 婚宴席位编排"
+    "title": "婚宴席位编排"
    },
    {
     "key": "present",
-    "title": "工具F 节日送礼预算"
+    "title": "节日送礼预算"
    }
   ]
  },
@@ -11481,27 +11481,27 @@
   "subapps": [
    {
     "key": "skate",
-    "title": "工具A 滑板尺寸与桥距"
+    "title": "滑板尺寸与桥距"
    },
    {
     "key": "frisbee",
-    "title": "工具B 飞盘距离与盘型"
+    "title": "飞盘距离与盘型"
    },
    {
     "key": "archery",
-    "title": "工具C 射箭磅数与箭长"
+    "title": "射箭磅数与箭长"
    },
    {
     "key": "target",
-    "title": "工具D 射箭靶纸与记分"
+    "title": "射箭靶纸与记分"
    },
    {
     "key": "safety",
-    "title": "工具E 护具与场地安全"
+    "title": "护具与场地安全"
    },
    {
     "key": "maintain",
-    "title": "工具F 器材保养与更换"
+    "title": "器材保养与更换"
    }
   ]
  },
@@ -11517,27 +11517,27 @@
   "subapps": [
    {
     "key": "critical",
-    "title": "工具A 重疾保额需求"
+    "title": "重疾保额需求"
    },
    {
     "key": "life",
-    "title": "工具B 寿险保额需求"
+    "title": "寿险保额需求"
    },
    {
     "key": "payment",
-    "title": "工具C 年缴月缴对比"
+    "title": "年缴月缴对比"
    },
    {
     "key": "claim",
-    "title": "工具D 理赔材料与时效"
+    "title": "理赔材料与时效"
    },
    {
     "key": "premium",
-    "title": "工具E 保费占比"
+    "title": "保费占比"
    },
    {
     "key": "cashvalue",
-    "title": "工具F 保单现金价值估算"
+    "title": "保单现金价值估算"
    }
   ]
  },
@@ -11553,23 +11553,23 @@
   "subapps": [
    {
     "key": "vaccine",
-    "title": "工具A 疫苗时间表"
+    "title": "疫苗时间表"
    },
    {
     "key": "diaper",
-    "title": "工具B 尿布开销"
+    "title": "尿布开销"
    },
    {
     "key": "size",
-    "title": "工具C 衣物尺码"
+    "title": "衣物尺码"
    },
    {
     "key": "feeding",
-    "title": "工具D 辅食添加与喂养量"
+    "title": "辅食添加与喂养量"
    },
    {
     "key": "formula",
-    "title": "工具E 奶粉冲调比例"
+    "title": "奶粉冲调比例"
    }
   ]
  },
@@ -11585,27 +11585,27 @@
   "subapps": [
    {
     "key": "transfer",
-    "title": "工具A 换乘时间"
+    "title": "换乘时间"
    },
    {
     "key": "fare",
-    "title": "工具B 票价与月票"
+    "title": "票价与月票"
    },
    {
     "key": "night",
-    "title": "工具C 末班车"
+    "title": "末班车"
    },
    {
     "key": "walk",
-    "title": "工具D 换乘步行时间"
+    "title": "换乘步行时间"
    },
    {
     "key": "access",
-    "title": "工具E 无障碍换乘"
+    "title": "无障碍换乘"
    },
    {
     "key": "bike",
-    "title": "工具F 共享单车接驳成本"
+    "title": "共享单车接驳成本"
    }
   ]
  },
@@ -11621,23 +11621,23 @@
   "subapps": [
    {
     "key": "fare",
-    "title": "工具A 改签费"
+    "title": "改签费"
    },
    {
     "key": "station",
-    "title": "工具B 进站时间"
+    "title": "进站时间"
    },
    {
     "key": "luggage",
-    "title": "工具C 行李规格"
+    "title": "行李规格"
    },
    {
     "key": "childfare",
-    "title": "工具D 儿童票与优惠"
+    "title": "儿童票与优惠"
    },
    {
     "key": "seat",
-    "title": "工具E 座位选择与腿部空间"
+    "title": "座位选择与腿部空间"
    }
   ]
  },
@@ -11653,23 +11653,23 @@
   "subapps": [
    {
     "key": "trim",
-    "title": "工具A 剪发预算"
+    "title": "剪发预算"
    },
    {
     "key": "dye",
-    "title": "工具B 染发成本"
+    "title": "染发成本"
    },
    {
     "key": "shampoo",
-    "title": "工具C 洗发水补货"
+    "title": "洗发水补货"
    },
    {
     "key": "perm",
-    "title": "工具D 烫发护理预算"
+    "title": "烫发护理预算"
    },
    {
     "key": "product",
-    "title": "工具E 造型产品用量"
+    "title": "造型产品用量"
    }
   ]
  },
@@ -11685,27 +11685,27 @@
   "subapps": [
    {
     "key": "fuel",
-    "title": "工具A 每公里成本"
+    "title": "每公里成本"
    },
    {
     "key": "compare",
-    "title": "工具B 油电对比"
+    "title": "油电对比"
    },
    {
     "key": "charger",
-    "title": "工具C 充电桩回本"
+    "title": "充电桩回本"
    },
    {
     "key": "power",
-    "title": "工具D 充电桩功率与时间"
+    "title": "充电桩功率与时间"
    },
    {
     "key": "route",
-    "title": "工具E 长途补能规划"
+    "title": "长途补能规划"
    },
    {
     "key": "maint",
-    "title": "工具F 保养折旧每公里"
+    "title": "保养折旧每公里"
    }
   ]
  },
@@ -11721,23 +11721,23 @@
   "subapps": [
    {
     "key": "airfryer",
-    "title": "工具A 空炸时间换算"
+    "title": "空炸时间换算"
    },
    {
     "key": "microwave",
-    "title": "工具B 微波加热时长"
+    "title": "微波加热时长"
    },
    {
     "key": "thaw",
-    "title": "工具C 解冻时长"
+    "title": "解冻时长"
    },
    {
     "key": "oven",
-    "title": "工具D 烤箱温度换算"
+    "title": "烤箱温度换算"
    },
    {
     "key": "reheat",
-    "title": "工具E 剩菜复热时间"
+    "title": "剩菜复热时间"
    }
   ]
  },
@@ -11753,23 +11753,23 @@
   "subapps": [
    {
     "key": "heating",
-    "title": "工具A 供暖费核算"
+    "title": "供暖费核算"
    },
    {
     "key": "heater",
-    "title": "工具B 电暖器电费"
+    "title": "电暖器电费"
    },
    {
     "key": "compare",
-    "title": "工具C 取暖方式对比"
+    "title": "取暖方式对比"
    },
    {
     "key": "insulation",
-    "title": "工具D 门窗保温损耗"
+    "title": "门窗保温损耗"
    },
    {
     "key": "radiator",
-    "title": "工具E 暖气片片数估算"
+    "title": "暖气片片数估算"
    }
   ]
  },
@@ -11785,27 +11785,27 @@
   "subapps": [
    {
     "key": "capacity",
-    "title": "工具A 容量与餐具量"
+    "title": "容量与餐具量"
    },
    {
     "key": "supply",
-    "title": "工具B 耗材月成本"
+    "title": "耗材月成本"
    },
    {
     "key": "runtime",
-    "title": "工具C 洗涤水电费"
+    "title": "洗涤水电费"
    },
    {
     "key": "layout",
-    "title": "工具D 摆放与装载"
+    "title": "摆放与装载"
    },
    {
     "key": "drying",
-    "title": "工具E 烘干与储存"
+    "title": "烘干与储存"
    },
    {
     "key": "prewash",
-    "title": "工具F 预冲洗与预处理"
+    "title": "预冲洗与预处理"
    }
   ]
  },
@@ -11821,23 +11821,23 @@
   "subapps": [
    {
     "key": "suit",
-    "title": "工具A 西装号型"
+    "title": "西装号型"
    },
    {
     "key": "shirt",
-    "title": "工具B 衬衫尺码"
+    "title": "衬衫尺码"
    },
    {
     "key": "tie",
-    "title": "工具C 领带尺寸与打法"
+    "title": "领带尺寸与打法"
    },
    {
     "key": "outer",
-    "title": "工具D 外套马甲尺码"
+    "title": "外套马甲尺码"
    },
    {
     "key": "shoe",
-    "title": "工具E 皮鞋尺码对照"
+    "title": "皮鞋尺码对照"
    }
   ]
  },
@@ -11853,23 +11853,23 @@
   "subapps": [
    {
     "key": "boxes",
-    "title": "工具A 纸箱数量与箱型"
+    "title": "纸箱数量与箱型"
    },
    {
     "key": "supply",
-    "title": "工具B 打包耗材用量"
+    "title": "打包耗材用量"
    },
    {
     "key": "labor",
-    "title": "工具C 打包工时与人工"
+    "title": "打包工时与人工"
    },
    {
     "key": "tape",
-    "title": "工具D 胶带缓冲用量"
+    "title": "胶带缓冲用量"
    },
    {
     "key": "volume",
-    "title": "工具E 体积重与计费重"
+    "title": "体积重与计费重"
    }
   ]
  },
@@ -11885,27 +11885,27 @@
   "subapps": [
    {
     "key": "travel",
-    "title": "工具A 宠物托运费用"
+    "title": "宠物托运费用"
    },
    {
     "key": "boarding",
-    "title": "工具B 寄养费用与选择"
+    "title": "寄养费用与选择"
    },
    {
     "key": "prepare",
-    "title": "工具C 出行准备清单"
+    "title": "出行准备清单"
    },
    {
     "key": "crate",
-    "title": "工具D 航空箱尺寸"
+    "title": "航空箱尺寸"
    },
    {
     "key": "heat",
-    "title": "工具E 夏季车内防暑"
+    "title": "夏季车内防暑"
    },
    {
     "key": "train",
-    "title": "工具F 出行适应训练"
+    "title": "出行适应训练"
    }
   ]
  },
@@ -11921,23 +11921,23 @@
   "subapps": [
    {
     "key": "ac",
-    "title": "工具A 空调清洗费用与周期"
+    "title": "空调清洗费用与周期"
    },
    {
     "key": "washer",
-    "title": "工具B 洗衣机清洗与耗材"
+    "title": "洗衣机清洗与耗材"
    },
    {
     "key": "fridge",
-    "title": "工具C 冰箱清洁与除味"
+    "title": "冰箱清洁与除味"
    },
    {
     "key": "hood",
-    "title": "工具D 油烟机清洗"
+    "title": "油烟机清洗"
    },
    {
     "key": "purifier",
-    "title": "工具E 净水器滤芯周期"
+    "title": "净水器滤芯周期"
    }
   ]
  },
@@ -11953,27 +11953,27 @@
   "subapps": [
    {
     "key": "cbc",
-    "title": "工具A 血常规指标解读"
+    "title": "血常规指标解读"
    },
    {
     "key": "liver",
-    "title": "工具B 肝肾功能解读"
+    "title": "肝肾功能解读"
    },
    {
     "key": "lipid",
-    "title": "工具C 血脂血糖解读"
+    "title": "血脂血糖解读"
    },
    {
     "key": "urine",
-    "title": "工具D 尿常规解读"
+    "title": "尿常规解读"
    },
    {
     "key": "coag",
-    "title": "工具E 凝血炎症解读"
+    "title": "凝血炎症解读"
    },
    {
     "key": "vitamin",
-    "title": "工具F 维生素微量元素"
+    "title": "维生素微量元素"
    }
   ]
  },
@@ -11989,23 +11989,23 @@
   "subapps": [
    {
     "key": "pan",
-    "title": "工具A 锅具尺寸与材质"
+    "title": "锅具尺寸与材质"
    },
    {
     "key": "knife",
-    "title": "工具B 刀具配置与磨刀角度"
+    "title": "刀具配置与磨刀角度"
    },
    {
     "key": "board",
-    "title": "工具C 砧板尺寸与材质"
+    "title": "砧板尺寸与材质"
    },
    {
     "key": "lid",
-    "title": "工具D 锅盖蒸屉适配"
+    "title": "锅盖蒸屉适配"
    },
    {
     "key": "capacity",
-    "title": "工具E 锅具容量与份量"
+    "title": "锅具容量与份量"
    }
   ]
  },
@@ -12021,27 +12021,27 @@
   "subapps": [
    {
     "key": "mattress",
-    "title": "工具A 床垫尺寸与硬度"
+    "title": "床垫尺寸与硬度"
    },
    {
     "key": "pillow",
-    "title": "工具B 枕头高度与材质"
+    "title": "枕头高度与材质"
    },
    {
     "key": "bedding",
-    "title": "工具C 床品尺寸与换洗"
+    "title": "床品尺寸与换洗"
    },
    {
     "key": "protector",
-    "title": "工具D 床垫保护清洁"
+    "title": "床垫保护清洁"
    },
    {
     "key": "trial",
-    "title": "工具E 试睡与退换"
+    "title": "试睡与退换"
    },
    {
     "key": "clean",
-    "title": "工具F 床品除螨洗护"
+    "title": "床品除螨洗护"
    }
   ]
  },
@@ -12057,27 +12057,27 @@
   "subapps": [
    {
     "key": "shower",
-    "title": "工具A 花洒与水压适配"
+    "title": "花洒与水压适配"
    },
    {
     "key": "faucet",
-    "title": "工具B 水龙头与角阀规格"
+    "title": "水龙头与角阀规格"
    },
    {
     "key": "drain",
-    "title": "工具C 地漏与防臭选择"
+    "title": "地漏与防臭选择"
    },
    {
     "key": "storage",
-    "title": "工具D 浴室收纳尺寸"
+    "title": "浴室收纳尺寸"
    },
    {
     "key": "filter",
-    "title": "工具E 除垢与滤芯"
+    "title": "除垢与滤芯"
    },
    {
     "key": "safety",
-    "title": "工具F 防滑与扶手"
+    "title": "防滑与扶手"
    }
   ]
  },
@@ -12093,27 +12093,27 @@
   "subapps": [
    {
     "key": "pot",
-    "title": "工具A 花盆尺寸与材质"
+    "title": "花盆尺寸与材质"
    },
    {
     "key": "soil",
-    "title": "工具B 土壤配比"
+    "title": "土壤配比"
    },
    {
     "key": "fertilize",
-    "title": "工具C 施肥与浇水周期"
+    "title": "施肥与浇水周期"
    },
    {
     "key": "repot",
-    "title": "工具D 换盆与修根"
+    "title": "换盆与修根"
    },
    {
     "key": "water",
-    "title": "工具E 浇水频率计算"
+    "title": "浇水频率计算"
    },
    {
     "key": "pest",
-    "title": "工具F 病虫害处理"
+    "title": "病虫害处理"
    }
   ]
  },
@@ -12129,23 +12129,23 @@
   "subapps": [
    {
     "key": "auto",
-    "title": "工具A 车险保费与险种组合"
+    "title": "车险保费与险种组合"
    },
    {
     "key": "claim",
-    "title": "工具B 出险理赔流程与材料"
+    "title": "出险理赔流程与材料"
    },
    {
     "key": "ncd",
-    "title": "工具C 出险决策与次年保费"
+    "title": "出险决策与次年保费"
    },
    {
     "key": "accident",
-    "title": "工具D 事故快处清单"
+    "title": "事故快处清单"
    },
    {
     "key": "deductible",
-    "title": "工具E 出险自付与免赔测算"
+    "title": "出险自付与免赔测算"
    }
   ]
  },
@@ -12161,23 +12161,23 @@
   "subapps": [
    {
     "key": "tile",
-    "title": "工具A 瓷砖数量与损耗"
+    "title": "瓷砖数量与损耗"
    },
    {
     "key": "grout",
-    "title": "工具B 美缝剂用量与颜色"
+    "title": "美缝剂用量与颜色"
    },
    {
     "key": "waterproof",
-    "title": "工具C 防水涂料用量"
+    "title": "防水涂料用量"
    },
    {
     "key": "skirting",
-    "title": "工具D 踢脚线门槛石"
+    "title": "踢脚线门槛石"
    },
    {
     "key": "spacer",
-    "title": "工具E 瓷砖留缝与美缝用量"
+    "title": "瓷砖留缝与美缝用量"
    }
   ]
  },
@@ -12193,27 +12193,27 @@
   "subapps": [
    {
     "key": "ppi",
-    "title": "工具A 分辨率PPI计算"
+    "title": "分辨率PPI计算"
    },
    {
     "key": "hz",
-    "title": "工具B 刷新率与帧率匹配"
+    "title": "刷新率与帧率匹配"
    },
    {
     "key": "size",
-    "title": "工具C 尺寸与视距推荐"
+    "title": "尺寸与视距推荐"
    },
    {
     "key": "color",
-    "title": "工具D 色域与色准"
+    "title": "色域与色准"
    },
    {
     "key": "mount",
-    "title": "工具E 支架与升降桌"
+    "title": "支架与升降桌"
    },
    {
     "key": "calib",
-    "title": "工具F 校色与验收"
+    "title": "校色与验收"
    }
   ]
  },
@@ -12229,27 +12229,27 @@
   "subapps": [
    {
     "key": "token",
-    "title": "工具A Token字数估算"
+    "title": "Token字数估算"
    },
    {
     "key": "context",
-    "title": "工具B 上下文窗口规划"
+    "title": "上下文窗口规划"
    },
    {
     "key": "sampling",
-    "title": "工具C 采样参数与成本"
+    "title": "采样参数与成本"
    },
    {
     "key": "cache",
-    "title": "工具D 提示词缓存"
+    "title": "提示词缓存"
    },
    {
     "key": "eval",
-    "title": "工具E 提示词评测"
+    "title": "提示词评测"
    },
    {
     "key": "guard",
-    "title": "工具F 提示词安全防护"
+    "title": "提示词安全防护"
    }
   ]
  },
@@ -12265,23 +12265,23 @@
   "subapps": [
    {
     "key": "dpi",
-    "title": "工具A DPI与灵敏度换算"
+    "title": "DPI与灵敏度换算"
    },
    {
     "key": "polling",
-    "title": "工具B 回报率与延迟"
+    "title": "回报率与延迟"
    },
    {
     "key": "layout",
-    "title": "工具C 键位布局与手型"
+    "title": "键位布局与手型"
    },
    {
     "key": "macro",
-    "title": "工具D 宏与按键冲突"
+    "title": "宏与按键冲突"
    },
    {
     "key": "edpi",
-    "title": "工具E eDPI 换算"
+    "title": "eDPI 换算"
    }
   ]
  },
@@ -12297,27 +12297,27 @@
   "subapps": [
    {
     "key": "size",
-    "title": "工具A 窗帘尺寸与褶皱"
+    "title": "窗帘尺寸与褶皱"
    },
    {
     "key": "fabric",
-    "title": "工具B 布料用量与预算"
+    "title": "布料用量与预算"
    },
    {
     "key": "track",
-    "title": "工具C 轨道罗马杆与安装"
+    "title": "轨道罗马杆与安装"
    },
    {
     "key": "care",
-    "title": "工具D 窗帘清洗保养"
+    "title": "窗帘清洗保养"
    },
    {
     "key": "blackout",
-    "title": "工具E 遮光隔热选择"
+    "title": "遮光隔热选择"
    },
    {
     "key": "motor",
-    "title": "工具F 电动窗帘选择"
+    "title": "电动窗帘选择"
    }
   ]
  },
@@ -12333,27 +12333,27 @@
   "subapps": [
    {
     "key": "space",
-    "title": "工具A 沙发与门洞尺寸"
+    "title": "沙发与门洞尺寸"
    },
    {
     "key": "stair",
-    "title": "工具B 柜体与楼梯转角"
+    "title": "柜体与楼梯转角"
    },
    {
     "key": "elevator",
-    "title": "工具C 电梯与入户通道"
+    "title": "电梯与入户通道"
    },
    {
     "key": "carry",
-    "title": "工具D 搬运人数估算"
+    "title": "搬运人数估算"
    },
    {
     "key": "protect",
-    "title": "工具E 搬运防护包装"
+    "title": "搬运防护包装"
    },
    {
     "key": "dispose",
-    "title": "工具F 旧家具处理"
+    "title": "旧家具处理"
    }
   ]
  },
@@ -12369,27 +12369,27 @@
   "subapps": [
    {
     "key": "transfer",
-    "title": "工具A 过户税费"
+    "title": "过户税费"
    },
    {
     "key": "plate",
-    "title": "工具B 上牌与保险"
+    "title": "上牌与保险"
    },
    {
     "key": "move",
-    "title": "工具C 异地迁入"
+    "title": "异地迁入"
    },
    {
     "key": "insurance",
-    "title": "工具D 保险过户退保"
+    "title": "保险过户退保"
    },
    {
     "key": "loan",
-    "title": "工具E 车贷与月供"
+    "title": "车贷与月供"
    },
    {
     "key": "inspect",
-    "title": "工具F 二手车验车"
+    "title": "二手车验车"
    }
   ]
  },
@@ -12405,27 +12405,27 @@
   "subapps": [
    {
     "key": "toll",
-    "title": "工具A 过路费估算"
+    "title": "过路费估算"
    },
    {
     "key": "etc",
-    "title": "工具B ETC 折扣与发票"
+    "title": "ETC 折扣与发票"
    },
    {
     "key": "holiday",
-    "title": "工具C 节假日免费"
+    "title": "节假日免费"
    },
    {
     "key": "rest",
-    "title": "工具D 服务区休息规划"
+    "title": "服务区休息规划"
    },
    {
     "key": "park",
-    "title": "工具E 景区停车接驳"
+    "title": "景区停车接驳"
    },
    {
     "key": "fuel",
-    "title": "工具F 油耗与油费"
+    "title": "油耗与油费"
    }
   ]
  },
@@ -12441,27 +12441,27 @@
   "subapps": [
    {
     "key": "psu",
-    "title": "工具A 电源功率"
+    "title": "电源功率"
    },
    {
     "key": "case",
-    "title": "工具B 机箱尺寸"
+    "title": "机箱尺寸"
    },
    {
     "key": "cooler",
-    "title": "工具C 散热兼容"
+    "title": "散热兼容"
    },
    {
     "key": "upgrade",
-    "title": "工具D 升级瓶颈判断"
+    "title": "升级瓶颈判断"
    },
    {
     "key": "noise",
-    "title": "工具E 噪音与静音配置"
+    "title": "噪音与静音配置"
    },
    {
     "key": "boot",
-    "title": "工具F 开机自检"
+    "title": "开机自检"
    }
   ]
  },
@@ -12477,27 +12477,27 @@
   "subapps": [
    {
     "key": "cost",
-    "title": "工具A 费用预算"
+    "title": "费用预算"
    },
    {
     "key": "timeline",
-    "title": "工具B 申请时间线"
+    "title": "申请时间线"
    },
    {
     "key": "proof",
-    "title": "工具C 资金准备"
+    "title": "资金准备"
    },
    {
     "key": "school",
-    "title": "工具D 选校梯度清单"
+    "title": "选校梯度清单"
    },
    {
     "key": "material",
-    "title": "工具E 申请材料时间"
+    "title": "申请材料时间"
    },
    {
     "key": "pack",
-    "title": "工具F 行前清单行李"
+    "title": "行前清单行李"
    }
   ]
  },
@@ -12513,23 +12513,23 @@
   "subapps": [
    {
     "key": "power",
-    "title": "工具A 待机耗电评估"
+    "title": "待机耗电评估"
    },
    {
     "key": "gateway",
-    "title": "工具B 网关协议"
+    "title": "网关协议"
    },
    {
     "key": "sensor",
-    "title": "工具C 传感器布点"
+    "title": "传感器布点"
    },
    {
     "key": "scene",
-    "title": "工具D 场景联动清单"
+    "title": "场景联动清单"
    },
    {
     "key": "network",
-    "title": "工具E 全屋网络布点"
+    "title": "全屋网络布点"
    }
   ]
  }

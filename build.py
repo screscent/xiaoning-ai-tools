@@ -383,6 +383,13 @@ def seo_desc(a, output):
     return s
 
 
+def sub_title(s):
+    """子工具展示名：去掉历史占位前缀「工具A/B/C…」。"""
+    t = (s.get("title") or "").strip()
+    t = re.sub(r"^工具[A-Z]\s*", "", t).strip()
+    return t or (s.get("key") or "子工具")
+
+
 def tool_page(a, apps):
     c = C.APPS[a["id"]]
     _, hook, w1, w2, w3, inputs, output, example, fq, fa = c
@@ -399,7 +406,7 @@ def tool_page(a, apps):
     subs_section = ""
     if a.get("subapps"):
         subs_html = "".join(
-            f'<li><a href="{esc(target(a))}#/{esc(s["key"])}" rel="noopener">{esc(s["title"])}</a>'
+            f'<li><a href="{esc(target(a))}#/{esc(s["key"])}" rel="noopener">{esc(sub_title(s))}</a>'
             f'<span>直接打开该子工具（hash 深链）</span></li>'
             for s in a["subapps"]
         )
