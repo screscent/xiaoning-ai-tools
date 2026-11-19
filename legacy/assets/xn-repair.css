@@ -1,0 +1,151 @@
+/* 家庭维修与工具速查合集页增强（仅 2q8ftcqqxb 引用）
+ * 1) tab 吸顶 + 当前态；搜索实时计数/空状态
+ * 2) 条目/分区复制按钮命名与触控；必备/建议/可选标签配色
+ * 3) 数字计数徽标、暖色主题与条目层次
+ */
+
+#root {
+  background: linear-gradient(180deg, #fffbeb 0, #fafaf9 340px) !important;
+}
+
+/* ---------- tab ---------- */
+#root .xn-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+  background: rgba(250, 250, 249, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e7e5e4;
+}
+#root .xn-tabs a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+#root .xn-tabs a[aria-current="page"] {
+  background: linear-gradient(135deg, #b45309, #92400e) !important;
+  border-color: #92400e !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px -9px rgba(146, 64, 14, 0.75);
+}
+#root .xn-tabs a:not([aria-current="page"]):hover {
+  background: #fffbeb;
+  color: #92400e;
+}
+
+/* ---------- 搜索 ---------- */
+#root #quick-search {
+  min-height: 42px;
+  font-size: 13.5px !important;
+}
+#root #quick-search:focus {
+  border-color: #d97706 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.14);
+}
+#root .xn-search-count {
+  margin: 6px 2px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #78716c;
+}
+#root .xn-search-count b {
+  color: #b45309;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-empty {
+  margin: 8px 0 0;
+  padding: 14px 16px;
+  border: 1px dashed #fcd34d;
+  border-radius: 12px;
+  background: #fffbeb;
+  color: #92400e;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ---------- 条目 ---------- */
+#root li.group {
+  scroll-margin-top: 64px;
+}
+#root li.group:hover {
+  background: #fffdf5 !important;
+}
+#root .xn-tag {
+  font-size: 10.5px !important;
+  padding: 1px 7px !important;
+  border-radius: 999px;
+  font-weight: 700;
+}
+#root .xn-tag-must {
+  background: #fef2f2 !important;
+  color: #b91c1c !important;
+  border-color: #fecaca !important;
+}
+#root .xn-tag-rec {
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border-color: #bfdbfe !important;
+}
+#root .xn-tag-opt {
+  background: #f5f5f4 !important;
+  color: #57534e !important;
+  border-color: #e7e5e4 !important;
+}
+
+/* ---------- 复制 ---------- */
+#root button.xn-item-copy {
+  min-width: 32px;
+  min-height: 32px;
+  justify-content: center;
+  border-radius: 8px;
+}
+#root button.xn-item-copy:hover {
+  background: #fffbeb !important;
+  color: #b45309 !important;
+}
+#root button.xn-section-copy,
+#root button.xn-copy-all {
+  min-height: 36px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
+  border-radius: 9px;
+}
+#root button.xn-copy-all {
+  min-height: 38px !important;
+}
+
+/* ---------- 计数 ---------- */
+#root .xn-count {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #92400e !important;
+  font-size: 11.5px !important;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 分区标题 ---------- */
+#root h3 {
+  letter-spacing: 0.01em;
+}
+#root h2 {
+  color: #292524;
+}
+
+@media (max-width: 640px) {
+  #root .xn-tabs a { min-height: 44px; font-size: 12.5px; }
+  #root button.xn-item-copy { min-width: 40px; min-height: 40px; }
+  #root button.xn-section-copy,
+  #root button.xn-copy-all { min-height: 44px !important; }
+  #root #quick-search { min-height: 44px; }
+}
