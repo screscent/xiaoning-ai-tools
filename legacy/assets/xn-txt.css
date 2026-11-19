@@ -1,0 +1,48 @@
+/* 文本行去重排序与统计合集页增强（仅 2qes9dqqxb 引用）
+ * 1) 文本域 16px；结果框补 aria
+ * 2) 开关补 role/aria 与点击热区
+ * 3) 工具标签补 aria-current；复制按钮上方当前设置摘要
+ */
+
+#root textarea {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+/* 开关热区 */
+#root .xn-switch {
+  position: relative;
+}
+#root .xn-switch::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border-radius: 999px;
+}
+
+/* 工具标签 */
+#root button[aria-current="true"] {
+  box-shadow: 0 2px 8px rgba(37, 99, 235, .25);
+}
+
+/* 当前设置摘要 */
+#root .xn-setbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0 8px;
+  padding: 9px 12px;
+  border: 1px dashed #c7d2fe;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fbfcff, #eef2ff);
+  font-size: 12.5px;
+  color: #3730a3;
+}
+#root .xn-setbar b {
+  font-weight: 700;
+}
+#root .xn-setlabel {
+  color: #64748b;
+  font-weight: 500;
+}
