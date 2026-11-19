@@ -140,9 +140,60 @@
   accent-color: #4338ca;
 }
 
+/* ---------- 头像输出尺寸 ---------- */
+#root button.xn-size {
+  min-height: 40px;
+  border-color: #e2e0f5 !important;
+  background: #fff !important;
+  color: #3f3a63 !important;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.12s ease;
+}
+#root button.xn-size:hover {
+  border-color: #818cf8 !important;
+  color: #4338ca !important;
+}
+#root button.xn-size[aria-pressed="true"] {
+  background: linear-gradient(135deg, #4338ca, #4f46e5) !important;
+  border-color: #4338ca !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.2);
+}
+#root button.xn-size:focus-visible {
+  outline: 2px solid #4338ca;
+  outline-offset: 2px;
+}
+
+/* ---------- 输出信息 KPI ---------- */
+#root .xn-kpi-card {
+  border-color: #e4e2f7 !important;
+  background: #fbfaff !important;
+}
+#root .xn-kpi-card [class*="text-[11px]"] {
+  font-size: 12px !important;
+  color: #64748b !important;
+}
+#root .xn-kpi-card [class*="text-lg"] {
+  color: #312e81 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root button.xn-note-copy {
+  min-height: 44px !important;
+  font-weight: 600;
+}
+#root button.xn-note-copy:focus-visible {
+  outline: 2px solid #4338ca;
+  outline-offset: 2px;
+}
+
 @media (max-width: 640px) {
   #root button.xn-seg {
     min-height: 40px;
+  }
+  #root button.xn-size {
+    min-height: 44px;
   }
   #root .xn-tabs a {
     min-height: 44px;

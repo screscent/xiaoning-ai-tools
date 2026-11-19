@@ -132,13 +132,51 @@
   function markActions() {
     [].slice.call(document.querySelectorAll("#root button")).filter(visible).forEach(function (b) {
       var t = txt(b);
-      if (t.indexOf("下载裁剪图片") >= 0) {
+      if (t.indexOf("下载裁剪图片") >= 0 || t.indexOf("下载圆形头像") >= 0) {
         if (!b.classList.contains("xn-download")) b.classList.add("xn-download");
         if (!b.getAttribute("aria-label")) b.setAttribute("aria-label", t);
       } else if (t === "重置") {
         if (!b.classList.contains("xn-reset")) b.classList.add("xn-reset");
         if (!b.getAttribute("aria-label")) b.setAttribute("aria-label", "重置裁剪设置");
+      } else if (t.indexOf("使用示例图片") >= 0) {
+        if (!b.getAttribute("aria-label")) b.setAttribute("aria-label", t);
+      } else if (t.indexOf("复制结果说明") >= 0) {
+        if (!b.classList.contains("xn-note-copy")) b.classList.add("xn-note-copy");
+        if (!b.getAttribute("aria-label")) b.setAttribute("aria-label", t);
       }
+    });
+  }
+
+  /* ---------- 7. 头像输出尺寸 ---------- */
+  function markAvatarSizes() {
+    var sizeBtns = [].slice.call(document.querySelectorAll("#root button")).filter(function (b) {
+      return /^\d+\s*px$/.test(txt(b)) && visible(b);
+    });
+    sizeBtns.forEach(function (b) {
+      if (!b.classList.contains("xn-size")) b.classList.add("xn-size");
+      var on = String(hasClass(b, "border-blue-600"));
+      if (b.getAttribute("aria-pressed") !== on) b.setAttribute("aria-pressed", on);
+    });
+    if (sizeBtns[0] && sizeBtns[0].parentElement) {
+      var g = sizeBtns[0].parentElement;
+      if (g.getAttribute("role") !== "group") {
+        g.setAttribute("role", "group");
+        g.setAttribute("aria-label", "输出尺寸（px）");
+      }
+    }
+  }
+
+  /* ---------- 8. 输出信息 KPI ---------- */
+  function markKpi() {
+    var sec = [].slice.call(document.querySelectorAll("#root section")).find(function (s) {
+      var h = s.querySelector("h3");
+      return h && txt(h) === "输出信息";
+    });
+    if (!sec) return;
+    var grid = sec.querySelector("div.grid");
+    if (!grid) return;
+    [].slice.call(grid.children).forEach(function (card) {
+      if (!card.classList.contains("xn-kpi-card")) card.classList.add("xn-kpi-card");
     });
   }
 
@@ -150,6 +188,8 @@
     markPreview();
     markOutput();
     markActions();
+    markAvatarSizes();
+    markKpi();
   }
 
   var scheduled = false;
