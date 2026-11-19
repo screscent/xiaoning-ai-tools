@@ -1,0 +1,244 @@
+/* 小凝工具站 · 通用 UX 皮肤 v1（纯 CSS，无图片资源）
+ * 适用：legacy/*.html（WeaveFox 应用快照，Tailwind 运行时）
+ * 注入方式：scripts/legacy_ux_inject.py 在页面尾部追加 <link> + <script>
+ * 设计目标：层次、可读性、触控友好；不改业务逻辑。
+ */
+
+:root {
+  --xn-accent: #4f46e5;
+  --xn-accent-2: #2563eb;
+  --xn-ink: #0f172a;
+  --xn-line: #dfe5f2;
+}
+
+html { background: #eaf0fb; }
+
+body {
+  background:
+    radial-gradient(1100px 620px at 8% -12%, rgba(79, 70, 229, .20), transparent 62%),
+    radial-gradient(900px 520px at 102% -4%, rgba(14, 165, 233, .16), transparent 58%),
+    linear-gradient(180deg, #f6f9ff 0%, #eaf0fb 48%, #f7f9fd 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--xn-ink);
+}
+
+/* 网点纹理：CSS 渐变绘制，非图片 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(rgba(79, 70, 229, .14) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: .6;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 65%);
+  mask-image: linear-gradient(180deg, #000, transparent 65%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.025em;
+  line-height: 1.22;
+  background: linear-gradient(92deg, #0f172a 0%, #312e81 55%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+#root h2 {
+  position: relative;
+  padding-left: 14px;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #111827;
+}
+#root h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .16em;
+  bottom: .16em;
+  width: 4px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--xn-accent), var(--xn-accent-2));
+}
+
+/* ---------- 卡片 ---------- */
+#root section.rounded-xl {
+  border-color: rgba(214, 222, 245, .9) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(180deg, #fff, #fdfdff) !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 16px 36px -24px rgba(30, 41, 89, .45) !important;
+}
+#root details.rounded-xl {
+  background: #fff !important;
+  border-color: #e3e8f4 !important;
+  border-radius: 14px !important;
+}
+
+/* ---------- 按钮 ---------- */
+#root button.bg-blue-600,
+#root a.bg-blue-600 {
+  background-image: linear-gradient(135deg, var(--xn-accent), var(--xn-accent-2)) !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 20px -8px rgba(79, 70, 229, .65) !important;
+  min-height: 38px;
+}
+#root button.bg-blue-600:hover,
+#root a.bg-blue-600:hover {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+}
+#root button.bg-white {
+  border-color: var(--xn-line) !important;
+  color: #3b465e !important;
+  min-height: 37px;
+  background: #fff !important;
+}
+#root button.bg-white:hover {
+  border-color: var(--xn-accent) !important;
+  color: var(--xn-accent) !important;
+  background: #f6f7ff !important;
+}
+#root button:disabled {
+  background: #eef1f8 !important;
+  color: #8b95ab !important;
+  border: 1px dashed #d5dcee !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+}
+
+/* ---------- 输入控件 ---------- */
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root select,
+#root textarea {
+  border-color: #dbe2f0 !important;
+  border-radius: 10px !important;
+  min-height: 46px !important;
+  font-size: 15px !important;
+  color: #0f172a !important;
+  background: #fff !important;
+}
+#root input:focus,
+#root select:focus,
+#root textarea:focus {
+  border-color: var(--xn-accent) !important;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, .13) !important;
+  outline: none !important;
+}
+#root input[type=number] {
+  border: 1px solid #dbe2f0 !important;
+  border-radius: 10px !important;
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 650 !important;
+  font-variant-numeric: tabular-nums;
+  color: #111827 !important;
+  background: #fff !important;
+  padding: 0 12px !important;
+}
+#root input[type=number]:focus {
+  border-color: var(--xn-accent) !important;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, .13) !important;
+  outline: none !important;
+}
+#root input[type=number]::-webkit-inner-spin-button {
+  opacity: 1;
+  height: 46px;
+  width: 22px;
+  cursor: pointer;
+}
+#root input[type=range] { height: 28px !important; accent-color: var(--xn-accent); }
+#root input[type=range]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--xn-accent), #60a5fa);
+}
+#root input[type=range]::-webkit-slider-thumb {
+  width: 22px;
+  height: 22px;
+  margin-top: -7px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--xn-accent);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, .35);
+  -webkit-appearance: none;
+}
+#root input[type=file] {
+  min-height: 60px;
+  border-width: 1.5px !important;
+  border-color: #c7d2fe !important;
+  background: linear-gradient(180deg, #f8f9ff, #eceffe) !important;
+  border-radius: 12px !important;
+}
+#root input[type=file]::file-selector-button {
+  background: linear-gradient(135deg, var(--xn-accent), var(--xn-accent-2));
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  margin-right: 12px;
+  box-shadow: 0 4px 12px -6px rgba(79, 70, 229, .5);
+}
+
+/* ---------- 结果与表格 ---------- */
+#root .grid > div.bg-slate-50 {
+  border-color: #e3e8f4 !important;
+  background: linear-gradient(180deg, #fbfcff, #f1f4ff) !important;
+  border-radius: 12px !important;
+}
+#root .grid > div.bg-slate-50 .text-lg {
+  font-size: 21px !important;
+  font-weight: 750 !important;
+  letter-spacing: -.01em;
+  font-variant-numeric: tabular-nums;
+}
+#root div.w-full.overflow-hidden.rounded-lg.border:has(canvas) {
+  border-style: dashed !important;
+  border-color: #c3cdfb !important;
+  background:
+    repeating-linear-gradient(45deg, rgba(79, 70, 229, .05) 0 10px, transparent 10px 20px),
+    radial-gradient(400px 200px at 50% 40%, rgba(79, 70, 229, .10), transparent 70%),
+    linear-gradient(180deg, #fcfdff, #eff3ff) !important;
+}
+#root table { font-variant-numeric: tabular-nums; }
+#root tr.bg-blue-50 { background: #e9edff !important; }
+
+/* ---------- 注入组件 ---------- */
+.xn-presets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-presets button {
+  font-size: 12px !important;
+  padding: 5px 10px !important;
+  min-height: 0 !important;
+  border-radius: 999px !important;
+  border: 1px solid var(--xn-line) !important;
+  background: #fff !important;
+  color: #4b5563 !important;
+  cursor: pointer;
+  transition: all .15s;
+}
+.xn-presets button:hover {
+  border-color: var(--xn-accent) !important;
+  color: var(--xn-accent) !important;
+  background: #f5f6ff !important;
+}
+.xn-hint { margin-top: 6px; font-size: 12px; color: #8b95ab; text-align: center; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 1023px) {
+  #root div.grid { grid-template-columns: minmax(0, 1fr) !important; }
+  #root section { min-width: 0 !important; max-width: 100% !important; }
+  #root div.mt-3.overflow-hidden.rounded-lg { overflow-x: auto !important; }
+  #root table { width: 100%; min-width: 0; }
+  #root .grid > div.bg-slate-50 { min-width: 0; }
+}
+@media (max-width: 640px) {
+  #root button,
+  #root a.bg-blue-600 { min-height: 44px; }
+  #root h1 { font-size: 26px !important; }
+}
