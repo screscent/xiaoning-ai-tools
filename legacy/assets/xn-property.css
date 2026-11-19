@@ -1,0 +1,176 @@
+/* 邻里与物业事务合集页增强（仅 vfgaw6lsqf 引用）
+ * 1) 工具D/E/F → 04/05/06
+ * 2) 21 个输入补中文语义 + 常用值快捷值
+ * 3) 核心数字放大、卡片层次、tab/标题/按钮触控优化
+ * 4) 当前输入摘要 + 移动端「切换工具」浮钮
+ */
+
+/* ---------- 工具切换 tab ---------- */
+#root nav a[href^="#/"] {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 13px;
+  line-height: 1.2;
+  border-radius: 14px;
+}
+#root nav a[href^="#/"]:not([aria-current="page"]):hover {
+  border-color: #7ba6bd !important;
+  background: #ffffff !important;
+  color: #2f566f !important;
+}
+#root nav a[aria-current="page"] {
+  background: linear-gradient(135deg, #3f6a85, #2c5068) !important;
+  border-color: #2c5068 !important;
+  box-shadow: 0 6px 16px -6px rgba(44, 80, 104, 0.62) !important;
+}
+
+/* ---------- 卡片标题 ---------- */
+#root h3.xn-sec {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px !important;
+  letter-spacing: 0.01em;
+}
+#root h3.xn-sec::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #d8e6ee, rgba(216, 230, 238, 0));
+}
+
+/* ---------- 输入区 ---------- */
+#root .xn-flabel {
+  font-size: 13px !important;
+  color: #33414d !important;
+}
+#root .xn-unit {
+  font-size: 11.5px !important;
+  color: #5b7183 !important;
+  background: #f1f6f9;
+  border-radius: 6px;
+  padding: 1px 5px;
+}
+#root input[type="number"] {
+  font-variant-numeric: tabular-nums;
+}
+#root select.xn-select {
+  min-height: 44px;
+  font-size: 14px !important;
+  font-weight: 700;
+  color: #243447;
+  background: #fff;
+}
+
+/* ---------- 快捷值 ---------- */
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 7px;
+}
+#root .xn-chips .xn-chip {
+  min-height: 28px;
+  padding: 3px 11px;
+  border: 1px solid #cfe0e9;
+  border-radius: 999px;
+  background: #f7fbfd;
+  color: #2f566f;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-chips .xn-chip:hover {
+  border-color: #3f6a85;
+  background: #eef6fa;
+}
+#root .xn-chips .xn-chip.is-on {
+  border-color: #2c5068;
+  background: #2c5068;
+  color: #fff;
+}
+
+/* ---------- 当前输入摘要 ---------- */
+#root [data-xn-sum]::before {
+  content: attr(data-xn-sum);
+  display: block;
+  margin: 0 0 8px;
+  padding: 8px 12px;
+  border: 1px dashed #c9dbe5;
+  border-radius: 12px;
+  background: #f7fbfd;
+  color: #41586a;
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.55;
+  text-align: left;
+  white-space: normal;
+}
+
+/* ---------- 核心数字 ---------- */
+#root .xn-kpi-card {
+  background: linear-gradient(145deg, #f4fafd, #e8f2f8 58%, #fdf8ef) !important;
+  border-color: #cfe0e9 !important;
+  box-shadow: 0 8px 20px -14px rgba(31, 78, 107, 0.5);
+}
+#root .xn-kpi {
+  font-size: 26px !important;
+  color: #17465f !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+#root .xn-kpi span {
+  font-size: 12px !important;
+  color: #5b7183 !important;
+}
+#root .xn-kpi-label {
+  font-size: 12px !important;
+  color: #47606f !important;
+}
+
+/* ---------- 按钮 ---------- */
+#root button.xn-calc {
+  border-radius: 14px;
+  box-shadow: 0 8px 18px -10px rgba(44, 80, 104, 0.6);
+}
+#root button.xn-copy {
+  min-height: 38px;
+  border-radius: 11px;
+}
+
+/* ---------- 切换工具浮钮 ---------- */
+#root .xn-quick-top {
+  position: fixed;
+  right: 14px;
+  bottom: 18px;
+  z-index: 40;
+  display: none;
+  align-items: center;
+  gap: 4px;
+  padding: 9px 13px;
+  border: 1px solid #cfe0e9;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #2f566f;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 22px -10px rgba(31, 78, 107, 0.55);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+#root .xn-quick-top.is-show {
+  display: inline-flex;
+}
+
+@media (max-width: 640px) {
+  #root nav a[href^="#/"] { min-height: 46px; font-size: 12.5px; }
+  #root .xn-chips .xn-chip { min-height: 32px; padding: 5px 12px; }
+  #root .xn-kpi { font-size: 24px !important; }
+}
