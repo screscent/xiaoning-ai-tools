@@ -103,7 +103,7 @@ function cContrast(s){const p=s.split(/[\s,]+/);if(p.length<2)return '格式：#
 function cLum(s){return `相对亮度 ${lum(s.trim()).toFixed(4)}`}
 function cPalette(s){const h=s.trim();const steps=[-0.3,-0.15,0,0.15,0.3];return steps.map(p=>`${(p*100).toFixed(0).padStart(4)}%  ${shift(h,p)}`).join('\n')}
 function cGradient(s){const p=s.split(/[\s,]+/);if(p.length<2)return '格式：#ff0000, #0000ff';return `background: linear-gradient(90deg, ${p[0]} 0%, ${p[1]} 100%);`}
-function cShadow(s){return `box-shadow: 0 8px 24px rgba(0,0,0,0.12);\n/* 输入示例：0 8 24 #000 0.12 */`}
+function cShadow(s){const m=String(s).trim().match(/^(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)\s+(#[0-9a-fA-F]{3,8})\s+(\d*\.?\d+)$/);if(!m)return '格式：0 8 24 #000 0.12（X Y 模糊 颜色 透明度）';const px=v=>Number(v)===0?'0':v+'px';const h=m[4].replace('#','');const full=h.length===3?h.split('').map(c=>c+c).join(''):h;const r=parseInt(full.slice(0,2),16),g=parseInt(full.slice(2,4),16),b=parseInt(full.slice(4,6),16),al=Number(m[5]);return `box-shadow: ${px(m[1])} ${px(m[2])} ${px(m[3])} rgba(${r},${g},${b},${al});\n/* 组件可直接粘贴 */`}
 
 
 const GEN={ hex2rgb:cHex2Rgb,rgb2hex:cRgb2Hex,hex2hsl:cHex2Hsl,hsl2hex:cHsl2Hex,lighten:cLighten,darken:cDarken,rgba:cRgba,contrast:cContrast,luminance:cLum,palette:cPalette,gradient:cGradient,shadow:cShadow };
