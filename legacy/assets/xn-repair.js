@@ -81,7 +81,7 @@
     return "";
   }
   function markCopy() {
-    var btns = [].slice.call(document.querySelectorAll("#root button")).filter(visible);
+    var btns = [].slice.call(document.querySelectorAll("#root button"));
     btns.forEach(function (b) {
       var t = txt(b);
       if (/^复制全部/.test(t)) {
@@ -107,7 +107,26 @@
         }
         var sa = h3 ? "复制「" + txt(h3) + "」清单" : "复制本节";
         if (b.getAttribute("aria-label") !== sa) b.setAttribute("aria-label", sa);
+        return;
       }
+      /* CopyButton 图标按钮：无文字、aria-label 为空 */
+      var isCopy = b.getAttribute("data-code-inspect-component") === "CopyButton" || b.getAttribute("aria-label") === "";
+      if (!isCopy && t) return;
+      if (!isCopy) return;
+      if (!b.classList.contains("xn-item-copy")) b.classList.add("xn-item-copy");
+      var nm = "";
+      var q = b.parentElement;
+      for (var k = 0; k < 4 && q && !nm; k++) {
+        var spans = q.querySelectorAll("span");
+        for (var j = 0; j < spans.length; j++) {
+          var st = txt(spans[j]);
+          if (st && st !== "必备" && st !== "建议" && st !== "可选" && st.length <= 30) { nm = st; break; }
+        }
+        q = q.parentElement;
+      }
+      var ca = nm ? "复制「" + nm + "」" : "复制本条内容";
+      if (b.getAttribute("aria-label") !== ca) b.setAttribute("aria-label", ca);
+      if (!b.getAttribute("title")) b.setAttribute("title", ca);
     });
   }
 
