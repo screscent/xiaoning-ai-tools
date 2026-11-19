@@ -1,0 +1,17 @@
+/* HTTP 接口调试合集页增强（仅 puusba3a4t 引用）
+ * 1) 清掉标题旁的 #/xxx 路由串
+ * 2) 顶部工具 tab 补 aria-current（保留应用自身的深色当前态）
+ * 3) 搜索/数量输入补语义
+ */
+
+#root a[href^="#/"]:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+#root .xn-http-chip {
+  transition: transform .1s ease;
+}
+#root .xn-http-chip:hover {
+  transform: translateY(-1px);
+}
