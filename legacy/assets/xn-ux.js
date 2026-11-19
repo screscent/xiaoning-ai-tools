@@ -168,8 +168,7 @@
     }
   }
 
-  function tuneSmallFont() {
-    var els = document.querySelectorAll("#root span, #root p, #root li, #root td, #root small");
+  function tuneSmallFont() {    var els = document.querySelectorAll("#root span, #root p, #root li, #root td, #root small");
     for (var i = 0; i < els.length; i++) {
       var el = els[i];
       if (el.classList.contains("xn-presets") || el.closest(".xn-presets")) continue;
@@ -183,6 +182,14 @@
     }
   }
 
+  /* 清掉导航里以 #/xxx 形式出现的路由调试文本（部分快照页会误显示给用户） */
+  function cleanupRouteHints() {
+    var spans = document.querySelectorAll('#root nav a span, #root nav button span, #root a[href^="#/"] span');
+    for (var i = spans.length - 1; i >= 0; i--) {
+      if (/^#\/[\w-]+$/.test(text(spans[i]))) spans[i].parentNode.removeChild(spans[i]);
+    }
+  }
+
   var scheduled = false;
   function enhanceAll() {
     if (scheduled) return;
@@ -190,6 +197,7 @@
     requestAnimationFrame(function () {
       scheduled = false;
       try {
+        cleanupRouteHints();
         enhanceInputs();
         enhanceSelects();
         enhanceButtons();
