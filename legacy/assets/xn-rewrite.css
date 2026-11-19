@@ -1,0 +1,57 @@
+/* 文本改写与降重合集页增强（仅 4gswjgbtnf 引用）
+ * 1) 工具E/F → 05/06
+ * 2) hash 链接补 aria-current + 当前入口卡描边
+ * 3) 字数/重合率数字放大；正文行高与字号提升
+ * 4) 长页「回到顶部切换工具」
+ */
+
+#root .min-h-screen {
+  background:
+    radial-gradient(860px 360px at 8% -8%, #e0e7ff 0%, rgba(224, 231, 255, 0) 60%),
+    radial-gradient(720px 320px at 96% 0%, #ffe4e6 0%, rgba(255, 228, 230, 0) 56%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+#root a[href^="#/"].xn-rw-cur {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, .25);
+}
+
+#root .xn-rw-count {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #4338ca !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-rw-rate {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #be123c !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root textarea {
+  line-height: 1.75 !important;
+}
+
+#xn-rw-top {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  z-index: 50;
+  display: none;
+  padding: 8px 14px;
+  border: 1px solid #c7d2fe;
+  border-radius: 999px;
+  background: #3730a3;
+  color: #eef2ff;
+  font-size: 12.5px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(55, 48, 163, .28);
+  cursor: pointer;
+}
+#xn-rw-top.is-show { display: inline-flex; }
+#xn-rw-top:hover { background: #4338ca; }
+@media (max-width: 640px) {
+  #xn-rw-top { right: 12px; bottom: 14px; padding: 9px 13px; font-size: 13px; }
+}
