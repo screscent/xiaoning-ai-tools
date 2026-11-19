@@ -1,0 +1,208 @@
+/* 人民币大写金额转换器页增强（仅 3xhvxh5af3 引用）
+ * 1) 快捷金额人类可读 + 示例修复；2) 分段按钮 aria-pressed
+ * 3) 补「整」开关命名；4) 结果摘要与空态示例；5) 校验提示/表格/主题
+ */
+
+#root {
+  background: linear-gradient(180deg, #f0faf5 0, #fbfaf6 420px) !important;
+}
+
+/* ---------- 卡片与标题 ---------- */
+#root section {
+  border-color: #e2ece7 !important;
+  box-shadow: 0 1px 2px rgba(15, 107, 92, 0.05);
+}
+#root .xn-sec-title {
+  color: #0f6b5c !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- 输入 ---------- */
+#root input.xn-amount {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-color: #cfe2db !important;
+  border-radius: 10px !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input.xn-amount:focus {
+  border-color: #0f6b5c !important;
+  box-shadow: 0 0 0 3px rgba(15, 107, 92, 0.12) !important;
+}
+
+/* ---------- 快捷金额 ---------- */
+#root button.xn-quick {
+  min-height: 34px;
+  border: 1px solid #d9e7e1 !important;
+  background: #fff !important;
+  color: #2f4f45 !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.12s ease;
+}
+#root button.xn-quick:hover {
+  border-color: #0f6b5c !important;
+  color: #0f6b5c !important;
+  background: #f4fbf8 !important;
+}
+
+/* ---------- 分段按钮 ---------- */
+#root button.xn-seg {
+  min-height: 36px;
+  border-color: #d9e7e1 !important;
+  background: #fff !important;
+  color: #3f534a !important;
+  font-weight: 600;
+}
+#root button.xn-seg:hover {
+  border-color: #0f6b5c !important;
+  color: #0f6b5c !important;
+}
+#root button.xn-seg[aria-pressed="true"] {
+  background: #0f6b5c !important;
+  border-color: #0f6b5c !important;
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(15, 107, 92, 0.2);
+}
+#root button.xn-seg:focus-visible,
+#root button.xn-quick:focus-visible,
+#root button.xn-try:focus-visible {
+  outline: 2px solid #0f6b5c;
+  outline-offset: 2px;
+}
+
+/* ---------- 补「整」开关 ---------- */
+#root label:focus-within span.relative {
+  box-shadow: 0 0 0 3px rgba(15, 107, 92, 0.16);
+}
+
+/* ---------- 结果卡 ---------- */
+#root .xn-result-sec {
+  background: linear-gradient(180deg, #f3fbf7, #fbfdfb) !important;
+  border-color: #bfe3d8 !important;
+}
+#root .xn-result-sec p[class*="text-emerald"] {
+  letter-spacing: 0.02em;
+}
+#root .xn-result-body {
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: center;
+  gap: 10px;
+}
+#root .xn-src {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7f76;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-empty-try {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#root button.xn-try {
+  min-height: 32px;
+  padding: 4px 12px;
+  border: 1px solid #b9e6d8;
+  border-radius: 999px;
+  background: #fff;
+  color: #0f6b5c;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+#root button.xn-try:hover {
+  background: #e7f7f0;
+  border-color: #0f6b5c;
+}
+
+/* ---------- 复制 ---------- */
+#root button.xn-copy {
+  min-height: 38px !important;
+  font-weight: 600;
+}
+#root button.xn-copy:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ---------- 校验提示 ---------- */
+#root .xn-notes {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 10px;
+  padding: 10px 12px 10px 14px;
+}
+#root .xn-notes li {
+  color: #7c6a3f !important;
+}
+#root .xn-notes li span[class*="text-slate-400"] {
+  color: #d97706 !important;
+}
+
+/* ---------- 数字分组 ---------- */
+#root .xn-breakdown > div > div {
+  border-color: #dceae4 !important;
+  background: #fbfdfb !important;
+}
+#root .xn-breakdown > div > div > div:first-child {
+  color: #0f6b5c !important;
+  font-weight: 700 !important;
+}
+#root .xn-breakdown > div > div > div:last-child > div {
+  border-color: #e8f1ec !important;
+}
+#root .xn-breakdown > div > div > div:last-child > div > div:first-child {
+  color: #154237 !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- 表格 ---------- */
+#root table {
+  font-variant-numeric: tabular-nums;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+#root table th {
+  background: #f0faf6;
+  color: #0f6b5c !important;
+  font-weight: 700 !important;
+  padding: 8px 10px !important;
+}
+#root table th:first-child {
+  border-top-left-radius: 8px;
+}
+#root table th:last-child {
+  border-top-right-radius: 8px;
+}
+#root table td {
+  padding: 8px 10px !important;
+  border-color: #eef4f1 !important;
+}
+#root table tbody tr:nth-child(even) {
+  background: #fafcfb;
+}
+#root table tbody tr:hover {
+  background: #f2fbf7;
+}
+
+@media (max-width: 640px) {
+  #root button.xn-seg {
+    min-height: 40px;
+  }
+  #root button.xn-copy {
+    min-height: 44px !important;
+  }
+  #root .xn-sec-title {
+    font-size: 12.5px !important;
+  }
+  #root button.xn-quick {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    min-height: 32px;
+  }
+}
