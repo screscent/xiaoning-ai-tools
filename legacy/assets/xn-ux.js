@@ -18,7 +18,21 @@
     "右下": "裁剪框贴右下角",
     "PNG": "无损，适合图标与透明背景",
     "JPEG": "体积小，适合照片",
-    "WebP": "体积更小，兼容现代浏览器"
+    "JPG": "体积小，适合照片；不支持透明背景",
+    "WebP": "体积更小，兼容现代浏览器",
+    "高": "画质优先，文件较大，适合需要清晰细节的图片",
+    "中": "画质与体积平衡，日常推荐",
+    "低": "体积最小，画质损失较明显，适合快速分享",
+    "原尺寸": "保持图片原始像素尺寸，不做缩放",
+    "1920px": "长边缩到 1920px，适合网页与社交分享",
+    "1280px": "长边缩到 1280px，适合文章配图",
+    "800px": "长边缩到 800px，适合缩略图与消息预览",
+    "压缩图片": "单张压缩：调质量、最长边与格式",
+    "批量处理": "一次拖入多张，统一参数批量压缩",
+    "前后对比": "左右对比压缩前后体积与画质",
+    "画质取舍": "不同画质档位的体积与清晰度参考",
+    "尺寸缩放与限制": "按长边缩放，控制最大尺寸",
+    "格式选择": "JPG / PNG / WebP 格式差异与选择建议"
   };
 
   function text(el) {
@@ -81,6 +95,28 @@
     }
   }
 
+  function groupLabel(btn) {
+    var row = btn.parentElement;
+    if (!row) return "";
+    var prev = row.previousElementSibling;
+    if (prev) {
+      var pt = text(prev);
+      if (pt && pt.length <= 12) return pt;
+    }
+    var gp = row.parentElement;
+    if (gp) {
+      var kids = gp.children;
+      for (var i = 0; i < kids.length; i++) {
+        var k = kids[i];
+        if (k === row) continue;
+        if (k.querySelector && k.querySelector("button")) continue;
+        var kt = text(k);
+        if (kt && kt.length <= 12) return kt;
+      }
+    }
+    return "";
+  }
+
   function enhanceButtons() {
     var list = document.querySelectorAll("#root button");
     for (var i = 0; i < list.length; i++) {
@@ -88,21 +124,47 @@
       var t = text(b);
       if (TITLES[t] && !b.title) b.title = TITLES[t];
 
+      if (b.hasAttribute("aria-pressed")) {
+        var gl = groupLabel(b);
+        if (gl && !b.getAttribute("aria-label")) b.setAttribute("aria-label", gl + "：" + t);
+      }
+
       var parent = b.parentElement;
       if (!parent) continue;
+      var cs = window.getComputedStyle(parent);
+      var hintHost = (cs.display.indexOf("flex") === 0 && cs.flexDirection.indexOf("row") === 0)
+        ? parent.parentElement || parent
+        : parent;
       if (b.disabled) {
-        if (!parent.querySelector(".xn-hint")) {
+        if (!hintHost.querySelector(".xn-hint")) {
           var hint = document.createElement("div");
           hint.className = "xn-hint";
           if (/下载/.test(t)) hint.textContent = "上传图片并调整裁剪区域后即可下载";
-          else if (/生成|开始/.test(t)) hint.textContent = "填写上方信息后即可开始";
+          else if (document.querySelector('#root input[type=file], #root label[class*="border-dashed"]')) {
+            hint.textContent = "先点击上方虚线区域选择文件，选好后即可开始";
+            hint.style.textAlign = "left";
+          } else if (/生成|开始/.test(t)) hint.textContent = "填写上方信息后即可开始";
           else hint.textContent = "完成上方填写后即可使用";
-          parent.appendChild(hint);
+          hintHost.appendChild(hint);
         }
       } else if (!parent.querySelector("button:disabled")) {
-        var old = parent.querySelector(".xn-hint");
+        var old = hintHost.querySelector(".xn-hint");
         if (old) old.remove();
       }
+    }
+  }
+
+  function enhanceUploads() {
+    var zones = document.querySelectorAll('#root label[class*="border-dashed"]');
+    for (var i = 0; i < zones.length; i++) {
+      var z = zones[i];
+      if (!z.getAttribute("aria-label")) z.setAttribute("aria-label", text(z).slice(0, 80) || "选择文件");
+    }
+    var links = document.querySelectorAll('#root a[class*="shrink-0"]');
+    for (var j = 0; j < links.length; j++) {
+      var a = links[j];
+      var at = text(a);
+      if (TITLES[at] && !a.title) a.title = TITLES[at];
     }
   }
 
@@ -131,6 +193,7 @@
         enhanceInputs();
         enhanceSelects();
         enhanceButtons();
+        enhanceUploads();
         tuneSmallFont();
       } catch (e) {
         /* 静默：增强失败不影响原功能 */
