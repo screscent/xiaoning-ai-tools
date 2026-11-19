@@ -1,0 +1,92 @@
+/* 数据可视化与图表选型合集页增强（仅 4gzfddbtnf 引用）
+ * 1) tab 吸顶 + 当前态 44px
+ * 2) 下拉 44px；HEX 输入补语义；复制按钮 38/44px
+ * 3) 推荐结论卡层级；蓝紫渐变背景
+ */
+
+#root {
+  background: linear-gradient(180deg, #eef2ff 0, #f8fafc 340px) !important;
+}
+
+/* ---------- tab ---------- */
+#root .xn-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 6px 4px;
+  background: rgba(248, 250, 252, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+  scrollbar-width: none;
+}
+#root .xn-tabs::-webkit-scrollbar { display: none; }
+#root .xn-tabs a {
+  flex: 0 0 auto !important;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+}
+#root .xn-tabs a[aria-current="page"] {
+  background: linear-gradient(135deg, #4f46e5, #4338ca) !important;
+  border-color: #4338ca !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px -9px rgba(67, 56, 202, 0.7);
+}
+
+/* ---------- 下拉 ---------- */
+#root select {
+  min-height: 44px;
+  font-size: 14px !important;
+  font-weight: 600;
+  cursor: pointer;
+}
+#root select:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.14);
+}
+
+/* ---------- 推荐结论 ---------- */
+#root .xn-rec-card {
+  background: linear-gradient(135deg, #eef2ff, #f5f7ff 65%, #ffffff) !important;
+  border-color: #c7d2fe !important;
+  box-shadow: 0 10px 24px -20px rgba(67, 56, 202, 0.5);
+}
+#root .xn-rec-title {
+  font-size: 18px !important;
+  color: #312e81 !important;
+  letter-spacing: -0.01em;
+}
+#root .xn-ratio {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #1e293b !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 复制 ---------- */
+#root button.xn-copy {
+  min-height: 38px !important;
+  padding: 0 13px !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
+  border-radius: 9px;
+}
+
+/* ---------- 结果标题 ---------- */
+#root h3 {
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 640px) {
+  #root .xn-tabs a { min-height: 44px; font-size: 12.5px; }
+  #root button.xn-copy { min-height: 44px !important; }
+  #root .xn-rec-title { font-size: 17px !important; }
+}
