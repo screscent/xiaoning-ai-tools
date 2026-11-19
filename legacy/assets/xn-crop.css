@@ -1,0 +1,153 @@
+/* 图片裁剪与圆形头像合集页增强（仅 wn363rj8gw 引用）
+ * 1) tab 药丸；2) 比例/对齐/宽度 aria-pressed
+ * 3) 预览网格底纹；4) 输出尺寸层级；5) 下载/重置与主题
+ */
+
+#root {
+  background: linear-gradient(180deg, #f6f5ff 0, #fbfbff 440px) !important;
+}
+
+/* ---------- tab ---------- */
+#root .xn-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#root .xn-tabs a {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  transition: all 0.15s ease;
+}
+#root .xn-tabs a[aria-current="page"] {
+  background: linear-gradient(135deg, #4338ca, #4f46e5) !important;
+  border-color: #4338ca !important;
+  color: #fff !important;
+  box-shadow: 0 3px 10px rgba(67, 56, 202, 0.22);
+}
+#root .xn-tabs a:not([aria-current="page"]):hover {
+  border-color: #818cf8 !important;
+  color: #4338ca !important;
+}
+#root .xn-tabs a:focus-visible {
+  outline: 2px solid #4338ca;
+  outline-offset: 2px;
+}
+
+/* ---------- 分割选项 ---------- */
+#root button.xn-seg {
+  min-height: 36px;
+  border-color: #e2e0f5 !important;
+  background: #fff !important;
+  color: #3f3a63 !important;
+  font-weight: 600;
+}
+#root button.xn-seg:hover {
+  border-color: #818cf8 !important;
+  color: #4338ca !important;
+}
+#root button.xn-seg[aria-pressed="true"] {
+  background: #4338ca !important;
+  border-color: #4338ca !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.2);
+}
+#root button.xn-seg:focus-visible {
+  outline: 2px solid #4338ca;
+  outline-offset: 2px;
+}
+
+/* ---------- 快速宽度 ---------- */
+#root .xn-presets button {
+  min-height: 32px;
+  border: 1px solid #e2e0f5;
+  border-radius: 999px;
+  background: #fff;
+  color: #4a4570;
+  font-size: 12.5px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.12s ease;
+}
+#root .xn-presets button:hover {
+  border-color: #818cf8;
+  color: #4338ca;
+}
+#root .xn-presets button[aria-pressed="true"] {
+  background: #eef0ff;
+  border-color: #4338ca;
+  color: #4338ca;
+}
+
+/* ---------- 上传区 ---------- */
+#root .xn-drop {
+  background: #f7f6ff !important;
+  border-color: #a5b4fc !important;
+  transition: all 0.15s ease;
+}
+#root .xn-drop:hover {
+  background: #eeecff !important;
+  border-color: #4f46e5 !important;
+}
+
+/* ---------- 输出尺寸 ---------- */
+#root .xn-dim-card {
+  border-color: #e4e2f7 !important;
+  border-radius: 12px !important;
+}
+#root .xn-dim-card.xn-dim-active {
+  border-color: #4338ca !important;
+  background: #f5f4ff !important;
+  box-shadow: 0 0 0 1px #4338ca inset;
+}
+#root .xn-dim {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #3730a3 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root tr.xn-dim-row {
+  background: #f5f4ff !important;
+}
+#root tr.xn-dim-row td {
+  color: #3730a3 !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- 操作 ---------- */
+#root button.xn-download {
+  min-height: 44px !important;
+  font-weight: 600 !important;
+}
+#root button.xn-download:disabled {
+  background: #eef0ff !important;
+  color: #8a86b8 !important;
+}
+#root button.xn-reset {
+  min-height: 40px !important;
+  font-weight: 600;
+}
+#root button.xn-download:focus-visible,
+#root button.xn-reset:focus-visible {
+  outline: 2px solid #4338ca;
+  outline-offset: 2px;
+}
+#root input[type="range"] {
+  accent-color: #4338ca;
+}
+
+@media (max-width: 640px) {
+  #root button.xn-seg {
+    min-height: 40px;
+  }
+  #root .xn-tabs a {
+    min-height: 44px;
+  }
+  #root .xn-dim {
+    font-size: 17px !important;
+  }
+}
