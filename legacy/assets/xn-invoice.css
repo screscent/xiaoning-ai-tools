@@ -1,0 +1,192 @@
+/* 发票与税额计算合集页增强（仅 x89bsucakb 引用）
+ * 1) 吸顶快捷跳转；2) 工具编号归一；3) 常用值胶囊
+ * 4) 结果主次层级；5) 按钮/表格/主题
+ */
+
+#root {
+  background: linear-gradient(180deg, #f4f8ff 0, #fbfcff 460px) !important;
+}
+
+/* ---------- 吸顶跳转 ---------- */
+#root .xn-jump {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 2px;
+  margin: 10px 0 2px;
+  background: rgba(250, 252, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e3ebf8;
+  scrollbar-width: none;
+}
+#root .xn-jump::-webkit-scrollbar {
+  display: none;
+}
+#root .xn-jump button {
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 0 13px;
+  border: 1px solid #d8e4f7;
+  border-radius: 999px;
+  background: #fff;
+  color: #3b4d6b;
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+#root .xn-jump button:hover {
+  border-color: #2563eb;
+  color: #1d4ed8;
+}
+#root .xn-jump button[aria-current="page"] {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  border-color: #1d4ed8;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
+}
+#root .xn-jump button:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+#root section {
+  scroll-margin-top: 74px;
+}
+
+/* ---------- 工具编号 ---------- */
+#root section h2 {
+  letter-spacing: 0.01em;
+}
+
+/* ---------- 表单 ---------- */
+#root input:not([type="checkbox"]),
+#root select {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input:focus,
+#root select:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+}
+#root input[type="number"] {
+  font-family: "SF Mono", ui-monospace, Menlo, monospace;
+}
+
+/* ---------- 常用值胶囊 ---------- */
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 7px;
+}
+#root .xn-chip {
+  min-height: 32px;
+  padding: 4px 12px;
+  border: 1px solid #c7dbfb;
+  border-radius: 999px;
+  background: #f3f8ff;
+  color: #1d4ed8;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.12s ease;
+}
+#root .xn-chip:hover {
+  border-color: #2563eb;
+  background: #e6f0ff;
+}
+#root .xn-chip.is-on {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #fff;
+}
+#root .xn-chip:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* ---------- 结果层级 ---------- */
+#root .xn-result-card {
+  background: linear-gradient(180deg, #f2f7ff, #f8fbff) !important;
+  border-color: #c7dbfb !important;
+  border-radius: 14px !important;
+}
+#root .xn-result-card .xn-val {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+#root .xn-result-card .xn-val-primary {
+  font-size: 22px !important;
+  color: #12336b !important;
+  letter-spacing: -0.01em;
+}
+#root .xn-result-card > div > span:first-child,
+#root .xn-result-card > div > div:first-child {
+  font-size: 13px;
+  color: #566a88;
+}
+
+/* ---------- 导航卡 ---------- */
+#root button[class*="rounded-xl"][class*="text-left"]:hover {
+  border-color: #93b4ee !important;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
+}
+#root button[class*="rounded-xl"][class*="text-left"][aria-current="page"] {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 1px #2563eb inset, 0 6px 18px rgba(37, 99, 235, 0.12);
+}
+
+/* ---------- 操作按钮 ---------- */
+#root button.xn-btn {
+  font-weight: 600 !important;
+}
+#root button.xn-btn:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* ---------- 表格 ---------- */
+#root table {
+  font-variant-numeric: tabular-nums;
+}
+#root table th {
+  background: #eef5ff;
+  color: #1e40af !important;
+  font-weight: 700 !important;
+}
+#root table tbody tr:nth-child(even) {
+  background: #f8fbff;
+}
+#root table tbody tr:hover {
+  background: #eff6ff;
+}
+
+@media (max-width: 640px) {
+  #root .xn-jump {
+    padding: 8px 0;
+    margin-top: 6px;
+  }
+  #root .xn-jump button {
+    min-height: 32px;
+    padding: 0 11px;
+    font-size: 12px;
+  }
+  #root .xn-chip {
+    min-height: 36px;
+  }
+  #root .xn-result-card .xn-val {
+    font-size: 16px !important;
+  }
+  #root .xn-result-card .xn-val-primary {
+    font-size: 20px !important;
+  }
+}
