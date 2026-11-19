@@ -1,0 +1,58 @@
+/* 家庭防虫与灭鼠合集页增强（仅 mkzkx3rxwr 引用）
+ * 1) 工具E/F → 工具 05/06（切换卡与标题）
+ * 2) 顶部 6 个工具切换补 aria-pressed
+ * 3) 关键数字：建议浓度 16px、有效时长 13px
+ */
+
+#root .xn-pest-pct {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-pest-hours {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root button[aria-pressed="true"].xn-pest-tab {
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, .45);
+}
+#root button.xn-pest-tab:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* 回到顶部切换工具 */
+#xn-pest-top {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  border: 1px solid #a7f3d0;
+  border-radius: 999px;
+  background: #065f46;
+  color: #ecfdf5;
+  font-size: 12.5px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(6, 95, 70, .28);
+  cursor: pointer;
+}
+#xn-pest-top.is-show {
+  display: inline-flex;
+}
+#xn-pest-top:hover {
+  background: #047857;
+}
+@media (max-width: 640px) {
+  #xn-pest-top {
+    right: 12px;
+    bottom: 14px;
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+}
