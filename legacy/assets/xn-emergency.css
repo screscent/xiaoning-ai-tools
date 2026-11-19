@@ -1,0 +1,206 @@
+/* 家庭应急与防灾合集页增强（仅 ekgaqhvhte 引用）
+ * 1) 工具E/F → 05/06
+ * 2) 工具页新增 6 工具切换导航（吸顶）
+ * 3) 开关/多选/数字框语义与快捷值；复制按钮触控
+ * 4) 预算/库存数字层级、超预算警示、按工具换主题色
+ */
+
+/* ---------- 主题色 ---------- */
+#root[data-xn-tool="kit"] { --xn-accent: #d97706; --xn-accent-soft: #fffbeb; --xn-accent-ink: #92400e; }
+#root[data-xn-tool="plan"] { --xn-accent: #2563eb; --xn-accent-soft: #eff6ff; --xn-accent-ink: #1e40af; }
+#root[data-xn-tool="firstaid"] { --xn-accent: #e11d48; --xn-accent-soft: #fff1f2; --xn-accent-ink: #9f1239; }
+#root[data-xn-tool="outage"] { --xn-accent: #ea580c; --xn-accent-soft: #fff7ed; --xn-accent-ink: #9a3412; }
+#root[data-xn-tool="stock"] { --xn-accent: #059669; --xn-accent-soft: #ecfdf5; --xn-accent-ink: #065f46; }
+#root[data-xn-tool="drill"] { --xn-accent: #0d9488; --xn-accent-soft: #f0fdfa; --xn-accent-ink: #115e59; }
+
+#root[data-xn-tool] {
+  background: linear-gradient(180deg, var(--xn-accent-soft) 0, #f8fafc 360px) !important;
+}
+
+/* ---------- 工具切换导航 ---------- */
+#root .xn-tool-nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  gap: 6px;
+  margin: 0 0 14px;
+  padding: 7px 4px;
+  overflow-x: auto;
+  background: rgba(248, 250, 252, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+  scrollbar-width: none;
+}
+#root .xn-tool-nav::-webkit-scrollbar { display: none; }
+#root .xn-tool-nav a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #fff;
+  color: #475569;
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.12s ease;
+}
+#root .xn-tool-nav a:hover {
+  border-color: var(--xn-accent, #475569);
+  color: var(--xn-accent-ink, #334155);
+}
+#root .xn-tool-nav a[aria-current="page"] {
+  background: var(--xn-accent, #334155);
+  border-color: var(--xn-accent, #334155);
+  color: #fff;
+  box-shadow: 0 6px 16px -10px var(--xn-accent, #334155);
+}
+
+/* ---------- 标题 ---------- */
+#root[data-xn-tool] h2 {
+  position: relative;
+  padding-left: 11px;
+}
+#root[data-xn-tool] h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  border-radius: 3px;
+  background: var(--xn-accent);
+}
+
+/* ---------- 开关 ---------- */
+#root button[role="switch"][aria-checked="true"] {
+  background: var(--xn-accent) !important;
+}
+#root button[role="switch"] {
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 24px;
+}
+#root button[role="switch"]:focus-visible {
+  outline: 2px solid var(--xn-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- 选项胶囊 ---------- */
+#root .xn-chipbtn {
+  min-height: 42px !important;
+}
+#root .xn-chipbtn[aria-pressed="true"] {
+  background: var(--xn-accent) !important;
+  border-color: var(--xn-accent) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 14px -10px var(--xn-accent);
+}
+
+/* ---------- 数字框与快捷值 ---------- */
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 7px;
+}
+#root .xn-chips .xn-chip {
+  min-height: 28px;
+  padding: 3px 11px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--xn-accent-ink, #334155);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.12s ease;
+}
+#root .xn-chips .xn-chip:hover {
+  border-color: var(--xn-accent);
+  background: var(--xn-accent-soft);
+}
+#root .xn-chips .xn-chip.is-on {
+  background: var(--xn-accent);
+  border-color: var(--xn-accent);
+  color: #fff;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root button.xn-copy {
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  border-radius: 9px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #334155;
+  font-weight: 600;
+}
+#root button.xn-copy:hover {
+  border-color: var(--xn-accent);
+  color: var(--xn-accent-ink);
+}
+
+/* ---------- 数字层级 ---------- */
+#root .xn-money {
+  font-size: 22px !important;
+  color: var(--xn-accent-ink, #1e293b) !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+#root .xn-warn {
+  color: #b91c1c !important;
+  font-weight: 700 !important;
+  background: #fef2f2;
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+
+/* ---------- 库存 KPI ---------- */
+#root .xn-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 10px 0 2px;
+  padding: 0 16px;
+}
+#root .xn-kpi-card {
+  padding: 10px 12px;
+  border: 1px solid #d1fae5;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f0fdf4, #ecfdf5);
+}
+#root .xn-kpi-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #047857;
+  letter-spacing: 0.04em;
+}
+#root .xn-kpi-value {
+  margin-top: 2px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #065f46;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-kpi-value small {
+  font-size: 11px;
+  font-weight: 700;
+  color: #059669;
+  margin-left: 2px;
+}
+
+@media (max-width: 640px) {
+  #root .xn-tool-nav a { min-height: 42px; font-size: 12px; }
+  #root .xn-kpi-row { grid-template-columns: 1fr; padding: 0 14px; }
+  #root .xn-kpi-value { font-size: 20px; }
+  #root button.xn-copy { min-height: 44px !important; }
+}
