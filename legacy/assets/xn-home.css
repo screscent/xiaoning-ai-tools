@@ -1,0 +1,36 @@
+/* 居家安全自查合集页增强（仅 2q8fbuqqxb 引用）
+ * 1) 隐藏导航里的路由提示（#/fire 等）
+ * 2) 每个自查分组标题右侧「全选本组 / 清空本组」
+ * 3) 勾选框描边与 hover 强化
+ */
+
+#root nav a span.font-mono,
+#root nav a span[class*="font-mono"] {
+  display: none !important;
+}
+
+#root .xn-group-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 1px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .12s ease;
+  white-space: nowrap;
+}
+#root .xn-group-btn:hover {
+  border-color: #fca5a5;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+@media (max-width: 640px) {
+  #root .xn-group-btn {
+    min-height: 32px;
+  }
+}
