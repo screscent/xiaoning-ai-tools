@@ -1,0 +1,188 @@
+/* AI 应用开发速查合集页增强（仅 z5hmrdaahj 引用）
+ * 1) 移动端恢复 tab 3 列 / 场景 2 列 / 参数 3 列（全局皮肤把 div.grid 压成单列）
+ * 2) 场景、参数、计价卡补 aria-pressed 与当前态
+ * 3) 复制按钮触控与语义、价格层级、代码字号
+ * 4) 桌面 tab 吸顶 + 移动端「切换工具」浮钮
+ */
+
+/* ---------- 工具切换 tab ---------- */
+#root nav a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px !important;
+  font-weight: 600;
+  border-radius: 12px;
+}
+#root nav a[aria-current="page"] {
+  background: linear-gradient(135deg, #4f46e5, #4338ca) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 18px -8px rgba(79, 70, 229, 0.7) !important;
+}
+#root nav a:not([aria-current="page"]):hover {
+  background: #eef2ff !important;
+  color: #4338ca !important;
+}
+@media (min-width: 1024px) {
+  #root nav {
+    position: sticky;
+    top: 10px;
+    z-index: 30;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+  }
+}
+
+/* ---------- 移动端网格恢复 ---------- */
+@media (max-width: 1023px) {
+  #root div.grid.xn-tabs-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  #root div.grid.xn-scenario-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #root div.grid.xn-param-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+
+/* ---------- 使用场景卡 ---------- */
+#root .xn-scenario-grid button {
+  min-height: 84px !important;
+  padding: 10px 12px !important;
+  border-radius: 14px;
+  background: #fff;
+}
+#root .xn-scenario-grid button span:first-child {
+  font-size: 14px !important;
+}
+#root .xn-scenario-grid button span:last-child {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  color: #64748b !important;
+}
+#root .xn-scenario-grid button.xn-active {
+  position: relative;
+  border-color: #4f46e5 !important;
+  background: linear-gradient(160deg, #eef2ff, #f9faff) !important;
+  box-shadow: 0 8px 20px -14px rgba(79, 70, 229, 0.65);
+}
+#root .xn-scenario-grid button.xn-active::after {
+  content: "已选";
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: #4f46e5;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ---------- 模型参数按钮 ---------- */
+#root .xn-param-grid button {
+  min-height: 40px;
+  font-size: 12.5px !important;
+  border-radius: 10px;
+}
+#root .xn-param-grid button.xn-active {
+  background: #4f46e5 !important;
+  border-color: #4f46e5 !important;
+  color: #fff !important;
+  box-shadow: 0 6px 14px -8px rgba(79, 70, 229, 0.7);
+}
+
+/* ---------- 计价卡 ---------- */
+#root button.xn-token {
+  transition: background 0.12s ease, box-shadow 0.12s ease;
+}
+#root button.xn-token:hover {
+  background: #f8fafc;
+}
+#root button.xn-token[aria-pressed="true"] {
+  background: linear-gradient(135deg, #eef2ff, #f7f9ff) !important;
+  box-shadow: inset 3px 0 0 #4f46e5;
+}
+
+/* ---------- 数字层级 ---------- */
+#root .xn-price {
+  font-size: 24px !important;
+  letter-spacing: -0.01em;
+}
+#root .xn-money {
+  font-size: 17px !important;
+}
+
+/* ---------- Token 快捷值 ---------- */
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 9px;
+}
+#root .xn-chips .xn-chip {
+  min-height: 28px;
+  padding: 3px 11px;
+  border: 1px solid #c7d2fe;
+  border-radius: 999px;
+  background: #f8faff;
+  color: #4338ca;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-chips .xn-chip:hover {
+  border-color: #4f46e5;
+  background: #eef2ff;
+}
+#root .xn-chips .xn-chip.is-on {
+  border-color: #4338ca;
+  background: #4338ca;
+  color: #fff;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root button.xn-copy {
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  border-radius: 9px;
+}
+
+/* ---------- 代码块 ---------- */
+#root pre {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  tab-size: 2;
+}
+
+/* ---------- 切换工具浮钮 ---------- */
+#root .xn-quick-top {
+  position: fixed;
+  right: 14px;
+  bottom: 18px;
+  z-index: 40;
+  display: none;
+  align-items: center;
+  gap: 4px;
+  padding: 9px 13px;
+  border: 1px solid #c7d2fe;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #4338ca;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 22px -10px rgba(67, 56, 202, 0.55);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+#root .xn-quick-top.is-show {
+  display: inline-flex;
+}
+
+@media (max-width: 640px) {
+  #root .xn-scenario-grid button { min-height: 76px !important; }
+  #root .xn-param-grid button { min-height: 42px; font-size: 12px !important; }
+  #root nav a { font-size: 12.5px !important; }
+  #root button.xn-copy { min-height: 44px !important; }
+}
