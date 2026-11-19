@@ -1,0 +1,32 @@
+/* 家用打印机与耗材合集页增强（仅 glrfuqcqng 引用）
+ * 1) 清掉标题旁的 #/xxx 路由串
+ * 2) 工具E/F → 工具 05/06
+ * 3) 选择卡补 aria-pressed；滑块数值与参考价放大
+ */
+
+#root .min-h-screen {
+  background:
+    radial-gradient(880px 360px at 8% -8%, #ccfbf1 0%, rgba(204, 251, 241, 0) 60%),
+    radial-gradient(740px 320px at 96% 0%, #e0f2fe 0%, rgba(224, 242, 254, 0) 56%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+#root .xn-prn-val {
+  font-size: 14px !important;
+  font-weight: 750 !important;
+  color: #0f172a !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-prn-price {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #0f766e !important;
+  font-variant-numeric: tabular-nums;
+}
+#root button[aria-pressed="true"] {
+  box-shadow: 0 0 0 1px rgba(13, 148, 136, .35) inset;
+}
+#root button[aria-pressed]:focus-visible {
+  outline: 2px solid #0d9488;
+  outline-offset: 2px;
+}
