@@ -1,0 +1,21 @@
+/* 饮食营养速查合集页增强（仅 2q82y7qqxb 引用）
+ * - 语义：份量/体重/标签等数字框补字段名（原 aria 只有 g/kJ/mg/kg）
+ * - 选择类按钮补 aria-pressed；6 个工具 tab 补 aria-current
+ * - 视觉：结果卡数字已有 36px，保持；补焦点环与移动端触控尺寸
+ */
+
+#root input[type=number]:focus {
+  outline: 2px solid rgba(47, 107, 82, .35);
+  outline-offset: 1px;
+  border-radius: 8px;
+}
+
+#root button[aria-pressed="true"] {
+  box-shadow: inset 0 0 0 1px rgba(47, 107, 82, .55);
+}
+
+@media (max-width: 640px) {
+  #root button[aria-pressed] {
+    min-height: 38px;
+  }
+}
