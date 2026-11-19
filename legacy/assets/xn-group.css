@@ -1,0 +1,74 @@
+/* 社区团购运营合集页增强（仅 2qxzlvqqxb 引用）
+ * 1) 6 个工具 tab 补 aria-current 与键盘焦点环
+ * 2) 工具D/E/F → 工具 04/05/06
+ * 3) 35 个只有单位的输入补语义 aria + 常用值快捷值
+ * 4) KPI 分级：建议售价/实结/到手/净利 26px，其余关键值 22px
+ */
+
+#root .min-h-screen {
+  background:
+    radial-gradient(900px 380px at 10% -10%, #fef3c7 0%, rgba(254, 243, 199, 0) 60%),
+    radial-gradient(760px 340px at 96% 0%, #d1fae5 0%, rgba(209, 250, 229, 0) 55%),
+    linear-gradient(180deg, #fffdf8 0%, #fff9f1 100%);
+}
+
+#root a[href^="#/"]:focus-visible {
+  outline: 2px solid #059669;
+  outline-offset: 2px;
+}
+
+/* KPI 分级 */
+#root .xn-group-hero {
+  font-size: 26px !important;
+  font-weight: 900 !important;
+  letter-spacing: -.02em;
+  line-height: 1.15 !important;
+  color: #065f46 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-group-mid {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  color: #065f46 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 快捷值胶囊 */
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+#root .xn-chips button {
+  min-height: 26px;
+  padding: 2px 9px;
+  border: 1px solid #e7e5e4;
+  border-radius: 999px;
+  background: #fff;
+  color: #57534e;
+  font-size: 12px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: all .12s ease;
+}
+#root .xn-chips button:hover {
+  border-color: #f59e0b;
+  background: #fffbeb;
+  color: #92400e;
+}
+#root .xn-chips button.is-on {
+  border-color: #047857;
+  background: #047857;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  #root .xn-chips button {
+    min-height: 32px;
+    padding: 4px 11px;
+  }
+  #root .xn-group-hero { font-size: 24px !important; }
+}
