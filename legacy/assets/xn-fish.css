@@ -1,0 +1,107 @@
+/* 钓鱼线组与装备合集页增强（仅 4gfi47btnf 引用）
+ * 1) 六个工具卡补 aria-current 与 hover/focus
+ * 2) 水深/风力输入语义与快捷值；下拉语义
+ * 3) 结果值 17px / 首项 22px；复制 38/44px
+ * 4) 水色青绿渐变
+ */
+
+#root {
+  background: linear-gradient(180deg, #ecfdf5 0, #f8fafc 340px) !important;
+}
+
+/* ---------- 工具卡 ---------- */
+#root a[href^="#/"] {
+  transition: all 0.15s ease;
+}
+#root a[href^="#/"]:focus-visible {
+  outline: 2px solid #14b8a6;
+  outline-offset: 2px;
+}
+#root a[href^="#/"][aria-current="page"] {
+  border-color: #5eead4 !important;
+  box-shadow: 0 8px 22px -14px rgba(13, 148, 136, 0.7);
+}
+#root a[href^="#/"]:not([aria-current="page"]):hover {
+  border-color: #99f6e4 !important;
+}
+
+/* ---------- 表单 ---------- */
+#root input[type="number"] {
+  font-size: 16px !important;
+  min-height: 44px;
+  font-variant-numeric: tabular-nums;
+}
+#root select {
+  min-height: 44px;
+  font-size: 14px !important;
+  font-weight: 600;
+  cursor: pointer;
+}
+#root select:focus {
+  border-color: #14b8a6 !important;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+}
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 7px;
+}
+#root .xn-chips .xn-chip {
+  min-height: 30px;
+  padding: 4px 11px;
+  border: 1px solid #99f6e4;
+  border-radius: 999px;
+  background: #f0fdfa;
+  color: #0f766e;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.12s ease;
+}
+#root .xn-chips .xn-chip:hover {
+  border-color: #14b8a6;
+  background: #ccfbf1;
+}
+#root .xn-chips .xn-chip.is-on {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #fff;
+}
+
+/* ---------- 结果 ---------- */
+#root [data-code-inspect-component="ResultPanel"] {
+  background: linear-gradient(160deg, #f7fffc, #f0fdfa 60%, #ffffff) !important;
+  border-color: #99f6e4 !important;
+}
+#root [data-code-inspect-component="ResultRows"] dd {
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-val {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #115e59 !important;
+  line-height: 1.4;
+}
+#root .xn-val-primary {
+  font-size: 22px !important;
+  color: #0f766e !important;
+}
+
+/* ---------- 复制 ---------- */
+#root button.xn-copy {
+  min-height: 38px !important;
+  padding: 0 13px !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
+  border-radius: 9px;
+}
+
+@media (max-width: 640px) {
+  #root .xn-chips .xn-chip { min-height: 34px; padding: 6px 12px; }
+  #root button.xn-copy { min-height: 44px !important; }
+  #root .xn-val { font-size: 16px !important; }
+  #root .xn-val-primary { font-size: 21px !important; }
+}
