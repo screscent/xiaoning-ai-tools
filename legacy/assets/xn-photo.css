@@ -1,0 +1,165 @@
+/* 摄影与构图速查合集页增强（仅 2q8ndyqqxb 引用）
+ * 1) 右下角「打印 / 存 PDF」浮动按钮 + 打印样式（速查页最常见的真实用法）
+ * 2) 参考表 12.5px + 斑马纹，EV 徽标 13px
+ */
+
+#root .xn-print-btn {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid #d6d3d1;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .92);
+  color: #44403c;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(28, 25, 23, .12);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: all .15s ease;
+}
+#root .xn-print-btn:hover {
+  border-color: #a8a29e;
+  color: #1c1917;
+  box-shadow: 0 6px 18px rgba(28, 25, 23, .18);
+}
+
+/* 场景 / 光线选择：恢复本页暖色深选中态（xn-ux 曾强制白底紫边） */
+#root button[aria-pressed] {
+  border-color: #e7e5e4 !important;
+  color: #57534e !important;
+  background: #fff !important;
+  border-radius: 12px !important;
+}
+#root button[aria-pressed]:hover {
+  border-color: #a8a29e !important;
+  color: #1c1917 !important;
+  background: #faf9f7 !important;
+}
+#root button[aria-pressed="true"] {
+  background: #1c1917 !important;
+  border-color: #1c1917 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(28, 25, 23, .22) !important;
+}
+#root button[aria-pressed="true"]::before {
+  content: "\2713";
+  color: #fff !important;
+  opacity: .9;
+  margin-right: 5px;
+  font-size: 11px;
+}
+
+/* 移动端常驻参数条 */
+#root .xn-mbar {
+  display: none;
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 45;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(28, 25, 23, .94);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(28, 25, 23, .28);
+  backdrop-filter: blur(8px);
+  font-size: 12px;
+}
+#root .xn-mbar .k {
+  color: rgba(255, 255, 255, .62);
+  font-size: 11px;
+}
+#root .xn-mbar b {
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  margin-right: 4px;
+}
+#root .xn-mbar .xn-mbar-ev {
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .14);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+@media (max-width: 640px) {
+  #root .xn-print-btn {
+    display: none;
+  }
+  #root .min-h-screen {
+    padding-bottom: 68px;
+  }
+}
+
+/* 参考表 */
+#root table {
+  font-size: 12.5px !important;
+}
+#root table th {
+  font-size: 12px !important;
+  color: #78716c !important;
+}
+#root table tbody tr:nth-child(even) {
+  background: rgba(245, 245, 244, .6);
+}
+#root table td,
+#root table th {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+/* EV 徽标 */
+#root .xn-ev {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: .01em;
+}
+
+@media print {
+  #root .xn-print-btn,
+  #root .xn-copy,
+  #root .xn-nav-grid,
+  #root a[href^="#/"],
+  #root a[href*="xiaoning-ai-tools"] {
+    display: none !important;
+  }
+  #root,
+  #root .min-h-screen,
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  /* 打印时保留场景/光线选择区块，但改为白底黑框，选中项加深 */
+  #root button {
+    background: #fff !important;
+    color: #111 !important;
+    border: 1px solid #a8a29e !important;
+    box-shadow: none !important;
+  }
+  #root button.bg-stone-900 {
+    background: #111 !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  #root section,
+  #root .rounded-xl {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+  #root .max-h-\[420px\],
+  #root .overflow-auto {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
