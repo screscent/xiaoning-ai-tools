@@ -1,0 +1,53 @@
+/* 图片水印页增强（仅 mknibarxwr 引用） */
+#root .xn-wm-val {
+  font-size: 15px !important;
+  font-weight: 750 !important;
+  color: #3730a3 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-wm-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+#root .xn-wm-chips button {
+  min-height: 30px;
+  padding: 0 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid #dbe2f0;
+  background: #fff;
+  color: #475569;
+  cursor: pointer;
+}
+#root .xn-wm-chips button:hover {
+  border-color: var(--xn-accent);
+  color: var(--xn-accent);
+}
+#root .xn-wm-setbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 10px;
+  padding: 10px 12px;
+  border: 1px dashed #c7d2fe;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fbfcff, #f1f4ff);
+  font-size: 13px;
+  color: #3730a3;
+}
+#root .xn-wm-setbar .xn-setlabel {
+  color: #64748b;
+  font-weight: 500;
+}
+#root .xn-wm-setbar b {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+@media (max-width: 640px) {
+  #root .xn-wm-chips button {
+    min-height: 38px;
+  }
+}
