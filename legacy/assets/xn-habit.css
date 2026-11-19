@@ -1,0 +1,97 @@
+/* 习惯养成与打卡合集页增强（仅 uidaynxjku 引用）
+ * 1) 6 个工具 tab 补 aria-current
+ * 2) 工具E/F → 工具 05/06
+ * 3) 输入语义回填（补签上限/目标拆解/阶段目标）+ 图标按钮可读名称
+ * 4) 打卡页「常用习惯」快填胶囊
+ * 5) 完成率/连续天数/今日进度放大；清空按钮红调
+ */
+
+#root .min-h-screen {
+  background:
+    radial-gradient(900px 380px at 8% -10%, #dcfce7 0%, rgba(220, 252, 231, 0) 60%),
+    radial-gradient(760px 340px at 96% 0%, #dbeafe 0%, rgba(219, 234, 254, 0) 58%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+#root a[href^="#/"]:focus-visible {
+  outline: 2px solid #22c55e;
+  outline-offset: 2px;
+}
+
+/* 统计数字 */
+#root .xn-habit-pct {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: #15803d !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-habit-day {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-habit-today {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #166534 !important;
+}
+#root .xn-habit-meta {
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  color: #475569 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 打卡格 */
+#root .xn-habit-cell {
+  transition: transform .1s ease, box-shadow .1s ease;
+}
+#root .xn-habit-cell:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, .12);
+}
+
+/* 危险操作 */
+#root .xn-danger {
+  border-color: #fecaca !important;
+  background: #fef2f2 !important;
+  color: #b91c1c !important;
+}
+#root .xn-danger:hover {
+  background: #fee2e2 !important;
+}
+
+/* 常用习惯快填 */
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+#root .xn-chips button {
+  min-height: 28px;
+  padding: 2px 11px;
+  border: 1px solid #bbf7d0;
+  border-radius: 999px;
+  background: #fff;
+  color: #166534;
+  font-size: 12.5px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all .12s ease;
+}
+#root .xn-chips button:hover {
+  border-color: #22c55e;
+  background: #f0fdf4;
+}
+#root .xn-chips button.is-on {
+  border-color: #16a34a;
+  background: #16a34a;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  #root .xn-chips button { min-height: 34px; padding: 4px 12px; }
+  #root .xn-habit-pct { font-size: 17px !important; }
+}
