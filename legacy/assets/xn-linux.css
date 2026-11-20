@@ -1,0 +1,460 @@
+/* R1098 Linux 运维速查合集 — 人用友好皮肤
+   1. 终端主题：青绿光晕 + 点阵底纹（纯 CSS）
+   2. 工具编号徽标、tab 当前态与吸顶
+   3. 场景/分类胶囊触达与选中态
+   4. 命令行：命令名、说明、示例、复制按钮的字号与层级
+   5. 危险标签、结果计数、空状态引导
+   6. chmod 表与对照卡、端口卡
+   不改 React 逻辑，仅样式与 ARIA。 */
+
+#root {
+  --xn-em: #059669;
+  --xn-em-dark: #047857;
+  --xn-ink: #0f172a;
+}
+
+/* ---------- 页面底：纯 CSS 渐变 + 点阵 ---------- */
+#root div.min-h-screen {
+  background-color: #f2f7f5 !important;
+  background-image:
+    radial-gradient(820px 420px at 8% -8%, rgba(16, 185, 129, .16), transparent 68%),
+    radial-gradient(760px 380px at 100% 0%, rgba(6, 182, 212, .12), transparent 70%),
+    radial-gradient(rgba(15, 23, 42, .05) 1px, transparent 1px) !important;
+  background-size: auto, auto, 22px 22px !important;
+}
+#root header {
+  border-bottom-color: #dbebe5 !important;
+}
+
+/* 卡片层次 */
+#root section.rounded-2xl {
+  border-color: #dbe7e3 !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 18px 44px -36px rgba(5, 150, 105, .7) !important;
+}
+
+/* ---------- 顶部导航与 tab ---------- */
+#root nav {
+  box-shadow: 0 8px 22px -22px rgba(15, 23, 42, .65);
+  border-bottom-color: #e2ece8 !important;
+}
+#root nav a[href^="#/"] {
+  min-height: 44px !important;
+  font-size: 13px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+#root nav div[class*="overflow-x-auto"] {
+  scrollbar-width: thin;
+}
+#root nav a[href^="#/"] svg {
+  width: 15px;
+  height: 15px;
+}
+#root nav a[href^="#/"][aria-current="page"] {
+  background: linear-gradient(135deg, #0f766e, #059669) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -14px rgba(5, 150, 105, .95), inset 0 0 0 1px rgba(255, 255, 255, .14) !important;
+}
+#root nav a[href^="#/"][aria-current="page"] svg {
+  color: #d1fae5 !important;
+}
+
+/* ---------- 工具编号徽标 ---------- */
+#root .xn-tool-no {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  min-height: 20px;
+  padding: 1px 7px !important;
+  border: 1px solid #a7f3d0;
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #047857 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px !important;
+  letter-spacing: .04em !important;
+  white-space: nowrap;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+#root .xn-tool-no::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  margin-right: 5px;
+  border-radius: 999px;
+  background: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, .16);
+}
+
+/* 面板标题与说明 */
+#root section h2 {
+  font-size: 17.5px !important;
+}
+#root .xn-tool-icon,
+#root section .bg-slate-900.rounded-xl {
+  background: linear-gradient(150deg, #0f172a, #064e3b) !important;
+  box-shadow: 0 8px 18px -14px rgba(4, 120, 87, .8);
+}
+
+/* ---------- 搜索框 ---------- */
+#root input.xn-input {
+  font-size: 14px !important;
+  color: #0f172a !important;
+  border-color: #d7e5e1 !important;
+  background: #fff !important;
+}
+#root input.xn-input:focus {
+  border-color: #34d399 !important;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, .13) !important;
+}
+#root input.xn-input::placeholder {
+  color: #94a3b8;
+}
+
+/* ---------- 场景 / 分类胶囊 ---------- */
+#root .xn-chip {
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  border-color: #d7e5e1 !important;
+  background: #fff !important;
+  color: #334155 !important;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, .02);
+}
+#root .xn-chip:hover {
+  border-color: #34d399 !important;
+  background: #f0fdf9 !important;
+  color: #047857 !important;
+}
+#root .xn-chip[data-xn-active="1"] {
+  background: linear-gradient(135deg, #059669, #0d9488) !important;
+  border-color: #059669 !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 8px 16px -12px rgba(5, 150, 105, .95);
+}
+#root .xn-chip[data-xn-active="1"]:hover {
+  background: linear-gradient(135deg, #047857, #0f766e) !important;
+  color: #fff !important;
+}
+
+/* ---------- 结果计数 ---------- */
+#root .xn-count {
+  font-size: 12.5px !important;
+  padding: 3px 10px !important;
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  border: 1px solid #a7f3d0;
+  font-weight: 600;
+}
+
+/* ---------- 命令行 ---------- */
+#root li.grid {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  border-top-color: #e6eeeb !important;
+}
+@media (min-width: 640px) {
+  #root li.grid {
+    grid-template-columns: minmax(150px, 232px) minmax(0, 1fr) !important;
+  }
+}
+#root li.grid > div:first-child > code {
+  display: inline-block;
+  max-width: 100%;
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere;
+  padding: 5px 10px !important;
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, #0f172a, #0b3b34) !important;
+  border: 1px solid #115e59;
+  color: #6ee7b7 !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  font-weight: 600;
+}
+#root li.grid > div:first-child > code::-webkit-scrollbar {
+  height: 3px;
+}
+#root li.grid p {
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+  color: #475569 !important;
+}
+#root li.grid p span[class*="bg-rose-50"],
+#root li.grid p span.xn-danger {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  padding: 2px 7px !important;
+  border-radius: 999px !important;
+  background: #fff1f2 !important;
+  color: #be123c !important;
+  border: 1px solid #fecdd3;
+  vertical-align: 1px;
+}
+#root li.grid code.whitespace-pre,
+#root li.grid code.whitespace-pre-wrap {
+  font-size: 12.5px !important;
+  line-height: 1.6 !important;
+  color: #1e293b !important;
+}
+#root li.grid .font-mono.text-emerald-600 {
+  font-size: 12.5px !important;
+}
+#root li.grid div[class*="bg-slate-50"] {
+  border-radius: 9px !important;
+  background: #f6faf8 !important;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root .xn-copy {
+  min-height: 34px !important;
+  padding: 0 9px !important;
+  font-size: 11.5px !important;
+  gap: 5px !important;
+  border-color: #d7e5e1 !important;
+  color: #475569 !important;
+  background: #fff !important;
+}
+#root .xn-copy svg {
+  width: 13px;
+  height: 13px;
+}
+#root .xn-copy:hover {
+  border-color: #34d399 !important;
+  color: #047857 !important;
+  background: #f0fdf9 !important;
+}
+#root .xn-copy--icon::after {
+  content: "复制";
+  font-size: 11px;
+  letter-spacing: .02em;
+}
+#root .xn-group-label {
+  font-size: 11.5px !important;
+  color: #64748b !important;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+/* ---------- 空状态 ---------- */
+#root .xn-empty {
+  padding: 26px 18px !important;
+  border-color: #cfe3dc !important;
+  background:
+    radial-gradient(rgba(5, 150, 105, .07) 1px, transparent 1px),
+    linear-gradient(180deg, #f8fdfa, #f2f8f5) !important;
+  background-size: 16px 16px, auto !important;
+}
+#root .xn-empty > p {
+  font-size: 14px !important;
+  color: #334155 !important;
+  font-weight: 600 !important;
+}
+#root .xn-empty > div {
+  font-size: 12.5px !important;
+  color: #64748b !important;
+  line-height: 1.7 !important;
+}
+#root .xn-empty-try {
+  margin-top: 12px;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid #059669;
+  background: linear-gradient(135deg, #059669, #0d9488);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+  box-shadow: 0 10px 20px -16px rgba(5, 150, 105, .95);
+}
+#root .xn-empty-try:hover {
+  filter: brightness(1.06);
+}
+#root .xn-empty-hint {
+  margin-top: 8px !important;
+  font-size: 11.5px !important;
+  color: #94a3b8 !important;
+}
+
+/* ---------- 端口卡 ---------- */
+#root article.xn-port-art {
+  border-color: #dbe7e3 !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .03);
+}
+#root article.xn-port-art > div > div:first-child {
+  width: 88px !important;
+  background: linear-gradient(165deg, #0b1220, #064e3b) !important;
+}
+#root article.xn-port-art > div > div:first-child span:first-child {
+  font-size: 11px !important;
+  color: #6ee7b7 !important;
+  letter-spacing: .16em !important;
+}
+#root article.xn-port-art > div > div:first-child span:nth-child(2) {
+  font-size: 24px !important;
+  color: #a7f3d0 !important;
+}
+#root article.xn-port-art h3 {
+  font-size: 14.5px !important;
+}
+#root article.xn-port-art p {
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+}
+#root article.xn-port-art pre {
+  font-size: 12.5px !important;
+  line-height: 1.65 !important;
+  color: #1e293b !important;
+}
+#root article.xn-port-art div[class*="bg-slate-50"] {
+  background: #f6faf8 !important;
+}
+#root article.xn-port-art p[class*="text-amber"] {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 6px 9px;
+  font-size: 12.5px !important;
+  color: #92400e !important;
+}
+
+/* ---------- chmod 表 / 对照卡 ---------- */
+#root .xn-thead {
+  font-size: 11px !important;
+  letter-spacing: .08em !important;
+  color: #64748b !important;
+  background: #f1f7f4 !important;
+}
+#root .xn-trow {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+}
+#root .xn-trow p:first-child {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #0f172a !important;
+}
+#root .xn-trow p:nth-child(2) {
+  font-size: 11.5px !important;
+}
+#root .xn-bit {
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 7px !important;
+  font-size: 12.5px !important;
+}
+#root .xn-perm-num {
+  font-size: 12.5px !important;
+  padding: 2px 8px !important;
+  border-radius: 6px !important;
+}
+#root .xn-perm-card {
+  min-height: 88px;
+  padding: 10px 12px !important;
+  border-radius: 12px !important;
+  border-color: #dbe7e3 !important;
+}
+#root .xn-perm-card:hover {
+  border-color: #34d399 !important;
+  background: #f6fdfa !important;
+}
+#root .xn-perm-card p:nth-child(1) {
+  font-size: 18px !important;
+  color: #0f172a !important;
+}
+#root .xn-perm-card p:nth-child(2) {
+  font-size: 11.5px !important;
+  letter-spacing: .06em;
+  color: #047857 !important;
+}
+#root .xn-perm-card p:nth-child(3) {
+  font-size: 12px !important;
+  color: #64748b !important;
+}
+@media (min-width: 641px) {
+  #root div.grid.xn-perm-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 640px) {
+  #root div.grid.xn-perm-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 八进制 / 符号两块 */
+#root .fade-up code.font-mono {
+  font-variant-ligatures: none;
+}
+
+/* 使用说明可读性 */
+#root section .text-\[12px\] {
+  font-size: 12.5px !important;
+}
+#root section div[class*="leading-relaxed"] {
+  line-height: 1.7 !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 1023px) {
+  #root div.grid.xn-perm-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}@media (max-width: 640px) {
+  #root nav a[href^="#/"] {
+    flex: 0 0 auto !important;
+    white-space: nowrap;
+    min-height: 46px !important;
+    font-size: 13px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    gap: 5px !important;
+  }
+  #root nav div[class*="overflow-x-auto"] {
+    scroll-snap-type: x proximity;
+    -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, #000 92%, transparent);
+  }
+  #root nav a[href^="#/"] {
+    scroll-snap-align: start;
+  }
+  #root .xn-chip {
+    min-height: 44px !important;
+    font-size: 13px !important;
+    padding: 0 14px !important;
+  }
+  #root .xn-copy {
+    min-height: 42px !important;
+    padding: 0 10px !important;
+  }
+  #root li.grid {
+    gap: 8px !important;
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+  }
+  #root li.grid code.whitespace-pre {
+    font-size: 12px !important;
+  }
+  #root li.grid > div:first-child > code {
+    font-size: 12.5px !important;
+  }
+  #root .xn-empty-try {
+    min-height: 44px;
+  }
+  #root article.xn-port-art > div > div:first-child {
+    width: 76px !important;
+  }
+  #root article.xn-port-art > div > div:first-child span:nth-child(2) {
+    font-size: 21px !important;
+  }
+  #root .xn-perm-grid {
+    gap: 8px !important;
+  }
+  #root .xn-perm-card {
+    min-height: 82px;
+  }
+}
