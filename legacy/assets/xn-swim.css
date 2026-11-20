@@ -154,7 +154,8 @@
 
 /* ---------- 移动端 ---------- */
 @media (max-width: 640px) {
-  #root .xn-swim-overview {
+  #root .xn-swim-overview,
+  #root div.grid:has(> a[href^="#tool-"]) {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 8px !important;
   }
