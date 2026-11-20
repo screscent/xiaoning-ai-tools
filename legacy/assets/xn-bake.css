@@ -1,0 +1,67 @@
+/* R1125 居家烘焙换算合集 — 人用友好皮肤
+   1. 移动端 6 页签 3×2，不再横滑藏 3 个
+   2. 复制按钮 30/32→40/44
+   3. 数量输入 22→16px / 50 高，去原生数字箭头
+   不改 React 逻辑，保留原奶油暖底。 */
+
+#root .xn-bake-tab {
+  min-height: 44px !important;
+  font-size: 12.5px !important;
+}
+#root .xn-bake-tab[aria-current="page"] {
+  box-shadow: 0 8px 18px -14px rgba(120, 72, 20, .8);
+}
+
+#root button.xn-bake-copy,
+#root table button.xn-bake-copy {
+  min-height: 40px !important;
+  padding: 0 10px !important;
+  font-size: 12px !important;
+  border-radius: 999px !important;
+}
+#root button.xn-bake-copy svg,
+#root table button.xn-bake-copy svg {
+  width: 14px;
+  height: 14px;
+}
+
+#root label.block input[type="number"],
+#root input[type="number"] {
+  height: 50px !important;
+  min-height: 50px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+#root label.block input[type="number"]::-webkit-inner-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button,
+#root input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+#root label.block input[type="number"],
+#root label.block input[type="number"],
+#root input[type="number"] {
+  -moz-appearance: textfield !important;
+}
+
+@media (max-width: 639px) {
+  #root div.xn-bake-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    overflow: visible !important;
+  }
+  #root .xn-bake-tab {
+    min-height: 44px !important;
+    justify-content: center;
+    font-size: 12px !important;
+    padding: 0 4px !important;
+  }
+  #root .xn-bake-tab span:last-child {
+    font-size: 10px !important;
+  }
+  #root button.xn-bake-copy,
+#root table button.xn-bake-copy {
+    min-height: 44px !important;
+  }
+}
