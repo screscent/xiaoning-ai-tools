@@ -1,0 +1,170 @@
+/* R1137 图片打码与隐私遮挡合集（工具集落地页）— 人用友好皮肤
+   1. 点阵底 + 靛/青光晕（纯 CSS）
+   2. 6 张卡片整卡可点、悬停上浮、右上角序号
+   3. 标题 15.5 / 描述 13.2 / 标签 11.5；CTA 44 全宽
+   4. 返回工具集 40 命中区、使用说明 44
+   不改 React 逻辑与路由。 */
+
+#root div.min-h-screen {
+  background-color: #F7F8FD !important;
+  background-image:
+    radial-gradient(rgba(99, 102, 241, .16) 1px, transparent 1px),
+    radial-gradient(760px 400px at 96% -10%, rgba(99, 102, 241, .14), transparent 70%),
+    radial-gradient(600px 340px at -6% 106%, rgba(34, 211, 238, .10), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 顶部返回 */
+#root a.xn-hub-back {
+  min-height: 40px !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+  color: #475569 !important;
+  background: #fff !important;
+  border: 1px solid #e2e8f5 !important;
+}
+#root a.xn-hub-back:hover {
+  color: #3730a3 !important;
+  border-color: #c7d2fe !important;
+  background: #f7f8ff !important;
+}
+
+/* 导语 */
+#root h1 + p,
+#root h1 + div > p {
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+  color: #475569 !important;
+}
+
+/* 卡片 */
+#root .xn-hub-card {
+  position: relative;
+  border-radius: 16px !important;
+  border-color: #e3e8f6 !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 14px 30px -26px rgba(30, 41, 89, .5) !important;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease !important;
+  cursor: pointer;
+}
+#root .xn-hub-card:hover {
+  transform: translateY(-3px);
+  border-color: #a5b4fc !important;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, .05), 0 22px 40px -28px rgba(79, 70, 229, .65) !important;
+}
+#root .xn-hub-card:focus-within {
+  outline: 3px solid rgba(99, 102, 241, .32);
+  outline-offset: 2px;
+}
+
+/* 序号角标 */
+#root .xn-hub-card::after {
+  content: attr(data-xn-idx);
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: #6366f1;
+  background: #eef2ff;
+  border-radius: 999px;
+  padding: 2px 7px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 卡片内文字 */
+#root .xn-hub-card h2,
+#root .xn-hub-card h3 {
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  padding-left: 0 !important;
+}
+#root .xn-hub-card h2::before,
+#root .xn-hub-card h3::before { display: none !important; }
+#root .xn-hub-card p {
+  font-size: 13.2px !important;
+  line-height: 1.7 !important;
+  color: #4b5670 !important;
+}
+#root .xn-hub-card span[class*="text-[10px]"] {
+  font-size: 11.5px !important;
+  padding: 3px 8px !important;
+  border-radius: 999px !important;
+  background: #f1f5f9 !important;
+  color: #566179 !important;
+  font-weight: 500;
+}
+
+/* CTA：整行按钮 */
+#root a.xn-hub-cta {
+  display: flex !important;
+  width: 100%;
+  min-height: 44px !important;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px !important;
+  border-radius: 10px !important;
+  background: #eef2ff !important;
+  color: #3730a3 !important;
+  font-size: 13.5px !important;
+  font-weight: 650 !important;
+  text-decoration: none !important;
+  transition: background .15s ease, color .15s ease;
+}
+#root a.xn-hub-cta:hover {
+  background: #e0e7ff !important;
+  color: #312e81 !important;
+}
+#root a.xn-hub-cta svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* 计数徽标 */
+#root p.xn-hub-count {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px !important;
+  border-radius: 999px !important;
+  background: #eef2ff !important;
+  color: #4338ca !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  margin-bottom: 10px !important;
+}
+#root p.xn-hub-count::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6366f1;
+}
+
+/* 使用说明 */
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+  color: #334155 !important;
+}
+#root details > div,
+#root details ol {
+  font-size: 13px !important;
+  line-height: 1.8 !important;
+  color: #56627a !important;
+}
+
+@media (max-width: 639px) {
+  #root a.xn-hub-cta { min-height: 46px !important; }
+  #root .xn-hub-card h2,
+  #root .xn-hub-card h3 { font-size: 15px !important; }
+  #root .xn-hub-card p { font-size: 13px !important; }
+}
