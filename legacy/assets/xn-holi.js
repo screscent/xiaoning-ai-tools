@@ -69,12 +69,28 @@
     });
   }
 
-  /* 修复「16月NaN日 ~ 23月NaN日」：用同卡片其他日期补齐月份 */
+  /* 从放假清单表格查节日的真实起止（表格在隐藏页签里也可读） */
+  function holidayRange(name) {
+    var rows = [].slice.call(document.querySelectorAll("#root table tbody tr"));
+    for (var i = 0; i < rows.length; i++) {
+      var c = rows[i].children;
+      if (!c.length || TXT(c[0]) !== name || !c[1]) continue;
+      var m = TXT(c[1]).match(/(\d{1,2})月(\d{1,2})日/g);
+      if (!m || !m.length) continue;
+      var a = m[0].match(/(\d{1,2})月(\d{1,2})日/);
+      var b = (m[1] || m[0]).match(/(\d{1,2})月(\d{1,2})日/);
+      return { m1: a[1], d1: a[2], m2: b[1], d2: b[2] };
+    }
+    return null;
+  }
+
+  /* 修复「16月NaN日 ~ 23月NaN日」：按所选节日的真实起止还原 */
   function fixNaN() {
+    var sel = document.querySelector("#root select");
+    var name = sel && sel.options[sel.selectedIndex] ? TXT(sel.options[sel.selectedIndex]) : "";
+    var real = name ? holidayRange(name) : null;
     [].slice.call(document.querySelectorAll("#root .result")).forEach(function (card) {
-      if (card.getAttribute("data-xn-nan") === "1") return;
       if (!/NaN/.test(card.textContent || "")) return;
-      card.setAttribute("data-xn-nan", "1");
       var ref = (TXT(card).match(/(\d{1,2})月\d{1,2}日/) || [])[1];
       [].slice.call(card.querySelectorAll(".kv, div, p, span")).forEach(function (el) {
         if (el.children.length > 1) return;
@@ -82,10 +98,16 @@
           var n = el.childNodes[i];
           if (n.nodeType !== 3 || n.nodeValue.indexOf("NaN") < 0) continue;
           var v = n.nodeValue;
+          if (real) {
+            v = v.replace(/（\d{1,2}月NaN日\s*~\s*\d{1,2}月NaN日）/g,
+              "（" + real.m1 + "月" + real.d1 + "日 ~ " + real.m2 + "月" + real.d2 + "日）");
+            v = v.replace(/^\d{1,2}月NaN日$/, real.m1 + "月" + real.d1 + "日");
+          }
           if (ref) {
             v = v.replace(/（(\d{1,2})月NaN日\s*~\s*(\d{1,2})月NaN日）/g, "（" + ref + "月$1日 ~ " + ref + "月$2日）");
           }
           v = v.replace(/(\d{1,2})月NaN日/g, ref ? ref + "月$1日" : "—");
+          v = v.replace(/月0(\d)日/g, "月$1日");
           n.nodeValue = v;
         }
       });
