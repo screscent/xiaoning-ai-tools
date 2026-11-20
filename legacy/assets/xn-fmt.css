@@ -71,3 +71,109 @@
   background: #ecfdf5;
   color: #047857 !important;
 }
+
+/* ---------- R1106 旧页复检 ---------- */
+#root div.min-h-screen {
+  background-color: #F5F6FC !important;
+  background-image:
+    radial-gradient(720px 360px at 100% -6%, rgba(79, 70, 229, .09), transparent 70%),
+    radial-gradient(520px 300px at 0% 6%, rgba(99, 102, 241, .06), transparent 70%),
+    radial-gradient(rgba(79, 70, 229, .05) 1px, transparent 1px) !important;
+  background-size: auto, auto, 22px 22px !important;
+}
+
+#root .xn-fmt-tabs {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+#root .xn-fmt-tabs > a {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+}
+#root .xn-fmt-tabs > a > span {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+}
+#root .xn-fmt-tabs > a[aria-current="page"] > span {
+  box-shadow: 0 8px 18px -14px rgba(67, 56, 202, .9);
+}
+
+#root button.xn-opt {
+  min-height: 46px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  border-radius: 11px !important;
+}
+#root button.xn-fmt-run {
+  min-height: 50px !important;
+  font-size: 14.5px !important;
+  border-radius: 12px !important;
+}
+#root button.xn-mini {
+  min-height: 34px !important;
+  padding: 0 10px !important;
+  font-size: 12px !important;
+  border-radius: 8px !important;
+  border: 1px solid #E2E5F2 !important;
+  background: #fff !important;
+}
+#root button.xn-mini:hover {
+  border-color: #A5B4FC !important;
+  color: #3730A3 !important;
+}
+
+/* 使用说明：移动端默认收起 */
+#root .xn-fmt-usage {
+  position: relative;
+}
+#root button.xn-usage-toggle {
+  display: none;
+}
+@media (max-width: 1023px) {
+  #root .xn-fmt-tabs {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    justify-content: flex-start !important;
+  }
+  #root .xn-fmt-tabs::-webkit-scrollbar { display: none; }
+  #root .xn-fmt-tabs > a { flex: 0 0 auto; min-height: 48px; }
+  #root .xn-fmt-tabs > a > span {
+    min-height: 48px;
+    white-space: nowrap;
+    font-size: 13.5px !important;
+  }
+  #root button.xn-opt { min-height: 46px !important; font-size: 14px !important; }
+  #root button.xn-mini { min-height: 40px !important; font-size: 12.5px !important; }
+  #root .xn-fmt-usage .space-y-2 {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s ease;
+  }
+  #root .xn-fmt-usage[data-open="1"] .space-y-2 {
+    max-height: 720px;
+  }
+  #root button.xn-usage-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 40px;
+    margin-top: 6px;
+    padding: 0 12px;
+    font-size: 12.5px;
+    color: #4338CA;
+    border: 1px solid #DDE1F5;
+    border-radius: 10px;
+    background: #F7F8FF;
+  }
+}

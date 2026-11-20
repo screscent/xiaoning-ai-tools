@@ -66,8 +66,91 @@
     }
   }
 
+  function q(sel, ctx) { return [].slice.call((ctx || document).querySelectorAll(sel)); }
+  function visible(el) { var r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0; }
+
+  function tabs() {
+    var anchors = q("#root a").filter(function (a) { return /^[①②③④⑤]/.test(txt(a)) && visible(a); });
+    if (!anchors.length) return;
+    var nav = anchors[0].parentElement;
+    if (nav) nav.classList.add("xn-fmt-tabs");
+    anchors.forEach(function (a) {
+      var span = a.querySelector("span") || a;
+      var on = /bg-indigo-600|bg-blue-600/.test(span.className || "");
+      if (on) a.setAttribute("aria-current", "page");
+      else if (a.getAttribute("aria-current")) a.removeAttribute("aria-current");
+    });
+  }
+
+  function actions() {
+    q("#root button").forEach(function (b) {
+      if (!visible(b)) return;
+      var t = txt(b);
+      if (/开始转换/.test(t)) {
+        b.classList.add("xn-fmt-run");
+        if (!b.getAttribute("aria-label")) b.setAttribute("aria-label", t + "（本地处理，不上传）");
+        return;
+      }
+      if (t === "复制全文") {
+        b.classList.add("xn-fmt-run");
+        if (!b.getAttribute("aria-label")) b.setAttribute("aria-label", "复制转换结果全文");
+        return;
+      }
+      if (t === "复制") {
+        b.classList.add("xn-mini");
+        if (!b.getAttribute("aria-label")) {
+          var sec = b.closest("section");
+          var h = sec && sec.querySelector("h3");
+          b.setAttribute("aria-label", "复制" + (h ? txt(h).replace(/^\d+\s*/, "") : "结果"));
+        }
+        return;
+      }
+      if (t === "下载") {
+        b.classList.add("xn-mini");
+        if (!b.getAttribute("aria-label")) {
+          var row = b.closest("div");
+          var name = row && row.querySelector("p");
+          b.setAttribute("aria-label", "下载 " + (name ? txt(name) : "转换后图片"));
+        }
+        return;
+      }
+      if (t === "清空全部") {
+        b.classList.add("xn-mini");
+        if (!b.getAttribute("aria-label")) b.setAttribute("aria-label", "清空已选图片");
+      }
+    });
+  }
+
+  function usage() {
+    var h = q("#root h2").filter(function (x) { return txt(x) === "使用说明"; })[0];
+    if (!h) return;
+    var sec = h.closest("section");
+    if (!sec) return;
+    sec.classList.add("xn-fmt-usage");
+    var body = sec.querySelector(".space-y-2");
+    if (!body) return;
+    var btn = sec.querySelector("button.xn-usage-toggle");
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "xn-usage-toggle";
+      btn.addEventListener("click", function () {
+        var open = sec.getAttribute("data-open") === "1";
+        sec.setAttribute("data-open", open ? "0" : "1");
+        btn.setAttribute("aria-expanded", open ? "false" : "true");
+        btn.textContent = open ? "展开使用说明" : "收起使用说明";
+      });
+      sec.insertBefore(btn, body);
+    }
+    var open = sec.getAttribute("data-open") === "1";
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    var label = open ? "收起使用说明" : "展开使用说明";
+    if (txt(btn) !== label) btn.textContent = label;
+  }
+
   function updateAll() {
     if (!document.getElementById("root")) return;
+    tabs();
     var btns = [].slice.call(document.querySelectorAll("#root button"));
     var rows = {};
     btns.forEach(function (b) {
@@ -75,6 +158,14 @@
       if (!g) return;
       b.classList.add("xn-opt");
       if (!rows[g]) rows[g] = b.parentElement;
+      var on = active(b) ? "true" : "false";
+      if (b.getAttribute("aria-pressed") !== on) b.setAttribute("aria-pressed", on);
+      var aria = { fmt: "目标格式选项", q: "输出质量选项", size: "输出尺寸选项" }[g];
+      var box = b.parentElement;
+      if (box && box.getAttribute("role") !== "group") {
+        box.setAttribute("role", "group");
+        box.setAttribute("aria-label", aria);
+      }
     });
 
     var selFmt = selectedIn(btns, "fmt");
@@ -101,6 +192,8 @@
     }
 
     markNumbers();
+    actions();
+    usage();
   }
 
   var scheduled = false;
