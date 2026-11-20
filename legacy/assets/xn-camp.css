@@ -1,0 +1,113 @@
+/* R1119 露营与户外安全合集 — 人用友好皮肤
+   1. 等高线底（纯 CSS，户外地图感）
+   2. 页签 38→44/46，去掉「工具E」前缀
+   3. 场景/强度胶囊 44+aria-pressed、复制 40/44
+   4. 结果卡标题 13.5、正文 13；滑杆 44 高
+   不改 React 逻辑。 */
+
+#root {
+  --xn-camp-line: #E4E7DA;
+}
+
+#root div.min-h-screen {
+  background-color: #F7F8F2 !important;
+  background-image:
+    repeating-radial-gradient(circle at 18% 12%, transparent 0 46px, rgba(96, 116, 72, .055) 46px 47px),
+    repeating-radial-gradient(circle at 82% 78%, transparent 0 62px, rgba(96, 116, 72, .045) 62px 63px),
+    radial-gradient(720px 380px at 100% -8%, rgba(120, 150, 90, .11), transparent 70%) !important;
+}
+
+/* 页签 */
+#root .xn-camp-tab {
+  min-height: 46px !important;
+  font-size: 13.5px !important;
+  padding: 0 18px !important;
+}
+#root .xn-camp-tab[aria-current="page"] {
+  box-shadow: 0 10px 22px -16px rgba(6, 78, 59, .9);
+}
+
+/* 场景 / 强度胶囊（压过通用皮肤 button[aria-pressed] 的白底规则） */
+#root button.xn-camp-chip {
+  min-height: 44px !important;
+  font-size: 13px !important;
+  padding: 0 18px !important;
+}
+#root button.xn-camp-chip[aria-pressed="true"] {
+  background: #047857 !important;
+  border-color: #047857 !important;
+  color: #fff !important;
+}
+#root button.xn-camp-chip[aria-pressed="false"] {
+  background: rgba(255, 255, 255, .72) !important;
+  border-color: #D6D3D1 !important;
+  color: #44403C !important;
+}
+#root button.xn-camp-opt {
+  min-height: 60px;
+}
+#root button.xn-camp-opt[aria-pressed="false"] {
+  background: rgba(255, 255, 255, .72) !important;
+  border-color: #D6D3D1 !important;
+  color: #44403C !important;
+}
+#root button.xn-camp-opt[aria-pressed="true"]:not(.xn-camp-opt-amber) {
+  background: #047857 !important;
+  border-color: #047857 !important;
+  color: #fff !important;
+}
+#root button.xn-camp-opt.xn-camp-opt-amber[aria-pressed="true"] {
+  background: #B45309 !important;
+  border-color: #B45309 !important;
+  color: #fff !important;
+}
+
+/* 复制 */
+#root button.xn-camp-copy {
+  min-height: 40px !important;
+  padding: 0 12px !important;
+  font-size: 12px !important;
+  border-radius: 999px !important;
+}
+
+/* 滑杆 */
+#root input[type="range"] {
+  height: 44px !important;
+  accent-color: #047857;
+}
+
+/* 结果卡 */
+#root .xn-camp-card {
+  border-color: var(--xn-camp-line) !important;
+}
+#root .xn-camp-card .font-semibold {
+  font-size: 13.5px !important;
+}
+#root .xn-camp-card p {
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+}
+
+@media (max-width: 639px) {
+  #root .xn-camp-tab {
+    min-height: 44px !important;
+    font-size: 13px !important;
+    padding: 0 14px !important;
+  }
+  #root .xn-camp-chip {
+    min-height: 44px !important;
+  }
+  #root .xn-camp-card .font-semibold {
+    font-size: 13px !important;
+  }
+  #root .xn-camp-card p {
+    font-size: 12.8px !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  #root button.xn-camp-copy {
+    min-height: 44px !important;
+    font-size: 12.5px !important;
+  }
+}
