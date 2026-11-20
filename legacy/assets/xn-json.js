@@ -71,11 +71,26 @@
     });
   }
 
+  /* 标题里的内部代号（工具E / 工具F）→ 展示层剥离 */
+  function strip() {
+    [].slice.call(document.querySelectorAll("#root h1, #root h2, #root h3")).forEach(function (h) {
+      for (var i = 0; i < h.childNodes.length; i++) {
+        var n = h.childNodes[i];
+        if (n.nodeType === 3) {
+          var v = n.nodeValue.replace(/^\s*工具[A-Z]\s*[·:：\-]?\s*/, "");
+          if (v !== n.nodeValue) n.nodeValue = v;
+          break;
+        }
+      }
+    });
+  }
+
   function run() {
     cards();
     actions();
     switches();
     back();
+    strip();
   }
 
   var timer = null;
