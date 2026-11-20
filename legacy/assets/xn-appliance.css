@@ -1,0 +1,154 @@
+/* 家用电器选购计算合集页增强（仅 c7zfn5egmi 引用）
+ * 1) tab aria-current 与滚动吸附；2) 下拉/开关命名
+ * 3) 常用值；4) 结果主次；5) 提示与操作
+ */
+
+#root {
+  background: linear-gradient(180deg, #f0fbf7 0, #fbfdfc 420px) !important;
+}
+
+/* ---------- tab ---------- */
+#root .tab-nav {
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+#root .tab-nav::-webkit-scrollbar {
+  display: none;
+}
+#root .tab-nav a {
+  min-height: 36px;
+  scroll-snap-align: start;
+  border: 1px solid #d9ebe5 !important;
+  background: #fff !important;
+  color: #3d5a52 !important;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+#root .tab-nav a:hover {
+  border-color: #0f766e !important;
+  color: #0f766e !important;
+}
+#root .tab-nav a[aria-current="page"] {
+  background: linear-gradient(135deg, #0f766e, #0d9488) !important;
+  border-color: #0f766e !important;
+  color: #fff !important;
+  box-shadow: 0 3px 10px rgba(15, 118, 110, 0.22);
+}
+#root .tab-nav a:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}
+
+/* ---------- 表单 ---------- */
+#root input:not([type="checkbox"]),
+#root select {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input:focus,
+#root select:focus {
+  border-color: #0d9488 !important;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12) !important;
+}
+
+/* ---------- 常用值 ---------- */
+#root .xn-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 7px;
+}
+#root .xn-chip {
+  min-height: 32px;
+  padding: 4px 12px;
+  border: 1px solid #bfe6dc;
+  border-radius: 999px;
+  background: #f2fbf8;
+  color: #0f766e;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.12s ease;
+}
+#root .xn-chip:hover {
+  border-color: #0f766e;
+  background: #e6f7f1;
+}
+#root .xn-chip.is-on {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #fff;
+}
+#root .xn-chip.is-on::before {
+  content: "✓ ";
+  font-size: 11px;
+}
+#root .xn-chip:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}
+
+/* ---------- 开关 ---------- */
+#root button[role="switch"]:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}
+
+/* ---------- 结果 ---------- */
+#root [data-code-inspect-component="ResultItem"] {
+  border-radius: 12px !important;
+}
+#root [data-code-inspect-component="ResultItem"] p:first-child {
+  font-size: 12px !important;
+  color: #5b7770 !important;
+  font-weight: 600;
+}
+#root [data-code-inspect-component="ResultItem"] .xn-tile-val {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: #134e4a !important;
+  font-variant-numeric: tabular-nums;
+}
+#root [data-code-inspect-component="ResultItem"].xn-tile-primary .xn-tile-val {
+  font-size: 21px !important;
+  color: #0b3b36 !important;
+}
+
+/* ---------- 提示 ---------- */
+#root .xn-tips li {
+  font-size: 13px !important;
+  line-height: 1.7;
+  color: #52665f !important;
+}
+
+/* ---------- 操作 ---------- */
+#root button.xn-action {
+  min-height: 40px !important;
+  font-weight: 600;
+  border-radius: 9px !important;
+}
+#root button.xn-action:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  #root .tab-nav a {
+    min-height: 40px;
+  }
+  #root .xn-chip {
+    min-height: 36px;
+  }
+  #root button.xn-action {
+    min-height: 44px !important;
+  }
+  #root [data-code-inspect-component="ResultItem"] .xn-tile-val {
+    font-size: 16px !important;
+  }
+  #root [data-code-inspect-component="ResultItem"].xn-tile-primary .xn-tile-val {
+    font-size: 19px !important;
+  }
+}
