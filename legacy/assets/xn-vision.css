@@ -1,0 +1,77 @@
+/* R1122 眼镜与视力保护速查合集 — 人用友好皮肤
+   1. 验光镜片同心圆底（纯 CSS）
+   2. 页签补 role/tab 与键盘可达；移动端标签允许换行不再省略
+   3. 选项 40→44、复制 37→40/44
+   不改 React 逻辑。 */
+
+#root {
+  --xn-vision-line: #E5E9E2;
+}
+
+body {
+  background-color: #F6F8F5 !important;
+  background-image:
+    repeating-radial-gradient(circle at 96% 2%, transparent 0 78px, rgba(15, 90, 86, .045) 78px 79px),
+    radial-gradient(640px 340px at 96% 0%, rgba(13, 148, 136, .10), transparent 70%),
+    linear-gradient(180deg, #F7F9F6, #F3F5F1) !important;
+  background-attachment: fixed !important;
+}
+
+/* 页签 */
+#root .xn-vision-tab {
+  cursor: pointer;
+}
+#root .xn-vision-tab[aria-current="page"] .xn-vision-tab-name {
+  color: #0F172A !important;
+  font-weight: 700 !important;
+}
+#root .xn-vision-tab .xn-vision-tab-name,
+#root .xn-vision-tab .truncate,
+#root .xn-vision-tab span[class*="items-baseline"] > span {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  line-height: 1.28 !important;
+}
+#root .xn-vision-tab span[class*="items-baseline"] {
+  flex-wrap: wrap !important;
+  row-gap: 0 !important;
+}
+
+/* 选项 */
+#root button.xn-vision-opt {
+  min-height: 44px !important;
+  font-size: 12.5px !important;
+}
+
+/* 复制 */
+#root button.xn-vision-copy {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 12.5px !important;
+  border-radius: 10px !important;
+}
+
+/* 结果卡描边 */
+#root .rounded-2xl.border,
+#root .rounded-xl.border {
+  border-color: var(--xn-vision-line);
+}
+
+@media (max-width: 639px) {
+  #root .xn-vision-tab {
+    min-height: 62px !important;
+  }
+  #root .xn-vision-tab .xn-vision-tab-name {
+    font-size: 11.5px !important;
+  }
+  #root button.xn-vision-opt {
+    min-height: 46px !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  #root button.xn-vision-copy {
+    min-height: 44px !important;
+  }
+}
