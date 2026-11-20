@@ -1,0 +1,100 @@
+/* R1120 数码外设选购合集 — 人用友好皮肤
+   1. 碳纤维斜纹底（纯 CSS）
+   2. 修复通用 grid 1fr 把 6 个页签压成竖排（移动 3×2、桌面 6 列）
+   3. 页签 44/46、选项 44 + 选中态、复制 40/44、滑杆 44
+   4. 修复「桌面线材桌面布置与线材」重复标签
+   不改 React 逻辑。 */
+
+#root {
+  --xn-peri-line: #E4E4E7;
+  --xn-peri-ink: #3730A3;
+}
+
+#root div.min-h-screen {
+  background-color: #F7F8FA !important;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(63, 63, 70, .035) 0 1px, transparent 1px 7px),
+    repeating-linear-gradient(-45deg, rgba(63, 63, 70, .025) 0 1px, transparent 1px 7px),
+    radial-gradient(720px 380px at 100% -8%, rgba(79, 70, 229, .09), transparent 70%) !important;
+}
+
+/* 页签 */
+#root .xn-peri-tab {
+  min-height: 46px !important;
+  font-size: 13px !important;
+}
+#root .xn-peri-tab[aria-current="page"] {
+  font-weight: 600 !important;
+}
+
+/* 选项（通用皮肤会把 aria-pressed 按钮刷成白底，这里恢复选中态） */
+#root button.xn-peri-opt {
+  min-height: 44px !important;
+  font-size: 13px !important;
+  padding: 0 12px !important;
+  border-radius: 12px !important;
+}
+#root button.xn-peri-opt[aria-pressed="true"] {
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+#root button.xn-peri-opt[data-xn-accent="indigo"][aria-pressed="true"] {
+  background: #EEF2FF !important; border-color: #C7D2FE !important; color: #3730A3 !important;
+}
+#root button.xn-peri-opt[data-xn-accent="emerald"][aria-pressed="true"] {
+  background: #ECFDF5 !important; border-color: #A7F3D0 !important; color: #047857 !important;
+}
+#root button.xn-peri-opt[data-xn-accent="rose"][aria-pressed="true"] {
+  background: #FFF1F2 !important; border-color: #FECDD3 !important; color: #BE123C !important;
+}
+#root button.xn-peri-opt[data-xn-accent="amber"][aria-pressed="true"] {
+  background: #FFFBEB !important; border-color: #FDE68A !important; color: #B45309 !important;
+}
+#root button.xn-peri-opt[data-xn-accent="sky"][aria-pressed="true"] {
+  background: #F0F9FF !important; border-color: #BAE6FD !important; color: #0369A1 !important;
+}
+#root button.xn-peri-opt[aria-pressed="false"] {
+  background: #fff !important;
+  border-color: #E4E4E7 !important;
+  color: #52525B !important;
+}
+
+/* 复制 */
+#root button.xn-peri-copy {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 12.5px !important;
+  border-radius: 12px !important;
+}
+
+/* 滑杆 */
+#root input[type="range"] {
+  height: 44px !important;
+  accent-color: #4F46E5;
+}
+
+/* 卡片描边 */
+#root div.rounded-2xl.border {
+  border-color: var(--xn-peri-line);
+}
+
+@media (max-width: 639px) {
+  #root div.xn-peri-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+  }
+  #root .xn-peri-tab {
+    min-height: 44px !important;
+    font-size: 12px !important;
+    padding: 0 4px !important;
+  }
+  #root button.xn-peri-opt {
+    font-size: 12.5px !important;
+    padding: 0 8px !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  #root button.xn-peri-copy {
+    min-height: 44px !important;
+  }
+}
