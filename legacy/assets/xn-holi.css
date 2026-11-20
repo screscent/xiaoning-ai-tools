@@ -1,0 +1,199 @@
+/* R1129 节假日与调休合集 — 人用友好皮肤
+   1. 日历纸底（32px 网格 + 红/金暖光晕，纯 CSS）
+   2. 页签 40→44、复制按钮 38→44、数字输入 20→16/50
+   3. 表格：暖色表头、斑马纹、14px、数字等宽
+   4. 倒计时大数字与说明排版
+   不改 React 逻辑。 */
+
+#root .hc-page {
+  min-height: 100vh;
+  background-color: #FCFAF6 !important;
+  background-image:
+    linear-gradient(rgba(200, 120, 60, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 120, 60, .055) 1px, transparent 1px),
+    radial-gradient(760px 380px at 96% -8%, rgba(225, 29, 72, .10), transparent 70%),
+    radial-gradient(560px 320px at -4% 102%, rgba(245, 158, 11, .12), transparent 70%) !important;
+  background-size: 32px 32px, 32px 32px, auto, auto !important;
+}
+
+/* 标题：与暖色主题一致 */
+#root h1 {
+  background: linear-gradient(92deg, #1c1917 0%, #9a3412 55%, #e11d48 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+#root h2 {
+  border-bottom: 0 !important;
+  color: #1c1917 !important;
+  padding-bottom: 2px;
+}
+#root h2::before {
+  background: linear-gradient(180deg, #e11d48, #f59e0b) !important;
+}
+
+/* 页签 */
+#root .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#root .tab {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 13.5px !important;
+  border-radius: 999px !important;
+  transition: all .15s;
+}
+#root .tab:not(.active) {
+  background: #fff !important;
+  border: 1px solid #eadfd2 !important;
+  color: #57534e !important;
+}
+#root .tab:not(.active):hover {
+  border-color: #f0a97a !important;
+  color: #9a3412 !important;
+  background: #fffaf4 !important;
+}
+#root .tab.active {
+  background: linear-gradient(135deg, #e11d48, #f97316) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 24px -14px rgba(225, 29, 72, .75) !important;
+}
+
+/* 数字输入 */
+#root input[type="number"] {
+  height: 50px !important;
+  min-height: 50px !important;
+  font-size: 16px !important;
+  font-weight: 650 !important;
+}
+#root input[type="number"]::-webkit-inner-spin-button,
+#root input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+#root input[type="number"] {
+  -moz-appearance: textfield !important;
+}
+#root select {
+  min-height: 48px !important;
+  font-size: 14.5px !important;
+}
+
+/* 复制按钮 */
+#root button.xn-holi-copy {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 18px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #eadfd2 !important;
+  color: #44403c !important;
+}
+#root button.xn-holi-copy:hover {
+  border-color: #f0a97a !important;
+  color: #9a3412 !important;
+  background: #fffaf4 !important;
+}
+
+/* 表格 */
+#root .result table {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 1px solid #f3e7da !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+#root .result th {
+  background: #fff7ed !important;
+  color: #9a3412 !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  padding: 11px 12px !important;
+  border-bottom: 1px solid #f6ddc6 !important;
+  white-space: nowrap;
+}
+#root .result td {
+  padding: 11px 12px !important;
+  font-size: 14px !important;
+  font-variant-numeric: tabular-nums;
+  border-bottom: 1px solid #f7efe6 !important;
+  color: #292524;
+}
+#root .result tbody tr:nth-child(even) {
+  background: #fffcf7;
+}
+#root .result tbody tr:hover {
+  background: #fff4e8;
+}
+#root .result tbody tr:last-child td {
+  border-bottom: 0 !important;
+}
+
+/* 倒计时大数字 */
+#root .result .big {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  letter-spacing: -.01em;
+  color: #1c1917 !important;
+}
+#root .result .big .xn-hl {
+  font-size: 42px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(120deg, #e11d48, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-right: 6px;
+  letter-spacing: -.02em;
+}
+#root .result .kv {
+  font-size: 14px !important;
+  line-height: 1.95 !important;
+  color: #57534e !important;
+}
+#root .result .kv b {
+  color: #9a3412;
+}
+
+/* 使用说明 */
+#root details > summary {
+  font-size: 14.5px !important;
+  color: #44403c !important;
+}
+#root details > div {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #57534e !important;
+}
+
+@media (max-width: 639px) {
+  #root .tab {
+    font-size: 13px !important;
+    padding: 0 14px !important;
+  }
+  #root .result th,
+  #root .result td {
+    padding: 9px 8px !important;
+    font-size: 13px !important;
+  }
+  #root .result .big {
+    font-size: 21px !important;
+  }
+  #root .result .big .xn-hl {
+    font-size: 34px;
+  }
+}
