@@ -1,0 +1,95 @@
+/* R1109 乐理与音准速查合集 — 人用友好皮肤
+   1. 五线谱质感底（纯 CSS）
+   2. 总览卡桌面 3 列 / 移动 2 列紧凑
+   3. 常用主音、生成、复制按钮 44/48
+   不改 React 逻辑。 */
+
+#root {
+  --xn-music-ink: #2A2A33;
+  --xn-music-accent: #4338CA;
+  --xn-music-line: #EDE9DF;
+}
+
+#root div.min-h-screen {
+  background-color: #FBF9F4 !important;
+  background-image:
+    repeating-linear-gradient(180deg, rgba(67, 56, 202, .045) 0 1px, transparent 1px 9px),
+    radial-gradient(680px 340px at 100% -8%, rgba(67, 56, 202, .07), transparent 70%),
+    radial-gradient(rgba(120, 96, 72, .035) 1px, transparent 1px) !important;
+  background-size: auto, auto, 22px 22px !important;
+}
+
+/* 总览：桌面 3 列，手机 2 列 */
+@media (min-width: 1024px) {
+  #root .xn-music-tools {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 639px) {
+  #root .xn-music-tools {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+  #root .xn-music-card {
+    padding: 12px !important;
+    border-radius: 14px !important;
+  }
+  #root .xn-music-card > div:nth-child(2) {
+    margin-top: 8px !important;
+    font-size: 13.5px !important;
+    line-height: 1.35 !important;
+  }
+  #root .xn-music-card > div.mt-1 {
+    display: none;
+  }
+  #root .xn-music-card > div.mt-2 {
+    margin-top: 6px !important;
+    font-size: 11.5px !important;
+  }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  #root .xn-music-tools {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 常用主音 */
+#root button.xn-music-note {
+  min-height: 44px !important;
+  min-width: 44px !important;
+  padding: 0 12px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+}
+
+/* 生成 / 复制 */
+#root button.xn-music-run {
+  min-height: 48px !important;
+  padding: 0 22px !important;
+  font-size: 14.5px !important;
+  border-radius: 12px !important;
+}
+#root button.xn-music-copy {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 12.5px !important;
+}
+
+/* 结果区代码块可读性 */
+#root pre, #root code {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+}
+
+@media (max-width: 1023px) {
+  #root button.xn-music-note {
+    min-height: 46px !important;
+    font-size: 14px !important;
+  }
+  #root button.xn-music-run {
+    min-height: 50px !important;
+  }
+  #root button.xn-music-copy {
+    min-height: 46px !important;
+  }
+}
