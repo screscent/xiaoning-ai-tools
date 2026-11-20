@@ -135,11 +135,11 @@
     var root = document.getElementById("root");
     if (!root) { setTimeout(bind, 300); return; }
     enhance();
-    if (window.MutationObserver) new MutationObserver(schedule).observe(root, { childList: true, subtree: true });
+    if (window.MutationObserver) new MutationObserver(schedule).observe(root, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
     window.addEventListener("hashchange", function () { setTimeout(enhance, 180); });
     setTimeout(enhance, 700);
     setTimeout(enhance, 1800);
-    setInterval(schedule, 2000);
+    setInterval(schedule, 1200);
   }
 
   if (document.readyState === "loading") {
