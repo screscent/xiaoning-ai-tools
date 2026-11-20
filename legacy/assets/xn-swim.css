@@ -1,0 +1,210 @@
+/* R1103 游泳配速与训练合集 — 人用友好皮肤
+   1. 水感主题：青蓝光晕 + 点阵
+   2. 工具总览：移动端 2 列紧凑、卡片可点
+   3. 吸顶工具跳转条 + 当前小节
+   4. 常用值胶囊、复制按钮、使用说明
+   5. 结果 KPI 字号
+   不改 React 逻辑。 */
+
+#root {
+  --xn-swim-ink: #0E2A3A;
+  --xn-swim-cyan: #0891B2;
+  --xn-swim-teal: #0D9488;
+  --xn-swim-line: #D8E8EF;
+}
+
+/* 页面底 */
+#root div.min-h-screen {
+  background-color: #F4F9FB !important;
+  background-image:
+    radial-gradient(760px 400px at 92% -4%, rgba(13, 148, 136, .10), transparent 70%),
+    radial-gradient(640px 340px at 0% 0%, rgba(8, 145, 178, .08), transparent 70%),
+    radial-gradient(rgba(14, 42, 58, .04) 1px, transparent 1px) !important;
+  background-size: auto, auto, 20px 20px !important;
+}
+
+/* 工具总览卡片 */
+#root .xn-swim-card {
+  transition: transform .15s, background-color .15s;
+}
+#root .xn-swim-card:hover {
+  background: rgba(255, 255, 255, .18) !important;
+  transform: translateY(-2px);
+}
+#root .xn-swim-card .xn-swim-go {
+  font-size: 12px !important;
+  opacity: .9;
+}
+
+/* 吸顶工具条 */
+#root .xn-swim-sub {
+  position: sticky;
+  top: 56px;
+  z-index: 30;
+  display: flex;
+  gap: 6px;
+  margin: 14px 0 10px;
+  padding: 6px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .92);
+  border: 1px solid #DCECF2;
+  box-shadow: 0 10px 24px -22px rgba(14, 42, 58, .6);
+  backdrop-filter: blur(8px);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+#root .xn-swim-sub::-webkit-scrollbar {
+  display: none;
+}
+#root .xn-swim-sub a {
+  flex: 1 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 38px;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #4C6472;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color .15s, color .15s;
+}
+#root .xn-swim-sub a:hover {
+  background: #EFF8FB;
+  color: #0E7490;
+}
+#root .xn-swim-sub a[aria-current="true"] {
+  background: linear-gradient(135deg, #0E7490, #0D9488);
+  color: #F2FDFF;
+  box-shadow: 0 8px 16px -12px rgba(14, 116, 144, .9);
+}
+#root section[id^="tool-"] {
+  scroll-margin-top: 112px;
+}
+
+/* 工具标题 */
+#root section h2 {
+  font-size: 20px !important;
+}
+#root section h2 + p {
+  font-size: 13px !important;
+  color: #5B7280 !important;
+}
+
+/* 数字输入 */
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#root input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* 常用值胶囊 */
+#root .xn-swim-chip {
+  min-height: 34px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
+  border-radius: 999px !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-swim-chip:hover {
+  background: #ECFDFF !important;
+}
+
+/* 复制 / 使用说明 */
+#root button.xn-swim-copy {
+  min-height: 38px !important;
+  padding: 0 14px !important;
+  font-size: 12.5px !important;
+}
+#root summary.xn-swim-usage {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  color: #37505E !important;
+}
+
+/* 结果 KPI */
+#root section .bg-gradient-to-br p[class*="tabular-nums"] {
+  font-size: 24px !important;
+  line-height: 1.25 !important;
+}
+#root section .bg-gradient-to-br p[class*="text-cyan-200"] {
+  font-size: 28px !important;
+}
+#root section .bg-gradient-to-br p[class*="text-[11px]"] {
+  font-size: 12.5px !important;
+}
+
+/* 分段按钮统一高度 */
+#root section button[aria-pressed] {
+  min-height: 40px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root .xn-swim-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  #root .xn-swim-card {
+    padding: 10px !important;
+    border-radius: 14px !important;
+  }
+  #root .xn-swim-card p + p {
+    display: none;
+  }
+  #root .xn-swim-card p {
+    font-size: 13.5px !important;
+    margin-top: 6px !important;
+  }
+  #root .xn-swim-card .xn-swim-go {
+    font-size: 11.5px !important;
+  }
+  #root .xn-swim-card span[class*="h-9"] {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  #root .xn-swim-sub {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    margin: 0;
+    display: none;
+    background: #fff;
+    box-shadow: 0 10px 26px -18px rgba(14, 42, 58, .55);
+  }
+  #root .xn-swim-sub[data-xn-visible="1"] {
+    display: flex;
+  }
+  #root .xn-swim-sub a {
+    min-height: 42px;
+    padding: 0 12px;
+  }
+  #root .xn-swim-chip {
+    min-height: 40px !important;
+    font-size: 13px !important;
+    padding: 0 13px !important;
+  }
+  #root button.xn-swim-copy {
+    min-height: 44px !important;
+  }
+  #root section .bg-gradient-to-br p[class*="tabular-nums"] {
+    font-size: 22px !important;
+  }
+  #root section .bg-gradient-to-br p[class*="text-cyan-200"] {
+    font-size: 25px !important;
+  }
+}
