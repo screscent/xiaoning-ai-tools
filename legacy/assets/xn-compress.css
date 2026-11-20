@@ -1,0 +1,222 @@
+/* R1105 图片压缩与批量处理合集 — 人用友好皮肤（旧页复检）
+   1. 冷调蓝灰底 + 点阵（纯 CSS）
+   2. 6 工具 tab：46px、移动端横滑、当前态
+   3. 质量/最长边/格式：46px 芯片
+   4. 开始压缩 / 下载 / 重新选择触达
+   5. 压缩前后结果：数值 19px、压缩率 24px
+   不改 React 逻辑。 */
+
+#root {
+  --xn-cmp-ink: #1F2A37;
+  --xn-cmp-blue: #2F6FB0;
+  --xn-cmp-line: #DFE7F2;
+}
+
+/* 页面底：冷调蓝灰 + 点阵 */
+#root div.min-h-screen {
+  background-color: #F4F7FB !important;
+  background-image:
+    radial-gradient(760px 380px at 100% -8%, rgba(47, 111, 176, .10), transparent 70%),
+    radial-gradient(560px 320px at 0% 8%, rgba(99, 132, 180, .07), transparent 70%),
+    radial-gradient(rgba(47, 111, 176, .055) 1px, transparent 1px) !important;
+  background-size: auto, auto, 22px 22px !important;
+}
+
+#root h1 + p {
+  font-size: 13.5px !important;
+  line-height: 1.72 !important;
+  color: #51617A !important;
+}
+
+/* 6 工具 tab */
+#root .xn-cmp-tabs {
+  display: flex !important;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#root .xn-cmp-tabs > a {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px !important;
+  border-radius: 12px !important;
+  font-size: 13.5px !important;
+  font-weight: 550 !important;
+  white-space: nowrap;
+}
+#root .xn-cmp-tabs > a[aria-current="page"] {
+  box-shadow: 0 8px 18px -14px rgba(47, 111, 176, .9);
+}
+
+/* 选项芯片：质量 / 最长边 / 输出格式 */
+#root button.xn-cmp-chip {
+  min-height: 46px !important;
+  padding: 0 12px !important;
+  font-size: 13.5px !important;
+  border-radius: 11px !important;
+}
+#root .xn-cmp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 三组参数：桌面按内容分配宽度，避免「最长边」4 个芯片掉行 */
+@media (min-width: 1024px) {
+  #root .xn-cmp-params {
+    display: grid !important;
+    grid-template-columns: minmax(168px, 186px) minmax(318px, 1.5fr) minmax(188px, 214px) !important;
+    gap: 16px 22px !important;
+    align-items: start;
+  }
+  #root .xn-cmp-params > div {
+    min-width: 0;
+  }
+}
+
+/* 主操作 */
+#root button.xn-cmp-primary,
+#root button.xn-cmp-download {
+  min-height: 48px !important;
+  padding: 0 24px !important;
+  font-size: 14.5px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+}
+#root button.xn-cmp-download {
+  box-shadow: 0 10px 20px -16px rgba(22, 128, 61, .9);
+}
+
+/* 重新选择：从 24px 文字按钮升为可点按钮 */
+#root button.xn-cmp-reselect {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 12.5px !important;
+  color: #43536B !important;
+  border: 1px solid #D7E1EF !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+#root button.xn-cmp-reselect:hover {
+  border-color: #9DB8D8 !important;
+  color: #1E4F86 !important;
+  background: #F6FAFF !important;
+}
+
+/* 上传区（覆盖 xn-ux 的 170px 固定高度） */
+#root label.xn-cmp-drop {
+  min-height: 226px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-color: #C6D7EC !important;
+  background: linear-gradient(180deg, #FBFDFF, #EDF4FC) !important;
+}
+#root label.xn-cmp-drop:hover {
+  border-color: #6B9BD2 !important;
+  background: linear-gradient(180deg, #F7FBFF, #E7F1FC) !important;
+}
+#root .xn-cmp-drop svg {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 10px;
+}
+#root .xn-cmp-drop > div:first-of-type,
+#root .xn-cmp-drop .font-medium {
+  font-size: 15px !important;
+  color: #1E3A5F;
+}
+#root .xn-cmp-hint {
+  font-size: 13px !important;
+  color: #5A6B84 !important;
+}
+
+/* 压缩前后结果 */
+#root .xn-cmp-result {
+  gap: 14px;
+}
+#root .xn-cmp-result > div {
+  border-radius: 14px !important;
+  border-color: #E2E9F4 !important;
+  box-shadow: 0 14px 30px -28px rgba(31, 42, 55, .55) !important;
+}
+#root .xn-cmp-result h3 {
+  font-size: 13.5px !important;
+  letter-spacing: .01em;
+  color: #34445C !important;
+}
+#root .xn-cmp-result dl {
+  margin-top: 14px !important;
+}
+#root .xn-cmp-result dl > div {
+  padding: 3px 0;
+}
+#root .xn-cmp-result dt {
+  font-size: 12.5px !important;
+  color: #64748B !important;
+}
+#root .xn-cmp-result dd {
+  font-size: 19px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  color: #1F2A37 !important;
+}
+#root .xn-cmp-result dd.xn-cmp-vol {
+  font-size: 21px !important;
+}
+#root .xn-cmp-result dd.xn-cmp-rate {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+/* 使用说明 */
+#root details summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* 移动端 */
+@media (max-width: 1023px) {
+  #root .xn-cmp-tabs {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    justify-content: flex-start !important;
+  }
+  #root .xn-cmp-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  #root .xn-cmp-tabs > a {
+    flex: 0 0 auto;
+    min-height: 48px;
+    font-size: 13.5px !important;
+  }
+  #root button.xn-cmp-chip {
+    min-height: 46px !important;
+    font-size: 14px !important;
+  }
+  #root button.xn-cmp-primary,
+  #root button.xn-cmp-download {
+    min-height: 50px !important;
+    flex: 1 1 auto;
+  }
+  #root button.xn-cmp-reselect {
+    min-height: 44px !important;
+  }
+  #root label.xn-cmp-drop {
+    min-height: 200px;
+  }
+  #root .xn-cmp-result dd {
+    font-size: 20px !important;
+  }
+  #root .xn-cmp-result dd.xn-cmp-rate {
+    font-size: 26px !important;
+  }
+}
