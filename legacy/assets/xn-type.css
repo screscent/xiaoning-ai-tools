@@ -1,0 +1,135 @@
+/* R1138 打字练习与速度合集 — 人用友好皮肤
+   1. 键盘格底（18px 点阵 + 蓝/琥珀光晕，纯 CSS）
+   2. 顶部工具导航 36→44、去「工具F·」前缀、aria-current
+   3. 选项 chip 37→44 + aria-pressed；文本域 73→150
+   4. 开始测试 46 / 重置 44；WPM 数字 38 等宽；标签对比度
+   不改 React 逻辑与计时。 */
+
+#root div.min-h-screen {
+  background-color: #F7F9FD !important;
+  background-image:
+    radial-gradient(rgba(37, 99, 235, .14) 1px, transparent 1px),
+    radial-gradient(740px 400px at 96% -10%, rgba(37, 99, 235, .13), transparent 70%),
+    radial-gradient(600px 340px at -6% 106%, rgba(245, 158, 11, .10), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 顶部工具导航 */
+#root a.xn-type-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+  font-weight: 550;
+  color: #475569 !important;
+}
+#root a.xn-type-tab:hover {
+  background: #f3f6ff !important;
+  color: #1d4ed8 !important;
+}
+#root a.xn-type-tab[aria-current="page"] {
+  background: linear-gradient(135deg, rgba(37, 99, 235, .14), rgba(79, 70, 229, .08)) !important;
+  color: #1e40af !important;
+  font-weight: 700 !important;
+  box-shadow: inset 0 0 0 1px rgba(59, 130, 246, .3);
+}
+
+/* 选项 chip */
+#root button.xn-type-chip {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+#root button.xn-type-chip[aria-pressed="true"] {
+  background: linear-gradient(135deg, rgba(37, 99, 235, .16), rgba(79, 70, 229, .08)) !important;
+  border-color: #60a5fa !important;
+  color: #1e3a8a !important;
+  font-weight: 700 !important;
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, .3);
+}
+
+/* 练习文本域 */
+#root [data-xn-type-wrap="1"] {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  max-width: 100%;
+}
+#root textarea {
+  min-height: 150px !important;
+  font-size: 15.5px !important;
+  line-height: 1.95 !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  letter-spacing: .01em;
+  background: #fcfdff !important;
+}
+#root textarea:focus {
+  background: #fff !important;
+}
+
+/* 按钮 */
+#root button.xn-type-primary {
+  min-height: 46px !important;
+  height: 46px !important;
+  padding: 0 24px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 10px 22px -12px rgba(37, 99, 235, .85) !important;
+}
+#root button.xn-type-secondary {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #3b465e !important;
+}
+#root button.xn-type-secondary:hover {
+  border-color: #93c5fd !important;
+  color: #1d4ed8 !important;
+  background: #f5f9ff !important;
+}
+
+/* 成绩数字与标签 */
+#root .text-4xl {
+  font-size: 38px !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+  color: #0f172a !important;
+}
+#root .text-\[12px\],
+#root .text-xs {
+  font-size: 12.5px !important;
+  color: #64748b !important;
+}
+
+/* 提示与说明 */
+#root .xn-hint {
+  font-size: 12.5px !important;
+  color: #7c879c !important;
+}
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+  color: #334155 !important;
+}
+#root details > div {
+  font-size: 13px !important;
+  line-height: 1.8 !important;
+  color: #56627a !important;
+}
+
+@media (max-width: 639px) {
+  #root a.xn-type-tab { font-size: 12.5px !important; padding: 0 6px !important; }
+  #root textarea { min-height: 170px !important; font-size: 15px !important; }
+  #root .text-4xl { font-size: 32px !important; }
+}
