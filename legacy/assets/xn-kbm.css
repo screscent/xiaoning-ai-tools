@@ -1,0 +1,74 @@
+/* R1123 键鼠手感与灵敏度配置合集 — 人用友好皮肤
+   1. 深色桌面垫网格底（纯 CSS）
+   2. 页签补 tab 语义；选项补 aria-pressed 并保持深色选中态
+   3. 输入 46→50、选项统一 44、去「工具A/⑤」前缀
+   不改 React 逻辑。 */
+
+body {
+  background-color: #F4F7F9 !important;
+  background-image:
+    linear-gradient(rgba(15, 60, 72, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 60, 72, .035) 1px, transparent 1px),
+    radial-gradient(720px 360px at 100% -8%, rgba(34, 211, 238, .10), transparent 70%) !important;
+  background-size: 22px 22px, 22px 22px, auto !important;
+  background-attachment: fixed !important;
+}
+
+/* 页签 */
+#root .xn-kbm-tab {
+  min-height: 46px !important;
+  font-size: 13px !important;
+}
+#root .xn-kbm-tab[aria-current="page"] {
+  box-shadow: 0 10px 22px -16px rgba(34, 211, 238, .9);
+}
+
+/* 选项：压过通用 button[aria-pressed] 的白底 */
+#root button.xn-kbm-opt {
+  min-height: 44px !important;
+  font-size: 13px !important;
+}
+#root button.xn-kbm-opt[aria-pressed="true"] {
+  background: rgba(52, 211, 153, .16) !important;
+  border-color: rgba(52, 211, 153, .38) !important;
+  color: #6EE7B7 !important;
+}
+#root button.xn-kbm-opt[aria-pressed="false"] {
+  background: rgba(15, 23, 42, .72) !important;
+  border-color: #334155 !important;
+  color: #CBD5E1 !important;
+}
+
+/* 标签与说明：原页按深色底设计，浅底上对比不足 */
+#root main label.block,
+#root main label.block span {
+  color: #334155 !important;
+}
+#root main label.block span[class*="text-slate-4"],
+#root main label.block span[class*="text-slate-5"] {
+  color: #64748B !important;
+}
+#root section[aria-labelledby="usage-title"] li {
+  color: #64748B !important;
+}
+#root main p[class*="text-slate-4"],
+#root main p[class*="text-slate-5"] {
+  color: #64748B !important;
+}
+
+/* 输入 */
+#root input[type="text"] {
+  height: 50px !important;
+  min-height: 50px !important;
+  font-size: 15px !important;
+}
+
+@media (max-width: 639px) {
+  #root .xn-kbm-tab {
+    min-height: 44px !important;
+    font-size: 12.5px !important;
+  }
+  #root button.xn-kbm-opt {
+    min-height: 44px !important;
+  }
+}
