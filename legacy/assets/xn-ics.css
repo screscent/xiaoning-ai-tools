@@ -1,0 +1,160 @@
+/* R1141 日历文件与订阅合集 — 人用友好皮肤
+   1. 页面底：18px 点阵 + 靛蓝/琥珀光晕（纯 CSS）
+   2. 工具条 58→64、副标题 10→11.5、横滑吸附
+   3. 填入示例 16→36 胶囊；复制 38→44；下载 38→46 主按钮
+   4. 返回 20→40、说明正文 12→13/1.75
+   不改 React 逻辑。 */
+
+#root div.min-h-screen {
+  background-color: #F7F9FD !important;
+  background-image:
+    radial-gradient(rgba(37, 99, 235, .13) 1px, transparent 1px),
+    radial-gradient(720px 380px at 100% -8%, rgba(37, 99, 235, .12), transparent 70%),
+    radial-gradient(560px 320px at -8% 104%, rgba(245, 158, 11, .10), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 工具条 */
+#root [data-xn-ics-nav="1"] {
+  scroll-snap-type: x proximity;
+  gap: 8px !important;
+  padding-bottom: 4px !important;
+}
+#root a.xn-ics-tab {
+  min-height: 64px !important;
+  padding: 9px 14px !important;
+  border-radius: 12px !important;
+  scroll-snap-align: start;
+  border: 1px solid #e3e9f5 !important;
+  background: #fff !important;
+  color: #475569 !important;
+}
+#root a.xn-ics-tab:hover {
+  border-color: #93c5fd !important;
+  background: #f7faff !important;
+  transform: translateY(-1px);
+}
+#root a.xn-ics-tab span:first-child {
+  font-size: 14.5px !important;
+  font-weight: 650 !important;
+}
+#root a.xn-ics-tab span:last-child {
+  font-size: 11.5px !important;
+  line-height: 1.45 !important;
+  opacity: .82;
+}
+#root a.xn-ics-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+  border-color: #3b82f6 !important;
+  color: #fff !important;
+  box-shadow: 0 10px 22px -14px rgba(37, 99, 235, .9) !important;
+}
+#root a.xn-ics-tab[aria-current="page"] span:last-child {
+  opacity: .92;
+}
+
+/* 按钮 */
+#root button.xn-ics-primary {
+  min-height: 46px !important;
+  height: 46px !important;
+  padding: 0 22px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 10px 22px -12px rgba(37, 99, 235, .85) !important;
+}
+#root button.xn-ics-primary:not(:disabled):hover {
+  background: linear-gradient(135deg, #1d4ed8, #4338ca) !important;
+}
+#root button.xn-ics-primary:disabled {
+  background: #e5eaf3 !important;
+  color: #94a3b8 !important;
+  box-shadow: none !important;
+}
+#root button.xn-ics-secondary {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #3b465e !important;
+}
+#root button.xn-ics-secondary:not(:disabled):hover {
+  border-color: #93c5fd !important;
+  color: #1d4ed8 !important;
+  background: #f5f9ff !important;
+}
+#root button.xn-ics-secondary:disabled {
+  background: #f4f6fb !important;
+  color: #a3aec2 !important;
+}
+#root button.xn-ics-link {
+  min-height: 36px !important;
+  height: 36px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  border-radius: 9px !important;
+  background: #eef4ff !important;
+  border: 1px solid #dbe7ff !important;
+  color: #1e40af !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+#root button.xn-ics-link:hover {
+  background: #e0ebff !important;
+  border-color: #b9d2ff !important;
+}
+
+/* 输入区 */
+#root textarea {
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+}
+#root input[type="text"] {
+  font-size: 14px !important;
+  border-radius: 10px !important;
+}
+
+/* 状态胶囊 */
+#root .rounded-full.bg-green-50,
+#root .rounded-full.bg-red-50 {
+  font-size: 12.5px !important;
+  padding: 3px 10px !important;
+}
+
+/* 返回 / 说明 */
+#root a.xn-ics-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #1d4ed8 !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+}
+#root a.xn-ics-back:hover {
+  border-color: #93c5fd !important;
+  background: #f5f9ff !important;
+}
+#root [data-xn-ics-help="1"],
+#root [data-xn-ics-help="1"] * {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+}
+
+@media (max-width: 639px) {
+  #root a.xn-ics-tab { min-height: 58px !important; padding: 8px 12px !important; }
+  #root a.xn-ics-tab span:first-child { font-size: 13.5px !important; }
+  #root button.xn-ics-primary,
+  #root button.xn-ics-secondary { flex: 1 1 auto; }
+}
