@@ -1,0 +1,186 @@
+/* R1139 书签整理与导出合集 — 人用友好皮肤
+   1. 页面底：18px 点阵 + 靛蓝/青绿光晕（纯 CSS）
+   2. 工具选择器：6 列截断 → 自适应换行，标签完整可见，44px
+   3. 载入/清空/试试示例 38→44；「一键去重并复制」36→46 主按钮
+   4. 统计数字 20→24，标签 12.5；说明/返回 44/40
+   不改 React 逻辑。 */
+
+#root div.min-h-screen {
+  background-color: #F7F8FC !important;
+  background-image:
+    radial-gradient(rgba(37, 99, 235, .13) 1px, transparent 1px),
+    radial-gradient(720px 380px at 100% -8%, rgba(37, 99, 235, .12), transparent 70%),
+    radial-gradient(560px 320px at -8% 104%, rgba(13, 148, 136, .10), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 工具选择器：不再固定 6 列挤压截断（桌面 3+3，移动 2 列） */
+#root [data-xn-bm-tools="1"] {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+  padding: 6px !important;
+}
+#root button.xn-bm-tool {
+  height: 44px !important;
+  min-height: 44px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 12px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+  gap: 6px !important;
+  justify-content: flex-start !important;
+}
+#root button.xn-bm-tool span,
+#root button.xn-bm-tool svg {
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+#root button.xn-bm-tool[aria-pressed="true"] {
+  background: linear-gradient(135deg, rgba(37, 99, 235, .16), rgba(79, 70, 229, .08)) !important;
+  border: 1px solid #60a5fa !important;
+  color: #1e3a8a !important;
+  font-weight: 700 !important;
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, .28);
+}
+#root button.xn-bm-tool[aria-pressed="false"] {
+  background: #fff !important;
+  border: 1px solid #e2e8f4 !important;
+  color: #475569 !important;
+}
+#root button.xn-bm-tool[aria-pressed="false"]:hover {
+  border-color: #93c5fd !important;
+  color: #1d4ed8 !important;
+  background: #f7faff !important;
+}
+
+/* 输入框 */
+#root textarea {
+  font-size: 14.5px !important;
+  line-height: 1.85 !important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+}
+
+/* 按钮 */
+#root button.xn-bm-primary {
+  min-height: 46px !important;
+  height: 46px !important;
+  padding: 0 22px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 10px 22px -12px rgba(37, 99, 235, .85) !important;
+}
+#root button.xn-bm-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #4338ca) !important;
+}
+#root button.xn-bm-secondary {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #3b465e !important;
+}
+#root button.xn-bm-secondary:hover {
+  border-color: #93c5fd !important;
+  color: #1d4ed8 !important;
+  background: #f5f9ff !important;
+}
+
+/* 统计卡 */
+#root .xn-bm-stat {
+  border-radius: 12px !important;
+  padding: 10px 12px !important;
+  background: #fff !important;
+  border-color: #e4e9f4 !important;
+}
+#root .xn-bm-stat > div:first-child {
+  font-size: 24px !important;
+  line-height: 1.25 !important;
+  letter-spacing: -.01em;
+}
+#root .xn-bm-stat > div:last-child {
+  font-size: 12.5px !important;
+  color: #64748b !important;
+}
+
+/* 返回 / 说明 / 下一步 */
+#root a.xn-bm-back {
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #1d4ed8 !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+}
+#root a.xn-bm-back:hover {
+  border-color: #93c5fd !important;
+  background: #f5f9ff !important;
+}
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+}
+#root a.xn-bm-next {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 36px !important;
+  padding: 0 12px !important;
+  border-radius: 9px !important;
+  background: #eef4ff !important;
+  color: #1e40af !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+#root a.xn-bm-next:hover {
+  background: #e0ebff !important;
+}
+
+#root button.xn-bm-next {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 12px !important;
+  border-radius: 9px !important;
+  background: #eef4ff !important;
+  border: 1px solid #dbe7ff !important;
+  color: #1e40af !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+#root button.xn-bm-next:hover {
+  background: #e0ebff !important;
+  border-color: #b9d2ff !important;
+}
+
+/* 结果明细表 */
+#root table th {
+  font-size: 12.5px !important;
+  color: #475569 !important;
+}
+#root table td {
+  font-size: 13px !important;
+}
+
+@media (max-width: 639px) {
+  #root [data-xn-bm-tools="1"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #root button.xn-bm-tool { font-size: 12.5px !important; padding: 0 10px !important; }
+  #root .xn-bm-stat > div:first-child { font-size: 22px !important; }
+  #root button.xn-bm-primary { width: 100% !important; }
+}
