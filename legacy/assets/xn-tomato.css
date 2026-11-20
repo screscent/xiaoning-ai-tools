@@ -1,0 +1,107 @@
+/* R1110 番茄专注与计时合集 — 人用友好皮肤
+   1. 暖番茄奶油底（纯 CSS）
+   2. 工具页签 46/48、当前态
+   3. 分段/时长/开关 44px、状态芯片
+   不改 React 逻辑。 */
+
+#root {
+  --xn-tomato-ink: #2F2A28;
+  --xn-tomato-red: #D9553F;
+  --xn-tomato-line: #EFE4DA;
+}
+
+#root div.min-h-screen {
+  background-color: #FFFAF5 !important;
+  background-image:
+    radial-gradient(700px 350px at 100% -6%, rgba(217, 85, 63, .10), transparent 70%),
+    radial-gradient(520px 300px at 0% 8%, rgba(217, 85, 63, .05), transparent 70%),
+    radial-gradient(rgba(120, 80, 60, .04) 1px, transparent 1px) !important;
+  background-size: auto, auto, 22px 22px !important;
+}
+
+/* 页签 */
+@media (min-width: 1024px) {
+  #root .xn-tomato-tabs {
+    flex-wrap: wrap;
+  }
+}
+#root .xn-tomato-tabs > a {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 13.5px !important;
+  padding: 0 16px !important;
+  gap: 8px;
+}
+#root .xn-tomato-tabs > a[aria-current="page"] {
+  box-shadow: 0 8px 18px -16px rgba(47, 42, 40, .8);
+}
+
+/* 计时数字 */
+#root .xn-tomato-clock {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.015em;
+}
+
+/* 分段（番茄钟 / 自定义倒计时） */
+#root button.xn-tomato-seg {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+}
+
+/* 时长与开关 */
+#root button.xn-tomato-chip {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+}
+#root button.xn-tomato-toggle {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+
+/* 顶部状态芯片（今日完成 / 待开始） */
+#root .xn-tomato-stat {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+/* 主操作 */
+#root button.xn-tomato-primary {
+  min-height: 52px !important;
+  font-size: 15px !important;
+  border-radius: 14px !important;
+}
+#root button.xn-tomato-ghost {
+  min-height: 48px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+}
+
+@media (max-width: 1023px) {
+  #root .xn-tomato-tabs {
+    gap: 6px !important;
+  }
+  #root .xn-tomato-tabs > a {
+    flex: 0 0 auto;
+    min-height: 48px;
+  }
+  #root button.xn-tomato-chip,
+  #root button.xn-tomato-toggle,
+  #root button.xn-tomato-seg {
+    min-height: 46px !important;
+    font-size: 14px !important;
+  }
+  #root button.xn-tomato-primary {
+    min-height: 54px !important;
+  }
+}
