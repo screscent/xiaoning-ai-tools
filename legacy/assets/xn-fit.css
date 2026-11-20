@@ -4,7 +4,7 @@
    3. 输入 46→50、选项 40→44 并恢复深色选中态、复制 37→40/44
    不改 React 逻辑。 */
 
-#root div.min-h-screen {
+#root div.flex.min-h-screen {
   background-color: #F8F8F5 !important;
   background-image:
     repeating-linear-gradient(90deg, rgba(30, 41, 59, .035) 0 1px, transparent 1px 9px),
