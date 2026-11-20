@@ -1,0 +1,143 @@
+/* R1135 SVG 图表与折线图合集 — 人用友好皮肤
+   1. 坐标纸底（20px 方格 + 蓝/青紫光晕，纯 CSS）
+   2. 页签 38→44；数据域 147→200/15.5；数字 50/16；下拉 48
+   3. 生成 46 / 下载·复制 44 / 清空 40；SVG 台描边投影
+   4. H3 去 ①②③；源码 12.5/1.65
+   不改 React 逻辑与图表渲染。 */
+
+#root div.min-h-screen {
+  background-color: #F7F9FD !important;
+  background-image:
+    linear-gradient(rgba(59, 130, 246, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, .06) 1px, transparent 1px),
+    radial-gradient(720px 380px at 96% -8%, rgba(59, 130, 246, .14), transparent 70%),
+    radial-gradient(560px 320px at -4% 104%, rgba(139, 92, 246, .10), transparent 70%) !important;
+  background-size: 20px 20px, 20px 20px, auto, auto !important;
+}
+
+/* 页签 */
+#root .xn-chart-tab {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 13.5px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px !important;
+}
+#root .xn-chart-tab[aria-current="page"] {
+  box-shadow: 0 10px 24px -16px rgba(37, 99, 235, .9);
+}
+
+/* 数据域 */
+#root textarea {
+  min-height: 200px !important;
+  font-size: 15.5px !important;
+  line-height: 1.7 !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+}
+
+/* 输入 */
+#root input[type="color"] {
+  height: 50px !important;
+  width: 58px !important;
+  min-width: 58px !important;
+  flex: none !important;
+  padding: 4px !important;
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+#root input[type="number"] {
+  height: 50px !important;
+  min-height: 50px !important;
+  font-size: 16px !important;
+  font-weight: 650 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-inner-spin-button,
+#root input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+#root input[type="number"] { -moz-appearance: textfield !important; }
+#root select {
+  min-height: 48px !important;
+  font-size: 14.5px !important;
+}
+
+/* 按钮 */
+#root button.xn-chart-primary {
+  min-height: 46px !important;
+  height: 46px !important;
+  padding: 0 22px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 10px 22px -12px rgba(37, 99, 235, .8) !important;
+}
+#root button.xn-chart-secondary {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #3b465e !important;
+}
+#root button.xn-chart-secondary:hover {
+  border-color: #93c5fd !important;
+  color: #1d4ed8 !important;
+  background: #f5f9ff !important;
+}
+#root button.xn-chart-ghost {
+  min-height: 40px !important;
+  height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #e2e6f3 !important;
+  color: #4b5563 !important;
+}
+#root button.xn-chart-ghost:hover {
+  border-color: #fca5a5 !important;
+  color: #b91c1c !important;
+  background: #fff7f7 !important;
+}
+
+/* 图表预览台 */
+#root .w-full.overflow-x-auto.rounded {
+  background: #fff !important;
+  border: 1px solid #e3e8f4 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 14px 32px -26px rgba(30, 41, 89, .45) !important;
+  padding: 4px;
+}
+
+/* 源码块 */
+#root pre.bg-gray-900 {
+  font-size: 12.5px !important;
+  line-height: 1.65 !important;
+  border-radius: 12px !important;
+  border: 1px solid #1e293b !important;
+}
+
+/* 使用说明 */
+#root details > summary {
+  font-size: 14.5px !important;
+  color: #334155 !important;
+}
+#root details > div {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #56627a !important;
+}
+
+@media (max-width: 639px) {
+  #root .xn-chart-tab { padding: 0 15px !important; font-size: 13px !important; }
+  #root textarea { min-height: 170px !important; font-size: 15px !important; }
+}
