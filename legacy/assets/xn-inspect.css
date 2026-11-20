@@ -1,0 +1,320 @@
+/* R1097 验房与收房检查合集 — 人用友好增强
+   范围：6 个工具页（A 验收清单为主，B–F 一致性触达与结果层级）
+   只覆盖样式，不改 React bundle；所有增强由 xn-inspect.js 幂等挂载。 */
+
+/* ---------- 页面底色：纯 CSS 渐变层次，无图片 ---------- */
+#root > div.min-h-screen.bg-slate-50 {
+  background-color: #f6f8fc !important;
+  background-image:
+    radial-gradient(1px 1px at 50% 50%, rgba(51, 65, 85, .055) 1px, transparent 1px),
+    radial-gradient(900px 380px at 8% -6%, rgba(99, 102, 241, .15), transparent 62%),
+    radial-gradient(760px 330px at 96% 0%, rgba(245, 158, 11, .13), transparent 60%),
+    linear-gradient(180deg, #f8fafd 0%, #eef2f9 48%, #f7f9fc 100%) !important;
+  background-size: 26px 26px, auto, auto, auto !important;
+  background-attachment: fixed !important;
+}
+
+#root main h1 {
+  font-size: clamp(28px, 4vw, 38px) !important;
+  letter-spacing: -.02em;
+  background: linear-gradient(120deg, #1e293b 24%, #3730a3 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* 卡片层次 */
+#root main .rounded-2xl.border.border-slate-200.bg-white.shadow-sm {
+  border-color: #e3e9f4 !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 18px 40px -34px rgba(30, 41, 59, .38);
+}
+#root .xn-tool-icon {
+  background: linear-gradient(135deg, #4f46e5, #2563eb) !important;
+  box-shadow: 0 8px 18px -12px rgba(79, 70, 229, .9);
+}
+
+/* ---------- 顶部工具切换 ---------- */
+#root nav[aria-label="工具切换"] {
+  background: linear-gradient(180deg, #ffffff, #fbfcff) !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 14px 34px -28px rgba(30, 41, 59, .5);
+}
+#root nav[aria-label="工具切换"] a.xn-tab-link {
+  min-height: 44px;
+  border: 1px solid transparent;
+}
+#root nav[aria-label="工具切换"] a.xn-tab-link:hover {
+  background: #f5f7ff;
+  color: #3730a3;
+}
+#root nav[aria-label="工具切换"] a.xn-tab-link[aria-current="page"] {
+  background: linear-gradient(135deg, #4f46e5, #2563eb) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -12px rgba(79, 70, 229, .9), inset 0 0 0 1px rgba(255, 255, 255, .16);
+}
+#root nav[aria-label="工具切换"] a.xn-tab-link[aria-current="page"] > span:first-child {
+  background: rgba(255, 255, 255, .2);
+  border-radius: 6px;
+  padding: 0 5px;
+}
+
+/* ---------- 毛坯 / 精装分段 ---------- */
+#root .xn-seg {
+  background: linear-gradient(180deg, #f8fafc, #eef2f8) !important;
+  border-color: #dde5f2 !important;
+  padding: 5px !important;
+  gap: 4px;
+}
+#root .xn-seg button[aria-pressed] {
+  min-height: 38px !important;
+  padding: 0 18px !important;
+  font-size: 13px !important;
+  border-radius: 9px !important;
+}
+#root .xn-seg button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #4f46e5, #2563eb) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 6px 14px -10px rgba(79, 70, 229, .9);
+}
+
+/* ---------- A：清单勾选行 ---------- */
+#root li button.xn-check {
+  min-height: 46px !important;
+  padding: 11px 16px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #334155 !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+}
+#root li button.xn-check::before { content: none !important; }
+#root li button.xn-check:hover { background: #f5f8ff !important; }
+#root li button.xn-check[aria-pressed="true"] {
+  background: linear-gradient(90deg, rgba(16, 185, 129, .09), rgba(16, 185, 129, .02)) !important;
+  box-shadow: inset 3px 0 0 #10b981 !important;
+}
+#root li button.xn-check > span:first-child {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  margin-top: 1px;
+  border-width: 2px !important;
+  border-radius: 6px !important;
+}
+#root li button.xn-check > span:first-child svg { width: 13px !important; height: 13px !important; }
+#root li button.xn-check[aria-pressed="true"] > span:first-child {
+  border-color: #059669 !important;
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  box-shadow: 0 2px 6px -2px rgba(5, 150, 105, .5);
+}
+#root li button.xn-check > span:last-child {
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  color: #334155 !important;
+}
+#root li button.xn-check[aria-pressed="true"] > span:last-child {
+  color: #64748b !important;
+  text-decoration-color: #cbd5e1;
+}
+
+/* 分类标题与计数 */
+#root .xn-cat-head p:first-of-type { font-size: 14px !important; }
+#root .xn-cat-count {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #4338ca !important;
+  background: #eef2ff !important;
+  min-width: 44px;
+  padding: 3px 9px !important;
+}
+#root .xn-cat-done { border-color: #bbf7d0 !important; }
+#root .xn-cat-done .xn-cat-count { color: #047857 !important; background: #ecfdf5 !important; }
+
+/* ---------- A：进度 ---------- */
+#root .xn-progress-line { flex-wrap: wrap; row-gap: 6px; }
+#root .xn-progress-num {
+  font-size: 42px !important;
+  letter-spacing: -.03em;
+  background: linear-gradient(135deg, #312e81, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+#root .xn-progress-box[data-xn-state="done"] .xn-progress-num {
+  background: linear-gradient(135deg, #047857, #10b981);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+#root .xn-progress-count {
+  font-size: 13px !important;
+  font-weight: 500;
+  color: #475569 !important;
+}
+#root .xn-inspect-status {
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 1.6;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  margin-left: 8px;
+}
+#root .xn-progress-box[data-xn-state="active"] .xn-inspect-status { background: #fff7ed; color: #c2410c; }
+#root .xn-progress-box[data-xn-state="done"] .xn-inspect-status { background: #ecfdf5; color: #047857; }
+
+#root .xn-bar {
+  height: 10px !important;
+  background: #e4eaf4 !important;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, .08), inset 0 0 0 1px rgba(148, 163, 184, .12);
+}
+#root .xn-bar > div { background: linear-gradient(90deg, #4f46e5, #2563eb) !important; }
+#root .xn-bar[data-xn-state="active"] > div { min-width: 10px; }
+#root .xn-bar[data-xn-state="done"] > div { background: linear-gradient(90deg, #059669, #10b981) !important; }
+
+/* ---------- A：全部勾选 / 重置 ---------- */
+#root .xn-action-btn {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+#root .xn-action-btn[aria-label^="全部"] {
+  background: linear-gradient(135deg, #4f46e5, #2563eb) !important;
+  box-shadow: 0 8px 16px -12px rgba(79, 70, 229, .9);
+}
+
+/* ---------- A：遗漏项折叠 ---------- */
+#root .xn-miss {
+  background: linear-gradient(180deg, #fffbeb, #fff7ed) !important;
+  border: 1px solid #fde68a !important;
+}
+#root .xn-miss-head { gap: 8px !important; flex-wrap: wrap; }
+#root .xn-miss-head > p:first-child {
+  margin-right: auto;
+  font-size: 13px !important;
+  color: #92400e !important;
+}
+#root .xn-miss-head > span { font-size: 12px !important; }
+#root .xn-miss-toggle {
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid #fcd34d;
+  background: #fff;
+  color: #92400e;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+#root .xn-miss-toggle:hover { background: #fffbeb; border-color: #f59e0b; }
+#root .xn-miss[data-xn-open="0"] ul { display: none; }
+#root .xn-miss[data-xn-empty="1"] { display: none; }
+#root .xn-miss li { font-size: 12px !important; color: #57534e !important; }
+
+/* ---------- B/D/E/F：结果卡与指标 ---------- */
+#root .xn-result {
+  background: linear-gradient(180deg, #ffffff, #fbfcff) !important;
+  border-color: #dfe7f5 !important;
+}
+#root .xn-result h3 { font-size: 14px !important; letter-spacing: .01em; }
+#root div.grid.xn-metrics {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+#root .xn-metric {
+  background: linear-gradient(180deg, #f8fafc, #eef3fb) !important;
+  border-color: #e3eaf6 !important;
+}
+#root .xn-metric p:first-child { font-size: 12px !important; color: #64748b !important; }
+#root .xn-metric p.tnum { font-size: 22px !important; }
+
+/* 示例填充按钮 */
+#root .xn-preset {
+  min-height: 34px !important;
+  padding: 6px 14px !important;
+  font-size: 12px !important;
+  border-radius: 999px !important;
+  background: #fff !important;
+  border-color: #dbe3f0 !important;
+  color: #475569 !important;
+}
+#root .xn-preset:hover {
+  border-color: #6366f1 !important;
+  background: #f6f7ff !important;
+  color: #3730a3 !important;
+}
+
+/* 恢复默认 */
+#root .xn-reset {
+  min-height: 32px !important;
+  padding: 0 10px !important;
+  gap: 5px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  font-size: 12px !important;
+  color: #64748b !important;
+}
+#root .xn-reset:hover {
+  border-color: #a5b4fc !important;
+  background: #f8f9ff !important;
+  color: #3730a3 !important;
+}
+
+/* C：状态筛选 */
+#root .xn-filter {
+  min-height: 36px !important;
+  padding: 0 13px !important;
+  font-size: 12.5px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 9px !important;
+  background: #fff !important;
+  color: #475569 !important;
+}
+#root .xn-filter span {
+  background: #f1f5f9;
+  border-radius: 999px;
+  min-width: 20px;
+  padding: 1px 5px;
+  margin-left: 6px;
+  font-size: 11px;
+  text-align: center;
+}
+#root .xn-filter[aria-pressed="true"] {
+  background: linear-gradient(135deg, #4f46e5, #2563eb) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 6px 14px -12px rgba(79, 70, 229, .9);
+}
+#root .xn-filter[aria-pressed="true"] span { background: rgba(255, 255, 255, .22); color: #fff; }
+#root .xn-filter[aria-pressed="true"]::before { content: none !important; }
+
+/* F：交接步骤序号 */
+#root li > span.xn-step-num {
+  width: 22px !important;
+  height: 22px !important;
+  font-size: 11.5px !important;
+  color: #4338ca !important;
+  background: #fff !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .06);
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root .xn-progress-num { font-size: 40px !important; }
+  #root li button.xn-check { min-height: 50px !important; padding: 12px 14px !important; }
+  #root li button.xn-check > span:first-child {
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+  }
+  #root .xn-action-btn,
+  #root .xn-preset,
+  #root .xn-reset,
+  #root .xn-filter { min-height: 44px !important; }
+  #root .xn-miss-toggle { min-height: 40px; }
+  #root nav[aria-label="工具切换"] a.xn-tab-link { min-height: 52px; }
+  #root .xn-metric p.tnum { font-size: 20px !important; }
+}
