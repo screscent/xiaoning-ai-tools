@@ -1,0 +1,83 @@
+/* R1115 衣物洗护与面料速查合集 — 人用友好皮肤
+   1. 亚麻织纹底（纯 CSS）
+   2. 移动端页签 2 列紧凑
+   3. 复制按钮 40/44、搜索 48
+   不改 React 逻辑。 */
+
+#root {
+  --xn-laundry-ink: #242A33;
+  --xn-laundry-blue: #2563EB;
+}
+
+#root div.min-h-screen {
+  background-color: #FAF8F3 !important;
+  background-image:
+    linear-gradient(rgba(120, 104, 80, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 104, 80, .05) 1px, transparent 1px),
+    radial-gradient(680px 340px at 100% -8%, rgba(37, 99, 235, .07), transparent 70%) !important;
+  background-size: 18px 18px, 18px 18px, auto !important;
+}
+
+/* 页签 */
+#root .xn-laundry-card[aria-current="page"] {
+  box-shadow: 0 10px 22px -16px rgba(37, 99, 235, .85);
+}
+@media (max-width: 639px) {
+  #root div.xn-laundry-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  #root .xn-laundry-card {
+    padding: 10px !important;
+    min-height: 84px;
+    align-items: flex-start !important;
+  }
+  #root .xn-laundry-card .xn-laundry-title {
+    font-size: 13.5px !important;
+    line-height: 1.3 !important;
+  }
+  #root .xn-laundry-card .xn-laundry-desc {
+    display: none;
+  }
+}
+
+/* 搜索 */
+#root input[type="text"] {
+  height: 48px !important;
+  font-size: 15px !important;
+}
+
+/* 复制 */
+#root button.xn-laundry-copy {
+  min-height: 40px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  border-radius: 9px !important;
+}
+
+/* 移动端符号列表 */
+#root .xn-laundry-item {
+  border-radius: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #F0ECE3;
+}
+#root .xn-laundry-item:last-child {
+  border-bottom: 0;
+}
+#root .xn-laundry-name {
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  color: #1F2937 !important;
+}
+#root .xn-laundry-note {
+  font-size: 12.5px !important;
+  color: #6B7280 !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 1023px) {
+  #root button.xn-laundry-copy {
+    min-height: 44px !important;
+    font-size: 13px !important;
+  }
+}
