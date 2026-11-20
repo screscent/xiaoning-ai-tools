@@ -1,0 +1,105 @@
+/* R1114 每周菜单与采购计划合集 — 人用友好皮肤
+   1. 暖米色桌布纹底（纯 CSS）
+   2. 页签 44/46、忌口 44、生成 48
+   3. 逐日菜单：日头/餐名/荤素徽章/锁定按钮
+   不改 React 逻辑。 */
+
+#root {
+  --xn-menu-ink: #2A2622;
+  --xn-menu-accent: #2563EB;
+}
+
+#root div.min-h-screen {
+  background-color: #FBFAF4 !important;
+  background-image:
+    linear-gradient(rgba(160, 120, 60, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(160, 120, 60, .045) 1px, transparent 1px),
+    radial-gradient(680px 340px at 100% -8%, rgba(37, 99, 235, .06), transparent 70%) !important;
+  background-size: 26px 26px, 26px 26px, auto !important;
+}
+
+/* 页签 */
+#root .xn-menu-tabs > button {
+  min-height: 44px;
+  font-size: 13.5px !important;
+}
+#root .xn-menu-tabs > button[aria-current="true"] {
+  box-shadow: 0 8px 18px -16px rgba(37, 99, 235, .9);
+}
+
+/* 忌口 */
+#root button.xn-menu-chip {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+}
+
+/* 主操作 */
+#root button.xn-menu-run {
+  min-height: 48px !important;
+  font-size: 15px !important;
+  border-radius: 12px !important;
+}
+
+/* 逐日菜单 */
+#root .xn-menu-day {
+  border-radius: 14px !important;
+}
+#root .xn-menu-day-head {
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #EEF1F6;
+}
+#root .xn-menu-row {
+  align-items: center;
+}
+#root .xn-menu-meal {
+  font-size: 12.5px !important;
+  color: #6B7280 !important;
+}
+#root .xn-menu-dish {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1F2937 !important;
+}
+#root .xn-menu-tag {
+  font-size: 11.5px !important;
+  padding: 2px 7px !important;
+  border-radius: 999px !important;
+}
+#root button.xn-menu-lock {
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 10px !important;
+}
+
+/* 数字输入去箭头 */
+#root input[type="number"]::-webkit-inner-spin-button,
+#root input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#root input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+@media (max-width: 1023px) {
+  #root .xn-menu-tabs > button {
+    min-height: 46px;
+    flex: 0 0 auto;
+    font-size: 13.5px !important;
+  }
+  #root button.xn-menu-chip {
+    min-height: 46px !important;
+    font-size: 14px !important;
+  }
+  #root button.xn-menu-run {
+    min-height: 50px !important;
+  }
+  #root button.xn-menu-lock {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+}
