@@ -143,7 +143,7 @@
       var card = d.closest("div.rounded-2xl");
       if (!card) return;
       var grid = card.querySelector("div.grid");
-      if (grid) add(grid, "xn-bm-kpis");
+      if (grid && !grid.querySelector("input")) add(grid, "xn-bm-kpis");
     });
     q("span", root).forEach(function (s) {
       if (!/^(违例|合法)$/.test(txt(s))) return;
