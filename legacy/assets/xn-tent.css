@@ -1,0 +1,123 @@
+/* R1158 露营装备与营地费用合集 — 人用友好皮肤（保留原翠绿主题）
+   1. 移动端页签文字被 hidden 隐藏（只剩图标）→ 恢复文字，2 列 × 3 行，44 高
+   2. 季节/交通/住宿选项 37→44，字号 12→13
+   3. 「复制结果」37→40；数字输入 20→16
+   4. 结果标签 11→12.5；结果金额 20→24
+   5. 明细表 min-w 430→0，移动端允许换行
+   6. 说明折叠 36→44 */
+
+/* 1 页签 */
+#root div.xn-tent-tabbar.grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+}
+
+@media (min-width: 641px) {
+  #root div.xn-tent-tabbar.grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 页签文字不竖排：保持单行，图标 + 简称横排 */
+#root .xn-tent-tab {
+  flex-wrap: nowrap !important;
+  overflow: hidden !important;
+}
+
+#root .xn-tent-tab span {
+  white-space: nowrap !important;
+}
+
+#root .xn-tent-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  padding: 0 6px !important;
+  font-size: 12.5px !important;
+  line-height: 1.15 !important;
+  gap: 6px !important;
+}
+
+@media (max-width: 640px) {
+  #root .xn-tent-tab {
+    font-size: 11.5px !important;
+  }
+}
+
+#root .xn-tent-tab:focus-visible {
+  outline: 2px solid rgba(16, 185, 129, .65);
+  outline-offset: 2px;
+}
+
+/* 2 选项 chip */
+#root .xn-tent-chip {
+  height: 44px !important;
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+#root .xn-tent-chip:focus-visible {
+  outline: 2px solid rgba(16, 185, 129, .6);
+  outline-offset: 2px;
+}
+
+/* 3 复制 / 输入 */
+#root .xn-tent-copy {
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+
+#root .xn-tent-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 4 结果 */
+#root .xn-tent-label {
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+  letter-spacing: .2px;
+}
+
+#root .xn-tent-num {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.3px;
+}
+
+/* 5 明细表 */
+#root table {
+  min-width: 0 !important;
+}
+
+#root th,
+#root td {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  font-size: 12.5px !important;
+}
+
+@media (max-width: 640px) {
+  #root th,
+  #root td {
+    white-space: normal !important;
+    font-size: 11.5px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
+
+/* 6 说明折叠 */
+#root details > summary {
+  min-height: 44px;
+  display: flex !important;
+  align-items: center;
+}
