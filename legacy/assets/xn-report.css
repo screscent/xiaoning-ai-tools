@@ -1,0 +1,79 @@
+/* R1147 体检报告指标解读合集 — 人用友好皮肤
+   1. 页面底：18px 点阵 + 青绿/天蓝光晕（纯 CSS）
+   2. 工具页签 44 保持 + aria；数字输入 20→17
+   3. 结果行「你的数值…」12→13/1.6 提对比；状态徽标 12.5
+   4. 剥离「工具X」前缀
+   不改 React 逻辑。 */
+
+#root {
+  background-color: #F7FBFA !important;
+  background-image:
+    radial-gradient(rgba(13, 148, 136, .11) 1px, transparent 1px),
+    radial-gradient(720px 380px at 100% -6%, rgba(13, 148, 136, .09), transparent 70%),
+    radial-gradient(560px 320px at -8% 104%, rgba(2, 132, 199, .08), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 工具页签 */
+#root button.xn-rep-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  font-size: 12.5px !important;
+  color: #4b5a68 !important;
+}
+#root button.xn-rep-tab[aria-selected="true"] {
+  background: #fff !important;
+  color: #0f766e !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px -4px rgba(13, 148, 136, .45), 0 0 0 1px rgba(13, 148, 136, .18);
+}
+#root button.xn-rep-tab:hover {
+  color: #0f766e !important;
+}
+
+/* 表单 */
+#root input[type="number"] {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  color: #0f172a !important;
+}
+
+/* 主/次按钮 */
+#root button.xn-rep-primary {
+  background: linear-gradient(135deg, #0d9488, #0f766e) !important;
+  box-shadow: 0 10px 22px -14px rgba(13, 148, 136, .95) !important;
+  font-weight: 700 !important;
+}
+#root button.xn-rep-primary:hover {
+  background: linear-gradient(135deg, #0f766e, #115e59) !important;
+}
+#root button.xn-rep-copy {
+  border: 1px solid #cfe6e2 !important;
+  background: #fff !important;
+  color: #0f766e !important;
+  border-radius: 12px !important;
+}
+#root button.xn-rep-copy:hover {
+  border-color: #5eead4 !important;
+  background: #f2fbf9 !important;
+}
+
+/* 结果行 */
+#root .xn-rep-line {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: #3f4b5b !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-rep-badge {
+  font-size: 12.5px !important;
+  padding: 3px 9px !important;
+}
+
+@media (max-width: 639px) {
+  #root button.xn-rep-tab { font-size: 12px !important; }
+}
