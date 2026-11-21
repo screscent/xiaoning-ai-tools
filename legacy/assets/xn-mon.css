@@ -1,0 +1,48 @@
+/* R1157 显示器参数与选购计算合集 — 人用友好皮肤（保留原靛蓝主题）
+   1. 分辨率选项补 aria-pressed（视觉已有选中态）
+   2. 输入 15→16
+   3. 结果数值 18→22/700（PPI / 视网膜距离 / 缩放建议）
+   4. 结果标签 12→13/600
+   5. 副标题 12→13.5
+   6. 剥离「工具A」 */
+
+#root .xn-mon-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 分辨率选项：补键盘可见性，尺寸已 44 */
+#root .xn-mon-opt:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .65);
+  outline-offset: 2px;
+}
+
+#root .xn-mon-opt[aria-checked="true"] {
+  box-shadow: 0 4px 10px -4px rgba(79, 70, 229, .45) !important;
+}
+
+/* 结果数值 */
+#root .xn-mon-num {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.3px;
+  line-height: 1.25 !important;
+}
+
+/* 结果标签 */
+#root .xn-mon-label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+  letter-spacing: .2px;
+}
+
+/* 副标题 */
+#root .xn-mon-sub {
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  color: #64748b !important;
+}
