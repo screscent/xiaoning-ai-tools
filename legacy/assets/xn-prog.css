@@ -1,0 +1,104 @@
+/* R1196 进度条与环形进度合集 — 人用友好皮肤（蓝色进度主题，仅 7b3ecrweb7 引用）
+   1. 页签 37→44，补 role=tab / aria-selected（选中态 border-[#2563eb] + bg-[#EFF6FF]）
+   2. 颜色控件 46→48；数字 20→16；圆角下拉 46/15→48/16
+   3. 条纹动画开关锁 44×24 + 上下 10px 热区（补 aria-checked）
+   4. 复制 CSS/HTML/清空 38→44；代码块小复制 37→40；代码 12.5→13
+   5. 纯 CSS 蓝色斜纹轨道底 + 柔光 */
+
+#root .xn-prog-page {
+  background-color: #f7faff !important;
+  background-image:
+    radial-gradient(1000px 400px at 4% -10%, rgba(37, 99, 235, .10), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(14, 165, 233, .08), transparent 60%),
+    linear-gradient(135deg, rgba(37, 99, 235, .045) 25%, transparent 25%, transparent 50%, rgba(37, 99, 235, .045) 50%, rgba(37, 99, 235, .045) 75%, transparent 75%) !important;
+  background-size: auto, auto, 26px 26px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 页签 37 → 44 */
+#root .xn-prog-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13.5px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+#root .xn-prog-tab:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 颜色控件 46 → 48 */
+#root .xn-prog-color {
+  height: 48px !important;
+  min-height: 48px !important;
+  background: #fff !important;
+  border: 1px solid rgba(37, 99, 235, .22) !important;
+  border-radius: 10px !important;
+  padding: 3px !important;
+  cursor: pointer;
+}
+
+/* 数字 / 下拉 16px · 48px */
+#root .xn-prog-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 条纹动画开关：锁定 44×24，上下各 10px 隐形热区 */
+#root .xn-prog-switch {
+  width: 44px !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  position: relative !important;
+}
+
+#root .xn-prog-switch::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+#root .xn-prog-switch:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 4px;
+}
+
+/* 复制 CSS / 复制 HTML / 清空 38 → 44 */
+#root .xn-prog-act {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+/* 代码卡右上小复制 37 → 40 */
+#root .xn-prog-copy {
+  min-height: 40px !important;
+  height: 40px !important;
+  font-size: 12.5px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+#root .xn-prog-copy:focus-visible,
+#root .xn-prog-act:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 代码块 12.5 → 13 */
+#root .xn-prog-page pre,
+#root .xn-prog-page pre code {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
