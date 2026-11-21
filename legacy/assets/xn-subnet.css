@@ -1,0 +1,67 @@
+/* R1198 IP 与子网计算合集 — 人用友好皮肤（网络节点主题，仅 atverkpmpa 引用）
+   1. 6 个锚点导航 30→44，补分区导航语义与滚动高亮
+   2. 文本/数字/下拉 46–48 → 48、15–20 → 16
+   3. 操作按钮 38–40 → 44（计算/反推/自查/复制结果）
+   4. 二进制对照表 11→12px + 等宽数字
+   5. 纯 CSS 节点点阵 + 蓝青柔光 */
+
+#root .xn-subnet-page {
+  background-color: #f7fbff !important;
+  background-image:
+    radial-gradient(1000px 400px at 4% -10%, rgba(37, 99, 235, .09), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(14, 165, 233, .09), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(30, 64, 175, .12) 1.2px, transparent 1.6px) !important;
+  background-size: auto, auto, 20px 20px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 锚点导航 30 → 44 */
+#root .xn-subnet-nav a {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 12.5px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+
+#root .xn-subnet-nav a:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 当前分区高亮 */
+#root .xn-subnet-nav a[aria-selected="true"] {
+  background-color: #eff6ff !important;
+  border-color: rgba(37, 99, 235, .55) !important;
+  color: #1d4ed8 !important;
+}
+
+/* 文本 / 数字 / 下拉 48·16 */
+#root .xn-subnet-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 计算 / 反推 / 自查 / 复制结果 38–40 → 44 */
+#root .xn-subnet-act {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#root .xn-subnet-act:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 二进制对照表 11 → 12px */
+#root table.xn-subnet-table {
+  font-size: 12px !important;
+  font-variant-numeric: tabular-nums;
+}
