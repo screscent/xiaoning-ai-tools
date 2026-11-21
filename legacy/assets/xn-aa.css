@@ -1,0 +1,73 @@
+/* R1160 AA 分摊与结算合集 — 人用友好皮肤（保留原蓝色主题）
+   1. 页签 38→44；移动端换行 3 列 × 2 行（原来 6 个胶囊横向滚动，后几个被藏）
+   2. 金额输入 20→16；币种下拉 46/15 → 48/16
+   3. 结果金额 14→18/700（每人应付），汇总值 16→18
+   4. 结果标签 12→12.5/600
+   5. 使用说明折叠 20→44 */
+
+/* 1 页签 */
+#root .xn-aa-tabbar {
+  flex-wrap: wrap !important;
+  overflow: visible !important;
+  gap: 6px !important;
+}
+
+#root .xn-aa-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  justify-content: center !important;
+  padding: 0 12px !important;
+  font-size: 13.5px !important;
+  line-height: 1.15 !important;
+}
+
+@media (max-width: 640px) {
+  #root .xn-aa-tab {
+    flex: 1 1 calc(33.333% - 4px) !important;
+    font-size: 13px !important;
+  }
+}
+
+#root .xn-aa-tab:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .65);
+  outline-offset: 2px;
+}
+
+/* 2 表单 */
+#root .xn-aa-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root .xn-aa-select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 3 金额 */
+#root .xn-aa-amount {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.2px;
+}
+
+/* 4 标签 */
+#root .xn-aa-label {
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: #6b7280 !important;
+  letter-spacing: .2px;
+}
+
+/* 5 折叠 */
+#root details > summary {
+  min-height: 44px;
+  display: flex !important;
+  align-items: center;
+}
