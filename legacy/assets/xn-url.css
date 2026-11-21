@@ -58,3 +58,8 @@
   display: flex;
   align-items: center;
 }
+
+/* 路由串 #/xxx 不对用户展示 */
+#root .xn-url-route {
+  display: none !important;
+}

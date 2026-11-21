@@ -50,8 +50,17 @@
     });
   }
 
+  var ROUTE = /^#\/[\w-]+$/;
+
+  function routes() {
+    [].slice.call(document.querySelectorAll("#root span, #root div, #root code")).forEach(function (e) {
+      if (!e.children.length && ROUTE.test(TXT(e))) e.classList.add("xn-url-route");
+    });
+  }
+
   function run() {
     tabs();
+    routes();
     buttons();
     fields();
   }
