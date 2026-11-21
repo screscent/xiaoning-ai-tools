@@ -80,9 +80,20 @@
     });
   }
 
+  /* 输入框字号统一 */
+  function inputs() {
+    [].slice.call(document.querySelectorAll("#root input")).forEach(function (i) {
+      var ty = (i.getAttribute("type") || "text").toLowerCase();
+      if (ty === "checkbox" || ty === "radio" || ty === "range" || ty === "color" || ty === "file") return;
+      i.classList.add("xn-air-input");
+      if (getComputedStyle(i).fontSize !== "16px") i.style.setProperty("font-size", "16px", "important");
+    });
+  }
+
   function run() {
     tabs();
     actions();
+    inputs();
     codes();
   }
 
