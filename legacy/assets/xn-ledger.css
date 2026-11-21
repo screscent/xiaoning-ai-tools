@@ -1,0 +1,77 @@
+/* R1199 记账与月度分析合集 — 人用友好皮肤（账本横线纸主题，仅 bnuscunsmb 引用）
+   1. 纵向导航 36→44，桌面 6 列、移动 3+2，选中按背景色标注 aria-selected
+   2. 数字 20→16；日期/月份/下拉/文本 46/15→48/16
+   3. 支出/收入 分段 36→44 + 单选语义；写入流水 40→44
+   4. 纯 CSS 横线账本底 + 薄荷柔光 */
+
+#root .xn-ledger-page {
+  background-color: #f8fcf9 !important;
+  background-image:
+    radial-gradient(900px 400px at 4% -10%, rgba(16, 185, 129, .10), transparent 62%),
+    radial-gradient(860px 380px at 98% -6%, rgba(59, 130, 246, .07), transparent 60%),
+    repeating-linear-gradient(180deg, transparent 0, transparent 27px, rgba(16, 185, 129, .09) 27px, rgba(16, 185, 129, .09) 28px) !important;
+  background-size: auto, auto, 100% 28px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 导航 36 → 44：桌面 6 列、移动 3+2 */
+#root nav.xn-ledger-nav > div {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+  width: 100% !important;
+}
+
+#root nav.xn-ledger-nav a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13px !important;
+  padding: 0 4px !important;
+  text-align: center !important;
+}
+
+#root nav.xn-ledger-nav a:focus-visible {
+  outline: 2px solid rgba(16, 185, 129, .6);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  #root nav.xn-ledger-nav > div {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 输入 48·16 */
+#root .xn-ledger-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 支出 / 收入 分段 36 → 44 */
+#root .xn-ledger-seg {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+}
+
+#root .xn-ledger-seg:focus-visible {
+  outline: 2px solid rgba(16, 185, 129, .6);
+  outline-offset: 2px;
+}
+
+/* 写入流水 40 → 44 */
+#root .xn-ledger-act {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+}
+
+#root .xn-ledger-act:focus-visible {
+  outline: 2px solid rgba(16, 185, 129, .6);
+  outline-offset: 2px;
+}
