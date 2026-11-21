@@ -1,0 +1,90 @@
+/* R1193 JSON 工具合集 — 人用友好皮肤（靛蓝格子纸主题，仅 m9lqr6ue9a 引用）
+   1. 隐藏「使用说明①…④」通用引导（含错误文案「税额」，与本页无关）
+   2. 页签 38→44，补 role=tab / aria-selected
+   3. 缩进下拉 46/15 → 48/16
+   4. JSON 输入框 15→16，等宽字体、行高 1.55
+   5. 复制输入/清空/复制 37→44
+   6. 纯 CSS 格子纸 + 靛蓝/青柔光 */
+
+#root .xn-jkit-page {
+  background-color: #f7fafc !important;
+  background-image:
+    radial-gradient(1000px 400px at 4% -10%, rgba(79, 70, 229, .10), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(14, 165, 233, .09), transparent 60%),
+    linear-gradient(rgba(79, 70, 229, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 70, 229, .055) 1px, transparent 1px) !important;
+  background-size: auto, auto, 26px 26px, 26px 26px !important;
+  background-repeat: no-repeat, no-repeat, repeat, repeat !important;
+}
+
+/* 通用引导块（与本页无关）不外露 */
+#root .xn-jkit-hint {
+  display: none !important;
+}
+
+/* 页签 38 → 44 */
+#root .xn-jkit-nav {
+  gap: 8px !important;
+}
+
+#root .xn-jkit-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13.5px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+
+#root .xn-jkit-tab:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .6);
+  outline-offset: 2px;
+}
+
+/* 缩进下拉 46/15 → 48/16 */
+#root .xn-jkit-select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding-right: 36px !important;
+}
+
+/* JSON 输入区：16px 等宽，避免 iOS 聚焦缩放 */
+#root .xn-jkit-area {
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  min-height: 200px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "PingFang SC", monospace !important;
+}
+
+/* 复制输入 / 清空 / 复制 37 → 44 */
+#root .xn-jkit-act {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+#root .xn-jkit-act:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .6);
+  outline-offset: 2px;
+}
+
+/* 移动端页签保持 3+3 两行，统一 44 高 */
+@media (max-width: 1023px) {
+  #root .xn-jkit-nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  #root .xn-jkit-tab {
+    flex: 1 1 calc(33.333% - 8px) !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
