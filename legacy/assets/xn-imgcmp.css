@@ -1,0 +1,118 @@
+/* R1186 图片对比与差异合集 — 人用友好皮肤（靛蓝主题，仅 qse3gvnhme 引用）
+   1. 隐藏 6 处路由串 #/slider 等
+   2. 上传框：虚线拖放区 + 40px 选择按钮
+   3. 数字 20→16；文本 46/15→48/16；滑块 28→32
+   4. 重置/下载/排列/颜色/区域/复制 统一 ≥44
+   5. 移动端 4/5 列控件恢复 2 列（5 列末项整行）
+   6. 去「工具E/F」内部代号
+   7. 纯 CSS 靛蓝柔光 + 细点阵 */
+
+#root .xn-imgcmp-page {
+  background-color: #f8fafc !important;
+  background-image:
+    radial-gradient(1000px 380px at 4% -10%, rgba(79, 70, 229, .12), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(168, 85, 247, .10), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(100, 116, 139, .10) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, 24px 24px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 路由串不外泄 */
+#root .xn-imgcmp-route {
+  display: none !important;
+}
+
+/* 上传框：虚线拖放区 */
+#root input[type="file"] {
+  min-height: 64px !important;
+  padding: 10px 12px !important;
+  border: 1.5px dashed #c7d2fe !important;
+  border-radius: 14px !important;
+  background: #f5f3ff !important;
+  color: #6d28d9 !important;
+  font-size: 13.5px !important;
+  cursor: pointer;
+  transition: border-color .15s ease, background-color .15s ease;
+}
+
+#root input[type="file"]:hover {
+  border-color: #818cf8 !important;
+  background: #eef2ff !important;
+}
+
+#root input[type="file"]:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .6);
+  outline-offset: 2px;
+}
+
+#root input[type="file"]::file-selector-button {
+  height: 40px;
+  padding: 0 16px;
+  margin-right: 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+#root input[type="file"]::file-selector-button:hover {
+  background: #4338ca;
+}
+
+/* 数字 / 文本 */
+#root .xn-imgcmp-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 滑块 28 → 32，拇指 20 */
+#root input[type="range"] {
+  height: 32px !important;
+  accent-color: #4f46e5;
+}
+
+#root input[type="range"]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+}
+
+/* 操作按钮 ≥44 */
+#root .xn-imgcmp-action {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#root .xn-imgcmp-action:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .6);
+  outline-offset: 2px;
+}
+
+/* 移动端：4/5 列控件恢复 2 列 */
+@media (max-width: 1023px) {
+  #root div.xn-imgcmp-g2,
+  #root div.xn-imgcmp-g4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #root div.xn-imgcmp-g5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #root div.xn-imgcmp-g5 > *:last-child {
+    grid-column: span 2 / span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  #root input[type="file"] {
+    min-height: 68px !important;
+  }
+}
