@@ -1,0 +1,119 @@
+/* R1188 鞋服尺码换算合集 — 人用友好皮肤（蓝色主题，仅 jadllqkp5e 引用）
+   1. 6 个页签 42→48 且允许两行；移动端横向滚动 → 2 列 × 3 行
+   2. 单位/版型/年龄/品牌分段 36/37→44 + radio
+   3. 数字 20→16；复制 37→44
+   4. 表格 13px、表头底色、行 hover、滚动区可聚焦
+   5. 移动端 3/4 列恢复 2 列
+   6. 去「工具F」内部代号
+   7. 纯 CSS 蓝色柔光 + 细点阵 */
+
+#root .xn-size-page {
+  background-color: #f8fafc !important;
+  background-image:
+    radial-gradient(1000px 380px at 4% -10%, rgba(37, 99, 235, .10), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(6, 182, 212, .09), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(100, 116, 139, .10) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, 24px 24px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 页签 42 → 48，允许两行 */
+#root .xn-size-tab {
+  min-height: 48px !important;
+  height: auto !important;
+  padding: 6px 8px !important;
+  font-size: 12.5px !important;
+  line-height: 1.25 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+#root .xn-size-tab:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 分段按钮 36/37 → 44 */
+#root .xn-size-chip {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px !important;
+}
+
+#root .xn-size-chip:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 数字 20 → 16 */
+#root .xn-size-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 复制 37 → 44 */
+#root .xn-size-copy {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+
+#root .xn-size-copy:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 尺码表 */
+#root .xn-size-table {
+  font-size: 13px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root .xn-size-table thead th {
+  background: #f1f5f9;
+  font-size: 12px;
+  color: #475569;
+  white-space: nowrap;
+}
+
+#root .xn-size-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* 移动端：页签 2 列 × 3 行 */
+@media (max-width: 639px) {
+  #root nav.xn-size-nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    overflow: visible !important;
+  }
+
+  #root .xn-size-tab {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  #root div.xn-size-g2,
+  #root div.xn-size-g3,
+  #root div.xn-size-g4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #root div.xn-size-g3 > *:last-child:nth-child(odd) {
+    grid-column: span 2 / span 2;
+  }
+}
