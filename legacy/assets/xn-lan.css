@@ -1,0 +1,99 @@
+/* R1148 家庭组网与网线速查合集 — 人用友好皮肤
+   1. 页面底：18px 点阵 + 靛蓝/青绿光晕（纯 CSS）
+   2. 工具页签 40→44；复制结果 38→40；下拉 48
+   3. 返回 17→40；说明 20→44；结果键值行 13
+   4. 剥离「工具 1」类内部编号前缀
+   不改 React 逻辑。 */
+
+#root {
+  background-color: #F7F9FD !important;
+  background-image:
+    radial-gradient(rgba(37, 99, 235, .12) 1px, transparent 1px),
+    radial-gradient(720px 380px at 100% -6%, rgba(37, 99, 235, .10), transparent 70%),
+    radial-gradient(560px 320px at -8% 104%, rgba(13, 148, 136, .08), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 工具页签 */
+#root .xn-lan-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  border-radius: 11px !important;
+  font-size: 12.5px !important;
+  color: #4b5a68 !important;
+}
+#root .xn-lan-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 8px 18px -12px rgba(37, 99, 235, .9);
+}
+#root .xn-lan-tab:hover {
+  color: #1d4ed8 !important;
+}
+
+/* 内部代号徽标 */
+#root .xn-lan-code {
+  display: none !important;
+}
+
+/* 复制结果 */
+#root button.xn-lan-copy {
+  min-height: 40px !important;
+  height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+  background: #eef4ff !important;
+  border: 1px solid #dbe7ff !important;
+  color: #1e40af !important;
+  font-weight: 600 !important;
+}
+#root button.xn-lan-copy:hover {
+  background: #e0ebff !important;
+  border-color: #b9d2ff !important;
+}
+
+/* 下拉 */
+#root select {
+  height: 48px !important;
+  font-size: 14.5px !important;
+  border-radius: 10px !important;
+  padding: 0 12px !important;
+}
+
+/* 结果键值行 */
+#root .xn-lan-kv {
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+  color: #3f4b5b !important;
+}
+
+/* 返回 / 说明 */
+#root a.xn-lan-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #1d4ed8 !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+}
+#root a.xn-lan-back:hover {
+  border-color: #93c5fd !important;
+  background: #f5f9ff !important;
+}
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+}
+
+@media (max-width: 639px) {
+  #root .xn-lan-tab { font-size: 11.5px !important; padding: 0 4px !important; }
+}
