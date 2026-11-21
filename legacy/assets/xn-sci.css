@@ -1,0 +1,48 @@
+/* R1168 科学计算与函数合集 — 人用友好皮肤（保留原深灰计算器主题）
+   1. 修复移动端键位塌成单列（通用皮肤把 div.grid 压成 1fr）
+   2. 页签 36→44；使用说明 36→44
+   3. 页面底：浅灰蓝点阵（纯 CSS） */
+
+/* 1 键位栅格恢复（5 键 / 4 键） */
+#root div.grid[class*="grid-cols-5"] {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+}
+
+#root div.grid[class*="grid-cols-4"] {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+/* 2 页签 */
+#root .xn-sci-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+}
+
+@media (max-width: 640px) {
+  #root .xn-sci-tab {
+    font-size: 12.5px !important;
+  }
+}
+
+#root .xn-sci-tab:focus-visible {
+  outline: 2px solid rgba(15, 23, 42, .6);
+  outline-offset: 2px;
+}
+
+/* 3 折叠 */
+#root details > summary {
+  min-height: 44px;
+  display: flex !important;
+  align-items: center;
+  font-size: 14px !important;
+}
+
+/* 4 页面底 */
+#root {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(900px 440px at 90% -10%, rgba(15, 23, 42, .06), rgba(15, 23, 42, 0) 60%),
+    radial-gradient(rgba(100, 116, 139, .16) 1px, rgba(100, 116, 139, 0) 1.5px);
+  background-size: auto, 18px 18px;
+}
