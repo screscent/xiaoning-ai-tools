@@ -1,0 +1,66 @@
+/* R1171 取色与配色提取合集 — 人用友好皮肤（保留原灰蓝主题）
+   1. 页签 38→44，补 aria-current/selected
+   2. 上传按钮 38→48
+   3. 图标按钮 24→40（复制 HEX/RGB/HSL 等）
+   4. 下拉 46→48/16；缩放滑块 28→32
+   5. 使用说明 summary 16→44 */
+
+#root .xn-pal-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 13.5px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+#root .xn-pal-tab[aria-current="true"] {
+  font-weight: 650 !important;
+}
+
+#root .xn-pal-tab:focus-visible {
+  outline: 2px solid rgba(51, 65, 85, .55);
+  outline-offset: -2px;
+  border-radius: 6px;
+}
+
+#root .xn-pal-upload {
+  min-height: 48px !important;
+  height: 48px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+  font-size: 14.5px !important;
+}
+
+#root .xn-pal-icon {
+  width: 40px !important;
+  min-width: 40px !important;
+  height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 10px !important;
+}
+
+#root .xn-pal-icon:focus-visible {
+  outline: 2px solid rgba(51, 65, 85, .5);
+  outline-offset: 1px;
+}
+
+#root .xn-pal-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+#root .xn-pal-range {
+  height: 32px !important;
+}
+
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
