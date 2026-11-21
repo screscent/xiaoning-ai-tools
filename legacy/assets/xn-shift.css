@@ -1,0 +1,69 @@
+/* R1161 倒班排班与作息合集 — 人用友好皮肤（保留原蓝色主题）
+   1. 顶部工具导航：32/38 → 44，移动端 3 列换行（原来 overflow-x-auto 藏后几个）
+   2. 区块内 5 个二级胶囊 26 → 40
+   3. 日期 15→16、天数 20→16、人员名单 15→16
+   4. 当前工具高亮补统一投影 */
+
+/* 1 顶部导航 */
+#root .xn-shift-nav {
+  flex-wrap: wrap !important;
+  overflow: visible !important;
+  gap: 6px !important;
+}
+
+#root .xn-shift-navlink {
+  height: 44px !important;
+  min-height: 44px !important;
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 10px !important;
+  font-size: 13.5px !important;
+  line-height: 1.15 !important;
+}
+
+@media (max-width: 640px) {
+  #root .xn-shift-navlink {
+    flex: 1 1 calc(33.333% - 4px) !important;
+    font-size: 13px !important;
+  }
+}
+
+#root .xn-shift-navlink[aria-current="page"] {
+  box-shadow: 0 4px 10px -4px rgba(37, 99, 235, .5);
+}
+
+#root .xn-shift-navlink:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .65);
+  outline-offset: 2px;
+}
+
+/* 2 二级胶囊 */
+#root .xn-shift-chip {
+  min-height: 40px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+#root .xn-shift-chip:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .55);
+  outline-offset: 2px;
+}
+
+/* 3 表单 */
+#root .xn-shift-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root textarea {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
