@@ -1,0 +1,147 @@
+/* R1143 中文与拼音处理合集 — 人用友好皮肤
+   1. 页面底：18px 点阵 + 靛蓝/玫红光晕（纯 CSS）
+   2. 工具页签 34→44；生成按钮 38→46；排序 38→44；复制 28→36
+   3. 统计标签 12→12.5；说明 20→44；返回 16→40
+   4. 标题剥离「工具X」内部代号
+   不改 React 逻辑。 */
+
+#root div.min-h-screen {
+  background-color: #F8F8FD !important;
+  background-image:
+    radial-gradient(rgba(79, 70, 229, .13) 1px, transparent 1px),
+    radial-gradient(720px 380px at 100% -8%, rgba(79, 70, 229, .12), transparent 70%),
+    radial-gradient(560px 320px at -8% 104%, rgba(244, 63, 94, .08), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 工具页签 */
+#root [data-xn-py-tabs="1"] {
+  gap: 6px !important;
+}
+#root li.xn-py-tab-item {
+  display: flex;
+}
+#root .xn-py-tab {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  border-radius: 11px !important;
+  font-size: 13px !important;
+  border: 1px solid #e3e6f5 !important;
+  background: #fff !important;
+  color: #475569 !important;
+  line-height: 1 !important;
+}
+#root .xn-py-tab:hover {
+  border-color: #a5b4fc !important;
+  color: #4338ca !important;
+  background: #f7f7ff !important;
+}
+#root .xn-py-tab[aria-selected="true"],
+#root .xn-py-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+  border-color: #6366f1 !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 8px 18px -12px rgba(79, 70, 229, .9);
+}
+
+/* 按钮 */
+#root button.xn-py-primary {
+  min-height: 46px !important;
+  height: 46px !important;
+  padding: 0 22px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 10px 22px -12px rgba(79, 70, 229, .85) !important;
+}
+#root button.xn-py-primary:hover {
+  background: linear-gradient(135deg, #4338ca, #6d28d9) !important;
+}
+#root button.xn-py-secondary {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dfe3f2 !important;
+  color: #3b465e !important;
+}
+#root button.xn-py-secondary:hover {
+  border-color: #a5b4fc !important;
+  color: #4338ca !important;
+  background: #f7f7ff !important;
+}
+#root button.xn-py-copy {
+  min-height: 36px !important;
+  height: 36px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  border-radius: 9px !important;
+  background: #f1f0ff !important;
+  border: 1px solid #dcd9ff !important;
+  color: #4338ca !important;
+  font-weight: 600 !important;
+}
+#root button.xn-py-copy:hover {
+  background: #e6e4ff !important;
+  border-color: #c4beff !important;
+}
+
+/* 输入/输出 */
+#root textarea {
+  font-size: 14.5px !important;
+  line-height: 1.8 !important;
+  border-radius: 12px !important;
+  padding: 11px 13px !important;
+  min-height: 92px;
+}
+
+/* 统计行 */
+#root .xn-py-stat {
+  font-size: 12.5px !important;
+  color: #475569 !important;
+}
+#root .xn-py-stat b,
+#root .xn-py-stat strong {
+  font-size: 13.5px !important;
+  color: #312e81 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 返回 / 说明 */
+#root a.xn-py-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dfe3f2 !important;
+  color: #4338ca !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+}
+#root a.xn-py-back:hover {
+  border-color: #a5b4fc !important;
+  background: #f7f7ff !important;
+}
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+}
+
+@media (max-width: 639px) {
+  #root .xn-py-tab { padding: 0 11px !important; font-size: 12.5px !important; }
+  #root button.xn-py-primary { width: 100% !important; }
+}
