@@ -1,0 +1,93 @@
+/* R1166 海淘税费与禁限速查 — 人用友好皮肤（保留原蓝白主题）
+   1. 页签移动端 6 列窄条 → 3 列 × 2 行（列数用内联兜底）；剥离「工具E」
+   2. 单件不可分割开关 24 → 44 触控高度
+   3. 金额/数量 20→16；品类/清关下拉 15→16
+   4. 复制结果 37→40
+   5. 结果标签 12→12.5；金额 14→16
+   6. 使用说明 16→44 */
+
+/* 1 页签 */
+#root .xn-shop-tab {
+  min-height: 62px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  font-size: 11.5px !important;
+  line-height: 1.2 !important;
+}
+
+@media (min-width: 641px) {
+  #root .xn-shop-tab {
+    font-size: 12.5px !important;
+  }
+}
+
+#root .xn-shop-tab:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .65);
+  outline-offset: -2px;
+}
+
+/* 2 开关 */
+#root .xn-shop-switch {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+#root .xn-shop-switch > span:last-child {
+  font-size: 13.5px !important;
+}
+
+#root .xn-shop-switch:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* 3 表单 */
+#root .xn-shop-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root .xn-shop-select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 4 复制 */
+#root .xn-shop-copy {
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+}
+
+#root .xn-shop-copy:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 5 结果 */
+#root .xn-shop-label {
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+  letter-spacing: .2px;
+}
+
+#root .xn-shop-amount {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 6 折叠 */
+#root details > summary {
+  min-height: 44px;
+  display: flex !important;
+  align-items: center;
+}
