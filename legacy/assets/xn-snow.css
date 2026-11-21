@@ -1,0 +1,100 @@
+/* R1190 雪行计（滑雪装备与雪场费用）— 人用友好皮肤（冰雪蓝，仅 urvrxxdyk8 引用）
+   1. 6 个页签 38→44；移动端 6 个 53px 小胶囊 → 2 列 × 3 行
+   2. 数字 20→16；下拉 46/15→48/16
+   3. 复制结果 37→44
+   4. 表格 13px、表头浅蓝、行 hover、滚动区可聚焦
+   5. 移动端 2/3/4 列恢复 2 列
+   6. 去「工具D/E/F」内部代号
+   7. 纯 CSS 冰雪蓝柔光 + 细点阵 */
+
+#root .xn-snow-page {
+  background-color: #f8fafc !important;
+  background-image:
+    radial-gradient(1000px 380px at 4% -10%, rgba(14, 165, 233, .11), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(99, 102, 241, .09), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(100, 116, 139, .10) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, 24px 24px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 页签 38 → 44 */
+#root .xn-snow-tab {
+  min-height: 44px !important;
+  height: auto !important;
+  padding: 6px 8px !important;
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+#root .xn-snow-tab:focus-visible {
+  outline: 2px solid rgba(2, 132, 199, .6);
+  outline-offset: 2px;
+}
+
+/* 数字 / 下拉 */
+#root .xn-snow-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 复制结果 37 → 44 */
+#root .xn-snow-copy {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+
+#root .xn-snow-copy:focus-visible {
+  outline: 2px solid rgba(2, 132, 199, .6);
+  outline-offset: 2px;
+}
+
+/* 表格 */
+#root .xn-snow-table {
+  font-size: 13px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root .xn-snow-table thead th {
+  background: #f0f9ff !important;
+  color: #075985;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+#root .xn-snow-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* 移动端：页签 2 列 × 3 行 */
+@media (max-width: 639px) {
+  #root nav.xn-snow-nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    overflow: visible !important;
+  }
+
+  #root .xn-snow-tab {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  #root div.xn-snow-g2,
+  #root div.xn-snow-g3,
+  #root div.xn-snow-g4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #root div.xn-snow-g3 > *:last-child:nth-child(odd) {
+    grid-column: span 2 / span 2;
+  }
+}
