@@ -1,0 +1,104 @@
+/* R1165 潜水与浮潜费用合集 — 人用友好皮肤（保留原深海青主题）
+   1. 页签 42→44；移动端 2 列 × 3 行（原来 6 个横向滚动藏后几个）
+   2. 是/否 选项 40→44；复制结果 36→40
+   3. 人数 20→16；项目/档位下拉 46/15 → 48/16
+   4. 结果金额 ¥ 20→22
+   5. 装备明细表 min-w → 0，移动端允许换行
+   6. 使用说明 20→44 */
+
+/* 1 页签 */
+#root .xn-dive-tabbar {
+  flex-wrap: wrap !important;
+  overflow: visible !important;
+  gap: 6px !important;
+}
+
+@media (max-width: 640px) {
+  #root .xn-dive-tabbar .xn-dive-tab {
+    flex: 1 1 calc(50% - 4px) !important;
+    justify-content: flex-start !important;
+    font-size: 12px !important;
+  }
+}
+
+#root .xn-dive-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#root .xn-dive-tab:focus-visible {
+  outline: 2px solid rgba(34, 211, 238, .8);
+  outline-offset: 2px;
+}
+
+/* 2 选项与复制 */
+#root .xn-dive-opt {
+  height: 44px !important;
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+}
+
+#root .xn-dive-copy {
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+}
+
+#root .xn-dive-copy:focus-visible,
+#root .xn-dive-opt:focus-visible {
+  outline: 2px solid rgba(34, 211, 238, .75);
+  outline-offset: 2px;
+}
+
+/* 3 表单 */
+#root .xn-dive-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root .xn-dive-select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 4 金额 */
+#root .xn-dive-num {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.2px;
+}
+
+/* 5 明细表 */
+#root table {
+  min-width: 0 !important;
+}
+
+#root th,
+#root td {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+@media (max-width: 640px) {
+  #root th,
+  #root td {
+    white-space: normal !important;
+    font-size: 11.5px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
+
+/* 6 折叠 */
+#root details > summary {
+  min-height: 44px;
+  display: flex !important;
+  align-items: center;
+}
