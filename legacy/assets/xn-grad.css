@@ -1,0 +1,96 @@
+/* R1195 CSS 渐变生成与预设合集 — 人用友好皮肤（柔彩渐变主题，仅 9pyjxqr8kd 引用）
+   1. 隐藏「使用说明…深链 #/gradient」引导块
+   2. 药丸页签 37→44，补 role=tab / aria-selected
+   3. 滑块 28→32（拇指 20），颜色控件 46→48
+   4. 中间色开关锁定 44×24 并扩大上下热区，补 role=switch
+   5. 纯 CSS 柔彩网格光斑（无图片） */
+
+#root .xn-grad-page {
+  background-color: #fbfaff !important;
+  background-image:
+    radial-gradient(900px 420px at 0% -8%, rgba(139, 92, 246, .16), transparent 62%),
+    radial-gradient(820px 400px at 100% -6%, rgba(34, 211, 238, .14), transparent 60%),
+    radial-gradient(700px 380px at 50% 108%, rgba(251, 191, 36, .10), transparent 62%),
+    radial-gradient(circle at 1px 1px, rgba(109, 40, 217, .10) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, auto, 24px 24px !important;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat !important;
+}
+
+/* 深链引导块不外露 */
+#root .xn-grad-hint {
+  display: none !important;
+}
+
+/* 药丸页签 37 → 44 */
+#root .xn-grad-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#root .xn-grad-tab:focus-visible {
+  outline: 2px solid rgba(109, 40, 217, .6);
+  outline-offset: 2px;
+}
+
+/* 滑块 28 → 32，拇指 20 */
+#root .xn-grad-range {
+  height: 32px !important;
+  accent-color: #7c3aed !important;
+}
+
+#root .xn-grad-range::-webkit-slider-thumb {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+#root .xn-grad-range::-moz-range-thumb {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* 颜色控件 46 → 48，白底描边避免深色边界不清 */
+#root .xn-grad-color {
+  height: 48px !important;
+  min-height: 48px !important;
+  background: #fff !important;
+  border: 1px solid rgba(109, 40, 217, .22) !important;
+  border-radius: 10px !important;
+  padding: 3px !important;
+  cursor: pointer;
+}
+
+/* 渐变类型下拉 46/15 → 48/16 */
+#root .xn-grad-select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding-right: 36px !important;
+}
+
+/* 中间色开关：锁定 44×24，上下各 10px 隐形热区 */
+#root .xn-grad-switch {
+  width: 44px !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  position: relative !important;
+}
+
+#root .xn-grad-switch::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+#root .xn-grad-switch:focus-visible {
+  outline: 2px solid rgba(109, 40, 217, .6);
+  outline-offset: 4px;
+}
