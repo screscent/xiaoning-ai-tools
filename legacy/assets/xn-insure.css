@@ -1,0 +1,114 @@
+/* R1144 保险保额与缴费计算合集 — 人用友好皮肤
+   1. 页面底：18px 点阵 + 青绿/靛蓝光晕（纯 CSS）
+   2. 工具页签 40→44；一键复制 38→44 主按钮、清空 44 次按钮
+   3. 数字输入 20→17；返回 16→40、说明 20→44
+   4. 隐藏「工具X」内部代号徽标
+   不改 React 逻辑。 */
+
+#root {
+  background-color: #F7FAFA !important;
+  background-image:
+    radial-gradient(rgba(13, 148, 136, .12) 1px, transparent 1px),
+    radial-gradient(720px 380px at 100% -8%, rgba(13, 148, 136, .10), transparent 70%),
+    radial-gradient(560px 320px at -8% 104%, rgba(79, 70, 229, .08), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 工具页签 */
+#root nav a.xn-ins-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 11px !important;
+  font-size: 12.5px !important;
+  color: #475569 !important;
+}
+#root nav a.xn-ins-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #0d9488, #0f766e) !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 8px 18px -12px rgba(13, 148, 136, .9);
+}
+#root nav a.xn-ins-tab:hover {
+  background: #eefaf7 !important;
+  color: #0f766e !important;
+}
+
+/* 按钮 */
+#root button.xn-ins-primary {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #0d9488, #0f766e) !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 8px 18px -12px rgba(13, 148, 136, .9) !important;
+}
+#root button.xn-ins-primary:hover {
+  background: linear-gradient(135deg, #0f766e, #115e59) !important;
+}
+#root button.xn-ins-secondary {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #d9e4e2 !important;
+  color: #3b465e !important;
+}
+#root button.xn-ins-secondary:hover {
+  border-color: #5eead4 !important;
+  color: #0f766e !important;
+  background: #f2fbf9 !important;
+}
+
+/* 数字输入 */
+#root input[type="number"] {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  color: #0f172a !important;
+}
+
+/* 返回 / 说明 */
+#root a.xn-ins-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #d9e4e2 !important;
+  color: #0f766e !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+}
+#root a.xn-ins-back:hover {
+  border-color: #5eead4 !important;
+  background: #f2fbf9 !important;
+}
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+}
+
+/* 内部代号徽标 */
+#root .xn-ins-code {
+  display: none !important;
+}
+
+@media (max-width: 639px) {
+  #root nav a.xn-ins-tab { font-size: 12px !important; }
+  #root button.xn-ins-primary,
+  #root button.xn-ins-secondary { flex: 1 1 auto; }
+}
