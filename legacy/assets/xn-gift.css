@@ -1,0 +1,119 @@
+/* R1146 人情往来与红包计算合集 — 人用友好皮肤
+   1. 页面底：18px 点阵 + 暖红/琥珀光晕（纯 CSS）
+   2. 工具页签 42→44；一键复制 28→36、清空 37→40
+   3. 数字输入 20→17；下拉 48；返回 14→40；说明 20→44
+   4. 剥离「工具X」前缀并隐藏 A–F 字母徽标
+   不改 React 逻辑。 */
+
+#root {
+  background-color: #FEF9F8 !important;
+  background-image:
+    radial-gradient(rgba(225, 29, 72, .10) 1px, transparent 1px),
+    radial-gradient(720px 380px at 100% -6%, rgba(225, 29, 72, .10), transparent 70%),
+    radial-gradient(560px 320px at -8% 104%, rgba(245, 158, 11, .10), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 工具页签 */
+#root a.xn-gift-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  border-radius: 12px !important;
+  font-size: 13px !important;
+  border: 1px solid #f3dede !important;
+  background: #fff !important;
+  color: #6b5560 !important;
+}
+#root a.xn-gift-tab:hover {
+  border-color: #fca5a5 !important;
+  color: #be123c !important;
+  background: #fff7f7 !important;
+}
+#root a.xn-gift-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #e11d48, #be123c) !important;
+  border-color: #e11d48 !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 8px 18px -12px rgba(225, 29, 72, .9);
+}
+
+/* 按钮 */
+#root button.xn-gift-copy {
+  min-height: 36px !important;
+  height: 36px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  border-radius: 9px !important;
+  background: linear-gradient(135deg, #e11d48, #be123c) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 6px 14px -10px rgba(225, 29, 72, .9) !important;
+}
+#root button.xn-gift-copy:hover {
+  background: linear-gradient(135deg, #be123c, #9f1239) !important;
+}
+#root button.xn-gift-clear {
+  min-height: 40px !important;
+  height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #f0dcdc !important;
+  color: #6b5560 !important;
+}
+#root button.xn-gift-clear:hover {
+  border-color: #fca5a5 !important;
+  color: #be123c !important;
+  background: #fff7f7 !important;
+}
+
+/* 表单 */
+#root input[type="number"] {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  color: #0f172a !important;
+}
+#root select {
+  height: 48px !important;
+  font-size: 14.5px !important;
+  border-radius: 10px !important;
+  padding: 0 12px !important;
+}
+
+/* 返回 / 说明 */
+#root a.xn-gift-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #f0dcdc !important;
+  color: #be123c !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+}
+#root a.xn-gift-back:hover {
+  border-color: #fca5a5 !important;
+  background: #fff7f7 !important;
+}
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+}
+
+/* 内部代号徽标 */
+#root .xn-gift-letter {
+  display: none !important;
+}
+
+@media (max-width: 639px) {
+  #root a.xn-gift-tab { font-size: 12.5px !important; }
+}
