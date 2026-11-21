@@ -33,7 +33,7 @@
       if (!VIS(b)) return;
       var v = TXT(b);
       if (/上传图片/.test(v)) { b.classList.add("xn-pal-upload"); return; }
-      if (!v && b.querySelector("svg") && H(b) <= 34) {
+      if (!v && b.querySelector("svg") && (H(b) <= 44 || b.classList.contains("xn-pal-icon"))) {
         b.classList.add("xn-pal-icon");
         b.setAttribute("type", "button");
         var row = b.parentElement ? TXT(b.parentElement).replace(/^[-–—\s]+/, "") : "";
@@ -73,6 +73,7 @@
   window.addEventListener("load", schedule);
   var mo = new MutationObserver(schedule);
   mo.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "aria-pressed"] });
+  setTimeout(run, 250);
   setTimeout(run, 700);
   setTimeout(run, 1600);
 })();
