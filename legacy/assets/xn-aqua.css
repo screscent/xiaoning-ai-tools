@@ -1,0 +1,95 @@
+/* R1185 鱼缸水族与水质养护合集 — 人用友好皮肤（青绿主题，仅 vfd6yrlsqf 引用）
+   1. 移动端标题 26px 截断 → 18px 可换行
+   2. 顶部 6 个工具卡移动端 1 列 → 2 列
+   3. 数字输入 20→16；字段网格移动端恢复 2 列（3/5 项末项占整行）
+   4. 水草/CO2/开缸/鱼型分段 40→44 + radio 语义
+   5. 复制结果 37→44
+   6. 去「工具E/F」内部代号 */
+
+/* 页头标题：通用皮肤把 h1 锁成 26px，390px 下被截断 */
+#root header h1 {
+  font-size: 18px !important;
+  line-height: 1.35 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+@media (min-width: 640px) {
+  #root header h1 {
+    font-size: 20px !important;
+  }
+}
+
+/* 数字输入 20 → 16 */
+#root .xn-aqua-field {
+  min-height: 48px !important;
+  height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 分段选项 40 → 44 */
+#root .xn-aqua-chip {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root .xn-aqua-chip:focus-visible {
+  outline: 2px solid rgba(13, 148, 136, .6);
+  outline-offset: 2px;
+}
+
+/* 复制结果 37 → 44 */
+#root .xn-aqua-copy {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#root .xn-aqua-copy:focus-visible {
+  outline: 2px solid rgba(13, 148, 136, .6);
+  outline-offset: 2px;
+}
+
+/* 移动端：工具卡改为紧凑单列（隐藏长描述与 CTA，保留图标+标题）；字段网格恢复 2 列 */
+@media (max-width: 1023px) {
+  #root nav.xn-aqua-cards {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  #root nav.xn-aqua-cards a {
+    align-items: center !important;
+    padding: 10px 12px !important;
+    border-radius: 14px !important;
+  }
+
+  #root nav.xn-aqua-cards a > span:first-child {
+    height: 36px !important;
+    width: 36px !important;
+    border-radius: 12px !important;
+  }
+
+  /* 第 2 段是描述、第 3 段是「打开工具」，移动端收起，只留标题 */
+  #root nav.xn-aqua-cards a > span:last-child > span:nth-child(2),
+  #root nav.xn-aqua-cards a > span:last-child > span:nth-child(3) {
+    display: none !important;
+  }
+
+  #root div.xn-aqua-g2,
+  #root div.xn-aqua-g3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* 3 或 5 项的末项占满整行，避免落单 */
+  #root div.xn-aqua-g3 > *:last-child:nth-child(odd) {
+    grid-column: span 2 / span 2;
+  }
+}
