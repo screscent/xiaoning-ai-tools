@@ -1,0 +1,88 @@
+/* R1156 乒乓球入门与器材合集 — 人用友好皮肤（保留原蓝白主题）
+   1. 页签 40→44；移动端恢复 3 列 × 2 行（原来被压成 6 行整宽）
+   2. 打法/手感选项 40→44，字号 13→13.5
+   3. 「一键复制结果」37→40
+   4. 数字输入 20→16
+   5. 结果分组标签 12→13（推荐底板/胶皮/硬度/预算）
+   6. 页面底：浅蓝灰 + 点阵 + 双光晕（纯 CSS，零图片） */
+
+#root {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(1000px 480px at 92% -10%, rgba(37, 99, 235, .10), rgba(37, 99, 235, 0) 60%),
+    radial-gradient(820px 420px at -6% 104%, rgba(13, 148, 136, .08), rgba(13, 148, 136, 0) 58%),
+    radial-gradient(rgba(100, 116, 139, .16) 1px, rgba(100, 116, 139, 0) 1.5px);
+  background-size: auto, auto, 18px 18px;
+}
+
+/* 1 页签 */
+#root div.xn-pk-tabbar.grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+}
+
+@media (min-width: 641px) {
+  #root div.xn-pk-tabbar.grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+}
+
+#root .xn-pk-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 8px !important;
+  font-size: 13.5px !important;
+  line-height: 1.15 !important;
+}
+
+#root .xn-pk-tab:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .65);
+  outline-offset: 2px;
+}
+
+/* 2 选项 chip */
+#root .xn-pk-chip {
+  height: 44px !important;
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+}
+
+#root .xn-pk-chip:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .55);
+  outline-offset: 2px;
+}
+
+/* 3 复制 */
+#root .xn-pk-copy {
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+
+#root .xn-pk-copy:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 4 数字输入 */
+#root .xn-pk-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 5 结果分组标签 */
+#root .xn-pk-label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+  letter-spacing: .2px;
+}
