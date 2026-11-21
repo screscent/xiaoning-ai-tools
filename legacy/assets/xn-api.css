@@ -1,0 +1,126 @@
+/* R1169 API 设计与 OpenAPI 速查合集 — 人用友好皮肤（保留原靛蓝主题）
+   1. 页签 38→44；剥离「工具E」
+   2. 资源 chip 26/37 → 44，补 aria-pressed
+   3. 复制类按钮 26/28/30/37 → 40（图标钮 40×40）
+   4. 资源名输入 53/15 → 48/16
+   5. 标题剥离「工具A」 */
+
+/* 1 页签 */
+#root .xn-api-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13px !important;
+  line-height: 1.15 !important;
+}
+
+#root .xn-api-tab:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .65);
+  outline-offset: -2px;
+}
+
+/* 2 资源 chip */
+#root .xn-api-chip {
+  height: 44px !important;
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+#root .xn-api-chip:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .6);
+  outline-offset: 2px;
+}
+
+/* 3 复制按钮 */
+#root .xn-api-copy {
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#root .xn-api-copy.xn-api-icononly {
+  width: 40px !important;
+  min-width: 40px !important;
+  padding: 0 !important;
+}
+
+#root .xn-api-copy:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .6);
+  outline-offset: 2px;
+}
+
+/* 4 输入 */
+#root .xn-api-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 5 合集说明折叠 */
+#root .xn-api-hide {
+  display: none !important;
+}
+
+#root .xn-api-notes {
+  margin-top: 10px;
+}
+
+#root .xn-api-notes > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(79, 70, 229, .16);
+  border-radius: 10px;
+  background: rgba(99, 102, 241, .07);
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+#root .xn-api-notes > summary::-webkit-details-marker {
+  display: none;
+}
+
+#root .xn-api-notes > summary:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .6);
+  outline-offset: 2px;
+}
+
+#root .xn-api-notes-body {
+  margin-top: 8px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: rgba(241, 245, 249, .8);
+  color: #475569;
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+
+/* 6 指标数字 18 → 22 */
+#root .xn-api-stat {
+  font-size: 22px !important;
+  line-height: 1.3 !important;
+}
+
+/* 7 移动端数字输入隐藏原生步进器（避免 48px 输入框被挤成两截） */
+@media (max-width: 640px) {
+  #root .xn-api-input[type="number"] {
+    -webkit-appearance: none;
+    appearance: textfield;
+  }
+  #root .xn-api-input[type="number"]::-webkit-outer-spin-button,
+  #root .xn-api-input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
