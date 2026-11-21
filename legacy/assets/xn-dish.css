@@ -1,0 +1,73 @@
+/* R1154 洗碗机容量与耗材计算合集 — 人用友好皮肤（保留原青绿主题与浅蓝 hero）
+   1. 页签 42→44，移动端 2 列换行（原来 6 个只有 2 个可见，其余被横向滚动藏起）
+   2. 「一键复制结果」36→40
+   3. 输入 46/15 → 48/16（保留右对齐数字）
+   4. 结果三个指标字号拉齐（25 件 24px、≈30 升/≈5 套 20px）
+   5. 剥离「工具A/B/C」前缀（页签 + 标题） */
+
+/* 1 页签 */
+#root .xn-dish-tabbar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  overflow: visible !important;
+  gap: 6px !important;
+}
+
+#root .xn-dish-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  justify-content: center !important;
+  padding: 0 12px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+}
+
+#root .xn-dish-tab[aria-current="page"] {
+  box-shadow: 0 4px 10px -4px rgba(13, 148, 136, .45) !important;
+}
+
+#root .xn-dish-tab:focus-visible {
+  outline: 2px solid rgba(13, 148, 136, .7);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  #root .xn-dish-tab {
+    flex: 1 1 calc(50% - 3px) !important;
+    font-size: 13px !important;
+  }
+}
+
+/* 2 复制按钮 */
+#root .xn-dish-copy {
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+}
+
+#root .xn-dish-copy:focus-visible {
+  outline: 2px solid rgba(13, 148, 136, .7);
+  outline-offset: 2px;
+}
+
+/* 3 输入 */
+#root .xn-dish-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 4 结果指标 */
+#root .xn-dish-metric {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.2px;
+}
