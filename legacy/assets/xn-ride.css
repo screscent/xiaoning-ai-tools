@@ -1,0 +1,130 @@
+/* R1150 打车费用与通勤速查 — 人用友好皮肤
+   1. 页面底：18px 点阵 + 靛蓝/琥珀光晕（纯 CSS）
+   2. 工具页签 38→44；复制结果 36→40；开关行 44
+   3. 数字输入 20→17；下拉 48；返回 14→40；说明 20→44
+   不改 React 逻辑。 */
+
+#root {
+  background-color: #F7F9FD !important;
+  background-image:
+    radial-gradient(rgba(37, 99, 235, .12) 1px, transparent 1px),
+    radial-gradient(720px 380px at 100% -6%, rgba(37, 99, 235, .10), transparent 70%),
+    radial-gradient(560px 320px at -8% 104%, rgba(245, 158, 11, .08), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 工具页签 */
+#root a.xn-ride-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 11px !important;
+  font-size: 13px !important;
+  border: 1px solid #e3e9f5 !important;
+  background: #fff !important;
+  color: #475569 !important;
+}
+#root a.xn-ride-tab:hover {
+  border-color: #93c5fd !important;
+  color: #1d4ed8 !important;
+  background: #f7faff !important;
+}
+#root a.xn-ride-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  border-color: #3b82f6 !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 8px 18px -12px rgba(37, 99, 235, .9);
+}
+
+/* 输入 */
+#root input[type="number"] {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  color: #0f172a !important;
+}
+#root select {
+  height: 48px !important;
+  font-size: 14.5px !important;
+  border-radius: 10px !important;
+  padding: 0 12px !important;
+}
+
+/* 复制结果 */
+#root button.xn-ride-copy {
+  min-height: 40px !important;
+  height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+  background: #eef4ff !important;
+  border: 1px solid #dbe7ff !important;
+  color: #1e40af !important;
+  font-weight: 600 !important;
+}
+#root button.xn-ride-copy:hover {
+  background: #e0ebff !important;
+  border-color: #b9d2ff !important;
+}
+
+/* 开关行 44 触达 + 可见轨道（通用皮肤会把 aria-pressed 按钮刷成白底） */
+#root [data-xn-ride-switch="1"] {
+  min-height: 44px !important;
+}
+#root button.xn-ride-toggle {
+  width: 46px !important;
+  min-width: 46px !important;
+  height: 26px !important;
+  min-height: 26px !important;
+  border-radius: 999px !important;
+  background: #cbd5e1 !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+#root button.xn-ride-toggle[aria-pressed="true"] {
+  background: #2563eb !important;
+}
+#root button.xn-ride-toggle span {
+  background: #fff !important;
+  border-radius: 999px !important;
+}
+
+/* 返回 / 说明 */
+#root a.xn-ride-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #1d4ed8 !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+}
+#root a.xn-ride-back:hover {
+  border-color: #93c5fd !important;
+  background: #f5f9ff !important;
+}
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+}
+
+/* 合计金额 */
+#root .xn-ride-total {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 639px) {
+  #root a.xn-ride-tab { font-size: 12.5px !important; }
+}
