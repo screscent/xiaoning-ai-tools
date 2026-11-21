@@ -1,0 +1,157 @@
+/* R1142 高速通行费与 ETC 合集 — 人用友好皮肤
+   1. H1 渐变文字在深色页头不可见（text-transparent + bg-clip-text）→ 强制白色
+   2. 页头加深色点阵纹理、返回按钮改半透明白胶囊
+   3. 导航 42→44，选中项白字；车型卡 40→56，主次文字 13.5/11.5
+   4. 数字输入 20→17；计算按钮渐变 48；页面底点阵
+   不改 React 逻辑。 */
+
+#root div.min-h-screen {
+  background-color: #F7F9FD !important;
+  background-image:
+    radial-gradient(rgba(37, 99, 235, .13) 1px, transparent 1px),
+    radial-gradient(720px 380px at 100% 6%, rgba(14, 165, 233, .10), transparent 70%) !important;
+  background-size: 18px 18px, auto !important;
+}
+
+/* 页头（仅顶部 hero，不含卡片内 header） */
+#root header.xn-etc-hero {
+  background-image:
+    radial-gradient(rgba(255, 255, 255, .16) 1px, transparent 1px),
+    linear-gradient(135deg, #075985, #0369a1 55%, #0e7490) !important;
+  background-size: 22px 22px, auto !important;
+}
+#root header.xn-etc-hero h1 {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  background: none !important;
+  text-shadow: 0 2px 18px rgba(2, 32, 71, .35);
+}
+#root header.xn-etc-hero p {
+  color: rgba(255, 255, 255, .92) !important;
+}
+#root a.xn-etc-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 12px !important;
+  border-radius: 9px !important;
+  background: rgba(255, 255, 255, .14) !important;
+  border: 1px solid rgba(255, 255, 255, .28) !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+  backdrop-filter: blur(2px);
+}
+#root a.xn-etc-back:hover {
+  background: rgba(255, 255, 255, .22) !important;
+}
+
+/* 工具导航 */
+#root [data-xn-etc-nav="1"] {
+  gap: 6px !important;
+  padding-bottom: 4px !important;
+}
+#root a.xn-etc-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  border-radius: 11px !important;
+  font-size: 13px !important;
+  border: 1px solid #e3e9f5 !important;
+  background: #fff !important;
+  color: #475569 !important;
+}
+#root a.xn-etc-tab:hover {
+  border-color: #7dd3fc !important;
+  color: #0369a1 !important;
+  background: #f4fbff !important;
+}
+#root a.xn-etc-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #0284c7, #0891b2) !important;
+  border-color: #0ea5e9 !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 8px 18px -12px rgba(2, 132, 199, .9);
+}
+
+/* 车型卡 */
+#root button.xn-etc-car {
+  min-height: 56px !important;
+  padding: 8px 10px !important;
+  border-radius: 12px !important;
+  font-size: 13.5px !important;
+}
+#root button.xn-etc-car span {
+  font-size: 11.5px !important;
+  line-height: 1.4 !important;
+  margin-top: 2px !important;
+}
+#root button.xn-etc-car[aria-pressed="true"] {
+  background: linear-gradient(135deg, rgba(2, 132, 199, .14), rgba(8, 145, 178, .07)) !important;
+  border-color: #38bdf8 !important;
+  color: #075985 !important;
+  box-shadow: inset 0 0 0 1px rgba(56, 189, 248, .26);
+}
+#root button.xn-etc-car[aria-pressed="false"] {
+  background: #fff !important;
+  border-color: #dbe3f0 !important;
+  color: #334155 !important;
+}
+#root button.xn-etc-car[aria-pressed="false"]:hover {
+  border-color: #7dd3fc !important;
+  background: #f6fbff !important;
+}
+
+/* 数字输入 */
+#root input[type="number"] {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  color: #0f172a !important;
+}
+
+/* 主按钮 */
+#root button.xn-etc-calc {
+  min-height: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #0284c7, #0891b2) !important;
+  color: #fff !important;
+  box-shadow: 0 12px 24px -14px rgba(2, 132, 199, .95) !important;
+}
+#root button.xn-etc-calc:hover {
+  background: linear-gradient(135deg, #0369a1, #0e7490) !important;
+}
+
+/* 复制结果 */
+#root button.xn-etc-copy {
+  min-height: 36px !important;
+  height: 36px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  border-radius: 9px !important;
+  background: #eef6ff !important;
+  border: 1px solid #cfe6ff !important;
+  color: #075985 !important;
+  font-weight: 600 !important;
+}
+#root button.xn-etc-copy:hover {
+  background: #e0efff !important;
+  border-color: #a9d3ff !important;
+}
+
+/* 说明 */
+#root details > summary {
+  font-size: 14.5px !important;
+}
+
+@media (max-width: 639px) {
+  #root header h1 { font-size: 26px !important; }
+  #root a.xn-etc-tab { padding: 0 11px !important; font-size: 12.5px !important; }
+  #root button.xn-etc-car { min-height: 52px !important; }
+}
