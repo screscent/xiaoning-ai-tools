@@ -1,0 +1,23 @@
+/* R1152 床垫与枕头选购合集 — 人用友好皮肤（深色主题，不做浅色底）
+   1. 输入 20→17（数字密集，需等宽）
+   2. 页签/选项补 aria（视觉已合格，仅补语义）
+   3. 剥离「工具A」前缀与徽标
+   不改 React 逻辑，尊重原深色琥珀主题。 */
+
+#root .xn-bed-input {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 页签/选项：保留原配色，仅补聚焦可见性 */
+#root .xn-bed-opt:focus-visible,
+#root .xn-bed-tab:focus-visible {
+  outline: 2px solid rgba(252, 211, 77, .8);
+  outline-offset: 2px;
+}
+
+/* 内部代号徽标 */
+#root .xn-bed-code {
+  display: none !important;
+}
