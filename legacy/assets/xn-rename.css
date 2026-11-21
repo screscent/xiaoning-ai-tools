@@ -1,0 +1,93 @@
+/* R1194 文件批量重命名合集 — 人用友好皮肤（青绿文件主题，仅 atvl9kpmpa 引用）
+   1. 页签 38→44，补 role=tab / aria-selected；移动端 3+3 两行
+   2. 文本/日期/数字/下拉 46→48、15→16
+   3. 复选框 16→18 + 青绿 accent；标签行 44 触达
+   4. 复制模板/复制 37→44
+   5. 纯 CSS 青绿柔光 + 22px 细点阵 */
+
+#root .xn-rename-page {
+  background-color: #f7fbfa !important;
+  background-image:
+    radial-gradient(1000px 400px at 4% -10%, rgba(13, 148, 136, .10), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(37, 99, 235, .08), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(15, 118, 110, .10) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, 22px 22px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 页签 38 → 44 */
+#root .xn-rename-tabs {
+  gap: 8px !important;
+}
+
+#root .xn-rename-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13.5px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+
+#root .xn-rename-tab:focus-visible {
+  outline: 2px solid rgba(13, 148, 136, .62);
+  outline-offset: 2px;
+}
+
+/* 输入与下拉 46/15 → 48/16 */
+#root .xn-rename-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 复选框 16 → 18，标签行 44 触达 */
+#root .xn-rename-checklabel {
+  min-height: 44px !important;
+  padding-right: 6px !important;
+  gap: 8px !important;
+}
+
+#root .xn-rename-check {
+  width: 18px !important;
+  height: 18px !important;
+  accent-color: #0d9488 !important;
+}
+
+/* 复制模板 / 复制 37 → 44 */
+#root .xn-rename-act {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+#root .xn-rename-act:focus-visible {
+  outline: 2px solid rgba(13, 148, 136, .62);
+  outline-offset: 2px;
+}
+
+/* 移动端页签 3+3 两行，标签不截断 */
+@media (max-width: 1023px) {
+  #root .xn-rename-tabs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+  }
+
+  #root .xn-rename-tab {
+    flex: 1 1 calc(33.333% - 8px) !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  /* 数字输入留出步进器空间，避免 4–5 位序号被裁切 */
+  #root input.xn-rename-field[type=number] {
+    min-width: 84px !important;
+  }
+}
