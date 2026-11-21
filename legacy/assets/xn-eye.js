@@ -1,105 +1,86 @@
-/* 眼镜与视力保护速查合集页增强（仅 2q767tqqxb 引用）
- * - 工具E/工具F 占位清理
- * - 屏幕距离与折射率：输入补单位 aria + 常用值胶囊
- * - 推荐折射率数字 24px
- */
+/* R1176 屏幕使用与护眼休息合集 — 语义与尺寸增强（幂等，不改 React 状态） */
 (function () {
   "use strict";
-  if (window.__XN_EYE__) return;
-  window.__XN_EYE__ = true;
+  if (window.__xnEye) return;
+  window.__xnEye = true;
 
-  function txt(el) { return (el.textContent || "").trim(); }
-  function setVal(el, v) {
-    var proto = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value");
-    proto.set.call(el, String(v));
-    el.dispatchEvent(new Event("input", { bubbles: true }));
-    el.dispatchEvent(new Event("change", { bubbles: true }));
+  var TXT = function (el) { return (el.textContent || "").replace(/\s+/g, " ").trim(); };
+  var VIS = function (el) { var r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0; };
+  var H = function (el) { return Math.round(el.getBoundingClientRect().height); };
+  var W = function (el) { return Math.round(el.getBoundingClientRect().width); };
+
+  var TAB = /^(屏幕计划|护眼提醒)$/;
+
+  function tabs() {
+    var list = [].slice.call(document.querySelectorAll("#root button")).filter(function (b) {
+      return VIS(b) && TAB.test(TXT(b));
+    });
+    if (!list.length) return;
+    var bar = list[0].parentElement;
+    if (bar) bar.setAttribute("role", "tablist");
+    list.forEach(function (b) {
+      b.classList.add("xn-eye-tab");
+      b.setAttribute("role", "tab");
+      var on = /(^|\s)bg-white(\s|$)/.test(b.className) && /text-emerald-600/.test(b.className);
+      b.setAttribute("aria-current", on ? "true" : "false");
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.setAttribute("tabindex", on ? "0" : "-1");
+    });
   }
-  function visible(el) { return el.getBoundingClientRect().height > 0; }
 
-  function fixPlaceholders() {
-    [].slice.call(document.querySelectorAll("#root span, #root div, #root p, #root h1, #root h2, #root h3")).forEach(function (el) {
-      if (el.children.length) return;
-      var t = txt(el);
-      if (/^工具[A-Z]\s*[·:：]?\s*/.test(t)) {
-        var next = t.replace(/^工具[A-Z]\s*[·:：]?\s*/, "");
-        if (next) el.textContent = next;
+  function buttons() {
+    [].slice.call(document.querySelectorAll("#root button")).forEach(function (b) {
+      if (!VIS(b)) return;
+      if (/w-11/.test(b.className) && H(b) <= 44) {
+        b.classList.add("xn-eye-switch");
+        var bg = getComputedStyle(b).backgroundColor || "";
+        var m = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+        var on = m ? (Number(m[1]) < 200 && Number(m[2]) > 100) : /bg-emerald|bg-green/.test(b.className);
+        b.removeAttribute("aria-pressed");
+        b.setAttribute("role", "switch");
+        b.setAttribute("aria-checked", on ? "true" : "false");
+        if (!b.getAttribute("aria-label")) b.setAttribute("aria-label", "切换选项");
+        return;
       }
+      var v = TXT(b);
+      if (/^生成计划$/.test(v)) { b.classList.add("xn-eye-primary"); return; }
+      if (/^(复制计划|清空)$/.test(v)) { b.classList.add("xn-eye-action"); return; }
     });
   }
 
-  function markIndex() {
-    [].slice.call(document.querySelectorAll("#root span, #root div, #root p")).forEach(function (el) {
-      if (el.children.length) return;
-      if (/^1\.\d{2}\s*\/\s*1\.\d{2}$/.test(txt(el))) el.classList.add("xn-idx");
+  function fields() {
+    [].slice.call(document.querySelectorAll("#root input[type=time], #root select")).forEach(function (f) {
+      f.classList.add("xn-eye-field");
+      if (getComputedStyle(f).fontSize !== "16px") f.style.setProperty("font-size", "16px", "important");
+      if (H(f) < 48) f.style.setProperty("min-height", "48px", "important");
     });
   }
 
-  var RULES = [
-    { re: /^屏幕尺寸/, unit: "英寸", vals: [13, 15, 24, 27] },
-    { re: /^当前使用距离/, unit: "cm", vals: [40, 50, 60, 70] },
-    { re: /^每日屏幕时长/, unit: "小时", vals: [2, 4, 6, 8] },
-    { re: /^年龄/, unit: "岁", vals: [12, 18, 30, 45] },
-    { re: /^度数（球镜）/, unit: "", vals: [-200, -400, -600, -800] }
-  ];
-
-  function addChips(input) {
-    if (!visible(input)) return;
-    var label = input.getAttribute("aria-label") || "";
-    var rule = null;
-    for (var i = 0; i < RULES.length; i++) if (RULES[i].re.test(label)) { rule = RULES[i]; break; }
-    if (!rule) return;
-    if (label.indexOf("（") < 0 && rule.unit) input.setAttribute("aria-label", label + "（" + rule.unit + "）");
-    var host = input.parentElement;
-    if (!host || input.__xnChips) return;
-    var cs = window.getComputedStyle(host);
-    var flexRow = cs.display.indexOf("flex") === 0 && cs.flexDirection.indexOf("row") === 0;
-    var wrap = document.createElement("div");
-    wrap.className = "xn-chips";
-    rule.vals.forEach(function (v) {
-      var b = document.createElement("button");
-      b.type = "button";
-      b.textContent = v;
-      b.onclick = function () { setVal(input, v); setTimeout(updateAll, 40); };
-      wrap.appendChild(b);
-    });
-    if (flexRow && host.parentElement) host.parentElement.insertBefore(wrap, host.nextSibling);
-    else host.appendChild(wrap);
-    input.__xnChips = true;
-    input.addEventListener("input", function () { sync(input, wrap, rule); });
-    sync(input, wrap, rule);
-  }
-
-  function sync(input, wrap, rule) {
-    var cur = parseFloat(input.value);
-    [].slice.call(wrap.children).forEach(function (b, i) {
-      b.classList.toggle("is-on", !isNaN(cur) && cur === rule.vals[i]);
+  function chips() {
+    [].slice.call(document.querySelectorAll("#root span")).forEach(function (s) {
+      if (s.children.length || !VIS(s)) return;
+      if (/^\d{2}:\d{2}$/.test(TXT(s)) && /font-mono/.test(s.className)) s.classList.add("xn-eye-chip");
     });
   }
 
-  function updateAll() {
-    if (!document.getElementById("root")) return;
-    fixPlaceholders();
-    markIndex();
-    [].slice.call(document.querySelectorAll("#root input")).forEach(addChips);
+  function run() {
+    tabs();
+    buttons();
+    fields();
+    chips();
   }
 
-  var scheduled = false;
+  var timer = null;
   function schedule() {
-    if (scheduled) return;
-    scheduled = true;
-    setTimeout(function () { scheduled = false; try { updateAll(); } catch (e) {} }, 240);
+    if (timer) return;
+    timer = setTimeout(function () { timer = null; run(); }, 90);
   }
 
-  function boot() {
-    var root = document.getElementById("root");
-    if (!root) { setTimeout(boot, 300); return; }
-    updateAll();
-    new MutationObserver(schedule).observe(root, {
-      childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ["class"]
-    });
-  }
-
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
-  else boot();
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", schedule);
+  else schedule();
+  window.addEventListener("load", schedule);
+  var mo = new MutationObserver(schedule);
+  mo.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "style", "aria-pressed"] });
+  setTimeout(run, 700);
+  setTimeout(run, 1600);
 })();
