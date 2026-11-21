@@ -1,0 +1,58 @@
+/* R1163 签证与出入境速查合集 — 人用友好皮肤（保留原靛蓝渐变 hero）
+   1. 移动端 6 个导航项被压成 55×36 只显示图标 → 3 列 × 2 行，显示标题
+   2. 复制结果/使用说明 37→44
+   3. 目的地/出行目的下拉 46/15 → 48/16 */
+
+/* 1 导航 */
+#root .xn-visa-nav {
+  flex-wrap: wrap !important;
+}
+
+@media (max-width: 640px) {
+  #root .xn-visa-nav .xn-visa-link {
+    flex: 1 1 calc(33.333% - 6px) !important;
+    min-width: 0 !important;
+    min-height: 48px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  #root .xn-visa-nav .xn-visa-link > span:last-child {
+    overflow: visible !important;
+  }
+
+  #root .xn-visa-nav .xn-visa-link > span:last-child > span:first-child {
+    font-size: 11.5px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    line-height: 1.25 !important;
+  }
+}
+
+#root .xn-visa-link:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .65);
+  outline-offset: 2px;
+}
+
+/* 2 操作按钮 */
+#root .xn-visa-btn {
+  height: 44px !important;
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+#root .xn-visa-btn:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .6);
+  outline-offset: 2px;
+}
+
+/* 3 下拉 */
+#root .xn-visa-select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
