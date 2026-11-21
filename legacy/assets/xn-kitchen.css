@@ -1,0 +1,77 @@
+/* R1192 厨房调味与酱汁配比合集 — 人用友好皮肤（琥珀主题，仅 nybrtkpkdd 引用）
+   1. 隐藏「六个标签对应地址 #juice…#marinade」开发者提示
+   2. 页签 56 保留，补 aria-selected
+   3. 数字 20→16；复制 37→44
+   4. 酱汁预设 40→44，aria-pressed → radio（去掉通用皮肤的 ✓ 白块）
+   5. 移动端 2/3 列恢复 2 列（3 项末项整行）
+   6. 纯 CSS 琥珀柔光 + 细点阵 */
+
+#root .xn-kitchen-page {
+  background-color: #fffbf5 !important;
+  background-image:
+    radial-gradient(1000px 380px at 4% -10%, rgba(245, 158, 11, .10), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(234, 88, 12, .07), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(120, 113, 108, .09) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, 24px 24px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 开发者提示（#juice 等）不外露 */
+#root .xn-kitchen-hint {
+  display: none !important;
+}
+
+/* 页签补语义 */
+#root .xn-kitchen-tab:focus-visible {
+  outline: 2px solid rgba(217, 119, 6, .6);
+  outline-offset: 2px;
+}
+
+/* 数字 20 → 16 */
+#root .xn-kitchen-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 酱汁预设 40 → 44 */
+#root .xn-kitchen-chip {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root .xn-kitchen-chip:focus-visible {
+  outline: 2px solid rgba(217, 119, 6, .6);
+  outline-offset: 2px;
+}
+
+/* 复制 37 → 44 */
+#root .xn-kitchen-copy {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#root .xn-kitchen-copy:focus-visible {
+  outline: 2px solid rgba(217, 119, 6, .6);
+  outline-offset: 2px;
+}
+
+/* 移动端：2/3 列恢复 2 列 */
+@media (max-width: 1023px) {
+  #root div.xn-kitchen-g2,
+  #root div.xn-kitchen-g3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #root div.xn-kitchen-g3 > *:last-child:nth-child(odd) {
+    grid-column: span 2 / span 2;
+  }
+}
