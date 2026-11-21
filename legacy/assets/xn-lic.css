@@ -1,0 +1,114 @@
+/* R1155 学车考驾照费用与进度合集 — 人用友好皮肤（保留原石板灰主题）
+   1. 页签 40→44；修复移动端被通用皮肤压成「6 行整宽」（恢复 3 列 2 行）
+   2. 「复制结果」37→40
+   3. 下拉 46/15 → 48/16；数字输入 20→16
+   4. 「工具 1 / 6」→「第 1 / 6 个工具」友好胶囊
+   5. 说明折叠条 20 → 44 触控高度 */
+
+/* 1 页签 */
+#root div.xn-lic-tabbar.grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+}
+
+@media (min-width: 641px) {
+  #root div.xn-lic-tabbar.grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+}
+
+#root .xn-lic-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 8px !important;
+  font-size: 13px !important;
+  line-height: 1.15 !important;
+  border-radius: 12px !important;
+}
+
+#root .xn-lic-tab[aria-current="page"] {
+  box-shadow: 0 4px 10px -4px rgba(15, 23, 42, .45) !important;
+}
+
+#root .xn-lic-tab:focus-visible {
+  outline: 2px solid rgba(15, 23, 42, .55);
+  outline-offset: 2px;
+}
+
+/* 2 复制 */
+#root .xn-lic-copy {
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+
+#root .xn-lic-copy:focus-visible {
+  outline: 2px solid rgba(15, 23, 42, .45);
+  outline-offset: 2px;
+}
+
+/* 3 表单控件 */
+#root .xn-lic-select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+#root .xn-lic-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 4 进度胶囊 */
+#root .xn-lic-progress {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 24px !important;
+  padding: 0 10px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: #475569 !important;
+  border-color: #cbd5e1 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 5 说明折叠条 */
+#root details > summary {
+  min-height: 44px;
+  display: flex !important;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* 6 参考价目表：4 列在桌面上被横向截断，压缩单元格使整表可见 */
+#root table {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+#root th,
+#root td {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+  font-size: 13px !important;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  #root th,
+  #root td {
+    white-space: normal !important;
+    font-size: 12px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
