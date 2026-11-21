@@ -76,12 +76,27 @@
     });
   }
 
+  /* 6) 剥掉「工具A–F」代号前缀 */
+  function codes() {
+    var root = document.querySelector("#root");
+    if (!root) return;
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    var n;
+    while ((n = walker.nextNode())) {
+      var tx = n.textContent || "";
+      if (!/^\s*工具\s*[A-Z]/.test(tx)) continue;
+      var next = tx.replace(/^\s*工具\s*[A-Z]\s*[·:：\-—]?\s*/, "");
+      n.textContent = next;
+    }
+  }
+
   function run() {
     page();
     tabs();
     fields();
     actions();
     tables();
+    codes();
   }
 
   var timer = null;
