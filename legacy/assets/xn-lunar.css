@@ -1,0 +1,78 @@
+/* R1189 农历与节气查询合集 — 人用友好皮肤（玫红主题，仅 dzf5haslwd 引用）
+   1. 日期/下拉/数字统一 48/16；复制 36→44
+   2. 复选框行 38→44，复选框 18px
+   3. 节气/数九表格 13px、表头底色、表头吸顶
+   4. 移动端 2/4 列网格恢复 2 列
+   5. 去「工具E/F」内部代号
+   6. 纯 CSS 玫红柔光 + 细点阵 */
+
+#root .xn-lunar-page {
+  background-color: #f8fafc !important;
+  background-image:
+    radial-gradient(1000px 380px at 4% -10%, rgba(225, 29, 72, .08), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(245, 158, 11, .08), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(100, 116, 139, .10) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, 24px 24px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 日期 / 下拉 / 数字 */
+#root .xn-lunar-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 复制 36 → 44 */
+#root .xn-lunar-copy {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#root .xn-lunar-copy:focus-visible {
+  outline: 2px solid rgba(190, 18, 60, .55);
+  outline-offset: 2px;
+}
+
+/* 复选框整行 38 → 44，复选框 18px */
+#root .xn-lunar-check {
+  min-height: 44px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+#root .xn-lunar-check input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* 节气 / 数九表格 */
+#root .xn-lunar-table {
+  font-size: 13px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root .xn-lunar-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff1f2 !important;
+  color: #9f1239;
+  font-size: 12px;
+}
+
+#root .xn-lunar-table tbody tr:hover {
+  background: #fff7ed;
+}
+
+/* 移动端：2/4 列网格恢复 2 列 */
+@media (max-width: 1023px) {
+  #root div.xn-lunar-g2,
+  #root div.xn-lunar-g4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
