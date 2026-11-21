@@ -1,0 +1,79 @@
+/* R1162 数码续航与充电合集 — 人用友好皮肤（保留原蓝色主题）
+   1. 页签 42→44；移动端 3 列 × 2 行（原来 overflow-x-auto 藏后几个）
+   2. 金额/功率输入 20→16
+   3. 复制/清空 42→44
+   4. 使用说明 20→44
+   5. 页面底：浅蓝灰 + 点阵 + 青光晕（纯 CSS，零图片） */
+
+#root {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(1000px 480px at 90% -10%, rgba(14, 165, 233, .10), rgba(14, 165, 233, 0) 60%),
+    radial-gradient(820px 420px at -6% 104%, rgba(99, 102, 241, .08), rgba(99, 102, 241, 0) 58%),
+    radial-gradient(rgba(100, 116, 139, .16) 1px, rgba(100, 116, 139, 0) 1.5px);
+  background-size: auto, auto, 18px 18px;
+}
+
+/* 1 页签 */
+#root .xn-digi-tabbar {
+  flex-wrap: wrap !important;
+  overflow: visible !important;
+  gap: 6px !important;
+}
+
+#root .xn-digi-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  justify-content: center !important;
+  padding: 0 10px !important;
+  font-size: 13.5px !important;
+  line-height: 1.15 !important;
+}
+
+@media (max-width: 640px) {
+  #root .xn-digi-tab {
+    flex: 1 1 calc(33.333% - 4px) !important;
+    font-size: 13px !important;
+  }
+}
+
+#root .xn-digi-tab[aria-current="page"] {
+  box-shadow: 0 4px 10px -4px rgba(37, 99, 235, .5);
+}
+
+#root .xn-digi-tab:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .65);
+  outline-offset: 2px;
+}
+
+/* 2 输入 */
+#root .xn-digi-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 3 操作按钮 */
+#root .xn-digi-btn {
+  height: 44px !important;
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#root .xn-digi-btn:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 5 折叠 */
+#root details > summary {
+  min-height: 44px;
+  display: flex !important;
+  align-items: center;
+}
