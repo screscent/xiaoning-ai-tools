@@ -1,0 +1,95 @@
+/* R1187 月历与年历合集 — 人用友好皮肤（蓝色主题，仅 npxak92aq6 引用）
+   1. 6 个页签 37→44；移动端 6 列 → 3 列 × 2 行
+   2. 筛选 4 项移动端 1 列 → 2 列
+   3. 数字 20→16；下拉/日期 46/15→48/16
+   4. 复制/导出 37/38→44
+   5. 移动端 5 列/3 列指标恢复 2 列（末项整行）；12 个月年历 2 列
+   6. 去「工具E/F」内部代号
+   7. 纯 CSS 蓝色柔光 + 细点阵 */
+
+#root .xn-cal-page {
+  background-color: #f8fafc !important;
+  background-image:
+    radial-gradient(1000px 380px at 4% -10%, rgba(37, 99, 235, .10), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(6, 182, 212, .09), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(100, 116, 139, .10) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, 24px 24px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 页签 37 → 44 */
+#root .xn-cal-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+}
+
+#root .xn-cal-tab:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 下拉 / 日期 / 数字 */
+#root .xn-cal-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 复制 / 导出 37/38 → 44 */
+#root .xn-cal-action {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+
+#root .xn-cal-action:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 年历 12 个月：窄卡片里表格自适应 */
+#root .xn-cal-months table {
+  width: 100% !important;
+  table-layout: fixed;
+  font-size: 11px !important;
+}
+
+#root .xn-cal-months table th,
+#root .xn-cal-months table td {
+  padding: 2px 0 !important;
+}
+
+/* 移动端 */
+@media (max-width: 767px) {
+  #root .xn-cal-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  /* 筛选 4 项：2 × 2 */
+  #root div.xn-cal-g4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* 3/5 项指标：2 列 + 末项整行 */
+  #root div.xn-cal-g3,
+  #root div.xn-cal-g5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #root div.xn-cal-g3 > *:last-child:nth-child(odd),
+  #root div.xn-cal-g5 > *:last-child:nth-child(odd) {
+    grid-column: span 2 / span 2;
+  }
+
+  /* 12 个月年历：2 列 */
+  #root div.xn-cal-months {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
