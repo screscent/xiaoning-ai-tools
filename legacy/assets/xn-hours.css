@@ -1,0 +1,78 @@
+/* R1170 工时与时长计算合集 — 人用友好皮肤（保留蓝色主题）
+   1. 隐藏开发用路由串 #/sum …
+   2. 计算按钮 40→48；次级按钮 42→44；复制/清空 38→40
+   3. 开关 24 高 → 44 点击热区（视觉不变）
+   4. select/datetime 46→48，字号 15→16；textarea 15→16
+   5. 换算结果 14→18；结果行 12→15
+   6. 使用说明 42→44 */
+
+/* 1 路由串（#/sum 等）不对用户展示 */
+#root .xn-hours-route {
+  display: none !important;
+}
+
+/* 2 按钮 */
+#root .xn-hours-calc {
+  min-height: 48px !important;
+  height: 48px !important;
+  font-size: 15px !important;
+}
+
+#root .xn-hours-action {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 14px !important;
+}
+
+#root .xn-hours-mini {
+  min-height: 40px !important;
+  height: 40px !important;
+  font-size: 13px !important;
+}
+
+#root .xn-hours-calc:focus-visible,
+#root .xn-hours-action:focus-visible,
+#root .xn-hours-mini:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 3 开关：视觉 44×24 不变，热区扩到 44 */
+#root .xn-hours-switch {
+  position: relative !important;
+}
+
+#root .xn-hours-switch::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 9999px;
+}
+
+/* 4 表单 */
+#root .xn-hours-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+#root .xn-hours-area {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+/* 5 数字 */
+#root .xn-hours-out {
+  font-size: 18px !important;
+  line-height: 1.35 !important;
+}
+
+#root .xn-hours-line {
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+/* 6 使用说明 */
+#root details > summary {
+  min-height: 44px;
+}
