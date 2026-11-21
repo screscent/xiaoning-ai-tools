@@ -1,0 +1,134 @@
+/* R1182 常用单位换算合集 — 人用友好皮肤（保留蓝色主题）
+   1. 顶部 6 个分类页签 38→44；移动端横向滚动 → 3 列 × 2 行全可见
+   2. 下拉 46/15 → 48/16；数字输入 20→16
+   3. 精度 0/2/4 位：40→44，补 radio 语义
+   4. 交换单位 / 复制结果 40→44
+   5. 换算控件移动端 2 列：源/目标一行，精度与数值各占整行
+   6. 结果卡更醒目（阴影）；对照表等宽数字
+   7. 去「工具F」内部代号
+   8. 纯 CSS 蓝色柔光 + 细点阵背景 */
+
+#root .min-h-screen,
+#root > div {
+  background-color: #f8fafc;
+}
+
+#root .xn-conv-page {
+  background-color: #f8fafc !important;
+  background-image:
+    radial-gradient(1000px 380px at 4% -10%, rgba(59, 130, 246, .12), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(6, 182, 212, .10), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(100, 116, 139, .10) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, 24px 24px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 分类页签 38 → 44 */
+#root .xn-conv-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 14px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px !important;
+}
+
+#root .xn-conv-tab:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+#root .xn-conv-tab[aria-current="true"] {
+  box-shadow: 0 8px 18px -10px rgba(37, 99, 235, .65);
+}
+
+/* 下拉 46/15 → 48/16 */
+#root .xn-conv-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 精度分段 40 → 44 */
+#root .xn-conv-chip {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+}
+
+#root .xn-conv-chip[aria-checked="true"] {
+  box-shadow: 0 6px 14px -8px rgba(37, 99, 235, .6);
+}
+
+#root .xn-conv-chip:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 交换 / 复制 40 → 44 */
+#root .xn-conv-action {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 14px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+#root .xn-conv-action:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 结果卡：更立体，数字等宽 */
+#root .xn-conv-result {
+  box-shadow: 0 20px 44px -28px rgba(37, 99, 235, .65) !important;
+}
+
+/* 对照表等宽数字，避免跳动 */
+#root .xn-conv-ref {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 标签略提亮，便于扫表单 */
+#root label {
+  font-size: 12.5px !important;
+  color: #475569 !important;
+}
+
+/* 移动端：页签 3 列 × 2 行，全部可见 */
+@media (max-width: 767px) {
+  #root nav.xn-conv-nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    overflow: visible !important;
+  }
+
+  #root nav button.xn-conv-tab {
+    width: 100%;
+    padding: 0 8px !important;
+    font-size: 13px !important;
+  }
+
+  /* 换算控件：源/目标 2 列，精度与数值各占整行 */
+  #root div.xn-conv-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #root .xn-conv-grid > div:nth-child(n + 3) {
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* 通用皮肤会把所有 grid 压成单列，这里按类型恢复 */
+@media (max-width: 1023px) {
+  #root div.xn-conv-ref4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #root div.xn-conv-rowref {
+    grid-template-columns: 3rem minmax(0, 1fr) minmax(0, 1fr) !important;
+  }
+}
