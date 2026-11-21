@@ -1,73 +1,62 @@
-/* R1176 屏幕使用与护眼休息合集 — 人用友好皮肤（保留绿色主题）
-   1. 页签 37→44，补 aria-current
-   2. 生成计划 40→48；复制/清空 42→44
-   3. 开关 24 高 → role=switch + 44 热区
-   4. time/select 46/15→48/16
-   5. 提醒时间片 12→13.5
-   6. 使用说明 20→44 */
+/* 眼镜与视力保护速查合集页增强（仅 2q767tqqxb 引用）
+ * 1) 清掉「工具E / 工具F」占位
+ * 2) 推荐折射率 18px → 24px
+ * 3) 屏幕距离与折射率工具补常用值胶囊；输入 aria 补单位
+ */
 
-#root .xn-eye-tab {
-  min-height: 44px !important;
-  height: 44px !important;
-  padding: 0 18px !important;
-  font-size: 13.5px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-}
-
-#root .xn-eye-tab:focus-visible {
-  outline: 2px solid rgba(5, 150, 105, .55);
-  outline-offset: 2px;
-}
-
-#root .xn-eye-primary {
-  min-height: 48px !important;
-  height: 48px !important;
+/* 本页输入框按设计保持小号：xn-ux 曾把 number 输入抬到 20px 并加 12px 内边距，w-14 内会裁字 */
+#root input[type=number] {
   font-size: 15px !important;
+  line-height: 1.4 !important;
+  width: 68px !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
 }
 
-#root .xn-eye-action {
-  min-height: 44px !important;
-  height: 44px !important;
-  font-size: 14px !important;
+#root .xn-idx {
+  font-size: 24px !important;
+  font-weight: 750 !important;
+  letter-spacing: -.01em;
+  font-variant-numeric: tabular-nums;
 }
 
-#root .xn-eye-primary:focus-visible,
-#root .xn-eye-action:focus-visible {
-  outline: 2px solid rgba(5, 150, 105, .55);
-  outline-offset: 2px;
-}
-
-#root button.xn-eye-switch {
-  height: 24px !important;
-  min-height: 24px !important;
-  width: 44px !important;
-  padding: 0 !important;
-  border-radius: 9999px !important;
-  position: relative !important;
-  flex: 0 0 44px !important;
-}
-
-#root button.xn-eye-switch::after {
-  content: "";
-  position: absolute;
-  inset: -10px;
-  border-radius: 9999px;
-}
-
-#root .xn-eye-field {
-  height: 48px !important;
-  min-height: 48px !important;
-  font-size: 16px !important;
-}
-
-#root .xn-eye-chip {
-  font-size: 13.5px !important;
-  padding: 5px 10px !important;
-}
-
-#root details > summary {
-  min-height: 44px !important;
+#root .xn-chips {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+#root .xn-chips button {
+  min-height: 28px;
+  padding: 2px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12.5px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: all .12s ease;
+}
+#root .xn-chips button:hover {
+  border-color: #99f6e4;
+  background: #f0fdfa;
+  color: #0f766e;
+}
+#root .xn-chips button.is-on {
+  border-color: #0f766e;
+  background: #0f766e;
+  color: #fff;
+}
+@media (max-width: 640px) {
+  #root .xn-chips button {
+    min-height: 34px;
+    padding: 4px 12px;
+  }
+}
+
+#root input[type=number]:focus {
+  outline: 2px solid rgba(15, 118, 110, .3);
+  outline-offset: 1px;
 }
