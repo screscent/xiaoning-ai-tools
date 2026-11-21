@@ -1,0 +1,97 @@
+/* R1184 面积体积与几何计算合集 — 人用友好皮肤（蓝色主题）
+   1. 顶部 6 个跳转链接 32→44；移动端横向滚动 → 2 列 × 3 行全可见
+   2. 长度单位 / 房间尺寸分段 38/37→44，补 radio 语义
+   3. 下拉 46/15 → 48/16；数字 20→16
+   4. 计算 / 清空 / 复制结果 38→44
+   5. 移动端字段网格恢复 2/3 列（通用皮肤会压成 1 列）
+   6. 去「工具F」内部代号
+   7. 纯 CSS 蓝色柔光 + 细点阵背景 */
+
+#root .xn-geo-page {
+  background-color: #f8fafc !important;
+  background-image:
+    radial-gradient(1000px 380px at 4% -10%, rgba(37, 99, 235, .12), transparent 62%),
+    radial-gradient(900px 380px at 98% -6%, rgba(14, 165, 233, .10), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(100, 116, 139, .10) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, 24px 24px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 顶部跳转链接 32 → 44 */
+#root .xn-geo-navlink {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+}
+
+#root .xn-geo-navlink:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 单位 / 方式分段 38/37 → 44 */
+#root .xn-geo-seg {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root .xn-geo-seg:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 下拉 46/15 → 48/16 */
+#root .xn-geo-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 计算 / 清空 / 复制结果 38 → 44 */
+#root .xn-geo-action {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 14px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+#root .xn-geo-action:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, .6);
+  outline-offset: 2px;
+}
+
+/* 移动端：跳转链接 2 列 × 3 行 */
+@media (max-width: 767px) {
+  #root div.xn-geo-nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    overflow: visible !important;
+  }
+}
+
+/* 通用皮肤把 grid 压成单列，按类型恢复 */
+@media (max-width: 1023px) {
+  #root div.xn-geo-g2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* 3 字段组：2 列 + 第 3 个占满整行，避免 100px 输入框压掉占位文字 */
+  #root div.xn-geo-g3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #root div.xn-geo-g3 > *:nth-child(3) {
+    grid-column: span 2 / span 2;
+  }
+}
