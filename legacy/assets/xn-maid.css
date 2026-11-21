@@ -1,0 +1,89 @@
+/* R1149 家政与保洁报价合集 — 人用友好皮肤
+   1. 页面底：18px 点阵 + 天蓝/青绿光晕（纯 CSS）
+   2. 工具页签 40→44；复制结果 38→40；下拉 48
+   3. 数字输入 20→17；返回 20→40
+   不改 React 逻辑。 */
+
+#root {
+  background-color: #F7FAFC !important;
+  background-image:
+    radial-gradient(rgba(2, 132, 199, .11) 1px, transparent 1px),
+    radial-gradient(720px 380px at 100% -6%, rgba(2, 132, 199, .09), transparent 70%),
+    radial-gradient(560px 320px at -8% 104%, rgba(13, 148, 136, .08), transparent 70%) !important;
+  background-size: 18px 18px, auto, auto !important;
+}
+
+/* 工具页签 */
+#root button.xn-maid-tab {
+  height: 44px !important;
+  min-height: 44px !important;
+  border-radius: 12px !important;
+  font-size: 13px !important;
+}
+#root button.xn-maid-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #0284c7, #0891b2) !important;
+  border-color: #0ea5e9 !important;
+  color: #fff !important;
+  font-weight: 650 !important;
+  box-shadow: 0 8px 18px -12px rgba(2, 132, 199, .9);
+}
+#root button.xn-maid-tab:hover {
+  border-color: #7dd3fc !important;
+  color: #0369a1 !important;
+}
+
+/* 复制结果 */
+#root button.xn-maid-copy {
+  min-height: 40px !important;
+  height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+  background: #eef7ff !important;
+  border: 1px solid #d3e9fb !important;
+  color: #075985 !important;
+  font-weight: 600 !important;
+}
+#root button.xn-maid-copy:hover {
+  background: #e0f1ff !important;
+  border-color: #a9d7f8 !important;
+}
+
+/* 表单 */
+#root input[type="number"] {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  color: #0f172a !important;
+}
+#root select {
+  height: 48px !important;
+  font-size: 14.5px !important;
+  border-radius: 10px !important;
+  padding: 0 12px !important;
+}
+
+/* 返回 */
+#root a.xn-maid-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  border: 1px solid #dbe6f0 !important;
+  color: #0369a1 !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+}
+#root a.xn-maid-back:hover {
+  border-color: #7dd3fc !important;
+  background: #f5fbff !important;
+}
+
+@media (max-width: 639px) {
+  #root button.xn-maid-tab { font-size: 12.5px !important; }
+}
