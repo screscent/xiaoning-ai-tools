@@ -1,0 +1,40 @@
+/* R1159 保龄球计分与换算合集 — 人用友好皮肤（保留原海军蓝主题）
+   1. 全页按钮最小高度 44（原来约 37），字号 12.5（原来 11–12）
+   2. 瓶位圆形按钮 36 → 44×44
+   3. 输入 46/15 → 48/16；数字输入 20→16
+   4. 剥离「工具E/F」标题前缀
+   5. 说明/提示文字 11 → 12（不改变结构） */
+
+#root button {
+  min-height: 44px !important;
+  font-size: 12.5px !important;
+}
+
+#root .xn-bowl-pin {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  font-size: 13px !important;
+}
+
+#root .xn-bowl-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root .xn-bowl-num {
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 按钮内 11px 小字统一到 12.5（避免个别被内联压回） */
+#root button[class*="text-[11px]"] {
+  font-size: 12.5px !important;
+}
+
+/* 说明性小字（11px）抬到 12px，正文不动 */
+#root .xn-bowl-hint {
+  font-size: 12px !important;
+}
