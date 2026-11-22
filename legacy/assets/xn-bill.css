@@ -1,0 +1,110 @@
+/* R1216 账单分摊与折扣计算合集：赤陶账单主题（纯 CSS，无图片） */
+#root {
+  background:
+    radial-gradient(1000px 360px at 6% -8%, rgba(254, 226, 226, 0.7) 0%, rgba(254, 226, 226, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(255, 237, 213, 0.45) 0%, rgba(255, 237, 213, 0) 58%),
+    repeating-linear-gradient(135deg, rgba(185, 28, 28, 0.03) 0 2px, transparent 2px 24px),
+    #fdf8f4 !important;
+  min-height: 100vh;
+}
+
+/* 返回链接：44px 可点区域 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #fdefe9 !important;
+}
+
+/* 2 个工具页签：44px，选中赤陶实心 */
+#root .xn-bill-tabs {
+  gap: 10px !important;
+}
+#root .xn-bill-tab {
+  min-height: 44px !important;
+  font-size: 15px !important;
+  border-radius: 12px !important;
+}
+#root .xn-bill-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #b91c1c, #dc2626) !important;
+  border-color: #b91c1c !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.22) !important;
+}
+#root .xn-bill-tab[aria-selected="false"] {
+  background: #ffffff !important;
+  color: #991b1b !important;
+  border-color: #f3dcd6 !important;
+}
+
+/* 小费比例：44px 单选药丸 */
+#root .xn-bill-pill {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+#root .xn-bill-pill[aria-checked="true"] {
+  background: linear-gradient(135deg, #b91c1c, #dc2626) !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(185, 28, 28, 0.22) !important;
+}
+#root .xn-bill-pill[aria-checked="false"] {
+  background: #f5f5f4 !important;
+  color: #7f1d1d !important;
+}
+
+/* 数字输入：20 等宽，48 高 */
+#root input[type="number"] {
+  font-size: 20px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  font-variant-numeric: tabular-nums !important;
+}
+#root input[type="number"]:focus {
+  outline: none !important;
+  border-color: #b91c1c !important;
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.15) !important;
+}
+
+/* 开关：44×24，伪元素 44 热区 */
+#root .xn-bill-switch {
+  position: relative !important;
+}
+#root .xn-bill-switch::after {
+  content: "";
+  position: absolute;
+  inset: -10px -2px;
+  border-radius: 999px;
+}
+
+/* 操作按钮：44 */
+#root .xn-bill-action {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+
+/* 关键金额：26 / 800，等宽赤陶 */
+#root .xn-bill-money {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums !important;
+  color: #b91c1c !important;
+  line-height: 1.15 !important;
+}
+
+/* 移动端：2 页签各占一半 */
+@media (max-width: 1023px) {
+  #root .xn-bill-tabs {
+    display: flex !important;
+    width: 100% !important;
+  }
+  #root .xn-bill-tab {
+    flex: 1 1 0 !important;
+  }
+}
