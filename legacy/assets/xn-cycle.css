@@ -1,0 +1,113 @@
+/* R1220 自行车骑行与维护合集：公路天青主题（纯 CSS，无图片） */
+#root {
+  background:
+    radial-gradient(1000px 360px at 6% -8%, rgba(224, 242, 254, 0.7) 0%, rgba(224, 242, 254, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(204, 251, 241, 0.4) 0%, rgba(204, 251, 241, 0) 58%),
+    repeating-linear-gradient(135deg, rgba(3, 105, 161, 0.03) 0 2px, transparent 2px 24px),
+    #f6fafd !important;
+  min-height: 100vh;
+}
+
+/* 返回链接：44px 可点区域 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #e8f4fb !important;
+}
+
+/* 6 个工具卡：桌面 6 列、移动 2 列（修复被压成单列） */
+#root div.grid.xn-cycle-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  width: 100% !important;
+  gap: 10px !important;
+}
+#root .xn-cycle-card {
+  min-height: 180px !important;
+  padding: 12px !important;
+  border-radius: 14px !important;
+}
+#root .xn-cycle-card[aria-selected="true"] {
+  border-color: #0369a1 !important;
+  background: linear-gradient(160deg, #0369a1, #0284c7) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(3, 105, 161, 0.22) !important;
+}
+#root .xn-cycle-card[aria-selected="true"] * {
+  color: #ffffff !important;
+}
+#root .xn-cycle-card[aria-selected="false"] {
+  background: #ffffff !important;
+  border-color: #dbeaf3 !important;
+}
+
+/* 模式分段：44 */
+#root .xn-cycle-seg {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+
+/* 常用距离：44 单选药丸 */
+#root .xn-cycle-pill {
+  min-height: 44px !important;
+  min-width: 64px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+#root .xn-cycle-pill[aria-checked="true"] {
+  border-color: #0369a1 !important;
+  background: #e0f2fe !important;
+  color: #075985 !important;
+}
+
+/* 数字输入：20 等宽，48 高 */
+#root input[type="number"] {
+  font-size: 20px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  font-variant-numeric: tabular-nums !important;
+}
+#root input[type="number"]:focus {
+  outline: none !important;
+  border-color: #0369a1 !important;
+  box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.15) !important;
+}
+
+/* 复制/操作：44 / 40 */
+#root .xn-cycle-action {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+#root .xn-cycle-copy {
+  min-height: 40px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+
+/* 大数值：30 / 800 等宽天青 */
+#root .xn-cycle-big {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums !important;
+  color: #0369a1 !important;
+  line-height: 1.1 !important;
+}
+
+/* 移动端：6 卡 2 列（3 行），卡片 160 */
+@media (max-width: 1023px) {
+  #root div.grid.xn-cycle-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  #root .xn-cycle-card {
+    min-height: 160px !important;
+    padding: 10px !important;
+  }
+}
