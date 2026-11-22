@@ -1,0 +1,118 @@
+/* R1215 噪音分贝与听力保护速查：声波青主题（纯 CSS，无图片） */
+#root {
+  background:
+    radial-gradient(1000px 360px at 6% -8%, rgba(207, 250, 254, 0.7) 0%, rgba(207, 250, 254, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(224, 242, 254, 0.5) 0%, rgba(224, 242, 254, 0) 58%),
+    repeating-linear-gradient(135deg, rgba(14, 116, 144, 0.035) 0 2px, transparent 2px 22px),
+    #f2fbfd !important;
+  min-height: 100vh;
+}
+
+/* 返回链接：44px 可点区域 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #e6f7fa !important;
+}
+
+/* 6 个工具页签：44px，选中态按 hash 语义化 */
+#root .xn-noise-tabs {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+#root .xn-noise-tab {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+#root .xn-noise-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #0e7490, #0891b2) !important;
+  border-color: #0e7490 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(14, 116, 144, 0.24) !important;
+}
+#root .xn-noise-tab[aria-selected="false"] {
+  background: #ffffff !important;
+  color: #0e7490 !important;
+  border-color: #cfedf3 !important;
+}
+#root .xn-noise-tab[aria-selected="false"]:hover {
+  background: #e6f7fa !important;
+}
+
+/* 下拉：48 / 16 */
+#root select {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+}
+#root select:focus,
+#root input[type="number"]:focus {
+  outline: none !important;
+  border-color: #0891b2 !important;
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.16) !important;
+}
+
+/* 数字输入：20 等宽，48 高 */
+#root input[type="number"] {
+  font-size: 20px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+/* 主操作：44 */
+#root .xn-noise-action {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+
+/* 预设/场景按钮：44 起 */
+#root .xn-noise-preset {
+  min-height: 44px !important;
+  border-radius: 12px !important;
+}
+#root .xn-noise-preset[aria-checked="true"] {
+  border-color: #0891b2 !important;
+  background: #ecfeff !important;
+  color: #0e7490 !important;
+}
+
+/* 分贝大数字：34 / 800，等宽 */
+#root .xn-noise-big {
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums !important;
+  color: #0e7490 !important;
+  line-height: 1.1 !important;
+}
+
+/* 安全徽标：13px / 28 高 */
+#root .xn-noise-badge {
+  font-size: 13px !important;
+  min-height: 28px !important;
+  padding: 2px 10px !important;
+  border-radius: 999px !important;
+}
+
+/* 移动端：6 页签 3+3 */
+@media (max-width: 1023px) {
+  #root .xn-noise-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+  #root .xn-noise-tab {
+    width: 100% !important;
+    padding: 0 6px !important;
+    font-size: 13px !important;
+  }
+}
