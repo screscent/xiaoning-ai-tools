@@ -1,0 +1,152 @@
+/* R1254 YAML JSON 转换与结构统计合集（9pahqsr8kd）· 数据流主题
+ * 仅本页引用；不改 YAML 解析/结构统计，只提升 tab、按钮、输入与代码块可读性。
+ */
+
+/* ---------- 1. 底色：数据流 ---------- */
+body {
+  background:
+    radial-gradient(900px 340px at 50% -100px, rgba(79, 70, 229, 0.09), transparent 70%),
+    radial-gradient(420px 220px at 92% 0%, rgba(14, 116, 144, 0.06), transparent 70%),
+    repeating-linear-gradient(135deg, rgba(79, 70, 229, 0.045) 0 2px, transparent 2px 16px),
+    linear-gradient(180deg, #f9fafd 0%, #f3f5fb 100%) !important;
+  background-attachment: fixed !important;
+}
+#root { background: transparent !important; }
+
+/* ---------- 2. 标题 ---------- */
+#root h1 { font-size: 27px !important; letter-spacing: -0.015em; color: #111827 !important; }
+#root h2 { font-size: 20px !important; letter-spacing: -0.01em; color: #1e1b4b !important; }
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 19px !important; }
+}
+
+/* ---------- 3. 工具 tabs ---------- */
+#root button.xn-yaml-tab {
+  min-height: 44px !important;
+  height: 44px;
+  padding: 0 20px !important;
+  border-radius: 12px !important;
+  border: 1px solid #dde3f3 !important;
+  background: #fff !important;
+  color: #475569 !important;
+  font-size: 14.5px !important;
+  font-weight: 600;
+}
+#root button.xn-yaml-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #4f46e5, #0e7490) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -12px rgba(79, 70, 229, 0.85);
+}
+@media (max-width: 640px) {
+  #root button.xn-yaml-tab { flex: 1 1 40%; }
+}
+
+/* ---------- 4. 主 / 次操作 ---------- */
+#root button.xn-yaml-primary {
+  min-height: 44px !important;
+  padding: 0 20px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #4f46e5, #0e7490) !important;
+  color: #fff !important;
+  font-size: 14.5px !important;
+  font-weight: 700;
+  box-shadow: 0 10px 20px -14px rgba(79, 70, 229, 0.9);
+}
+#root button.xn-yaml-secondary {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  border-radius: 10px !important;
+  border: 1px solid #dde3f3 !important;
+  background: #fff !important;
+  color: #334155 !important;
+  font-size: 14px !important;
+}
+#root button.xn-yaml-secondary:hover { border-color: #a5b4fc !important; background: #f8faff !important; }
+/* 保留注释图标开关 */
+#root button[aria-label*="注释"] {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  border: 1px solid #dde3f3 !important;
+  background: #fff !important;
+}
+
+/* ---------- 5. 输入 ---------- */
+#root textarea {
+  min-height: 240px !important;
+  border-radius: 10px !important;
+  border-color: #dde3f3 !important;
+  background: #fff !important;
+  font-size: 16px !important;
+  line-height: 1.7;
+}
+#root textarea.font-mono:not([readonly]) { font-size: 16px !important; }
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root select {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dde3f3 !important;
+  background: #fff !important;
+  font-size: 16px !important;
+}
+#root input:focus,
+#root select:focus,
+#root textarea:focus {
+  outline: none !important;
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.14) !important;
+}
+
+/* ---------- 6. 代码/结果 ---------- */
+#root pre {
+  font-size: 14.5px !important;
+  line-height: 1.75;
+  border-radius: 10px !important;
+  border: 1px solid #e3e8f6 !important;
+  background: #f8fafc !important;
+  padding: 14px !important;
+  overflow-x: auto;
+}
+#root table {
+  border-collapse: separate !important;
+  border-spacing: 0;
+}
+#root thead th {
+  font-size: 13px !important;
+  color: #475569 !important;
+  background: #f4f6fd !important;
+  padding: 9px 10px !important;
+  border-bottom: 1px solid #e3e8f6 !important;
+}
+#root tbody td {
+  font-size: 14.5px !important;
+  padding: 9px 10px !important;
+  border-bottom: 1px solid #eef1fa !important;
+}
+#root tbody td[class*="tabular-nums"] {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #312e81 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 7. 使用说明 ---------- */
+#root details {
+  border: 1px solid #dde3f3 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  padding: 0 14px !important;
+}
+#root summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* ---------- 8. 辅助小字 ---------- */
+#root .text-xs { font-size: 13px !important; }
