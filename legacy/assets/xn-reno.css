@@ -1,0 +1,110 @@
+/* R1213 装修材料用量合集：墨绿暖砂装修主题（纯 CSS，无图片） */
+#root {
+  background:
+    radial-gradient(1000px 360px at 6% -8%, rgba(220, 252, 231, 0.55) 0%, rgba(220, 252, 231, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(254, 249, 195, 0.4) 0%, rgba(254, 249, 195, 0) 58%),
+    repeating-linear-gradient(0deg, rgba(22, 101, 52, 0.03) 0 1px, transparent 1px 26px),
+    repeating-linear-gradient(90deg, rgba(22, 101, 52, 0.03) 0 1px, transparent 1px 26px),
+    #f8f7f2 !important;
+  min-height: 100vh;
+}
+
+/* 返回链接：44px 可点区域 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #eef6ee !important;
+}
+
+/* 6 个工具页签：44px、按 hash 显示选中态 */
+#root .xn-reno-tabs {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+#root .xn-reno-tab {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+#root .xn-reno-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #166534, #15803d) !important;
+  border-color: #166534 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(22, 101, 52, 0.22) !important;
+}
+#root .xn-reno-tab[aria-selected="false"] {
+  background: #ffffff !important;
+  color: #166534 !important;
+  border-color: #d6e6d6 !important;
+}
+#root .xn-reno-tab[aria-selected="false"]:hover {
+  background: #eef6ee !important;
+}
+
+/* 数字输入：20 等宽，48 高 */
+#root input[type="number"] {
+  font-size: 20px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  font-variant-numeric: tabular-nums !important;
+}
+#root input[type="number"]:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: #166534 !important;
+  box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.15) !important;
+}
+
+/* 下拉：48 / 16 */
+#root select {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+}
+
+/* 计算 / 复制 / 重置：44 */
+#root .xn-reno-action {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+
+/* 结果卡：更宽松，数值更大更清楚 */
+#root div.rounded-lg.p-3 {
+  min-height: 92px !important;
+  border-radius: 12px !important;
+}
+#root div.rounded-lg.p-3 > div.mt-1.text-lg.font-bold {
+  font-size: 22px !important;
+  line-height: 1.15 !important;
+  font-variant-numeric: tabular-nums !important;
+}
+#root div.rounded-lg.p-3 > div.mt-1.text-lg.font-bold span {
+  font-size: 13px !important;
+}
+#root div.rounded-lg.p-3 > div.mt-1.break-words {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  margin-top: 6px !important;
+}
+
+/* 移动端：6 页签 3+3 */
+@media (max-width: 1023px) {
+  #root .xn-reno-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+  #root .xn-reno-tab {
+    width: 100% !important;
+    padding: 0 6px !important;
+    font-size: 13px !important;
+  }
+}
