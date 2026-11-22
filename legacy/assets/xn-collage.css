@@ -1,0 +1,133 @@
+/* R1229 图片拼接与拼图合集：相册透明格主题（纯 CSS，无图片）
+   1. 根容器：浅紫相册底 + 20px 透明棋盘格 + 双端柔光
+   2. 6 个工具导航 38→44；当前工具靛紫高亮；移动 3+3
+   3. 上传区强调（虚线靛紫、浅底、hover）；统计行 15px
+   4. 下拉 16/48；色板 44×44；滑块 36 + 20 圆点
+   5. 返回 44；使用说明 44 */
+#root div.min-h-screen {
+  background:
+    radial-gradient(1000px 360px at 8% -10%, rgba(199, 210, 254, 0.55) 0%, rgba(199, 210, 254, 0) 60%),
+    radial-gradient(860px 300px at 100% 0%, rgba(237, 233, 254, 0.5) 0%, rgba(237, 233, 254, 0) 58%),
+    conic-gradient(rgba(99, 102, 241, 0.05) 25%, transparent 0 50%, rgba(99, 102, 241, 0.05) 0 75%, transparent 0) 0 0 / 20px 20px,
+    linear-gradient(180deg, #fafbff 0%, #ffffff 50%, #ffffff 100%) !important;
+  min-height: 100vh;
+}
+
+/* 6 个工具导航 */
+#root div.xn-collage-nav {
+  gap: 7px !important;
+}
+#root .xn-collage-nav > a {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 10px !important;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  color: #334155 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease !important;
+}
+#root .xn-collage-nav > a:hover {
+  border-color: #a5b4fc !important;
+  box-shadow: 0 6px 18px rgba(67, 56, 202, 0.12) !important;
+  transform: translateY(-1px);
+}
+#root .xn-collage-nav > a[aria-selected="true"],
+#root .xn-collage-nav > a[aria-current="page"] {
+  background: linear-gradient(135deg, #4338ca, #6366f1) !important;
+  border-color: #4338ca !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(67, 56, 202, 0.26) !important;
+  transform: none;
+}
+
+/* 上传区 */
+#root .xn-collage-upload {
+  border-color: #a5b4fc !important;
+  border-radius: 16px !important;
+  background: linear-gradient(180deg, #f6f7ff, #ffffff) !important;
+  min-height: 140px !important;
+  transition: border-color 0.15s ease, background 0.15s ease !important;
+}
+#root .xn-collage-upload:hover {
+  border-color: #6366f1 !important;
+  background: #eef2ff !important;
+}
+
+/* 统计行 */
+#root .xn-collage-stats {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  color: #3730a3 !important;
+}
+
+/* 表单 */
+#root select {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+}
+#root input[type="color"] {
+  width: 44px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  border-radius: 10px !important;
+}
+#root input[type="range"] {
+  height: 36px !important;
+  accent-color: #6366f1;
+}
+#root input[type="range"]::-webkit-slider-thumb {
+  width: 20px !important;
+  height: 20px !important;
+}
+#root input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px !important;
+  border-radius: 9999px !important;
+}
+#root select:focus,
+#root input:focus {
+  outline: none !important;
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+#root label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* 按钮焦点（页面按钮已 44+） */
+#root button:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.55);
+  outline-offset: 2px;
+}
+
+/* 返回 44 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #eef2ff !important;
+}
+#root details > summary {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 移动端：6 个工具 3+3（覆盖通用单列） */
+@media (max-width: 1023px) {
+  #root div.xn-collage-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
