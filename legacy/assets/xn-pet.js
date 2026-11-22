@@ -41,8 +41,20 @@
     });
   }
 
+  function cleanHeadings() {
+    [].slice.call(root.querySelectorAll("h2,h3")).forEach(function (h) {
+      var target = h;
+      if (h.children.length === 1 && !h.children[0].children.length) target = h.children[0];
+      else if (h.children.length) return;
+      var s = target.textContent || "";
+      if (!/^\s*工具[A-Z]\s+/.test(s)) return;
+      var next = s.replace(/^\s*工具[A-Z]\s+/, "");
+      if (next) target.textContent = next;
+    });
+  }
+
   function run() {
-    try { chips(); money(); results(); fields(); } catch (e) {}
+    try { chips(); money(); results(); fields(); cleanHeadings(); } catch (e) {}
   }
 
   root.addEventListener("click", function () { [80, 360, 900, 1600].forEach(function (ms) { setTimeout(run, ms); }); }, true);
