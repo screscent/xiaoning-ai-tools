@@ -1,0 +1,78 @@
+/* R1200 批量序列号与恢复码合集 — 人用友好皮肤（凭据青蓝主题，仅 bcyaubk6f9 引用）
+   1. 序列号/恢复码 分段 38→44 + radio 语义
+   2. 文本/数字/下拉 46–48 → 48、15–20 → 16；结果文本域 15→16 等宽
+   3. 校验位开关锁 44×24 + 热区（保留 React 的 aria-checked）
+   4. 生成/复制/下载/重新生成/清空 38–40 → 44
+   5. 纯 CSS 斜纹凭据底 + 青蓝柔光 */
+
+#root .xn-sn-page {
+  background-color: #f7fafc !important;
+  background-image:
+    radial-gradient(900px 400px at 4% -10%, rgba(6, 182, 212, .10), transparent 62%),
+    radial-gradient(860px 380px at 98% -6%, rgba(37, 99, 235, .08), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(8, 145, 178, .04) 0, rgba(8, 145, 178, .04) 1px, transparent 1px, transparent 14px) !important;
+  background-size: auto, auto, auto !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 分段 38 → 44 */
+#root .xn-sn-seg {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+}
+
+#root .xn-sn-seg:focus-visible {
+  outline: 2px solid rgba(8, 145, 178, .62);
+  outline-offset: 2px;
+}
+
+/* 输入 48·16 */
+#root .xn-sn-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 结果文本域 15 → 16 等宽 */
+#root .xn-sn-area {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+
+/* 校验位开关：锁 44×24 + 上下 10px 热区 */
+#root .xn-sn-switch {
+  width: 44px !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  position: relative !important;
+}
+
+#root .xn-sn-switch::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+#root .xn-sn-switch:focus-visible {
+  outline: 2px solid rgba(8, 145, 178, .62);
+  outline-offset: 4px;
+}
+
+/* 生成/复制/下载/重新生成/清空 38–40 → 44 */
+#root .xn-sn-act {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#root .xn-sn-act:focus-visible {
+  outline: 2px solid rgba(8, 145, 178, .62);
+  outline-offset: 2px;
+}
