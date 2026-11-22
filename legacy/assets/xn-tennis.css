@@ -1,0 +1,269 @@
+/* R1222 网球计分与场地换算合集：草地网球场主题（纯 CSS，无图片）
+   1. 根容器：草地绿渐变 + 球场网格线纹理
+   2. 5 个工具导航：桌面单行 5 列，移动 3+2；当前工具绿色高亮
+   3. 分段/方向/左右手控件：44px + 明确选中态
+   4. 表单：select 16px；结果卡数值 20px 强调
+   5. 表格：行高 44、斑马纹；场地示意图自适应宽度
+   6. 次级/主操作按钮 44；返回 44；使用说明 44 */
+#root div.min-h-screen {
+  background:
+    radial-gradient(1100px 380px at 8% -10%, rgba(167, 243, 208, 0.55) 0%, rgba(167, 243, 208, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(209, 250, 229, 0.5) 0%, rgba(209, 250, 229, 0) 58%),
+    repeating-linear-gradient(90deg, rgba(16, 185, 129, 0.055) 0 1px, transparent 1px 72px),
+    repeating-linear-gradient(0deg, rgba(16, 185, 129, 0.045) 0 1px, transparent 1px 72px),
+    linear-gradient(180deg, #ecfdf5 0%, #ffffff 42%, #ffffff 100%) !important;
+  min-height: 100vh;
+}
+
+/* 五大工具导航 */
+#root .xn-tennis-nav {
+  gap: 8px !important;
+}
+#root .xn-tennis-nav > a {
+  min-height: 64px !important;
+  border-radius: 14px !important;
+  border: 1px solid #d1fae5 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 2px 8px rgba(6, 95, 70, 0.05) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease !important;
+}
+#root .xn-tennis-nav > a:hover {
+  border-color: #6ee7b7 !important;
+  box-shadow: 0 6px 18px rgba(6, 95, 70, 0.12) !important;
+  transform: translateY(-1px);
+}
+#root .xn-tennis-nav > a:focus-visible {
+  outline: 2px solid rgba(5, 150, 105, 0.55);
+  outline-offset: 2px;
+}
+#root .xn-tennis-nav > a[aria-selected="true"] {
+  background: linear-gradient(135deg, #047857, #10b981) !important;
+  border-color: #047857 !important;
+  box-shadow: 0 6px 20px rgba(4, 120, 87, 0.28) !important;
+  transform: none;
+}
+#root .xn-tennis-nav > a[aria-selected="true"] * {
+  color: #ffffff !important;
+}
+#root .xn-tennis-nav > a[aria-selected="true"] .text-slate-500,
+#root .xn-tennis-nav > a[aria-selected="true"] .text-slate-400 {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+#root .xn-tennis-nav > a[aria-selected="true"] svg {
+  color: #ffffff !important;
+}
+
+/* 页面标题与分区卡片 */
+#root section {
+  border-radius: 18px !important;
+  border-color: #d1fae5 !important;
+  box-shadow: 0 8px 28px rgba(6, 95, 70, 0.06) !important;
+}
+
+/* 分段控件（普通局 / 抢七局 / 右手 / 左手 / 换算方向） */
+#root .xn-tennis-seg > button,
+#root .xn-tennis-hand > button {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+#root .xn-tennis-seg > button[aria-pressed="true"],
+#root .xn-tennis-hand > button[aria-pressed="true"] {
+  background: #ffffff !important;
+  color: #047857 !important;
+  box-shadow: 0 2px 8px rgba(6, 95, 70, 0.16) !important;
+}
+#root .xn-tennis-seg > button[aria-pressed="false"],
+#root .xn-tennis-hand > button[aria-pressed="false"] {
+  color: #64748b !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+/* 去掉通用皮肤的 ✓ 前缀，避免与网球主题选中态冲突 */
+#root .xn-tennis-seg > button::before,
+#root .xn-tennis-hand > button::before,
+#root .xn-tennis-dir::before {
+  content: none !important;
+}
+
+/* 换算方向按钮：44，选中绿实心 */
+#root .xn-tennis-dir {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  border-radius: 12px !important;
+}
+#root .xn-tennis-dir[aria-pressed="true"] {
+  background: linear-gradient(135deg, #059669, #10b981) !important;
+  border-color: #047857 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.22) !important;
+}
+#root .xn-tennis-dir[aria-pressed="false"] {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #475569 !important;
+}
+
+/* 次级操作 44 */
+#root .xn-tennis-secondary {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  border-radius: 12px !important;
+}
+/* 复制类主操作 44 */
+#root .xn-tennis-copy {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #047857, #10b981) !important;
+  border-color: #047857 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.22) !important;
+}
+#root .xn-tennis-copy:disabled {
+  opacity: 0.45 !important;
+  box-shadow: none !important;
+}
+
+/* 表单：下拉 16px / 48 高；标签更清晰 */
+#root select {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+}
+#root select:focus {
+  outline: none !important;
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15) !important;
+}
+#root label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+}
+
+/* 当前状态条 */
+#root .xn-tennis-state {
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  border-radius: 12px !important;
+  background: #f0fdf4 !important;
+  border: 1px solid #d1fae5 !important;
+  padding: 8px 12px !important;
+}
+
+/* 推演结果卡：左侧绿条 + 数值强调 */
+#root .xn-tennis-branch {
+  border-radius: 14px !important;
+  border-left-width: 4px !important;
+  border-left-color: #10b981 !important;
+  padding: 14px !important;
+  min-height: 88px !important;
+  background: linear-gradient(180deg, #f7fef9, #ffffff) !important;
+}
+#root .xn-tennis-branch > p {
+  font-size: 13px !important;
+}
+#root .xn-tennis-branch li {
+  min-height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  font-size: 13.5px !important;
+  border-bottom: 1px dashed #e2e8f0;
+}
+#root .xn-tennis-branch li:last-child {
+  border-bottom: none;
+}
+#root .xn-tennis-branch li > span:last-child {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #047857 !important;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* 表格：行 44、斑马纹 */
+#root table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+#root table tr {
+  min-height: 44px !important;
+}
+#root table td,
+#root table th {
+  padding: 11px 12px !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+#root table tbody tr:nth-child(even) {
+  background: #f7fef9 !important;
+}
+#root table thead tr {
+  background: #ecfdf5 !important;
+}
+
+/* 场地示意图：自适应，不产生横向滚动 */
+#root .xn-tennis-court svg {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* 返回链接 44 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #ecfdf5 !important;
+}
+
+/* 使用说明折叠行 44 */
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* 移动端：5 个工具导航 3+2 */
+@media (max-width: 1023px) {
+  #root div.xn-tennis-nav,
+  #root .mt-3.grid.xn-tennis-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  #root .xn-tennis-nav > a {
+    min-height: 62px !important;
+    padding: 8px !important;
+  }
+  #root .xn-tennis-nav > a p,
+  #root .xn-tennis-nav > a div {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+  #root .xn-tennis-branch li > span:last-child {
+    font-size: 18px !important;
+  }
+  #root table td,
+  #root table th {
+    padding: 9px 10px !important;
+    font-size: 13px !important;
+  }
+}
