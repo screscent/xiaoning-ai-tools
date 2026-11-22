@@ -1,0 +1,209 @@
+/* R1237 健康指标计算合集：薄荷健康仪表主题（纯 CSS，无图片）
+   1. 根容器：28px 点阵 + 薄荷/青绿柔光
+   2. 6 标签：横滑 36 → 3×2 网格 44，选中青绿渐变 + aria-selected
+   3. 新增「填入示例」：40/44 胶囊，用占位示例值一键出结果
+   4. 性别/天气/午睡切换 42→44 + aria-pressed + 组名
+   5. 时间输入 15/46→16/48；使用说明 20→44
+   6. 结果卡：青绿描边/底纹，主值 36→38，参考区间 12→12.5 提高对比 */
+#root div.min-h-screen {
+  background:
+    radial-gradient(900px 380px at 4% -8%, rgba(16, 185, 129, 0.13) 0%, rgba(16, 185, 129, 0) 60%),
+    radial-gradient(760px 320px at 100% 0%, rgba(34, 211, 238, 0.12) 0%, rgba(34, 211, 238, 0) 60%),
+    radial-gradient(rgba(16, 185, 129, 0.11) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(180deg, #f8fdfb 0%, #ffffff 46%, #fbfefd 100%) !important;
+  min-height: 100vh;
+}
+
+/* 标签：3×2 */
+#root nav.flex.gap-1 {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+  overflow: visible !important;
+  padding: 6px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: #d9f0e8 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 24px -22px rgba(6, 78, 59, 0.55) !important;
+}
+#root nav.flex.gap-1 a {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  color: #475569 !important;
+}
+#root nav.flex.gap-1 a:hover {
+  background: #f0fdfa !important;
+  color: #0f766e !important;
+}
+#root nav.flex.gap-1 a[aria-selected="true"] {
+  background: linear-gradient(135deg, #059669, #10b981) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px -10px rgba(5, 150, 105, 0.7) !important;
+}
+
+/* 标题 */
+#root h2 {
+  font-size: 20px !important;
+  letter-spacing: -0.01em;
+}
+
+/* 示例按钮行 */
+.xn-metric-ex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 12px;
+}
+.xn-metric-ex button {
+  min-height: 40px !important;
+  height: 40px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  border: 1px solid #a7f3d0 !important;
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}
+.xn-metric-ex button:hover {
+  background: #d1fae5 !important;
+  border-color: #6ee7b7 !important;
+}
+.xn-metric-ex span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* 切换按钮 */
+#root .xn-metric-toggle {
+  min-height: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+}
+#root .xn-metric-toggle[aria-pressed="false"] {
+  background: #ffffff !important;
+  border-color: #dbe7e5 !important;
+  color: #475569 !important;
+}
+#root .xn-metric-toggle[aria-pressed="true"] {
+  background: linear-gradient(135deg, #059669, #10b981) !important;
+  border-color: #059669 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 6px 16px -10px rgba(5, 150, 105, 0.75) !important;
+}
+#root .xn-metric-toggle[aria-pressed="true"]::before {
+  content: none !important;
+}
+
+/* 输入 */
+#root input[type="time"],
+#root input[type="text"] {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+}
+#root input[type="number"] {
+  border-radius: 10px !important;
+}
+
+/* 使用说明 */
+#root details {
+  background: #ffffff !important;
+  border: 1px solid #e2efe9 !important;
+  border-radius: 12px !important;
+  padding: 0 12px !important;
+}
+#root summary {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center;
+  font-size: 13.5px !important;
+  color: #475569 !important;
+}
+#root details p,
+#root details li {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #52617a !important;
+  padding-bottom: 10px !important;
+}
+
+/* 结果卡 */
+#root section div.rounded-2xl.border {
+  border-color: #d9f0e8 !important;
+  box-shadow: 0 14px 30px -26px rgba(6, 78, 59, 0.45) !important;
+}
+#root section div.rounded-2xl.border-emerald-200 {
+  border-color: #6ee7b7 !important;
+  background: linear-gradient(180deg, #ffffff, #f6fefb) !important;
+  position: relative;
+  overflow: hidden;
+}
+#root section div.rounded-2xl.border-emerald-200::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #059669, #34d399 55%, #22d3ee);
+  opacity: 0.7;
+}
+#root section div.rounded-2xl p.mb-1.text-sm {
+  font-size: 13.5px !important;
+  color: #52617a !important;
+}
+#root section div.rounded-2xl span.text-4xl {
+  font-size: 38px !important;
+  color: #064e3b !important;
+}
+#root section div.rounded-2xl p.text-2xl {
+  color: #064e3b !important;
+}
+#root section div.rounded-2xl p.mt-2.text-xs {
+  font-size: 12.5px !important;
+  color: #6b7280 !important;
+  line-height: 1.6 !important;
+}
+#root section div.rounded-2xl span.rounded-full {
+  font-size: 12.5px !important;
+}
+
+/* 操作按钮统一 44（复制结果 / 清空 / 示例） */
+#root section button {
+  min-height: 44px !important;
+}
+#root section p.text-xs,
+#root section p.text-\[11px\] {
+  font-size: 12.5px !important;
+  color: #6b7280 !important;
+}
+
+/* 移动端 */
+@media (max-width: 639px) {
+  #root nav.flex.gap-1 a {
+    font-size: 12.5px !important;
+    min-height: 44px !important;
+  }
+  #root h2 {
+    font-size: 19px !important;
+  }
+  .xn-metric-ex button {
+    min-height: 44px !important;
+    height: 44px !important;
+  }
+  #root section div.rounded-2xl span.text-4xl {
+    font-size: 34px !important;
+  }
+}
