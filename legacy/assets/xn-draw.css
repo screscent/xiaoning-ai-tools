@@ -1,0 +1,211 @@
+/* R1224 手绘与标注合集：纸张手绘主题（纯 CSS，无图片）
+   1. 根容器：米白纸面 + 22px 点阵网格 + 暖色柔光
+   2. 6 个工具导航：44px，当前工具蓝色高亮；移动 3+3
+   3. 除圆形色板外所有按钮 ≥44；选中态（bg-blue-600）统一蓝色渐变
+   4. 色板 32/28→40，补热区；滑块 28→36 + 20 圆点
+   5. 输入 16/48；文本域 16/200；画布圆角阴影、自适应宽度
+   6. 返回 44；使用说明 44 */
+#root {
+  background:
+    radial-gradient(1100px 380px at 8% -10%, rgba(253, 230, 200, 0.5) 0%, rgba(253, 230, 200, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(219, 234, 254, 0.45) 0%, rgba(219, 234, 254, 0) 58%),
+    radial-gradient(rgba(120, 113, 108, 0.16) 1px, transparent 1px) 0 0 / 22px 22px,
+    #fffdf8 !important;
+  min-height: 100vh;
+}
+
+/* 六大工具导航 */
+#root .xn-draw-nav > a {
+  min-height: 44px !important;
+  height: 44px !important;
+  min-width: 64px !important;
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 14px !important;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: #334155 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease !important;
+}
+#root .xn-draw-nav > a:hover {
+  border-color: #93c5fd !important;
+  box-shadow: 0 6px 18px rgba(30, 64, 175, 0.12) !important;
+  transform: translateY(-1px);
+}
+#root .xn-draw-nav > a[aria-selected="true"] {
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+  border-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(29, 78, 216, 0.26) !important;
+  transform: none;
+}
+
+/* 所有操作按钮 ≥44（圆形色板除外） */
+#root button:not(.xn-draw-swatch) {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+}
+#root button:not(.xn-draw-swatch):focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.55);
+  outline-offset: 2px;
+}
+
+/* 选中态：原 bg-blue-600 的按钮统一蓝色渐变 */
+#root button.xn-draw-mode[aria-pressed="true"] {
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+  border-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(29, 78, 216, 0.22) !important;
+  font-weight: 600 !important;
+}
+#root button.xn-draw-mode[aria-pressed="false"] {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+}
+#root button.xn-draw-mode::before {
+  content: none !important;
+}
+
+/* 下载类（绿色）与清空（红色）保持语义色，仅放大 */
+#root button.xn-draw-download {
+  background: linear-gradient(135deg, #15803d, #22c55e) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(21, 128, 61, 0.22) !important;
+}
+#root button.xn-draw-clear {
+  background: #fef2f2 !important;
+  border: 1px solid #fecaca !important;
+  color: #dc2626 !important;
+}
+#root button.xn-draw-secondary {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+#root button.xn-draw-secondary:disabled {
+  opacity: 0.45 !important;
+}
+
+/* 圆形色板 */
+#root button.xn-draw-swatch {
+  width: 40px !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  flex: 0 0 40px !important;
+  position: relative !important;
+}
+#root button.xn-draw-swatch::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+}
+#root button.xn-draw-swatch[aria-pressed="true"] {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+}
+
+/* 滑块：36 高 + 20 圆点 */
+#root input[type="range"] {
+  height: 36px !important;
+  accent-color: #2563eb;
+}
+#root input[type="range"]::-webkit-slider-thumb {
+  width: 20px !important;
+  height: 20px !important;
+}
+#root input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px !important;
+  border-radius: 9999px !important;
+}
+
+/* 输入：16 / 48 */
+#root input[type="text"],
+#root input[type="number"],
+#root select,
+#root textarea {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+}
+#root input[type="color"] {
+  width: 44px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  border-radius: 10px !important;
+}
+#root textarea {
+  min-height: 200px !important;
+  line-height: 1.7 !important;
+}
+#root input:focus,
+#root select:focus,
+#root textarea:focus {
+  outline: none !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+}
+#root label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+}
+
+/* 画布：圆角阴影、自适应（保持比例） */
+#root canvas {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.12) !important;
+}
+
+/* 结果列表行 */
+#root li {
+  min-height: 44px !important;
+}
+
+/* 返回 44 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #eff6ff !important;
+}
+
+/* 使用说明 */
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* 移动端：6 个工具导航 3+3 */
+@media (max-width: 640px) {
+  #root .xn-draw-nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    overflow: visible !important;
+    gap: 8px !important;
+  }
+  #root .xn-draw-nav > a {
+    width: 100% !important;
+    padding: 0 6px !important;
+    font-size: 13px !important;
+  }
+  #root button.xn-draw-swatch {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
