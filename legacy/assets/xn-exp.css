@@ -1,0 +1,148 @@
+/* R1242 到期管理合集：期限琥珀主题（纯 CSS，无图片）
+   1. 根容器：30px 日历横线 + 琥珀/天蓝柔光
+   2. 6 工具 tabs 38→44（移动 3×2）+ 选中态
+   3. 复制/清空 38→44；日期/下拉 16/48；使用说明 44
+   4. 结果四卡 2×2；数值 18→22、标签 12.5、紧急度着色
+   5. 标题 17→20 并去「工具N ·」 */
+#root div.min-h-screen {
+  background:
+    radial-gradient(900px 380px at 4% -8%, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0) 60%),
+    radial-gradient(760px 320px at 100% 0%, rgba(56, 189, 248, 0.12) 0%, rgba(56, 189, 248, 0) 60%),
+    repeating-linear-gradient(0deg, rgba(120, 113, 108, 0.06) 0 1px, transparent 1px 30px),
+    linear-gradient(180deg, #fdfcf8 0%, #ffffff 46%, #fdfdfb 100%) !important;
+  min-height: 100vh;
+}
+
+/* 工具 tabs */
+#root div.flex.gap-1 {
+  gap: 6px !important;
+  padding: 6px !important;
+  border-radius: 12px !important;
+}
+#root div.flex.gap-1 a[href^="#/"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+#root div.flex.gap-1 a[href^="#/"][aria-selected="true"] {
+  background: linear-gradient(135deg, #b45309, #f59e0b) !important;
+  border-color: #b45309 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px -12px rgba(180, 83, 9, 0.7) !important;
+}
+#root div.flex.gap-1 a[href^="#/"][aria-selected="false"] {
+  background: #ffffff !important;
+  color: #57534e !important;
+}
+
+/* 标题 */
+#root h2 {
+  font-size: 20px !important;
+  letter-spacing: -0.01em;
+}
+
+/* 输入 */
+#root input[type="date"],
+#root select {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+}
+
+/* 操作按钮 */
+#root .xn-exp-act {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+}
+
+/* 使用说明 */
+#root details {
+  border-radius: 12px !important;
+  border-color: #ece7df !important;
+  background: #ffffff !important;
+}
+#root summary {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center;
+  font-size: 13.5px !important;
+}
+#root details p,
+#root details li {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #52617a !important;
+}
+
+/* 结果四卡 */
+#root div.grid.xn-exp-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+#root .xn-exp-card {
+  background: linear-gradient(180deg, #ffffff, #fdfbf7) !important;
+  border-color: #efe7d8 !important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+  position: relative;
+  overflow: hidden;
+}
+#root .xn-exp-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #f59e0b, #38bdf8);
+  opacity: 0.55;
+}
+#root .xn-exp-card > p.text-xs {
+  font-size: 12.5px !important;
+  color: #78716c !important;
+}
+#root .xn-exp-card > p.text-lg {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  color: #1c1917 !important;
+}
+#root .xn-exp-card.xn-exp-warn > p.text-lg {
+  color: #b45309 !important;
+}
+#root .xn-exp-card.xn-exp-danger > p.text-lg {
+  color: #b91c1c !important;
+}
+#root .xn-exp-card > span.rounded-full {
+  font-size: 13px !important;
+  padding: 4px 12px !important;
+}
+
+@media (max-width: 639px) {
+  #root div.flex.gap-1 {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    overflow: visible !important;
+  }
+  #root div.flex.gap-1 a[href^="#/"] {
+    font-size: 13px !important;
+    padding: 0 4px !important;
+  }
+  #root h2 {
+    font-size: 19px !important;
+  }
+  #root .xn-exp-card > p.text-lg {
+    font-size: 20px !important;
+  }
+  #root .xn-exp-act {
+    min-height: 44px !important;
+  }
+}
