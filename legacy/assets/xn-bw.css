@@ -1,0 +1,150 @@
+/* R1252 文件传输与带宽估算合集（5culhkt6g5）· 信号波主题
+ * 仅本页引用；不改带宽/耗时/换算计算，只提升吸顶导航、按钮、输入与结果可读性。
+ */
+
+/* 让 sticky 生效：overflow-x hidden 会让 sticky 失效，clip 不影响滚动容器 */
+html, body { overflow-x: clip !important; }
+
+/* ---------- 1. 底色：信号波 ---------- */
+body {
+  background:
+    repeating-radial-gradient(circle at 50% -18%, rgba(37, 99, 235, 0.06) 0 1px, transparent 1px 46px),
+    radial-gradient(900px 340px at 50% -110px, rgba(8, 145, 178, 0.10), transparent 70%),
+    repeating-linear-gradient(90deg, rgba(15, 23, 42, 0.028) 0 1px, transparent 1px 32px),
+    linear-gradient(180deg, #f8fbff 0%, #f1f6fb 100%) !important;
+  background-attachment: fixed !important;
+}
+#root { background: transparent !important; }
+
+/* ---------- 2. 标题 ---------- */
+#root h1 { font-size: 27px !important; letter-spacing: -0.015em; color: #0f172a !important; }
+#root h2 { font-size: 20px !important; letter-spacing: -0.01em; color: #0f172a !important; }
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 19px !important; }
+}
+
+/* ---------- 3. 吸顶工具导航 ---------- */
+#root nav.xn-bw-tabs {
+  position: sticky;
+  top: 8px;
+  z-index: 20;
+  margin: 0 0 20px !important;
+  padding: 8px !important;
+  border: 1px solid #dbe4f0 !important;
+  border-radius: 14px;
+  background: rgba(250, 252, 255, 0.94) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 26px -24px rgba(15, 23, 42, 0.55);
+}
+#root div.xn-bw-tabs-inner {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+}
+#root nav.xn-bw-tabs a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 10px !important;
+  border: 1px solid #dbe4f0 !important;
+  border-radius: 10px;
+  background: #fff !important;
+  color: #475569 !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  white-space: nowrap;
+}
+#root nav.xn-bw-tabs a[aria-selected="true"] {
+  background: linear-gradient(135deg, #0891b2, #2563eb) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -12px rgba(8, 145, 178, 0.85);
+}
+@media (max-width: 640px) {
+  #root nav.xn-bw-tabs { top: 4px; }
+  #root div.xn-bw-tabs-inner { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #root nav.xn-bw-tabs a { font-size: 13px !important; padding: 0 6px !important; }
+}
+
+/* ---------- 4. 计算 / 复制 ---------- */
+#root button.xn-bw-calc {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #0891b2, #2563eb) !important;
+  color: #fff !important;
+  font-size: 14.5px !important;
+  font-weight: 700;
+  box-shadow: 0 10px 20px -14px rgba(8, 145, 178, 0.9);
+}
+#root button.xn-bw-copy {
+  min-height: 36px !important;
+  padding: 0 12px !important;
+  border-radius: 8px !important;
+  border: 1px solid #bfdbfe !important;
+  background: #fff !important;
+  color: #1d4ed8 !important;
+  font-size: 13px !important;
+  font-weight: 600;
+}
+#root button.xn-bw-copy:hover { background: #eff6ff !important; }
+@media (max-width: 640px) {
+  #root button.xn-bw-copy { min-height: 44px !important; }
+}
+
+/* ---------- 5. 输入 ---------- */
+#root input[type=number] {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dbe4f0 !important;
+  background: #fff !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root select {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dbe4f0 !important;
+  background: #fff !important;
+  font-size: 16px !important;
+}
+#root input:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: #0891b2 !important;
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.15) !important;
+}
+
+/* ---------- 6. 结果数值 ---------- */
+#root .xn-bw-val {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  color: #0f172a !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-bw-val.xn-bw-val-lg { font-size: 24px !important; color: #0e7490 !important; }
+
+/* ---------- 7. 使用说明 ---------- */
+#root details {
+  border: 1px solid #dbe4f0 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  padding: 0 14px !important;
+}
+#root summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* ---------- 8. 辅助小字 ---------- */
+#root .text-xs { font-size: 13px !important; }
