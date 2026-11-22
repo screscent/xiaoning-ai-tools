@@ -1,0 +1,86 @@
+/* R1218 智能家居设备与耗电合集：长春花蓝家居主题（纯 CSS，无图片） */
+#root {
+  background:
+    radial-gradient(1000px 360px at 6% -8%, rgba(224, 231, 255, 0.7) 0%, rgba(224, 231, 255, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(237, 233, 254, 0.45) 0%, rgba(237, 233, 254, 0) 58%),
+    repeating-linear-gradient(0deg, rgba(79, 70, 229, 0.03) 0 1px, transparent 1px 24px),
+    #f7f8fc !important;
+  min-height: 100vh;
+}
+
+/* 返回链接：44px 可点区域 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #eef2ff !important;
+}
+
+/* 5 个工具导航卡：44px，选中长春花蓝实心 */
+#root .xn-smart-tabs {
+  gap: 8px !important;
+}
+#root .xn-smart-tab {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 8px !important;
+  font-size: 13px !important;
+  border-radius: 12px !important;
+}
+#root .xn-smart-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #4338ca, #6366f1) !important;
+  border-color: #4338ca !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(67, 56, 202, 0.22) !important;
+}
+#root .xn-smart-tab[aria-selected="false"] {
+  background: #ffffff !important;
+  color: #4338ca !important;
+  border-color: #dcdcf7 !important;
+}
+
+/* 输入：48 / 16，等宽数字 */
+#root input[type="text"] {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  font-variant-numeric: tabular-nums !important;
+}
+#root input[type="text"]:focus {
+  outline: none !important;
+  border-color: #4338ca !important;
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.15) !important;
+}
+
+/* 主按钮：48 */
+#root .xn-smart-action {
+  min-height: 48px !important;
+  font-size: 15px !important;
+  border-radius: 12px !important;
+}
+
+/* 结果行：34 高，数值 18 / 700 */
+#root div.flex.items-baseline {
+  min-height: 34px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+#root div.flex.items-baseline .font-semibold {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums !important;
+  color: #4338ca !important;
+}
+
+/* 移动端：5 个导航卡 3+2 */
+@media (max-width: 1023px) {
+  #root .xn-smart-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
