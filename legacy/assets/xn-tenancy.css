@@ -1,0 +1,173 @@
+/* R1249 租房居住成本计算合集（glgtbzcqng）· 暖居陶土主题
+ * 仅本页引用；不改押金/水电/通勤/搬家/分摊计算，只提升导航、选项、输入与结果可读性。
+ */
+
+/* ---------- 1. 底色：暖居砖纹 ---------- */
+body {
+  background:
+    radial-gradient(900px 340px at 50% -100px, rgba(194, 65, 12, 0.08), transparent 70%),
+    radial-gradient(520px 260px at 88% 2%, rgba(15, 118, 110, 0.07), transparent 70%),
+    repeating-linear-gradient(0deg, rgba(120, 83, 60, 0.035) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(120, 83, 60, 0.035) 0 14px, transparent 14px 28px),
+    linear-gradient(180deg, #fdfaf5 0%, #f8f2e9 100%) !important;
+  background-attachment: fixed !important;
+}
+#root { background: transparent !important; }
+
+/* ---------- 2. 标题 ---------- */
+#root h1 { font-size: 27px !important; letter-spacing: -0.015em; color: #1c1917 !important; }
+#root h2 { font-size: 20px !important; letter-spacing: -0.01em; }
+#root h3 { font-size: 15px !important; }
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 19px !important; }
+}
+
+/* ---------- 3. 工具 tabs：42 → 44 ---------- */
+#root nav.xn-tenancy-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+  overflow: visible !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+#root nav.xn-tenancy-tabs a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 8px !important;
+  border: 1px solid #eadfd2 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  color: #57534e !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(28, 25, 23, 0.04);
+}
+#root nav.xn-tenancy-tabs a[aria-selected="true"] {
+  background: linear-gradient(135deg, #0f766e, #c2410c) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -12px rgba(15, 118, 110, 0.85);
+}
+@media (max-width: 640px) {
+  #root nav.xn-tenancy-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #root nav.xn-tenancy-tabs a { font-size: 13px !important; }
+}
+
+/* ---------- 4. 是 / 否 ---------- */
+#root button.xn-tenancy-yesno {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  border: 1px solid #e7dccf !important;
+  background: #fff !important;
+  color: #57534e !important;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+#root button.xn-tenancy-yesno[aria-pressed="true"] {
+  background: linear-gradient(135deg, #0f766e, #14b8a6) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 8px 16px -12px rgba(15, 118, 110, 0.9);
+}
+#root button.xn-tenancy-yesno::before { content: none !important; }
+
+/* ---------- 5. 复制 / 清空 ---------- */
+#root button.xn-tenancy-act {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  border-radius: 10px !important;
+  border: 1px solid #e7dccf !important;
+  background: #fff !important;
+  color: #44403c !important;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+#root button.xn-tenancy-act:hover { border-color: #d6b8a0 !important; background: #fffaf4 !important; }
+
+/* ---------- 6. 输入 ---------- */
+#root input[type=number] {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #e7dccf !important;
+  background: #fff !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root select,
+#root textarea {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #e7dccf !important;
+  font-size: 16px !important;
+}
+#root input:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: #0f766e !important;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.16) !important;
+}
+
+/* ---------- 7. 使用说明 ---------- */
+#root details {
+  border: 1px solid #e7dccf !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  padding: 0 14px !important;
+}
+#root summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  color: #57534e;
+}
+
+/* ---------- 8. 结果卡 ---------- */
+#root div[class*="bg-gray-50/50"][class*="rounded-xl"] {
+  background: #fff !important;
+  border: 1px solid #efe5d9 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 14px 32px -30px rgba(120, 83, 60, 0.55);
+}
+#root div.xn-tenancy-row {
+  border: 1px solid #f0e7dc !important;
+  border-radius: 10px !important;
+  background: #fdfaf6 !important;
+  padding: 10px 14px !important;
+}
+#root div.xn-tenancy-row > span:first-child {
+  font-size: 13.5px !important;
+  color: #78716c !important;
+}
+#root .xn-tenancy-val {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #292524 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root div.xn-tenancy-hl {
+  background: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+}
+#root div.xn-tenancy-hl > span:first-child { color: #047857 !important; }
+#root .xn-tenancy-hl .xn-tenancy-val { font-size: 20px !important; color: #065f46 !important; }
+
+/* ---------- 9. 纠纷提示 ---------- */
+#root div[class*="bg-amber-50"] {
+  border-radius: 12px !important;
+  font-size: 14.5px !important;
+  line-height: 1.7;
+}
+
+/* ---------- 10. 辅助小字 ---------- */
+#root .text-xs { font-size: 13px !important; }
