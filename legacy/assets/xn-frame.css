@@ -47,7 +47,7 @@
 
 /* 上传区：虚线暗房红 */
 #root .xn-frame-drop {
-  min-height: 160px !important;
+  min-height: 180px !important;
   border: 2px dashed #f5b5c2 !important;
   border-radius: 14px !important;
   background: #fffdfd !important;

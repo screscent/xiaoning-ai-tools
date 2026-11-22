@@ -43,7 +43,7 @@
       var l = labels[i];
       if (!/点击选择图片/.test(txt(l))) continue;
       if (!l.classList.contains("xn-frame-drop")) l.classList.add("xn-frame-drop");
-      l.style.setProperty("min-height", "160px", "important");
+      l.style.setProperty("min-height", "180px", "important");
     }
   }
 
@@ -118,7 +118,7 @@
   }
 
   run();
-  [250, 700, 1600].forEach(function (ms) { setTimeout(run, ms); });
+  [250, 700, 1800].forEach(function (ms) { setTimeout(run, ms); });
 
   root.addEventListener("click", function (ev) {
     var links = tabLinks();
