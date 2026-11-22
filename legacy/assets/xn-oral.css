@@ -1,0 +1,251 @@
+/* R1235 口腔与牙齿护理速查合集：薄荷牙科主题（纯 CSS，无图片）
+   1. 根容器：26px 点阵 + 薄荷/青绿柔光；hero 青绿渐变 + 右侧柔光
+   2. 入口 6 卡：桌面 6 列→3 列×2（副标题不再被截断）、移动 2 列；当前卡青绿描边
+   3. 选项芯片 40→44；选中改青绿渐变（覆盖通用 ✓ 与紫色）
+   4. 复制/设为今天 37→44；返回 28→44；使用说明 42→46
+   5. 输入 16/48；结果卡紫→青绿统一、日期 16→24、行值 14
+   6. 标题 17→20，去「工具D/E/F」前缀（JS） */
+#root div.min-h-screen {
+  background:
+    radial-gradient(880px 400px at 2% -8%, rgba(13, 148, 136, 0.14) 0%, rgba(13, 148, 136, 0) 62%),
+    radial-gradient(720px 320px at 100% 0%, rgba(34, 211, 238, 0.12) 0%, rgba(34, 211, 238, 0) 60%),
+    radial-gradient(rgba(13, 148, 136, 0.10) 1px, transparent 1px) 0 0 / 26px 26px,
+    linear-gradient(180deg, #f7fcfb 0%, #ffffff 44%, #fbfefd 100%) !important;
+  min-height: 100vh;
+}
+
+/* hero */
+#root section.relative.overflow-hidden.rounded-3xl {
+  background:
+    radial-gradient(520px 220px at 88% -10%, rgba(45, 212, 191, 0.28), rgba(45, 212, 191, 0) 70%),
+    radial-gradient(420px 200px at 6% 110%, rgba(34, 211, 238, 0.18), rgba(34, 211, 238, 0) 70%),
+    linear-gradient(135deg, #effcf9 0%, #f4fdfc 48%, #eef9ff 100%) !important;
+  border-color: #ccf0e8 !important;
+  box-shadow: 0 18px 40px -34px rgba(13, 148, 136, 0.55) !important;
+}
+#root section.relative.overflow-hidden.rounded-3xl h1 {
+  letter-spacing: -0.02em;
+}
+
+/* 入口卡片：桌面 3×2 */
+#root .grid.xn-oral-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+#root a[href^="#/"] {
+  border-radius: 14px !important;
+  min-height: 64px;
+}
+#root a[href^="#/"] span.block.text-sm {
+  font-size: 14.5px !important;
+  color: #334155 !important;
+}
+#root a[href^="#/"] span.mt-0\.5 {
+  display: block !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  text-overflow: clip !important;
+  font-size: 11.5px !important;
+  line-height: 1.45 !important;
+  color: #64748b !important;
+  margin-top: 2px !important;
+}
+#root a[href^="#/"][aria-current="page"] {
+  border-color: #5eead4 !important;
+  background: linear-gradient(180deg, #ffffff, #f0fdfa) !important;
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.16), 0 10px 22px -18px rgba(13, 148, 136, 0.6) !important;
+}
+#root a[href^="#/"][aria-current="page"] span.block.text-sm {
+  color: #0f766e !important;
+}
+#root a[href^="#/"][aria-current="page"] span.flex.h-8.w-8 {
+  background: #ccfbf1 !important;
+  color: #0f766e !important;
+}
+
+/* 选项组标签 */
+#root .xn-oral-label {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px !important;
+  font-weight: 650 !important;
+  color: #0f766e !important;
+}
+#root .xn-oral-label::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #14b8a6;
+}
+
+/* 选项芯片 */
+#root button.xn-oral-chip {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  border-radius: 999px !important;
+  transition: all 0.15s;
+}
+#root button.xn-oral-chip[aria-pressed="false"] {
+  background: #ffffff !important;
+  border-color: #dbe7e5 !important;
+  color: #475569 !important;
+  box-shadow: none !important;
+}
+#root button.xn-oral-chip[aria-pressed="false"]:hover {
+  border-color: #5eead4 !important;
+  color: #0f766e !important;
+  background: #f0fdfa !important;
+}
+#root button.xn-oral-chip[aria-pressed="true"] {
+  background: linear-gradient(135deg, #0d9488, #14b8a6) !important;
+  border-color: #0d9488 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 8px 18px -10px rgba(13, 148, 136, 0.75) !important;
+}
+#root button.xn-oral-chip[aria-pressed="true"]::before {
+  content: none !important;
+}
+
+/* 操作按钮 */
+#root section button {
+  border-radius: 999px !important;
+}
+#root section button:not(.xn-oral-chip) {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+}
+#root section button:not(.xn-oral-chip):focus-visible {
+  outline: 2px solid rgba(13, 148, 136, 0.45);
+  outline-offset: 2px;
+}
+
+/* 使用说明 */
+#root details {
+  border-radius: 14px !important;
+  border-color: #d9eeea !important;
+  background: #ffffff !important;
+}
+#root summary {
+  min-height: 46px !important;
+  display: flex !important;
+  align-items: center;
+  font-size: 14px !important;
+  color: #475569 !important;
+}
+#root details p,
+#root details li {
+  font-size: 13.5px !important;
+  line-height: 1.75 !important;
+  color: #52617a !important;
+}
+
+/* 标题 */
+#root h2 {
+  font-size: 20px !important;
+  letter-spacing: -0.01em;
+}
+#root h3 {
+  font-size: 17.5px !important;
+}
+
+/* 输入 */
+#root input[type="date"],
+#root input[type="text"],
+#root select {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+}
+
+/* 结果卡：紫色 → 青绿 */
+#root .bg-violet-500 {
+  background: linear-gradient(180deg, #0d9488, #14b8a6) !important;
+}
+#root .border-violet-100 {
+  border-color: #ccf0e8 !important;
+}
+#root .shadow-violet-100\/40 {
+  box-shadow: 0 14px 32px -26px rgba(13, 148, 136, 0.6) !important;
+}
+#root .bg-violet-50 {
+  background: #ecfdf7 !important;
+}
+#root .text-violet-700 {
+  color: #0f766e !important;
+}
+#root .ring-violet-100 {
+  --tw-ring-color: #ccf0e8 !important;
+}
+#root .border-violet-500 {
+  border-color: #0d9488 !important;
+}
+#root .text-violet-800 {
+  color: #115e59 !important;
+}
+#root .shadow-violet-100 {
+  --tw-shadow-color: rgba(13, 148, 136, 0.18) !important;
+}
+#root dl > div > dt {
+  font-size: 13px !important;
+  color: #64748b !important;
+}
+#root dl > div > dd {
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  color: #1f2937 !important;
+}
+#root dl > div > dd .text-lg,
+#root dl > div > dd.text-lg {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
+  color: #0f766e !important;
+}
+/* 主结果值（如建议复查日期） */
+#root dl > div > dd span.text-base.font-bold {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+  color: #0f766e !important;
+}
+#root .border-rose-100 dl > div > dd span.text-base.font-bold {
+  color: #be123c !important;
+}
+#root dl > div > dd span.text-xs {
+  font-size: 12.5px !important;
+  color: #64748b !important;
+}
+
+/* 移动端 */
+@media (max-width: 639px) {
+  #root .grid.xn-oral-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  #root a[href^="#/"] {
+    min-height: 58px;
+    padding: 10px 12px !important;
+  }
+  #root a[href^="#/"] span.block.text-sm {
+    font-size: 13.5px !important;
+  }
+  #root button.xn-oral-chip {
+    font-size: 13px !important;
+    padding: 0 13px !important;
+  }
+  #root summary {
+    min-height: 48px !important;
+  }
+  #root h2 {
+    font-size: 19px !important;
+  }
+  #root h3 {
+    font-size: 17px !important;
+  }
+}
