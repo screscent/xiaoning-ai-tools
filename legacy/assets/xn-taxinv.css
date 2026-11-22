@@ -1,0 +1,129 @@
+/* R1250 发票校验与开票信息合集（r3vc8lzjyr）· 票据纸主题
+ * 仅本页引用；不改税号校验/开票信息生成，只提升导航、示例、输入与结果可读性。
+ */
+
+/* ---------- 1. 底色：票据账页 ---------- */
+body {
+  background:
+    radial-gradient(900px 340px at 50% -100px, rgba(29, 78, 216, 0.09), transparent 70%),
+    radial-gradient(420px 220px at 92% 0%, rgba(185, 28, 28, 0.06), transparent 70%),
+    repeating-linear-gradient(180deg, rgba(30, 58, 138, 0.045) 0 1px, transparent 1px 30px),
+    linear-gradient(180deg, #f8fafd 0%, #f2f6fb 100%) !important;
+  background-attachment: fixed !important;
+}
+#root { background: transparent !important; }
+
+/* ---------- 2. 标题 ---------- */
+#root h1 { font-size: 27px !important; letter-spacing: -0.015em; color: #0f172a !important; }
+#root h2 { font-size: 20px !important; letter-spacing: -0.01em; color: #0f172a !important; }
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 19px !important; }
+}
+
+/* ---------- 3. 工具 tabs 与示例 ---------- */
+#root button.xn-taxinv-tab {
+  min-height: 44px !important;
+  height: 44px;
+  padding: 0 20px !important;
+  border-radius: 12px !important;
+  border: 1px solid #dbe4f0 !important;
+  background: #fff !important;
+  color: #475569 !important;
+  font-size: 14.5px !important;
+  font-weight: 600;
+}
+#root button.xn-taxinv-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #1e3a8a, #1d4ed8) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -12px rgba(29, 78, 216, 0.85);
+}
+#root button.xn-taxinv-chip {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 999px !important;
+  border: 1px solid #dbe4f0 !important;
+  background: #fff !important;
+  color: #475569 !important;
+  font-size: 13px !important;
+  font-weight: 500;
+}
+#root button.xn-taxinv-chip:hover { border-color: #93c5fd !important; color: #1d4ed8 !important; }
+#root button.xn-taxinv-clear {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 999px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #fff !important;
+  color: #64748b !important;
+  font-size: 13px !important;
+}
+#root button.xn-taxinv-copy {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  border: 1px solid #bfdbfe !important;
+  background: #fff !important;
+  color: #1d4ed8 !important;
+  font-size: 13px !important;
+  font-weight: 600;
+}
+#root button.xn-taxinv-copy:hover { background: #eff6ff !important; }
+@media (max-width: 640px) {
+  #root button.xn-taxinv-tab { flex: 1 1 40%; }
+  #root button.xn-taxinv-chip,
+  #root button.xn-taxinv-clear,
+  #root button.xn-taxinv-copy { min-height: 44px !important; }
+}
+
+/* ---------- 4. 输入 ---------- */
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root input[type=number],
+#root select,
+#root textarea {
+  min-height: 50px !important;
+  border-radius: 10px !important;
+  border-color: #dbe4f0 !important;
+  background: #fff !important;
+  font-size: 16px !important;
+}
+#root input:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: #1d4ed8 !important;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15) !important;
+}
+
+/* ---------- 5. 结果：票据卡 ---------- */
+#root div[class*="border-dashed"] {
+  border-color: #c7d7ee !important;
+  border-radius: 14px !important;
+  background: #fbfdff !important;
+}
+#root div[class*="bg-white/70"] {
+  border: 1px solid #e2ebf8 !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+}
+#root pre,
+#root div.font-mono,
+#root code {
+  font-size: 13.5px !important;
+  line-height: 1.75;
+  border-radius: 10px;
+}
+#root div.xn-taxinv-gap {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 9px;
+  border-radius: 999px;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ---------- 6. 辅助小字 ---------- */
+#root .text-xs { font-size: 13px !important; }
