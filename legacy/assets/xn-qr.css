@@ -1,0 +1,127 @@
+/* R1210 二维码与条形码识别合集：紫罗兰扫码主题（纯 CSS，无图片） */
+#root {
+  background:
+    radial-gradient(1000px 360px at 6% -8%, rgba(237, 233, 254, 0.8) 0%, rgba(237, 233, 254, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(250, 232, 255, 0.5) 0%, rgba(250, 232, 255, 0) 58%),
+    radial-gradient(circle at 1px 1px, rgba(124, 58, 237, 0.07) 1px, transparent 0) 0 0 / 18px 18px,
+    #faf8ff !important;
+  min-height: 100vh;
+}
+
+/* 返回链接：44px 可点区域 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #f5f3ff !important;
+}
+
+/* 6 个工具页签：44px，选中紫罗兰实心 */
+#root .xn-qr-tabs {
+  gap: 8px !important;
+}
+#root .xn-qr-tab {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+#root .xn-qr-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #7c3aed, #a855f7) !important;
+  border-color: #7c3aed !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25) !important;
+}
+#root .xn-qr-tab[aria-selected="false"] {
+  background: #ffffff !important;
+  color: #6d28d9 !important;
+  border-color: #ede9fe !important;
+}
+
+/* 上传区：虚线紫框 + 悬停提示 */
+#root .xn-qr-drop {
+  min-height: 200px !important;
+  border: 2px dashed #c4b5fd !important;
+  border-radius: 16px !important;
+  background:
+    radial-gradient(600px 200px at 50% 0%, rgba(237, 233, 254, 0.7) 0%, rgba(237, 233, 254, 0) 70%),
+    #ffffff !important;
+  transition: border-color 0.2s ease, background 0.2s ease !important;
+}
+#root .xn-qr-drop:hover {
+  border-color: #7c3aed !important;
+  background: #faf5ff !important;
+}
+
+/* 输入 / 下拉 / 文本域 */
+#root input[type="text"] {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+}
+#root select {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+}
+#root textarea {
+  font-size: 16px !important;
+  min-height: 110px !important;
+  line-height: 1.7 !important;
+  border-radius: 12px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+#root input[type="text"]:focus,
+#root select:focus,
+#root textarea:focus {
+  outline: none !important;
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.16) !important;
+}
+
+/* 复制 / 清空：44 */
+#root .xn-qr-action {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+
+/* 复选行：44 高、方框 18 */
+#root .xn-qr-check {
+  min-height: 44px !important;
+}
+#root .xn-qr-check input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  accent-color: #7c3aed !important;
+}
+
+/* 识别结果：14px 等宽、行高放宽 */
+#root pre,
+#root .whitespace-pre-wrap {
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+
+/* 移动端：6 页签 3+3 */
+@media (max-width: 1023px) {
+  #root .xn-qr-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+  #root .xn-qr-tab {
+    width: 100% !important;
+    padding: 0 8px !important;
+    font-size: 13px !important;
+  }
+  #root .xn-qr-drop {
+    min-height: 180px !important;
+  }
+}
