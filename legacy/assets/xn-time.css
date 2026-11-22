@@ -1,0 +1,195 @@
+/* R1223 时间块规划合集：日程网格主题（纯 CSS，无图片）
+   1. 根容器：靛蓝渐层 + 48px 日程网格线（时段感）
+   2. 6 个工具导航：44px，桌面 6 列 / 移动 3+3，当前工具靛蓝高亮
+   3. 主操作 44（添加/复制/清空），晨型/夜型 44 + 选中态
+   4. 输入 16px / 48；统计数值 20→28
+   5. 空状态虚线卡；结果列表行 44；返回 44；使用说明 44 */
+#root div.min-h-screen {
+  background:
+    radial-gradient(1100px 380px at 6% -10%, rgba(199, 210, 254, 0.55) 0%, rgba(199, 210, 254, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(224, 231, 255, 0.55) 0%, rgba(224, 231, 255, 0) 58%),
+    repeating-linear-gradient(90deg, rgba(79, 70, 229, 0.05) 0 1px, transparent 1px 48px),
+    repeating-linear-gradient(0deg, rgba(79, 70, 229, 0.045) 0 1px, transparent 1px 48px),
+    linear-gradient(180deg, #f5f7ff 0%, #ffffff 44%, #ffffff 100%) !important;
+  min-height: 100vh;
+}
+
+/* 六大工具导航 */
+#root .xn-time-nav > a {
+  min-height: 44px !important;
+  height: 44px !important;
+  border-radius: 12px !important;
+  border: 1px solid #e0e7ff !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #3730a3 !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease !important;
+}
+#root .xn-time-nav > a:hover {
+  border-color: #a5b4fc !important;
+  box-shadow: 0 6px 18px rgba(55, 48, 163, 0.12) !important;
+  transform: translateY(-1px);
+}
+#root .xn-time-nav > a[aria-selected="true"] {
+  background: linear-gradient(135deg, #4338ca, #6366f1) !important;
+  border-color: #4338ca !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(67, 56, 202, 0.28) !important;
+  transform: none;
+}
+
+/* 分区卡片 */
+#root section {
+  border-radius: 18px !important;
+  border-color: #e0e7ff !important;
+  box-shadow: 0 8px 28px rgba(55, 48, 163, 0.06) !important;
+}
+
+/* 主操作 / 次级操作 44 */
+#root .xn-time-primary {
+  min-height: 44px !important;
+  height: 44px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  background: linear-gradient(135deg, #4338ca, #6366f1) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(67, 56, 202, 0.24) !important;
+}
+#root .xn-time-primary:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.55);
+  outline-offset: 2px;
+}
+#root .xn-time-secondary {
+  min-height: 44px !important;
+  height: 44px !important;
+  border-radius: 12px !important;
+  font-size: 13.5px !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+#root .xn-time-secondary:hover {
+  background: #eef2ff !important;
+  border-color: #c7d2fe !important;
+  color: #3730a3 !important;
+}
+
+/* 晨型 / 夜型：44 + 选中态 */
+#root .xn-time-energy > button {
+  min-height: 44px !important;
+  height: 44px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+}
+#root .xn-time-energy > button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff) !important;
+  border-color: #6366f1 !important;
+  color: #3730a3 !important;
+  box-shadow: inset 0 0 0 1px rgba(99, 102, 241, 0.3) !important;
+  font-weight: 700 !important;
+}
+#root .xn-time-energy > button[aria-pressed="false"] {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #64748b !important;
+  box-shadow: none !important;
+}
+#root .xn-time-energy > button::before {
+  content: none !important;
+}
+
+/* 表单：16px / 48 */
+#root input:not([type="checkbox"]):not([type="radio"]),
+#root select,
+#root textarea {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+}
+#root input:focus,
+#root select:focus,
+#root textarea:focus {
+  outline: none !important;
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+#root label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+}
+
+/* 统计卡：数值 20→28，卡片浅靛蓝 */
+#root .xn-time-stat {
+  border-radius: 14px !important;
+  border: 1px solid #e0e7ff !important;
+  background: linear-gradient(180deg, #f8faff, #ffffff) !important;
+  padding: 12px !important;
+}
+#root .xn-time-num {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-time-stat .mt-1 {
+  font-size: 12.5px !important;
+  color: #64748b !important;
+}
+
+/* 空状态 */
+#root .xn-time-empty {
+  min-height: 64px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px dashed #c7d2fe !important;
+  border-radius: 12px !important;
+  background: #fbfcff !important;
+  color: #6366f1 !important;
+  font-size: 14px !important;
+  padding: 12px !important;
+}
+
+/* 时间块列表行 */
+#root li {
+  min-height: 44px !important;
+}
+
+/* 返回链接 44 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #eef2ff !important;
+}
+
+/* 使用说明 44 */
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* 移动端：6 个工具导航 3+3 */
+@media (max-width: 1023px) {
+  #root .xn-time-nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+  #root .xn-time-nav > a {
+    width: 100% !important;
+    padding: 0 6px !important;
+    font-size: 13px !important;
+  }
+  #root .xn-time-num {
+    font-size: 24px !important;
+  }
+}
