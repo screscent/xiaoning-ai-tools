@@ -1,0 +1,178 @@
+/* R1253 菜谱份量与备餐换算合集（7b3nvgweb7）· 厨房方格主题
+ * 仅本页引用；不改份量/备餐/器具/采购/复热/单位换算，只提升导航、开关、输入与清单可读性。
+ */
+
+/* ---------- 1. 底色：厨房方格 ---------- */
+body {
+  background:
+    radial-gradient(900px 340px at 50% -100px, rgba(5, 150, 105, 0.09), transparent 70%),
+    radial-gradient(420px 220px at 92% 0%, rgba(234, 88, 12, 0.06), transparent 70%),
+    repeating-conic-gradient(from 0deg at 0 0, rgba(5, 150, 105, 0.045) 0deg 90deg, transparent 90deg 180deg) 0 0 / 28px 28px,
+    linear-gradient(180deg, #f9fcf8 0%, #f2f8f0 100%) !important;
+  background-attachment: fixed, fixed, scroll, fixed !important;
+}
+#root { background: transparent !important; }
+
+/* ---------- 2. 标题 ---------- */
+#root h1 { font-size: 27px !important; letter-spacing: -0.015em; color: #1c1917 !important; }
+#root h2 { font-size: 20px !important; letter-spacing: -0.01em; color: #14532d !important; }
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 19px !important; }
+}
+
+/* ---------- 3. 工具 tabs：34 → 44 ---------- */
+#root nav.xn-recipe-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 14px;
+}
+#root nav.xn-recipe-tabs a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 8px !important;
+  border: 1px solid #dbead8 !important;
+  border-radius: 12px;
+  background: #fff !important;
+  color: #475569 !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(20, 83, 45, 0.04);
+}
+#root nav.xn-recipe-tabs a[aria-selected="true"] {
+  background: linear-gradient(135deg, #059669, #ea580c) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -12px rgba(5, 150, 105, 0.85);
+}
+@media (max-width: 640px) {
+  #root nav.xn-recipe-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #root nav.xn-recipe-tabs a { font-size: 13px !important; padding: 0 6px !important; }
+}
+
+/* ---------- 4. 开关与复制 ---------- */
+#root button.xn-recipe-switch {
+  min-height: 44px !important;
+  padding: 6px 0 !important;
+  font-size: 15px !important;
+  color: #334155 !important;
+}
+#root button.xn-recipe-copy {
+  min-height: 40px !important;
+  padding: 0 16px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #047857, #059669) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  box-shadow: 0 10px 20px -16px rgba(5, 150, 105, 0.9);
+}
+@media (max-width: 640px) {
+  #root button.xn-recipe-copy { min-height: 44px !important; }
+}
+
+/* ---------- 5. 输入 ---------- */
+#root input[type=number] {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dbead8 !important;
+  background: #fff !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root select {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dbead8 !important;
+  background: #fff !important;
+  font-size: 16px !important;
+}
+#root textarea {
+  min-height: 200px !important;
+  border-radius: 10px !important;
+  border-color: #dbead8 !important;
+  background: #fff !important;
+  font-size: 16px !important;
+  line-height: 1.7;
+}
+#root input:focus,
+#root select:focus,
+#root textarea:focus {
+  outline: none !important;
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15) !important;
+}
+
+/* ---------- 6. 使用说明 ---------- */
+#root details {
+  border: 1px solid #dbead8 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  padding: 0 14px !important;
+}
+#root summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* ---------- 7. 换算清单 ---------- */
+#root table {
+  border-collapse: separate !important;
+  border-spacing: 0;
+}
+#root thead th {
+  font-size: 13px !important;
+  color: #4b5563 !important;
+  background: #f3faf1 !important;
+  padding: 9px 10px !important;
+  border-bottom: 1px solid #dbead8 !important;
+  white-space: nowrap;
+}
+#root tbody td {
+  font-size: 14.5px !important;
+  padding: 10px !important;
+  border-bottom: 1px solid #eef4ec !important;
+  color: #1f2937;
+}
+#root tbody tr:nth-child(even) td { background: #fbfdf9 !important; }
+#root tbody tr:last-child td { border-bottom: 0 !important; }
+#root tbody td[class*="tabular-nums"] {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #047857 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root tbody td[class*="tabular-nums"] span { font-size: 18px !important; font-weight: 800 !important; }
+#root div.xn-recipe-row {
+  align-items: center;
+  padding: 9px 12px !important;
+  border: 1px solid #edf3ea !important;
+  border-radius: 10px;
+  background: #fbfdf9 !important;
+}
+#root div.xn-recipe-row > *:first-child {
+  font-size: 14.5px !important;
+  color: #334155 !important;
+}
+#root span.xn-recipe-amt {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #047857 !important;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+#root h3 { font-size: 16px !important; color: #14532d !important; }
+
+/* ---------- 8. 辅助小字 ---------- */
+#root .text-xs { font-size: 13px !important; }
