@@ -1,0 +1,168 @@
+/* R1241 储蓄目标与计算历史合集：账本绿主题（纯 CSS，无图片）
+   1. 根容器：30px 横线账本 + 翠绿柔光
+   2. 2 工具 tabs 37→44 + 语义；计算按钮 40→44；开关热区 44
+   3. 下拉 16/48；使用说明 20→44
+   4. 结果块：达成月数 24→28、拆分值 18→20、标签 12.5、表格 13.5
+   5. 复制/清空 42→44；历史删除 16×24→36/44、批量按钮 38→44 */
+#root div.min-h-screen {
+  background:
+    radial-gradient(900px 380px at 4% -8%, rgba(16, 185, 129, 0.13) 0%, rgba(16, 185, 129, 0) 60%),
+    radial-gradient(760px 320px at 100% 0%, rgba(34, 211, 238, 0.10) 0%, rgba(34, 211, 238, 0) 60%),
+    repeating-linear-gradient(0deg, rgba(16, 185, 129, 0.055) 0 1px, transparent 1px 30px),
+    linear-gradient(180deg, #f8fdfb 0%, #ffffff 46%, #fbfefd 100%) !important;
+  min-height: 100vh;
+}
+
+/* 工具 tabs */
+#root .xn-save-tab {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+#root .xn-save-tab[aria-selected="true"] {
+  box-shadow: 0 8px 18px -12px rgba(16, 185, 129, 0.75) !important;
+}
+
+/* 标题 */
+#root h2 {
+  font-size: 20px !important;
+  letter-spacing: -0.01em;
+}
+
+/* 开关：保持 44×24 视觉，扩 10px 热区 */
+#root button[role="switch"] {
+  position: relative;
+  height: 24px !important;
+  min-height: 24px !important;
+  max-height: 24px !important;
+}
+#root button[role="switch"]::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 999px;
+}
+
+/* 计算按钮 */
+#root button.mt-4.w-full {
+  min-height: 44px !important;
+  border-radius: 12px !important;
+  font-size: 14.5px !important;
+}
+
+/* 下拉 */
+#root select {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+}
+
+/* 使用说明 */
+#root summary {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center;
+  font-size: 13.5px !important;
+}
+#root details p,
+#root details li,
+#root details div {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+}
+
+/* 结果块 */
+#root .result-block {
+  border-radius: 14px !important;
+  border-color: #d9f0e8 !important;
+  box-shadow: 0 14px 30px -26px rgba(6, 78, 59, 0.45) !important;
+}
+#root .result-block.bg-emerald-50 {
+  background: linear-gradient(180deg, #f0fdf8, #ecfdf5) !important;
+  position: relative;
+  overflow: hidden;
+}
+#root .result-block.bg-emerald-50::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #059669, #34d399 55%, #22d3ee);
+  opacity: 0.7;
+}
+#root .result-block .text-xs {
+  font-size: 12.5px !important;
+}
+#root .result-block .text-2xl {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+}
+#root .result-block .text-base {
+  font-size: 17px !important;
+}
+#root .result-block .text-lg {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .result-block .text-sm {
+  font-size: 14.5px !important;
+  line-height: 1.7 !important;
+}
+#root .result-block .rounded-md.bg-gray-50,
+#root .result-block .rounded-md.bg-emerald-50 {
+  background: linear-gradient(180deg, #ffffff, #f7fdfa) !important;
+  border: 1px solid #e2f3ec;
+  border-radius: 10px !important;
+  padding: 12px 14px !important;
+}
+#root .result-block table {
+  font-size: 13.5px !important;
+}
+#root .result-block th {
+  font-size: 12.5px !important;
+}
+
+/* 复制 / 清空 */
+#root .xn-save-act {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+}
+
+/* 历史：删除 / 批量 */
+#root .xn-save-del {
+  min-height: 36px !important;
+  min-width: 44px !important;
+  padding: 0 10px !important;
+  border-radius: 8px !important;
+  font-size: 12.5px !important;
+}
+#root .xn-save-wide {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+}
+
+@media (max-width: 639px) {
+  #root h2 {
+    font-size: 19px !important;
+  }
+  #root .xn-save-act,
+  #root .xn-save-wide {
+    min-height: 44px !important;
+  }
+  #root .xn-save-del {
+    min-height: 44px !important;
+  }
+  #root .result-block .text-2xl {
+    font-size: 26px !important;
+  }
+}
