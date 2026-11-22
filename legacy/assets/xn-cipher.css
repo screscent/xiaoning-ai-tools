@@ -1,0 +1,57 @@
+/* R1201 凯撒与古典密码合集 — 人用友好皮肤（羊皮纸古典主题，仅 c7rsghegmi 引用）
+   1. 隐藏卡片内的开发者路由串（#/caesar 等）
+   2. 「进入工具」32→44，实心主色，卡内底部对齐
+   3. 卡片悬停反馈（边框/阴影/位移），等高排列
+   4. 纯 CSS 羊皮纸底 + 靛蓝/琥珀柔光 + 细网格 */
+
+#root .xn-cipher-page {
+  background-color: #fbf9f4 !important;
+  background-image:
+    radial-gradient(900px 400px at 4% -10%, rgba(79, 70, 229, .09), transparent 62%),
+    radial-gradient(860px 380px at 98% -6%, rgba(180, 83, 9, .07), transparent 60%),
+    linear-gradient(rgba(120, 113, 108, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 113, 108, .05) 1px, transparent 1px) !important;
+  background-size: auto, auto, 26px 26px, 26px 26px !important;
+  background-repeat: no-repeat, no-repeat, repeat, repeat !important;
+}
+
+/* 路由串不外露 */
+#root .xn-cipher-hint {
+  display: none !important;
+}
+
+/* 卡片：等高 + 悬停反馈 + CTA 底部对齐 */
+#root .xn-cipher-card {
+  display: flex !important;
+  flex-direction: column !important;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease !important;
+}
+
+#root .xn-cipher-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(79, 70, 229, .38) !important;
+  box-shadow: 0 10px 24px rgba(49, 46, 129, .10) !important;
+}
+
+#root .xn-cipher-card:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, .6);
+  outline-offset: 2px;
+}
+
+/* 「进入工具」32 → 44，实心主色 */
+#root .xn-cipher-cta {
+  min-height: 44px !important;
+  height: 44px !important;
+  margin-top: auto !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+  font-size: 13.5px !important;
+  background: #4f46e5 !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  align-self: flex-start !important;
+}
+
+#root .xn-cipher-card:hover .xn-cipher-cta {
+  background: #4338ca !important;
+}
