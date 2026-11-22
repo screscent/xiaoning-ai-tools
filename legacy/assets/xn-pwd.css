@@ -1,0 +1,143 @@
+/* R1207 密码强度检测与随机生成合集：靛蓝安全主题（纯 CSS，无图片） */
+#root {
+  background:
+    radial-gradient(1000px 360px at 6% -8%, rgba(224, 231, 255, 0.7) 0%, rgba(224, 231, 255, 0) 60%),
+    radial-gradient(900px 340px at 100% 0%, rgba(233, 213, 255, 0.45) 0%, rgba(233, 213, 255, 0) 58%),
+    radial-gradient(circle at 1px 1px, rgba(79, 70, 229, 0.07) 1px, transparent 0) 0 0 / 20px 20px,
+    #f8f8fd !important;
+  min-height: 100vh;
+}
+
+/* 返回链接：44px 可点区域 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #eef2ff !important;
+}
+
+/* 2 个工具页签：44px，选中靛蓝实心 */
+#root .xn-pwd-tabs {
+  gap: 10px !important;
+}
+#root .xn-pwd-tab {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+#root .xn-pwd-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #4f46e5, #6366f1) !important;
+  border-color: #4f46e5 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.26) !important;
+}
+#root .xn-pwd-tab[aria-selected="false"] {
+  color: #4f46e5 !important;
+  border-color: #ddd6fe !important;
+}
+#root .xn-pwd-tab[aria-selected="false"]:hover {
+  background: #eef2ff !important;
+}
+
+/* 长度预设 8/12/16：44px 单选药丸 */
+#root .xn-pwd-quick {
+  min-height: 44px !important;
+  min-width: 56px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+#root .xn-pwd-quick[aria-checked="true"] {
+  background: linear-gradient(135deg, #4f46e5, #6366f1) !important;
+  border-color: #4f46e5 !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.24) !important;
+}
+#root .xn-pwd-quick[aria-checked="false"] {
+  background: #ffffff !important;
+  color: #4f46e5 !important;
+  border-color: #ddd6fe !important;
+}
+
+/* 主操作：44px */
+#root .xn-pwd-action {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+
+/* 密码输入：18px 等宽，52 高 */
+#root input[type="password"],
+#root input[type="text"] {
+  font-size: 18px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  letter-spacing: 0.5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+#root input[type="password"]:focus,
+#root input[type="text"]:focus {
+  outline: none !important;
+  border-color: #4f46e5 !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18) !important;
+}
+
+/* 密码可见性按钮：44 热区 */
+#root .xn-pwd-eye {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  right: 4px !important;
+}
+
+/* 滑块：32 高，靛蓝 */
+#root input[type="range"] {
+  min-height: 32px !important;
+  accent-color: #4f46e5 !important;
+}
+
+/* 复选行：44 高，18 方框 */
+#root .xn-pwd-checkrow {
+  min-height: 44px !important;
+}
+#root .xn-pwd-checkrow input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  accent-color: #4f46e5 !important;
+}
+#root .xn-pwd-box {
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 5px !important;
+  border-color: #c7d2fe !important;
+}
+
+/* 强度条加粗 */
+#root .h-2.rounded-full {
+  height: 12px !important;
+}
+
+/* 使用说明折叠头：44 高 */
+#root .xn-pwd-guide {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 移动端：2 页签各占一半 */
+@media (max-width: 1023px) {
+  #root .xn-pwd-tabs {
+    display: flex !important;
+    width: 100% !important;
+  }
+  #root .xn-pwd-tab {
+    flex: 1 1 0 !important;
+    padding: 0 8px !important;
+  }
+}
