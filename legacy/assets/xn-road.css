@@ -1,0 +1,64 @@
+/* R1204 出行成本计算合集 — 人用友好皮肤（公路暖灰主题，仅 bcycnrk6f9 引用）
+   1. 页签 38→44，补 role=tab / aria-selected
+   2. 数字 20→16
+   3. 复制结果 / 清空 42→44
+   4. 纯 CSS 道路虚线底 + 琥珀/青柔光 */
+
+#root .xn-road-page {
+  background-color: #faf9f6 !important;
+  background-image:
+    radial-gradient(900px 400px at 4% -10%, rgba(245, 158, 11, .08), transparent 62%),
+    radial-gradient(860px 380px at 98% -6%, rgba(13, 148, 136, .07), transparent 60%),
+    repeating-linear-gradient(90deg, rgba(120, 113, 108, .055) 0, rgba(120, 113, 108, .055) 1px, transparent 1px, transparent 26px) !important;
+  background-size: auto, auto, auto !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 页签 38 → 44 */
+#root .xn-road-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#root .xn-road-tab:focus-visible {
+  outline: 2px solid rgba(217, 119, 6, .6);
+  outline-offset: 2px;
+}
+
+/* 数字 20 → 16 */
+#root .xn-road-field {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+}
+
+/* 复制结果 / 清空 42 → 44 */
+#root .xn-road-act {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#root .xn-road-act:focus-visible {
+  outline: 2px solid rgba(217, 119, 6, .6);
+  outline-offset: 2px;
+}
+
+/* 移动端页签 3+3 均匀两行 */
+@media (max-width: 1023px) {
+  #root .xn-road-tab {
+    flex: 1 1 calc(33.333% - 8px) !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
