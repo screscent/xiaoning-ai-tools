@@ -1,0 +1,149 @@
+/* R1232 JSON 与 SQL 互转合集：蓝图纸主题（纯 CSS，无图片）
+   1. 根容器：slate 底 + 32px 蓝图格 + 靛蓝柔光
+   2. 6 个工具药丸 38→44；当前工具靛蓝高亮；移动 2×3
+   3. 复制/清空/关键字/场景按钮 37→44；是/否 44+aria
+   4. 文本域 16 / 280+；文本输入 16/48
+   5. 代码块 13.5/1.7；返回 44 */
+#root div.min-h-screen {
+  background:
+    radial-gradient(900px 420px at 50% -10%, rgba(99, 102, 241, 0.14) 0%, rgba(99, 102, 241, 0) 62%),
+    repeating-linear-gradient(90deg, rgba(51, 65, 85, 0.07) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(0deg, rgba(51, 65, 85, 0.06) 0 1px, transparent 1px 32px),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 48%, #ffffff 100%) !important;
+  min-height: 100vh;
+}
+
+/* 工具药丸 */
+#root .xn-sql-nav {
+  gap: 7px !important;
+}
+#root .xn-sql-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 14px !important;
+  border-radius: 9999px !important;
+  font-size: 13px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  color: #334155 !important;
+}
+#root .xn-sql-tab[aria-current="page"],
+#root .xn-sql-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #3730a3, #4f46e5) !important;
+  border-color: #3730a3 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(55, 48, 163, 0.24) !important;
+}
+
+/* 操作按钮 */
+#root button {
+  min-height: 44px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+#root button:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, 0.5);
+  outline-offset: 2px;
+}
+#root button.xn-sql-primary {
+  background: linear-gradient(135deg, #3730a3, #4f46e5) !important;
+  border-color: #3730a3 !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 12px rgba(55, 48, 163, 0.2) !important;
+}
+#root button.xn-sql-secondary {
+  background: #ffffff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #334155 !important;
+}
+#root button.xn-sql-secondary:hover {
+  background: #eef2ff !important;
+  border-color: #c7d2fe !important;
+}
+#root button.xn-sql-toggle {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+}
+#root button.xn-sql-toggle[aria-pressed="true"] {
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff) !important;
+  border: 1px solid #6366f1 !important;
+  color: #3730a3 !important;
+  font-weight: 700 !important;
+}
+#root button.xn-sql-toggle[aria-pressed="false"] {
+  background: #ffffff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #475569 !important;
+}
+#root button.xn-sql-toggle::before {
+  content: none !important;
+}
+
+/* 文本域与输入 */
+#root textarea {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  min-height: 280px !important;
+  border-radius: 12px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+#root input[type="text"] {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+}
+#root textarea:focus,
+#root input:focus {
+  outline: none !important;
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+#root label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* 代码块 */
+#root pre {
+  font-size: 13.5px !important;
+  line-height: 1.7 !important;
+  border-radius: 10px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #f8fafc !important;
+  padding: 10px 12px !important;
+}
+
+/* 返回 44 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #eef2ff !important;
+}
+#root details > summary {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 移动端：6 个工具 2×3 */
+@media (max-width: 640px) {
+  #root .xn-sql-nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+  #root .xn-sql-tab {
+    width: 100% !important;
+    padding: 0 6px !important;
+    font-size: 12.5px !important;
+  }
+}
