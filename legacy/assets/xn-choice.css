@@ -1,0 +1,193 @@
+/* R1243 决策与抽签合集：骰子紫主题（纯 CSS，无图片）
+   1. 根容器：24px 点阵 + 靛紫/品红柔光
+   2. 6 工具 tabs 38→44（移动 3×2）+ aria 选中
+   3. 按钮 16–40→44（清空历史/添加选项/删除/再抽一次/按权重抽取/抽一个/重置/复制）
+   4. 文本输入/文本域 15→16；文本域 16；使用说明 20→44
+   5. 结果主值 18/20→24；票数/百分比 12→13；表格 13.5
+   6. 标题 17→20 并去「工具E/F」 */
+#root div.min-h-screen {
+  background:
+    radial-gradient(900px 380px at 4% -8%, rgba(99, 102, 241, 0.14) 0%, rgba(99, 102, 241, 0) 60%),
+    radial-gradient(760px 320px at 100% 0%, rgba(232, 121, 249, 0.12) 0%, rgba(232, 121, 249, 0) 60%),
+    radial-gradient(rgba(99, 102, 241, 0.10) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(180deg, #fafaff 0%, #ffffff 46%, #fdfcff 100%) !important;
+  min-height: 100vh;
+}
+
+/* 工具 tabs */
+#root .xn-choice-tabs {
+  gap: 6px !important;
+}
+#root .xn-choice-tabs a[href^="#/"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+#root .xn-choice-tabs a[href^="#/"][aria-selected="true"] {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+  border-color: #4f46e5 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px -12px rgba(79, 70, 229, 0.75) !important;
+}
+#root .xn-choice-tabs a[href^="#/"][aria-selected="false"] {
+  background: #ffffff !important;
+  color: #475569 !important;
+}
+
+/* 标题 */
+#root h2 {
+  font-size: 20px !important;
+  letter-spacing: -0.01em;
+}
+
+/* 按钮 */
+#root button {
+  border-radius: 10px;
+}
+#root .xn-choice-act {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+}
+#root .xn-choice-add {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 999px !important;
+  font-size: 12.5px !important;
+  border: 1px solid #c7d2fe !important;
+  background: #eef2ff !important;
+  color: #4338ca !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+}
+#root .xn-choice-del {
+  width: 40px !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px !important;
+}
+#root .xn-choice-hist {
+  min-height: 40px !important;
+  padding: 0 12px !important;
+  border-radius: 999px !important;
+  font-size: 12.5px !important;
+}
+
+/* 文本输入 / 文本域 */
+#root input:not([type]),
+#root input[type="text"] {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+}
+#root textarea {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+/* 使用说明 */
+#root details {
+  border-radius: 12px !important;
+  border-color: #e6e6fa !important;
+  background: #ffffff !important;
+}
+#root summary {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center;
+  font-size: 13.5px !important;
+}
+#root details p,
+#root details li {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #52617a !important;
+}
+
+/* 结果区 */
+#root div[class*="bg-indigo-50/70"] {
+  border-radius: 14px !important;
+  background: linear-gradient(180deg, #f7f7ff, #eef2ff) !important;
+  border-color: #e0e7ff !important;
+  position: relative;
+  overflow: hidden;
+}
+#root div[class*="bg-indigo-50/70"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4f46e5, #a855f7 55%, #e879f9);
+  opacity: 0.65;
+}
+#root div[class*="bg-indigo-50/70"] > div.text-lg,
+#root div[class*="bg-indigo-50/70"] > div.text-xl {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: #312e81 !important;
+}
+#root div[class*="bg-indigo-50/70"] > div.mt-1.text-xs {
+  font-size: 13px !important;
+  color: #64748b !important;
+}
+#root div[class*="bg-indigo-50/70"] table {
+  font-size: 13.5px !important;
+}
+#root div[class*="bg-indigo-50/70"] th {
+  font-size: 12.5px !important;
+}
+#root div[class*="bg-indigo-50/70"] button {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  font-size: 13px !important;
+}
+
+/* 投票行 */
+#root span.w-24.text-right {
+  font-size: 13px !important;
+  color: #475569 !important;
+}
+#root div.rounded-lg.border.p-2\.5 {
+  border-radius: 10px !important;
+  padding: 12px !important;
+}
+
+@media (max-width: 639px) {
+  #root .xn-choice-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    overflow: visible !important;
+  }
+  #root .xn-choice-tabs a[href^="#/"] {
+    font-size: 12.5px !important;
+    padding: 0 4px !important;
+  }
+  #root h2 {
+    font-size: 19px !important;
+  }
+  #root .xn-choice-act,
+  #root .xn-choice-add,
+  #root .xn-choice-hist,
+  #root .xn-choice-del {
+    min-height: 44px !important;
+  }
+  #root div[class*="bg-indigo-50/70"] > div.text-lg,
+  #root div[class*="bg-indigo-50/70"] > div.text-xl {
+    font-size: 22px !important;
+  }
+}
