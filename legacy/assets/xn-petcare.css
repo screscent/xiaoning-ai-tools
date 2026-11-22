@@ -1,0 +1,209 @@
+/* R1236 宠物健康与护理计算合集：暖沙宠物主题（纯 CSS，无图片）
+   1. body：暖沙底 + 26px 爪点纹 + 琥珀/靛蓝柔光；内容列 448→640
+   2. 顶部 6 标签：44+、当前项靛蓝底 + 底边、移动端不截字（食物禁忌）
+   3. 复制/清空：16px 文本 → 38/42 胶囊按钮
+   4. 是否切换 38→44 + aria-pressed；下拉/日期 16/48
+   5. 使用说明 32→44；标题 17→20
+   6. 结果：标签 12.5、正文 14.5、关键数值 21；卡片靛蓝描边 + 顶部光带 */
+body {
+  background:
+    radial-gradient(900px 420px at 6% -10%, rgba(251, 191, 36, 0.14) 0%, rgba(251, 191, 36, 0) 60%),
+    radial-gradient(760px 340px at 100% 0%, rgba(99, 102, 241, 0.12) 0%, rgba(99, 102, 241, 0) 60%),
+    radial-gradient(rgba(120, 113, 108, 0.13) 1.1px, transparent 1.1px) 0 0 / 26px 26px,
+    linear-gradient(180deg, #fdfcf8 0%, #ffffff 46%, #fdfcfa 100%) !important;
+  background-attachment: fixed !important;
+}
+#root div.min-h-screen {
+  background: transparent !important;
+  max-width: 40rem !important;
+}
+#root header a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 12.5px !important;
+  color: #64748b !important;
+}
+
+/* 顶部标签 */
+#root nav {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid #e7e5e4 !important;
+  box-shadow: 0 6px 18px -16px rgba(15, 23, 42, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 0 4px;
+}
+#root nav a {
+  min-height: 50px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 4px !important;
+  font-size: 13.5px !important;
+  line-height: 1.25 !important;
+  color: #57534e !important;
+  border-bottom: 3px solid transparent !important;
+  border-radius: 10px 10px 0 0;
+}
+#root nav a:hover {
+  background: #f8fafc !important;
+  color: #4338ca !important;
+}
+#root nav a[aria-selected="true"] {
+  background: linear-gradient(180deg, #eef2ff, rgba(238, 242, 255, 0.35)) !important;
+  border-bottom-color: #4f46e5 !important;
+  color: #3730a3 !important;
+  font-weight: 700 !important;
+}
+
+/* 标题 */
+#root h2 {
+  font-size: 20px !important;
+  letter-spacing: -0.01em;
+  color: #1c1917 !important;
+}
+#root h1 {
+  letter-spacing: -0.02em;
+}
+
+/* 使用说明 */
+#root details {
+  background: #ffffff !important;
+  border: 1px solid #e7e5e4 !important;
+  border-radius: 12px !important;
+}
+#root summary {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center;
+  padding: 0 12px !important;
+  font-size: 13.5px !important;
+  color: #57534e !important;
+}
+#root details p,
+#root details li {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #57534e !important;
+  padding: 0 12px 10px !important;
+}
+
+/* 按钮 */
+#root button {
+  border-radius: 10px;
+  font-size: 13.5px !important;
+}
+#root button:focus-visible {
+  outline: 2px solid rgba(79, 70, 229, 0.45);
+  outline-offset: 2px;
+}
+#root .xn-pet-act {
+  min-height: 38px !important;
+  height: 38px !important;
+  padding: 0 14px !important;
+  border-radius: 999px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: #475569 !important;
+}
+#root .xn-pet-act:hover {
+  border-color: #a5b4fc !important;
+  background: #f5f7ff !important;
+  color: #3730a3 !important;
+}
+#root .xn-pet-act.xn-pet-copy {
+  border-color: #c7d2fe !important;
+  background: #eef2ff !important;
+  color: #4338ca !important;
+}
+#root .xn-pet-toggle {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+}
+#root .xn-pet-toggle[aria-pressed="false"] {
+  background: #ffffff !important;
+  border-color: #dbe2f0 !important;
+  color: #475569 !important;
+}
+#root .xn-pet-toggle[aria-pressed="true"] {
+  background: linear-gradient(135deg, #4338ca, #6366f1) !important;
+  border-color: #4338ca !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 6px 16px -10px rgba(67, 56, 202, 0.7) !important;
+}
+#root .xn-pet-toggle[aria-pressed="true"]::before {
+  content: none !important;
+}
+
+/* 输入 */
+#root select,
+#root input[type="date"],
+#root input[type="text"] {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+}
+
+/* 结果卡 */
+#root div.mt-4.bg-white.rounded-xl {
+  border-color: #e0e7ff !important;
+  border-radius: 14px !important;
+  box-shadow: 0 14px 30px -26px rgba(49, 46, 129, 0.5) !important;
+  position: relative;
+  overflow: hidden;
+}
+#root div.mt-4.bg-white.rounded-xl::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #818cf8 55%, #f59e0b);
+  opacity: 0.65;
+}
+#root div.mt-4.bg-white.rounded-xl > div:first-child {
+  background: linear-gradient(90deg, #f8faff, #ffffff) !important;
+  border-bottom-color: #eef2ff !important;
+  padding: 8px 12px !important;
+}
+#root dl > div > dt {
+  font-size: 12.5px !important;
+  color: #78716c !important;
+}
+#root dl > div > dd {
+  font-size: 14.5px !important;
+  line-height: 1.7 !important;
+  color: #292524 !important;
+}
+#root dl > div > dd.xn-pet-key {
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  color: #312e81 !important;
+}
+
+@media (max-width: 639px) {
+  #root nav a {
+    min-height: 48px !important;
+    font-size: 12.5px !important;
+  }
+  #root .xn-pet-act {
+    min-height: 42px !important;
+    height: 42px !important;
+    padding: 0 13px !important;
+  }
+  #root h2 {
+    font-size: 19px !important;
+  }
+  #root dl > div > dd.xn-pet-key {
+    font-size: 20px !important;
+  }
+}
