@@ -1,81 +1,94 @@
-/* R1173 URL 清理与参数合集 — 语义与尺寸增强（幂等，不改 React 状态） */
+/* R1221 URL 清理与参数合集：语义与尺寸增强（事件驱动，替换旧全文档 MutationObserver） */
 (function () {
   "use strict";
-  if (window.__xnUrl) return;
-  window.__xnUrl = true;
-
-  var TXT = function (el) { return (el.textContent || "").replace(/\s+/g, " ").trim(); };
-  var VIS = function (el) { var r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0; };
-  var H = function (el) { return Math.round(el.getBoundingClientRect().height); };
-
+  var root = document.querySelector("#root");
+  if (!root) return;
+  var txt = function (e) { return (e.textContent || "").replace(/\s+/g, " ").trim(); };
+  var vis = function (el) { var r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0; };
   var TAB = /^(追踪参数清理|参数解析|链接重建|分享前检查|UTM 链接构建|追踪识别)$/;
+  var ROUTE = /^#\/[\w-]+$/;
 
   function tabs() {
-    var list = [].slice.call(document.querySelectorAll("#root button")).filter(function (b) {
-      return VIS(b) && TAB.test(TXT(b));
+    var list = [].slice.call(root.querySelectorAll("button")).filter(function (b) {
+      return vis(b) && TAB.test(txt(b));
     });
     if (!list.length) return;
     var bar = list[0].parentElement;
-    if (bar) bar.setAttribute("role", "tablist");
+    if (bar) {
+      if (!bar.classList.contains("xn-url-tabs")) bar.classList.add("xn-url-tabs");
+      bar.setAttribute("role", "tablist");
+      bar.setAttribute("aria-label", "链接工具切换");
+    }
     list.forEach(function (b) {
       b.classList.add("xn-url-tab");
       b.setAttribute("role", "tab");
-      var on = /(^|\s)bg-blue-600(\s|$)/.test(b.className) || /(^|\s)bg-blue-500(\s|$)/.test(b.className);
-      b.setAttribute("aria-current", on ? "true" : "false");
-      b.setAttribute("aria-selected", on ? "true" : "false");
+      var on = /(^|\s)bg-blue-6/.test(b.className) || /(^|\s)bg-green-6/.test(b.className);
+      var next = on ? "true" : "false";
+      if (b.getAttribute("aria-selected") !== next) b.setAttribute("aria-selected", next);
       b.setAttribute("tabindex", on ? "0" : "-1");
     });
   }
 
   function buttons() {
-    [].slice.call(document.querySelectorAll("#root button")).forEach(function (b) {
-      if (!VIS(b)) return;
+    [].slice.call(root.querySelectorAll("button")).forEach(function (b) {
+      if (!vis(b)) return;
       if (b.getAttribute("role") === "switch") {
         b.classList.add("xn-url-switch");
         b.removeAttribute("aria-pressed");
         if (!b.getAttribute("aria-label")) {
-          var label = (b.parentElement ? TXT(b.parentElement) : "").replace(/开关|切换/g, "").replace(/[#＃]+$/, "").trim();
+          var label = (b.parentElement ? txt(b.parentElement) : "").replace(/开关|切换/g, "").replace(/[#＃]+$/, "").trim();
           b.setAttribute("aria-label", label || "切换选项");
         }
+        b.style.setProperty("height", "24px", "important");
+        b.style.setProperty("min-height", "24px", "important");
+        b.style.setProperty("max-height", "24px", "important");
         return;
       }
-      if (/^清理追踪参数$/.test(TXT(b))) { b.classList.add("xn-url-primary"); b.setAttribute("type", "button"); }
+      if (/^清理追踪参数$/.test(txt(b))) { b.classList.add("xn-url-primary"); b.setAttribute("type", "button"); }
     });
   }
 
   function fields() {
-    [].slice.call(document.querySelectorAll("#root textarea")).forEach(function (t) {
+    [].slice.call(root.querySelectorAll("textarea")).forEach(function (t) {
       t.classList.add("xn-url-area");
       if (getComputedStyle(t).fontSize !== "16px") t.style.setProperty("font-size", "16px", "important");
+      t.style.setProperty("min-height", "200px", "important");
     });
   }
 
-  var ROUTE = /^#\/[\w-]+$/;
-
   function routes() {
-    [].slice.call(document.querySelectorAll("#root span, #root div, #root code")).forEach(function (e) {
-      if (!e.children.length && ROUTE.test(TXT(e))) e.classList.add("xn-url-route");
+    [].slice.call(root.querySelectorAll("span, div, code")).forEach(function (e) {
+      if (!e.children.length && ROUTE.test(txt(e))) e.classList.add("xn-url-route");
+    });
+  }
+
+  function back() {
+    [].slice.call(root.querySelectorAll("a")).forEach(function (a) {
+      if (!/返回工具集/.test(txt(a)) || a.dataset.xnUrl === "1") return;
+      a.dataset.xnUrl = "1";
+      a.style.setProperty("min-height", "44px", "important");
+      a.style.setProperty("display", "inline-flex", "important");
+      a.style.setProperty("align-items", "center", "important");
+      a.style.setProperty("padding", "0 10px", "important");
+      a.style.setProperty("border-radius", "10px", "important");
     });
   }
 
   function run() {
-    tabs();
-    routes();
-    buttons();
-    fields();
+    try { tabs(); routes(); buttons(); fields(); back(); } catch (e) {}
   }
+
+  run();
+  [250, 700, 1600].forEach(function (ms) { setTimeout(run, ms); });
 
   var timer = null;
-  function schedule() {
-    if (timer) return;
-    timer = setTimeout(function () { timer = null; run(); }, 90);
-  }
-
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", schedule);
-  else schedule();
-  window.addEventListener("load", schedule);
-  var mo = new MutationObserver(schedule);
-  mo.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "aria-pressed", "aria-checked"] });
-  setTimeout(run, 700);
-  setTimeout(run, 1600);
+  var schedule = function () {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(run, 250);
+  };
+  root.addEventListener("click", schedule, true);
+  root.addEventListener("input", schedule, true);
+  root.addEventListener("change", schedule, true);
+  window.addEventListener("load", function () { setTimeout(run, 400); });
+  setInterval(function () { if (!document.hidden) run(); }, 1500);
 })();

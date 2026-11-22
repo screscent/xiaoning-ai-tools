@@ -1,46 +1,88 @@
-/* R1173 URL 清理与参数合集 — 人用友好皮肤（保留蓝色主题）
-   1. 6 个页签 38→44，补 aria-current
-   2. 开关被通用按钮样式拉高成 38：恢复 44×24 胶囊 + 44 热区
-   3. 主按钮 38→44；文本域 15→16
-   4. 使用说明 20→44 */
+/* R1221 URL 清理与参数合集：森林绿链接主题（纯 CSS，无图片）
+   在 R1173 基础上重构：页签 3+3、选中态、文本域 200、结果样式、事件驱动 */
+#root {
+  background:
+    radial-gradient(1000px 360px at 6% -8%, rgba(220, 252, 231, 0.6) 0%, rgba(220, 252, 231, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(236, 253, 245, 0.5) 0%, rgba(236, 253, 245, 0) 58%),
+    repeating-linear-gradient(135deg, rgba(21, 128, 61, 0.035) 0 2px, transparent 2px 22px),
+    #f6fbf7 !important;
+  min-height: 100vh;
+}
 
+/* 返回链接：44px 可点区域 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #e8f6ec !important;
+}
+
+/* 6 个页签：44px；选中态绿色实心；移动端 3+3 */
 #root .xn-url-tab {
   min-height: 44px !important;
   height: 44px !important;
-  padding: 0 14px !important;
-  font-size: 13.5px !important;
-  display: inline-flex !important;
-  align-items: center !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
 }
-
+#root .xn-url-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #15803d, #16a34a) !important;
+  border-color: #15803d !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(21, 128, 61, 0.22) !important;
+}
+#root .xn-url-tab[aria-selected="false"] {
+  background: #ffffff !important;
+  color: #15803d !important;
+  border-color: #d5ebda !important;
+}
 #root .xn-url-tab:focus-visible {
-  outline: 2px solid rgba(37, 99, 235, .55);
+  outline: 2px solid rgba(21, 128, 61, 0.55);
   outline-offset: 2px;
 }
 
+/* 主按钮：44 */
 #root .xn-url-primary {
   min-height: 44px !important;
   height: 44px !important;
   padding: 0 18px !important;
   font-size: 14px !important;
+  border-radius: 12px !important;
+}
+#root .xn-url-primary:focus-visible {
+  outline: 2px solid rgba(21, 128, 61, 0.55);
+  outline-offset: 2px;
 }
 
-#root .xn-url-primary:focus-visible {
-  outline: 2px solid rgba(37, 99, 235, .55);
-  outline-offset: 2px;
+/* 文本域：16 等宽、200 高、绿色焦点 */
+#root .xn-url-area {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  min-height: 200px !important;
+  border-radius: 12px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+#root .xn-url-area:focus {
+  outline: none !important;
+  border-color: #15803d !important;
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15) !important;
 }
 
 /* 开关：保持 24 高胶囊，热区扩到 44 */
 #root button.xn-url-switch {
   height: 24px !important;
   min-height: 24px !important;
+  max-height: 24px !important;
   width: 44px !important;
   padding: 0 !important;
   border-radius: 9999px !important;
   position: relative !important;
   flex: 0 0 44px !important;
 }
-
 #root button.xn-url-switch::after {
   content: "";
   position: absolute;
@@ -48,9 +90,17 @@
   border-radius: 9999px;
 }
 
-#root .xn-url-area {
-  font-size: 16px !important;
-  line-height: 1.6 !important;
+/* 结果输出：14 等宽、行距放宽 */
+#root pre,
+#root .whitespace-pre-wrap {
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+
+/* 结果列表行：44 触达 */
+#root li {
+  min-height: 44px !important;
 }
 
 #root details > summary {
@@ -62,4 +112,19 @@
 /* 路由串 #/xxx 不对用户展示 */
 #root .xn-url-route {
   display: none !important;
+}
+
+/* 移动端：6 页签 3+3 */
+@media (max-width: 1023px) {
+  #root .xn-url-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+  #root .xn-url-tab {
+    width: 100% !important;
+    padding: 0 6px !important;
+    font-size: 13px !important;
+  }
 }
