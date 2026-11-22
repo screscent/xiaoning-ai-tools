@@ -1,0 +1,367 @@
+/* R1234 提交信息与变更日志合集：提交图主题（纯 CSS，无图片）
+   1. 根容器：32px 方格纸 + 靛蓝/翠绿柔光；hero 靛蓝底 + 底部光带
+   2. 入口 6 卡：移动端 2 列紧凑（proto 228×6 → 约 180×3）、路由串改「打开工具」胶囊、当前卡高亮
+   3. 吸顶工具条 01–06（JS 注入）：44px、当前项靛蓝渐变
+   4. 按钮 44；类型芯片 44 + aria-pressed；复制/清空 44
+   5. 输入 16/48、文本域 16；勾选框 20 + 44 行高
+   6. 区块编号徽标 26、标题 20；代码 13/1.7；示例按钮胶囊 */
+#root div.min-h-screen {
+  background:
+    radial-gradient(900px 400px at 4% -10%, rgba(99, 102, 241, 0.16) 0%, rgba(99, 102, 241, 0) 62%),
+    radial-gradient(760px 340px at 100% 0%, rgba(16, 185, 129, 0.12) 0%, rgba(16, 185, 129, 0) 60%),
+    repeating-linear-gradient(90deg, rgba(99, 102, 241, 0.06) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(0deg, rgba(99, 102, 241, 0.05) 0 1px, transparent 1px 32px),
+    linear-gradient(180deg, #fbfcff 0%, #ffffff 46%, #ffffff 100%) !important;
+  min-height: 100vh;
+}
+
+/* hero */
+#root section.xn-commit-hero {
+  position: relative;
+  background:
+    radial-gradient(620px 240px at 50% -30%, rgba(99, 102, 241, 0.22), rgba(99, 102, 241, 0) 70%),
+    linear-gradient(180deg, #eef2ff 0%, rgba(248, 250, 252, 0.65) 100%) !important;
+  border-bottom: 1px solid #e6eaf7;
+}
+#root section.xn-commit-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #2563eb 46%, #10b981);
+  opacity: 0.55;
+}
+#root section.xn-commit-hero h1 {
+  letter-spacing: -0.02em;
+}
+
+/* 入口卡片 */
+#root section.xn-commit-hero a.group {
+  padding: 18px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(180deg, #ffffff, #fdfdff) !important;
+}
+#root section.xn-commit-hero a.group > div:first-child {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 11px !important;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff) !important;
+  color: #4338ca !important;
+  box-shadow: inset 0 0 0 1px rgba(99, 102, 241, 0.25);
+}
+#root section.xn-commit-hero a.group h2 {
+  font-size: 17px !important;
+  letter-spacing: -0.01em;
+}
+#root section.xn-commit-hero a.group p {
+  font-size: 13.5px !important;
+  line-height: 1.65 !important;
+  color: #4b5563 !important;
+}
+/* 路由串 → 打开工具胶囊（文本由 JS 替换） */
+#root section.xn-commit-hero a.group span.font-mono {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: fit-content;
+  min-height: 30px !important;
+  margin-top: 14px !important;
+  padding: 0 12px !important;
+  border-radius: 999px !important;
+  background: #eef2ff !important;
+  color: #3730a3 !important;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em;
+}
+#root section.xn-commit-hero a.group:hover span.font-mono {
+  background: #e0e7ff !important;
+}
+#root section.xn-commit-hero a.group[aria-current="true"] {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.14), 0 12px 26px -14px rgba(49, 46, 129, 0.45) !important;
+}
+
+/* 吸顶工具条 */
+#root .xn-commit-bar {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid #e5e9f5;
+  box-shadow: 0 6px 18px -14px rgba(15, 23, 42, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+#root .xn-commit-bar-label {
+  flex: none;
+  padding-right: 2px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+#root .xn-commit-bar button {
+  flex: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px !important;
+  height: 40px !important;
+  padding: 0 12px !important;
+  border-radius: 999px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  color: #334155 !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  cursor: pointer;
+}
+#root .xn-commit-bar button:hover {
+  border-color: #a5b4fc !important;
+  background: #f5f7ff !important;
+  color: #3730a3 !important;
+}
+#root .xn-commit-bar .xn-commit-bar-no {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #6366f1;
+}
+#root .xn-commit-bar button[aria-current="true"] {
+  background: linear-gradient(135deg, #4338ca, #2563eb) !important;
+  border-color: #4338ca !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 16px -8px rgba(67, 56, 202, 0.6);
+}
+#root .xn-commit-bar button[aria-current="true"] .xn-commit-bar-no {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* 工具区块 */
+#root section[id] {
+  border-radius: 18px !important;
+  box-shadow: 0 12px 30px -26px rgba(15, 23, 42, 0.5);
+}
+#root section[id] > div:first-child {
+  background: linear-gradient(90deg, #f8faff, #ffffff) !important;
+}
+#root section[id] > div:first-child .items-baseline {
+  align-items: center !important;
+  gap: 10px !important;
+}
+#root section[id] h2 {
+  font-size: 20px !important;
+  letter-spacing: -0.01em;
+}
+#root section[id] > div:first-child p {
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  color: #52617a !important;
+}
+#root .xn-commit-num {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  color: #4338ca !important;
+  font-size: 11.5px !important;
+  box-shadow: inset 0 0 0 1px rgba(99, 102, 241, 0.25);
+}
+
+/* 按钮统一 44 */
+#root section button {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+}
+#root section button:focus-visible {
+  outline: 2px solid rgba(67, 56, 202, 0.5);
+  outline-offset: 2px;
+}
+/* 类型芯片 */
+#root .xn-commit-type {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13px !important;
+}
+#root .xn-commit-type[aria-pressed="false"] {
+  background: #ffffff !important;
+  border-color: #dbe2f0 !important;
+  color: #475569 !important;
+  font-weight: 600 !important;
+}
+#root .xn-commit-type[aria-pressed="false"]:hover {
+  border-color: #a5b4fc !important;
+  background: #f7f8ff !important;
+  color: #3730a3 !important;
+}
+#root .xn-commit-type[aria-pressed="true"] {
+  background: linear-gradient(135deg, #4338ca, #2563eb) !important;
+  border-color: #4338ca !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 8px 18px -10px rgba(67, 56, 202, 0.7) !important;
+}
+#root .xn-commit-type[aria-pressed="true"]::before {
+  content: none !important;
+}
+/* 类型释义条 */
+#root section[id="tool-commit"] div.bg-blue-50 {
+  padding: 10px 12px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  color: #1e3a8a !important;
+}
+
+/* 类型芯片栅格：移动 4 列、平板及以上 5 列 */
+#root section div.xn-commit-chips {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+}
+@media (min-width: 640px) {
+  #root section div.xn-commit-chips {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+}
+/* 输出卡头部：窄屏换行，避免复制按钮被压成竖排 */
+#root section[id] .justify-between {
+  flex-wrap: wrap !important;
+  row-gap: 6px !important;
+}
+#root section[id] .justify-between .flex.items-center.gap-2 {
+  flex: none !important;
+}
+
+/* 输入 */
+#root input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):not([type="number"]),
+#root select,
+#root textarea {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+}
+#root textarea {
+  min-height: 104px !important;
+  padding: 10px 12px !important;
+  line-height: 1.6 !important;
+}
+#root input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  accent-color: #4338ca;
+}
+/* 勾选框：保持文本内联流动，checkbox 绝对定位在左侧 */
+#root label:has(input[type="checkbox"]) {
+  position: relative;
+  display: block !important;
+  min-height: 44px;
+  padding: 12px 0 8px 30px;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  cursor: pointer;
+}
+#root label:has(input[type="checkbox"]) input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 14px;
+  margin: 0;
+}
+#root label:has(input[type="checkbox"]) code {
+  font-size: 12.5px !important;
+  white-space: nowrap;
+}
+
+/* 示例按钮胶囊 */
+#root .xn-commit-sample {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 40px !important;
+  height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 999px !important;
+  border: 1px solid #c7d2fe !important;
+  background: #eef2ff !important;
+  color: #3730a3 !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+}
+#root .xn-commit-sample:hover {
+  background: #e0e7ff !important;
+  text-decoration: none !important;
+}
+
+/* 代码与表格 */
+#root pre {
+  border-radius: 12px !important;
+  overflow-x: auto !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+#root pre code {
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+#root section table {
+  font-size: 13px !important;
+}
+#root section th {
+  font-size: 12px !important;
+  letter-spacing: 0.02em;
+}
+
+/* 移动端 */
+@media (max-width: 1023px) {
+  #root section.xn-commit-hero div.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+  #root section.xn-commit-hero a.group {
+    padding: 12px !important;
+    border-radius: 14px !important;
+  }
+  #root section.xn-commit-hero a.group > div:first-child {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  #root section.xn-commit-hero a.group h2 {
+    margin-top: 8px !important;
+    font-size: 14.5px !important;
+  }
+  #root section.xn-commit-hero a.group p {
+    margin-top: 4px !important;
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  #root section.xn-commit-hero a.group span.font-mono {
+    margin-top: 8px !important;
+    min-height: 28px !important;
+    padding: 0 10px !important;
+    font-size: 11.5px !important;
+  }
+  #root .xn-commit-bar {
+    padding: 6px 10px;
+  }
+  #root .xn-commit-bar button {
+    min-height: 44px !important;
+    height: 44px !important;
+  }
+}
