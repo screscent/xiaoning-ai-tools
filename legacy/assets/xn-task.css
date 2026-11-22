@@ -1,0 +1,153 @@
+/* R1233 待办与任务管理合集：任务看板主题（纯 CSS，无图片）
+   1. 根容器：暖白看板底 + 28px 点阵 + 蓝色柔光
+   2. 6 个工具 38→44；当前工具蓝色高亮；移动 2×3
+   3. 复制结果/生成今日待办/回顾/归档按钮 30–42→44
+   4. 输入 16/48；统计数字 14→22；使用说明 44 */
+#root div.min-h-screen {
+  background:
+    radial-gradient(900px 380px at 8% -10%, rgba(191, 219, 254, 0.45) 0%, rgba(191, 219, 254, 0) 60%),
+    radial-gradient(820px 300px at 100% 0%, rgba(224, 231, 255, 0.45) 0%, rgba(224, 231, 255, 0) 58%),
+    radial-gradient(rgba(100, 116, 139, 0.14) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(180deg, #fbfcfe 0%, #ffffff 48%, #ffffff 100%) !important;
+  min-height: 100vh;
+}
+
+/* 工具导航 */
+#root .xn-task-nav {
+  gap: 8px !important;
+}
+#root .xn-task-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 14px !important;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  color: #334155 !important;
+  font-size: 13px !important;
+  white-space: nowrap !important;
+}
+#root .xn-task-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+  border-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(29, 78, 216, 0.24) !important;
+}
+
+/* 按钮 */
+#root button {
+  min-height: 44px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+}
+#root button:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.5);
+  outline-offset: 2px;
+}
+#root button.xn-task-primary {
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+  border-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.22) !important;
+}
+#root button.xn-task-secondary {
+  background: #ffffff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #334155 !important;
+}
+#root button.xn-task-secondary:hover {
+  background: #eff6ff !important;
+  border-color: #bfdbfe !important;
+}
+#root button.xn-task-toggle {
+  min-height: 44px !important;
+  height: 44px !important;
+}
+#root button.xn-task-toggle[aria-pressed="true"] {
+  background: linear-gradient(135deg, #dbeafe, #eff6ff) !important;
+  border: 1px solid #60a5fa !important;
+  color: #1d4ed8 !important;
+  font-weight: 700 !important;
+}
+#root button.xn-task-toggle[aria-pressed="false"] {
+  background: #ffffff !important;
+  border: 1px solid #dbe2f0 !important;
+  color: #475569 !important;
+}
+#root button.xn-task-toggle::before {
+  content: none !important;
+}
+
+/* 输入 */
+#root input[type="text"],
+#root input[type="date"],
+#root select,
+#root textarea {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+}
+#root textarea {
+  min-height: 120px !important;
+  line-height: 1.7 !important;
+}
+#root input:focus,
+#root select:focus,
+#root textarea:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15) !important;
+}
+#root label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* 统计数字 */
+#root .xn-task-num {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 任务行 */
+#root li {
+  min-height: 44px !important;
+}
+
+/* 返回 / 使用说明 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #eff6ff !important;
+}
+#root details > summary {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 移动端：6 个工具 2×3 */
+@media (max-width: 640px) {
+  #root .xn-task-nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    overflow: visible !important;
+    gap: 8px !important;
+  }
+  #root .xn-task-tab {
+    width: 100% !important;
+    padding: 0 6px !important;
+    font-size: 12.5px !important;
+  }
+}
