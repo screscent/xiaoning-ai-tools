@@ -1,0 +1,121 @@
+/* R1206 TOTP 验证码与备份码合集：安全冷调主题（纯 CSS，无图片） */
+#root {
+  background:
+    radial-gradient(1100px 380px at 8% -8%, rgba(204, 251, 241, 0.55) 0%, rgba(204, 251, 241, 0) 62%),
+    radial-gradient(900px 320px at 100% 0%, rgba(224, 242, 254, 0.5) 0%, rgba(224, 242, 254, 0) 60%),
+    repeating-linear-gradient(45deg, rgba(13, 148, 136, 0.04) 0 2px, transparent 2px 22px),
+    #f7fbfc !important;
+  min-height: 100vh;
+}
+
+/* 返回链接：44px 可点区域 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #ecfdf5 !important;
+}
+
+/* 5 个分段页签：统一 44，选中态实心青绿 */
+#root .xn-totp-tabs {
+  padding: 6px !important;
+  gap: 6px !important;
+  border-color: #c9e7e3 !important;
+  background: #eef7f6 !important;
+}
+#root .xn-totp-tab {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 15px !important;
+  border-radius: 10px !important;
+}
+#root .xn-totp-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #0f766e, #0d9488) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.24) !important;
+}
+#root .xn-totp-tab[aria-selected="false"] {
+  color: #0f766e !important;
+}
+#root .xn-totp-tab[aria-selected="false"]:hover {
+  background: rgba(13, 148, 136, 0.09) !important;
+}
+
+/* 输入区：16px 等宽，48/96 触达 */
+#root textarea {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  border-radius: 12px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+#root select {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+}
+#root textarea:focus,
+#root select:focus,
+#root input:focus {
+  outline: none !important;
+  border-color: #0d9488 !important;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.18) !important;
+}
+
+/* 操作按钮：主操作 44、次操作 40 */
+#root .xn-totp-action {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 15px !important;
+  border-radius: 12px !important;
+}
+#root .xn-totp-small {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+}
+
+/* 动态码：等宽数字 + 轻微发光 */
+#root .xn-totp-code {
+  font-variant-numeric: tabular-nums !important;
+  letter-spacing: 10px !important;
+  text-shadow: 0 2px 18px rgba(13, 148, 136, 0.22);
+}
+
+/* 倒计时进度条加粗 */
+#root .h-2.rounded-full {
+  height: 10px !important;
+}
+
+/* 备份码：等宽卡片，移动端 2 列 */
+#root .xn-totp-bk {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 36px !important;
+  padding: 4px 8px !important;
+  border-radius: 10px !important;
+  background: #f0fdfa !important;
+  border: 1px solid #ccece7 !important;
+  color: #0f766e !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+  font-size: 15px !important;
+  letter-spacing: 1px !important;
+}
+
+/* 移动端：5 页签 3+2，均匀两行 */
+@media (max-width: 1023px) {
+  #root .xn-totp-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+  #root .xn-totp-tab {
+    width: 100% !important;
+    padding: 0 8px !important;
+    font-size: 14px !important;
+  }
+}
