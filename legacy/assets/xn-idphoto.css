@@ -1,0 +1,166 @@
+/* R1247 证件照尺寸与排版合集（9pag3yr8kd）· 证件蓝主题
+ * 仅本页引用；不改尺寸/排版/像素换算逻辑，只提升导航、控件与表格可读性。
+ */
+
+/* ---------- 1. 底色：影棚蓝 ---------- */
+body {
+  background:
+    radial-gradient(1000px 360px at 50% -110px, rgba(37, 99, 235, 0.12), transparent 70%),
+    radial-gradient(520px 260px at 92% 4%, rgba(220, 38, 38, 0.05), transparent 70%),
+    repeating-linear-gradient(135deg, rgba(37, 99, 235, 0.035) 0 1px, transparent 1px 22px),
+    linear-gradient(180deg, #f7faff 0%, #eef3fb 100%) !important;
+  background-attachment: fixed !important;
+}
+#root { background: transparent !important; }
+
+/* ---------- 2. 标题 ---------- */
+#root h1 { font-size: 27px !important; letter-spacing: -0.015em; color: #0f172a !important; }
+#root h2 { font-size: 20px !important; letter-spacing: -0.01em; }
+#root h3 { font-size: 15px !important; }
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 19px !important; }
+}
+
+/* ---------- 3. 工具导航：6 卡 42 → 44 ---------- */
+#root nav.xn-idphoto-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+#root nav.xn-idphoto-tabs button {
+  min-height: 44px !important;
+  height: 44px;
+  padding: 0 8px !important;
+  border: 1px solid #dbe6f5 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  color: #475569 !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+#root nav.xn-idphoto-tabs button[aria-selected="true"] {
+  background: linear-gradient(135deg, #1d4ed8, #4f46e5) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -12px rgba(29, 78, 216, 0.9);
+}
+#root nav.xn-idphoto-tabs button svg { width: 15px; height: 15px; }
+@media (max-width: 640px) {
+  #root nav.xn-idphoto-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #root nav.xn-idphoto-tabs button { font-size: 13px !important; }
+}
+
+/* ---------- 4. 输入 ---------- */
+#root input[type=number] {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dbe6f5 !important;
+  background: #fff !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dbe6f5 !important;
+  font-size: 16px !important;
+}
+/* 搜索框左侧有放大镜图标 */
+#root div.relative > span.absolute + input,
+#root div.relative > svg + input { padding-left: 40px !important; }
+#root select {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dbe6f5 !important;
+  background: #fff !important;
+  font-size: 16px !important;
+}
+#root input:focus,
+#root select:focus,
+#root textarea:focus {
+  outline: none !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16) !important;
+}
+
+/* ---------- 5. 使用说明 ---------- */
+#root details {
+  border: 1px solid #dbe6f5 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  padding: 0 14px !important;
+}
+#root summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* ---------- 6. 尺寸表 ---------- */
+#root table {
+  border-collapse: separate !important;
+  border-spacing: 0;
+}
+#root thead th {
+  font-size: 13px !important;
+  color: #64748b !important;
+  background: #f4f8ff !important;
+  padding: 10px 12px !important;
+  border-bottom: 1px solid #e2ebf8 !important;
+  white-space: nowrap;
+}
+#root tbody td {
+  font-size: 14.5px !important;
+  padding: 11px 12px !important;
+  border-bottom: 1px solid #eef3fa !important;
+  color: #1f2937;
+}
+#root tbody tr:nth-child(even) td { background: #fbfdff !important; }
+#root tbody tr:last-child td { border-bottom: 0 !important; }
+#root tbody td:nth-child(3) { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* 移动端压缩列宽，避免 460px 表横向滚动 */
+@media (max-width: 640px) {
+  #root table { min-width: 0 !important; width: 100% !important; }
+  #root thead th { font-size: 12px !important; padding: 8px 6px !important; }
+  #root tbody td { font-size: 13px !important; padding: 9px 6px !important; }
+  #root tbody td:nth-child(3) { font-size: 12.5px !important; }
+  #root tbody td:nth-child(4) { font-size: 12.5px !important; }
+}
+
+/* ---------- 7. 结果统计卡（bg-blue-50） ---------- */
+#root div[class*="bg-blue-50"][class*="p-4"] {
+  border: 1px solid #dbe7ff !important;
+  border-left: 4px solid #2563eb !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  box-shadow: 0 10px 24px -26px rgba(29, 78, 216, 0.7);
+}
+#root div[class*="bg-blue-50"][class*="p-4"] > div:first-child {
+  font-size: 12.5px !important;
+  color: #64748b !important;
+}
+#root div[class*="bg-blue-50"][class*="p-4"] > div:last-child {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 8. 空状态 ---------- */
+#root div[class*="border-dashed"][class*="text-center"] {
+  border-color: #bfd3ef !important;
+  border-radius: 14px !important;
+  background: #fbfdff !important;
+  color: #64748b;
+}
+
+/* ---------- 9. 辅助小字 ---------- */
+#root .text-xs { font-size: 13px !important; }
