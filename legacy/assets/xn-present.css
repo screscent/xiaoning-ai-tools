@@ -1,0 +1,74 @@
+/* R1205 送礼与礼俗合集 — 人用友好皮肤（暖粉礼赠主题，仅 at6pdhpmpa 引用；xn-gift 已占用，用 xn-present）
+   1. 6 个页签 36→44，补 role=tab / aria-selected
+   2. 对象/关系/预算 三组预设 32→44，改 radio，去掉误加 ✓
+   3. 复制 24→40
+   4. 纯 CSS 暖粉柔光 + 礼花点阵 */
+
+#root .xn-present-page {
+  background-color: #fffaf8 !important;
+  background-image:
+    radial-gradient(900px 400px at 4% -10%, rgba(244, 114, 182, .10), transparent 62%),
+    radial-gradient(860px 380px at 98% -6%, rgba(251, 146, 60, .09), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(190, 24, 93, .09) 1px, transparent 1.4px) !important;
+  background-size: auto, auto, 22px 22px !important;
+  background-repeat: no-repeat, no-repeat, repeat !important;
+}
+
+/* 页签 36 → 44 */
+#root .xn-present-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13.5px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+#root .xn-present-tab:focus-visible {
+  outline: 2px solid rgba(219, 39, 119, .55);
+  outline-offset: 2px;
+}
+
+/* 预设 32 → 44 */
+#root .xn-present-chip {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 13px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+
+#root .xn-present-chip:focus-visible {
+  outline: 2px solid rgba(219, 39, 119, .55);
+  outline-offset: 2px;
+}
+
+/* 复制 24 → 40 */
+#root .xn-present-copy {
+  min-height: 40px !important;
+  height: 40px !important;
+  font-size: 12.5px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+#root .xn-present-copy:focus-visible {
+  outline: 2px solid rgba(219, 39, 119, .55);
+  outline-offset: 2px;
+}
+
+/* 移动端页签 3+3 均匀两行 */
+@media (max-width: 1023px) {
+  #root .xn-present-tab {
+    flex: 1 1 calc(33.333% - 8px) !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
