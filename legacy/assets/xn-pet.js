@@ -45,7 +45,7 @@
     try { chips(); money(); results(); fields(); } catch (e) {}
   }
 
-  root.addEventListener("click", function () { setTimeout(run, 80); setTimeout(run, 360); }, true);
+  root.addEventListener("click", function () { [80, 360, 900, 1600].forEach(function (ms) { setTimeout(run, ms); }); }, true);
   root.addEventListener("input", function () { setTimeout(run, 120); }, true);
   root.addEventListener("change", function () { setTimeout(run, 120); }, true);
   window.addEventListener("load", function () { setTimeout(run, 300); });
