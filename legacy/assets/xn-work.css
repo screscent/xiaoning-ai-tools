@@ -1,0 +1,137 @@
+/* R1209 工作日与假期天数合集：钴蓝日程主题（纯 CSS，无图片） */
+#root {
+  background:
+    radial-gradient(1000px 360px at 6% -8%, rgba(219, 234, 254, 0.8) 0%, rgba(219, 234, 254, 0) 60%),
+    radial-gradient(900px 320px at 100% 0%, rgba(224, 242, 254, 0.5) 0%, rgba(224, 242, 254, 0) 58%),
+    repeating-linear-gradient(0deg, rgba(37, 99, 235, 0.045) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(37, 99, 235, 0.045) 0 1px, transparent 1px 24px),
+    #f6f9ff !important;
+  min-height: 100vh;
+}
+
+/* 返回链接：44px 可点区域 */
+#root a[href*="xiaoning-ai-tools"] {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+}
+#root a[href*="xiaoning-ai-tools"]:hover {
+  background: #eff6ff !important;
+}
+
+/* 6 个工具导航：桌面 6 列、移动 3+3，卡片 84 高 */
+#root div.grid.xn-work-nav {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  width: 100% !important;
+  gap: 8px !important;
+}
+#root .xn-work-nav a {
+  min-height: 84px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 12px !important;
+}
+#root .xn-work-nav a[aria-selected="true"] {
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+  border-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25) !important;
+}
+#root .xn-work-nav a[aria-selected="false"] {
+  background: #ffffff !important;
+  color: #1e40af !important;
+  border-color: #dbeafe !important;
+}
+
+/* 日期 / 月份输入：48 / 16 */
+#root input[type="date"],
+#root input[type="month"] {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  font-variant-numeric: tabular-nums !important;
+}
+#root input[type="date"]:focus,
+#root input[type="month"]:focus,
+#root input[type="number"]:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16) !important;
+}
+
+/* 数字输入：20px 等宽数字，48 高 */
+#root input[type="number"] {
+  font-size: 20px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+/* 下拉：48 / 16 */
+#root select {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+}
+
+/* 复选行：44 高、方框 18 */
+#root .xn-work-check {
+  min-height: 44px !important;
+}
+#root .xn-work-check input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  accent-color: #2563eb !important;
+}
+
+/* 操作按钮：44 */
+#root .xn-work-action {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+
+/* 结果大数字：等宽 + 钴蓝强调 */
+#root .xn-work-num {
+  font-variant-numeric: tabular-nums !important;
+  color: #1d4ed8 !important;
+  font-weight: 700 !important;
+}
+
+/* 日历：桌面与移动都保持 7 列（通用皮肤会把网格压成单列） */
+#root div.grid.grid-cols-7 {
+  display: grid !important;
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+}
+
+/* 使用说明折叠头：44 高 */
+#root .xn-work-guide {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 移动端：导航 3+3、日历 7 列紧凑 */
+@media (max-width: 1023px) {
+  #root div.grid.xn-work-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  #root .xn-work-nav a {
+    min-height: 76px !important;
+  }
+  #root div.grid.grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+    gap: 2px !important;
+  }
+  #root .grid-cols-7 > * {
+    min-height: 44px !important;
+    font-size: 13px !important;
+    padding: 2px !important;
+  }
+}
