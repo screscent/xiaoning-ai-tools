@@ -1,0 +1,183 @@
+/* R1238 体脂腰臀比与 VO2max 合集：体测蓝主题（纯 CSS，无图片）
+   1. 根容器：28px 网格 + 蓝/青柔光
+   2. 工具药丸 38→44 + aria；性别 44 + aria；计算 48 强化
+   3. 结果步骤卡：蓝调描边/左侧光带、步骤徽标 30、数值 32、参考 12.5
+   4. 复制/清空 42→44 胶囊；使用说明 20→44
+   5. 标题去 ①② 噪声（JS） */
+#root div.min-h-screen {
+  background:
+    radial-gradient(900px 380px at 4% -8%, rgba(59, 130, 246, 0.14) 0%, rgba(59, 130, 246, 0) 60%),
+    radial-gradient(760px 320px at 100% 0%, rgba(34, 211, 238, 0.12) 0%, rgba(34, 211, 238, 0) 60%),
+    repeating-linear-gradient(90deg, rgba(59, 130, 246, 0.05) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(0deg, rgba(59, 130, 246, 0.04) 0 1px, transparent 1px 28px),
+    linear-gradient(180deg, #f8fbff 0%, #ffffff 46%, #fbfdff 100%) !important;
+  min-height: 100vh;
+}
+
+/* 工具药丸 */
+#root nav.mb-5 {
+  gap: 8px !important;
+}
+#root nav.mb-5 button {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 999px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+}
+#root nav.mb-5 button[aria-selected="false"] {
+  background: #ffffff !important;
+  border-color: #dbe7f5 !important;
+  color: #475569 !important;
+}
+#root nav.mb-5 button[aria-selected="false"]:hover {
+  border-color: #93c5fd !important;
+  color: #1d4ed8 !important;
+  background: #f5f9ff !important;
+}
+#root nav.mb-5 button[aria-selected="true"] {
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+  border-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px -10px rgba(29, 78, 216, 0.7) !important;
+}
+
+/* 性别切换 */
+#root button.xn-vo2-gender {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+}
+#root button.xn-vo2-gender[aria-pressed="false"] {
+  background: #ffffff !important;
+  border-color: #dbe7f5 !important;
+  color: #475569 !important;
+}
+#root button.xn-vo2-gender[aria-pressed="true"] {
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+  border-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 6px 16px -10px rgba(29, 78, 216, 0.7) !important;
+}
+#root button.xn-vo2-gender[aria-pressed="true"]::before {
+  content: none !important;
+}
+
+/* 女性选中保持玫红语义 */
+#root button.xn-vo2-gender[data-sex="女"][aria-pressed="true"] {
+  background: linear-gradient(135deg, #be185d, #ec4899) !important;
+  border-color: #be185d !important;
+  box-shadow: 0 6px 16px -10px rgba(190, 24, 93, 0.7) !important;
+}
+
+/* 标题 */
+#root h2 {
+  font-size: 21px !important;
+  letter-spacing: -0.01em;
+}
+
+/* 计算按钮 */
+#root button.mt-5.w-full {
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+  box-shadow: 0 10px 22px -12px rgba(29, 78, 216, 0.75) !important;
+  font-size: 15px !important;
+}
+
+/* 结果步骤卡 */
+#root div.rounded-xl.border {
+  border-color: #dbeafe !important;
+  border-radius: 14px !important;
+  background: linear-gradient(180deg, #ffffff, #f8fbff) !important;
+  box-shadow: 0 12px 26px -24px rgba(30, 58, 138, 0.5) !important;
+  position: relative;
+  overflow: hidden;
+}
+#root div.rounded-xl.border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #3b82f6, #22d3ee);
+  opacity: 0.55;
+}
+#root div.rounded-xl.border > div > span.flex.h-7.w-7 {
+  width: 30px !important;
+  height: 30px !important;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+  color: #ffffff !important;
+  font-size: 12.5px !important;
+  box-shadow: 0 6px 14px -8px rgba(29, 78, 216, 0.7);
+}
+#root div.rounded-xl.border > div > span.text-sm {
+  font-size: 13.5px !important;
+  color: #334155 !important;
+}
+#root div.rounded-xl.border span.text-3xl {
+  font-size: 32px !important;
+  color: #0f172a !important;
+}
+#root div.rounded-xl.border p {
+  font-size: 12.5px !important;
+  color: #64748b !important;
+  line-height: 1.6 !important;
+}
+#root div.rounded-xl.border p.text-sm {
+  font-size: 14px !important;
+  color: #334155 !important;
+}
+
+/* 复制 / 清空 */
+#root .xn-vo2-act {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  font-size: 13px !important;
+}
+#root .xn-vo2-act.xn-vo2-copy {
+  background: #eff6ff !important;
+  border-color: #bfdbfe !important;
+  color: #1d4ed8 !important;
+}
+
+/* 使用说明 */
+#root details {
+  background: #ffffff !important;
+  border: 1px solid #e2ecf9 !important;
+  border-radius: 12px !important;
+}
+#root summary {
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center;
+  padding: 0 12px !important;
+  font-size: 13.5px !important;
+  color: #475569 !important;
+}
+#root details p,
+#root details li {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #52617a !important;
+}
+
+/* 移动端 */
+@media (max-width: 639px) {
+  #root nav.mb-5 button {
+    min-height: 44px !important;
+    font-size: 13px !important;
+  }
+  #root h2 {
+    font-size: 19px !important;
+  }
+  #root div.rounded-xl.border span.text-3xl {
+    font-size: 30px !important;
+  }
+  #root .xn-vo2-act {
+    min-height: 44px !important;
+  }
+}
