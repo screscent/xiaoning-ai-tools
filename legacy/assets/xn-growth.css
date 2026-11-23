@@ -1,0 +1,92 @@
+/* xn-growth.css · 增长与经营指标合集（主题：增长曲线——青绿/天蓝双光 + 24px 网格） */
+html, body { background: #eef4f6 !important; }
+#root {
+  background-color: #f5fafb !important;
+  background-image:
+    radial-gradient(900px 520px at 6% -8%, rgba(13, 148, 136, .11), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(820px 520px at 100% 104%, rgba(14, 165, 233, .09), rgba(0, 0, 0, 0) 62%),
+    linear-gradient(rgba(13, 148, 136, .045) 1px, rgba(0, 0, 0, 0) 1px),
+    linear-gradient(90deg, rgba(13, 148, 136, .045) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: auto, auto, 24px 24px, 24px 24px;
+}
+
+/* 标题 */
+#root h1, #root .gm-title {
+  font-size: 27px !important;
+  background: linear-gradient(92deg, #115e59 0%, #0d9488 48%, #2563eb 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+#root h2 { font-size: 18px !important; }
+#root .gm-field label, #root section label { font-size: 13.5px !important; color: #334155 !important; font-weight: 600 !important; }
+
+/* 模式切换 */
+#root button.gm-tab {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+#root button.gm-tab:hover { transform: translateY(-1px); }
+#root button.gm-tab.is-active, #root button.gm-tab[aria-pressed="true"] {
+  background: linear-gradient(180deg, #14b8a6, #0d9488) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 20px -14px rgba(13, 148, 136, .9) !important;
+}
+
+/* 结果大数字 */
+#root .gm-big {
+  font-size: 32px !important;
+  line-height: 1.15 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.01em;
+}
+#root .gm-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f6fdfc 100%) !important;
+  border: 1px solid #d9e9e7 !important;
+  border-radius: 12px !important;
+}
+#root .gm-card-title { font-size: 14.5px !important; color: #0f766e !important; font-weight: 700 !important; }
+#root .gm-formula { color: #5b6b76 !important; }
+
+/* 数字输入 */
+#root .gm-field input[type="number"] { font-size: 20px !important; font-weight: 600 !important; font-variant-numeric: tabular-nums; }
+
+/* 行动按钮 */
+#root .gm-btn {
+  min-height: 46px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  transition: transform .12s ease, filter .12s ease;
+}
+#root .gm-btn:active { transform: translateY(1px); }
+#root .gm-btn-copy {
+  background: linear-gradient(180deg, #14b8a6, #0d9488) !important;
+  color: #fff !important;
+  border: 0 !important;
+  box-shadow: 0 10px 20px -14px rgba(13, 148, 136, .9) !important;
+}
+#root .gm-btn-copy:hover { filter: brightness(1.05); }
+#root .gm-btn-reset {
+  background: #fff !important;
+  color: #0f766e !important;
+  border: 1px solid #cfe3e0 !important;
+}
+#root .gm-btn-reset:hover { background: #effaf8 !important; }
+
+/* 焦点可见 */
+#root a:focus-visible, #root button:focus-visible, #root input:focus-visible, #root select:focus-visible {
+  outline: 2px solid #0d9488; outline-offset: 2px;
+}
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1, #root .gm-title { font-size: 22px !important; }
+  #root h2 { font-size: 17px !important; }
+  #root .gm-big { font-size: 26px !important; }
+  #root button.gm-tab { min-height: 44px !important; font-size: 13px !important; }
+}
