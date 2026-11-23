@@ -1,0 +1,88 @@
+/* xn-vault.css · 密码短语与 PIN 备份码合集（主题：安全仓库——深蓝/青双光 + 24px 网格） */
+html, body { background: #eef2f8 !important; }
+#root {
+  background-color: #f5f8fc !important;
+  background-image:
+    radial-gradient(900px 520px at 6% -8%, rgba(30, 64, 175, .10), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(820px 520px at 100% 104%, rgba(6, 182, 212, .09), rgba(0, 0, 0, 0) 62%),
+    linear-gradient(rgba(30, 64, 175, .045) 1px, rgba(0, 0, 0, 0) 1px),
+    linear-gradient(90deg, rgba(30, 64, 175, .045) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: auto, auto, 24px 24px, 24px 24px;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 27px !important;
+  background: linear-gradient(92deg, #1e3a8a 0%, #1d4ed8 48%, #0891b2 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+#root h2 { font-size: 18px !important; }
+
+/* 模式切换 */
+#root button[class*="px-3.5"] {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+}
+#root button[class*="px-3.5"][class*="bg-blue-600"] {
+  background: linear-gradient(180deg, #2563eb, #1d4ed8) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 18px -12px rgba(37, 99, 235, .85) !important;
+}
+#root button.px-mode-off {
+  background: #fff !important;
+  color: #475569 !important;
+  border: 1px solid #dfe6f2 !important;
+}
+
+/* 下拉 */
+#root select { min-height: 48px !important; font-size: 15.5px !important; }
+
+/* 开关行（div 可点） */
+#root div.px-switchrow {
+  border-radius: 10px !important;
+  border-color: #e2e8f2 !important;
+  transition: background .12s ease, border-color .12s ease;
+}
+#root div.px-switchrow[aria-checked="true"] {
+  background: #eff6ff !important;
+  border-color: #bfdbfe !important;
+}
+
+/* 熵值 */
+#root span[class*="font-mono"][class*="font-semibold"] {
+  font-size: 18px !important;
+  font-variant-numeric: tabular-nums;
+  color: #0f172a !important;
+}
+#root div[class*="h-2.5"] { height: 12px !important; border-radius: 999px !important; }
+
+/* 主按钮 */
+#root button[class*="bg-blue-600"]:not([class*="px-3.5"]) {
+  min-height: 46px !important;
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 20px -14px rgba(37, 99, 235, .85) !important;
+}
+
+/* 历史行 */
+#root div[class*="space-y-2"] span[class*="font-mono"] { font-size: 12.5px !important; }
+#root button[title] { min-width: 32px; min-height: 32px; border-radius: 8px; }
+
+/* 焦点可见 */
+#root a:focus-visible, #root button:focus-visible, #root select:focus-visible, #root [role="switch"]:focus-visible {
+  outline: 2px solid #1d4ed8; outline-offset: 2px;
+}
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 22px !important; }
+  #root h2 { font-size: 17px !important; }
+  #root button[class*="px-3.5"] { min-height: 44px !important; font-size: 13px !important; }
+}
