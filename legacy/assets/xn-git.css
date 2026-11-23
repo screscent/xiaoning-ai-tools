@@ -1,0 +1,183 @@
+/* R1266 Git 分支与冲突处理合集（ij3fk58zig）· 主题：分支树·石墨暖橙
+ * 页面内层为既有暗色控制台；本皮肤只做可读性与触控增强，纯 CSS 无图片。
+ */
+
+/* ---------- 外层框架：暖灰 + 橙色柔光 ---------- */
+html { background: #f4f1ee !important; }
+body {
+  background:
+    radial-gradient(940px 540px at 6% -10%, rgba(240, 80, 51, .16), transparent 62%),
+    radial-gradient(820px 480px at 104% -6%, rgba(36, 41, 47, .14), transparent 60%),
+    linear-gradient(180deg, #fbf8f5 0%, #f4f1ee 48%, #f6f4f2 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  background-image: radial-gradient(rgba(240, 80, 51, .12) 1px, transparent 1px) !important;
+  background-size: 18px 18px !important;
+  opacity: .7 !important;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 60%) !important;
+  mask-image: linear-gradient(180deg, #000, transparent 60%) !important;
+}
+
+/* ---------- 标题（外层浅色区） ---------- */
+#root h1 {
+  background: linear-gradient(92deg, #1b1f24 0%, #c2410c 55%, #f05033 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  font-size: 32px !important;
+}
+#root h2 {
+  padding-left: 0 !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #f2f6fc !important;
+  letter-spacing: -.01em;
+}
+#root h2::before { content: none !important; }
+#root h3 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #eaf0fa !important;
+}
+
+/* ---------- 工具导航卡 ---------- */
+#root a.xn-git-tab {
+  min-height: 74px;
+  border-radius: 14px !important;
+  padding: 12px 16px !important;
+  border: 1px solid #e8e2dd !important;
+  background: #ffffff !important;
+  box-shadow: 0 10px 24px -24px rgba(27, 31, 36, .45);
+  transition: all .16s ease;
+}
+#root a.xn-git-tab:hover {
+  transform: translateY(-1px);
+  border-color: rgba(240, 80, 51, .55) !important;
+  background: #fffaf8 !important;
+}
+#root a.xn-git-tab[class*="border-[#f05033]"] {
+  border-color: #f05033 !important;
+  background: linear-gradient(180deg, #fff7f4, #fff1ec) !important;
+  box-shadow: inset 0 0 0 1px rgba(240, 80, 51, .18), 0 12px 26px -22px rgba(240, 80, 51, .55);
+}
+#root a.xn-git-tab span.font-mono {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: #f05033 !important;
+}
+#root a.xn-git-tab > div > span:not(.font-mono) {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #1f2937 !important;
+}
+#root a.xn-git-tab p {
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  color: #6b7280 !important;
+}
+
+/* ---------- 暗色面板内的输入与提示 ---------- */
+#root input[type=text]:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root input:not([type]):not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  border-color: rgba(255, 255, 255, .16) !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+#root input[type=text]:focus,
+#root input:not([type]):focus {
+  border-color: #f05033 !important;
+  box-shadow: 0 0 0 4px rgba(240, 80, 51, .18) !important;
+}
+
+/* ---------- 场景 chip ---------- */
+#root button.xn-git-chip {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, .12) !important;
+  background: rgba(255, 255, 255, .04) !important;
+  color: #b6c0d2 !important;
+  transition: all .14s ease;
+}
+#root button.xn-git-chip:hover {
+  border-color: rgba(240, 80, 51, .6) !important;
+  background: rgba(240, 80, 51, .12) !important;
+  color: #ffc3b3 !important;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root button.xn-git-copy {
+  min-height: 38px !important;
+  height: 38px !important;
+  padding: 0 14px !important;
+  font-size: 12.5px !important;
+  font-weight: 650 !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, .12) !important;
+  background: rgba(255, 255, 255, .05) !important;
+  color: #9aa4b8 !important;
+  transition: all .14s ease;
+}
+#root button.xn-git-copy:hover {
+  border-color: rgba(240, 80, 51, .55) !important;
+  color: #ffb4a2 !important;
+  background: rgba(240, 80, 51, .10) !important;
+}
+
+/* ---------- 命令代码块 ---------- */
+#root pre {
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  padding: 14px 16px !important;
+  border-radius: 12px !important;
+  background: #0a0e15 !important;
+  border: 1px solid rgba(255, 255, 255, .08) !important;
+  color: #d7e0ef !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+  overflow-x: auto !important;
+}
+#root pre code { font-size: 14px !important; }
+
+/* ---------- 说明与提示 ---------- */
+#root article p {
+  font-size: 13.5px !important;
+  line-height: 1.75 !important;
+  color: #aeb8ca !important;
+}
+#root article strong { color: #eaf0fa !important; }
+#root article code {
+  font-size: 13px !important;
+  padding: 1px 6px !important;
+  border-radius: 6px !important;
+  background: rgba(240, 80, 51, .12) !important;
+  border: 1px solid rgba(240, 80, 51, .25) !important;
+  color: #ffc3b3 !important;
+}
+#root .xn-git-author {
+  font-size: 12px !important;
+  font-weight: 650 !important;
+  color: #7f8a9e !important;
+}
+
+/* ---------- 键盘可达性 ---------- */
+#root a:focus-visible,
+#root input:focus-visible,
+#root button:focus-visible {
+  outline: 3px solid rgba(240, 80, 51, .45) !important;
+  outline-offset: 2px;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root a.xn-git-tab { min-height: 68px; }
+  #root pre { font-size: 13.5px !important; }
+  #root pre code { font-size: 13.5px !important; }
+}
