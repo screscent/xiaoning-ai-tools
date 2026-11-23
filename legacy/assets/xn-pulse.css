@@ -1,0 +1,173 @@
+/* xn-pulse.css · 心率区间与配速步频合集（主题：运动心率——珊瑚/薄荷双光 + 跑道斜纹）
+ * 纯 CSS 绘制，无图片资源；不改业务逻辑。
+ */
+html, body { background: #f6fbf8 !important; }
+#root .min-h-screen { background: transparent !important; }
+#root {
+  background-color: #f8fcfa;
+  background-image:
+    radial-gradient(820px 500px at 4% -8%, rgba(239, 68, 68, .11), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(760px 480px at 100% 102%, rgba(13, 148, 136, .11), rgba(0, 0, 0, 0) 60%),
+    repeating-linear-gradient(115deg, rgba(13, 148, 136, .04) 0 2px, rgba(0, 0, 0, 0) 2px 22px);
+  background-attachment: fixed, fixed, scroll;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 31px !important;
+  background: linear-gradient(92deg, #991b1b 0%, #ea580c 48%, #0f766e 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+
+/* 工具切换 */
+#root button[class*="rounded-lg"][class*="px-3"][class*="py-1.5"] {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  border-radius: 10px !important;
+}
+#root button[class*="rounded-lg"][class*="px-3"][class*="py-1.5"][class*="bg-red-500"] {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -16px rgba(220, 38, 38, .9);
+}
+#root button[class*="rounded-lg"][class*="px-3"][class*="py-1.5"]::before {
+  content: attr(data-xn-num);
+  margin-right: 4px;
+  font-weight: 800;
+}
+#root button[class*="rounded-lg"][class*="px-3"][class*="py-1.5"]:not([data-xn-num])::before { content: none; }
+
+/* 标题层 */
+#root h2 { font-size: 18px !important; letter-spacing: -.01em; }
+#root h2 + p, #root h2 ~ p { font-size: 13px !important; line-height: 1.7; }
+#root h3 { font-size: 15px !important; font-weight: 700 !important; }
+
+/* 卡片 */
+#root .rounded-xl.border.bg-white {
+  border-color: #e2ece8 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 16px 34px -30px rgba(13, 148, 136, .55) !important;
+}
+#root .rounded-2xl.border.bg-white {
+  border-color: #e2ece8 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 20px 44px -34px rgba(13, 148, 136, .6) !important;
+}
+
+/* 表单 */
+#root label { font-size: 13px !important; color: #475569 !important; }
+#root select { min-height: 48px !important; font-size: 15.5px !important; }
+#root input[type="number"] { min-height: 48px !important; font-size: 20px !important; }
+
+/* 服药开关 */
+#root button[class*="w-full"][class*="border"][class*="px-3"] {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  border-radius: 10px !important;
+  border-color: #dbe7e3 !important;
+  background: #fff !important;
+  color: #475569 !important;
+}
+
+/* 计算按钮 */
+#root button[class*="w-full"][class*="mt-5"] {
+  min-height: 46px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 22px -16px rgba(220, 38, 38, .85) !important;
+}
+
+/* 心率结果大数字 */
+#root .text-2xl.font-bold { font-size: 26px !important; font-variant-numeric: tabular-nums; }
+
+/* 区间行 */
+#root .rounded-lg.border.p-3 {
+  padding: 14px 14px !important;
+  border-radius: 12px !important;
+}
+#root span[class*="rounded"][class*="px-2"][class*="py-0.5"] {
+  font-size: 12.5px !important;
+  padding: 3px 8px !important;
+  border-radius: 6px !important;
+  letter-spacing: .02em;
+}
+#root .rounded-lg.border.p-3 .text-sm.font-semibold,
+#root .rounded-lg.border.p-3 .font-mono {
+  font-size: 16px !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .rounded-lg.border.p-3 .text-xs { font-size: 12px !important; }
+
+/* 时间分配 */
+#root .rounded-xl.border.bg-white.p-5 {
+  padding: 18px !important;
+}
+
+/* 复制 / 清空 */
+#root button[class*="flex-1"] {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  border-radius: 10px !important;
+}
+
+/* 常用值 chip */
+#root .xn-pulse-presets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+#root .xn-pulse-presets button {
+  min-height: 34px !important;
+  padding: 0 11px !important;
+  border-radius: 8px !important;
+  border: 1px solid #e2ece8 !important;
+  background: #fff !important;
+  color: #0f766e !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+#root .xn-pulse-presets button:hover { border-color: #14b8a6 !important; background: #f0fdfa !important; }
+
+/* 空态引导 */
+#root .xn-pulse-empty {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 18px 12px;
+  border: 2px dashed #d7e7e2 !important;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fbfefd, #f1faf7);
+  font-size: 13px !important;
+}
+#root .xn-pulse-empty button {
+  min-height: 42px !important;
+  padding: 0 18px !important;
+  border-radius: 10px !important;
+  border: none !important;
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  box-shadow: 0 10px 22px -16px rgba(220, 38, 38, .85);
+}
+
+/* 焦点可见 */
+#root button:focus-visible, #root input:focus-visible,
+#root select:focus-visible, #root textarea:focus-visible, #root a:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 17px !important; }
+  #root button[class*="rounded-lg"][class*="px-3"][class*="py-1.5"] { min-height: 44px !important; font-size: 13px !important; }
+  #root .xn-pulse-presets button { min-height: 38px !important; font-size: 13px !important; }
+  #root .text-2xl.font-bold { font-size: 24px !important; }
+}
