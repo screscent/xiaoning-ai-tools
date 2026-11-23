@@ -1,0 +1,214 @@
+/* xn-darkroom.css · 图片滤镜与调色合集（主题：暗房胶片——青绿/琥珀双光 + 细颗粒纸感）
+ * 纯 CSS 绘制，无图片资源；不改业务逻辑。
+ */
+html, body { background: #f4f1ea !important; }
+#root .min-h-screen { background: transparent !important; }
+#root {
+  background-color: #f6f3ed;
+  background-image:
+    radial-gradient(820px 500px at 6% -8%, rgba(15, 118, 110, .12), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(720px 460px at 100% 102%, rgba(217, 119, 6, .10), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(rgba(124, 45, 18, .055) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: auto, auto, 6px 6px;
+  background-attachment: fixed, fixed, scroll;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 31px !important;
+  background: linear-gradient(92deg, #134e4a 0%, #0f766e 54%, #b45309 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+
+/* 工具 tab */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 650 !important;
+  border-radius: 10px !important;
+  transition: all .15s;
+}
+#root a[href^="#/"]:hover { background: #f0fbfa !important; color: #0f766e !important; }
+#root a[href^="#/"]::before {
+  content: attr(data-xn-num);
+  margin-right: 4px;
+  font-weight: 800;
+  opacity: .7;
+}
+#root a[href^="#/"]:not([data-xn-num])::before { content: none; }
+#root a[href^="#/"].bg-blue-500,
+#root a[href^="#/"].bg-blue-600,
+#root a[href^="#/"].text-white {
+  background: linear-gradient(135deg, #0f766e, #0891b2) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -14px rgba(15, 118, 110, .9);
+}
+#root a[href^="#/"].bg-blue-500::before,
+#root a[href^="#/"].bg-blue-600::before,
+#root a[href^="#/"].text-white::before { opacity: .95; }
+
+/* 区块标题 */
+#root h2 { font-size: 18px !important; letter-spacing: -.01em; }
+#root h2 + p, #root h2 ~ p { font-size: 13px !important; line-height: 1.7; }
+#root h3 {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #134e4a !important;
+  padding-left: 10px;
+  position: relative;
+}
+#root h3::before {
+  content: "";
+  position: absolute; left: 0; top: .18em; bottom: .18em;
+  width: 3px; border-radius: 2px;
+  background: linear-gradient(180deg, #0f766e, #f59e0b);
+}
+
+/* 卡片 */
+#root .bg-white.rounded-lg.border {
+  border-color: #e5e0d6 !important;
+  border-radius: 14px !important;
+  background: linear-gradient(180deg, #fff, #fffdf9) !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 16px 34px -28px rgba(15, 118, 110, .55) !important;
+}
+
+/* 上传区：大号虚线投放框 */
+#root button[class*="border-dashed"] {
+  min-height: 132px !important;
+  border-width: 2px !important;
+  border-color: #a9d8d2 !important;
+  border-radius: 14px !important;
+  background:
+    repeating-linear-gradient(45deg, rgba(15, 118, 110, .045) 0 10px, rgba(0, 0, 0, 0) 10px 20px),
+    linear-gradient(180deg, #fbfefd, #f0faf8) !important;
+  color: #0f766e !important;
+  font-size: 14.5px !important;
+  font-weight: 650 !important;
+  transition: all .18s;
+}
+#root button[class*="border-dashed"]:hover {
+  border-color: #0f766e !important;
+  background:
+    repeating-linear-gradient(45deg, rgba(15, 118, 110, .07) 0 10px, rgba(0, 0, 0, 0) 10px 20px),
+    linear-gradient(180deg, #f6fdfb, #e8f8f4) !important;
+}
+
+/* 示例图按钮 */
+#root .xn-sample-row { display: flex; gap: 8px; margin-top: 8px; }
+#root .xn-sample-row button {
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  border-radius: 9px !important;
+  border: 1px solid #bfe0db !important;
+  background: #fff !important;
+  color: #0f766e !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  cursor: pointer;
+}
+#root .xn-sample-row button:hover { background: #f0fbfa !important; border-color: #0f766e !important; }
+
+/* 模式按钮（灰度/黑白等） */
+#root button.xn-mode {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  border-radius: 8px !important;
+  border: 1px solid #e0ded6 !important;
+  background: #fff !important;
+  color: #4b5563 !important;
+}
+#root button.xn-mode[aria-pressed="true"] {
+  background: linear-gradient(135deg, #0f766e, #0891b2) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 18px -14px rgba(15, 118, 110, .9);
+}
+#root button.xn-mode[aria-pressed="true"]::before { content: none !important; }
+
+/* 滑杆与数值 */
+#root .flex.justify-between > label.text-xs { font-size: 13px !important; color: #475569 !important; font-weight: 600; }
+#root .flex.justify-between > span.tabular-nums {
+  font-size: 16px !important;
+  font-weight: 750 !important;
+  color: #0f766e !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="range"] { height: 40px !important; }
+
+/* 滑杆快捷值 */
+#root .xn-range-presets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+#root .xn-range-presets button {
+  min-height: 32px !important;
+  padding: 0 10px !important;
+  border-radius: 8px !important;
+  border: 1px solid #e0ded6 !important;
+  background: #fff !important;
+  color: #0f766e !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+}
+#root .xn-range-presets button:hover { border-color: #0f766e !important; background: #f0fbfa !important; }
+
+/* 底部操作 */
+#root button[class*="flex-1"] {
+  min-height: 46px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+}
+#root button[class*="flex-1"][class*="bg-blue-600"] {
+  background: linear-gradient(135deg, #0f766e, #0891b2) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 22px -16px rgba(15, 118, 110, .95) !important;
+}
+#root button[class*="flex-1"][class*="bg-gray-100"] {
+  background: #fff !important;
+  border: 1px solid #e0ded6 !important;
+  color: #475569 !important;
+}
+#root button[class*="flex-1"][class*="bg-gray-100"]:hover { border-color: #0f766e !important; color: #0f766e !important; }
+
+/* 预览区 */
+#root canvas {
+  max-width: 100% !important;
+  border-radius: 10px !important;
+  box-shadow: 0 12px 28px -20px rgba(15, 23, 42, .5);
+}
+#root .xn-preview-empty {
+  min-height: 260px;
+  border: 2px dashed #cfdedb !important;
+  border-radius: 12px !important;
+  background:
+    repeating-linear-gradient(45deg, rgba(15, 118, 110, .035) 0 10px, rgba(0, 0, 0, 0) 10px 20px),
+    linear-gradient(180deg, #fbfefd, #f2faf8) !important;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px;
+  color: #6b7a78 !important;
+}
+
+/* 焦点可见 */
+#root a:focus-visible, #root button:focus-visible,
+#root input:focus-visible, #root select:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 17px !important; }
+  #root a[href^="#/"] { min-height: 44px !important; font-size: 12.5px !important; padding: 0 12px !important; }
+  #root button[class*="border-dashed"] { min-height: 116px !important; font-size: 14px !important; }
+  #root .xn-sample-row button { min-height: 40px !important; }
+  #root button.xn-mode { min-height: 42px !important; }
+  #root .xn-range-presets button { min-height: 40px !important; font-size: 13px !important; }
+  #root .xn-preview-empty { min-height: 220px; }
+}
