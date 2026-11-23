@@ -1,0 +1,90 @@
+/* xn-invest.css · 复利与定投合集（主题：理财蓝图——靛蓝/翡翠双光 + 24px 网格） */
+html, body { background: #eef2f9 !important; }
+#root {
+  background-color: #f4f7fc !important;
+  background-image:
+    radial-gradient(900px 520px at 6% -8%, rgba(79, 70, 229, .10), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(820px 520px at 100% 104%, rgba(16, 185, 129, .09), rgba(0, 0, 0, 0) 62%),
+    linear-gradient(rgba(37, 99, 235, .045) 1px, rgba(0, 0, 0, 0) 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, .045) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: auto, auto, 24px 24px, 24px 24px;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 27px !important;
+  background: linear-gradient(92deg, #312e81 0%, #4338ca 46%, #059669 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+#root section h2 { font-size: 18px !important; }
+#root section label { font-size: 13.5px !important; color: #334155 !important; font-weight: 600 !important; }
+
+/* 表单控件 */
+#root section select { min-height: 48px !important; font-size: 15.5px !important; }
+#root section input[type="number"] { font-size: 20px !important; font-weight: 600 !important; font-variant-numeric: tabular-nums; }
+#root section input[type="range"] { height: 36px !important; cursor: pointer; }
+
+/* 计算按钮 */
+#root section button.w-full {
+  min-height: 46px !important;
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 20px -14px rgba(15, 23, 42, .5) !important;
+  transition: transform .12s ease, filter .12s ease;
+}
+#root section button.w-full:hover { filter: brightness(1.05); }
+#root section button.w-full:active { transform: translateY(1px); }
+
+/* 结果数值：18→24，等宽数字 */
+#root div[class*="mt-1.5"][class*="font-bold"] {
+  font-size: 24px !important;
+  line-height: 1.18 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.01em;
+}
+/* 结果卡：轻渐变，弱化“白纸感” */
+#root div[class*="rounded-lg"][class*="border"][class*="bg-white"] {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+}
+
+/* 弱对比文字提亮（编号 01/02 与说明） */
+#root span[class*="font-mono"][class*="text-gray-300"] { color: #64748b !important; font-weight: 700 !important; }
+#root p[class*="text-gray-400"] { color: #5b6779 !important; }
+#root span[class*="text-gray-400"] { color: #636e82 !important; }
+
+/* 顶部快捷卡片（六入口） */
+#root a[href^="#/"] {
+  min-height: 56px;
+  border-radius: 12px !important;
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+#root a[href^="#/"]:hover { transform: translateY(-1px); }
+#root a[href^="#/"].px-nav-active {
+  border-color: #6366f1 !important;
+  background: linear-gradient(180deg, #ffffff 0%, #eef2ff 100%) !important;
+  box-shadow: 0 12px 24px -18px rgba(79, 70, 229, .7) !important;
+}
+#root a[href^="#/"].px-nav-active span[class*="font-semibold"] { color: #4338ca !important; }
+
+/* 返回链接触控区 */
+#root a[href^="https://screscent.github.io/xiaoning-ai-tools"] {
+  display: inline-flex; align-items: center;
+  min-height: 34px; padding: 0 8px; border-radius: 8px;
+  font-size: 13px !important;
+}
+
+/* 焦点可见 */
+#root a:focus-visible, #root button:focus-visible, #root select:focus-visible, #root input:focus-visible {
+  outline: 2px solid #6366f1; outline-offset: 2px;
+}
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 22px !important; }
+  #root section h2 { font-size: 17px !important; }
+  #root div[class*="mt-1.5"][class*="font-bold"] { font-size: 21px !important; }
+  #root section button.w-full { font-size: 15px !important; }
+}
