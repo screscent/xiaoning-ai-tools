@@ -165,12 +165,14 @@ body::before {
 #root button.rx-flag::before { content: none !important; }
 
 /* ---------- 按钮 ---------- */
+#root .rx-btn-row { display: flex !important; flex-wrap: wrap; gap: 8px !important; }
 #root .rx-btn {
   min-height: 44px !important;
   padding: 0 16px !important;
   font-size: 14px !important;
   font-weight: 650 !important;
   border-radius: 10px !important;
+  white-space: nowrap !important;
 }
 #root .rx-btn-primary {
   background-image: linear-gradient(135deg, #65a30d, #0d9488) !important;
@@ -305,7 +307,7 @@ body::before {
   #root .rl-nav { top: 4px !important; padding: 5px !important; }
   #root .rl-nav a { min-height: 44px !important; font-size: 13.5px !important; padding: 0 12px !important; }
   #root .rx-h2 { font-size: 17px !important; }
-  #root .rx-btn { min-height: 46px !important; }
+  #root .rx-btn { min-height: 46px !important; padding: 0 10px !important; font-size: 13.5px !important; }
   #root .rx-stat-num { font-size: 26px !important; }
   #root .rx-presets { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
   #root .rx-textarea { min-height: 140px !important; }
