@@ -34,7 +34,7 @@
   function compute() {
     raf = 0;
     if (!navs.length || !sections.length) return;
-    var offset = 140;
+    var offset = Math.max(160, Math.round(window.innerHeight * 0.35));
     var idx = -1;
     for (var i = 0; i < sections.length && i < navs.length; i++) {
       var top = sections[i].getBoundingClientRect().top;
