@@ -255,7 +255,12 @@
       /* 6) 页脚提示胶囊 */
       var ps = root.querySelectorAll("p");
       for (var p = 0; p < ps.length; p++) {
-        if (/正在查看/.test(txt(ps[p])) && txt(ps[p]).length < 60) add(ps[p], "xn-fl-where");
+        if (/正在查看/.test(txt(ps[p])) && txt(ps[p]).length < 60) {
+          add(ps[p], "xn-fl-where");
+          var raw = txt(ps[p]);
+          var fixed = raw.replace(/工具\s*([A-F])/g, function (_, l) { return "工具 " + (LETTER[l] || l); });
+          if (fixed !== raw) ps[p].textContent = fixed;
+        }
       }
 
       updateSummary();
