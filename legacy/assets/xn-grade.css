@@ -1,0 +1,164 @@
+/* xn-grade.css · 成绩与 GPA 换算合集（学府靛青：纸张感底纹 + 靛蓝/青绿双光） */
+#root { --xn-accent: #4f46e5; --xn-accent-2: #0d9488; }
+
+/* ---------- 页面底色（纯 CSS 绘制，无图片） ---------- */
+html, body { background: #eef1fb !important; }
+#root {
+  background-color: #f4f6ff !important;
+  background-image:
+    radial-gradient(900px 520px at 10% -10%, rgba(79, 70, 229, .16), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(820px 520px at 100% 110%, rgba(13, 148, 136, .14), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(circle, rgba(79, 70, 229, .10) 1px, rgba(0, 0, 0, 0) 1.5px);
+  background-size: auto, auto, 26px 26px;
+}
+#root .bg-gray-50 { background: transparent !important; }
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  font-size: 26px !important;
+  letter-spacing: -.01em;
+  background: linear-gradient(92deg, #312e81 0%, #4f46e5 46%, #0d9488 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+
+/* ---------- 导航 tab ---------- */
+#root nav { border-color: #e2e6f5 !important; background: rgba(255, 255, 255, .82) !important; }
+#root nav > div { padding-top: 8px !important; padding-bottom: 8px !important; gap: 6px !important; }
+#root nav a {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 14px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border-radius: 11px !important;
+  color: #4b5573 !important;
+  transition: background .15s, color .15s, box-shadow .15s !important;
+}
+#root nav a:hover { background: #eef0fb !important; color: #312e81 !important; }
+#root nav a.xn-active {
+  background: linear-gradient(180deg, #4f46e5, #0d9488) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -10px rgba(79, 70, 229, .85) !important;
+}
+
+/* ---------- 卡片与标题 ---------- */
+#root section.scroll-mt-24 {
+  border-radius: 15px !important;
+  border-color: #e2e6f5 !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 18px 36px -34px rgba(49, 46, 129, .55) !important;
+}
+#root section h2 { font-size: 19px !important; letter-spacing: -.005em; }
+#root section > p:first-of-type { font-size: 13px !important; color: #6b7385 !important; }
+#root section label { font-size: 13px !important; color: #3b4256 !important; }
+
+/* ---------- 表单 ---------- */
+#root section select { min-height: 48px !important; font-size: 15.5px !important; }
+#root section textarea { font-size: 15.5px !important; line-height: 1.65 !important; padding: 10px 12px !important; }
+#root section input[type=number] { font-size: 19px !important; }
+#root section input[type=number]::-webkit-inner-spin-button { height: 46px; width: 22px; }
+
+/* ---------- 主按钮 ---------- */
+#root section button {
+  min-height: 46px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border-radius: 11px !important;
+  border: 0 !important;
+  background: linear-gradient(180deg, #4f46e5, #4338ca) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 22px -12px rgba(79, 70, 229, .85) !important;
+  transition: transform .12s, box-shadow .12s, filter .12s !important;
+}
+#root section button:hover { filter: brightness(1.06); box-shadow: 0 12px 26px -10px rgba(79, 70, 229, .95) !important; }
+#root section button:active { transform: translateY(1px); }
+#root section button::before { content: none !important; }
+
+/* 复制/次级按钮 */
+#root section button.gx-copy {
+  min-height: 42px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  background: #eef0fb !important;
+  color: #3730a3 !important;
+  box-shadow: none !important;
+}
+#root section button.gx-copy:hover { background: #e3e6fa !important; filter: none; }
+
+/* ---------- 结果面板 ---------- */
+#root .gx-result {
+  border-radius: 13px !important;
+  border-color: #dfe3fa !important;
+  background: #f6f7ff !important;
+}
+#root .gx-metric {
+  text-align: center;
+  border-radius: 12px !important;
+  background: #fff !important;
+  box-shadow: inset 0 0 0 1px #e6e9fb, 0 10px 20px -22px rgba(49, 46, 129, .9);
+  padding: 14px 12px !important;
+}
+#root .gx-metric-label {
+  font-size: 12.5px !important;
+  color: #6b7385 !important;
+  letter-spacing: .01em;
+}
+#root .gx-metric-val {
+  font-size: 30px !important;
+  line-height: 1.12 !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
+  color: #4338ca !important;
+  margin-top: 4px !important;
+}
+#root .gx-metric-val.gx-v-good { color: #0f766e !important; }
+#root .gx-metric-val.gx-v-warn { color: #b45309 !important; }
+#root .gx-metric-val.gx-v-bad { color: #be123c !important; }
+
+/* 判定徽标（可达/不可达/接近…） */
+#root .gx-verdict {
+  display: inline-block;
+  padding: 3px 12px !important;
+  border-radius: 999px !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  line-height: 1.5 !important;
+}
+#root .gx-verdict.gx-v-good { background: #ccfbf1 !important; color: #0f766e !important; }
+#root .gx-verdict.gx-v-warn { background: #fef3c7 !important; color: #b45309 !important; }
+#root .gx-verdict.gx-v-bad { background: #ffe4e6 !important; color: #be123c !important; }
+
+/* 结果脚注小字 */
+#root .gx-result .flex.flex-wrap > span { font-size: 12.5px !important; color: #5b6478 !important; }
+#root .gx-result > p.mt-3 { font-size: 12.5px !important; line-height: 1.7 !important; color: #5b6478 !important; }
+
+/* ---------- 表格 ---------- */
+#root section table { border-collapse: collapse; font-size: 13px; width: 100%; }
+#root section thead th {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #3730a3 !important;
+  background: #eef0fb !important;
+  padding: 8px 10px !important;
+  white-space: nowrap;
+}
+#root section tbody td {
+  font-size: 13px !important;
+  color: #33405c !important;
+  padding: 8px 10px !important;
+  font-variant-numeric: tabular-nums;
+}
+#root section tbody tr:nth-child(even) td { background: #f7f8fe !important; }
+#root section td code, #root section td .font-mono { font-size: 12.5px !important; color: #0f766e !important; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root h1 { font-size: 22px !important; }
+  #root nav a { min-height: 44px !important; font-size: 13.5px !important; padding: 0 12px !important; }
+  #root section { padding: 16px !important; }
+  #root .gx-metric-val { font-size: 26px !important; }
+  #root section table { font-size: 12px; }
+  #root section thead th, #root section tbody td { padding: 7px 8px !important; font-size: 12px !important; }
+}
