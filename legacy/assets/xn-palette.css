@@ -1,0 +1,102 @@
+/* R1258 配色方案与变体合集（bcsb5nk6f9）· 光谱主题 */
+body {
+  background:
+    radial-gradient(620px 380px at 6% -8%, rgba(255, 88, 51, 0.12), transparent 62%),
+    radial-gradient(560px 340px at 96% 0%, rgba(0, 200, 245, 0.12), transparent 62%),
+    radial-gradient(520px 320px at 50% 108%, rgba(16, 185, 129, 0.08), transparent 62%),
+    linear-gradient(180deg, #fbfbfd 0%, #f5f6fa 100%) !important;
+  background-attachment: fixed !important;
+}
+#root { background: transparent !important; }
+#root h1 { font-size: 27px !important; letter-spacing: -0.015em; color: #111827 !important; }
+#root h2 { font-size: 20px !important; letter-spacing: -0.01em; }
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 19px !important; }
+}
+#root button.xn-pal-tab {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 12px !important;
+  border: 1px solid #e4e7ef !important;
+  background: #fff !important;
+  color: #475569 !important;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+#root button.xn-pal-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #111827, #4f46e5) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -12px rgba(79, 70, 229, 0.7);
+}
+@media (max-width: 640px) {
+  #root button.xn-pal-tab { flex: 1 1 30%; }
+}
+#root button.xn-pal-primary {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #4f46e5, #0e7490) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+#root button.xn-pal-copy {
+  min-height: 40px !important;
+  padding: 0 16px !important;
+  border-radius: 10px !important;
+  border: 1px solid #dbe1ee !important;
+  background: #fff !important;
+  color: #334155 !important;
+  font-size: 13px !important;
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  #root button.xn-pal-primary {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #4f46e5, #0e7490) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+#root button.xn-pal-copy { min-height: 44px !important; }
+}
+#root button.xn-pal-swatch {
+  border-radius: 12px !important;
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.06), 0 10px 22px -18px rgba(15, 23, 42, 0.45);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+#root button.xn-pal-swatch:hover {
+  transform: translateY(-1px);
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.08), 0 14px 28px -18px rgba(15, 23, 42, 0.55);
+}
+#root button.xn-pal-swatch span { font-size: 15px !important; font-weight: 700 !important; letter-spacing: 0.02em; }
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root select, #root input[type=color] {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #e4e7ef !important;
+  background: #fff !important;
+  font-size: 16px !important;
+}
+#root input:focus, #root select:focus {
+  outline: none !important;
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.14) !important;
+}
+#root label { font-size: 13px !important; color: #475569 !important; }
+#root details {
+  border: 1px solid #e4e7ef !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  padding: 0 14px !important;
+}
+#root summary {
+  display: flex; align-items: center;
+  min-height: 44px !important;
+  font-size: 14px !important; font-weight: 600; color: #475569;
+}
+#root .text-xs { font-size: 13px !important; }
