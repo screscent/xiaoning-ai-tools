@@ -1,0 +1,105 @@
+/* xn-step.css · 步数与活动目标合集（活力绿 + 暖橙） */
+#root { --xn-accent: #16a34a; --xn-accent-2: #ea580c; }
+
+html, body { background: #f0f6ef !important; }
+#root {
+  background-color: #f5faf3 !important;
+  background-image:
+    radial-gradient(900px 520px at 8% -10%, rgba(22, 163, 74, .14), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(820px 520px at 100% 108%, rgba(234, 88, 12, .10), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(circle, rgba(22, 163, 74, .09) 1px, rgba(0, 0, 0, 0) 1.5px);
+  background-size: auto, auto, 26px 26px;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 27px !important;
+  background: linear-gradient(92deg, #14532d 0%, #16a34a 50%, #ea580c 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+#root section h2 { font-size: 18px !important; }
+#root section > p:first-of-type, #root .text-sm.text-gray-500 { font-size: 13px !important; }
+#root section label { font-size: 13px !important; color: #3b4256 !important; }
+
+/* 菜单工具卡 */
+#root a.px-card {
+  border-radius: 14px !important;
+  border-color: #e2ecdf !important;
+  padding: 16px 18px !important;
+  background: #fff !important;
+  transition: transform .14s, box-shadow .14s, border-color .14s !important;
+}
+#root a.px-card:hover {
+  transform: translateY(-2px);
+  border-color: #86efac !important;
+  box-shadow: 0 16px 30px -22px rgba(20, 83, 45, .55) !important;
+}
+#root a.px-card .font-semibold { font-size: 16px !important; color: #14532d !important; }
+#root a.px-card span.rounded-lg {
+  min-width: 34px !important;
+  text-align: center !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  background: linear-gradient(180deg, #16a34a, #15803d) !important;
+  color: #fff !important;
+  border-radius: 9px !important;
+  padding: 6px 8px !important;
+}
+#root a.px-card svg { color: #16a34a !important; }
+
+/* 表单 */
+#root select { min-height: 48px !important; font-size: 15.5px !important; }
+#root input[type=number] { font-size: 19px !important; }
+
+/* 计算按钮 */
+#root button {
+  border-radius: 11px !important;
+}
+#root button.px-primary {
+  min-height: 48px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  border: 0 !important;
+  background: linear-gradient(180deg, #16a34a, #15803d) !important;
+  color: #fff !important;
+  box-shadow: 0 12px 24px -12px rgba(22, 163, 74, .85) !important;
+}
+#root button.px-primary:hover { filter: brightness(1.06); }
+#root button::before { content: none !important; }
+
+/* 结果数值 */
+#root .px-metric {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
+  color: #15803d !important;
+  line-height: 1.15 !important;
+}
+
+/* 返回链接 */
+#root a.px-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 32px !important;
+  padding: 0 10px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  color: #15803d !important;
+  background: #eaf6ec !important;
+}
+#root a.px-back:hover { background: #dcf1e0 !important; }
+
+/* 公式小字 */
+#root .font-mono.text-xs, #root .text-xs.text-gray-400 { font-size: 12.5px !important; }
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 22px !important; }
+  #root section h2 { font-size: 17px !important; }
+  #root a.px-card { padding: 14px !important; }
+  #root a.px-card .font-semibold { font-size: 15.5px !important; }
+  #root .px-metric { font-size: 23px !important; }
+  #root button.px-primary { min-height: 48px !important; }
+}
