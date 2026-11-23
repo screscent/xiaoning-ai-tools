@@ -49,8 +49,24 @@
     raf = requestAnimationFrame(compute);
   }
 
+  function normalizeIndex() {
+    if (!root) return;
+    var secs = Array.prototype.slice.call(root.querySelectorAll("section")).filter(function (s) { return s.querySelector("h2"); });
+    secs.forEach(function (s, i) {
+      var span = s.querySelector('span[class*="font-mono"]');
+      if (!span) return;
+      var t = (span.textContent || "").trim();
+      // 页面内置了「工具E/工具F」占位编号，统一归一为 01..06
+      if (/^工具[A-Z]$/.test(t) || /^\d{1,2}$/.test(t)) {
+        var want = String(i + 1).padStart(2, "0");
+        if (t !== want) span.textContent = want;
+      }
+    });
+  }
+
   function ensureAria() {
     if (!root) return;
+    normalizeIndex();
     // 计算按钮补 aria-label（文案即说明），下拉/输入已有 aria-label 时不重复
     var btns = root.querySelectorAll("section button");
     for (var i = 0; i < btns.length; i++) {
