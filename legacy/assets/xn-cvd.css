@@ -1,0 +1,335 @@
+/* R1260 色盲配色与图标尺寸合集（9pavh8r8kd）· 主题：视觉校准蓝
+ * 纯 CSS 渐变绘制，无图片资源；仅人用友好层，不改业务逻辑。
+ */
+
+/* ---------- 主题底 ---------- */
+html { background: #eef3fa !important; }
+body {
+  background:
+    radial-gradient(920px 540px at 6% -10%, rgba(37, 99, 235, .20), transparent 62%),
+    radial-gradient(860px 500px at 104% -4%, rgba(14, 165, 164, .18), transparent 60%),
+    linear-gradient(180deg, #f7faff 0%, #eef3fa 48%, #f4f9f8 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  background-image:
+    radial-gradient(rgba(37, 99, 235, .10) 1px, transparent 1px),
+    radial-gradient(rgba(14, 165, 164, .10) 1px, transparent 1px) !important;
+  background-size: 24px 24px, 24px 24px !important;
+  background-position: 0 0, 12px 12px !important;
+  opacity: .8 !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  background: linear-gradient(92deg, #0f2547 0%, #1d4ed8 52%, #0d9488 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+#root h2 {
+  padding-left: 11px !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #102a46 !important;
+  letter-spacing: -.01em;
+}
+#root h2::before {
+  background: linear-gradient(180deg, #2563eb, #0d9488) !important;
+  width: 5px !important;
+  left: 0 !important;
+}
+
+/* ---------- 视图 tab ---------- */
+#root .xn-cvd-tabs {
+  padding: 6px !important;
+  background: rgba(255, 255, 255, .8) !important;
+  border: 1px solid rgba(37, 99, 235, .18) !important;
+  border-radius: 16px !important;
+  gap: 8px !important;
+  width: max-content;
+  max-width: 100%;
+  box-shadow: 0 12px 26px -24px rgba(16, 42, 70, .6);
+}
+#root button.xn-cvd-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 22px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  color: #56677d !important;
+  transition: all .16s ease;
+}
+#root button.xn-cvd-tab::before { content: none !important; }
+#root button.xn-cvd-tab:hover {
+  background: rgba(37, 99, 235, .10) !important;
+  color: #1d4ed8 !important;
+}
+#root button.xn-cvd-tab[aria-pressed="true"] {
+  background: linear-gradient(135deg, #2563eb, #0d9488) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -12px rgba(37, 99, 235, .85) !important;
+}
+
+/* ---------- 主/次按钮 ---------- */
+#root button.xn-cvd-primary {
+  min-height: 46px !important;
+  height: 46px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, #2563eb, #0d9488) !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 26px -14px rgba(37, 99, 235, .85) !important;
+  transition: transform .14s ease, filter .14s ease;
+}
+#root button.xn-cvd-primary:hover { filter: brightness(1.06); transform: translateY(-1px); }
+#root button.xn-cvd-ghost {
+  min-height: 46px !important;
+  height: 46px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #3d4d63 !important;
+  background: #fff !important;
+  border: 1px solid #dde5f0 !important;
+  border-radius: 12px !important;
+  transition: all .15s ease;
+}
+#root button.xn-cvd-ghost:hover {
+  border-color: #2563eb !important;
+  color: #1d4ed8 !important;
+  background: #f6f9ff !important;
+}
+
+/* ---------- 表单 ---------- */
+#root label {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #3d4d63 !important;
+}
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  border-color: #dbe4f1 !important;
+}
+#root select:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, .14) !important;
+}
+#root input[type=text] {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 15.5px !important;
+  font-weight: 650 !important;
+  font-variant-numeric: tabular-nums;
+  border-radius: 12px !important;
+  border-color: #dbe4f1 !important;
+  letter-spacing: .02em;
+}
+#root input[type=color] {
+  height: 48px !important;
+  min-height: 48px !important;
+  width: 54px !important;
+  padding: 4px !important;
+  border-radius: 12px !important;
+  border: 1px solid #dbe4f1 !important;
+  background: #fff !important;
+  cursor: pointer;
+}
+#root input[type=color]::-webkit-color-swatch-wrapper { padding: 0; }
+#root input[type=color]::-webkit-color-swatch { border: 0; border-radius: 8px; }
+#root input[type=text]:focus {
+  border-color: #0d9488 !important;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, .14) !important;
+}
+
+/* ---------- 开关（三色预览） ---------- */
+#root .xn-cvd-switchrow {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#root button.xn-cvd-switch {
+  width: 46px !important;
+  height: 26px !important;
+  min-height: 26px !important;
+  max-height: 26px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: #cfd9e8 !important;
+  box-shadow: inset 0 0 0 1px rgba(16, 42, 70, .08) !important;
+  flex: 0 0 auto;
+  transition: background .16s ease;
+}
+#root button.xn-cvd-switch > span {
+  width: 22px !important;
+  height: 22px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .22);
+  transition: transform .16s ease;
+}
+#root button.xn-cvd-switch[aria-checked="true"] { background: linear-gradient(135deg, #2563eb, #0d9488) !important; }
+#root button.xn-cvd-switch[aria-checked="true"] > span { transform: translateX(20px) !important; }
+#root button.xn-cvd-switch[aria-checked="false"] > span { transform: translateX(0) !important; }
+
+/* ---------- 结果卡 ---------- */
+#root .xn-cvd-card {
+  border: 1px solid rgba(37, 99, 235, .16) !important;
+  border-radius: 18px !important;
+  background: linear-gradient(180deg, #ffffff, #fbfdff) !important;
+  box-shadow: 0 18px 40px -32px rgba(16, 42, 70, .5) !important;
+}
+#root .xn-cvd-cardhead {
+  min-height: 30px;
+}
+#root .xn-cvd-big {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
+  color: #1d4ed8 !important;
+  letter-spacing: -.02em;
+  line-height: 1.05;
+}
+#root .xn-cvd-standard {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #64748b !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-cvd-pass,
+#root .xn-cvd-fail {
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+  line-height: 1.4 !important;
+}
+#root .xn-cvd-pass {
+  color: #0b7a4b !important;
+  background: #e7f8ef !important;
+  border: 1px solid #b8ebd2 !important;
+}
+#root .xn-cvd-fail {
+  color: #b42318 !important;
+  background: #fdecea !important;
+  border: 1px solid #f6c7c0 !important;
+}
+
+/* ---------- 三色预览色条 ---------- */
+#root .xn-cvd-bar {
+  height: 40px !important;
+  border-radius: 10px !important;
+  box-shadow: inset 0 0 0 1px rgba(16, 42, 70, .10), 0 6px 14px -12px rgba(16, 42, 70, .7) !important;
+}
+#root .xn-cvd-hex {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .03em;
+  color: #334155 !important;
+}
+
+/* ---------- 图标尺寸 chips ---------- */
+#root label.xn-cvd-chip {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  border-radius: 12px !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+  border: 1px solid #dbe4f1 !important;
+  background: #fff !important;
+  color: #3d4d63 !important;
+  transition: all .15s ease;
+}
+#root label.xn-cvd-chip:hover {
+  border-color: #93b4f5 !important;
+  background: #f6f9ff !important;
+}
+#root label.xn-cvd-chip.xn-cvd-on {
+  background: linear-gradient(135deg, rgba(37, 99, 235, .13), rgba(13, 148, 136, .10)) !important;
+  border-color: #2563eb !important;
+  color: #1d4ed8 !important;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, .26) !important;
+}
+#root input[type=checkbox] {
+  width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  accent-color: #2563eb;
+  margin: 0 !important;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+#root .xn-cvd-size {
+  display: inline-block;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+  padding: 2px 8px !important;
+  border-radius: 7px !important;
+  background: #eef4ff !important;
+  color: #1d4ed8 !important;
+}
+#root .xn-cvd-miss {
+  font-size: 12.5px !important;
+  font-weight: 650 !important;
+  padding: 4px 10px !important;
+  border-radius: 8px !important;
+  background: #fdf0ee !important;
+  color: #b42318 !important;
+  border: 1px solid #f6d0ca !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root details {
+  border-color: rgba(37, 99, 235, .18) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, .84) !important;
+}
+#root summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #1d4ed8 !important;
+}
+#root details p, #root details li {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #4b5a6e !important;
+}
+#root details strong { color: #0d9488 !important; }
+
+/* ---------- 键盘可达性 ---------- */
+#root button:focus-visible,
+#root select:focus-visible,
+#root label.xn-cvd-chip:focus-within {
+  outline: 3px solid rgba(37, 99, 235, .35) !important;
+  outline-offset: 2px;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root .xn-cvd-tabs {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+  #root button.xn-cvd-tab { width: 100% !important; padding: 0 8px !important; }
+  #root .xn-cvd-big { font-size: 28px !important; }
+}
