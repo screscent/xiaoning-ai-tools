@@ -1,0 +1,113 @@
+/* xn-print.css · 打印尺寸与证件照换算合集（纸感 + 墨蓝） */
+#root { --xn-accent: #4f46e5; --xn-accent-2: #1e293b; }
+
+html, body { background: #f2efe9 !important; }
+#root {
+  background-color: #f7f5f0 !important;
+  background-image:
+    radial-gradient(900px 520px at 10% -10%, rgba(79, 70, 229, .10), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(820px 520px at 100% 110%, rgba(30, 41, 59, .08), rgba(0, 0, 0, 0) 60%),
+    linear-gradient(rgba(79, 70, 229, .05) 1px, rgba(0, 0, 0, 0) 1px),
+    linear-gradient(90deg, rgba(79, 70, 229, .05) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: auto, auto, 26px 26px, 26px 26px;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 27px !important;
+  background: linear-gradient(92deg, #312e81 0%, #4f46e5 48%, #1e293b 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+#root section h2 { font-size: 18px !important; }
+#root section > p:first-of-type { font-size: 13px !important; color: #5b6472 !important; }
+#root section label { font-size: 13px !important; color: #3b4256 !important; }
+
+/* 模式切换（① 打印尺寸 / ② 证件照尺寸） */
+#root button.px-mode {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  border-radius: 999px !important;
+  border: 1px solid #e2e2ef !important;
+}
+#root button.px-mode[aria-pressed="true"] {
+  background: linear-gradient(180deg, #4f46e5, #4338ca) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -10px rgba(79, 70, 229, .85) !important;
+}
+#root button.px-mode[aria-pressed="false"] {
+  background: #fff !important;
+  color: #475569 !important;
+}
+#root button.px-mode[aria-pressed="false"]:hover { background: #eef0fb !important; color: #312e81 !important; }
+#root button.px-mode::before { content: none !important; }
+
+/* 表单 */
+#root section select { min-height: 48px !important; font-size: 15.5px !important; }
+#root section input[type=number] { font-size: 19px !important; }
+
+/* 按钮 */
+#root section button {
+  min-height: 42px !important;
+  font-size: 14px !important;
+  border-radius: 10px !important;
+}
+#root section button.px-primary {
+  min-height: 46px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border: 0 !important;
+  background: linear-gradient(180deg, #4f46e5, #4338ca) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 22px -12px rgba(79, 70, 229, .85) !important;
+}
+#root section button.px-primary:hover { filter: brightness(1.06); }
+#root section button.px-sub {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  background: #f0f1fb !important;
+  color: #4338ca !important;
+  border: 1px solid #dcdff2 !important;
+}
+#root section button.px-sub:hover { background: #e6e8fa !important; }
+#root section button::before { content: none !important; }
+
+/* 结果数值 */
+#root section .px-num {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  font-variant-numeric: tabular-nums;
+  color: #4338ca !important;
+  letter-spacing: -.01em;
+}
+#root section .px-num > span { font-size: 14px !important; color: #6366f1 !important; margin-left: 3px; }
+
+/* DPI 对照表 */
+#root section table { border-collapse: collapse; width: 100%; }
+#root section thead th {
+  font-size: 12.5px !important; font-weight: 700 !important;
+  color: #3730a3 !important; background: #eef0fb !important;
+  padding: 9px 10px !important; white-space: nowrap;
+}
+#root section tbody td {
+  font-size: 13px !important; color: #33405c !important;
+  padding: 9px 10px !important; font-variant-numeric: tabular-nums;
+}
+#root section tbody tr:nth-child(even) td { background: #f7f8fe !important; }
+
+/* 卡片 */
+#root section.rounded-xl, #root section .rounded-xl { border-color: #e7e5f0 !important; }
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 22px !important; }
+  #root section h2 { font-size: 17px !important; }
+  #root button.px-mode { min-height: 44px !important; font-size: 13px !important; padding: 0 14px !important; }
+  #root section .px-num { font-size: 22px !important; }
+  #root section thead th, #root section tbody td { font-size: 12px !important; padding: 7px 8px !important; }
+}
