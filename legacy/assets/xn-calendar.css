@@ -1,0 +1,155 @@
+/* xn-calendar.css · 日期计算与间隔合集（主题：日历桌面——靛蓝/玫红双光 + 32px 日期格）
+ * 纯 CSS 绘制，无图片资源；不改业务逻辑。
+ */
+html, body { background: #f7f8fc !important; }
+#root .min-h-screen { background: transparent !important; }
+#root {
+  background-color: #f9fafd;
+  background-image:
+    radial-gradient(780px 480px at 2% -8%, rgba(79, 70, 229, .10), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(720px 460px at 100% 104%, rgba(225, 29, 72, .07), rgba(0, 0, 0, 0) 60%),
+    linear-gradient(rgba(79, 70, 229, .035) 1px, rgba(0, 0, 0, 0) 1px),
+    linear-gradient(90deg, rgba(79, 70, 229, .035) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: auto, auto, 32px 32px, 32px 32px;
+  background-attachment: fixed, fixed, scroll, scroll;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 31px !important;
+  background: linear-gradient(92deg, #312e81 0%, #4f46e5 50%, #be123c 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+
+/* 工具 tab */
+#root button[class*="whitespace-nowrap"] {
+  min-height: 44px !important;
+  padding: 0 10px !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  border-radius: 10px !important;
+}
+#root button[class*="whitespace-nowrap"][class*="bg-blue-600"] {
+  background: linear-gradient(135deg, #4f46e5, #4338ca) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 22px -16px rgba(79, 70, 229, .95);
+}
+#root button[class*="whitespace-nowrap"][data-xn-num]::before {
+  content: attr(data-xn-num);
+  margin-right: 4px;
+  font-weight: 800;
+  opacity: .75;
+}
+
+/* 标题层 */
+#root h2 { font-size: 18px !important; letter-spacing: -.01em; }
+#root h2 + p, #root h2 ~ p { font-size: 13px !important; line-height: 1.7; }
+
+/* 卡片 */
+#root .rounded-2xl.border.bg-white {
+  border-color: #e5e7f2 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 18px 40px -32px rgba(79, 70, 229, .5) !important;
+}
+
+/* 日期输入 */
+#root input[type="date"]:not([type="file"]):not([type="range"]):not([type="number"]):not([type="checkbox"]):not([type="radio"]) {
+  min-height: 48px !important;
+  font-size: 15.5px !important;
+  border-radius: 12px !important;
+}
+#root label { font-size: 13px !important; color: #475569 !important; }
+
+/* 结果行：数值放大 */
+#root .border-b.border-gray-100 {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+  border-color: #eef0f8 !important;
+}
+#root .border-b.border-gray-100 > .text-sm {
+  font-size: 13.5px !important;
+  color: #4b5563 !important;
+}
+#root .border-b.border-gray-100 > .text-sm.font-semibold {
+  font-size: 20px !important;
+  font-weight: 750 !important;
+  color: #111827 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.01em;
+}
+#root .border-b.border-gray-100.xn-primary {
+  margin: 0 -8px;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  background: linear-gradient(90deg, #eef2ff, rgba(238, 242, 255, 0));
+  border-radius: 10px;
+  border-bottom-color: transparent !important;
+}
+#root .border-b.border-gray-100.xn-primary > .text-sm.font-semibold { font-size: 27px !important; color: #312e81 !important; }
+
+/* 复制 / 使用说明 */
+#root button[class*="mt-4"][class*="w-full"] {
+  min-height: 46px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+}
+#root button[class*="w-full"][class*="py-2.5"]:not([class*="mt-4"]) { min-height: 44px !important; }
+
+/* 主结果横幅 */
+#root .bg-blue-50 {
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff) !important;
+}
+#root .bg-blue-50 .text-3xl,
+#root .bg-blue-50 .text-4xl {
+  font-size: 34px !important;
+  color: #312e81 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 使用说明可点击头 */
+#root [data-xn-guide="1"] {
+  min-height: 44px !important;
+  display: flex; align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#root [data-xn-guide="1"]:hover { background: #f5f6ff; }
+#root [data-xn-guide="1"]:focus-visible { outline: 2px solid #4f46e5; outline-offset: 2px; }
+
+/* 快捷日期 chip */
+#root .xn-date-presets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+#root .xn-date-presets button {
+  min-height: 34px !important;
+  padding: 0 11px !important;
+  border-radius: 8px !important;
+  border: 1px solid #e5e7f2 !important;
+  background: #fff !important;
+  color: #4338ca !important;
+  font-size: 12.5px !important;
+  font-weight: 650 !important;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+#root .xn-date-presets button:hover { border-color: #818cf8 !important; background: #f5f5ff !important; }
+
+/* 焦点可见 */
+#root a:focus-visible, #root button:focus-visible,
+#root input:focus-visible, #root select:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 17px !important; }
+  #root button[class*="whitespace-nowrap"] { min-height: 44px !important; font-size: 12.5px !important; padding: 0 12px !important; }
+  #root .border-b.border-gray-100 > .text-sm.font-semibold { font-size: 19px !important; }
+  #root .border-b.border-gray-100.xn-primary > .text-sm.font-semibold { font-size: 24px !important; }
+  #root .xn-date-presets button { min-height: 38px !important; font-size: 13px !important; }
+}
