@@ -1,0 +1,131 @@
+/* R1255 食物热量与数据单位合集（atvkckpmpa）· 能量暖橙主题
+ * 仅本页引用；不改热量/单位/带宽换算，只提升 tab、开关、输入与结果可读性。
+ */
+
+/* ---------- 1. 底色：能量暖橙 ---------- */
+body {
+  background:
+    radial-gradient(900px 340px at 50% -100px, rgba(234, 88, 12, 0.09), transparent 70%),
+    radial-gradient(420px 220px at 92% 0%, rgba(16, 185, 129, 0.06), transparent 70%),
+    repeating-linear-gradient(180deg, rgba(120, 83, 60, 0.03) 0 1px, transparent 1px 26px),
+    linear-gradient(180deg, #fffaf5 0%, #fdf3e9 100%) !important;
+  background-attachment: fixed !important;
+}
+#root { background: transparent !important; }
+
+/* ---------- 2. 标题 ---------- */
+#root h1 { font-size: 27px !important; letter-spacing: -0.015em; color: #1c1917 !important; }
+#root h2 { font-size: 20px !important; letter-spacing: -0.01em; color: #7c2d12 !important; }
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 19px !important; }
+}
+
+/* ---------- 3. 工具 tabs ---------- */
+#root button.xn-cal-tab {
+  min-height: 44px !important;
+  padding: 0 20px !important;
+  border-radius: 12px !important;
+  border: 1px solid #f1e0d1 !important;
+  background: #fff !important;
+  color: #57534e !important;
+  font-size: 14.5px !important;
+  font-weight: 600;
+}
+#root button.xn-cal-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #ea580c, #059669) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -12px rgba(234, 88, 12, 0.85);
+}
+@media (max-width: 640px) {
+  #root button.xn-cal-tab { flex: 1 1 40%; }
+}
+
+/* ---------- 4. 主 / 复制 / 开关 ---------- */
+#root button.xn-cal-primary {
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #ea580c, #059669) !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 700;
+  box-shadow: 0 12px 24px -16px rgba(234, 88, 12, 0.9);
+}
+#root button.xn-cal-copy {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  border: 1px solid #f1e0d1 !important;
+  background: #fff !important;
+  color: #9a3412 !important;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+#root button.xn-cal-copy:hover { background: #fff7ed !important; }
+#root button[role=switch] {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- 5. 输入 ---------- */
+#root input[type=number] {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #f1e0d1 !important;
+  background: #fff !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root select {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #f1e0d1 !important;
+  background: #fff !important;
+  font-size: 16px !important;
+}
+#root input:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: #ea580c !important;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.14) !important;
+}
+
+/* ---------- 6. 结果数值 ---------- */
+#root .xn-cal-val {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-cal-val-lg {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  color: #9a3412 !important;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+/* ---------- 7. 使用说明 ---------- */
+#root details {
+  border: 1px solid #f1e0d1 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  padding: 0 14px !important;
+}
+#root summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  color: #57534e;
+}
+
+/* ---------- 8. 辅助小字 ---------- */
+#root .text-xs { font-size: 13px !important; }
+#root label { font-size: 14px !important; }
