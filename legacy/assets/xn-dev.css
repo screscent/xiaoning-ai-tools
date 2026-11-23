@@ -1,0 +1,179 @@
+/* R1264 浏览器调试速查合集（dzazvvslwd）· 主题：调试器·石墨青柠
+ * 纯 CSS 渐变绘制，无图片资源；仅人用友好层。
+ */
+
+/* ---------- 主题底：石墨 + 青柠 + 网格 ---------- */
+html { background: #f1f5f4 !important; }
+body {
+  background:
+    radial-gradient(940px 540px at 6% -10%, rgba(16, 185, 129, .16), transparent 62%),
+    radial-gradient(860px 500px at 104% -6%, rgba(51, 65, 85, .16), transparent 60%),
+    linear-gradient(180deg, #f8fbfa 0%, #f1f5f4 48%, #f4f7f6 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  background-image:
+    linear-gradient(rgba(16, 185, 129, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, .06) 1px, transparent 1px),
+    radial-gradient(rgba(51, 65, 85, .12) 1px, transparent 1px) !important;
+  background-size: 32px 32px, 32px 32px, 160px 160px !important;
+  opacity: .9 !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  background: linear-gradient(92deg, #0f172a 0%, #047857 55%, #65a30d 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+#root h2 {
+  padding-left: 11px !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  letter-spacing: -.01em;
+}
+#root h2::before {
+  background: linear-gradient(180deg, #10b981, #65a30d) !important;
+  width: 5px !important;
+  left: 0 !important;
+}
+
+/* ---------- 工具 tab（下划线式） ---------- */
+#root .xn-dev-tabs {
+  gap: 4px !important;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #dbe5e2 !important;
+  justify-content: flex-start !important;
+}
+#root a.xn-dev-tab {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #5b6b66 !important;
+  border-bottom-width: 3px !important;
+  border-bottom-color: transparent !important;
+  border-radius: 10px 10px 0 0 !important;
+  transition: all .15s ease;
+}
+#root a.xn-dev-tab:hover {
+  color: #047857 !important;
+  background: #f0fdf9 !important;
+}
+#root a.xn-dev-tab[aria-pressed="true"] {
+  color: #047857 !important;
+  border-bottom-color: #10b981 !important;
+  background: linear-gradient(180deg, transparent, rgba(16, 185, 129, .08)) !important;
+}
+
+/* ---------- 搜索框 ---------- */
+#root input[type=text]:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  border-color: #dbe5e2 !important;
+  background: #fff !important;
+}
+#root input[type=text]:focus {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, .14) !important;
+}
+
+/* ---------- 知识卡 ---------- */
+#root article.xn-dev-card {
+  border-radius: 18px !important;
+  border: 1px solid #dfeae6 !important;
+  background: linear-gradient(180deg, #ffffff, #fbfdfc) !important;
+  box-shadow: 0 16px 36px -34px rgba(15, 23, 42, .5) !important;
+  transition: all .16s ease;
+}
+#root article.xn-dev-card:hover {
+  border-color: rgba(16, 185, 129, .45) !important;
+  box-shadow: 0 20px 40px -32px rgba(4, 120, 87, .45) !important;
+  transform: translateY(-1px);
+}
+#root article.xn-dev-card h3 {
+  font-size: 15.5px !important;
+  font-weight: 800 !important;
+  color: #047857 !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+#root article.xn-dev-card h3::before {
+  content: ">";
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  font-weight: 800;
+  color: #65a30d;
+  opacity: .9;
+}
+#root article.xn-dev-card > p {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: #475569 !important;
+}
+#root p.xn-dev-label {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #64748b !important;
+  letter-spacing: .02em;
+  margin-bottom: 4px !important;
+}
+#root article.xn-dev-card li,
+#root article.xn-dev-card p:not(.xn-dev-label):not(:first-of-type) {
+  font-size: 13.5px !important;
+  line-height: 1.75 !important;
+  color: #334155 !important;
+}
+#root article.xn-dev-card li::marker { color: #10b981; }
+#root article.xn-dev-card strong { color: #0f172a !important; }
+#root article.xn-dev-card [class*="bg-blue-50"],
+#root article.xn-dev-card [class*="bg-indigo-50"] {
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  border-color: #c7f0e2 !important;
+}
+#root article.xn-dev-card code {
+  font-size: 13px !important;
+  padding: 1px 6px !important;
+  border-radius: 6px !important;
+  background: #f0fdf9 !important;
+  border: 1px solid #c7f0e2 !important;
+  color: #047857 !important;
+}
+
+/* ---------- 键盘可达性 ---------- */
+#root a:focus-visible,
+#root input:focus-visible {
+  outline: 3px solid rgba(16, 185, 129, .38) !important;
+  outline-offset: 2px;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root .xn-dev-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px !important;
+    border-bottom: 0 !important;
+  }
+  #root a.xn-dev-tab {
+    width: 100% !important;
+    padding: 0 4px !important;
+    font-size: 13px !important;
+    white-space: nowrap;
+    border: 1px solid #dbe5e2 !important;
+    border-radius: 10px !important;
+    justify-content: center;
+  }
+  #root a.xn-dev-tab[aria-pressed="true"] {
+    border-color: #10b981 !important;
+    background: rgba(16, 185, 129, .10) !important;
+  }
+}
