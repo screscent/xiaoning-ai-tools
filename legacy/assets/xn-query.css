@@ -1,0 +1,253 @@
+/* R1267 SQL 格式化与缩进规范合集（ija4mt8zig）· 主题：查询台·墨青杏黄
+ * 纯 CSS 渐变绘制，无图片资源；仅人用友好层。
+ */
+
+/* ---------- 主题底：杏白 + 墨青 + 列线 ---------- */
+html { background: #f6f4ef !important; }
+body {
+  background:
+    radial-gradient(920px 530px at 6% -10%, rgba(13, 148, 136, .16), transparent 62%),
+    radial-gradient(840px 490px at 104% -6%, rgba(217, 119, 6, .14), transparent 60%),
+    linear-gradient(180deg, #fbf9f4 0%, #f6f4ef 48%, #f4f8f7 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  background-image:
+    linear-gradient(90deg, rgba(13, 148, 136, .06) 1px, transparent 1px),
+    linear-gradient(rgba(13, 148, 136, .035) 1px, transparent 1px),
+    radial-gradient(rgba(217, 119, 6, .10) 1px, transparent 1px) !important;
+  background-size: 120px 100%, 100% 32px, 24px 24px !important;
+  opacity: .9 !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  background: linear-gradient(92deg, #0f2b2a 0%, #0d9488 55%, #d97706 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+#root h3 {
+  font-size: 15.5px !important;
+  font-weight: 800 !important;
+  color: #0f2b2a !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#root h3 > span:first-child[class*="inline-flex"] {
+  background: #e6f7f4 !important;
+  color: #0d9488 !important;
+  border: 1px solid #bfeae3 !important;
+  font-weight: 800 !important;
+}
+
+#root button.xn-sql-mode::before,
+#root button.xn-sql-toggle::before { content: none !important; }
+
+/* ---------- 模式切换 / 开关 ---------- */
+#root button.xn-sql-mode {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  border-radius: 11px !important;
+  border: 1px solid #e2ded4 !important;
+  background: #fff !important;
+  color: #5b6560 !important;
+  transition: all .14s ease;
+}
+#root button.xn-sql-mode:hover {
+  border-color: #5eead4 !important;
+  color: #0f766e !important;
+  background: #f2fbf9 !important;
+}
+#root button.xn-sql-mode[aria-pressed="true"] {
+  background: linear-gradient(135deg, rgba(13, 148, 136, .16), rgba(217, 119, 6, .10)) !important;
+  border-color: #0d9488 !important;
+  color: #0f766e !important;
+  box-shadow: inset 0 0 0 1px rgba(13, 148, 136, .26) !important;
+}
+#root button.xn-sql-toggle {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  border-radius: 11px !important;
+  border: 1px solid #e2ded4 !important;
+  background: #fff !important;
+  color: #5b6560 !important;
+}
+#root button.xn-sql-toggle[aria-pressed="true"] {
+  background: #f0fbf9 !important;
+  border-color: #0d9488 !important;
+  color: #0f766e !important;
+  box-shadow: inset 0 0 0 1px rgba(13, 148, 136, .22) !important;
+}
+
+/* ---------- 表单 ---------- */
+#root label {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #47534e !important;
+}
+#root textarea {
+  min-height: 200px !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+  border-radius: 12px !important;
+  border-color: #dfe3da !important;
+  background: #fbfcfb !important;
+  padding: 12px 14px !important;
+}
+#root textarea:focus {
+  border-color: #0d9488 !important;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, .14) !important;
+  outline: none !important;
+}
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  border-color: #dfe3da !important;
+}
+#root select:focus {
+  border-color: #0d9488 !important;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, .14) !important;
+}
+
+/* ---------- 动作按钮 ---------- */
+#root button.xn-sql-primary {
+  min-height: 46px !important;
+  height: 46px !important;
+  padding: 0 24px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  background: linear-gradient(135deg, #0d9488, #0f766e) !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 26px -14px rgba(13, 148, 136, .85) !important;
+  transition: transform .14s ease, filter .14s ease;
+}
+#root button.xn-sql-primary:hover { filter: brightness(1.06); transform: translateY(-1px); }
+#root button.xn-sql-secondary {
+  min-height: 42px !important;
+  height: 42px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 650 !important;
+  border-radius: 11px !important;
+  color: #46524d !important;
+  background: #fff !important;
+  border: 1px solid #e2ded4 !important;
+  transition: all .14s ease;
+}
+#root button.xn-sql-secondary:hover {
+  border-color: #5eead4 !important;
+  color: #0f766e !important;
+  background: #f5fcfb !important;
+}
+#root button.xn-sql-danger {
+  min-height: 42px !important;
+  height: 42px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 650 !important;
+  border-radius: 11px !important;
+  color: #be123c !important;
+  background: #fff5f6 !important;
+  border: 1px solid #fecdd3 !important;
+}
+#root button.xn-sql-danger:hover { background: #ffe4e6 !important; }
+
+/* ---------- 结果卡 ---------- */
+#root .xn-sql-card,
+#root section.mt-4.rounded-xl,
+#root div.mt-4.rounded-xl.border {
+  border-radius: 18px !important;
+  border: 1px solid rgba(13, 148, 136, .16) !important;
+  background: linear-gradient(180deg, #ffffff, #fbfdfc) !important;
+  box-shadow: 0 16px 36px -34px rgba(15, 43, 42, .5) !important;
+}
+#root .xn-sql-card p {
+  font-size: 13.5px !important;
+  line-height: 1.7 !important;
+  color: #55605b !important;
+}
+
+/* ---------- 代码块 ---------- */
+#root pre {
+  font-size: 14.5px !important;
+  line-height: 1.75 !important;
+  padding: 14px 16px !important;
+  border-radius: 12px !important;
+  background: #f7fbfa !important;
+  border: 1px solid #dfece8 !important;
+  color: #123230 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+  overflow-x: auto !important;
+}
+#root pre code { font-size: 14.5px !important; }
+
+/* ---------- 统计块 ---------- */
+#root .xn-sql-stat {
+  background: #f4faf8 !important;
+  border: 1px solid #dfece8 !important;
+  border-radius: 11px !important;
+  padding: 9px 12px !important;
+}
+#root .xn-sql-stat span:first-child {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #5b6b66 !important;
+  letter-spacing: .02em;
+}
+#root .xn-sql-statnum {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #0f766e !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 使用说明 ---------- */
+#root details {
+  border-color: rgba(13, 148, 136, .18) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, .86) !important;
+}
+#root summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #0f766e !important;
+}
+#root details p, #root details li {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #55605b !important;
+}
+
+/* ---------- 键盘可达性 ---------- */
+#root button:focus-visible,
+#root textarea:focus-visible,
+#root select:focus-visible {
+  outline: 3px solid rgba(13, 148, 136, .38) !important;
+  outline-offset: 2px;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root textarea { min-height: 160px !important; }
+  #root pre { font-size: 13.5px !important; }
+  #root pre code { font-size: 13.5px !important; }
+  #root button.xn-sql-mode { padding: 0 12px !important; }
+}
