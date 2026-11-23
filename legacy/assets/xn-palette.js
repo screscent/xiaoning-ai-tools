@@ -23,6 +23,16 @@
         b.classList.add("xn-pal-swatch");
       }
     }
+    /* 色卡在数据渲染前可能暂无文本，补可访问名称 */
+    var anon = 0;
+    var bs2 = root.querySelectorAll("button");
+    for (var q = 0; q < bs2.length; q++) {
+      var bb = bs2[q];
+      if (bb.getAttribute("aria-label") || txt(bb)) continue;
+      anon += 1;
+      bb.setAttribute("aria-label", "色卡 " + anon);
+    }
+
     var h2s = root.querySelectorAll("h2");
     for (var j = 0; j < h2s.length; j++) {
       var raw = txt(h2s[j]);
