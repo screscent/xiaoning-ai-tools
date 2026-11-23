@@ -1,0 +1,210 @@
+/* R1308 厨房锅具与刀具选购合集 · 主题「灶台木案」 xn-chef
+   纯 CSS：暖木纹 + 灶火琥珀 + 不锈钢冷光，无图片 */
+
+#root {
+  --xn-chef-ink: #3d2f22;
+  --xn-chef-wood: #b98a5a;
+  --xn-chef-amber: #d97706;
+  --xn-chef-ember: #ea580c;
+  --xn-chef-steel: #64748b;
+  --xn-chef-jade: #1f5f46;
+}
+
+/* ---------- 底色：木案台面 ---------- */
+#root [class*="bg-gradient-to-b"][class*="from-amber-50"] {
+  background:
+    radial-gradient(1200px 420px at 50% -140px, rgba(251, 191, 36, 0.22), transparent 70%),
+    radial-gradient(900px 500px at 88% 8%, rgba(234, 88, 12, 0.10), transparent 65%),
+    repeating-linear-gradient(92deg, rgba(146, 95, 52, 0.045) 0px, rgba(146, 95, 52, 0.045) 2px, transparent 2px, transparent 11px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0px, rgba(255, 255, 255, 0.5) 1px, transparent 1px, transparent 26px),
+    linear-gradient(180deg, #fffaf1 0%, #fdf3e3 46%, #f8ead8 100%) !important;
+  background-attachment: fixed;
+}
+
+/* ---------- 顶部标题 ---------- */
+#root h1 {
+  letter-spacing: 0.01em;
+}
+
+/* ---------- 工具导航：编号 + 当前项高亮 ---------- */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  color: #7a5c3c !important;
+  box-shadow: inset 0 0 0 1px rgba(185, 138, 90, 0.22);
+  background: rgba(255, 252, 245, 0.55);
+}
+#root a[href^="#/"]:hover {
+  background: #fff8ea !important;
+  color: #b45309 !important;
+}
+#root a[href^="#/"][aria-current="page"] {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 55%, #ea580c 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+}
+
+/* ---------- 区块标题 ---------- */
+#root section[id^="sec-"] h2 {
+  position: relative;
+  font-size: 19px !important;
+  line-height: 1.35;
+  color: #33261a !important;
+  padding-left: 14px;
+  letter-spacing: 0.01em;
+}
+#root section[id^="sec-"] h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #f59e0b, #ea580c);
+}
+#root section[id^="sec-"] h2 + p {
+  font-size: 14.5px !important;
+  line-height: 1.7;
+  color: #7d6a55 !important;
+}
+
+/* ---------- 输入区 ---------- */
+#root section[id^="sec-"] label > span:first-child,
+#root section[id^="sec-"] legend {
+  font-size: 14px !important;
+  color: #6b4f32 !important;
+  letter-spacing: 0.02em;
+}
+#root section[id^="sec-"] input[type="number"] {
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 700;
+  color: #33261a;
+  background: #fffdf8;
+  border-color: #e7d3b4 !important;
+  border-radius: 12px;
+}
+#root section[id^="sec-"] input[type="number"]:focus {
+  outline: none;
+  border-color: #d97706 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.16);
+}
+#root section[id^="sec-"] input[type="number"] + span,
+#root section[id^="sec-"] label span > span:last-child {
+  color: #96784d;
+}
+
+/* ---------- 选项胶囊 ---------- */
+#root section[id^="sec-"] fieldset button[aria-pressed] {
+  min-height: 44px !important;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 13.5px !important;
+  border-color: #e6d2b2 !important;
+  color: #6b4f32 !important;
+  background: #fffdf8;
+}
+#root section[id^="sec-"] fieldset button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #b45309, #d97706) !important;
+  border-color: #b45309 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.28);
+}
+
+/* ---------- 计算按钮 ---------- */
+#root section[id^="sec-"] button[class*="min-h-[48px]"],
+#root section[id^="sec-"] button[class*="bg-amber-600"],
+#root section[id^="sec-"] button[class*="bg-emerald-600"] {
+  min-height: 50px !important;
+  font-size: 15px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #f59e0b, #ea580c) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 24px rgba(217, 119, 6, 0.28);
+}
+#root section[id^="sec-"] button[class*="min-h-[48px]"]:hover,
+#root section[id^="sec-"] button[class*="bg-amber-600"]:hover,
+#root section[id^="sec-"] button[class*="bg-emerald-600"]:hover {
+  filter: brightness(1.05);
+}
+
+/* ---------- 结果卡 ---------- */
+#root section[id^="sec-"] [class*="rounded-2xl"][class*="bg-emerald-50"] {
+  background: linear-gradient(180deg, #fffdf8 0%, #fdf5e6 100%) !important;
+  border-color: #eed9b6 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 14px 34px rgba(150, 105, 50, 0.10);
+}
+#root section[id^="sec-"] [class*="rounded-2xl"][class*="bg-emerald-50"] p[class*="text-base"][class*="font-black"] {
+  font-size: 20px !important;
+  color: #7c2d12 !important;
+}
+#root section[id^="sec-"] dl > div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: rgba(146, 95, 52, 0.12) !important;
+}
+#root section[id^="sec-"] dl dt {
+  font-size: 12.5px !important;
+  letter-spacing: 0.05em;
+  color: #96784d !important;
+}
+#root section[id^="sec-"] dl dd {
+  font-size: 15.5px !important;
+  line-height: 1.75;
+  color: #4a3a28 !important;
+}
+#root section[id^="sec-"] dl > div:first-child dd {
+  font-size: 18px !important;
+  font-weight: 800;
+  color: #1f5f46 !important;
+  letter-spacing: 0.01em;
+}
+#root section[id^="sec-"] ol li {
+  font-size: 13.5px !important;
+  line-height: 1.72;
+  color: #5b4a37 !important;
+}
+#root section[id^="sec-"] ol li > span:first-child {
+  font-size: 10.5px !important;
+  background: #b45309 !important;
+}
+
+/* ---------- 复制结果 ---------- */
+#root section[id^="sec-"] button[class*="border-emerald-300"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-color: #d9b98a !important;
+  color: #92400e !important;
+  background: #fffdf8 !important;
+  border-radius: 12px !important;
+}
+#root section[id^="sec-"] button[class*="border-emerald-300"]:hover {
+  background: #fdf0d8 !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root section:not([id]) h2 {
+  font-size: 18px !important;
+  color: #4a3a28 !important;
+}
+#root section:not([id]) li,
+#root section:not([id]) p {
+  font-size: 13.5px !important;
+  line-height: 1.7;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root a[href^="#/"] {
+    font-size: 13px !important;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  #root section[id^="sec-"] h2 { font-size: 18px !important; }
+  #root section[id^="sec-"] dl dd { font-size: 15px !important; }
+  #root section[id^="sec-"] dl > div:first-child dd { font-size: 17px !important; }
+  #root section[id^="sec-"] ol li { font-size: 13px !important; }
+  #root section[id^="sec-"] fieldset button[aria-pressed] { font-size: 13px !important; }
+}
