@@ -1,0 +1,113 @@
+/* R1256 航班值机与转机衔接合集（atvsvxpmpa）· 航站蓝主题
+ * 仅本页引用；不改倒推/转机计算，只提升 tab、开关、输入与时间表可读性。
+ */
+body {
+  background:
+    radial-gradient(900px 340px at 50% -100px, rgba(2, 132, 199, 0.10), transparent 70%),
+    repeating-linear-gradient(115deg, rgba(2, 132, 199, 0.05) 0 2px, transparent 2px 22px),
+    linear-gradient(180deg, #f8fbff 0%, #eef6fd 100%) !important;
+  background-attachment: fixed !important;
+}
+#root { background: transparent !important; }
+
+#root h1 { font-size: 27px !important; letter-spacing: -0.015em; color: #0f172a !important; }
+#root h2 { font-size: 20px !important; letter-spacing: -0.01em; color: #0c4a6e !important; }
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root h2 { font-size: 19px !important; }
+}
+
+/* tabs */
+#root button.xn-flight-tab {
+  min-height: 44px !important;
+  padding: 0 20px !important;
+  border-radius: 12px !important;
+  border: 1px solid #d7e8f6 !important;
+  background: #fff !important;
+  color: #475569 !important;
+  font-size: 14.5px !important;
+  font-weight: 600;
+}
+#root button.xn-flight-tab[aria-selected="true"] {
+  background: linear-gradient(135deg, #0284c7, #4f46e5) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -12px rgba(2, 132, 199, 0.85);
+}
+@media (max-width: 640px) {
+  #root button.xn-flight-tab { flex: 1 1 40%; }
+}
+
+/* 主操作 / 开关 */
+#root button.xn-flight-primary {
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #0284c7, #4f46e5) !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  font-weight: 700;
+  box-shadow: 0 12px 24px -16px rgba(2, 132, 199, 0.9);
+}
+#root button[role=switch] {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+}
+
+/* 输入 */
+#root input[type=number] {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #d7e8f6 !important;
+  background: #fff !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root select {
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #d7e8f6 !important;
+  background: #fff !important;
+  font-size: 16px !important;
+}
+#root input:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+}
+#root label { font-size: 13.5px !important; color: #334155 !important; }
+
+/* 时间表 */
+#root .xn-flight-time {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #0369a1 !important;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+#root div.xn-flight-row {
+  border: 1px solid #e2eef8 !important;
+  border-radius: 10px;
+  background: #fbfdff !important;
+  padding: 9px 12px !important;
+}
+
+/* 使用说明 */
+#root details {
+  border: 1px solid #d7e8f6 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  padding: 0 14px !important;
+}
+#root summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  color: #475569;
+}
+
+#root .text-xs { font-size: 13px !important; }
