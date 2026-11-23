@@ -1,0 +1,80 @@
+/* xn-toolbox.css · 在线小工具合集（主题：随手工具箱——蓝/青双光 + 24px 网格） */
+html, body { background: #eef3fa !important; }
+#root {
+  background-color: #f5f8fd !important;
+  background-image:
+    radial-gradient(900px 520px at 6% -8%, rgba(37, 99, 235, .10), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(820px 520px at 100% 104%, rgba(13, 148, 136, .08), rgba(0, 0, 0, 0) 62%),
+    linear-gradient(rgba(37, 99, 235, .045) 1px, rgba(0, 0, 0, 0) 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, .045) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: auto, auto, 24px 24px, 24px 24px;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 27px !important;
+  background: linear-gradient(92deg, #1e3a8a 0%, #2563eb 48%, #0d9488 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+#root h2 { font-size: 18px !important; }
+#root h3 { font-size: 16px !important; }
+
+/* 模式 tab */
+#root button.px-mode {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+#root button.px-mode[aria-pressed="true"] {
+  color: #1d4ed8 !important;
+  border-bottom-color: #2563eb !important;
+}
+#root button.px-mode[aria-pressed="false"] { color: #64748b !important; }
+
+/* 表单 */
+#root input[type="text"]:not([type="file"]):not([type="range"]):not([type="number"]):not([type="checkbox"]):not([type="radio"]),
+#root input[type="date"] { font-size: 15.5px !important; min-height: 48px !important; }
+#root textarea { font-size: 15.5px !important; line-height: 1.6 !important; }
+#root select { min-height: 48px !important; font-size: 15.5px !important; }
+
+/* 主按钮 / 清空 */
+#root button[class*="bg-blue-600"], #root button[class*="bg-blue-500"] {
+  min-height: 46px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 20px -16px rgba(37, 99, 235, .85) !important;
+}
+#root button.px-reset {
+  min-height: 46px !important;
+  font-size: 14.5px !important;
+  background: #fff !important;
+  color: #1e40af !important;
+  border: 1px solid #dfe6f2 !important;
+  border-radius: 10px !important;
+}
+
+/* 单位/子类 chip */
+#root button.px-chip {
+  min-height: 40px !important;
+  font-size: 13.5px !important;
+  padding: 0 12px !important;
+  border-radius: 8px !important;
+}
+
+/* 结果数字（已是 24，补等宽与行高） */
+#root span[class*="tabular"], #root div[class*="tabular"] { font-variant-numeric: tabular-nums; }
+
+/* 焦点可见 */
+#root a:focus-visible, #root button:focus-visible, #root input:focus-visible, #root select:focus-visible, #root textarea:focus-visible {
+  outline: 2px solid #2563eb; outline-offset: 2px;
+}
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 22px !important; }
+  #root h2 { font-size: 17px !important; }
+  #root button.px-mode { min-height: 44px !important; font-size: 13px !important; }
+}
