@@ -1,0 +1,220 @@
+/* R1276 思维导图与大纲合集（key2pcdudk）· 蓝图主题
+ * 纯 CSS：靛紫 + 琥珀柔光 + 32px 蓝图网格，无图片
+ */
+
+:root {
+  --mp-violet: #7c3aed;
+  --mp-indigo: #4338ca;
+  --mp-amber: #b45309;
+}
+
+html { background: #f2f1fa; }
+body {
+  background:
+    radial-gradient(1000px 560px at 2% -8%, rgba(124, 58, 237, .16), transparent 62%),
+    radial-gradient(900px 520px at 102% 0%, rgba(180, 83, 9, .10), transparent 58%),
+    linear-gradient(180deg, #fbfaff 0%, #f2f1fa 54%, #f9f8fd 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(67, 56, 202, .07) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(90deg, rgba(67, 56, 202, .07) 0 1px, transparent 1px 32px) !important;
+  background-size: auto !important;
+  opacity: .6 !important;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 58%) !important;
+  mask-image: linear-gradient(180deg, #000, transparent 58%) !important;
+}
+
+#root h1 {
+  background: linear-gradient(92deg, #1e1b4b 0%, #7c3aed 55%, #b45309 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+#root header p, #root .text-center p { font-size: 13px !important; }
+
+/* ---------- 工具切换 ---------- */
+#root .sv-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  width: 100%;
+}
+#root .sv-tabs a {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  border: 1px solid #e2e2f2 !important;
+  background: rgba(255, 255, 255, .9) !important;
+  color: #4b5563 !important;
+  transition: all .16s;
+}
+#root .sv-tabs a[aria-current="page"] {
+  background-image: linear-gradient(135deg, #7c3aed, #4338ca) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 20px -14px rgba(124, 58, 237, .85) !important;
+}
+#root .sv-tabs a:not([aria-current="page"]):hover { border-color: #c4b5fd !important; color: #5b21b6 !important; }
+
+/* ---------- 标题 / 卡片 ---------- */
+#root section > div:first-child h2,
+#root section h2 {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.01em;
+}
+#root section h3 { font-size: 14px !important; font-weight: 700 !important; color: #334155 !important; }
+#root section .rounded-xl.border { border-radius: 16px !important; border-color: #e5e3f2 !important; }
+#root section .rounded-xl.border.bg-white,
+#root section > div.rounded-xl {
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 18px 40px -32px rgba(30, 27, 75, .55) !important;
+}
+
+/* ---------- 表单 ---------- */
+#root label { font-size: 14px !important; font-weight: 600 !important; color: #374151 !important; }
+#root label span { font-size: 12.5px !important; }
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dfddef !important;
+  background: #fff !important;
+}
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]):focus {
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, .14) !important;
+  outline: none !important;
+}
+#root textarea {
+  font-size: 15.5px !important;
+  line-height: 1.75 !important;
+  min-height: 200px !important;
+  border-radius: 10px !important;
+  border-color: #dfddef !important;
+  background: #fdfdff !important;
+  padding: 11px 13px !important;
+}
+#root textarea:focus {
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, .14) !important;
+  outline: none !important;
+}
+#root select {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dfddef !important;
+  background: #fff !important;
+}
+#root select:focus { border-color: #7c3aed !important; box-shadow: 0 0 0 4px rgba(124, 58, 237, .14) !important; }
+#root input[type=number] {
+  font-size: 17px !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dfddef !important;
+}
+
+/* ---------- 按钮 ---------- */
+#root section button {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+}
+#root section button.sv-primary {
+  min-height: 48px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  background-image: linear-gradient(135deg, #7c3aed, #4338ca) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 12px 24px -16px rgba(124, 58, 237, .9) !important;
+}
+#root section button.sv-mini {
+  min-height: 36px !important;
+  padding: 0 10px !important;
+  font-size: 12.5px !important;
+  border-radius: 8px !important;
+}
+#root section button.sv-tpl {
+  min-height: 44px !important;
+  background: #f7f5ff !important;
+  border: 1px solid #dcd6fb !important;
+  color: #5b21b6 !important;
+  font-weight: 600 !important;
+}
+#root section button.sv-tpl:hover { background: #efebff !important; border-color: #a78bfa !important; }
+
+/* ---------- 导图预览：可横向滚动，不裁切 ---------- */
+#root .sv-map-box {
+  overflow: auto !important;
+  scrollbar-width: thin;
+  background-image:
+    radial-gradient(rgba(67, 56, 202, .14) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-radius: 12px;
+}
+#root .sv-map-hint {
+  margin-bottom: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #92400e;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+#root .sv-map-svg { max-width: none !important; flex: none; }
+
+/* ---------- 节点统计 ---------- */
+#root .sv-stat {
+  border: 1px solid #e7e3f7 !important;
+  background: #fdfcff !important;
+  border-radius: 12px !important;
+  padding: 10px 12px !important;
+}
+#root .sv-stat .sv-num {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.02em;
+  color: #5b21b6 !important;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+#root .sv-stat .sv-label { font-size: 12.5px !important; color: #7b8494 !important; }
+
+/* ---------- 代码 / 模板 ---------- */
+#root pre {
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  background: #f8f7fd !important;
+  border: 1px solid #e7e3f7 !important;
+  border-left: 3px solid #7c3aed;
+  border-radius: 10px !important;
+  padding: 11px 13px !important;
+  color: #312e5f !important;
+  overflow-x: auto;
+}
+#root pre code { font-size: 13px !important; }
+
+/* 使用说明 */
+#root details summary { min-height: 42px; font-size: 14.5px !important; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 900px) {
+  #root .sv-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 560px) {
+  #root .sv-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #root .sv-tabs a { min-height: 46px !important; font-size: 13px !important; }
+  #root h1 { font-size: 26px !important; }
+  #root section h2 { font-size: 17.5px !important; }
+  #root section button { min-height: 46px !important; }
+  #root .sv-stat .sv-num { font-size: 22px !important; }
+}
