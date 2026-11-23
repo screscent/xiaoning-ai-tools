@@ -74,7 +74,7 @@
         var card = cards[c];
         var head = card.firstElementChild;
         if (!head || !head.querySelector("h2")) continue;
-        if (!/必查权限清单|高风险权限|建议设置路径|自查结果/.test(txt(head))) continue;
+        if (!/必查权限清单|高风险权限|建议设置路径|自查结果|条目统计/.test(txt(head))) continue;
         add(card, "pr-card");
         var rows = card.querySelectorAll(".flex.items-start");
         for (var r = 0; r < rows.length; r++) {
