@@ -79,7 +79,7 @@
   }
 
   function start() {
-    if (!pick()) return;
+    if (!pick()) { setTimeout(start, 300); return; }
     decorate();
     compute();
     window.addEventListener("scroll", schedule, { passive: true });
