@@ -1,0 +1,99 @@
+/* xn-favicon.css · Favicon 与站点图标生成合集（主题：图标工坊——蓝/紫双光 + 24px 网格） */
+html, body { background: #eef2fa !important; }
+#root {
+  background-color: #f5f7fd !important;
+  background-image:
+    radial-gradient(900px 520px at 6% -8%, rgba(37, 99, 235, .10), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(820px 520px at 100% 104%, rgba(124, 58, 237, .09), rgba(0, 0, 0, 0) 62%),
+    linear-gradient(rgba(37, 99, 235, .045) 1px, rgba(0, 0, 0, 0) 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, .045) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: auto, auto, 24px 24px, 24px 24px;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 27px !important;
+  background: linear-gradient(92deg, #1e3a8a 0%, #2563eb 48%, #7c3aed 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+#root h2 { font-size: 18px !important; }
+#root h3 { font-size: 14px !important; color: #334155 !important; }
+
+/* 顶部五入口卡片 */
+#root a[href^="#/"] {
+  border-radius: 12px !important;
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+#root a[href^="#/"]:hover { transform: translateY(-1px); }
+#root a[href^="#/"].px-nav-active {
+  border-color: #6366f1 !important;
+  background: linear-gradient(180deg, #ffffff 0%, #eef2ff 100%) !important;
+  box-shadow: 0 12px 24px -18px rgba(79, 70, 229, .7) !important;
+}
+
+/* 表单控件 */
+#root input[type="text"]:not([type="file"]):not([type="range"]):not([type="number"]):not([type="checkbox"]):not([type="radio"]) { font-size: 15.5px !important; min-height: 48px !important; }
+#root input[type="color"] { height: 48px !important; width: 56px !important; }
+#root input[type="range"] { height: 36px !important; cursor: pointer; }
+#root textarea { font-size: 15.5px !important; line-height: 1.6 !important; }
+#root select { min-height: 48px !important; font-size: 15.5px !important; }
+
+/* 复选框 */
+#root label:has(input[type="checkbox"]) {
+  display: inline-flex !important; align-items: center; gap: 8px;
+  min-height: 36px; padding: 0 12px;
+  border: 1px solid #dfe3f2; border-radius: 8px; background: #fff; cursor: pointer;
+}
+#root label:has(input[type="checkbox"]:checked) { border-color: #a5b4fc; background: #eef2ff; }
+#root input[type="checkbox"] { width: 18px !important; height: 18px !important; accent-color: #2563eb; }
+
+/* 下载按钮 */
+#root button[class*="bg-blue-"], #root button[class*="bg-indigo-"] {
+  min-height: 44px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 16px -14px rgba(37, 99, 235, .8) !important;
+}
+#root button.fg-btn {
+  min-height: 46px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 16px -14px rgba(37, 99, 235, .8) !important;
+}
+/* 小工具按钮（复制/恢复默认） */
+#root button.px-mini {
+  min-height: 38px !important;
+  font-size: 12.5px !important;
+  padding: 0 10px !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  border: 1px solid #e2e8f2 !important;
+  color: #1e40af !important;
+}
+/* Emoji 快捷 chip */
+#root button.px-emoji {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  font-size: 18px !important;
+}
+
+/* 代码块 */
+#root code, #root pre { font-size: 13px !important; line-height: 1.6 !important; }
+#root pre { border-radius: 10px !important; }
+
+/* 焦点可见 */
+#root a:focus-visible, #root button:focus-visible, #root input:focus-visible, #root select:focus-visible, #root textarea:focus-visible {
+  outline: 2px solid #2563eb; outline-offset: 2px;
+}
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 22px !important; }
+  #root h2 { font-size: 17px !important; }
+  #root a[href^="#/"] { min-height: 44px !important; }
+}
