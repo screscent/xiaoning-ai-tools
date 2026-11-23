@@ -1,0 +1,126 @@
+/* xn-mortgage.css · 贷款对比与提前还款合集（主题：按揭蓝图——深蓝/青绿双光 + 24px 网格） */
+html, body { background: #eef2fa !important; }
+#root {
+  background-color: #f5f8fd !important;
+  background-image:
+    radial-gradient(900px 520px at 6% -8%, rgba(37, 99, 235, .11), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(820px 520px at 100% 104%, rgba(13, 148, 136, .09), rgba(0, 0, 0, 0) 62%),
+    linear-gradient(rgba(37, 99, 235, .045) 1px, rgba(0, 0, 0, 0) 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, .045) 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: auto, auto, 24px 24px, 24px 24px;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 27px !important;
+  background: linear-gradient(92deg, #1e3a8a 0%, #2563eb 48%, #0d9488 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+#root h2 { font-size: 18px !important; }
+
+/* 模式切换 */
+#root button[class*="bg-blue-500"]:not([class*="w-full"]) {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  background: linear-gradient(180deg, #2563eb, #1d4ed8) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -12px rgba(37, 99, 235, .85) !important;
+}
+#root button.px-mode-off {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  background: #fff !important;
+  color: #475569 !important;
+  border: 1px solid #dfe3f2 !important;
+  border-radius: 10px !important;
+}
+
+/* 表单 */
+#root select { min-height: 48px !important; font-size: 15.5px !important; }
+#root label:has(input[type="checkbox"]) {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #dfe3f2;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px !important;
+}
+#root label:has(input[type="checkbox"]:checked) { border-color: #a5b4fc; background: #eef2ff; }
+#root input[type="checkbox"] { width: 18px !important; height: 18px !important; accent-color: #2563eb; }
+
+/* 开始计算 / 重置 */
+#root button[class*="flex-1"][class*="bg-blue-500"],
+#root button[class*="w-full"][class*="bg-blue-600"],
+#root button[class*="w-full"][class*="bg-blue-500"] {
+  min-height: 46px !important;
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 20px -14px rgba(37, 99, 235, .85) !important;
+}
+#root button[class*="flex-1"][class*="bg-blue-500"]:active,
+#root button[class*="w-full"][class*="bg-blue-600"]:active,
+#root button[class*="w-full"][class*="bg-blue-500"]:active { transform: translateY(1px); }
+#root button.px-reset {
+  min-height: 46px !important;
+  font-size: 14.5px !important;
+  background: #fff !important;
+  color: #1e40af !important;
+  border: 1px solid #dbe4f5 !important;
+  border-radius: 10px !important;
+}
+
+/* 结果卡 */
+#root div[class*="rounded-xl"][class*="ring-1"] {
+  background: linear-gradient(180deg, #ffffff 0%, #f7fafd 100%) !important;
+  --tw-ring-color: #dbe6f5 !important;
+}
+#root div[class*="rounded-xl"][class*="ring-1"] h3 {
+  font-size: 15px !important;
+  color: #1e3a8a !important;
+}
+/* 关键数值：月供/总利息/总还款等 */
+#root div[class*="space-y-2"] span[class*="text-sm"][class*="font-semibold"] {
+  font-size: 19px !important;
+  font-variant-numeric: tabular-nums;
+  color: #0f172a !important;
+}
+#root div[class*="space-y-2"] span[class*="text-sm"] span[class*="text-xs"] { font-size: 12px !important; }
+
+/* 利息差额建议块 */
+#root div[class*="bg-blue-50"] {
+  background: linear-gradient(180deg, #eff6ff 0%, #e6f0ff 100%) !important;
+  border-left: 3px solid #2563eb !important;
+  border-radius: 10px !important;
+}
+
+/* 明细表 */
+#root th { font-size: 12.5px !important; font-weight: 600 !important; white-space: nowrap; }
+#root td { font-size: 12.5px !important; font-variant-numeric: tabular-nums; }
+
+/* 焦点可见 */
+#root a:focus-visible, #root button:focus-visible, #root input:focus-visible, #root select:focus-visible {
+  outline: 2px solid #2563eb; outline-offset: 2px;
+}
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 22px !important; }
+  #root h2 { font-size: 17px !important; }
+  #root button[class*="bg-blue-500"]:not([class*="w-full"]), #root button.px-mode-off {
+    min-height: 44px !important; font-size: 13px !important;
+  }
+  #root div[class*="space-y-2"] span[class*="text-sm"][class*="font-semibold"] { font-size: 17px !important; }
+  #root button[class*="flex-1"][class*="bg-blue-500"] { font-size: 15px !important; }
+  #root th, #root td { font-size: 12px !important; }
+}
