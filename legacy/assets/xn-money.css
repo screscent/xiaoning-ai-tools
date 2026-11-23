@@ -1,0 +1,140 @@
+/* xn-money.css · 单价与多规格比价合集（省钱绿 + 价签琥珀） */
+#root { --xn-accent: #059669; --xn-accent-2: #d97706; }
+
+html, body { background: #f1f5ef !important; }
+#root {
+  background-color: #f6f8f3 !important;
+  background-image:
+    radial-gradient(900px 520px at 8% -10%, rgba(5, 150, 105, .13), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(820px 520px at 100% 108%, rgba(217, 119, 6, .11), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(circle, rgba(5, 150, 105, .09) 1px, rgba(0, 0, 0, 0) 1.5px);
+  background-size: auto, auto, 26px 26px;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 27px !important;
+  background: linear-gradient(92deg, #065f46 0%, #059669 46%, #d97706 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+#root section h2 { font-size: 19px !important; }
+#root section > p:first-of-type { font-size: 13px !important; color: #5b6472 !important; }
+#root section h3 { font-size: 14px !important; color: #334155 !important; }
+#root section label { font-size: 13px !important; color: #3b4256 !important; }
+
+/* 导航 tab */
+#root nav { border-color: #e3ecdf !important; background: rgba(255,255,255,.82) !important; }
+#root nav a {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 14px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border-radius: 999px !important;
+}
+#root nav a.px-active {
+  background: linear-gradient(180deg, #059669, #0f766e) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 18px -10px rgba(5,150,105,.85) !important;
+}
+
+/* 表单 */
+#root section select { min-height: 48px !important; font-size: 15.5px !important; }
+#root section input[type=number] {
+  font-size: 19px !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+/* 窄屏：两栏字段网格保持等宽两列（xn-ux 默认会压成单列导致数字框被挤） */
+@media (max-width: 1023px) {
+  #root section div.grid[class*="grid-cols-2"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 按钮 */
+#root section button {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  border-radius: 10px !important;
+}
+#root section button.px-primary {
+  min-height: 46px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border: 0 !important;
+  background: linear-gradient(180deg, #059669, #047857) !important;
+  color: #fff !important;
+  padding: 0 22px !important;
+  box-shadow: 0 10px 22px -12px rgba(5,150,105,.85) !important;
+}
+#root section button.px-primary:hover { filter: brightness(1.06); box-shadow: 0 12px 26px -10px rgba(5,150,105,.95) !important; }
+#root section button.px-sub {
+  min-height: 42px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  padding: 0 14px !important;
+  background: #f0f7f2 !important;
+  color: #047857 !important;
+  border: 1px solid #cfe9d6 !important;
+}
+#root section button.px-sub:hover { background: #e6f4ea !important; border-color: #86efac !important; }
+#root section button::before { content: none !important; }
+
+/* 结果指标卡 */
+#root section .px-metric {
+  border-radius: 12px !important;
+  padding: 12px 13px !important;
+}
+#root section .px-metric .text-lg { font-size: 21px !important; font-variant-numeric: tabular-nums; }
+#root section .px-metric .text-xs { font-size: 12px !important; }
+
+/* 结论条 */
+#root section .px-concl {
+  border-radius: 11px !important;
+  background: #fffbeb !important;
+  border-color: #fde68a !important;
+  color: #713f12 !important;
+  font-size: 13.5px !important;
+  line-height: 1.7 !important;
+  padding: 12px 14px !important;
+}
+
+/* 计算过程（等宽小字） */
+#root section .px-formula {
+  font-size: 12.5px !important;
+  line-height: 1.7 !important;
+  color: #475569 !important;
+  background: #f8fafc !important;
+  border: 1px solid #eef2f6;
+  border-radius: 9px;
+  padding: 9px 11px !important;
+}
+
+/* 空状态占位 */
+#root section .px-empty {
+  text-align: center !important;
+  border: 1.5px dashed #d3dcd6 !important;
+  background: #fbfdfa !important;
+  border-radius: 11px !important;
+  color: #7b8794 !important;
+  font-size: 13px !important;
+  padding: 14px !important;
+}
+
+/* 卡片 */
+#root section.rounded-xl, #root section .rounded-xl { border-color: #e3ecdf !important; }
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 22px !important; }
+  #root section h2 { font-size: 18px !important; }
+  #root nav a { min-height: 44px !important; font-size: 13.5px !important; padding: 0 12px !important; }
+  #root section .px-metric .text-lg { font-size: 19px !important; }
+  #root section .px-primary { min-height: 46px !important; }
+}
