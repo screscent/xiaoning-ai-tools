@@ -1,0 +1,236 @@
+/* R1262 相机曝光与图片体积合集（dzff47slwd）· 主题：暗房取景
+ * 纯 CSS 渐变绘制，无图片资源；仅人用友好层。
+ */
+
+/* ---------- 主题底 ---------- */
+html { background: #f3f0eb !important; }
+body {
+  background:
+    radial-gradient(940px 540px at 6% -10%, rgba(120, 83, 55, .18), transparent 62%),
+    radial-gradient(860px 500px at 104% -6%, rgba(14, 116, 144, .16), transparent 60%),
+    linear-gradient(180deg, #fbf8f3 0%, #f3f0eb 48%, #f1f5f5 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  background-image:
+    repeating-linear-gradient(135deg, rgba(120, 83, 55, .05) 0 1px, transparent 1px 9px),
+    repeating-linear-gradient(45deg, rgba(14, 116, 144, .045) 0 1px, transparent 1px 11px) !important;
+  background-size: auto !important;
+  opacity: .9 !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  background: linear-gradient(92deg, #2b211c 0%, #785337 50%, #0e7490 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+#root h2 {
+  padding-left: 11px !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #2b211c !important;
+  letter-spacing: -.01em;
+}
+#root h2::before {
+  background: linear-gradient(180deg, #b2764a, #0e7490) !important;
+  width: 5px !important;
+  left: 0 !important;
+}
+
+/* ---------- 两个工具入口卡 ---------- */
+#root a.xn-cam-tool {
+  min-height: 84px;
+  border-radius: 18px !important;
+  border: 1px solid #e6ddd0 !important;
+  background: linear-gradient(180deg, #ffffff, #fdfbf7) !important;
+  position: relative;
+  box-shadow: 0 14px 30px -28px rgba(43, 33, 28, .6) !important;
+  transition: all .16s ease;
+}
+#root a.xn-cam-tool:hover {
+  border-color: #b2764a !important;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px -26px rgba(43, 33, 28, .55) !important;
+}
+#root a.xn-cam-tool.xn-cam-on {
+  border-color: #0e7490 !important;
+  box-shadow: inset 0 0 0 2px rgba(14, 116, 144, .22), 0 16px 32px -26px rgba(14, 116, 144, .6) !important;
+}
+#root a.xn-cam-tool > span:first-child {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 13px !important;
+  background: #f3ece2 !important;
+  color: #785337 !important;
+}
+#root a.xn-cam-tool.xn-cam-on > span:first-child {
+  background: #e6f6f8 !important;
+  color: #0e7490 !important;
+}
+
+/* ---------- 工具区 ---------- */
+#root section.xn-cam-sec { min-width: 0; }
+#root section.xn-cam-sec h2::before { content: none !important; }
+#root section.xn-cam-sec h2 { padding-left: 0 !important; }
+#root section.xn-cam-sec > div {
+  border-radius: 18px !important;
+  border-color: #e9e1d5 !important;
+  background: rgba(255, 255, 255, .88) !important;
+  box-shadow: 0 18px 42px -38px rgba(43, 33, 28, .55) !important;
+}
+
+/* ---------- 表单 ---------- */
+#root label {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #4a3f37 !important;
+}
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  border-color: #e2d8c9 !important;
+}
+#root select:focus {
+  border-color: #0e7490 !important;
+  box-shadow: 0 0 0 4px rgba(14, 116, 144, .14) !important;
+}
+#root input[type=number] {
+  border-color: #e2d8c9 !important;
+  border-radius: 12px !important;
+}
+#root input[type=number]:focus {
+  border-color: #b2764a !important;
+  box-shadow: 0 0 0 4px rgba(178, 118, 74, .16) !important;
+}
+
+/* ---------- 质量滑块 ---------- */
+#root input[type=range] {
+  height: 36px !important;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent !important;
+}
+#root input[type=range]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d8b48f, #0e7490);
+}
+#root input[type=range]::-webkit-slider-thumb {
+  width: 24px;
+  height: 24px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #b2764a;
+  box-shadow: 0 3px 10px -2px rgba(120, 83, 55, .6);
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+#root input[type=range]:focus-visible::-webkit-slider-thumb {
+  outline: 3px solid rgba(14, 116, 144, .35);
+  outline-offset: 2px;
+}
+
+/* ---------- 上传区 ---------- */
+#root label.xn-cam-drop {
+  min-height: 56px;
+  border: 2px dashed #cfdcd9 !important;
+  border-radius: 12px !important;
+  background: linear-gradient(180deg, #fbfefd, #f1f8f7) !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  color: #2f5b57 !important;
+  transition: all .16s ease;
+}
+#root label.xn-cam-drop:hover {
+  border-color: #0e7490 !important;
+  background: #eefaf8 !important;
+}
+
+/* ---------- 结果卡 ---------- */
+#root .xn-cam-result {
+  border: 1px solid rgba(14, 116, 144, .18) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(180deg, #ffffff, #f7fcfc) !important;
+  box-shadow: 0 16px 34px -32px rgba(43, 33, 28, .5) !important;
+}
+#root .xn-cam-result > div > div > div.text-xs,
+#root .xn-cam-result .text-xs {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #6b5c50 !important;
+}
+#root .xn-cam-big {
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  color: #0e7490 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+  line-height: 1.05;
+}
+#root .xn-cam-unit {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #785337 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-cam-stat {
+  background: #fbf8f3 !important;
+  border-color: #eadfce !important;
+  border-radius: 12px !important;
+  padding: 10px 12px !important;
+}
+#root .xn-cam-statval {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #0e7490 !important;
+  font-variant-numeric: tabular-nums;
+  margin-top: 2px !important;
+}
+#root .xn-cam-result p {
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+  color: #6b5c50 !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root details {
+  border-color: #e9e1d5 !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, .86) !important;
+}
+#root summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #785337 !important;
+}
+#root details p, #root details li {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #5c5048 !important;
+}
+
+/* ---------- 键盘可达性 ---------- */
+#root button:focus-visible,
+#root select:focus-visible,
+#root a:focus-visible,
+#root label.xn-cam-drop:focus-within {
+  outline: 3px solid rgba(14, 116, 144, .35) !important;
+  outline-offset: 2px;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root a.xn-cam-tool { min-height: 76px; }
+  #root .xn-cam-big { font-size: 30px !important; }
+  #root .xn-cam-statval { font-size: 19px !important; }
+}
