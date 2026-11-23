@@ -1,0 +1,233 @@
+/* R1274 文本加解密与哈希合集（sfw5ysy97s）· 保险柜主题
+ * 纯 CSS：靛蓝 + 翡翠双光晕 + 细密网格，无图片
+ */
+
+:root {
+  --sv-indigo: #4338ca;
+  --sv-emerald: #047857;
+  --sv-ink: #111827;
+}
+
+html { background: #eff1f8; }
+body {
+  background:
+    radial-gradient(1000px 560px at 2% -10%, rgba(67, 56, 202, .16), transparent 62%),
+    radial-gradient(900px 520px at 102% 0%, rgba(4, 120, 87, .14), transparent 58%),
+    linear-gradient(180deg, #fafbfe 0%, #eff1f8 54%, #f7f9fc 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(67, 56, 202, .07) 0 1px, transparent 1px 36px),
+    repeating-linear-gradient(90deg, rgba(67, 56, 202, .07) 0 1px, transparent 1px 36px) !important;
+  background-size: auto !important;
+  opacity: .55 !important;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 58%) !important;
+  mask-image: linear-gradient(180deg, #000, transparent 58%) !important;
+}
+
+#root h1 {
+  background: linear-gradient(92deg, #1e1b4b 0%, #4338ca 55%, #047857 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+#root header p, #root .max-w-2xl { font-size: 13px !important; }
+
+/* ---------- 顶部工具导航 ---------- */
+#root nav {
+  display: block !important;
+  background: rgba(255, 255, 255, .88) !important;
+  border-color: #e2e6f0 !important;
+  border-radius: 14px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px -26px rgba(30, 27, 75, .5);
+}
+#root nav > div {
+  display: grid !important;
+  gap: 6px !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+@media (max-width: 900px) { #root nav > div { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
+@media (max-width: 560px) { #root nav > div { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+#root nav a {
+  width: 100% !important;
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  color: #475569 !important;
+  background: #fff !important;
+  border-color: #e2e6f0 !important;
+  white-space: nowrap;
+}
+#root nav a[aria-current="page"] {
+  background-image: linear-gradient(135deg, #4338ca, #047857) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 20px -12px rgba(67, 56, 202, .85) !important;
+}
+#root nav a:not([aria-current="page"]):hover { border-color: #a5b4fc !important; color: #3730a3 !important; }
+
+#root section[id^="tool-"] { scroll-margin-top: 78px; }
+
+/* ---------- 卡片与标题 ---------- */
+#root section > div.rounded-2xl {
+  border-radius: 16px !important;
+  border-color: #e3e7f1 !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 18px 38px -30px rgba(30, 27, 75, .5) !important;
+}
+#root section > div.rounded-2xl > div:first-child {
+  background: linear-gradient(120deg, rgba(67, 56, 202, .08), rgba(4, 120, 87, .06) 62%, transparent) !important;
+  border-bottom-color: #eceff6 !important;
+}
+#root h2 {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.01em;
+}
+#root h2::before { background: linear-gradient(180deg, #4338ca, #047857) !important; }
+#root .sv-guide h2 { font-size: 19px !important; }
+
+/* ---------- 表单 ---------- */
+#root label { font-size: 14px !important; font-weight: 600 !important; color: #374151 !important; }
+#root .text-xs { font-size: 12.5px !important; }
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dfe4ef !important;
+  background: #fff !important;
+}
+#root input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]):focus {
+  border-color: #4338ca !important;
+  box-shadow: 0 0 0 4px rgba(67, 56, 202, .14) !important;
+  outline: none !important;
+}
+#root textarea {
+  font-size: 15.5px !important;
+  line-height: 1.72 !important;
+  min-height: 150px !important;
+  border-radius: 10px !important;
+  border-color: #dfe4ef !important;
+  background: #fdfdff !important;
+  padding: 11px 13px !important;
+}
+#root textarea:focus {
+  border-color: #4338ca !important;
+  box-shadow: 0 0 0 4px rgba(67, 56, 202, .14) !important;
+  outline: none !important;
+}
+#root select {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #dfe4ef !important;
+  background: #fff !important;
+}
+#root select:focus { border-color: #4338ca !important; box-shadow: 0 0 0 4px rgba(67, 56, 202, .14) !important; }
+
+/* 显示/隐藏口令 */
+#root button.sv-eye {
+  width: 40px !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  border-radius: 10px !important;
+  border-color: #dfe4ef !important;
+  background: #fff !important;
+  color: #4338ca !important;
+}
+#root button.sv-eye[aria-pressed="true"] {
+  background: #eef2ff !important;
+  border-color: #a5b4fc !important;
+}
+
+/* 大小写切换 */
+#root button.sv-case {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 10px !important;
+  border-color: #dfe4ef !important;
+  background: #fff !important;
+  color: #3730a3 !important;
+  font-weight: 600 !important;
+}
+#root button.sv-case[aria-pressed="true"] { background: #eef2ff !important; border-color: #a5b4fc !important; }
+#root button.sv-case::before,
+#root button.sv-eye::before { content: none !important; }
+
+/* ---------- 按钮 ---------- */
+#root button {
+  min-height: 44px;
+  border-radius: 10px;
+}
+#root button.sv-copy {
+  min-height: 40px !important;
+  font-size: 13px !important;
+  border-color: #dfe4ef !important;
+  color: #0f766e !important;
+  background: #f8fdfb !important;
+}
+#root button.sv-copy:hover { border-color: #34d399 !important; background: #ecfdf5 !important; }
+
+/* 主按钮渐变（加密/解密/哈希/校验/签名/派生） */
+#root section button.inline-flex.items-center.justify-center.gap-2.rounded-xl.bg-indigo-600,
+#root section button.bg-indigo-600 {
+  background-image: linear-gradient(135deg, #4338ca, #047857) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -14px rgba(67, 56, 202, .9);
+}
+
+/* ---------- 结果块 ---------- */
+#root .sv-out {
+  border-radius: 10px !important;
+  background: #0b1220 !important;
+  color: #d7f6eb !important;
+  border-left: 3px solid #10b981;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  padding: 11px 13px !important;
+  word-break: break-all;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06);
+}
+#root .sv-out * { color: inherit !important; font-size: inherit !important; }
+
+/* 计算参数 */
+#root .sv-params { border-top: 1px solid #eceff6; padding-top: 10px; margin-top: 10px; }
+#root .sv-params div { font-size: 13px !important; }
+#root .sv-params .text-xs, #root .sv-params span { font-size: 12.5px !important; color: #6b7280 !important; }
+#root .sv-params strong, #root .sv-params b { font-size: 13.5px !important; color: #1f2937 !important; }
+
+/* 文本域计数 */
+.sv-meta {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: #7b8494;
+  font-variant-numeric: tabular-nums;
+}
+.sv-meta b { color: #4338ca; font-weight: 700; }
+
+/* ---------- 使用说明 / 安全提示 ---------- */
+#root .sv-guide > div:first-child h2 { font-size: 19px !important; }
+#root .sv-guide p { font-size: 13px !important; line-height: 1.65 !important; }
+#root .sv-guide h3, #root .sv-guide .font-semibold { font-size: 14px !important; }
+#root .sv-safety {
+  border-color: #fcd34d !important;
+  background: linear-gradient(180deg, #fffbeb, #fffdf5) !important;
+}
+#root .sv-safety p, #root .sv-safety li { font-size: 12.5px !important; line-height: 1.7 !important; color: #7c5806 !important; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root h1 { font-size: 26px !important; }
+  #root nav a { min-height: 44px !important; font-size: 13px !important; }
+  #root h2 { font-size: 17.5px !important; }
+  #root textarea { min-height: 140px !important; }
+  #root button { min-height: 44px; }
+}
