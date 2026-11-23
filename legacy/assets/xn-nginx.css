@@ -1,0 +1,242 @@
+/* R1277 Nginx 配置合集（sfb4eqy97s）· 终端绿主题
+ * 沿用页面暗色代码块，页面底改薄荷网格；纯 CSS，无图片
+ */
+
+:root {
+  --nx-emerald: #059669;
+  --nx-cyan: #0891b2;
+}
+
+html { background: #f3f8f6; }
+body {
+  background:
+    radial-gradient(1000px 560px at 2% -8%, rgba(5, 150, 105, .14), transparent 62%),
+    radial-gradient(900px 520px at 102% 0%, rgba(8, 145, 178, .12), transparent 58%),
+    linear-gradient(180deg, #fbfdfc 0%, #f3f8f6 54%, #f8fbfa 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(5, 150, 105, .06) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(90deg, rgba(5, 150, 105, .06) 0 1px, transparent 1px 34px) !important;
+  background-size: auto !important;
+  opacity: .55 !important;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 58%) !important;
+  mask-image: linear-gradient(180deg, #000, transparent 58%) !important;
+}
+
+#root h1 {
+  background: linear-gradient(92deg, #064e3b 0%, #059669 58%, #0891b2 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+#root header p { font-size: 13px !important; }
+
+/* ---------- 顶部导航 ---------- */
+#root nav a {
+  min-height: 44px !important;
+  font-size: 13px !important;
+  border-radius: 999px !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 13px !important;
+  color: #cbd5e1 !important;
+  border-color: rgba(255, 255, 255, .12) !important;
+  background: rgba(255, 255, 255, .04) !important;
+  white-space: nowrap;
+}
+#root nav a[aria-current="page"] {
+  background-image: linear-gradient(135deg, #059669, #0891b2) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+#root nav a:not([aria-current="page"]):hover {
+  border-color: rgba(52, 211, 153, .45) !important;
+  color: #6ee7b7 !important;
+}
+#root nav .sv-nav-mini { display: none !important; }
+
+/* ---------- 区块与标题 ---------- */
+#root section h2 {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.01em;
+}
+#root section h3 {
+  font-size: 17px !important;
+  font-weight: 750 !important;
+  color: #0f172a !important;
+}
+
+/* ---------- 搜索 ---------- */
+#root section input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  font-size: 15.5px !important;
+  min-height: 46px !important;
+  border-radius: 10px !important;
+  border-color: #dfe8e3 !important;
+  background: #fff !important;
+}
+#root section input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]):focus {
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, .14) !important;
+  outline: none !important;
+}
+.nx-hint {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 7px;
+  font-size: 12.5px;
+  color: #94a3b8;
+}
+.nx-hint b { color: #6ee7b7; font-weight: 700; font-variant-numeric: tabular-nums; }
+.nx-hint button {
+  min-height: 30px !important;
+  padding: 0 10px !important;
+  font-size: 12.5px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, .22) !important;
+  background: rgba(255, 255, 255, .06) !important;
+  color: #cbd5e1 !important;
+}
+.nx-hint button:hover { border-color: #34d399 !important; color: #6ee7b7 !important; }
+.nx-empty { color: #fbbf24; }
+
+/* ---------- 场景胶囊 ---------- */
+#root section button.sv-chip {
+  min-height: 36px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  border-radius: 999px !important;
+  border: 1px solid #dfe8e3 !important;
+  background: #fff !important;
+  color: #475569 !important;
+}
+#root section button.sv-chip[aria-pressed="true"] {
+  background-image: linear-gradient(135deg, #059669, #0891b2) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+#root section button.sv-chip::before { content: none !important; }
+
+/* ---------- 片段卡 ---------- */
+#root .sv-snip {
+  border-radius: 14px !important;
+  border-color: #e0ebe5 !important;
+  background: #fff !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 16px 34px -30px rgba(6, 78, 59, .5) !important;
+}
+#root .sv-snip:hover { border-color: #a7f3d0 !important; }
+#root .sv-snip-head h3 { font-size: 17px !important; }
+#root .sv-snip-head span { font-size: 12.5px !important; }
+
+/* 代码面板 */
+#root pre {
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  background: #0b1220 !important;
+  color: #d1fae5 !important;
+  border-left: 3px solid #10b981;
+  border-radius: 10px !important;
+  padding: 12px 14px !important;
+  overflow-x: auto;
+}
+#root pre code { font-size: 13px !important; color: inherit !important; }
+#root pre .text-slate-600, #root pre .text-slate-500 { color: #64748b !important; }
+
+/* 行作用说明表（仅限定宽度与字号，不改行背景） */
+#root section table { border-collapse: collapse; font-size: 13px; }
+#root section th {
+  color: #065f46 !important;
+  font-size: 12.5px !important;
+  font-weight: 700;
+}
+#root section td {
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+  color: #334155 !important;
+}
+#root section td code, #root section td .font-mono { font-size: 12.5px !important; color: #0f766e !important; }
+#root section .sv-code {
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  white-space: pre-wrap !important;
+  word-break: break-all !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  height: auto !important;
+  max-height: none !important;
+}
+#root section .sv-code * {
+  white-space: inherit !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+/* 复制按钮 */
+#root section button.sv-copy {
+  min-height: 40px !important;
+  padding: 0 12px !important;
+  font-size: 13px !important;
+  border-radius: 9px !important;
+  border: 1px solid #cde9dc !important;
+  background: #f7fdfa !important;
+  color: #047857 !important;
+}
+#root section button.sv-copy:hover { border-color: #34d399 !important; background: #ecfdf5 !important; }
+
+/* 常见坑提示 */
+#root .sv-warn {
+  border-left: 3px solid #f59e0b;
+  background: #fffbeb;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-top: 8px;
+}
+#root .sv-warn,
+#root .sv-warn * {
+  font-size: 12.5px !important;
+  line-height: 1.7 !important;
+  color: #7c5806 !important;
+}
+
+/* ---------- 并发估算 / 上游 ---------- */
+#root section label { font-size: 14px !important; font-weight: 600 !important; color: #374151 !important; }
+#root section input[type=number],
+#root section input[type=text] {
+  font-size: 16px !important;
+}
+#root section textarea {
+  font-size: 15.5px !important;
+  line-height: 1.7 !important;
+  min-height: 150px !important;
+  border-radius: 10px !important;
+  border-color: #dfe8e3 !important;
+  background: #fbfefc !important;
+  padding: 11px 13px !important;
+}
+#root section textarea:focus { border-color: #059669 !important; box-shadow: 0 0 0 4px rgba(5, 150, 105, .14) !important; }
+#root section button.sv-mini {
+  min-height: 36px !important;
+  padding: 0 10px !important;
+  font-size: 12.5px !important;
+  border-radius: 8px !important;
+}
+
+/* 说明 */
+#root details summary { min-height: 42px; font-size: 14.5px !important; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root h1 { font-size: 26px !important; }
+  #root section h2 { font-size: 17.5px !important; }
+  #root section button.sv-chip { min-height: 44px !important; font-size: 13px !important; }
+  #root section button.sv-copy { min-height: 44px !important; }
+  #root pre { font-size: 12.5px !important; }
+  #root pre code { font-size: 12.5px !important; }
+  #root section td { font-size: 12.5px !important; }
+}
