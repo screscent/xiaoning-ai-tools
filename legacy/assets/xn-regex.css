@@ -1,0 +1,312 @@
+/* R1273 正则测试与替换合集（m9la4sue9a）· 青柠代码主题
+ * 纯 CSS：浅色代码网格 + 青柠/青绿双光晕，无图片
+ */
+
+:root {
+  --rx-lime: #65a30d;
+  --rx-lime-d: #4d7c0f;
+  --rx-teal: #0d9488;
+  --rx-ink: #1f2937;
+}
+
+html { background: #f3f6ee; scroll-behavior: smooth; }
+body {
+  background:
+    radial-gradient(1000px 560px at 2% -10%, rgba(132, 204, 22, .26), transparent 62%),
+    radial-gradient(900px 520px at 102% 0%, rgba(13, 148, 136, .19), transparent 58%),
+    linear-gradient(180deg, #fbfdf6 0%, #f0f5e6 54%, #f7faf0 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(77, 124, 15, .09) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(90deg, rgba(77, 124, 15, .09) 0 1px, transparent 1px 32px) !important;
+  background-size: auto !important;
+  opacity: .72 !important;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 58%) !important;
+  mask-image: linear-gradient(180deg, #000, transparent 58%) !important;
+}
+
+#root h1 {
+  background: linear-gradient(92deg, #14532d 0%, #4d7c0f 55%, #0d9488 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+/* 页面自带 rx-page 实色底，放开让主题底色透出 */
+#root .rx-page { background: transparent !important; }
+#root header p { font-size: 13px !important; color: #5c6a55 !important; }
+
+/* ---------- 顶部工具导航：吸顶 + 横滑 ---------- */
+#root .rl-nav {
+  position: sticky !important;
+  top: 8px !important;
+  z-index: 40;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 6px !important;
+  padding: 6px !important;
+  margin-bottom: 14px;
+  border: 1px solid rgba(219, 227, 209, .95);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .86) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px -26px rgba(31, 41, 55, .5);
+  overflow-x: auto !important;
+  scrollbar-width: none;
+}
+#root .rl-nav::-webkit-scrollbar { display: none; }
+#root .rl-nav a {
+  flex: 0 0 auto;
+  min-height: 44px !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px !important;
+  font-size: 14px !important;
+  border-radius: 10px !important;
+  color: #4b5563 !important;
+  text-decoration: none;
+  transition: all .16s;
+}
+#root .rl-nav a[aria-current="page"] {
+  background-image: linear-gradient(135deg, #65a30d, #0d9488) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 8px 18px -12px rgba(77, 124, 15, .8);
+}
+#root .rl-nav a:not([aria-current="page"]):hover { background: #f4f9e8; color: #4d7c0f !important; }
+
+/* ---------- 卡片与标题 ---------- */
+#root section.rx-card {
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 86px;
+  border-radius: 16px !important;
+  border: 1px solid #e2e8d9 !important;
+  box-shadow: 0 1px 2px rgba(31, 41, 55, .04), 0 18px 38px -30px rgba(50, 70, 20, .5) !important;
+}
+#root section.rx-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 2;
+  background: linear-gradient(90deg, #84cc16, #0d9488);
+  pointer-events: none;
+}
+#root .rx-card-head {
+  background: linear-gradient(120deg, rgba(132, 204, 22, .10), rgba(13, 148, 136, .07) 62%, transparent);
+  border-bottom: 1px solid #eef1e6;
+}
+#root .rx-h2 {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.01em;
+}
+/* 隐藏开发用的锚点标签 */
+#root .rx-anchor-tag { display: none !important; }
+#root .rx-desc { font-size: 13.5px !important; color: #5c6a55 !important; line-height: 1.7; }
+
+/* ---------- 表单 ---------- */
+#root .rx-label { font-size: 14px !important; font-weight: 650 !important; color: #374151 !important; }
+#root .rx-input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  border-radius: 10px !important;
+  border: 1px solid #dfe5d5 !important;
+  background: #fff !important;
+  padding: 0 12px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}
+#root .rx-input:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]):focus {
+  border-color: #65a30d !important;
+  box-shadow: 0 0 0 4px rgba(101, 163, 13, .16) !important;
+  outline: none !important;
+}
+#root .rx-input-err { border-color: #ef4444 !important; background: #fff7f7 !important; }
+#root .rx-textarea {
+  font-size: 15.5px !important;
+  min-height: 160px !important;
+  line-height: 1.72 !important;
+  border-radius: 10px !important;
+  border: 1px solid #dfe5d5 !important;
+  background: #fffdf8 !important;
+  padding: 11px 13px !important;
+}
+#root .rx-textarea:focus {
+  border-color: #65a30d !important;
+  box-shadow: 0 0 0 4px rgba(101, 163, 13, .16) !important;
+  outline: none !important;
+}
+
+/* ---------- 标志位 ---------- */
+#root .rx-flags { gap: 8px !important; flex-wrap: wrap; }
+#root button.rx-flag {
+  min-height: 44px !important;
+  padding: 0 12px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+  border: 1px solid #dfe5d5 !important;
+  background: #fff !important;
+  color: #4b5563 !important;
+  gap: 6px !important;
+}
+#root button.rx-flag b { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; }
+#root button.rx-flag.rx-flag-on,
+#root button.rx-flag[aria-pressed="true"] {
+  background-image: linear-gradient(135deg, #84cc16, #0d9488) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 8px 16px -12px rgba(77, 124, 15, .8);
+}
+#root button.rx-flag::before { content: none !important; }
+
+/* ---------- 按钮 ---------- */
+#root .rx-btn {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  border-radius: 10px !important;
+}
+#root .rx-btn-primary {
+  background-image: linear-gradient(135deg, #65a30d, #0d9488) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -14px rgba(77, 124, 15, .9);
+}
+#root .rx-btn-primary:hover { filter: brightness(1.06); }
+#root .rx-btn-ghost {
+  background: #fff !important;
+  border: 1px solid #dfe5d5 !important;
+  color: #4b5563 !important;
+}
+#root .rx-btn-ghost:hover { border-color: #a3c25a !important; color: #4d7c0f !important; }
+
+/* ---------- 匹配结果 ---------- */
+#root .rx-result {
+  margin-top: 14px;
+  border: 1px solid #e6ebdd;
+  border-radius: 12px;
+  background: linear-gradient(160deg, #fbfdf7, #f6fbfa);
+  padding: 12px !important;
+}
+#root .rx-stats { display: flex; gap: 10px; flex-wrap: wrap; }
+#root .rx-stat {
+  flex: 1 1 140px;
+  border: 1px solid #e4ead8;
+  border-radius: 10px;
+  background: #fff;
+  padding: 9px 12px !important;
+}
+#root .rx-stat-num {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.02em;
+  color: #3f6212 !important;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+#root .rx-stat-num.rx-stat-sm {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #0f766e !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  word-break: break-all;
+  line-height: 1.5;
+}
+#root .rx-stat-label { font-size: 12.5px !important; color: #7b8570 !important; }
+#root .rx-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px !important; }
+#root .rx-item {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px !important;
+  border: 1px solid #e7ecdd;
+  border-radius: 10px;
+  background: #fff;
+  padding: 9px 12px !important;
+}
+#root .rx-item-no {
+  font-size: 11.5px !important;
+  font-weight: 700;
+  color: #4d7c0f !important;
+  background: #f1f8e4;
+  border: 1px solid #dbe8bd;
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+#root .rx-item-val {
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #155e75 !important;
+  background: #f0fdfa;
+  border: 1px solid #cceee7;
+  border-radius: 6px;
+  padding: 2px 7px;
+  word-break: break-all;
+}
+#root .rx-item-meta { font-size: 12.5px !important; color: #7b8570 !important; }
+
+/* ---------- 常用正则卡片 ---------- */
+#root .rx-presets { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+#root .rx-preset {
+  min-height: 96px !important;
+  text-align: left !important;
+  border: 1px solid #e2e8d9 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  padding: 11px 13px !important;
+  transition: all .16s;
+}
+#root .rx-preset:hover {
+  border-color: #a3c25a !important;
+  background: #fbfef4 !important;
+  box-shadow: 0 10px 24px -20px rgba(77, 124, 15, .65);
+  transform: translateY(-1px);
+}
+#root .rx-preset b,
+#root .rx-preset .rx-preset-name { font-size: 15px !important; color: #1f2937 !important; font-weight: 700 !important; }
+#root .rx-preset code,
+#root .rx-preset .rx-preset-code {
+  font-size: 12.5px !important;
+  color: #3f6212 !important;
+  line-height: 1.55;
+  word-break: break-all;
+  display: block;
+  margin-top: 4px;
+}
+#root .rx-preset p,
+#root .rx-preset .rx-preset-note { font-size: 12px !important; color: #7b8570 !important; margin-top: 4px; line-height: 1.5; }
+
+/* ---------- 表格 / 代码 ---------- */
+#root .rx-card table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+#root .rx-card th {
+  background: #f4f9e8 !important;
+  color: #3f6212 !important;
+  font-size: 12.5px !important;
+  font-weight: 700;
+  text-align: left;
+  padding: 8px 10px !important;
+}
+#root .rx-card td { padding: 8px 10px !important; border-top: 1px solid #edf1e4; font-size: 13.5px; }
+#root .rx-card tbody tr:nth-child(even) { background: #fbfdf7; }
+#root .rx-card code { font-size: 12.5px; }
+
+/* 说明折叠 */
+#root details summary { min-height: 42px; font-size: 14.5px !important; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root h1 { font-size: 26px !important; }
+  #root .rl-nav { top: 4px !important; padding: 5px !important; }
+  #root .rl-nav a { min-height: 44px !important; font-size: 13.5px !important; padding: 0 12px !important; }
+  #root .rx-h2 { font-size: 17px !important; }
+  #root .rx-btn { min-height: 46px !important; }
+  #root .rx-stat-num { font-size: 26px !important; }
+  #root .rx-presets { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  #root .rx-textarea { min-height: 140px !important; }
+}
