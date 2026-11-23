@@ -1,0 +1,129 @@
+/* xn-data.css · CSV 与 JSON 转换合集（数据蓝绿：网格 + 双光） */
+#root { --xn-accent: #0d9488; --xn-accent-2: #2563eb; }
+
+html, body { background: #eef4f6 !important; }
+#root {
+  background-color: #f4f8f9 !important;
+  background-image:
+    radial-gradient(900px 520px at 8% -10%, rgba(13, 148, 136, .13), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(820px 520px at 100% 108%, rgba(37, 99, 235, .12), rgba(0, 0, 0, 0) 60%),
+    radial-gradient(circle, rgba(13, 148, 136, .09) 1px, rgba(0, 0, 0, 0) 1.5px);
+  background-size: auto, auto, 26px 26px;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 27px !important;
+  background: linear-gradient(92deg, #115e59 0%, #0d9488 46%, #2563eb 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+#root section h2 { font-size: 19px !important; }
+#root section > p:first-of-type { font-size: 13px !important; color: #5b6472 !important; }
+#root section label { font-size: 13px !important; color: #3b4256 !important; }
+#root section h3 { font-size: 14px !important; color: #334155 !important; }
+
+/* 导航 */
+#root nav a {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 14px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  color: #4b5573 !important;
+}
+#root nav a.px-active {
+  background: linear-gradient(180deg, #0d9488, #0e7490) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -10px rgba(13,148,136,.85) !important;
+}
+
+/* 表单 */
+#root section select { min-height: 48px !important; font-size: 15.5px !important; }
+#root section textarea {
+  font-size: 15.5px !important;
+  line-height: 1.6 !important;
+  min-height: 96px !important;
+}
+
+/* 小按钮：示例链接 / 清空 / 复制 */
+#root section button.px-link {
+  min-height: 36px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 11px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  background: #eaf6f4 !important;
+  color: #0f766e !important;
+  border: 1px solid #cfe9e4 !important;
+}
+#root section button.px-link:hover { background: #e0f2ee !important; }
+#root section button.px-mini {
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  border-radius: 9px !important;
+  border: 1px solid #cfe9e4 !important;
+  background: #f4fbf9 !important;
+  color: #0f766e !important;
+}
+#root section button.px-mini:hover { background: #e8f6f2 !important; border-color: #5eead4 !important; }
+#root section button::before { content: none !important; }
+
+/* JSON / 代码输出块 */
+#root section pre {
+  font-size: 13.5px !important;
+  line-height: 1.65 !important;
+  background: #0b1220 !important;
+  color: #d1fae5 !important;
+  border-left: 3px solid #0d9488;
+  border-radius: 10px !important;
+  padding: 12px 14px !important;
+  overflow-x: auto;
+}
+
+/* 指标（行数 / 列数） */
+#root section .text-xl.font-bold, #root section .sm\:text-2xl { font-variant-numeric: tabular-nums; }
+#root section .px-metric-val {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #0f766e !important;
+  font-variant-numeric: tabular-nums;
+}
+#root section .px-metric-label { font-size: 12.5px !important; color: #64748b !important; }
+
+/* 空状态 */
+#root section .px-empty {
+  border: 1.5px dashed #d3dcd6 !important;
+  background: #fbfdfa !important;
+  border-radius: 10px !important;
+  color: #7b8794 !important;
+  font-size: 13px !important;
+  padding: 12px 14px !important;
+  text-align: center !important;
+}
+
+/* 预览表格 */
+#root section table { border-collapse: collapse; font-size: 13px; width: 100%; }
+#root section thead th {
+  font-size: 12px !important; font-weight: 700 !important;
+  color: #115e59 !important; background: #e8f5f2 !important;
+  padding: 8px 10px !important; white-space: nowrap;
+}
+#root section tbody td { font-size: 13px !important; color: #33405c !important; padding: 8px 10px !important; }
+#root section tbody tr:nth-child(even) td { background: #f6fbfa !important; }
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 22px !important; }
+  #root section h2 { font-size: 18px !important; }
+  #root nav a { min-height: 44px !important; flex: 0 0 auto !important; padding: 0 12px !important; font-size: 13.5px !important; }
+  #root section .px-metric-val { font-size: 24px !important; }
+}
