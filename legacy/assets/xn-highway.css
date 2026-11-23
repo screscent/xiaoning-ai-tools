@@ -1,0 +1,119 @@
+/* xn-highway.css · 租车费用与押金合集（主题：公路自驾——青绿/琥珀双光 + 路面虚线）
+ * 纯 CSS 绘制，无图片资源；不改业务逻辑。
+ */
+html, body { background: #f5f9f8 !important; }
+#root .min-h-screen { background: transparent !important; }
+#root {
+  background-color: #f8fbfa;
+  background-image:
+    radial-gradient(820px 500px at 4% -8%, rgba(13, 148, 136, .12), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(760px 480px at 100% 102%, rgba(217, 119, 6, .09), rgba(0, 0, 0, 0) 60%),
+    repeating-linear-gradient(0deg, rgba(15, 118, 110, .05) 0 1px, rgba(0, 0, 0, 0) 1px 36px);
+  background-attachment: fixed, fixed, scroll;
+}
+
+/* 标题 */
+#root h1 {
+  font-size: 31px !important;
+  background: linear-gradient(92deg, #134e4a 0%, #0f766e 52%, #b45309 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+  font-weight: 800 !important;
+}
+
+/* 工具导航条 */
+#root button[class*="whitespace-nowrap"] {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 650 !important;
+  border-radius: 10px !important;
+}
+#root button[class*="whitespace-nowrap"][aria-current="true"] {
+  background: linear-gradient(135deg, #0f766e, #0891b2) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 22px -16px rgba(15, 118, 110, .9);
+}
+#root button[class*="whitespace-nowrap"][data-xn-num]::before {
+  content: attr(data-xn-num);
+  margin-right: 4px;
+  font-weight: 800;
+  opacity: .75;
+}
+
+/* 区块标题 */
+#root section h2 { font-size: 18px !important; letter-spacing: -.01em; }
+#root section h2 + p, #root section h2 ~ p { font-size: 13px !important; line-height: 1.7; }
+#root section h3 { font-size: 15px !important; font-weight: 700 !important; }
+
+/* 卡片 */
+#root .rounded-2xl.border.bg-white,
+#root .rounded-xl.border.bg-white {
+  border-color: #dfece9 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 18px 40px -32px rgba(15, 118, 110, .55) !important;
+}
+
+/* 表单 */
+#root label { font-size: 13px !important; color: #475569 !important; }
+#root select { min-height: 48px !important; font-size: 15.5px !important; }
+#root input[type="number"] { min-height: 48px !important; font-size: 20px !important; }
+
+/* 结果小卡 */
+#root .rounded-xl.border.p-3\.5 {
+  padding: 14px !important;
+  border-radius: 12px !important;
+}
+#root .rounded-xl.border.p-3\.5 .text-lg.font-bold {
+  font-size: 22px !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.01em;
+}
+#root .rounded-xl.border.p-3\.5 .text-lg.font-bold.xn-primary { font-size: 25px !important; }
+#root .rounded-xl.border.p-3\.5 .text-xs { font-size: 12.5px !important; }
+
+/* 复制结果 */
+#root button[class*="bg-green-"] {
+  min-height: 42px !important;
+  font-size: 13.5px !important;
+  font-weight: 650 !important;
+  border-radius: 10px !important;
+}
+
+/* 空态引导 */
+#root .xn-rent-empty {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 18px 12px;
+  border: 2px dashed #d5e6e2 !important;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fbfefd, #f1faf7);
+  font-size: 13px !important;
+}
+#root .xn-rent-empty button {
+  min-height: 42px !important;
+  padding: 0 18px !important;
+  border-radius: 10px !important;
+  border: none !important;
+  background: linear-gradient(135deg, #0f766e, #0891b2) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  box-shadow: 0 10px 22px -16px rgba(15, 118, 110, .9);
+}
+
+/* 焦点可见 */
+#root a:focus-visible, #root button:focus-visible,
+#root input:focus-visible, #root select:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}
+
+/* 移动端 */
+@media (max-width: 640px) {
+  #root h1 { font-size: 24px !important; }
+  #root section h2 { font-size: 17px !important; }
+  #root button[class*="whitespace-nowrap"] { min-height: 44px !important; font-size: 12.5px !important; padding: 0 12px !important; }
+  #root .rounded-xl.border.p-3\.5 .text-lg.font-bold { font-size: 20px !important; }
+  #root .rounded-xl.border.p-3\.5 .text-lg.font-bold.xn-primary { font-size: 23px !important; }
+}
