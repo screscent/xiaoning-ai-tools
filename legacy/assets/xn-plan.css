@@ -1,0 +1,233 @@
+/* R1268 区间与排期统计合集（ijapvv8zig）· 主题：排期·靛蓝珊瑚
+ * 纯 CSS 渐变绘制，无图片资源；仅人用友好层。
+ */
+
+/* ---------- 主题底：靛蓝 + 珊瑚 + 时间轴 ---------- */
+html { background: #f4f6fb !important; }
+body {
+  background:
+    radial-gradient(920px 530px at 6% -10%, rgba(79, 70, 229, .18), transparent 62%),
+    radial-gradient(840px 490px at 104% -6%, rgba(251, 113, 133, .18), transparent 58%),
+    linear-gradient(180deg, #fafbff 0%, #f4f6fb 48%, #fbf7f8 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  background-image:
+    linear-gradient(90deg, rgba(79, 70, 229, .05) 1px, transparent 1px),
+    radial-gradient(rgba(251, 113, 133, .16) 1.2px, transparent 1.2px) !important;
+  background-size: 72px 100%, 24px 100% !important;
+  opacity: .9 !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  background: linear-gradient(92deg, #1e1b4b 0%, #4f46e5 55%, #fb7185 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+#root h2 {
+  padding-left: 11px !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #1e1b4b !important;
+  letter-spacing: -.01em;
+}
+#root h2::before {
+  background: linear-gradient(180deg, #4f46e5, #fb7185) !important;
+  width: 5px !important;
+  left: 0 !important;
+}
+
+/* ---------- 工具 tab ---------- */
+#root nav {
+  padding: 6px !important;
+  background: rgba(255, 255, 255, .82) !important;
+  border: 1px solid rgba(79, 70, 229, .14) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 12px 26px -24px rgba(30, 27, 75, .5);
+}
+#root a.xn-pl-tab {
+  min-height: 44px !important;
+  height: 44px !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 11px !important;
+  color: #5b5b78 !important;
+  border: 1px solid transparent !important;
+  transition: all .15s ease;
+}
+#root a.xn-pl-tab:hover {
+  background: #f4f3ff !important;
+  color: #4338ca !important;
+}
+#root a.xn-pl-tab[aria-pressed="true"] {
+  background: linear-gradient(135deg, #6366f1, #fb7185) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 18px -10px rgba(99, 102, 241, .85) !important;
+}
+
+/* ---------- 表单 ---------- */
+#root label {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #4b4b63 !important;
+}
+#root input[type=date]:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  border-color: #dfe1f2 !important;
+  color: #1e1b4b !important;
+  background: #fff !important;
+}
+#root input[type=date]:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, .14) !important;
+}
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  border-color: #dfe1f2 !important;
+}
+#root select:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, .14) !important;
+}
+#root textarea {
+  min-height: 160px !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+  border-radius: 12px !important;
+  border-color: #dfe1f2 !important;
+  background: #fff !important;
+  padding: 12px 14px !important;
+}
+#root textarea:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, .14) !important;
+  outline: none !important;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root button.xn-pl-copy {
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  border-radius: 11px !important;
+  border: 1px solid #dfe1f2 !important;
+  background: #fff !important;
+  color: #4338ca !important;
+  transition: all .14s ease;
+}
+#root button.xn-pl-copy:hover {
+  border-color: #6366f1 !important;
+  background: #f5f4ff !important;
+}
+
+/* ---------- 统计卡与大数字 ---------- */
+#root .xn-pl-stat {
+  border-radius: 14px !important;
+  border: 1px solid rgba(79, 70, 229, .14) !important;
+  box-shadow: 0 10px 22px -22px rgba(30, 27, 75, .45);
+}
+#root .xn-pl-stat span {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #5b5b78 !important;
+}
+#root .xn-pl-big {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  color: #312e81 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+}
+#root .xn-pl-big span {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #6b7280 !important;
+  margin-left: 4px;
+}
+#root .xn-pl-unit {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #6b7280 !important;
+}
+
+/* ---------- 表格 ---------- */
+#root .xn-pl-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #e7e7f5 !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+#root .xn-pl-table thead tr { background: #f5f5ff !important; }
+#root .xn-pl-table th {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #4338ca !important;
+  padding: 9px 12px !important;
+}
+#root .xn-pl-table td {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding: 9px 12px !important;
+  color: #2f3048 !important;
+  border-top: 1px solid #eef0f8 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-pl-table tbody tr:nth-child(even) td { background: #fbfbff !important; }
+#root .xn-pl-table tbody tr:hover td { background: #f7f4ff !important; }
+
+/* ---------- 使用说明 ---------- */
+#root details {
+  border-color: rgba(79, 70, 229, .16) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, .86) !important;
+}
+#root summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #4338ca !important;
+}
+#root details p, #root details li {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  color: #55556e !important;
+}
+
+/* ---------- 键盘可达性 ---------- */
+#root a:focus-visible,
+#root button:focus-visible,
+#root input:focus-visible,
+#root select:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, .4) !important;
+  outline-offset: 2px;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root nav { gap: 6px !important; }
+  #root a.xn-pl-tab { padding: 0 12px !important; }
+  #root .xn-pl-big { font-size: 26px !important; }
+  #root textarea { min-height: 140px !important; }
+}
