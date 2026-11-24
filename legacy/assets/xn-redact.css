@@ -1,0 +1,186 @@
+/* 小凝工具站 · 文本脱敏与分享自查皮肤 xn-redact v1（纯 CSS，无图片）
+ * 主题：隐私紫 + 45° 打码斜纹；统计数字放大、结果区等宽。
+ * 注入：legacy/npxiz82aq6.html
+ */
+
+:root {
+  --rd: #7c3aed;
+  --rd-deep: #6d28d9;
+  --rd-ink: #1e1b2e;
+  --rd-line: #e4ddf3;
+}
+
+html { background: #f4f1fa; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 10% -12%, rgba(124, 58, 237, .16), transparent 60%),
+    radial-gradient(880px 500px at 102% -6%, rgba(14, 165, 233, .10), transparent 56%),
+    linear-gradient(180deg, #faf8fe 0%, #f4f1fa 52%, #faf8fe 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 45° 打码斜纹 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(124, 58, 237, .055) 0,
+    rgba(124, 58, 237, .055) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 62%);
+  mask-image: linear-gradient(180deg, #000, transparent 62%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 顶部工具卡 ---------- */
+#root button[class*="rounded-lg border"][class*="px-3"] {
+  border-radius: 12px !important;
+  border: 1px solid var(--rd-line) !important;
+  background: #fff !important;
+  transition: border-color .15s, box-shadow .15s, background .15s, transform .12s;
+}
+
+#root button[class*="rounded-lg border"][class*="px-3"]:hover {
+  border-color: #c4b5fd !important;
+  box-shadow: 0 5px 14px rgba(124, 58, 237, .12);
+}
+
+#root button[class*="rounded-lg border"][class*="px-3"]:focus-visible {
+  outline: 2px solid var(--rd);
+  outline-offset: 2px;
+}
+
+#root button[class*="rounded-lg border"][class*="px-3"][aria-current="true"] {
+  border-color: transparent !important;
+  background: linear-gradient(150deg, #8b5cf6, #6d28d9) !important;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, .26);
+}
+
+#root button[class*="rounded-lg border"][class*="px-3"][aria-current="true"] * { color: #fff !important; }
+#root button[class*="rounded-lg border"][class*="px-3"][aria-current="true"] span[class*="text-[11px]"] {
+  color: rgba(255, 255, 255, .72) !important;
+}
+
+/* 卡片编号 */
+#root button[class*="rounded-lg border"][class*="px-3"] > span:first-child {
+  font: 700 11px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  letter-spacing: .08em;
+  color: #a78bfa !important;
+}
+
+/* ---------- 区块标题 ---------- */
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--rd-ink) !important;
+}
+
+#root h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #a78bfa, #7c3aed);
+  vertical-align: -2px;
+}
+
+/* ---------- 文本域 ---------- */
+#root textarea {
+  font-size: 16px !important;
+  line-height: 1.65;
+  min-height: 150px;
+  padding: 12px 14px !important;
+  border: 1px solid var(--rd-line) !important;
+  border-radius: 11px !important;
+  background: #fff !important;
+}
+
+#root textarea:focus {
+  outline: none !important;
+  border-color: var(--rd) !important;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, .13);
+}
+
+/* ---------- 按钮 ---------- */
+#root button.xn-rd-run {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 13.5px !important;
+  font-weight: 700;
+  color: #fff !important;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9) !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 13px rgba(124, 58, 237, .26);
+  transition: transform .12s, box-shadow .15s;
+}
+
+#root button.xn-rd-run:hover { transform: translateY(-1px); box-shadow: 0 7px 18px rgba(124, 58, 237, .32); }
+#root button.xn-rd-run:focus-visible { outline: 2px solid var(--rd-deep); outline-offset: 2px; }
+
+#root button.xn-rd-act {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: #4b3f66 !important;
+  background: #fff !important;
+  border: 1px solid var(--rd-line) !important;
+  border-radius: 10px !important;
+  transition: background .15s, border-color .15s;
+}
+
+#root button.xn-rd-act:hover { background: #f7f3ff !important; border-color: #c4b5fd !important; }
+#root button.xn-rd-act:focus-visible { outline: 2px solid var(--rd); outline-offset: 2px; }
+
+#root button.xn-rd-copy {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: var(--rd-deep) !important;
+  background: #f3edff !important;
+  border: 1px solid #d8c8fb !important;
+  border-radius: 10px !important;
+}
+
+#root button.xn-rd-copy:hover { background: #ebe1ff !important; }
+#root button.xn-rd-copy:focus-visible { outline: 2px solid var(--rd); outline-offset: 2px; }
+
+/* ---------- 统计数字 ---------- */
+#root .xn-rd-num {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
+  color: var(--rd-deep) !important;
+}
+
+/* ---------- 脱敏结果区 ---------- */
+#root .xn-rd-out {
+  font-size: 15px !important;
+  line-height: 1.7;
+  letter-spacing: .01em;
+}
+
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; }
+  #root textarea { min-height: 132px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root button[class*="rounded-lg border"][class*="px-3"]:hover,
+  #root button.xn-rd-run:hover { transform: none; }
+}
