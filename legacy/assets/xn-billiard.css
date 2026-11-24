@@ -1,0 +1,251 @@
+/* R1330 台球计分与角度合集 —— 球台绒绿 + 粉球点缀（纯 CSS，无图片） */
+:root {
+  --xnb-line: #d5ece1;
+  --xnb-ink: #0e2019;
+  --xnb-green: #059669;
+  --xnb-green-d: #065f46;
+}
+
+body {
+  background-color: #f2faf5 !important;
+  background-image:
+    radial-gradient(circle at 10% 2%, rgba(5, 150, 105, 0.12), transparent 44%),
+    radial-gradient(circle at 92% 4%, rgba(20, 184, 166, 0.12), transparent 40%),
+    radial-gradient(rgba(5, 150, 105, 0.12) 1px, transparent 1.4px);
+  background-size: auto, auto, 22px 22px;
+  background-attachment: fixed, fixed, scroll;
+}
+
+/* 页面自带 slate 底：换成绒绿渐变 */
+#root .min-h-screen {
+  background: linear-gradient(180deg, rgba(236, 250, 243, 0.8), rgba(255, 255, 255, 0.18) 55%, rgba(236, 250, 243, 0.5)) !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+  color: var(--xnb-ink) !important;
+}
+#root h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin: 12px 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #34d399, #059669 55%, #14b8a6);
+}
+#root h1 + p {
+  font-size: 14px !important;
+  color: #4a5f57 !important;
+}
+
+/* ---------- 顶部工具导航 ---------- */
+#root nav.flex {
+  justify-content: flex-start !important;
+}
+#root nav.flex a {
+  min-height: 44px !important;
+  padding: 0 12px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  border-radius: 999px !important;
+}
+#root nav.flex a::after {
+  content: attr(data-no);
+  margin-left: 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9.5px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+#root nav.flex a[aria-current="true"] {
+  background: #e7f8ef !important;
+  color: #047857 !important;
+}
+
+/* ---------- 入口卡 ---------- */
+#root .xn-bd-card {
+  position: relative;
+  min-height: 196px;
+  border-radius: 22px !important;
+  border-color: var(--xnb-line) !important;
+}
+#root .xn-bd-card:hover {
+  border-color: #6ee7b7 !important;
+  box-shadow: 0 16px 34px -26px rgba(5, 150, 105, 0.65) !important;
+}
+#root .xn-bd-card::after {
+  content: attr(data-no);
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #059669;
+  opacity: 0.55;
+}
+#root .xn-bd-card h3 {
+  font-size: 16.5px !important;
+  font-weight: 800 !important;
+  color: var(--xnb-ink) !important;
+}
+#root .xn-bd-card p {
+  font-size: 12.5px !important;
+  line-height: 1.7 !important;
+}
+#root .xn-bd-card code {
+  display: none !important;
+}
+
+/* ---------- 工具区块 ---------- */
+#root h2.xn-bd-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: var(--xnb-ink) !important;
+}
+#root h2.xn-bd-h2 + p {
+  font-size: 12.5px !important;
+  color: #55706a !important;
+}
+
+/* ---------- 表单 ---------- */
+#root input.xn-bd-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root select,
+#root textarea {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+  border-color: var(--xnb-line) !important;
+  background: #fdfffe !important;
+  color: var(--xnb-ink) !important;
+}
+#root select {
+  height: 48px !important;
+  font-weight: 600 !important;
+}
+#root input:focus,
+#root select:focus,
+#root textarea:focus {
+  outline: none !important;
+  border-color: var(--xnb-green) !important;
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.14) !important;
+}
+#root label {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #3f574f !important;
+}
+
+/* ---------- 滑杆 ---------- */
+#root input[type="range"] {
+  height: 32px !important;
+  accent-color: var(--xnb-green) !important;
+  cursor: pointer;
+}
+#root input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px;
+  background: #e3f2ea;
+}
+#root input[type="range"]::-webkit-slider-thumb {
+  width: 22px;
+  height: 22px;
+  margin-top: -7px;
+  border-radius: 999px;
+  background: var(--xnb-green);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.35);
+}
+
+/* ---------- 分段与操作按钮 ---------- */
+#root button.xn-bd-seg[aria-pressed] {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+#root .xn-bd-act {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root .xn-bd-copy {
+  min-height: 44px !important;
+  min-width: 60px !important;
+  padding: 0 12px !important;
+  border: 1px solid var(--xnb-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--xnb-green-d) !important;
+}
+#root .xn-bd-copy:hover {
+  background: #ecfdf5 !important;
+  border-color: #6ee7b7 !important;
+}
+
+/* ---------- 比分数字 ---------- */
+#root span.text-lg.font-bold,
+#root p.text-lg.font-bold,
+#root div.text-lg.font-bold,
+#root .grid > div.bg-slate-50 p.text-lg.font-bold,
+#root .grid > div.bg-slate-50 span.text-lg.font-bold,
+#root .grid > div.bg-slate-50 div.text-lg.font-bold {
+  font-size: 23px !important;
+  font-weight: 800 !important;
+}
+
+/* ---------- 回到顶部 ---------- */
+#root .xn-bd-top {
+  position: fixed;
+  right: 16px;
+  bottom: 20px;
+  z-index: 60;
+  width: 48px;
+  height: 48px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #a7f3d0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 26px -16px rgba(5, 150, 105, 0.75);
+  color: var(--xnb-green-d);
+  font-size: 18px;
+  cursor: pointer;
+}
+#root .xn-bd-top.on {
+  display: inline-flex;
+}
+#root .xn-bd-top:hover {
+  background: #ecfdf5;
+}
+
+/* ---------- 页脚 ---------- */
+#root footer {
+  border-top-color: var(--xnb-line) !important;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 640px) {
+  #root h1 {
+    font-size: 26px !important;
+  }
+  #root h2.xn-bd-h2 {
+    font-size: 18.5px !important;
+  }
+  #root .xn-bd-card {
+    min-height: 176px;
+  }
+}
