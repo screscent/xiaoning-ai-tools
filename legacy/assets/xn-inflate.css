@@ -1,0 +1,303 @@
+/* 小凝工具站 · 通胀与购买力皮肤 xn-inflate v1（纯 CSS，无图片）
+ * 主题：暖褐金 + 方格账本纸 + 硬币点阵。
+ * 注入：legacy/puhymr3a4t.html
+ */
+
+:root {
+  --if: #8a5a2b;
+  --if-deep: #5b3a1a;
+  --if-gold: #c98a3c;
+  --if-ink: #2a2118;
+  --if-line: #eadfce;
+  --if-soft: #faf6ee;
+}
+
+html { background: #f7f2e8; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 8% -12%, rgba(138, 90, 43, .14), transparent 60%),
+    radial-gradient(860px 500px at 104% -6%, rgba(201, 138, 60, .12), transparent 56%),
+    linear-gradient(180deg, #fbf8f1 0%, #f7f2e8 52%, #fdfaf4 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 方格账本纸 + 硬币点阵 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(138, 90, 43, .05) 0, rgba(138, 90, 43, .05) 1px, transparent 1px, transparent 32px),
+    repeating-linear-gradient(90deg, rgba(138, 90, 43, .05) 0, rgba(138, 90, 43, .05) 1px, transparent 1px, transparent 32px),
+    radial-gradient(rgba(201, 138, 60, .18) 1.2px, transparent 1.3px);
+  background-size: auto, auto, 26px 26px;
+  background-position: 0 0, 0 0, 13px 13px;
+  opacity: .8;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 60%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 60%);
+}
+
+#root { position: relative; z-index: 1; }
+
+/* ---------- 顶部工具切换（单页滚动导航） ---------- */
+.xn-if-nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  margin: 0 -4px;
+  padding: 8px 4px !important;
+  background: rgba(251, 248, 241, .95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--if-line);
+  scrollbar-width: none;
+}
+.xn-if-nav::-webkit-scrollbar { display: none; }
+
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 13px !important;
+  border-radius: 999px !important;
+  border: 1px solid var(--if-line) !important;
+  background: #fff !important;
+  color: #4a4238 !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  transition: border-color .15s, background .15s, box-shadow .15s, transform .12s;
+}
+#root a[href^="#/"]:hover {
+  border-color: #dcc39a !important;
+  background: #fdf9f1 !important;
+  transform: translateY(-1px);
+}
+#root a[href^="#/"]:focus-visible {
+  outline: 2px solid var(--if);
+  outline-offset: 2px;
+}
+#root a[href^="#/"][aria-current="page"] {
+  background: linear-gradient(135deg, #a06a31, #7a4a1e) !important;
+  border-color: #8a5a2b !important;
+  color: #fff !important;
+  box-shadow: 0 8px 16px -10px rgba(91, 58, 26, .8);
+}
+
+/* ---------- 标题 ---------- */
+#root h1 { letter-spacing: -.02em; color: var(--if-deep) !important; }
+
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--if-ink) !important;
+}
+#root h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, var(--if-gold), #9a6423);
+  vertical-align: -2px;
+}
+/* 使用说明标题降级，不加竖条 */
+#root h2.xn-if-note {
+  font-size: 14px !important;
+  color: #6b5a44 !important;
+  letter-spacing: .02em;
+}
+#root h2.xn-if-note::before { display: none !important; content: none !important; }
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; }
+  #root h2::before { height: 16px; margin-right: 8px; }
+}
+
+/* ---------- 工具区块 ---------- */
+#root section[id^="tool-"] {
+  border-color: var(--if-line) !important;
+  box-shadow: 0 12px 32px -26px rgba(91, 58, 26, .55);
+}
+
+/* ---------- 输入 ---------- */
+#root input[type="number"], #root input:not([type]) {
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 600;
+  border-radius: 12px !important;
+  border-color: var(--if-line) !important;
+  background: #fff !important;
+  font-variant-numeric: tabular-nums;
+  color: var(--if-ink) !important;
+}
+#root input:focus, #root select:focus {
+  border-color: var(--if-gold) !important;
+  box-shadow: 0 0 0 3px rgba(201, 138, 60, .18) !important;
+}
+#root select {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  border-color: var(--if-line) !important;
+  background-color: #fff !important;
+}
+
+/* 常用值胶囊 */
+.xn-if-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.xn-if-chips button {
+  min-height: 34px;
+  padding: 0 11px;
+  border-radius: 999px;
+  border: 1px solid #e6d7bd;
+  background: #fdf9f1;
+  color: var(--if);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1;
+  transition: background .12s, border-color .12s, transform .1s;
+}
+.xn-if-chips button:hover { background: #f7eeda; border-color: #d5b98a; }
+.xn-if-chips button:active { transform: scale(.97); }
+.xn-if-chips button:focus-visible { outline: 2px solid var(--if); outline-offset: 1px; }
+@media (max-width: 640px) {
+  .xn-if-chips button { min-height: 40px; padding: 0 13px; font-size: 13px; }
+}
+
+/* ---------- 开关 ---------- */
+#root button[role="switch"] {
+  position: relative;
+  outline-offset: 3px;
+}
+#root button[role="switch"][aria-checked="true"] {
+  background-color: var(--if) !important;
+  background-image: linear-gradient(135deg, #a06a31, #7a4a1e) !important;
+}
+#root button[role="switch"][aria-checked="false"] {
+  background-color: #e3d9c8 !important;
+  background-image: none !important;
+}
+/* 视觉仍 44×24，用伪元素把可点区扩到 44 高 */
+#root button[role="switch"]::after {
+  content: "";
+  position: absolute;
+  inset: -10px -6px;
+  border-radius: 999px;
+}
+#root button[role="switch"]:focus-visible { outline: 2px solid var(--if); }
+
+/* 工具编号徽标 */
+#root .xn-if-badge {
+  background-color: var(--if) !important;
+  background-image: linear-gradient(135deg, #a06a31, #7a4a1e) !important;
+  color: #fff !important;
+}
+
+/* ---------- 主计算按钮 ---------- */
+#root button.xn-if-go {
+  background-color: var(--if) !important;
+  background-image: linear-gradient(135deg, #a06a31, #7a4a1e) !important;
+  border-radius: 12px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -14px rgba(91, 58, 26, .85);
+}
+#root button.xn-if-go:hover { filter: brightness(1.06); }
+#root button.xn-if-go:focus-visible { outline: 2px solid var(--if); outline-offset: 2px; }
+
+/* ---------- 复制 / 清空 / 计算按钮 ---------- */
+#root button[aria-label="复制结果"],
+#root button[aria-label="清空"] {
+  min-height: 44px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  border-radius: 11px !important;
+  font-size: 13px !important;
+}
+#root button[aria-label="复制结果"] {
+  background: linear-gradient(135deg, #a06a31, #7a4a1e) !important;
+  color: #fff !important;
+}
+#root button[aria-label="清空"] {
+  border: 1px solid var(--if-line) !important;
+  background: #fff !important;
+  color: #6b5a44 !important;
+}
+
+/* ---------- 结果数字 ---------- */
+#root .text-xl:not(h2) {
+  color: var(--if-deep) !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  line-height: 1.25;
+  letter-spacing: -.015em;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 640px) {
+  #root .text-xl:not(h2) { font-size: 22px !important; }
+}
+
+/* ---------- 表格 ---------- */
+#root table {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+#root thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f6efe2 !important;
+  color: #5b4630 !important;
+  font-weight: 700;
+  font-size: 12.5px;
+  padding: 9px 10px !important;
+  border-bottom: 1px solid var(--if-line) !important;
+  white-space: nowrap;
+}
+#root tbody td {
+  padding: 8px 10px !important;
+  border-bottom: 1px solid #f1e9db !important;
+  font-variant-numeric: tabular-nums;
+}
+#root tbody tr:nth-child(even) { background: #fcf9f3; }
+#root tbody tr:hover { background: #f8f1e4; }
+
+/* 正文可读性 */
+#root p, #root li { line-height: 1.7; }
+
+/* 回到顶部 */
+.xn-if-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--if-line);
+  background: #fff;
+  color: var(--if-deep);
+  box-shadow: 0 10px 24px -14px rgba(91, 58, 26, .7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-if-top.is-on { display: flex; }
+.xn-if-top:focus-visible { outline: 2px solid var(--if); outline-offset: 2px; }
