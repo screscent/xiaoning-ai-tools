@@ -1,0 +1,229 @@
+/* 小凝工具站 · 文本差异与合并皮肤 xn-diff v1（纯 CSS，无图片）
+ * 主题：靛蓝 + 细网格；结果区红绿 diff 行加深、行号等宽。
+ * 注入：legacy/wn3a9fj8gw.html
+ */
+
+:root {
+  --df: #4f46e5;
+  --df-deep: #4338ca;
+  --df-ink: #0f172a;
+  --df-line: #dcdfeb;
+}
+
+html { background: #f2f4fa; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 10% -12%, rgba(79, 70, 229, .16), transparent 60%),
+    radial-gradient(880px 500px at 102% -6%, rgba(14, 165, 233, .12), transparent 56%),
+    linear-gradient(180deg, #f8f9fe 0%, #f2f4fa 52%, #f8f9fe 100%) !important;
+  background-attachment: fixed !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(79, 70, 229, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 70, 229, .055) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: .85;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 62%);
+  mask-image: linear-gradient(180deg, #000, transparent 62%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签（网格容器） ---------- */
+#root nav[class*="grid-cols-2"] a[href^="#/"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px !important;
+  padding: 0 12px !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  color: #3f4a5f !important;
+  background: #fff !important;
+  border: 1px solid var(--df-line) !important;
+  border-radius: 9px !important;
+  transition: border-color .15s, background .15s;
+}
+
+#root nav[class*="grid-cols-2"] a[href^="#/"]::before {
+  content: attr(data-no);
+  font: 700 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #9aa4b8;
+  letter-spacing: .03em;
+}
+
+#root nav[class*="grid-cols-2"] a[href^="#/"]:hover { border-color: #b9bfe0 !important; }
+#root nav[class*="grid-cols-2"] a[href^="#/"]:focus-visible { outline: 2px solid var(--df); outline-offset: 2px; }
+
+#root nav[class*="grid-cols-2"] a[href^="#/"][aria-current] {
+  color: #fff !important;
+  background: linear-gradient(135deg, #4f46e5, #4338ca) !important;
+  border-color: transparent !important;
+  box-shadow: 0 5px 14px rgba(79, 70, 229, .28);
+}
+
+#root nav[class*="grid-cols-2"] a[href^="#/"][aria-current]::before { color: rgba(255, 255, 255, .7); }
+
+/* ---------- 标题 ---------- */
+#root h2.xn-df-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--df-ink) !important;
+}
+
+#root h2.xn-df-h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #818cf8, #4f46e5);
+  vertical-align: -2px;
+}
+
+/* ---------- 输入区 ---------- */
+#root textarea.xn-df-area {
+  font-size: 16px !important;
+  line-height: 1.65;
+  min-height: 168px;
+  padding: 12px 14px !important;
+  border: 1px solid var(--df-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#root textarea.xn-df-area:focus {
+  outline: none !important;
+  border-color: var(--df) !important;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, .13);
+}
+
+/* ---------- 模式（逐行/逐词） ---------- */
+#root button.xn-df-mode {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  color: #3f4a5f !important;
+  background: #fff !important;
+  border: 1px solid var(--df-line) !important;
+  border-radius: 9px !important;
+}
+
+#root button.xn-df-mode[aria-pressed="true"] {
+  color: #fff !important;
+  background: linear-gradient(135deg, #4f46e5, #4338ca) !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, .25);
+}
+
+#root button.xn-df-mode:focus-visible { outline: 2px solid var(--df); outline-offset: 2px; }
+
+/* ---------- 操作按钮 ---------- */
+#root button.xn-df-act {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  color: #374151 !important;
+  background: #fff !important;
+  border: 1px solid var(--df-line) !important;
+  border-radius: 9px !important;
+  transition: background .15s, border-color .15s;
+}
+
+#root button.xn-df-act:hover { background: #f5f6fd !important; border-color: #b9bfe0 !important; }
+#root button.xn-df-act:focus-visible { outline: 2px solid var(--df); outline-offset: 2px; }
+
+#root button.xn-df-run {
+  min-height: 44px !important;
+  padding: 0 20px !important;
+  font-size: 13.5px !important;
+  font-weight: 700;
+  color: #fff !important;
+  background: linear-gradient(135deg, #4f46e5, #4338ca) !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, .28);
+  transition: transform .12s, box-shadow .15s;
+}
+
+#root button.xn-df-run:hover { transform: translateY(-1px); box-shadow: 0 7px 18px rgba(79, 70, 229, .34); }
+#root button.xn-df-run:focus-visible { outline: 2px solid var(--df-deep); outline-offset: 2px; }
+
+/* ---------- 复制结果 ---------- */
+#root button.xn-df-copy {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: var(--df-deep) !important;
+  background: #eef0fd !important;
+  border: 1px solid #c7cbf2 !important;
+  border-radius: 9px !important;
+}
+
+#root button.xn-df-copy:hover { background: #e3e6fc !important; }
+#root button.xn-df-copy:focus-visible { outline: 2px solid var(--df); outline-offset: 2px; }
+
+/* ---------- 字符计数徽标 ---------- */
+#root .xn-df-count {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: 12px !important;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--df-deep) !important;
+  background: #eef0fd;
+  border: 1px solid #d5d8f5;
+  border-radius: 999px;
+}
+
+/* ---------- 结果行（红绿 diff） ---------- */
+#root .xn-df-row {
+  font-size: 14px !important;
+  line-height: 1.65;
+  border-radius: 6px !important;
+}
+
+#root .xn-df-row[class*="bg-red-50"] {
+  background: #fef1f2 !important;
+  box-shadow: inset 3px 0 0 #f43f5e;
+}
+
+#root .xn-df-row[class*="bg-green-50"] {
+  background: #eefcf3 !important;
+  box-shadow: inset 3px 0 0 #16a34a;
+}
+
+/* ---------- 复选框 ---------- */
+#root input[type="checkbox"].xn-df-check {
+  width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  accent-color: var(--df);
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  #root h2.xn-df-h2 { font-size: 18.5px !important; }
+  #root textarea.xn-df-area { min-height: 140px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root button.xn-df-run:hover { transform: none; }
+}
