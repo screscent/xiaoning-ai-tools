@@ -1,0 +1,202 @@
+/* R1311 家电保养与周期提醒合集 · 主题「家电管家」 xn-care
+   纯 CSS：瓷白 + 青蓝柔光 + 家电面板格线，无图片 */
+
+#root {
+  --xn-care-ink: #1e3a4a;
+  --xn-care-teal: #0e7490;
+  --xn-care-blue: #2563eb;
+}
+
+/* ---------- 底色：瓷面格线 ---------- */
+#root > div:first-child {
+  background:
+    radial-gradient(820px 380px at 50% -150px, rgba(37, 99, 235, 0.13), transparent 70%),
+    radial-gradient(620px 340px at 92% 6%, rgba(14, 116, 144, 0.10), transparent 65%),
+    repeating-linear-gradient(0deg, rgba(14, 116, 144, 0.04) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgba(14, 116, 144, 0.035) 0 1px, transparent 1px 44px),
+    linear-gradient(180deg, #f7fbff 0%, #eff7fb 50%, #e9f3f8 100%) !important;
+  background-attachment: fixed;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 { letter-spacing: 0.01em; color: #123544 !important; }
+
+/* ---------- 工具切换 ---------- */
+#root button[class*="rounded-lg"][class*="text-white"]:not([class*="mt-"]) {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #2563eb, #0e7490) !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.24);
+}
+#root button[class*="text-white"]:not([class*="mt-"])[aria-pressed="false"] {
+  background: #fbfdff !important;
+  color: #3f5b6b !important;
+  box-shadow: inset 0 0 0 1px rgba(14, 116, 144, 0.18) !important;
+}
+
+/* ---------- 区块标题 ---------- */
+#root section h2 {
+  position: relative;
+  font-size: 19px !important;
+  line-height: 1.35;
+  color: #123544 !important;
+  padding-left: 14px;
+  letter-spacing: 0.01em;
+}
+#root section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #2563eb, #0e7490);
+}
+
+/* ---------- 表单 ---------- */
+#root select,
+#root input[type="date"] {
+  min-height: 48px !important;
+  font-size: 15.5px !important;
+  color: #123544;
+  background: #fbfdff;
+  border-color: #d3e4ee !important;
+  border-radius: 12px;
+}
+#root select:focus,
+#root input[type="date"]:focus {
+  outline: none;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.13);
+}
+#root label > span:first-child { color: #3f5b6b; font-size: 13.5px; }
+
+/* ---------- 开关 ---------- */
+#root button[role="switch"] {
+  min-height: 44px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ---------- 主按钮 ---------- */
+#root button[class*="bg-blue-600"][class*="w-full"] {
+  min-height: 48px !important;
+  font-size: 14.5px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #2563eb, #0e7490) !important;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.24);
+}
+#root button[class*="bg-blue-600"][class*="w-full"]:hover { filter: brightness(1.06); }
+
+/* ---------- 结果卡 ---------- */
+#root section .xn-care-title.xn-care-title {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #123544 !important;
+  letter-spacing: 0.01em;
+}
+#root section [class*="rounded-lg"][class*="border-gray-200"][class*="bg-gray-50"],
+#root section [class*="rounded-xl"][class*="border-gray-200"] {
+  border-radius: 14px !important;
+  border-color: #dbe9f0 !important;
+  box-shadow: 0 8px 20px rgba(14, 116, 144, 0.07);
+  padding: 14px !important;
+}
+#root section p[class*="font-semibold"][class*="text-gray-900"],
+#root section div[class*="font-semibold"][class*="text-gray-900"],
+#root section span[class*="font-semibold"][class*="text-gray-900"] {
+  font-size: 16px !important;
+  color: #123544 !important;
+}
+#root section span[class*="font-medium"][class*="text-gray-900"] {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #0f5f6e !important;
+}
+#root section span.xn-care-date.xn-care-date,
+#root section strong.xn-care-date {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #0e7490 !important;
+  letter-spacing: 0.02em;
+}
+#root section p.xn-care-line,
+#root section p[class*="text-sm"][class*="text-gray-600"] {
+  font-size: 13.5px !important;
+  line-height: 1.65;
+  color: #4b6472 !important;
+}
+#root section span[class*="bg-red-50"],
+#root section span[class*="bg-amber-50"],
+#root section span[class*="bg-emerald-50"] {
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  padding: 4px 9px !important;
+  border-radius: 999px !important;
+}
+#root section ol[class*="space-y-1.5"] li {
+  font-size: 14.5px !important;
+  line-height: 1.7;
+  color: #2f4b5a;
+}
+#root section ol[class*="space-y-1.5"] li > span:first-child {
+  font-size: 11.5px !important;
+}
+
+/* ---------- 复制/次按钮 ---------- */
+#root section button[class*="justify-center"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+}
+#root section button[class*="bg-blue-600"][class*="px-4"] {
+  min-height: 44px !important;
+  background: linear-gradient(135deg, #2563eb, #0e7490) !important;
+}
+#root section button[class*="border-gray-300"] {
+  min-height: 44px !important;
+  border-color: #d3e4ee !important;
+  color: #2f5d6b !important;
+  background: #fbfdff !important;
+}
+
+/* ---------- 保养周期：家电勾选 ---------- */
+#root label[class*="cursor-pointer"][class*="rounded-lg"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border-color: #d9e7ef !important;
+  color: #3f5b6b !important;
+  background: #fbfdff !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#root label[class*="cursor-pointer"][class*="rounded-lg"]:has(input:checked) {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.10), rgba(14, 116, 144, 0.12)) !important;
+  border-color: #7fa8ea !important;
+  color: #1e40af !important;
+}
+#root label[class*="cursor-pointer"] input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root details summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  color: #3f5b6b !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root section h2 { font-size: 18px !important; }
+  #root section span[class*="font-medium"][class*="text-gray-900"] { font-size: 16px !important; }
+  #root section span.xn-care-date.xn-care-date,
+#root section strong.xn-care-date { font-size: 18px !important; }
+  #root button[class*="rounded-lg"][class*="text-white"]:not([class*="mt-"]) { font-size: 13px !important; }
+}
