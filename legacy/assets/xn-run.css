@@ -1,0 +1,176 @@
+/* R1331 跑步配速与完赛预测合集 —— 跑道蓝橙（纯 CSS，无图片） */
+:root {
+  --xnr-line: #dbe7f7;
+  --xnr-ink: #101a2b;
+  --xnr-blue: #2563eb;
+  --xnr-blue-d: #1d4ed8;
+}
+
+body {
+  background-color: #f4f8fe !important;
+  background-image:
+    radial-gradient(circle at 8% 2%, rgba(37, 99, 235, 0.1), transparent 44%),
+    radial-gradient(circle at 92% 6%, rgba(249, 115, 22, 0.12), transparent 40%),
+    radial-gradient(rgba(37, 99, 235, 0.11) 1px, transparent 1.4px);
+  background-size: auto, auto, 22px 22px;
+  background-attachment: fixed, fixed, scroll;
+}
+
+#root .min-h-screen {
+  background: linear-gradient(180deg, rgba(238, 245, 254, 0.8), rgba(255, 255, 255, 0.18) 55%, rgba(255, 247, 237, 0.35)) !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+  color: var(--xnr-ink) !important;
+}
+#root h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin: 12px 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #38bdf8, #2563eb 55%, #f97316);
+}
+#root h1 + p {
+  font-size: 14px !important;
+  color: #4a5875 !important;
+}
+
+/* ---------- 分段导航 ---------- */
+#root nav.flex {
+  padding: 6px !important;
+  gap: 4px;
+  border-color: var(--xnr-line) !important;
+  border-radius: 14px !important;
+}
+#root nav.flex a {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+}
+#root nav.flex a::after {
+  content: attr(data-no);
+  margin-left: 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9.5px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+#root nav.flex a[aria-current="true"] {
+  background: #e8f1ff !important;
+  color: #1d4ed8 !important;
+  box-shadow: 0 6px 14px -12px rgba(37, 99, 235, 0.8);
+}
+
+/* ---------- 工具标题 ---------- */
+#root h2.xn-run-h2 {
+  position: relative;
+  padding-left: 12px;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: var(--xnr-ink) !important;
+}
+#root h2.xn-run-h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 3px;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #38bdf8, #2563eb 60%, #f97316);
+}
+
+/* ---------- 结果卡 ---------- */
+#root .xn-run-card {
+  border-radius: 16px !important;
+  border-color: var(--xnr-line) !important;
+  background: linear-gradient(180deg, #f9fcff, #ffffff) !important;
+}
+#root .xn-run-big {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: var(--xnr-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-run-card p {
+  font-size: 12.5px !important;
+}
+
+/* ---------- 表单 ---------- */
+#root input.xn-run-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+  border-color: var(--xnr-line) !important;
+  background: #fdfffe !important;
+  color: var(--xnr-ink) !important;
+}
+#root input[type="number"] {
+  border-radius: 10px !important;
+  border-color: var(--xnr-line) !important;
+  background: #fdfffe !important;
+  color: var(--xnr-ink) !important;
+}
+#root input:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: var(--xnr-blue) !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.13) !important;
+}
+#root label {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #44526e !important;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root .xn-run-copy {
+  min-height: 44px !important;
+  min-width: 62px !important;
+  padding: 0 12px !important;
+  justify-content: center !important;
+  border: 1px solid var(--xnr-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--xnr-blue-d) !important;
+}
+#root .xn-run-copy:hover {
+  background: #eef4ff !important;
+  border-color: #93c5fd !important;
+}
+
+/* ---------- 页脚 ---------- */
+#root footer {
+  border-top-color: var(--xnr-line) !important;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 640px) {
+  #root h1 {
+    font-size: 26px !important;
+  }
+  #root h2.xn-run-h2 {
+    font-size: 18.5px !important;
+  }
+  #root nav.flex {
+    flex-wrap: wrap;
+  }
+  #root nav.flex a {
+    flex: 1 0 30% !important;
+    min-width: 30%;
+  }
+  #root .xn-run-big {
+    font-size: 28px !important;
+  }
+}
