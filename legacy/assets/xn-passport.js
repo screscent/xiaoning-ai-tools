@@ -96,6 +96,18 @@
     bar.setAttribute("aria-valuenow", String(done));
   }
 
+  /* ---- 去掉开发者用语「地址栏深链（如 #/tourist）」 ---- */
+  function cleanRouteHint() {
+    Array.prototype.forEach.call(document.querySelectorAll("#root span"), function (el) {
+      if (el.children.length) return;
+      if (!/^#\/[\w-]+$/.test(el.textContent.trim())) return;
+      var host = el.parentElement;
+      if (host && /地址栏深链/.test(host.textContent)) {
+        host.textContent = "选择签证类型开始核对：点击下方标签切换，也可以直接用地址栏链接分享当前类型。";
+      }
+    });
+  }
+
   /* ---- 复制/重置可读名 ---- */
   function enhanceButtons() {
     Array.prototype.forEach.call(document.querySelectorAll("#root button"), function (b) {
@@ -152,6 +164,7 @@
       enhanceNav();
       updateProgress();
       enhanceButtons();
+      cleanRouteHint();
       enhanceSwitch();
       enhanceInputs();
       autoGenerate();
