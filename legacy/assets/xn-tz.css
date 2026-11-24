@@ -1,0 +1,218 @@
+/* 小凝工具站 · 世界时钟皮肤 xn-tz v1（纯 CSS，无图片）
+ * 主题：深空蓝 + 星点；时钟卡片深色仪表盘。
+ * 注入：legacy/r3avkczjyr.html
+ */
+
+:root {
+  --tz: #2563eb;
+  --tz-deep: #1d4ed8;
+  --tz-night: #0f1b33;
+  --tz-ink: #0f172a;
+  --tz-line: #dbe4f3;
+}
+
+html { background: #eef2f9; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 12% -12%, rgba(37, 99, 235, .18), transparent 60%),
+    radial-gradient(900px 520px at 100% -4%, rgba(99, 102, 241, .14), transparent 55%),
+    linear-gradient(180deg, #f5f8fd 0%, #eef2f9 52%, #f7f9fd 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 星点：两档尺寸的点阵，纯 CSS */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(37, 99, 235, .28) 1px, transparent 1px),
+    radial-gradient(rgba(99, 102, 241, .18) 1px, transparent 1px);
+  background-size: 56px 56px, 26px 26px;
+  background-position: 0 0, 13px 13px;
+  opacity: .7;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 64%);
+  mask-image: linear-gradient(180deg, #000, transparent 64%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签 ---------- */
+#root nav.flex.gap-2.overflow-x-auto.pb-1 > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  color: #334155 !important;
+  background: #fff !important;
+  border: 1px solid var(--tz-line) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+  transition: border-color .15s, box-shadow .15s, background .15s;
+}
+
+#root nav.flex.gap-2.overflow-x-auto.pb-1 > button::before {
+  content: attr(data-no);
+  font: 700 10.5px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #94a3b8;
+  letter-spacing: .03em;
+}
+
+#root nav.flex.gap-2.overflow-x-auto.pb-1 > button:hover {
+  border-color: #a9c2ef !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, .12);
+}
+
+#root nav.flex.gap-2.overflow-x-auto.pb-1 > button:focus-visible {
+  outline: 2px solid var(--tz);
+  outline-offset: 2px;
+}
+
+#root nav.flex.gap-2.overflow-x-auto.pb-1 > button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, .3);
+}
+
+#root nav.flex.gap-2.overflow-x-auto.pb-1 > button[aria-pressed="true"]::before { color: rgba(255, 255, 255, .7); }
+
+/* ---------- 工具标题 ---------- */
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.01em;
+  line-height: 1.35;
+  color: var(--tz-ink) !important;
+}
+
+#root h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #60a5fa, #2563eb);
+  vertical-align: -2px;
+}
+
+/* ---------- 城市选择 ---------- */
+#root div.flex.flex-wrap.gap-2 > button {
+  min-height: 40px !important;
+  padding: 0 13px !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  color: #3b4a63 !important;
+  background: #fff !important;
+  border: 1px solid var(--tz-line) !important;
+  border-radius: 10px !important;
+  transition: border-color .15s, background .15s, color .15s;
+}
+
+#root div.flex.flex-wrap.gap-2 > button:hover { border-color: #a9c2ef !important; background: #f5f8ff !important; }
+#root div.flex.flex-wrap.gap-2 > button:focus-visible { outline: 2px solid var(--tz); outline-offset: 2px; }
+
+#root div.flex.flex-wrap.gap-2 > button[aria-pressed="true"] {
+  color: var(--tz-deep) !important;
+  background: #e8efff !important;
+  border-color: #7ea6f0 !important;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, .12);
+}
+
+#root div.flex.flex-wrap.gap-2 > button[aria-pressed="true"]::after {
+  content: "✓";
+  margin-left: 5px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* ---------- 复制按钮（纯文字链接型） ---------- */
+#root button.xn-tz-copy {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  color: #fff !important;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, .22);
+  transition: transform .12s, box-shadow .15s;
+}
+
+#root button.xn-tz-copy:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(37, 99, 235, .3); }
+#root button.xn-tz-copy:focus-visible { outline: 2px solid var(--tz-deep); outline-offset: 2px; }
+
+/* ---------- 解读模式按钮 ---------- */
+#root button.xn-tz-seg {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  color: #334155 !important;
+  background: #fff !important;
+  border: 1px solid var(--tz-line) !important;
+  border-radius: 10px !important;
+}
+
+#root button.xn-tz-seg:hover { border-color: #a9c2ef !important; }
+#root button.xn-tz-seg:focus-visible { outline: 2px solid var(--tz); outline-offset: 2px; }
+
+/* ---------- 输入与下拉 ---------- */
+#root input.xn-tz-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root select.xn-tz-sel {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--tz-line) !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+}
+
+#root input.xn-tz-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]):focus,
+#root select.xn-tz-sel:focus {
+  outline: none !important;
+  border-color: var(--tz) !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, .14) !important;
+}
+
+/* ---------- 时钟卡片：深色仪表盘 ---------- */
+#root div.xn-tz-card {
+  border: 1px solid #1e3a66 !important;
+  border-radius: 14px !important;
+  background:
+    radial-gradient(420px 180px at 12% 0%, rgba(96, 165, 250, .18), transparent 68%),
+    linear-gradient(160deg, #12233f 0%, var(--tz-night) 62%, #0b1526 100%) !important;
+  box-shadow: 0 10px 24px rgba(15, 27, 51, .18);
+}
+
+#root div.xn-tz-card p.tabular-nums {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  letter-spacing: .02em;
+  color: #f8fafc !important;
+  font-variant-numeric: tabular-nums;
+}
+
+#root div.xn-tz-card .xn-tz-city { color: #dbeafe !important; font-weight: 700; }
+#root div.xn-tz-card .xn-tz-meta { color: #93c5fd !important; font-size: 11.5px !important; font-variant-numeric: tabular-nums; }
+#root div.xn-tz-card .xn-tz-date { color: #94a3b8 !important; font-size: 11.5px !important; }
+
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; }
+  #root nav.flex.gap-2.overflow-x-auto.pb-1 > button { padding: 0 14px !important; }
+  #root div.xn-tz-card p.tabular-nums { font-size: 26px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root button.xn-tz-copy:hover { transform: none; }
+}
