@@ -1,0 +1,146 @@
+/* R1310 汇率换算与换汇成本合集 · 主题「钱币汇率」 xn-fx
+   纯 CSS：玉青底 + 硬币同心环 + 金色辅光，无图片 */
+
+#root {
+  --xn-fx-jade: #0f766e;
+  --xn-fx-jade-deep: #115e59;
+  --xn-fx-gold: #b45309;
+  --xn-fx-ink: #1f2937;
+}
+
+/* ---------- 底色：钱币盘面 ---------- */
+#root > div:first-child {
+  background:
+    radial-gradient(760px 360px at 50% -140px, rgba(15, 118, 110, 0.16), transparent 70%),
+    radial-gradient(620px 320px at 92% 4%, rgba(180, 83, 9, 0.09), transparent 65%),
+    repeating-radial-gradient(circle at 50% -200px, rgba(15, 118, 110, 0.06) 0 1px, transparent 1px 34px),
+    linear-gradient(180deg, #f5fbf9 0%, #eef8f5 48%, #e8f3f0 100%) !important;
+  background-attachment: fixed;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 { letter-spacing: 0.01em; color: #123a36 !important; }
+
+/* ---------- 工具导航 ---------- */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  color: #3f5a56 !important;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.16);
+  display: inline-flex;
+  align-items: center;
+}
+#root a[href^="#/"]:hover {
+  background: #f0faf7 !important;
+  color: #0f766e !important;
+}
+#root a[href^="#/"][aria-current] {
+  background: linear-gradient(135deg, #0f766e 0%, #0d9488 60%, #b45309 130%) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.28) !important;
+}
+
+/* ---------- 区块标题 ---------- */
+#root section h2 {
+  position: relative;
+  font-size: 19px !important;
+  line-height: 1.35;
+  color: #123a36 !important;
+  padding-left: 14px;
+  letter-spacing: 0.01em;
+}
+#root section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #0f766e, #b45309);
+}
+
+/* ---------- 表单 ---------- */
+#root input[type="number"],
+#root input[type="text"]:not([type="search"]) {
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 700;
+  color: #123a36;
+  background: #fbfefd;
+  border-color: #cfe3de !important;
+  border-radius: 12px;
+}
+#root input[type="text"]:not([type="search"]) { font-size: 15.5px !important; }
+#root input[type="number"]:focus,
+#root input[type="text"]:focus {
+  outline: none;
+  border-color: #0f766e !important;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
+}
+#root label > span,
+#root label {
+  color: #3f5a56;
+}
+
+/* ---------- 按钮 ---------- */
+#root section button {
+  min-height: 44px;
+  font-size: 13.5px;
+}
+#root section button[class*="bg-slate-900"] {
+  min-height: 48px !important;
+  background: linear-gradient(135deg, #0f766e, #0d9488) !important;
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.24);
+  font-size: 14.5px !important;
+}
+#root section button[class*="bg-slate-900"]:hover { filter: brightness(1.06); }
+#root button[class*="border-slate-300"] {
+  min-height: 48px !important;
+  border-color: #cfe3de !important;
+  color: #115e59 !important;
+  background: #fbfefd !important;
+}
+#root button[class*="border-slate-300"]:hover { background: #eef8f5 !important; }
+
+/* ---------- 结果卡（Stat） ---------- */
+#root section [class*="bg-slate-50"][class*="border-slate-200"] {
+  background: linear-gradient(180deg, #fbfefd 0%, #f1faf7 100%) !important;
+  border-color: #d8e9e4 !important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.06);
+}
+#root section p[class*="text-[12px]"] {
+  font-size: 12.5px !important;
+  letter-spacing: 0.02em;
+  color: #5b7773 !important;
+}
+#root section p[class*="text-[22px]"] {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #115e59 !important;
+  letter-spacing: 0.01em;
+}
+#root section p[class*="text-base"][class*="font-semibold"] {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #134e4a !important;
+}
+#root section p[class*="text-[13px]"][class*="border"] {
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  color: #4b635f !important;
+  background: #f6fbf9 !important;
+  border-color: #d8e9e4 !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root a[href^="#/"] { font-size: 13px !important; padding-left: 10px; padding-right: 10px; }
+  #root section h2 { font-size: 18px !important; }
+  #root section p[class*="text-[22px]"] { font-size: 24px !important; }
+  #root section p[class*="text-base"][class*="font-semibold"] { font-size: 17px !important; }
+}
