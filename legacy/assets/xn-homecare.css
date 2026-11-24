@@ -1,0 +1,227 @@
+/* R1324 家电清洗与保养周期合集 · 主题「清新水波」 xn-homecare
+   纯 CSS：薄荷青渐变 + 水泡点纹理 + 白卡片，无图片 */
+
+#root {
+  --xnh-teal: #0f766e;
+  --xnh-aqua: #14b8a6;
+  --xnh-line: #dcece8;
+  --xnh-ink: #173f3b;
+}
+
+/* ---------- 底色 ---------- */
+html { background: #f4fbf9 !important; }
+body { background-color: #f4fbf9 !important; }
+
+#root,
+#root > div:first-child {
+  background:
+    radial-gradient(820px 400px at 50% -150px, rgba(20, 184, 166, 0.16), transparent 66%),
+    radial-gradient(520px 300px at 6% 12%, rgba(56, 189, 248, 0.10), transparent 66%),
+    radial-gradient(460px 280px at 96% 34%, rgba(16, 185, 129, 0.09), transparent 66%),
+    radial-gradient(rgba(15, 118, 110, 0.10) 1.4px, transparent 1.6px),
+    linear-gradient(180deg, #f9fefc 0%, #f2faf8 52%, #edf7f5 100%) !important;
+  background-size: auto, auto, auto, 26px 26px, auto !important;
+  background-attachment: fixed;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  display: inline-block;
+  color: #123b36 !important;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 0 #fff;
+}
+#root h1::after {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5eead4, #14b8a6 55%, #0ea5e9);
+}
+#root h1 + p { color: #4f7a74 !important; font-size: 14px !important; }
+
+/* ---------- 工具标签 ---------- */
+#root .xn-hc-tab {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  border: 1px solid #dcece8 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  color: #3f6862 !important;
+  transition: all 0.15s;
+}
+#root .xn-hc-tab::before {
+  content: attr(data-no);
+  margin-right: 5px;
+  font-weight: 800;
+  color: #0f766e;
+}
+#root .xn-hc-tab:hover { background: #f2fbf9 !important; border-color: #b9e0da !important; }
+#root .xn-hc-tab.is-active {
+  background: linear-gradient(135deg, #2dd4bf, #14b8a6 55%, #0d9488) !important;
+  border-color: #14b8a6 !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -8px rgba(13, 148, 136, 0.55) !important;
+}
+#root .xn-hc-tab.is-active::before { color: rgba(255, 255, 255, 0.9); }
+
+/* 标签行：桌面按内容宽度居中，避免等分截断 */
+#root .xn-hc-tabrow {
+  display: flex !important;
+  grid-template-columns: none !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+#root .xn-hc-tabrow > a { flex: 0 0 auto; }
+
+/* ---------- 工具卡 ---------- */
+#root section {
+  border-color: var(--xnh-line) !important;
+}
+#root .xn-hc-card {
+  border-color: var(--xnh-line) !important;
+  border-radius: 18px !important;
+  background: #fff !important;
+  box-shadow: inset 0 1px 0 #fff, 0 16px 36px -28px rgba(13, 148, 136, 0.45), 0 2px 8px rgba(13, 148, 136, 0.04) !important;
+}
+#root h2.xn-hc-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: var(--xnh-ink) !important;
+  letter-spacing: 0.01em;
+}
+#root h2 + p, #root h2 ~ p { color: #5c8079; }
+
+/* ---------- 使用说明 ---------- */
+#root .xn-hc-guide {
+  border-color: #dcece8 !important;
+  background: linear-gradient(180deg, #fbfefd, #f3fbf9) !important;
+}
+#root .xn-hc-guide h2 { font-size: 15.5px !important; color: #0f5e56 !important; }
+#root .xn-hc-guide li, #root .xn-hc-guide p { font-size: 12.5px !important; color: #4f7a74 !important; }
+
+/* ---------- 表单 ---------- */
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-color: #d5e9e5 !important;
+  border-radius: 10px !important;
+  background: #fdfefe !important;
+  color: #1c4f49 !important;
+}
+#root input[type="number"] {
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  border-color: #d5e9e5 !important;
+  border-radius: 10px !important;
+  background: #fdfefe !important;
+  color: #123b36 !important;
+}
+#root input:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: #14b8a6 !important;
+  box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.16) !important;
+}
+#root label { color: #3f6862 !important; }
+
+/* ---------- 结果 ---------- */
+#root .xn-hc-row {
+  padding: 11px 0 !important;
+  border-bottom: 1px dashed #e3f0ed !important;
+}
+#root .xn-hc-row:last-child { border-bottom: 0 !important; }
+#root .xn-hc-rlabel {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #5c8079 !important;
+}
+#root .xn-hc-ramount {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: #0f766e !important;
+}
+#root .xn-hc-rmeta {
+  font-size: 11.5px !important;
+  color: #8aa8a2 !important;
+}
+#root .xn-hc-tip {
+  border: 1px solid #d8eee9 !important;
+  border-radius: 12px !important;
+  background: linear-gradient(180deg, #f2fbf9, #eaf7f4) !important;
+}
+#root .xn-hc-tip .xn-hc-tiptitle {
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  color: #0f766e !important;
+}
+#root .xn-hc-tip li, #root .xn-hc-tip p {
+  font-size: 12.5px !important;
+  color: #456f69 !important;
+  line-height: 1.7 !important;
+}
+
+/* ---------- 按钮 ---------- */
+#root .xn-hc-primary {
+  min-height: 48px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #2dd4bf, #0d9488) !important;
+  box-shadow: 0 10px 22px -10px rgba(13, 148, 136, 0.6) !important;
+}
+#root .xn-hc-primary:hover { background: linear-gradient(135deg, #5eead4, #14b8a6) !important; }
+#root .xn-hc-action {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 11px !important;
+  border: 1px solid #dcece8 !important;
+  color: #3f6862 !important;
+  background: #fff !important;
+}
+#root .xn-hc-action:hover { background: #f2fbf9 !important; }
+
+/* ---------- 页脚 ---------- */
+#root footer {
+  border-top-color: var(--xnh-line) !important;
+  background: linear-gradient(180deg, #edf7f5, #e7f3f1) !important;
+}
+#root footer, #root footer * { color: #5f827d !important; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root .xn-hc-tabrow {
+    display: flex !important;
+    grid-template-columns: none !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding: 4px 2px 8px !important;
+    overflow-x: auto !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #root .xn-hc-tabrow::-webkit-scrollbar { display: none; }
+  #root .xn-hc-tabrow > a { flex: 0 0 auto; }
+}
+@media (max-width: 480px) {
+  #root h1 { font-size: 26px !important; }
+  #root h2.xn-hc-h2 { font-size: 18px !important; letter-spacing: 0 !important; }
+  #root .xn-hc-ramount { font-size: 20px !important; }
+  #root .xn-hc-tab { font-size: 13px !important; padding: 0 13px !important; }
+}
