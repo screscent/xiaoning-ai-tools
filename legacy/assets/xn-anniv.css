@@ -1,0 +1,198 @@
+/* 小凝工具站 · 纪念日与提醒清单皮肤 xn-anniv v1（纯 CSS，无图片）
+ * 主题：玫瑰粉渐变 + 心愿点点阵；标签 01–06 编号。
+ * 注入：legacy/nyi2whpkdd.html
+ */
+
+:root {
+  --an: #e11d48;
+  --an-deep: #be123c;
+  --an-ink: #1f1720;
+  --an-line: #f3dbe2;
+}
+
+html { background: #fdf4f7; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 10% -12%, rgba(225, 29, 72, .13), transparent 60%),
+    radial-gradient(880px 500px at 102% -6%, rgba(244, 114, 182, .12), transparent 56%),
+    linear-gradient(180deg, #fffafc 0%, #fdf4f7 52%, #fffafc 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 心愿点点阵 + 轻斜纹 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(225, 29, 72, .13) 1px, transparent 1px),
+    repeating-linear-gradient(45deg, rgba(244, 114, 182, .05) 0, rgba(244, 114, 182, .05) 1px, transparent 1px, transparent 16px);
+  background-size: 22px 22px, auto;
+  opacity: .75;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 62%);
+  mask-image: linear-gradient(180deg, #000, transparent 62%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签 ---------- */
+#root button.xn-an-tab {
+  position: relative;
+  min-height: 44px !important;
+  padding: 0 10px !important;
+  font-size: 12.5px !important;
+  gap: 3px !important;
+  white-space: nowrap;
+  font-weight: 600;
+  color: #5c4a51 !important;
+  background: #fff !important;
+  border: 1px solid var(--an-line) !important;
+  border-radius: 10px !important;
+  transition: border-color .15s, background .15s, box-shadow .15s;
+}
+
+#root button.xn-an-tab::before {
+  content: attr(data-no);
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  font: 700 8.5px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .04em;
+  color: #d8a3b2;
+}
+
+#root button.xn-an-tab > svg,
+#root button.xn-an-tab > span:first-child { flex: 0 0 auto; }
+
+#root button.xn-an-tab:hover { border-color: #f0b9c8 !important; box-shadow: 0 3px 10px rgba(225, 29, 72, .10); }
+#root button.xn-an-tab:focus-visible { outline: 2px solid var(--an); outline-offset: 2px; }
+
+#root button.xn-an-tab[aria-pressed="true"] {
+  background: linear-gradient(135deg, #f43f5e, #be123c) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(225, 29, 72, .26);
+}
+
+#root button.xn-an-tab[aria-pressed="true"]::before { color: rgba(255, 255, 255, .72); }
+
+/* ---------- 区块标题 ---------- */
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--an-ink) !important;
+}
+
+#root h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #fb7185, #e11d48);
+  vertical-align: -2px;
+}
+
+/* ---------- 文本域 ---------- */
+#root textarea {
+  font-size: 16px !important;
+  line-height: 1.65;
+  min-height: 132px;
+  padding: 12px 14px !important;
+  border: 1px solid var(--an-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#root textarea:focus {
+  outline: none !important;
+  border-color: var(--an) !important;
+  box-shadow: 0 0 0 4px rgba(225, 29, 72, .12);
+}
+
+/* ---------- 输入与下拉 ---------- */
+#root input.xn-an-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--an-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#root input.xn-an-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]):focus,
+#root select:focus {
+  outline: none !important;
+  border-color: var(--an) !important;
+  box-shadow: 0 0 0 4px rgba(225, 29, 72, .12) !important;
+}
+
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--an-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#root input[type="number"] { font-variant-numeric: tabular-nums; }
+
+/* ---------- 按钮 ---------- */
+#root button.xn-an-run {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 700;
+  color: #fff !important;
+  background: linear-gradient(135deg, #f43f5e, #be123c) !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 13px rgba(225, 29, 72, .24);
+  transition: transform .12s, box-shadow .15s;
+}
+
+#root button.xn-an-run:hover { transform: translateY(-1px); box-shadow: 0 7px 18px rgba(225, 29, 72, .3); }
+#root button.xn-an-run:focus-visible { outline: 2px solid var(--an-deep); outline-offset: 2px; }
+
+#root button.xn-an-copy {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: var(--an-deep) !important;
+  background: #fff1f4 !important;
+  border: 1px solid #f7c6d3 !important;
+  border-radius: 10px !important;
+}
+
+#root button.xn-an-copy:hover { background: #ffe4ea !important; }
+#root button.xn-an-copy:focus-visible { outline: 2px solid var(--an); outline-offset: 2px; }
+
+/* ---------- 复选框 ---------- */
+#root input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  accent-color: var(--an);
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; }
+  #root button.xn-an-tab { padding: 0 9px !important; font-size: 12px !important; }
+  #root textarea { min-height: 120px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root button.xn-an-run:hover { transform: none; }
+}
