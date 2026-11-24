@@ -1,0 +1,177 @@
+/* R1314 签证材料清单合集 · 主题「护照印章」 xn-passport
+   纯 CSS：浅蓝纸面 + 印章同心圆 + 蓝色柔光，无图片 */
+
+#root {
+  --xn-pass-ink: #1e3a5f;
+  --xn-pass-blue: #2563eb;
+  --xn-pass-teal: #0e7490;
+}
+
+/* ---------- 底色 ---------- */
+#root > div:first-child {
+  background:
+    radial-gradient(820px 380px at 50% -150px, rgba(37, 99, 235, 0.14), transparent 70%),
+    radial-gradient(600px 320px at 92% 6%, rgba(14, 116, 144, 0.09), transparent 65%),
+    repeating-radial-gradient(circle at 88% 12%, rgba(37, 99, 235, 0.055) 0 1px, transparent 1px 30px),
+    repeating-linear-gradient(0deg, rgba(30, 58, 95, 0.025) 0 1px, transparent 1px 40px),
+    linear-gradient(180deg, #f8fbff 0%, #f0f6fd 50%, #eaf2fb 100%) !important;
+  background-attachment: fixed;
+}
+
+#root h1 { letter-spacing: 0.01em; color: #16324f !important; }
+
+/* ---------- 签证类型导航 ---------- */
+#root a[href^="#/"] {
+  min-height: 52px !important;
+  font-size: 13px !important;
+  border-radius: 12px !important;
+  border-color: #d6e4f5 !important;
+  color: #3f5a78 !important;
+  background: #fbfdff !important;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+#root a[href^="#/"]:hover {
+  border-color: #a9c6ea !important;
+  color: #1d4ed8 !important;
+  background: #f3f8ff !important;
+}
+#root a[href^="#/"][aria-current],
+#root a[href^="#/"].bg-blue-500 {
+  background: linear-gradient(135deg, #2563eb, #0e7490) !important;
+  border-color: #2563eb !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.24) !important;
+}
+
+/* ---------- 标题 ---------- */
+#root section h2 {
+  position: relative;
+  font-size: 19px !important;
+  line-height: 1.35;
+  color: #16324f !important;
+  padding-left: 14px;
+  letter-spacing: 0.01em;
+}
+#root section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #2563eb, #0e7490);
+}
+
+/* ---------- 表单 ---------- */
+#root select,
+#root input[type="date"] {
+  min-height: 48px !important;
+  font-size: 15.5px !important;
+  color: #16324f;
+  background: #fbfdff;
+  border-color: #d6e4f5 !important;
+  border-radius: 12px;
+}
+#root input[type="number"] {
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 700;
+  color: #16324f;
+  background: #fbfdff;
+  border-color: #d6e4f5 !important;
+  border-radius: 12px;
+}
+#root select:focus,
+#root input:focus {
+  outline: none;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.13);
+}
+#root label { color: #3f5a78; }
+
+/* ---------- 开关 ---------- */
+#root button[role="switch"] {
+  min-height: 44px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ---------- 主按钮 ---------- */
+#root section button[class*="bg-blue-600"] {
+  min-height: 48px !important;
+  font-size: 14.5px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #2563eb, #0e7490) !important;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.24);
+}
+#root section button[class*="bg-blue-600"]:hover { filter: brightness(1.06); }
+
+/* ---------- 清单勾选项 ---------- */
+#root section[id^="tool-"] label[class*="cursor-pointer"][class*="items-start"] {
+  min-height: 44px !important;
+  font-size: 14.5px !important;
+  line-height: 1.55;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+  color: #2f4a66;
+}
+#root section[id^="tool-"] label[class*="cursor-pointer"][class*="items-start"]:hover {
+  background: #f4f9ff;
+}
+#root section[id^="tool-"] label[class*="cursor-pointer"] input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* ---------- 进度 ---------- */
+#root .xn-visa-progress {
+  height: 8px;
+  border-radius: 999px;
+  background: #e6eef8;
+  overflow: hidden;
+  margin: 8px 0 12px;
+}
+#root .xn-visa-progress > i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2563eb, #0e7490);
+  transition: width 0.25s ease;
+}
+#root section[id^="tool-"] [class*="text-sm"][class*="text-gray-500"] {
+  font-size: 13px !important;
+  color: #5b7590 !important;
+}
+
+/* ---------- 复制/重置 ---------- */
+#root section[id^="tool-"] button[class*="px-4"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+}
+#root section[id^="tool-"] button[class*="border-gray-300"] {
+  border-color: #d6e4f5 !important;
+  color: #2f5d7a !important;
+  background: #fbfdff !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root details summary,
+#root [class*="cursor-pointer"][class*="select-none"] {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  color: #3f5a78 !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root section h2 { font-size: 18px !important; }
+  #root a[href^="#/"] { min-height: 48px !important; font-size: 12.5px !important; }
+  #root section[id^="tool-"] label[class*="cursor-pointer"][class*="items-start"] { font-size: 14px !important; }
+}
