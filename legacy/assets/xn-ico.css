@@ -1,0 +1,210 @@
+/* 小凝工具站 · ICO 图标与多尺寸打包皮肤 xn-ico v1（纯 CSS，无图片）
+ * 主题：天蓝渐变 + 像素点阵（8px）；尺寸多选放大到 20px。
+ * 注入：legacy/r3ar3ezjyr.html
+ */
+
+:root {
+  --ic: #0284c7;
+  --ic-deep: #075985;
+  --ic-ink: #0b1a2b;
+  --ic-line: #d6e6f4;
+}
+
+html { background: #eef6fc; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 10% -12%, rgba(2, 132, 199, .15), transparent 60%),
+    radial-gradient(880px 500px at 102% -6%, rgba(99, 102, 241, .10), transparent 56%),
+    linear-gradient(180deg, #f7fbff 0%, #eef6fc 52%, #f9fcff 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 像素点阵：8px 小格 + 24px 主格 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(2, 132, 199, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 132, 199, .05) 1px, transparent 1px);
+  background-size: 8px 8px;
+  opacity: .9;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 62%);
+  mask-image: linear-gradient(180deg, #000, transparent 62%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签 ---------- */
+#root button.xn-ic-tab {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  color: #3d4f63 !important;
+  background: #fff !important;
+  border: 1px solid var(--ic-line) !important;
+  border-radius: 10px !important;
+  white-space: nowrap;
+  transition: border-color .15s, background .15s, box-shadow .15s;
+}
+
+#root button.xn-ic-tab:hover { border-color: #93c5e8 !important; box-shadow: 0 3px 10px rgba(2, 132, 199, .1); }
+#root button.xn-ic-tab:focus-visible { outline: 2px solid var(--ic); outline-offset: 2px; }
+
+#root button.xn-ic-tab[aria-pressed="true"] {
+  color: #fff !important;
+  background: linear-gradient(135deg, #0ea5e9, #0369a1) !important;
+  border-color: transparent !important;
+  box-shadow: 0 5px 14px rgba(2, 132, 199, .26);
+}
+
+/* ---------- 区块标题 ---------- */
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--ic-ink) !important;
+}
+
+#root h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #38bdf8, #0284c7);
+  vertical-align: -2px;
+}
+
+/* ---------- 尺寸复选框 ---------- */
+#root input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  accent-color: var(--ic);
+  cursor: pointer;
+}
+
+/* 尺寸项整行可点 */
+#root label:has(> input[type="checkbox"]) {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .15s;
+}
+
+#root label:has(> input[type="checkbox"]):hover { background: #f0f9ff; }
+
+/* ---------- 下拉与数字 ---------- */
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--ic-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#root select:focus {
+  outline: none !important;
+  border-color: var(--ic) !important;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, .13) !important;
+}
+
+#root input[type="number"] { font-variant-numeric: tabular-nums; }
+
+#root input.xn-ic-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--ic-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+/* ---------- 文件选择 ---------- */
+#root label.xn-ic-file {
+  min-height: 44px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ic-deep);
+  background: #f0f9ff;
+  border: 1px dashed #7dd3fc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+
+#root label.xn-ic-file:hover { background: #e0f2fe; border-color: #38bdf8; }
+
+/* ---------- 按钮 ---------- */
+#root button.xn-ic-run {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 13.5px !important;
+  font-weight: 700;
+  color: #fff !important;
+  background: linear-gradient(135deg, #0ea5e9, #0369a1) !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 13px rgba(2, 132, 199, .24);
+  transition: transform .12s, box-shadow .15s;
+}
+
+#root button.xn-ic-run:hover { transform: translateY(-1px); box-shadow: 0 7px 18px rgba(2, 132, 199, .3); }
+#root button.xn-ic-run:focus-visible { outline: 2px solid var(--ic-deep); outline-offset: 2px; }
+
+#root button.xn-ic-act {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: #3d4f63 !important;
+  background: #fff !important;
+  border: 1px solid var(--ic-line) !important;
+  border-radius: 10px !important;
+  transition: background .15s, border-color .15s;
+}
+
+#root button.xn-ic-act:hover { background: #f5fbff !important; border-color: #93c5e8 !important; }
+#root button.xn-ic-act:focus-visible { outline: 2px solid var(--ic); outline-offset: 2px; }
+
+#root button.xn-ic-mini {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: var(--ic-deep) !important;
+  background: #f0f9ff !important;
+  border: 1px solid #bae6fd !important;
+  border-radius: 10px !important;
+}
+
+#root button.xn-ic-mini:hover { background: #e0f2fe !important; }
+#root button.xn-ic-mini:focus-visible { outline: 2px solid var(--ic); outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; }
+  #root button.xn-ic-tab { padding: 0 13px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root button.xn-ic-run:hover { transform: none; }
+}
