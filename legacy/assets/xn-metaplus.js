@@ -19,7 +19,8 @@
       var no = String(i + 1).padStart(2, "0");
       if (a.getAttribute("data-no") !== no) a.setAttribute("data-no", no);
       var h3 = a.querySelector("h3");
-      var name = h3 ? h3.textContent.trim() : "工具" + CN[i];
+      var name = h3 ? h3.textContent.trim().replace(/^工具[A-Za-z]\s*/, "") : "工具" + CN[i];
+      if (h3 && h3.textContent.trim() !== name) h3.textContent = name;
       var label = "前往工具" + CN[i] + "：" + name;
       if (a.getAttribute("aria-label") !== label) a.setAttribute("aria-label", label);
     });
