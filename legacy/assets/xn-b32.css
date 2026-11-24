@@ -1,0 +1,208 @@
+/* 小凝工具站 · Base32 与编码校验皮肤 xn-b32 v1（纯 CSS，无图片）
+ * 主题：青蓝技术网格 + 深色等宽结果；导航卡路由串改 01–06 编号。
+ * 注入：legacy/rdqkfj4t4r.html
+ */
+
+:root {
+  --b32: #0891b2;
+  --b32-deep: #0e7490;
+  --b32-ink: #0f172a;
+  --b32-line: #d6e6ec;
+}
+
+html { background: #eef6f8; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 10% -12%, rgba(8, 145, 178, .16), transparent 60%),
+    radial-gradient(880px 500px at 102% -6%, rgba(59, 130, 246, .11), transparent 56%),
+    linear-gradient(180deg, #f6fbfc 0%, #eef6f8 52%, #f8fcfd 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 24px 技术网格 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(8, 145, 178, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8, 145, 178, .07) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: .9;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 62%);
+  mask-image: linear-gradient(180deg, #000, transparent 62%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 顶部导航卡 ---------- */
+#root a[href^="#/"] {
+  border: 1px solid var(--b32-line) !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  padding: 12px !important;
+  transition: border-color .15s, box-shadow .15s, transform .12s;
+}
+
+#root a[href^="#/"]:hover {
+  border-color: #8ed4e2 !important;
+  box-shadow: 0 8px 20px rgba(8, 145, 178, .14);
+  transform: translateY(-1px);
+}
+
+#root a[href^="#/"]:focus-visible { outline: 2px solid var(--b32); outline-offset: 2px; }
+
+/* 图标块 */
+#root a[href^="#/"] > div:first-child {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 10px !important;
+  background: #e6f7fb !important;
+}
+
+#root a[href^="#/"] > div:first-child svg { stroke: var(--b32-deep); }
+
+/* 工具名 */
+#root a[href^="#/"] > div:nth-child(2),
+#root a[href^="#/"] > span:first-of-type {
+  font-size: 14.5px !important;
+  font-weight: 700;
+  color: #12313c !important;
+}
+
+/* 路由串 → 编号徽标（JS 把 #/xxx 换成 01–06） */
+#root a[href^="#/"] > *:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px !important;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: #e6f7fb;
+  color: var(--b32-deep) !important;
+  font: 700 10.5px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  letter-spacing: .06em;
+}
+
+#root a[href^="#/"] > *:last-child::before {
+  content: "工具 ";
+  font-size: 9px;
+  font-weight: 600;
+  color: #7aa8b5;
+}
+
+/* ---------- 区块标题 ---------- */
+#root h2.xn-b32-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--b32-ink) !important;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #cfe3ea;
+}
+
+#root h2.xn-b32-h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #22d3ee, #0891b2);
+  vertical-align: -2px;
+}
+
+/* ---------- 文本域 ---------- */
+#root textarea.xn-b32-area {
+  font-size: 16px !important;
+  line-height: 1.65;
+  min-height: 96px;
+  padding: 11px 13px !important;
+  border: 1px solid var(--b32-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#root textarea.xn-b32-area:focus {
+  outline: none !important;
+  border-color: var(--b32) !important;
+  box-shadow: 0 0 0 4px rgba(8, 145, 178, .13);
+}
+
+/* ---------- 下拉 ---------- */
+#root select.xn-b32-sel {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--b32-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#root select.xn-b32-sel:focus {
+  outline: none !important;
+  border-color: var(--b32) !important;
+  box-shadow: 0 0 0 4px rgba(8, 145, 178, .13) !important;
+}
+
+/* ---------- 大小写切换 ---------- */
+#root button.xn-b32-case {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: #3d5560 !important;
+  background: #fff !important;
+  border: 1px solid var(--b32-line) !important;
+}
+
+#root button.xn-b32-case[aria-pressed="true"] {
+  color: var(--b32-deep) !important;
+  background: #e6f7fb !important;
+  box-shadow: inset 0 0 0 1px #9bdae8;
+}
+
+#root button.xn-b32-case:focus-visible { outline: 2px solid var(--b32); outline-offset: 2px; }
+
+/* ---------- 复制按钮 ---------- */
+#root button.xn-b32-copy {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: var(--b32-deep) !important;
+  background: #f0fbfd !important;
+  border: 1px solid #b7e4ee !important;
+  border-radius: 10px !important;
+  transition: background .15s, border-color .15s;
+}
+
+#root button.xn-b32-copy:hover { background: #e0f6fa !important; border-color: #8ed4e2 !important; }
+#root button.xn-b32-copy:focus-visible { outline: 2px solid var(--b32); outline-offset: 2px; }
+
+/* ---------- 复选框 ---------- */
+#root input[type="checkbox"].xn-b32-check {
+  width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  accent-color: var(--b32);
+  cursor: pointer;
+}
+
+/* 区块标题旁的路由串徽标：人用无意义，隐藏 */
+#root .xn-b32-route { display: none !important; }
+
+@media (max-width: 640px) {
+  #root h2.xn-b32-h2 { font-size: 18.5px !important; }
+  #root a[href^="#/"] { padding: 10px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root a[href^="#/"]:hover { transform: none; }
+}
