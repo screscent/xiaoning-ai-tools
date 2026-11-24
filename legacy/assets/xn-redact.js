@@ -118,6 +118,14 @@
   window.setTimeout(tick, 900);
   window.setTimeout(tick, 2200);
 
+  /* 点击卡片后立即重算，避免标题滞后 */
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    if (t && t.closest && t.closest('button[class*="rounded-lg border"][class*="px-3"]')) {
+      window.setTimeout(tick, 30);
+    }
+  }, true);
+
   var pending = false;
   function schedule() {
     if (pending) return;
@@ -125,9 +133,9 @@
     window.setTimeout(function () {
       pending = false;
       tick();
-    }, 80);
+    }, 30);
   }
   var mo = new MutationObserver(schedule);
   mo.observe(document.body, { childList: true, subtree: true });
-  window.setInterval(tick, 1200);
+  window.setInterval(tick, 700);
 })();
