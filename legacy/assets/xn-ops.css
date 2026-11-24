@@ -1,0 +1,285 @@
+/* R1322 服务器排障速查合集 · 主题「机房夜色」 xn-ops
+   纯 CSS：深色底 + 琥珀/青绿光 + 26px 机架网格，无图片 */
+
+#root {
+  --xno-amber: #f59e0b;
+  --xno-teal: #2dd4bf;
+  --xno-line: #1e3350;
+  --xno-ink: #e6edf5;
+  --xno-dim: #93a4b8;
+}
+
+/* ---------- 底色 ---------- */
+html { background: #06090f !important; }
+body {
+  background:
+    radial-gradient(900px 520px at 12% -10%, rgba(245, 158, 11, 0.14), transparent 62%),
+    radial-gradient(820px 480px at 92% 0%, rgba(45, 212, 191, 0.10), transparent 62%),
+    repeating-linear-gradient(0deg, rgba(148, 163, 184, 0.045) 0 1px, transparent 1px 26px),
+    repeating-linear-gradient(90deg, rgba(148, 163, 184, 0.045) 0 1px, transparent 1px 26px),
+    #06090f !important;
+  background-attachment: fixed;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  color: #f1f5f9 !important;
+  letter-spacing: -0.01em;
+}
+#root h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 12px 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f59e0b, #fb923c 55%, #2dd4bf);
+}
+
+/* ---------- 章节标题 ---------- */
+#root h2.xn-ops-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #f1f5f9 !important;
+  letter-spacing: 0.01em;
+  gap: 10px !important;
+}
+#root .xn-ops-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 24px;
+  padding: 0 7px;
+  border-radius: 7px;
+  border: 1px solid currentColor;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  background: rgba(148, 163, 184, 0.14);
+}
+#root h3.xn-ops-h3 {
+  font-size: 16.5px !important;
+  font-weight: 700 !important;
+  color: #eaf1f8 !important;
+  line-height: 1.45 !important;
+}
+
+/* ---------- 卡片 ---------- */
+#root article.xn-ops-card {
+  border-color: var(--xno-line) !important;
+  border-radius: 12px !important;
+  background: linear-gradient(180deg, #0c1626, #091120) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 12px 28px -22px rgba(0, 0, 0, 0.9) !important;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+#root article.xn-ops-card:hover {
+  border-color: #2a4a6e !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 16px 34px -22px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(245, 158, 11, 0.12) !important;
+}
+
+/* ---------- 顶部工具导航（吸顶） ---------- */
+#root .xn-ops-toolnav {
+  position: sticky !important;
+  top: 0;
+  z-index: 40;
+  padding: 10px 0 !important;
+  background: rgba(6, 9, 15, 0.92) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(39, 64, 95, 0.7);
+}
+#root a.xn-ops-toolnav-item {
+  min-height: 44px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  border-radius: 10px !important;
+  border: 1px solid #27405f !important;
+  background: #0d1826 !important;
+  color: #c3d2e2 !important;
+  transition: all 0.15s;
+}
+#root a.xn-ops-toolnav-item:hover {
+  border-color: #3b5f86 !important;
+  background: #122033 !important;
+  color: #f1f5f9 !important;
+}
+#root a.xn-ops-toolnav-item[aria-pressed="true"] {
+  border-color: #f59e0b !important;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(251, 146, 60, 0.12)) !important;
+  color: #fde68a !important;
+}
+#root .xn-ops-routelabel { display: none !important; }
+
+/* ---------- 吸顶快捷工具条（滚动后出现） ---------- */
+.xn-ops-fixednav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  overflow-x: auto;
+  background: rgba(6, 9, 15, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(39, 64, 95, 0.8);
+  scrollbar-width: none;
+  white-space: nowrap;
+}
+.xn-ops-fixednav.show { display: flex; }
+.xn-ops-fixednav::-webkit-scrollbar { display: none; }
+.xn-ops-fixednav > a { flex: 0 0 auto; }
+.xn-ops-fixednav > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #27405f;
+  background: #0d1826;
+  color: #c3d2e2;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.xn-ops-fixednav > a:hover { border-color: #3b5f86; background: #122033; color: #f1f5f9; }
+.xn-ops-fixednav > a[aria-pressed="true"] {
+  border-color: #f59e0b;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(251, 146, 60, 0.12));
+  color: #fde68a;
+}
+
+/* ---------- 筛选标签 ---------- */
+#root button.xn-ops-chip {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  border: 1px solid #27405f !important;
+  border-radius: 10px !important;
+  background: #0d1826 !important;
+  color: #b9c9db !important;
+  transition: all 0.15s;
+}
+#root button.xn-ops-chip:hover {
+  border-color: #3b5f86 !important;
+  color: #e6edf5 !important;
+  background: #122033 !important;
+}
+#root button.xn-ops-chip[aria-pressed="true"] {
+  border-color: #f59e0b !important;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(251, 146, 60, 0.12)) !important;
+  color: #fde68a !important;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35) inset;
+}
+
+/* ---------- 搜索 ---------- */
+#root .ops-input {
+  min-height: 48px !important;
+  font-size: 14px !important;
+  background: transparent !important;
+  color: #e6edf5 !important;
+  caret-color: #fbbf24;
+}
+#root .ops-input::placeholder {
+  color: #6b8299 !important;
+  opacity: 1;
+}
+#root .xn-ops-searchbox {
+  min-height: 52px !important;
+  border-radius: 10px !important;
+  border-color: #27405f !important;
+  background: #0c1523 !important;
+}
+#root .xn-ops-searchbox:focus-within {
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.18) !important;
+}
+#root .xn-ops-searchbox svg { color: #7c93ab; }
+
+/* ---------- 代码块 / 复制 ---------- */
+#root pre {
+  font-size: 12.5px !important;
+  line-height: 1.75 !important;
+  color: #a7f3d0 !important;
+}
+#root .xn-ops-copy {
+  min-height: 34px !important;
+  min-width: 48px;
+  padding: 0 10px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  border-radius: 8px !important;
+  border: 1px solid #2a4a6e !important;
+  color: #9fb6cd !important;
+  background: #0d1a2a !important;
+  cursor: pointer;
+}
+#root .xn-ops-copy:hover {
+  border-color: #f59e0b !important;
+  color: #fde68a !important;
+  background: rgba(245, 158, 11, 0.10) !important;
+}
+#root .xn-ops-copy:active { transform: scale(0.96); }
+
+/* ---------- 正文可读性 ---------- */
+#root p, #root li { color: #b6c6d8; }
+#root code, #root kbd { font-size: 12px; }
+
+/* ---------- 回到顶部 ---------- */
+.xn-ops-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid #2a4a6e;
+  background: #0c1626;
+  color: #fbbf24;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.9);
+}
+.xn-ops-top.show { display: inline-flex; }
+.xn-ops-top:hover { border-color: #f59e0b; background: #122033; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root .xn-ops-toolnav {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 8px !important;
+    padding: 8px 0 !important;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #root .xn-ops-toolnav::-webkit-scrollbar { display: none; }
+  #root .xn-ops-toolnav > a { flex: 0 0 auto; }
+  #root .xn-ops-chiprow {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 8px !important;
+    padding-bottom: 4px !important;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #root .xn-ops-chiprow::-webkit-scrollbar { display: none; }
+  #root .xn-ops-chiprow > button { flex: 0 0 auto; }
+}
+@media (max-width: 480px) {
+  #root h1 { font-size: 26px !important; }
+  #root h2.xn-ops-h2 { font-size: 19px !important; }
+  #root h3.xn-ops-h3 { font-size: 16px !important; }
+  #root button.xn-ops-chip { min-height: 44px !important; font-size: 12.5px !important; }
+}
