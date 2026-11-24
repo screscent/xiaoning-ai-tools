@@ -1,0 +1,210 @@
+/* R1319 供暖与取暖费用计算合集 · 主题「暖房」 xn-warm
+   纯 CSS：暖橙渐变 + 暖气片竖棱纹理 + 米白卡片，无图片 */
+
+#root {
+  --xnw-ink: #4a2317;
+  --xnw-deep: #7c2d12;
+  --xnw-line: #f6ddc4;
+}
+
+/* ---------- 底色 ---------- */
+html { background: #fbf1e6 !important; }
+body { background-color: #fbf1e6 !important; }
+
+#root,
+#root > div:first-child {
+  background:
+    radial-gradient(900px 420px at 50% -160px, rgba(251, 146, 60, 0.30), rgba(251, 146, 60, 0) 62%),
+    radial-gradient(620px 320px at 4% 10%, rgba(253, 186, 116, 0.22), transparent 66%),
+    radial-gradient(560px 320px at 98% 48%, rgba(248, 113, 113, 0.12), transparent 66%),
+    repeating-linear-gradient(90deg, rgba(194, 65, 12, 0.05) 0 5px, rgba(194, 65, 12, 0) 5px 32px),
+    linear-gradient(180deg, #fffaf3 0%, #fdf2e5 46%, #f9ecdf 100%) !important;
+  background-attachment: fixed;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  display: inline-block;
+  color: #4a2317 !important;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 0 #fff;
+}
+#root h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #fbbf24, #f97316 60%, #dc2626);
+}
+#root h1 + p {
+  color: #8a5a3f !important;
+  font-size: 14.5px !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root section.xn-warm-guide {
+  border-color: #f7e2c9 !important;
+  background: linear-gradient(180deg, #fffdf8, #fdf4e9) !important;
+  box-shadow: inset 0 1px 0 #fff, 0 8px 22px -18px rgba(154, 52, 18, 0.45);
+}
+#root section.xn-warm-guide h2 {
+  color: #7c2d12 !important;
+  font-size: 15.5px !important;
+}
+#root section.xn-warm-guide h2 svg { color: #c2410c !important; }
+#root section.xn-warm-guide li {
+  color: #7a5a45 !important;
+  font-size: 12.5px !important;
+}
+
+/* ---------- 工具切换 ---------- */
+#root .xn-warm-tab {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border: 1px solid #f5d9bd !important;
+  border-radius: 999px !important;
+  background: #fffdf9 !important;
+  color: #8a4b2a !important;
+  box-shadow: 0 1px 0 #fff, 0 2px 6px rgba(120, 53, 15, 0.06) !important;
+}
+#root .xn-warm-tab::before {
+  content: attr(data-no);
+  font-size: 13px;
+  font-weight: 800;
+  color: #c2410c;
+}
+#root .xn-warm-tab:hover {
+  background: #fff4e6 !important;
+  border-color: #f0c9a3 !important;
+}
+#root .xn-warm-tab.is-active {
+  background: linear-gradient(135deg, #fb923c, #ea580c 55%, #dc2626) !important;
+  border-color: #ea580c !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -8px rgba(220, 38, 38, 0.55) !important;
+}
+#root .xn-warm-tab.is-active::before { color: rgba(255, 255, 255, 0.9); }
+
+.xn-warm-hint {
+  margin: 2px auto 0;
+  text-align: center;
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  color: #a3785a;
+}
+
+/* ---------- 工具卡片 ---------- */
+#root section.xn-warm-card {
+  border-color: #f7e0c6 !important;
+  border-radius: 20px !important;
+  background: linear-gradient(180deg, #fffdfa, #fff8ef) !important;
+  box-shadow: inset 0 1px 0 #fff, 0 18px 40px -26px rgba(154, 52, 18, 0.42), 0 2px 8px rgba(154, 52, 18, 0.05) !important;
+}
+#root section.xn-warm-card > header {
+  border-bottom-color: #f9e7d2 !important;
+  background: linear-gradient(180deg, #fffaf2, #fffdfa) !important;
+}
+#root section.xn-warm-card > header > span:first-child {
+  background: linear-gradient(135deg, #fb923c, #ea580c 70%, #dc2626) !important;
+  box-shadow: 0 6px 14px -6px rgba(234, 88, 12, 0.6) !important;
+}
+#root h2.xn-warm-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #7c2d12 !important;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- 表单 ---------- */
+#root input[type="number"],
+#root input[type="text"] {
+  min-height: 48px !important;
+  border-color: #f4ddc6 !important;
+  border-radius: 12px !important;
+  background: #fffefb !important;
+  color: #3f2a1d !important;
+}
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-color: #f4ddc6 !important;
+  border-radius: 12px !important;
+  background: #fffefb !important;
+  color: #4a2317 !important;
+}
+#root input:focus,
+#root select:focus,
+#root textarea:focus {
+  outline: none !important;
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.16) !important;
+}
+#root label { color: #6b4a35 !important; }
+#root label > span {
+  font-size: 12.5px !important;
+  color: #a3785a !important;
+}
+
+/* ---------- 结果数字 ---------- */
+#root .xn-warm-stat {
+  box-shadow: inset 0 1px 0 #fff, 0 6px 16px -12px rgba(120, 53, 15, 0.5) !important;
+}
+#root .xn-warm-num {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+}
+#root .xn-warm-label {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- 操作按钮 ---------- */
+#root .xn-warm-copy {
+  min-height: 44px !important;
+  padding: 0 20px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #ea580c, #c2410c) !important;
+  box-shadow: 0 10px 20px -10px rgba(194, 65, 12, 0.65) !important;
+}
+#root .xn-warm-copy:hover {
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+}
+
+/* ---------- 页脚 ---------- */
+#root footer {
+  border-top-color: #f2dcc4 !important;
+  background: linear-gradient(180deg, #f9ecdf, #f5e4d2) !important;
+}
+#root footer,
+#root footer * { color: #8a6a52 !important; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root nav.xn-warm-tabs {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding: 10px 2px 8px !important;
+    overflow-x: auto !important;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #root nav.xn-warm-tabs::-webkit-scrollbar { display: none; }
+  #root nav.xn-warm-tabs > a { flex: 0 0 auto; }
+}
+@media (max-width: 480px) {
+  #root h1 { font-size: 26px !important; }
+  #root h2.xn-warm-h2 { font-size: 19px !important; }
+  #root .xn-warm-num { font-size: 26px !important; }
+  #root .xn-warm-tab { font-size: 13.5px !important; padding: 0 14px !important; }
+}
