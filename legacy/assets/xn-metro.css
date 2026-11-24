@@ -1,0 +1,168 @@
+/* 小凝工具站 · 地铁与公交换乘速查皮肤 xn-metro v1（纯 CSS，无图片）
+ * 主题：地铁线路图（深钴蓝 + 横向线路 + 站点圆点）。
+ * 注入：legacy/j272vmxyyi.html
+ */
+
+:root {
+  --mt: #1d4ed8;
+  --mt-deep: #1e3a8a;
+  --mt-ink: #0f1b33;
+  --mt-line: #d8e2f5;
+}
+
+html { background: #eef3fb; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 10% -12%, rgba(29, 78, 216, .16), transparent 60%),
+    radial-gradient(880px 500px at 102% -6%, rgba(56, 189, 248, .12), transparent 56%),
+    linear-gradient(180deg, #f7f9fe 0%, #eef3fb 52%, #f8fafe 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 地铁线路横纹：48px 一条 + 24px 竖线 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(29, 78, 216, .055) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(29, 78, 216, .045) 1px, transparent 1px);
+  background-size: 100% 48px, 24px 100%;
+  opacity: .8;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 64%);
+  mask-image: linear-gradient(180deg, #000, transparent 64%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签 ---------- */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
+  color: #3b4a63 !important;
+  background: #fff !important;
+  border: 1px solid var(--mt-line) !important;
+  border-radius: 11px !important;
+  transition: border-color .15s, background .15s, box-shadow .15s;
+}
+
+#root a[href^="#/"]:hover { border-color: #a9c2ef !important; box-shadow: 0 3px 10px rgba(29, 78, 216, .1); }
+#root a[href^="#/"]:focus-visible { outline: 2px solid var(--mt); outline-offset: 2px; }
+
+#root a[href^="#/"][aria-current="page"] {
+  color: #fff !important;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a) !important;
+  border-color: transparent !important;
+  box-shadow: 0 6px 16px rgba(29, 78, 216, .26);
+}
+
+/* ---------- 工具标题 ---------- */
+#root h2.xn-mt-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--mt-ink) !important;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #cfdcf2;
+}
+
+#root h2.xn-mt-h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #60a5fa, #1d4ed8);
+  vertical-align: -2px;
+}
+
+/* 区域标签「使用说明」降级 */
+#root h2.xn-mt-label {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #5b6b83 !important;
+  letter-spacing: .04em;
+}
+
+/* ---------- 输入 ---------- */
+#root input.xn-mt-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--mt-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#root input.xn-mt-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]):focus {
+  outline: none !important;
+  border-color: var(--mt) !important;
+  box-shadow: 0 0 0 4px rgba(29, 78, 216, .13) !important;
+}
+
+#root input[type="number"] { font-variant-numeric: tabular-nums; }
+
+/* ---------- 是/否 选择 ---------- */
+#root button.xn-mt-yn {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  border-radius: 11px !important;
+}
+
+#root button.xn-mt-yn[aria-pressed="true"] {
+  color: #fff !important;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a) !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, .24);
+}
+
+#root button.xn-mt-yn[aria-pressed="false"] {
+  color: #3b4a63 !important;
+  background: #fff !important;
+  border: 1px solid var(--mt-line) !important;
+}
+
+#root button.xn-mt-yn:focus-visible { outline: 2px solid var(--mt); outline-offset: 2px; }
+
+/* ---------- 复制 ---------- */
+#root button.xn-mt-copy {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: var(--mt-deep) !important;
+  background: #eef3ff !important;
+  border: 1px solid #c3d3f5 !important;
+  border-radius: 10px !important;
+}
+
+#root button.xn-mt-copy:hover { background: #e2eaff !important; }
+#root button.xn-mt-copy:focus-visible { outline: 2px solid var(--mt); outline-offset: 2px; }
+
+/* ---------- 结果数值 ---------- */
+#root .xn-mt-num {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
+  color: var(--mt-deep) !important;
+}
+
+@media (max-width: 640px) {
+  #root h2.xn-mt-h2 { font-size: 18.5px !important; }
+  #root a[href^="#/"] { padding: 0 10px !important; font-size: 12px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root a[href^="#/"]:hover { box-shadow: none; }
+}
