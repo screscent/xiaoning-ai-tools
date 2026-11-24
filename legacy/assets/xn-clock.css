@@ -1,0 +1,231 @@
+/* R1309 时区会议换算与时区缩写合集 · 主题「世界时钟」 xn-clock
+   纯 CSS：经纬网 + 24 小时刻度 + 靛蓝/青色冷光，无图片 */
+
+#root {
+  --xn-clock-ink: #16233a;
+  --xn-clock-indigo: #3b5bdb;
+  --xn-clock-cyan: #0e7490;
+  --xn-clock-line: rgba(59, 91, 219, 0.10);
+}
+
+/* ---------- 底色：世界时钟盘面 ---------- */
+#root > div:first-child {
+  background:
+    radial-gradient(900px 420px at 50% -160px, rgba(59, 130, 246, 0.16), transparent 70%),
+    radial-gradient(700px 380px at 92% 6%, rgba(14, 116, 144, 0.10), transparent 65%),
+    repeating-radial-gradient(circle at 50% -240px, rgba(59, 91, 219, 0.055) 0 1px, transparent 1px 46px),
+    repeating-linear-gradient(90deg, rgba(59, 91, 219, 0.035) 0 1px, transparent 1px 64px),
+    linear-gradient(180deg, #f6f9ff 0%, #eef4ff 48%, #e9f1fb 100%) !important;
+  background-attachment: fixed;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  letter-spacing: 0.01em;
+  color: #16233a !important;
+}
+
+/* ---------- 模式切换（会议换算 / 时区缩写 / 24h / 12h） ---------- */
+#root button[class*="flex-1"][class*="rounded-lg"] {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+  border-color: #d8e2f5 !important;
+  color: #3f5170 !important;
+  background: #fbfcff !important;
+}
+#root button[class*="flex-1"][class*="rounded-lg"]:hover {
+  border-color: #b9cdf2 !important;
+  color: #24418f !important;
+}
+#root button[class*="flex-1"][class*="rounded-lg"][aria-pressed="true"] {
+  background: linear-gradient(135deg, #3b5bdb 0%, #2563eb 60%, #0e7490 100%) !important;
+  border-color: #2f4fc9 !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.26);
+}
+
+/* ---------- 区块标题 ---------- */
+#root h2 {
+  position: relative;
+  font-size: 17.5px !important;
+  line-height: 1.35;
+  color: #16233a !important;
+  letter-spacing: 0.01em;
+}
+#root h2.xn-h2-tool {
+  font-size: 19px !important;
+  padding-left: 14px;
+}
+#root h2.xn-h2-tool::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #3b5bdb, #0e7490);
+}
+
+/* ---------- 表单 ---------- */
+#root input[type="datetime-local"]:not([type="file"]):not([type="checkbox"]),
+#root select:not([multiple]),
+#root input[type="text"]:not([type="search"]) {
+  min-height: 48px !important;
+  font-size: 15.5px !important;
+  color: #16233a;
+  background: #fbfcff;
+  border-color: #d8e2f5 !important;
+  border-radius: 12px;
+}
+#root input[type="datetime-local"]:focus,
+#root select:focus,
+#root input[type="text"]:focus {
+  outline: none;
+  border-color: #3b5bdb !important;
+  box-shadow: 0 0 0 3px rgba(59, 91, 219, 0.14);
+}
+#root label[class*="rounded-lg"][class*="cursor-pointer"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border-color: #d9e3f6 !important;
+  color: #42536f !important;
+  background: #fbfcff !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#root label[class*="rounded-lg"][class*="cursor-pointer"]:has(input:checked) {
+  background: linear-gradient(135deg, rgba(59, 91, 219, 0.12), rgba(14, 116, 144, 0.12)) !important;
+  border-color: #7f9cf0 !important;
+  color: #1e3a8a !important;
+  box-shadow: inset 0 0 0 1px rgba(59, 91, 219, 0.18);
+}
+
+/* ---------- 主按钮 ---------- */
+#root button[class*="bg-blue-600"] {
+  min-height: 50px !important;
+  font-size: 15px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #3b5bdb, #2563eb 60%, #0e7490) !important;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.26);
+}
+#root button[class*="bg-blue-600"]:hover {
+  filter: brightness(1.06);
+}
+
+/* ---------- 结果：时区列表 ---------- */
+#root .space-y-2 > div[class*="rounded"] {
+  border-color: #e2eaf8 !important;
+  border-radius: 12px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#root .space-y-2 > div[class*="rounded"]:hover {
+  background: #f4f8ff !important;
+}
+#root span[class*="font-semibold"][class*="flex-shrink-0"]:not([class*="text-xs"]) {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: #16233a !important;
+  letter-spacing: 0.02em;
+}
+#root span[class*="text-xs"][class*="flex-shrink-0"] {
+  font-size: 11px !important;
+  padding: 3px 7px !important;
+  border-radius: 6px !important;
+}
+#root span[class*="text-gray-700"][class*="truncate"]:not([class*="flex-shrink-0"]) {
+  font-size: 13.5px !important;
+  color: #3f5170 !important;
+}
+/* 时差 */
+#root [class*="text-green-600"],
+#root [class*="text-red-600"],
+#root [class*="text-orange-600"] {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root .xn-copy-btn {
+  min-height: 44px !important;
+  font-size: 13px !important;
+  border-radius: 12px !important;
+  border-color: #d8e2f5 !important;
+  color: #2f4fc9 !important;
+  background: #fbfcff !important;
+}
+#root .xn-copy-btn:hover {
+  background: #eef4ff !important;
+}
+
+/* ---------- 缩写速查：搜索条 ---------- */
+#root .xn-abbr-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 10px;
+}
+#root .xn-abbr-search {
+  flex: 1;
+  min-height: 44px !important;
+  font-size: 14.5px !important;
+  padding: 0 14px;
+  border: 1px solid #d8e2f5 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  color: #16233a;
+}
+#root .xn-abbr-search:focus {
+  outline: none;
+  border-color: #3b5bdb !important;
+  box-shadow: 0 0 0 3px rgba(59, 91, 219, 0.14);
+}
+#root .xn-abbr-count {
+  font-size: 12.5px;
+  color: #5b6c88;
+  white-space: nowrap;
+}
+
+/* ---------- 缩写行 ---------- */
+#root .space-y-2 > div[class*="justify-between"] {
+  border-color: #e6edf9 !important;
+  border-radius: 12px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#root span[class*="font-semibold"][class*="text-gray-800"] {
+  font-size: 16px !important;
+  letter-spacing: 0.04em;
+  color: #1e3a8a !important;
+}
+#root span[class*="text-xs"][class*="truncate"] {
+  font-size: 12.5px !important;
+  color: #5b6c88 !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root details summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  color: #3f5170 !important;
+}
+#root details summary:focus-visible {
+  outline: 2px solid #3b5bdb;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root h2 { font-size: 17px !important; }
+  #root h2.xn-h2-tool { font-size: 18px !important; }
+  #root button[class*="flex-1"][class*="rounded-lg"] { font-size: 13px !important; }
+  #root span[class*="font-semibold"][class*="flex-shrink-0"]:not([class*="text-xs"]) { font-size: 16px !important; }
+  #root .xn-abbr-tools { flex-direction: column; align-items: stretch; gap: 6px; }
+  #root .xn-abbr-count { text-align: right; }
+}
