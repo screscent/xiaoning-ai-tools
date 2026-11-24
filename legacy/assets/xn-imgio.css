@@ -1,0 +1,243 @@
+/* R1317 图片转 DataURL 与压缩合集 · 主题「像素光栅」 xn-imgio
+   纯 CSS：靛紫底 + 像素网格 + 青紫柔光，无图片 */
+
+#root {
+  --xn-io-ink: #241a45;
+  --xn-io-indigo: #4f46e5;
+  --xn-io-cyan: #0891b2;
+}
+
+/* ---------- 底色 ---------- */
+#root > div:first-child {
+  background:
+    radial-gradient(800px 360px at 50% -150px, rgba(99, 102, 241, 0.16), transparent 70%),
+    radial-gradient(560px 300px at 92% 6%, rgba(8, 145, 178, 0.10), transparent 65%),
+    repeating-linear-gradient(0deg, rgba(79, 70, 229, 0.04) 0 1px, transparent 1px 12px),
+    repeating-linear-gradient(90deg, rgba(79, 70, 229, 0.04) 0 1px, transparent 1px 12px),
+    linear-gradient(180deg, #faf9ff 0%, #f2f1fd 50%, #ecebfa 100%) !important;
+  background-attachment: fixed;
+}
+
+#root h1 { letter-spacing: 0.01em; color: #241a45 !important; }
+
+/* ---------- 工具切换 ---------- */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  color: #4b3f7a !important;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e0dcf7;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+#root a[href^="#/"]:hover { background: #f3f1ff !important; color: #4338ca !important; }
+#root a[href^="#/"][aria-current] {
+  background: linear-gradient(135deg, #4f46e5, #0891b2) !important;
+  color: #fff !important;
+  border-color: #4f46e5 !important;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.26) !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h2 {
+  position: relative;
+  font-size: 17.5px !important;
+  line-height: 1.35;
+  color: #241a45 !important;
+  letter-spacing: 0.01em;
+}
+#root h2.xn-io-tool {
+  font-size: 19px !important;
+  padding-left: 14px;
+}
+#root h2.xn-io-tool::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #4f46e5, #0891b2);
+}
+#root h3 {
+  font-size: 17.5px !important;
+  font-weight: 700 !important;
+  color: #3b2f6b !important;
+}
+#root h4 {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  color: #7a6e9e !important;
+}
+
+/* ---------- 表单 ---------- */
+#root select {
+  min-height: 48px !important;
+  font-size: 15.5px !important;
+  color: #241a45;
+  background: #fbfaff;
+  border-color: #e0dcf7 !important;
+  border-radius: 12px;
+}
+#root input[type="file"] {
+  min-height: 60px !important;
+  width: 100%;
+  color: #4b3f7a;
+  background: #fbfaff;
+  border: 1px dashed #c9c2ee !important;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+#root input[type="file"]::file-selector-button {
+  min-height: 38px;
+  border: 0;
+  border-radius: 10px;
+  padding: 0 14px;
+  margin-right: 12px;
+  background: linear-gradient(135deg, #4f46e5, #0891b2);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+#root select:focus,
+#root input[type="file"]:focus {
+  outline: none;
+  border-color: #4f46e5 !important;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.13);
+}
+#root label { color: #4b3f7a; }
+#root label span[class*="text-xs"],
+#root p[class*="text-xs"] { font-size: 12px !important; color: #7a6e9e !important; }
+
+/* ---------- 质量滑杆 ---------- */
+#root input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 44px !important;
+  background: transparent !important;
+}
+#root input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c7c2f2, #dcd9f8);
+}
+#root input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: #4f46e5;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.35);
+}
+#root input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c7c2f2, #dcd9f8);
+}
+#root input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #4f46e5;
+  border: 2px solid #fff;
+}
+
+/* ---------- 勾选：去除 data 前缀 ---------- */
+#root label[class*="cursor-pointer"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b3f7a !important;
+}
+#root label[class*="cursor-pointer"] input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  accent-color: #4f46e5;
+}
+
+/* ---------- 预设 chip（质量 / 格式） ---------- */
+#root .xn-io-chip {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border: 1px solid #e0dcf7 !important;
+  background: #fbfaff !important;
+  color: #4b3f7a !important;
+}
+#root .xn-io-chip[aria-pressed="true"] {
+  background: linear-gradient(135deg, #4f46e5, #0891b2) !important;
+  border-color: #4f46e5 !important;
+  color: #fff !important;
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.22);
+}
+
+/* ---------- 操作按钮 ---------- */
+#root .xn-io-action {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border-color: #e0dcf7 !important;
+  color: #3b2f6b !important;
+  background: #fbfaff !important;
+}
+#root .xn-io-action:hover { background: #f3f1ff !important; }
+#root .xn-io-action[class*="bg-blue-600"],
+#root .xn-io-action[class*="bg-indigo-600"] {
+  background: linear-gradient(135deg, #4f46e5, #0891b2) !important;
+  border-color: #4f46e5 !important;
+  color: #fff !important;
+}
+#root .xn-io-sample {
+  min-height: 40px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+  border: 1px dashed #b9b1ea !important;
+  background: #f7f5ff !important;
+  color: #4338ca !important;
+  padding: 0 14px;
+}
+
+/* ---------- 结果 ---------- */
+#root textarea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  font-size: 13px !important;
+  line-height: 1.6;
+  background: #faf9ff !important;
+  border-color: #e0dcf7 !important;
+  border-radius: 12px !important;
+  color: #2f2660 !important;
+}
+#root [class*="text-green-600"] {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #0f766e !important;
+}
+#root section [class*="bg-white"][class*="border"] {
+  border-color: #e6e2f8 !important;
+  border-radius: 12px !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root details summary,
+#root [class*="cursor-pointer"][class*="select-none"][class*="text-sm"] {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  color: #4b3f7a !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root h2.xn-io-tool { font-size: 18px !important; }
+  #root a[href^="#/"] { font-size: 13px !important; }
+  #root [class*="text-green-600"] { font-size: 18px !important; }
+}
