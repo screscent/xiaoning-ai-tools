@@ -1,0 +1,148 @@
+/* 小凝工具站 · 手机套餐与流量成本皮肤 xn-tariff v1（纯 CSS，无图片）
+ * 主题：通信靛青 + 信号弧线点阵。
+ * 注入：legacy/vfd6jblsqf.html
+ */
+
+:root {
+  --tf: #4f46e5;
+  --tf-deep: #3730a3;
+  --tf-ink: #101828;
+  --tf-line: #ddd9f3;
+}
+
+html { background: #f2f1fa; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 10% -12%, rgba(79, 70, 229, .15), transparent 60%),
+    radial-gradient(880px 500px at 102% -6%, rgba(6, 182, 212, .11), transparent 56%),
+    linear-gradient(180deg, #f9f8fe 0%, #f2f1fa 52%, #faf9ff 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 信号点阵：22px 圆点 + 斜纹 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(79, 70, 229, .12) 1px, transparent 1px),
+    repeating-linear-gradient(135deg, rgba(6, 182, 212, .04) 0, rgba(6, 182, 212, .04) 1px, transparent 1px, transparent 18px);
+  background-size: 22px 22px, auto;
+  opacity: .8;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 62%);
+  mask-image: linear-gradient(180deg, #000, transparent 62%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 入口卡 ---------- */
+#root a[href^="#/"] {
+  border: 1px solid var(--tf-line) !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  transition: border-color .15s, box-shadow .15s, transform .12s;
+}
+
+#root a[href^="#/"]:hover {
+  border-color: #b7aef6 !important;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, .13);
+  transform: translateY(-1px);
+}
+
+#root a[href^="#/"]:focus-visible { outline: 2px solid var(--tf); outline-offset: 2px; }
+
+/* ---------- 区块标题 ---------- */
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--tf-ink) !important;
+}
+
+#root h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #818cf8, #4f46e5);
+  vertical-align: -2px;
+}
+
+/* ---------- 输入 ---------- */
+#root input.xn-tf-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--tf-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#root input.xn-tf-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]):focus {
+  outline: none !important;
+  border-color: var(--tf) !important;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, .13) !important;
+}
+
+#root input[type="number"] { font-variant-numeric: tabular-nums; }
+
+/* ---------- 按钮 ---------- */
+#root button.xn-tf-add {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 700;
+  color: #fff !important;
+  background: linear-gradient(135deg, #6366f1, #3730a3) !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, .24);
+}
+
+#root button.xn-tf-add:hover { transform: translateY(-1px); box-shadow: 0 7px 18px rgba(79, 70, 229, .3); }
+#root button.xn-tf-add:focus-visible { outline: 2px solid var(--tf-deep); outline-offset: 2px; }
+
+#root button.xn-tf-copy {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: var(--tf-deep) !important;
+  background: #f1efff !important;
+  border: 1px solid #cfc8f7 !important;
+  border-radius: 10px !important;
+}
+
+#root button.xn-tf-copy:hover { background: #e7e3ff !important; }
+#root button.xn-tf-copy:focus-visible { outline: 2px solid var(--tf); outline-offset: 2px; }
+
+#root button.xn-tf-mini {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: var(--tf-deep) !important;
+  background: #fff !important;
+  border: 1px solid var(--tf-line) !important;
+  border-radius: 10px !important;
+}
+
+#root button.xn-tf-mini:hover { background: #f6f5ff !important; border-color: #b7aef6 !important; }
+#root button.xn-tf-mini:focus-visible { outline: 2px solid var(--tf); outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root a[href^="#/"]:hover,
+  #root button.xn-tf-add:hover { transform: none; }
+}
