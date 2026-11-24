@@ -1,0 +1,280 @@
+/* 小凝工具站 · 桌游与棋牌计分皮肤 xn-board v1（纯 CSS，无图片）
+ * 主题：棋盘墨蓝 + 黄铜金 + 棋盘格纹理。
+ * 注入：legacy/urweqddyk8.html
+ */
+
+:root {
+  --bd: #22345c;
+  --bd-deep: #16233f;
+  --bd-gold: #c99b4a;
+  --bd-ink: #182238;
+  --bd-line: #dbe1ee;
+  --bd-soft: #f4f6fb;
+}
+
+html { background: #f2f5fa; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 6% -12%, rgba(34, 52, 92, .16), transparent 60%),
+    radial-gradient(880px 520px at 102% -6%, rgba(201, 155, 74, .13), transparent 56%),
+    linear-gradient(180deg, #f8fafd 0%, #f2f5fa 52%, #fbfcfe 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 棋盘格 + 骰点 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-conic-gradient(from 0deg, rgba(34, 52, 92, .055) 0% 25%, transparent 0% 50%),
+    radial-gradient(rgba(201, 155, 74, .16) 1.3px, transparent 1.4px);
+  background-size: 48px 48px, 30px 30px;
+  background-position: 0 0, 15px 15px;
+  opacity: .75;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 58%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 58%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen, #root .flex.min-h-screen { background: transparent !important; }
+
+/* ---------- 返回 ---------- */
+#root a[href^="https://screscent.github.io"] {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  padding-right: 4px;
+}
+#root a[href^="https://screscent.github.io"]:focus-visible {
+  outline: 2px solid var(--bd);
+  outline-offset: 2px;
+}
+
+/* ---------- 工具切换条 ---------- */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  border-radius: 12px !important;
+  font-size: 14.5px !important;
+  line-height: 1.25;
+  white-space: nowrap;
+  transition: border-color .15s, background .15s, box-shadow .15s, transform .12s;
+}
+#root a[href^="#/"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -10px rgba(22, 35, 63, .6);
+}
+#root a[href^="#/"]:focus-visible {
+  outline: 2px solid var(--bd);
+  outline-offset: 2px;
+}
+#root a[href^="#/"][aria-current="page"] {
+  background-image: linear-gradient(135deg, #2c4373, #1b2b4d) !important;
+  border-color: var(--bd) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -10px rgba(22, 35, 63, .75) !important;
+}
+
+/* 移动端：单行横滑 + 吸附 */
+@media (max-width: 640px) {
+  .xn-bd-tabbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin: 0 -6px;
+    padding: 8px 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: rgba(248, 250, 253, .95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--bd-line);
+  }
+  .xn-bd-tabbar::-webkit-scrollbar { display: none; }
+  .xn-bd-tabbar a[href^="#/"] {
+    flex: 0 0 auto !important;
+    min-width: 76px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 13.5px !important;
+  }
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  letter-spacing: -.02em;
+  color: var(--bd-deep) !important;
+}
+
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--bd-ink) !important;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+/* 页面自带 indigo 竖条 → 黄铜金 */
+#root h2 > span[aria-hidden="true"] {
+  width: 5px !important;
+  height: 19px !important;
+  border-radius: 3px !important;
+  background: linear-gradient(180deg, var(--bd-gold), #8f6a26) !important;
+  flex: 0 0 auto;
+}
+/* xn-ux 给 h2 的通用靛蓝竖条与本页自带竖条重复：隐藏通用条 */
+#root h2::before {
+  display: none !important;
+  content: none !important;
+}
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; }
+  #root h2 > span[aria-hidden="true"] { height: 17px !important; }
+}
+
+/* ---------- 输入 ---------- */
+#root input[type="number"],
+#root input:not([type]) {
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 600;
+  border-radius: 12px !important;
+  border-color: var(--bd-line) !important;
+  background: #fff !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input:focus, #root select:focus {
+  border-color: #5a76ad !important;
+  box-shadow: 0 0 0 3px rgba(90, 118, 173, .18) !important;
+}
+
+#root select {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  border-color: var(--bd-line) !important;
+  background-color: #fff !important;
+}
+
+/* 常用值快捷胶囊 */
+.xn-bd-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.xn-bd-chips button {
+  min-height: 34px;
+  padding: 0 11px;
+  border-radius: 999px;
+  border: 1px solid #d5dded;
+  background: #f6f8fc;
+  color: var(--bd);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1;
+  transition: background .12s, border-color .12s, transform .1s;
+}
+.xn-bd-chips button:hover { background: #eaeff9; border-color: #a9bad8; }
+.xn-bd-chips button:active { transform: scale(.97); }
+.xn-bd-chips button:focus-visible { outline: 2px solid var(--bd); outline-offset: 1px; }
+@media (max-width: 640px) {
+  .xn-bd-chips button { min-height: 40px; padding: 0 13px; font-size: 13px; }
+}
+
+/* ---------- 复制按钮 ---------- */
+#root button[aria-label^="复制"] {
+  min-height: 44px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  border-radius: 11px !important;
+  font-size: 13px !important;
+  background-color: var(--bd) !important;
+  background-image: linear-gradient(135deg, #2c4373, #1b2b4d) !important;
+}
+#root button[aria-label^="复制"]:hover { filter: brightness(1.06); }
+
+/* 清空等次要按钮 */
+#root button[aria-label="清空"] {
+  min-height: 44px !important;
+  padding-left: 13px !important;
+  padding-right: 13px !important;
+  border-radius: 11px !important;
+  font-size: 13px !important;
+}
+
+/* ---------- 结果数字 ---------- */
+#root .text-lg:not(h2) {
+  font-size: 26px !important;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  color: var(--bd-deep) !important;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 640px) {
+  #root .text-lg:not(h2) { font-size: 23px !important; }
+}
+
+/* ---------- 表格 ---------- */
+#root table {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+#root thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #eef2f9 !important;
+  color: #33415e !important;
+  font-weight: 700;
+  font-size: 12.5px;
+  padding: 9px 10px !important;
+  border-bottom: 1px solid var(--bd-line) !important;
+  white-space: nowrap;
+}
+#root tbody td {
+  padding: 9px 10px !important;
+  border-bottom: 1px solid #eef1f7 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root tbody tr:nth-child(even) { background: #fafbfe; }
+#root tbody tr:hover { background: #f1f5fc; }
+
+/* 规则表/对照表的首列更醒目 */
+#root tbody td:first-child { font-weight: 600; color: #2b3550; }
+
+/* 正文可读性 */
+#root p, #root li { line-height: 1.72; }
+#root h3 { font-size: 15px !important; }
+
+/* 回到顶部 */
+.xn-bd-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--bd-line);
+  background: #fff;
+  color: var(--bd-deep);
+  box-shadow: 0 10px 24px -14px rgba(22, 35, 63, .7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-bd-top.is-on { display: flex; }
+.xn-bd-top:focus-visible { outline: 2px solid var(--bd); outline-offset: 2px; }
