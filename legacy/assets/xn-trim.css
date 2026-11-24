@@ -1,0 +1,291 @@
+/* R1321 透明边裁剪与批量清单合集 · 主题「透明棋盘」 xn-trim
+   纯 CSS：青绿渐变 + 斜向网格纹理 + 白卡片，无图片 */
+
+#root {
+  --xnt-teal: #0d9488;
+  --xnt-deep: #115e59;
+  --xnt-sky: #0ea5e9;
+  --xnt-line: #d8ece9;
+}
+
+/* ---------- 底色 ---------- */
+html { background: #f5fcfb !important; }
+body { background-color: #f5fcfb !important; }
+
+#root,
+#root > div:first-child {
+  background:
+    radial-gradient(760px 380px at 50% -120px, rgba(20, 184, 166, 0.20), transparent 66%),
+    radial-gradient(520px 300px at 96% 16%, rgba(14, 165, 233, 0.12), transparent 66%),
+    repeating-linear-gradient(45deg, rgba(13, 148, 136, 0.035) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(-45deg, rgba(13, 148, 136, 0.035) 0 1px, transparent 1px 22px),
+    linear-gradient(180deg, #f9fefd 0%, #f1faf8 50%, #ecf7f5 100%) !important;
+  background-attachment: fixed;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  display: inline-block;
+  color: #0f3d3a !important;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 0 #fff;
+}
+#root h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 12px 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2dd4bf, #0d9488 55%, #0ea5e9);
+}
+#root h1 + p { color: #4b6f6a !important; }
+
+/* ---------- 工具切换 ---------- */
+#root .xn-tr-tab {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--xnt-line) !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  color: #3f6661 !important;
+  box-shadow: 0 1px 0 #fff, 0 2px 6px rgba(13, 148, 136, 0.07) !important;
+}
+#root .xn-tr-tab::before {
+  content: attr(data-no);
+  margin-right: 5px;
+  font-weight: 800;
+  color: #0d9488;
+}
+#root .xn-tr-tab:hover { background: #f1faf8 !important; border-color: #b9e0da !important; }
+#root .xn-tr-tab.is-active {
+  background: linear-gradient(135deg, #14b8a6, #0d9488 60%, #0e7490) !important;
+  border-color: #0d9488 !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -8px rgba(13, 148, 136, 0.6) !important;
+}
+#root .xn-tr-tab.is-active::before { color: rgba(255, 255, 255, 0.9); }
+
+/* ---------- 标题层级 ---------- */
+#root h2.xn-tr-tool {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #115e59 !important;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- 卡片 ---------- */
+#root .xn-tr-card {
+  border-color: var(--xnt-line) !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: inset 0 1px 0 #fff, 0 14px 32px -26px rgba(13, 148, 136, 0.45), 0 2px 8px rgba(13, 148, 136, 0.04) !important;
+}
+
+/* ---------- 上传区 ---------- */
+#root .xn-tr-drop {
+  border-color: #bfe3dd !important;
+  border-radius: 14px !important;
+  background: linear-gradient(180deg, #fbfefd, #f4fbfa) !important;
+  padding-top: 26px !important;
+  padding-bottom: 26px !important;
+  transition: border-color 0.15s, background 0.15s;
+}
+#root .xn-tr-drop:hover {
+  border-color: #0d9488 !important;
+  background: #f0faf8 !important;
+}
+#root .xn-tr-drop svg { color: #0d9488; }
+#root .xn-tr-drop span { font-size: 13px !important; color: #5c7f7a !important; }
+#root .xn-tr-example {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 4px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #0d9488;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+#root .xn-tr-example:hover { color: #0f766e; text-decoration: underline; }
+
+/* ---------- 参数 ---------- */
+#root .xn-tr-val,
+#root span[class*="text-blue-600"] {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #0d9488 !important;
+}
+#root input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 44px !important;
+  background: transparent !important;
+  cursor: pointer;
+}
+#root input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #14b8a6 0 var(--xn-p, 50%), #d7eeea var(--xn-p, 50%) 100%);
+}
+#root input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #0d9488;
+  box-shadow: 0 2px 6px rgba(13, 148, 136, 0.35);
+}
+#root input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #14b8a6 0 var(--xn-p, 50%), #d7eeea var(--xn-p, 50%) 100%);
+}
+#root input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #0d9488;
+}
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-color: #cfe6e2 !important;
+  border-radius: 10px !important;
+  background: #fdfefe !important;
+  color: #124b46 !important;
+}
+#root select:focus,
+#root input:focus,
+#root textarea:focus {
+  outline: none !important;
+  border-color: #0d9488 !important;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15) !important;
+}
+#root input[type="color"] {
+  width: 56px !important;
+  height: 48px !important;
+  border-radius: 10px !important;
+  border-color: #cfe6e2 !important;
+  background: #fdfefe !important;
+  cursor: pointer;
+}
+#root .xn-tr-hex {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  color: #3f6661 !important;
+}
+
+/* ---------- 结果数字 ---------- */
+#root .xn-tr-tile {
+  border-color: var(--xnt-line) !important;
+  background: linear-gradient(180deg, #f7fdfc, #eef8f6) !important;
+  border-radius: 12px !important;
+}
+#root .xn-tr-num {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: #0f3d3a !important;
+}
+#root .xn-tr-cap {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #4b6f6a !important;
+}
+
+/* ---------- 按钮 ---------- */
+#root .xn-tr-primary {
+  min-height: 48px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #14b8a6, #0d9488) !important;
+  box-shadow: 0 10px 22px -10px rgba(13, 148, 136, 0.65) !important;
+}
+#root .xn-tr-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2dd4bf, #14b8a6) !important;
+}
+#root .xn-tr-action {
+  min-height: 44px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  border: 1px solid #d8ece9 !important;
+  color: #3f6661 !important;
+  background: #fff !important;
+}
+#root .xn-tr-action:hover:not(:disabled) { background: #f2fbf9 !important; }
+#root button:disabled {
+  background: #eef4f3 !important;
+  color: #9bb5b1 !important;
+  box-shadow: none !important;
+}
+#root .xn-hint {
+  font-size: 12px !important;
+  color: #6b8c87 !important;
+  line-height: 1.6;
+}
+
+/* ---------- 批量清单 ---------- */
+#root .xn-tr-ta {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  font-size: 13.5px !important;
+  line-height: 1.75 !important;
+  min-height: 180px !important;
+  border-color: #cfe6e2 !important;
+  border-radius: 12px !important;
+  background: #fdfefe !important;
+  color: #1f4b47 !important;
+}
+#root .xn-tr-count {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #0d9488 !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  color: #3f6661 !important;
+}
+#root details { border-color: var(--xnt-line) !important; }
+#root details p, #root details li { color: #52736e !important; }
+
+/* ---------- 页脚 ---------- */
+#root footer {
+  border-top-color: var(--xnt-line) !important;
+  background: linear-gradient(180deg, #ecf7f5, #e7f3f1) !important;
+}
+#root footer,
+#root footer * { color: #5f827d !important; }
+
+/* ---------- 页内提示 ---------- */
+#root .xn-tr-tip {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #6b8c87;
+  line-height: 1.6;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root h1 { font-size: 26px !important; }
+  #root h2.xn-tr-tool { font-size: 19px !important; }
+  #root .xn-tr-tab { font-size: 13.5px !important; padding: 0 15px !important; }
+  #root .xn-tr-num { font-size: 22px !important; }
+}
