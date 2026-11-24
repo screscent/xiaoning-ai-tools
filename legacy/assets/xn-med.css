@@ -1,0 +1,209 @@
+/* R1312 用药提醒与间隔计算合集 · 主题「药盒刻度」 xn-med
+   纯 CSS：薄荷瓷白 + 药盒格线 + 青绿柔光，无图片 */
+
+#root {
+  --xn-med-ink: #123f3a;
+  --xn-med-teal: #0f766e;
+  --xn-med-mint: #ecfdf5;
+}
+
+/* ---------- 底色 ---------- */
+#root > div:first-child {
+  background:
+    radial-gradient(820px 380px at 50% -150px, rgba(16, 185, 129, 0.13), transparent 70%),
+    radial-gradient(600px 320px at 92% 6%, rgba(13, 148, 136, 0.10), transparent 65%),
+    repeating-linear-gradient(0deg, rgba(13, 148, 136, 0.035) 0 1px, transparent 1px 36px),
+    repeating-linear-gradient(90deg, rgba(13, 148, 136, 0.03) 0 1px, transparent 1px 36px),
+    linear-gradient(180deg, #f7fdfb 0%, #effaf7 50%, #e9f6f2 100%) !important;
+  background-attachment: fixed;
+}
+
+#root h1 { letter-spacing: 0.01em; color: #123f3a !important; }
+
+/* ---------- 工具切换 ---------- */
+#root button[class*="rounded-full"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 999px !important;
+  border-color: #cfe6e1 !important;
+  color: #3f625d !important;
+  background: #fbfefd !important;
+}
+#root button[class*="rounded-full"][class*="bg-blue-600"],
+#root button[class*="rounded-full"][aria-pressed="true"] {
+  background: linear-gradient(135deg, #0f766e, #0d9488) !important;
+  border-color: #0f766e !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.26);
+}
+
+/* ---------- 标题 ---------- */
+#root h2 {
+  position: relative;
+  font-size: 17.5px !important;
+  line-height: 1.35;
+  color: #123f3a !important;
+  letter-spacing: 0.01em;
+}
+#root h2.xn-med-tool {
+  font-size: 19px !important;
+  padding-left: 14px;
+}
+#root h2.xn-med-tool::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #0f766e, #34d399);
+}
+
+/* ---------- 表单 ---------- */
+#root input[type="text"],
+#root input[type="time"],
+#root select {
+  min-height: 48px !important;
+  font-size: 15.5px !important;
+  color: #123f3a;
+  background: #fbfefd;
+  border-color: #cfe6e1 !important;
+  border-radius: 12px;
+}
+#root input[type="number"] {
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 700;
+  color: #123f3a;
+  background: #fbfefd;
+  border-color: #cfe6e1 !important;
+  border-radius: 12px;
+}
+#root input:focus,
+#root select:focus {
+  outline: none;
+  border-color: #0f766e !important;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.13);
+}
+#root label { color: #3f625d; }
+
+/* ---------- 主按钮 ---------- */
+#root button[class*="bg-blue-600"][class*="w-full"] {
+  min-height: 48px !important;
+  font-size: 14.5px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #0f766e, #0d9488) !important;
+  box-shadow: 0 10px 22px rgba(15, 118, 110, 0.24);
+}
+#root button[class*="bg-blue-600"][class*="w-full"]:hover { filter: brightness(1.06); }
+
+/* ---------- 时间药丸 ---------- */
+#root span[class*="bg-blue-50"][class*="text-blue-700"] {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  padding: 6px 11px !important;
+  border-radius: 9px !important;
+  border-color: #bfe3dc !important;
+  background: #f0fdfa !important;
+  color: #0f766e !important;
+  letter-spacing: 0.04em;
+}
+/* 第 1 天 等日期胶囊 */
+#root span[class*="bg-gray-100"][class*="text-gray-600"] {
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  padding: 4px 9px !important;
+  border-radius: 7px !important;
+  background: #ecf7f4 !important;
+  color: #3f625d !important;
+}
+/* 日程表日期 */
+#root div[class*="text-xs"][class*="text-gray-400"] {
+  font-size: 12.5px !important;
+  color: #6b8681 !important;
+}
+
+/* ---------- 结果统计 ---------- */
+#root span[class*="text-blue-700"][class*="font-bold"],
+#root div[class*="text-blue-700"][class*="font-bold"],
+#root p[class*="text-blue-700"][class*="font-bold"] {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #0f766e !important;
+}
+/* 下次服药时间主答案 */
+#root p[class*="text-xl"][class*="text-blue-700"] {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  color: #0f766e !important;
+  letter-spacing: 0.02em;
+}
+#root div[class*="text-xs"][class*="text-gray-500"] {
+  font-size: 12.5px !important;
+  color: #6b8681 !important;
+}
+/* 累计服药次数的大数字 */
+#root .xn-med-count {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #0f766e !important;
+  line-height: 1.2;
+}
+#root .xn-med-count span {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #3f625d !important;
+}
+#root div[class*="text-2xl"],
+#root div[class*="text-3xl"] {
+  color: #0f766e !important;
+  font-weight: 800 !important;
+  font-size: 28px !important;
+}
+
+/* ---------- 提示区 ---------- */
+#root p[class*="text-amber-800"] {
+  font-size: 12.5px !important;
+  line-height: 1.75 !important;
+  color: #7c5a1e !important;
+}
+#root [class*="bg-amber-50"] {
+  background: #fffbeb !important;
+  border-color: #f3e2b8 !important;
+  border-radius: 12px !important;
+}
+
+/* ---------- 复制/次按钮 ---------- */
+#root button[class*="w-full"][class*="border"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border-color: #cfe6e1 !important;
+  color: #2f5d56 !important;
+  background: #fbfefd !important;
+}
+#root button[class*="justify-center"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root details summary,
+#root [class*="cursor-pointer"][class*="text-sm"] {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  color: #3f625d !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root h2 { font-size: 17px !important; }
+  #root h2.xn-med-tool { font-size: 18px !important; }
+  #root span[class*="bg-blue-50"][class*="text-blue-700"] { font-size: 14px !important; padding: 5px 9px !important; }
+  #root button[class*="rounded-full"] { font-size: 13px !important; padding-left: 13px; padding-right: 13px; }
+}
