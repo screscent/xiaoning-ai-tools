@@ -1,0 +1,154 @@
+/* R1334 居家除螨与过敏防护速查合集 —— 暖沙绿意（纯 CSS，无图片） */
+:root {
+  --xmg-line: #e6e1d6;
+  --xmg-ink: #23241f;
+  --xmg-green: #2e6b52;
+  --xmg-green-d: #255844;
+}
+
+body {
+  background-color: #f7f4ed !important;
+  background-image:
+    radial-gradient(circle at 10% 2%, rgba(46, 107, 82, 0.1), transparent 44%),
+    radial-gradient(circle at 92% 4%, rgba(217, 160, 91, 0.13), transparent 40%),
+    radial-gradient(rgba(46, 107, 82, 0.1) 1px, transparent 1.4px);
+  background-size: auto, auto, 22px 22px;
+  background-attachment: fixed, fixed, scroll;
+}
+
+#root .min-h-screen {
+  background: linear-gradient(180deg, rgba(247, 244, 237, 0.85), rgba(255, 255, 255, 0.18) 55%, rgba(247, 244, 237, 0.6)) !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+  color: var(--xmg-ink) !important;
+}
+#root h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin: 12px 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7fb69a, #2e6b52 55%, #d9a05b);
+}
+#root h1 + p {
+  font-size: 14px !important;
+  color: #5b5f52 !important;
+}
+
+/* ---------- 工具卡标签 ---------- */
+#root nav.mt-6 {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px !important;
+  padding: 6px !important;
+}
+#root nav.mt-6 a {
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  min-height: 62px !important;
+  padding: 6px 4px !important;
+  border-radius: 12px !important;
+  text-align: center;
+}
+#root nav.mt-6 a svg {
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0;
+}
+#root .xn-mg-tablabel {
+  display: block;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0;
+  white-space: normal;
+}
+#root nav.mt-6 a[aria-current="page"] {
+  box-shadow: 0 10px 22px -18px rgba(46, 107, 82, 0.8);
+}
+#root nav.mt-6 a::after {
+  content: attr(data-no);
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  opacity: 0.55;
+}
+
+/* ---------- 工具标题 ---------- */
+#root h2.xn-mg-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: var(--xmg-ink) !important;
+}
+#root h2.xn-mg-h2 + p {
+  font-size: 13px !important;
+  color: #6f7265 !important;
+}
+#root h3 {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- 选项胶囊 ---------- */
+#root button.xn-mg-chip[aria-pressed] {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  border-radius: 999px !important;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root .xn-mg-copy {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  border-radius: 999px !important;
+}
+#root .xn-mg-copy:hover {
+  border-color: var(--xmg-green) !important;
+  color: var(--xmg-green) !important;
+}
+
+/* ---------- 结果卡 ---------- */
+#root .xn-mg-card {
+  border-radius: 16px !important;
+  border-color: var(--xmg-line) !important;
+}
+
+/* ---------- 页脚 ---------- */
+#root footer {
+  border-top-color: var(--xmg-line) !important;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 640px) {
+  #root h1 {
+    font-size: 26px !important;
+  }
+  #root h2.xn-mg-h2 {
+    font-size: 18.5px !important;
+  }
+  #root nav.mt-6 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  #root nav.mt-6 a {
+    min-height: 58px !important;
+  }
+}
