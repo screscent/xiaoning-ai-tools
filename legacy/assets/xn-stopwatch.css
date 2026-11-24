@@ -1,0 +1,314 @@
+/* 小凝工具站 · 秒表与计时记录皮肤 xn-stopwatch v1（纯 CSS，无图片）
+ * 主题：竞速深蓝 + 橙色秒针 + 同心刻度环。
+ * 注入：legacy/x8s6kkcakb.html
+ */
+
+:root {
+  --sw: #0f4c75;
+  --sw-deep: #0b3a5b;
+  --sw-accent: #ff7a45;
+  --sw-ink: #14222e;
+  --sw-line: #d8e4ec;
+  --sw-soft: #eef5f9;
+}
+
+html { background: #edf4f8; }
+
+body {
+  background:
+    radial-gradient(980px 540px at 6% -12%, rgba(15, 76, 117, .16), transparent 60%),
+    radial-gradient(820px 480px at 102% -6%, rgba(255, 122, 69, .12), transparent 56%),
+    linear-gradient(180deg, #f7fbfd 0%, #edf4f8 52%, #fbfdfe 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 同心刻度环 + 速度线 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-radial-gradient(circle at 88% -8%, rgba(15, 76, 117, .07) 0 1px, transparent 1px 26px),
+    repeating-linear-gradient(115deg, rgba(15, 76, 117, .03) 0, rgba(15, 76, 117, .03) 1px, transparent 1px, transparent 20px);
+  opacity: .85;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 62%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 62%);
+}
+
+#root { position: relative; z-index: 1; }
+
+/* ---------- 工具切换 ---------- */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px !important;
+  border-radius: 12px !important;
+  font-size: 14.5px !important;
+  font-weight: 600;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  transition: color .15s, background .15s, box-shadow .15s, transform .12s;
+}
+#root a[href^="#/"]:hover { transform: translateY(-1px); }
+#root a[href^="#/"]:focus-visible {
+  outline: 2px solid var(--sw);
+  outline-offset: 2px;
+}
+#root a[href^="#/"][aria-current="page"] {
+  background: linear-gradient(135deg, #16608f, #0b3a5b) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -12px rgba(11, 58, 91, .85);
+}
+
+@media (max-width: 640px) {
+  .xn-sw-tabbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin: 0 -6px;
+    padding: 8px 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: rgba(247, 251, 253, .95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--sw-line);
+  }
+  .xn-sw-tabbar::-webkit-scrollbar { display: none; }
+  .xn-sw-tabbar a[href^="#/"] {
+    flex: 0 0 auto !important;
+    min-width: 68px;
+    font-size: 13.5px !important;
+    padding: 0 11px !important;
+  }
+}
+
+/* ---------- 标题 ---------- */
+#root h1 { letter-spacing: -.02em; color: var(--sw-deep) !important; }
+
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--sw-ink) !important;
+}
+#root h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, var(--sw-accent), #d8551f);
+  vertical-align: -2px;
+}
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; }
+  #root h2::before { height: 16px; margin-right: 8px; }
+}
+
+/* ---------- 计时数字 ---------- */
+#root .scope-font-mono {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .005em;
+  color: var(--sw-deep) !important;
+}
+/* 仅主计时器放大，分段/导出里的小时间戳不受影响 */
+#root .xn-sw-bigtime { font-size: 56px !important; }
+@media (max-width: 640px) {
+  #root .xn-sw-bigtime { font-size: 38px !important; letter-spacing: 0; }
+}
+
+/* 分段页排序胶囊 */
+#root button.xn-sw-filter {
+  min-height: 44px !important;
+  background: #fff !important;
+  border: 1px solid var(--sw-line) !important;
+  color: #33546b !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  box-shadow: none !important;
+}
+#root button.xn-sw-filter[aria-pressed="true"] {
+  background: linear-gradient(135deg, #16608f, #0b3a5b) !important;
+  border-color: #0b3a5b !important;
+  color: #fff !important;
+}
+#root button.xn-sw-filter:hover { border-color: #a9c6d8 !important; }
+
+/* ---------- 按钮 ---------- */
+#root button {
+  min-height: 44px !important;
+  border-radius: 11px !important;
+  font-size: 14px !important;
+}
+#root button.xn-sw-primary {
+  background: linear-gradient(135deg, #ff8a55, #e2622f) !important;
+  color: #fff !important;
+  border: 0 !important;
+  min-height: 48px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 20px -12px rgba(226, 98, 47, .9);
+}
+#root button.xn-sw-primary:hover { filter: brightness(1.05); }
+#root button.xn-sw-secondary {
+  background: #fff !important;
+  border: 1px solid var(--sw-line) !important;
+  color: var(--sw-deep) !important;
+  font-weight: 600 !important;
+}
+#root button.xn-sw-secondary:hover { background: #f6fafd !important; border-color: #b9cfdd !important; }
+#root button:disabled {
+  opacity: .45 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+#root button:focus-visible {
+  outline: 2px solid var(--sw);
+  outline-offset: 2px;
+}
+
+/* ---------- 显示毫秒 ---------- */
+#root input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  accent-color: var(--sw);
+}
+#root label:has(input[type="checkbox"]) {
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px !important;
+  color: #33475a !important;
+  cursor: pointer;
+}
+
+/* ---------- 通用提示条 ---------- */
+#root .xn-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ffd9c2;
+  background: #fff8f2;
+  color: #8a4b26;
+  font-size: 12.5px !important;
+  line-height: 1.5;
+}
+#root .xn-hint::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sw-accent);
+  flex: 0 0 auto;
+}
+
+/* ---------- 输入 ---------- */
+#root input[type="number"] {
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 600;
+  border-radius: 12px !important;
+  border-color: var(--sw-line) !important;
+  background: #fff !important;
+  font-variant-numeric: tabular-nums;
+}
+#root textarea {
+  min-height: 180px !important;
+  font-size: 16px !important;
+  line-height: 1.65;
+  border-radius: 12px !important;
+  border-color: var(--sw-line) !important;
+  background: #fff !important;
+}
+#root input:focus, #root textarea:focus {
+  border-color: #5c9dbf !important;
+  box-shadow: 0 0 0 3px rgba(92, 157, 191, .18) !important;
+}
+
+/* 常用值胶囊 */
+.xn-sw-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.xn-sw-chips button {
+  min-height: 34px !important;
+  padding: 0 11px !important;
+  border-radius: 999px !important;
+  border: 1px solid #d5e3ec !important;
+  background: #f7fbfd !important;
+  color: var(--sw) !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  line-height: 1;
+  box-shadow: none !important;
+}
+.xn-sw-chips button:hover { background: #eaf3f9 !important; border-color: #a9c6d8 !important; }
+.xn-sw-chips button:active { transform: scale(.97); }
+.xn-sw-chips button:focus-visible { outline: 2px solid var(--sw); outline-offset: 1px; }
+@media (max-width: 640px) {
+  .xn-sw-chips button { min-height: 40px !important; padding: 0 13px !important; font-size: 13px !important; }
+}
+
+/* ---------- 表格 ---------- */
+#root table {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+#root thead th {
+  background: #eef5f9 !important;
+  color: #33546b !important;
+  font-weight: 700;
+  font-size: 12.5px;
+  padding: 9px 10px !important;
+  border-bottom: 1px solid var(--sw-line) !important;
+  white-space: nowrap;
+}
+#root tbody td {
+  padding: 8px 10px !important;
+  border-bottom: 1px solid #eef3f7 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root tbody tr:nth-child(even) { background: #fafcfe; }
+#root tbody tr:hover { background: #f1f8fc; }
+
+/* 正文 */
+#root p, #root li { line-height: 1.7; }
+
+/* 回到顶部 */
+.xn-sw-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--sw-line);
+  background: #fff;
+  color: var(--sw-deep);
+  box-shadow: 0 10px 24px -14px rgba(11, 58, 91, .7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-sw-top.is-on { display: flex; }
+.xn-sw-top:focus-visible { outline: 2px solid var(--sw); outline-offset: 2px; }
