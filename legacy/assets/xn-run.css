@@ -132,6 +132,21 @@ body {
   color: #44526e !important;
 }
 
+/* ---------- 结果表 ---------- */
+#root table th {
+  font-size: 12.5px !important;
+  color: #64748b !important;
+}
+#root table td {
+  font-size: 14px !important;
+}
+#root table td:last-child {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--xnr-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+
 /* ---------- 复制按钮 ---------- */
 #root .xn-run-copy {
   min-height: 44px !important;
