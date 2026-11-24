@@ -1,0 +1,218 @@
+/* R1316 条码生成与尺寸校验合集 · 主题「扫描线」 xn-barcode
+   纯 CSS：冷白底 + 扫描线 + 青蓝激光光，无图片 */
+
+#root {
+  --xn-bc-ink: #1e293b;
+  --xn-bc-cyan: #0e7490;
+  --xn-bc-blue: #2563eb;
+}
+
+/* ---------- 底色 ---------- */
+#root > div:first-child {
+  background:
+    radial-gradient(800px 360px at 50% -150px, rgba(37, 99, 235, 0.12), transparent 70%),
+    radial-gradient(560px 300px at 92% 6%, rgba(14, 116, 144, 0.10), transparent 65%),
+    repeating-linear-gradient(0deg, rgba(14, 116, 144, 0.045) 0 1px, transparent 1px 7px),
+    linear-gradient(180deg, #f7fbff 0%, #eef6fb 50%, #e8f2fa 100%) !important;
+  background-attachment: fixed;
+}
+
+#root h1 { letter-spacing: 0.01em; color: #16324f !important; }
+
+/* ---------- 工具切换 ---------- */
+#root .xn-bc-tab {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border: 1px solid #d5e4f2 !important;
+  color: #3f5a78 !important;
+  background: #fbfdff !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+#root .xn-bc-tab[aria-pressed="true"] {
+  background: linear-gradient(135deg, #2563eb, #0e7490) !important;
+  border-color: #2563eb !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.24) !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h2 {
+  position: relative;
+  font-size: 17.5px !important;
+  line-height: 1.35;
+  color: #16324f !important;
+  letter-spacing: 0.01em;
+}
+#root h2.xn-bc-tool {
+  font-size: 19px !important;
+  padding-left: 14px;
+}
+#root h2.xn-bc-tool::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #2563eb, #0e7490);
+}
+#root h3 {
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #2f4a66 !important;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- 表单 ---------- */
+#root input[type="text"],
+#root select {
+  min-height: 48px !important;
+  font-size: 15.5px !important;
+  color: #16324f;
+  background: #fbfdff;
+  border-color: #d5e4f2 !important;
+  border-radius: 12px;
+}
+#root input[type="number"] {
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 700;
+  color: #16324f;
+  background: #fbfdff;
+  border-color: #d5e4f2 !important;
+  border-radius: 12px;
+}
+#root input:focus,
+#root select:focus {
+  outline: none;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.13);
+}
+#root label { color: #3f5a78; }
+
+/* ---------- 条宽滑杆 ---------- */
+#root input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 44px !important;
+  background: transparent !important;
+  accent-color: #0e7490;
+}
+#root input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #bfe3ec, #dbe8f4);
+}
+#root input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: #0e7490;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(14, 116, 144, 0.35);
+}
+#root input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #bfe3ec, #dbe8f4);
+}
+#root input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #0e7490;
+  border: 2px solid #fff;
+}
+
+/* ---------- 开关 ---------- */
+#root .xn-bc-switch {
+  min-height: 44px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ---------- 操作按钮 ---------- */
+#root .xn-bc-action {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border-color: #d5e4f2 !important;
+  color: #2f5d7a !important;
+  background: #fbfdff !important;
+}
+#root .xn-bc-action:hover { background: #f0f7ff !important; }
+#root .xn-bc-action[class*="bg-blue-600"] {
+  background: linear-gradient(135deg, #2563eb, #0e7490) !important;
+  border-color: #2563eb !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.22);
+}
+
+/* ---------- 条码预览 ---------- */
+#root .xn-barcode-preview {
+  background:
+    repeating-linear-gradient(0deg, rgba(14, 116, 144, 0.045) 0 1px, transparent 1px 9px),
+    #fff !important;
+  border: 1px solid #dbe8f4 !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 8px 20px rgba(14, 116, 144, 0.07);
+}
+#root .xn-barcode-preview canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- 校验结果卡 ---------- */
+#root section [class*="grid"] > div[class*="bg-white"][class*="border"] {
+  border-color: #dbe8f4 !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+  box-shadow: 0 6px 14px rgba(14, 116, 144, 0.06);
+}
+#root section [class*="grid"] > div p[class*="text-sm"][class*="font-semibold"] {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #0e7490 !important;
+  letter-spacing: 0.01em;
+}
+#root section [class*="grid"] > div p[class*="text-xs"] {
+  font-size: 12px !important;
+  color: #6b8299 !important;
+}
+#root [class*="text-green-600"],
+#root [class*="text-emerald-600"] {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- 状态提示 ---------- */
+#root [class*="bg-green-50"],
+#root [class*="bg-emerald-50"] {
+  border-radius: 10px !important;
+  border-color: #c7e8dd !important;
+  font-size: 12.5px !important;
+}
+
+/* ---------- 使用说明 ---------- */
+#root details summary,
+#root [class*="cursor-pointer"][class*="select-none"] {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  color: #3f5a78 !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root h2.xn-bc-tool { font-size: 18px !important; }
+  #root .xn-bc-tab { font-size: 13px !important; padding-left: 14px !important; padding-right: 14px !important; }
+  #root section [class*="grid"] > div p[class*="text-sm"][class*="font-semibold"] { font-size: 18px !important; }
+}
