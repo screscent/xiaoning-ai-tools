@@ -1,0 +1,174 @@
+/* R1313 年龄与生日计算合集 · 主题「生日烛光」 xn-bday
+   纯 CSS：奶油底 + 彩纸圆点 + 珊瑚/琥珀柔光，无图片 */
+
+#root {
+  --xn-bday-ink: #4a2c22;
+  --xn-bday-coral: #e11d48;
+  --xn-bday-amber: #d97706;
+}
+
+/* ---------- 底色 ---------- */
+#root > div:first-child {
+  background:
+    radial-gradient(820px 380px at 50% -150px, rgba(251, 146, 60, 0.18), transparent 70%),
+    radial-gradient(620px 320px at 92% 6%, rgba(225, 29, 72, 0.10), transparent 65%),
+    radial-gradient(circle at 12% 18%, rgba(244, 114, 182, 0.16) 0 3px, transparent 4px),
+    radial-gradient(circle at 78% 12%, rgba(251, 191, 36, 0.20) 0 3px, transparent 4px),
+    radial-gradient(circle at 36% 30%, rgba(45, 212, 191, 0.14) 0 2px, transparent 3px),
+    radial-gradient(circle at 68% 24%, rgba(129, 140, 248, 0.16) 0 2px, transparent 3px),
+    linear-gradient(180deg, #fffaf5 0%, #fff4ec 50%, #fdeee6 100%) !important;
+  background-attachment: fixed;
+}
+
+#root h1 { letter-spacing: 0.01em; color: #4a2c22 !important; }
+
+/* ---------- 工具切换 ---------- */
+#root button[aria-pressed] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border-color: #f2ddcf !important;
+  color: #7a5546 !important;
+  background: #fffaf6 !important;
+}
+#root button[aria-pressed]:hover {
+  border-color: #f0bfa7 !important;
+  color: #b45309 !important;
+}
+#root button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #f97316, #e11d48) !important;
+  border-color: #e11d48 !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(225, 29, 72, 0.22);
+}
+
+/* ---------- 标题 ---------- */
+#root h2 {
+  position: relative;
+  font-size: 19px !important;
+  line-height: 1.35;
+  color: #4a2c22 !important;
+  padding-left: 14px;
+  letter-spacing: 0.01em;
+}
+#root h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #f97316, #e11d48);
+}
+
+/* ---------- 表单 ---------- */
+#root input[type="date"],
+#root select {
+  min-height: 48px !important;
+  font-size: 15.5px !important;
+  color: #4a2c22;
+  background: #fffdfb;
+  border-color: #f0d9c9 !important;
+  border-radius: 12px;
+}
+#root input[type="date"]:focus,
+#root select:focus {
+  outline: none;
+  border-color: #f97316 !important;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.14);
+}
+#root label { color: #7a5546; }
+#root label span[class*="text-[11px]"],
+#root label span[class*="text-xs"] {
+  color: #9a7a68 !important;
+}
+
+/* ---------- 日期快捷 chip ---------- */
+#root .xn-bday-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+#root .xn-bday-chip {
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  border-radius: 999px !important;
+  border: 1px solid #f3cdb8 !important;
+  background: #fff7f1 !important;
+  color: #b45309 !important;
+  cursor: pointer;
+}
+#root .xn-bday-chip:hover {
+  background: #ffeede !important;
+  border-color: #eba17a !important;
+}
+
+/* ---------- 结果卡 ---------- */
+#root section [class*="rounded-xl"][class*="border"],
+#root section [class*="rounded-lg"][class*="border-slate-200"] {
+  border-radius: 14px !important;
+  border-color: #f2ddcf !important;
+  box-shadow: 0 8px 20px rgba(180, 83, 9, 0.06);
+}
+#root [class*="tabular-nums"] {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em;
+}
+#root [class*="text-2xl"][class*="font-bold"] {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #b45309 !important;
+}
+#root [class*="text-[11px]"][class*="tracking-wide"] {
+  font-size: 12.5px !important;
+  letter-spacing: 0.04em;
+  color: #9a7a68 !important;
+}
+#root [class*="text-[11px]"][class*="text-slate-500"] {
+  font-size: 12.5px !important;
+  color: #9a7a68 !important;
+}
+#root [class*="text-[11px]"][class*="text-slate-400"] {
+  font-size: 12.5px !important;
+  line-height: 1.65 !important;
+  color: #a58a79 !important;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root .xn-bday-copy {
+  min-height: 44px !important;
+  min-width: 112px !important;
+  white-space: nowrap !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #f97316, #e11d48) !important;
+  color: #fff !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+  box-shadow: 0 6px 16px rgba(225, 29, 72, 0.20);
+}
+
+/* ---------- 使用说明 ---------- */
+#root details summary,
+#root [class*="cursor-pointer"][class*="select-none"] {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  color: #7a5546 !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root h2 { font-size: 18px !important; }
+  #root button[aria-pressed] { font-size: 13px !important; }
+  #root [class*="tabular-nums"] { font-size: 22px !important; }
+  #root [class*="text-2xl"][class*="font-bold"] { font-size: 24px !important; }
+}
