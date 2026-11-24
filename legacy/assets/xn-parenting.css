@@ -1,0 +1,202 @@
+/* R1327 育儿喂养与成长计算合集 —— 柔和薄荷 + 蜜桃暖光（纯 CSS，无图片） */
+:root {
+  --xnp-line: #d7f0e3;
+  --xnp-ink: #0f2a22;
+  --xnp-mint: #10b981;
+  --xnp-mint-d: #047857;
+}
+
+body {
+  background-color: #eefaf3 !important;
+  background-image:
+    radial-gradient(circle at 12% 4%, rgba(16, 185, 129, 0.12), transparent 44%),
+    radial-gradient(circle at 90% 2%, rgba(253, 186, 116, 0.16), transparent 40%),
+    radial-gradient(rgba(16, 185, 129, 0.15) 1px, transparent 1.4px);
+  background-size: auto, auto, 22px 22px;
+  background-attachment: fixed, fixed, scroll;
+}
+
+/* 页面自带暖色底：换成薄荷到透明的渐变，透出网格纹理 */
+#root .min-h-screen {
+  background: linear-gradient(180deg, rgba(236, 253, 245, 0.62), rgba(255, 255, 255, 0.12) 52%, rgba(236, 253, 245, 0.4)) !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+  color: var(--xnp-ink) !important;
+}
+#root h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin: 12px 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #34d399, #10b981 55%, #fdba74);
+}
+#root h1 + p {
+  font-size: 14px !important;
+  color: #4f6a60 !important;
+}
+
+/* ---------- 吸顶导航 ---------- */
+#root nav.sticky {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-bottom-color: var(--xnp-line) !important;
+}
+#root nav.sticky > div {
+  justify-content: flex-start !important;
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent);
+  mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent);
+}
+#root nav.sticky a {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  border-radius: 999px !important;
+}
+#root nav.sticky a::after {
+  content: attr(data-no);
+  margin-left: 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  opacity: 0.55;
+}
+#root nav.sticky a[aria-current="page"] {
+  border-color: #34d399 !important;
+  background: #e8f9f0 !important;
+  color: #046c4e !important;
+  box-shadow: 0 6px 16px -12px rgba(5, 150, 105, 0.6);
+}
+
+/* ---------- 工具标题 ---------- */
+#root h2.xn-pg-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: var(--xnp-ink) !important;
+}
+#root h2.xn-pg-h2 > span:first-child {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 12px !important;
+}
+
+/* ---------- 表单 ---------- */
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  border-color: #cdeadd !important;
+  background: #fdfffe !important;
+  color: var(--xnp-ink) !important;
+}
+#root input[type="number"] {
+  border-radius: 10px !important;
+  border-color: #cdeadd !important;
+  background: #fdfffe !important;
+  color: var(--xnp-ink) !important;
+}
+#root input:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: var(--xnp-mint) !important;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.14) !important;
+}
+#root label {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #3f5a50 !important;
+}
+
+/* ---------- 结果卡 ---------- */
+#root .xn-pg-card {
+  border-color: #b9ecd3 !important;
+  border-radius: 18px !important;
+  background: linear-gradient(180deg, #fbfffd, #ecfdf5) !important;
+  padding: 16px 16px 18px !important;
+}
+#root .xn-pg-cardtitle {
+  font-size: 13px !important;
+  letter-spacing: 0.08em !important;
+  color: var(--xnp-mint-d) !important;
+}
+#root .xn-pg-rows > div {
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(16, 185, 129, 0.16);
+}
+#root .xn-pg-rows > div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+#root .xn-pg-k {
+  width: 84px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: #5b7268 !important;
+}
+#root .xn-pg-v {
+  font-size: 16.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  color: var(--xnp-ink) !important;
+}
+#root .xn-pg-vd {
+  font-size: 14.5px !important;
+  color: #173e33 !important;
+}
+
+/* ---------- 复制 / 重置 ---------- */
+#root .xn-pg-act {
+  min-height: 44px !important;
+  min-width: 64px !important;
+  padding: 0 12px !important;
+  justify-content: center !important;
+  border: 1px solid #cdeadd !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #116b52 !important;
+}
+#root .xn-pg-act:hover {
+  background: #effbf5 !important;
+  border-color: #86e0bb !important;
+}
+
+/* ---------- 页脚 ---------- */
+#root footer {
+  border-top-color: var(--xnp-line) !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (min-width: 900px) {
+  #root nav.sticky > div {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+@media (max-width: 640px) {
+  #root h1 {
+    font-size: 26px !important;
+  }
+  #root h2.xn-pg-h2 {
+    font-size: 18.5px !important;
+  }
+  #root .xn-pg-v {
+    font-size: 15.5px !important;
+  }
+  #root nav.sticky a {
+    min-height: 44px !important;
+  }
+}
