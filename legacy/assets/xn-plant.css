@@ -1,0 +1,275 @@
+/* 小凝工具站 · 绿植养护皮肤 xn-plant v1（纯 CSS，无图片）
+ * 主题：苔绿植物 + 叶脉点阵。
+ * 注入：legacy/ij5ecw8zig.html
+ */
+
+:root {
+  --pl: #2f6b4f;
+  --pl-deep: #1d4a35;
+  --pl-mid: #6ba37c;
+  --pl-ink: #16241c;
+  --pl-line: #d9e6db;
+  --pl-soft: #f4f8f2;
+}
+
+html { background: #f1f6ef; }
+
+body {
+  background:
+    radial-gradient(1020px 580px at 8% -14%, rgba(47, 107, 79, .16), transparent 62%),
+    radial-gradient(860px 520px at 104% -8%, rgba(147, 196, 125, .14), transparent 58%),
+    linear-gradient(180deg, #f8fbf6 0%, #f1f6ef 54%, #f7faf4 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 叶脉点阵 + 斜向叶脉线 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(47, 107, 79, .13) 1.2px, transparent 1.3px),
+    repeating-linear-gradient(112deg, rgba(47, 107, 79, .045) 0, rgba(47, 107, 79, .045) 1px, transparent 1px, transparent 22px);
+  background-size: 24px 24px, auto;
+  opacity: .85;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 64%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 64%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 顶部返回 ---------- */
+#root a[href^="https://screscent.github.io"] {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  padding-right: 4px;
+}
+#root a[href^="https://screscent.github.io"]:focus-visible {
+  outline: 2px solid var(--pl);
+  outline-offset: 2px;
+}
+
+/* ---------- 工具切换条 ---------- */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  border-radius: 14px !important;
+  transition: border-color .15s, box-shadow .15s, transform .12s, background .15s;
+}
+#root a[href^="#/"] span:first-child {
+  font-size: 14.5px !important;
+  letter-spacing: .01em;
+}
+#root a[href^="#/"] span:nth-child(2) {
+  font-size: 11.5px !important;
+}
+#root a[href^="#/"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -10px rgba(29, 74, 53, .55);
+}
+#root a[href^="#/"][aria-current="page"] {
+  box-shadow: 0 8px 18px -10px rgba(29, 74, 53, .6) !important;
+}
+#root a[href^="#/"]:focus-visible {
+  outline: 2px solid var(--pl);
+  outline-offset: 2px;
+}
+
+/* 移动端：切换条吸附顶部 + 单行横滑，避免 6 个标签逐字竖排 */
+@media (max-width: 640px) {
+  .xn-pl-tabbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin: 0 -6px;
+    padding: 8px 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: rgba(247, 250, 244, .94);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--pl-line);
+  }
+  .xn-pl-tabbar::-webkit-scrollbar { display: none; }
+  .xn-pl-tabbar a[href^="#/"] {
+    flex: 0 0 auto !important;
+    min-width: 70px;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  #root a[href^="#/"] span:first-child {
+    font-size: 13.5px !important;
+    white-space: nowrap;
+  }
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  letter-spacing: -.02em;
+}
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--pl-ink) !important;
+}
+#root h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, var(--pl-mid), var(--pl-deep));
+  vertical-align: -2px;
+}
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; }
+  #root h2::before { height: 16px; margin-right: 8px; }
+}
+
+/* ---------- 输入 ---------- */
+/* 规格与 xn-ux 一致：:not 链 5 层，保证 16px 不被 15px 覆盖 */
+#root input.xn-pl-inp:not([type="file"]):not([type="range"]):not([type="number"]):not([type="checkbox"]):not([type="radio"]) {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 14px !important;
+  border-color: #cfe0d2 !important;
+  background: #fff !important;
+}
+#root input.xn-pl-inp:not([type="file"]):not([type="range"]):not([type="number"]):not([type="checkbox"]):not([type="radio"]):focus {
+  border-color: var(--pl-mid) !important;
+  box-shadow: 0 0 0 3px rgba(107, 163, 124, .18) !important;
+}
+#root input::placeholder { color: #9db3a2 !important; }
+
+/* 常用值快捷胶囊 */
+.xn-pl-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.xn-pl-chips button {
+  min-height: 34px;
+  padding: 0 11px;
+  border-radius: 999px;
+  border: 1px solid #cfe0d2;
+  background: #f6faf4;
+  color: var(--pl);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1;
+  transition: background .12s, border-color .12s, transform .1s;
+}
+.xn-pl-chips button:hover {
+  background: #e9f3ec;
+  border-color: #a6cbaf;
+}
+.xn-pl-chips button:active { transform: scale(.97); }
+.xn-pl-chips button:focus-visible {
+  outline: 2px solid var(--pl);
+  outline-offset: 1px;
+}
+@media (max-width: 640px) {
+  .xn-pl-chips button { min-height: 40px; padding: 0 13px; font-size: 13px; }
+}
+
+/* ---------- 选项按钮 ---------- */
+#root button[aria-pressed] {
+  min-height: 44px !important;
+  border-radius: 14px !important;
+  font-size: 13.5px !important;
+  transition: border-color .15s, background .15s, transform .1s;
+}
+#root button[aria-pressed="true"] {
+  border-color: var(--pl) !important;
+  background-color: var(--pl) !important;
+  background-image: linear-gradient(135deg, #3b7f5f, #25583f) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -12px rgba(29, 74, 53, .9);
+}
+#root button[aria-pressed="true"] span { color: #fff !important; }
+#root button[aria-pressed="false"]:hover {
+  border-color: #a6cbaf !important;
+  background-color: #f3f9f4 !important;
+}
+#root button[aria-pressed]:active { transform: scale(.985); }
+#root button[aria-pressed]:focus-visible {
+  outline: 2px solid var(--pl);
+  outline-offset: 2px;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root button[aria-label^="复制"] {
+  min-height: 44px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  border-radius: 12px !important;
+  font-size: 13px !important;
+}
+
+/* ---------- 结果数字 ---------- */
+#root .tabular-nums {
+  font-size: 22px !important;
+  letter-spacing: -.015em;
+  color: var(--pl-deep) !important;
+}
+@media (max-width: 640px) {
+  #root .tabular-nums { font-size: 20px !important; }
+}
+
+/* 结果卡：主标签加一点绿意 */
+#root [class*="from-emerald-50"] {
+  background-image: linear-gradient(90deg, rgba(233, 243, 236, .9), #fff) !important;
+}
+#root [class*="from-emerald-50"] span:first-child {
+  font-size: 15.5px !important;
+}
+
+/* 结果卡外框统一圆角与阴影 */
+#root .rounded-3xl[class*="border"] {
+  border-color: var(--pl-line) !important;
+}
+
+/* 正文可读性 */
+#root p, #root li {
+  line-height: 1.72;
+}
+/* 结果字段：标签/正文略放大，长段落更好读 */
+#root [class*="text-[14.5px]"] {
+  font-size: 15.5px !important;
+  line-height: 1.68;
+}
+#root [class*="text-[13px]"] {
+  font-size: 13.5px !important;
+}
+
+/* 回到顶部浮钮 */
+.xn-pl-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #cfe0d2;
+  background: #fff;
+  color: var(--pl-deep);
+  box-shadow: 0 10px 24px -14px rgba(29, 74, 53, .7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-pl-top.is-on { display: flex; }
+.xn-pl-top:focus-visible { outline: 2px solid var(--pl); outline-offset: 2px; }
