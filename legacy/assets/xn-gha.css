@@ -1,0 +1,215 @@
+/* 小凝工具站 · GitHub 协作合集皮肤 xn-gha v1（纯 CSS，无图片）
+ * 主题：GitHub 代码风 —— 浅灰蓝底 + 细网格线；主色 GitHub 绿 + 紫点缀。
+ * 注入：legacy/puudfv3a4t.html
+ */
+
+:root {
+  --gha: #1f883d;
+  --gha-deep: #116329;
+  --gha-ink: #1f2328;
+  --gha-night: #24292f;
+  --gha-line: #d8dee4;
+  --gha-purple: #8250df;
+}
+
+html { background: #f6f8fa; }
+
+body {
+  background:
+    radial-gradient(1000px 540px at 8% -12%, rgba(31, 136, 61, .14), transparent 60%),
+    radial-gradient(880px 500px at 102% -6%, rgba(130, 80, 223, .10), transparent 56%),
+    linear-gradient(180deg, #fbfcfd 0%, #f6f8fa 52%, #f9fbfc 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 代码编辑器细网格：纯 CSS 两向 1px 线 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(31, 35, 40, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 35, 40, .045) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: .9;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 62%);
+  mask-image: linear-gradient(180deg, #000, transparent 62%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签 ---------- */
+#root nav[class*="overflow-x-auto"] a[href^="#/"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 600;
+  color: #3d444d !important;
+  background: #fff !important;
+  border: 1px solid var(--gha-line) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 1px 0 rgba(31, 35, 40, .04);
+  transition: border-color .15s, box-shadow .15s, background .15s;
+}
+
+#root nav[class*="overflow-x-auto"] a[href^="#/"]::before {
+  content: attr(data-no);
+  font: 700 10.5px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #8c959f;
+  letter-spacing: .03em;
+}
+
+#root nav[class*="overflow-x-auto"] a[href^="#/"]:hover {
+  border-color: #afb8c1 !important;
+  box-shadow: 0 3px 10px rgba(31, 35, 40, .08);
+}
+
+#root nav[class*="overflow-x-auto"] a[href^="#/"]:focus-visible {
+  outline: 2px solid var(--gha);
+  outline-offset: 2px;
+}
+
+#root nav[class*="overflow-x-auto"] a[href^="#/"][aria-current] {
+  color: #fff !important;
+  background: var(--gha-night) !important;
+  border-color: var(--gha-night) !important;
+  box-shadow: 0 4px 12px rgba(36, 41, 47, .22);
+}
+
+#root nav[class*="overflow-x-auto"] a[href^="#/"][aria-current]::before { color: rgba(255, 255, 255, .62); }
+
+/* ---------- 工具标题 ---------- */
+#root h2.xn-gha-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--gha-ink) !important;
+}
+
+#root h2.xn-gha-h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #2da44e, var(--gha));
+  vertical-align: -2px;
+}
+
+/* ---------- 搜索输入 ---------- */
+#root input.xn-gha-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--gha-line) !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+}
+
+#root input.xn-gha-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]):focus {
+  outline: none !important;
+  border-color: var(--gha) !important;
+  box-shadow: 0 0 0 4px rgba(31, 136, 61, .14) !important;
+}
+
+/* ---------- 快捷词（试试：…） ---------- */
+#root button.xn-gha-quick {
+  min-height: 44px !important;
+  padding: 0 15px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: #3d444d !important;
+  background: #fff !important;
+  border: 1px solid var(--gha-line) !important;
+  border-radius: 999px !important;
+  transition: border-color .15s, background .15s, color .15s;
+}
+
+#root button.xn-gha-quick:hover {
+  color: var(--gha-deep) !important;
+  background: #f0fdf4 !important;
+  border-color: #7ee2a8 !important;
+}
+
+#root button.xn-gha-quick:focus-visible { outline: 2px solid var(--gha); outline-offset: 2px; }
+
+/* ---------- 选项 chip（分支/模板） ---------- */
+#root button.xn-gha-chip {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: #3d444d !important;
+  background: #fff !important;
+  border: 1px solid var(--gha-line) !important;
+  border-radius: 10px !important;
+  transition: border-color .15s, background .15s, color .15s;
+}
+
+#root button.xn-gha-chip:hover { border-color: #afb8c1 !important; }
+
+#root button.xn-gha-chip:focus-visible { outline: 2px solid var(--gha); outline-offset: 2px; }
+
+#root button.xn-gha-chip[aria-pressed="true"] {
+  color: #fff !important;
+  background: var(--gha-night) !important;
+  border-color: var(--gha-night) !important;
+  box-shadow: 0 3px 10px rgba(36, 41, 47, .2);
+}
+
+#root button.xn-gha-chip[aria-pressed="true"]::after {
+  content: "✓";
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* ---------- 结果卡（点击查看详情） ---------- */
+#root button.xn-gha-card {
+  border: 1px solid var(--gha-line) !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  transition: border-color .15s, box-shadow .15s, transform .12s;
+}
+
+#root button.xn-gha-card:hover {
+  border-color: #7ee2a8 !important;
+  box-shadow: 0 8px 20px rgba(31, 136, 61, .12);
+  transform: translateY(-1px);
+}
+
+#root button.xn-gha-card:focus-visible { outline: 2px solid var(--gha); outline-offset: 2px; }
+
+/* ---------- 复制按钮 ---------- */
+#root button.xn-gha-copy {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: #24292f !important;
+  background: #f6f8fa !important;
+  border: 1px solid var(--gha-line) !important;
+  border-radius: 10px !important;
+  transition: background .15s, border-color .15s;
+}
+
+#root button.xn-gha-copy:hover { background: #eef1f4 !important; border-color: #afb8c1 !important; }
+#root button.xn-gha-copy:focus-visible { outline: 2px solid var(--gha); outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  #root h2.xn-gha-h2 { font-size: 18.5px !important; }
+  #root nav[class*="overflow-x-auto"] a[href^="#/"] { padding: 0 13px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root button.xn-gha-card:hover { transform: none; }
+}
