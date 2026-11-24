@@ -1,0 +1,136 @@
+/* R1333 摩斯电码与信号合集 —— 信号蓝 + 点划纹理（纯 CSS，无图片） */
+:root {
+  --xnm-line: #d8e2f5;
+  --xnm-ink: #0f1b33;
+  --xnm-blue: #2563eb;
+  --xnm-blue-d: #1d4ed8;
+}
+
+body {
+  background-color: #f4f7ff !important;
+  background-image:
+    radial-gradient(circle at 8% 2%, rgba(37, 99, 235, 0.12), transparent 44%),
+    radial-gradient(circle at 92% 5%, rgba(34, 211, 238, 0.12), transparent 40%),
+    radial-gradient(rgba(37, 99, 235, 0.12) 1px, transparent 1.4px),
+    repeating-linear-gradient(90deg, rgba(37, 99, 235, 0.05) 0 2px, transparent 2px 18px);
+  background-size: auto, auto, 22px 22px, 100% 26px;
+  background-attachment: fixed, fixed, scroll, scroll;
+}
+
+#root .min-h-screen {
+  background: linear-gradient(180deg, rgba(238, 244, 255, 0.82), rgba(255, 255, 255, 0.2) 55%, rgba(236, 254, 255, 0.4)) !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+  color: var(--xnm-ink) !important;
+}
+#root h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin: 12px 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #22d3ee, #2563eb 55%, #6366f1);
+}
+#root h1 + p {
+  font-size: 14px !important;
+  color: #47587a !important;
+}
+
+/* ---------- 工具切换 ---------- */
+#root nav[aria-label="工具切换"] button {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  border-radius: 10px 10px 0 0 !important;
+}
+#root nav[aria-label="工具切换"] button::after {
+  content: attr(data-no);
+  margin-left: 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9.5px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+/* ---------- 工具标题 ---------- */
+#root h2.xn-mo-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: var(--xnm-ink) !important;
+}
+#root h2.xn-mo-h2 + p {
+  font-size: 12.5px !important;
+  line-height: 1.7 !important;
+  color: #55708c !important;
+}
+
+/* ---------- 输入与结果 ---------- */
+#root textarea {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  border-radius: 10px !important;
+  border-color: var(--xnm-line) !important;
+  background: #fdfffe !important;
+  color: var(--xnm-ink) !important;
+}
+#root textarea[readonly] {
+  background: #f8fbff !important;
+  color: #1e293b !important;
+}
+#root input:focus,
+#root textarea:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: var(--xnm-blue) !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.13) !important;
+}
+#root label {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #44526e !important;
+}
+
+/* ---------- 按钮 ---------- */
+#root .xn-mo-copy {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+}
+#root button.xn-mo-seg[aria-pressed] {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+}
+#root .xn-mo-act {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+}
+
+/* ---------- 页脚 ---------- */
+#root footer {
+  border-top-color: var(--xnm-line) !important;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 640px) {
+  #root h1 {
+    font-size: 26px !important;
+  }
+  #root h2.xn-mo-h2 {
+    font-size: 18.5px !important;
+  }
+}
