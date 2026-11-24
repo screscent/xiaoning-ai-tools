@@ -1,0 +1,231 @@
+/* R1318 家庭药品与药箱清单合集 · 主题「家庭药箱」 xn-medbox
+   纯 CSS：鼠尾草绿 + 米白 + 药格线，无图片 */
+
+#root {
+  --xn-mb-ink: #243b33;
+  --xn-mb-sage: #0f766e;
+  --xn-mb-amber: #b45309;
+  --xn-mb-red: #b91c1c;
+}
+
+/* ---------- 底色 ---------- */
+#root > div:first-child {
+  background:
+    radial-gradient(780px 360px at 50% -150px, rgba(16, 185, 129, 0.13), transparent 70%),
+    radial-gradient(540px 300px at 92% 6%, rgba(180, 83, 9, 0.08), transparent 65%),
+    repeating-linear-gradient(0deg, rgba(15, 118, 110, 0.035) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(90deg, rgba(15, 118, 110, 0.035) 0 1px, transparent 1px 34px),
+    linear-gradient(180deg, #f8fcf9 0%, #f0f9f4 50%, #eaf5ef 100%) !important;
+  background-attachment: fixed;
+}
+
+#root h1 { letter-spacing: 0.01em; color: #1d3a31 !important; }
+
+/* ---------- 工具切换 ---------- */
+#root .xn-mb-tab {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border: 1px solid #d5e7dd !important;
+  background: #fbfefc !important;
+  color: #45645a !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+#root .xn-mb-tab[aria-pressed="true"] {
+  background: linear-gradient(135deg, #0f766e, #15803d) !important;
+  border-color: #0f766e !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.24) !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h2 {
+  position: relative;
+  font-size: 17.5px !important;
+  line-height: 1.35;
+  color: #1d3a31 !important;
+  letter-spacing: 0.01em;
+}
+#root h2.xn-mb-tool {
+  font-size: 19px !important;
+  padding-left: 14px;
+}
+#root h2.xn-mb-tool::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  bottom: 0.18em;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #0f766e, #65a30d);
+}
+#root h3 {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #1d3a31 !important;
+}
+
+/* ---------- 表单 ---------- */
+#root textarea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  font-size: 13.5px !important;
+  line-height: 1.7;
+  min-height: 176px !important;
+  background: #fbfefc !important;
+  border-color: #d5e7dd !important;
+  border-radius: 12px !important;
+  color: #243b33 !important;
+}
+#root select {
+  min-height: 48px !important;
+  font-size: 15.5px !important;
+  background: #fbfefc;
+  border-color: #d5e7dd !important;
+  border-radius: 12px;
+}
+#root input[type="number"] {
+  min-height: 48px !important;
+  font-size: 20px !important;
+  font-weight: 700;
+  background: #fbfefc;
+  border-color: #d5e7dd !important;
+  border-radius: 12px;
+}
+#root textarea:focus,
+#root select:focus,
+#root input:focus {
+  outline: none;
+  border-color: #0f766e !important;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.13);
+}
+#root label { color: #45645a; }
+
+/* ---------- 开关 ---------- */
+#root .xn-mb-switch {
+  min-height: 44px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ---------- 按钮 ---------- */
+#root .xn-mb-primary {
+  min-height: 48px !important;
+  font-size: 14.5px !important;
+  border-radius: 13px !important;
+  background: linear-gradient(135deg, #0f766e, #15803d) !important;
+  border-color: #0f766e !important;
+  color: #fff !important;
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.22);
+}
+#root .xn-mb-action {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border-color: #d5e7dd !important;
+  color: #2f5d52 !important;
+  background: #fbfefc !important;
+}
+#root .xn-mb-action:hover { background: #eef8f2 !important; }
+
+/* ---------- 统计 ---------- */
+#root section [class*="text-2xl"][class*="font-bold"] {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em;
+}
+#root section [class*="text-xs"][class*="mb-1"] {
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- 药品表 ---------- */
+#root table th {
+  font-size: 12.5px !important;
+  letter-spacing: 0.04em;
+  color: #5b7770 !important;
+}
+#root table td {
+  font-size: 14.5px !important;
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+}
+#root tr.xn-exp-row-danger td { background: #fef2f2; }
+#root tr.xn-exp-row-warn td { background: #fffbeb; }
+#root table tbody tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+#root table tbody tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+/* 状态徽标 */
+#root span[class*="bg-red-50"],
+#root span[class*="bg-amber-50"],
+#root span[class*="bg-emerald-50"] {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  padding: 3px 8px !important;
+  border-radius: 999px !important;
+}
+
+/* ---------- 临期与过期清单 ---------- */
+#root li[class*="justify-between"] {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+#root .xn-exp-date {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em;
+}
+#root .xn-exp-date.danger { color: #b91c1c !important; }
+#root .xn-exp-date.warn { color: #b45309 !important; }
+
+/* ---------- 药箱分类勾选 ---------- */
+#root section label[class*="cursor-pointer"][class*="rounded-lg"] {
+  min-height: 44px !important;
+  font-size: 13.5px !important;
+  border-radius: 12px !important;
+  border-color: #d5e7dd !important;
+  color: #45645a !important;
+  background: #fbfefc !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#root section label[class*="cursor-pointer"][class*="rounded-lg"]:has(input:checked) {
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.10), rgba(101, 163, 13, 0.12)) !important;
+  border-color: #7fb3a4 !important;
+  color: #115e59 !important;
+}
+#root section label[class*="cursor-pointer"] input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  accent-color: #0f766e;
+}
+
+/* 药箱清单提示 */
+#root p[class*="text-teal-700"] {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+}
+#root section li {
+  font-size: 12.5px !important;
+  line-height: 1.65;
+}
+
+/* ---------- 使用说明 ---------- */
+#root details summary,
+#root [class*="cursor-pointer"][class*="select-none"][class*="text-sm"] {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  color: #45645a !important;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 480px) {
+  #root h2.xn-mb-tool { font-size: 18px !important; }
+  #root section [class*="text-2xl"][class*="font-bold"] { font-size: 26px !important; }
+  #root .xn-mb-tab { font-size: 13px !important; padding-left: 14px !important; padding-right: 14px !important; }
+  #root .xn-exp-date { font-size: 17px !important; }
+}
