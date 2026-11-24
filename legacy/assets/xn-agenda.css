@@ -1,0 +1,145 @@
+/* R1335 会议议程与控场合集 —— 会议蓝 + 便签格（纯 CSS，无图片） */
+:root {
+  --xag-line: #dbe4f0;
+  --xag-ink: #0f1c2e;
+  --xag-blue: #2563eb;
+  --xag-blue-d: #1d4ed8;
+}
+
+body {
+  background-color: #f4f7fc !important;
+  background-image:
+    radial-gradient(circle at 8% 2%, rgba(37, 99, 235, 0.11), transparent 44%),
+    radial-gradient(circle at 92% 5%, rgba(14, 165, 233, 0.11), transparent 40%),
+    radial-gradient(rgba(37, 99, 235, 0.11) 1px, transparent 1.4px),
+    repeating-linear-gradient(0deg, rgba(37, 99, 235, 0.035) 0 1px, transparent 1px 24px);
+  background-size: auto, auto, 22px 22px, 100% 24px;
+  background-attachment: fixed, fixed, scroll, scroll;
+}
+
+#root .min-h-screen {
+  background: linear-gradient(180deg, rgba(238, 244, 255, 0.82), rgba(255, 255, 255, 0.2) 55%, rgba(236, 248, 255, 0.4)) !important;
+}
+
+/* ---------- 标题 ---------- */
+#root h1 {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+  color: var(--xag-ink) !important;
+}
+#root h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin: 12px 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #38bdf8, #2563eb 55%, #6366f1);
+}
+#root h1 + p {
+  font-size: 14px !important;
+  color: #4a5875 !important;
+}
+
+/* ---------- 工具标签 ---------- */
+#root nav.flex.flex-wrap a {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+}
+#root nav.flex.flex-wrap a::after {
+  content: attr(data-no);
+  margin-left: 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9.5px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+#root nav.flex.flex-wrap a[aria-current="true"] {
+  box-shadow: 0 8px 18px -14px rgba(37, 99, 235, 0.9);
+}
+
+/* ---------- 工具标题 ---------- */
+#root h2.xn-ag-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  color: var(--xag-ink) !important;
+}
+#root h3 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #1f2d45 !important;
+}
+
+/* ---------- 表单 ---------- */
+#root input.xn-ag-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root input[type="time"]:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]),
+#root textarea {
+  min-height: 48px !important;
+  font-size: 16px !important;
+  border-radius: 10px !important;
+  border-color: var(--xag-line) !important;
+  background: #fdfffe !important;
+  color: var(--xag-ink) !important;
+}
+#root textarea {
+  min-height: 120px !important;
+  line-height: 1.7 !important;
+  padding: 10px 12px !important;
+}
+#root input:focus,
+#root textarea:focus,
+#root select:focus {
+  outline: none !important;
+  border-color: var(--xag-blue) !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.13) !important;
+}
+#root label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #44526e !important;
+}
+
+/* ---------- 复制议程 ---------- */
+#root .xn-ag-copy {
+  min-height: 48px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+}
+
+/* ---------- 结果表 ---------- */
+#root table th {
+  font-size: 12.5px !important;
+  color: #64748b !important;
+}
+#root table td {
+  font-size: 14px !important;
+  padding: 8px 6px !important;
+  border-bottom: 1px solid #eef3fa !important;
+}
+#root table td:last-child {
+  font-weight: 700 !important;
+  font-size: 14.5px !important;
+  color: var(--xag-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 页脚 ---------- */
+#root footer {
+  border-top-color: var(--xag-line) !important;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 640px) {
+  #root h1 {
+    font-size: 26px !important;
+  }
+  #root h2.xn-ag-h2 {
+    font-size: 18.5px !important;
+  }
+}
