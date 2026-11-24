@@ -1,0 +1,167 @@
+/* 小凝工具站 · 周数与周计划合集皮肤 xn-week v1（纯 CSS，无图片）
+ * 主题：周历蓝 + 24px 方格；卡片左上角 01–06 编号。
+ * 注入：legacy/j2tnfgxyyi.html
+ */
+
+:root {
+  --wk: #2563eb;
+  --wk-deep: #1d4ed8;
+  --wk-ink: #0f172a;
+  --wk-line: #dbe5f6;
+}
+
+html { background: #eef3fb; }
+
+body {
+  background:
+    radial-gradient(1000px 560px at 10% -12%, rgba(37, 99, 235, .16), transparent 60%),
+    radial-gradient(880px 500px at 102% -6%, rgba(56, 189, 248, .12), transparent 56%),
+    linear-gradient(180deg, #f6f9ff 0%, #eef3fb 52%, #f8fbff 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 周历方格：24px 两向细线 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(37, 99, 235, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, .06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: .85;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 62%);
+  mask-image: linear-gradient(180deg, #000, transparent 62%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具卡 ---------- */
+#root a[href*="#/"] {
+  position: relative;
+  min-height: 56px !important;
+  border-radius: 11px !important;
+  border: 1px solid var(--wk-line) !important;
+  background: #fff !important;
+  transition: border-color .15s, box-shadow .15s, background .15s;
+}
+
+#root a[href*="#/"]:hover {
+  border-color: #a9c4f2 !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, .12);
+}
+
+#root a[href*="#/"]:focus-visible { outline: 2px solid var(--wk); outline-offset: 2px; }
+
+/* 当前工具 */
+#root a[href*="#/"][aria-current="true"] {
+  border-color: transparent !important;
+  background: linear-gradient(150deg, #2f6ff0, #1d4ed8) !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, .28);
+}
+
+#root a[href*="#/"][aria-current="true"] span { color: #fff !important; }
+#root a[href*="#/"][aria-current="true"] span:nth-child(2) { color: rgba(255, 255, 255, .78) !important; }
+
+/* 编号角标 */
+#root a[href*="#/"] .xn-wk-no {
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  font: 700 9.5px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .05em;
+  color: #9db3d6;
+}
+
+#root a[href*="#/"][aria-current="true"] .xn-wk-no { color: rgba(255, 255, 255, .72); }
+
+#root a[href*="#/"] span:first-of-type { font-size: 13px !important; font-weight: 700; }
+#root a[href*="#/"] span:nth-of-type(2) { font-size: 10.5px !important; }
+
+/* ---------- 区块标题 ---------- */
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--wk-ink) !important;
+}
+
+#root h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  margin-right: 9px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #60a5fa, #2563eb);
+  vertical-align: -2px;
+}
+
+/* ---------- 日期输入 ---------- */
+#root input.xn-wk-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]) {
+  height: 48px !important;
+  min-height: 48px !important;
+  font-size: 16px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--wk-line) !important;
+  border-radius: 11px !important;
+  background: #fff !important;
+}
+
+#root input.xn-wk-inp:not([type=file]):not([type=range]):not([type=number]):not([type=checkbox]):not([type=radio]):focus {
+  outline: none !important;
+  border-color: var(--wk) !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, .14) !important;
+}
+
+/* ---------- 复制按钮 ---------- */
+#root button.xn-wk-copy {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 13.5px !important;
+  font-weight: 700;
+  color: #fff !important;
+  background: linear-gradient(135deg, #2f6ff0, #1d4ed8) !important;
+  border: 0 !important;
+  border-radius: 11px !important;
+  box-shadow: 0 4px 13px rgba(37, 99, 235, .26);
+  transition: transform .12s, box-shadow .15s;
+}
+
+#root button.xn-wk-copy:hover { transform: translateY(-1px); box-shadow: 0 7px 18px rgba(37, 99, 235, .32); }
+#root button.xn-wk-copy:focus-visible { outline: 2px solid var(--wk-deep); outline-offset: 2px; }
+
+/* ---------- 结果数字 ---------- */
+#root .xn-wk-big {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  letter-spacing: .01em;
+  font-variant-numeric: tabular-nums;
+  color: var(--wk-deep) !important;
+}
+
+#root .xn-wk-range {
+  font-size: 15px !important;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #1e3a5f !important;
+}
+
+#root .xn-wk-info {
+  font-size: 13.5px !important;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; }
+  #root .xn-wk-big { font-size: 28px !important; }
+  #root a[href*="#/"] { min-height: 58px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root button.xn-wk-copy:hover { transform: none; }
+}
