@@ -16,6 +16,15 @@
     return (t || "").replace(/\s+/g, " ").trim();
   }
 
+  function cleanHeadings() {
+    Array.prototype.forEach.call(document.querySelectorAll("#root section h2"), function (h) {
+      if (h.children.length) return;
+      var t = (h.textContent || "").trim();
+      var c = t.replace(/^工具[A-Za-z]\s*/, "").replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, "");
+      if (c && c !== t) h.textContent = c;
+    });
+  }
+
   function markTabs() {
     var links = Array.prototype.filter.call(document.querySelectorAll("#root nav a"), vis);
     if (!links.length) return;
@@ -113,6 +122,7 @@
 
   function tick() {
     try {
+      cleanHeadings();
       markTabs();
       markInputs();
       markChips();
