@@ -1,0 +1,297 @@
+/* 小凝工具站 · 文本统计与阅读时长皮肤 xn-textstat v1（纯 CSS，无图片）
+ * 主题：暖纸墨绿 —— 米色纸感 + 横格线 + 橄榄绿/砖红强调。
+ * 注入：legacy/urjgjtdyk8.html
+ */
+
+:root {
+  --ts: #4d7c0f;
+  --ts-deep: #3f2d0a;
+  --ts-brick: #b45309;
+  --ts-ink: #2b2417;
+  --ts-line: #e7dcc2;
+  --ts-soft: #fbf7ea;
+}
+
+html { background: #f5efdf; }
+
+body {
+  background:
+    radial-gradient(940px 540px at 0% -12%, rgba(77, 124, 15, .16), transparent 62%),
+    radial-gradient(800px 470px at 104% -4%, rgba(180, 83, 9, .13), transparent 58%),
+    radial-gradient(700px 420px at 50% 108%, rgba(202, 138, 4, .10), transparent 60%),
+    linear-gradient(180deg, #fdfaf1 0%, #f3ecda 48%, #fdfaf3 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 稿纸横线 + 左侧装订边 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(180deg, rgba(120, 92, 30, .09) 0 1px, transparent 1px 30px),
+    linear-gradient(90deg, rgba(180, 83, 9, .10) 0 3px, transparent 3px),
+    linear-gradient(124deg, rgba(77, 124, 15, .13) 0 150px, transparent 150px),
+    linear-gradient(300deg, rgba(180, 83, 9, .09) 0 120px, transparent 120px);
+  background-size: 30px 30px, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 0 0, 26px 0, 0 0, 0 0;
+  opacity: .9;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .5) 48%, rgba(0, 0, 0, .14) 90%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .5) 48%, rgba(0, 0, 0, .14) 90%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签 ---------- */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  transition: background .15s, color .15s, box-shadow .15s, transform .12s;
+}
+#root a[href^="#/"]:hover { transform: translateY(-1px); }
+#root a[href^="#/"]:focus-visible { outline: 2px solid var(--ts); outline-offset: 2px; }
+#root a[href^="#/"][aria-current] {
+  background: linear-gradient(135deg, #4d7c0f, #2f4d08) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -14px rgba(47, 77, 8, .9);
+}
+@media (max-width: 640px) {
+  .xn-ts-tabbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin: 0 -6px;
+    padding: 8px 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: rgba(253, 250, 241, .95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--ts-line);
+  }
+  .xn-ts-tabbar::-webkit-scrollbar { display: none; }
+  .xn-ts-tabbar a[href^="#/"] { min-width: 108px; justify-content: center; }
+}
+
+/* ---------- 标题 ---------- */
+#root h1 { letter-spacing: -.02em; color: var(--ts-deep) !important; }
+#root h2 {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.01em;
+  color: var(--ts-ink) !important;
+}
+#root h3 {
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  color: #4a3a15 !important;
+  letter-spacing: .01em;
+}
+
+/* ---------- 卡片与输入 ---------- */
+#root .rounded-xl { border-color: var(--ts-line) !important; }
+#root textarea {
+  font-size: 15.5px !important;
+  line-height: 1.72 !important;
+  border-radius: 12px !important;
+  border-color: var(--ts-line) !important;
+  background: #fffdf7 !important;
+  min-height: 160px;
+}
+#root input[type="number"], #root input[type="text"], #root select {
+  border-radius: 11px !important;
+  border-color: var(--ts-line) !important;
+  min-height: 48px !important;
+  height: 48px !important;
+  font-size: 16px !important;
+  background: #fffdf7 !important;
+}
+#root input[type="number"] { font-size: 19px !important; font-weight: 700; font-variant-numeric: tabular-nums; }
+#root textarea:focus, #root input:focus, #root select:focus {
+  border-color: #a3b86a !important;
+  box-shadow: 0 0 0 3px rgba(77, 124, 15, .16) !important;
+  outline: none !important;
+}
+#root label {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #5a4a24 !important;
+}
+
+/* 开关（文字型「忽略大小写与首尾空格：开」）：视觉 36、热区 44 */
+#root button[role="switch"] {
+  min-height: 36px !important;
+  padding: 0 12px !important;
+  border-radius: 999px !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--ts-line) !important;
+  background: #fffdf7 !important;
+  color: #5a4a24 !important;
+  position: relative;
+}
+#root button[role="switch"]::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+}
+#root button[role="switch"][aria-checked="true"] {
+  background: #eef7dc !important;
+  border-color: #a8c46a !important;
+  color: #3f6212 !important;
+}
+#root button[role="switch"][aria-checked="false"] {
+  background: #f6f1e3 !important;
+  border-color: #ded2b6 !important;
+  color: #7a6740 !important;
+}
+#root button[role="switch"]:focus-visible { outline: 2px solid var(--ts); outline-offset: 3px; }
+
+/* ---------- 按钮 ---------- */
+#root button { border-radius: 10px !important; }
+#root button[aria-label^="复制"],
+#root button[aria-label^="清空"] {
+  min-height: 40px !important;
+  padding: 0 12px !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  background: #fffdf7 !important;
+  border: 1px solid var(--ts-line) !important;
+  color: #4d7c0f !important;
+  position: relative;
+}
+#root button[aria-label^="清空"] { color: #7a6740 !important; }
+#root button[aria-label^="复制"]::after,
+#root button[aria-label^="清空"]::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 10px;
+}
+#root button[aria-label^="复制"]:hover { background: #f6fbea !important; border-color: #b9d189 !important; }
+#root button:focus-visible { outline: 2px solid var(--ts); outline-offset: 2px; }
+
+/* ---------- 统计数字 ---------- */
+/* 通用：标签 + 数值行 */
+#root span.text-sm.text-gray-500 {
+  font-size: 13.5px !important;
+  color: #6b5a34 !important;
+}
+#root span.text-base.font-semibold {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: #241c0e !important;
+  font-variant-numeric: tabular-nums;
+}
+#root span.text-lg.font-bold {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.01em;
+  font-variant-numeric: tabular-nums;
+}
+#root span.text-lg.font-bold.text-indigo-600 { color: #b45309 !important; }
+/* 行与段落：24→26 */
+#root span.text-xl.font-bold {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #241c0e !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 词频：排名 / 词 / 条形计数 */
+#root .w-5.shrink-0.text-right {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #8a7448 !important;
+}
+#root .w-20.shrink-0.truncate {
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  color: #241c0e !important;
+}
+#root div.flex.h-full.items-center.justify-end {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  min-height: 20px;
+  border-radius: 6px !important;
+}
+
+/* 阅读进度条 */
+#root .h-full.rounded-full.bg-indigo-500 { background: linear-gradient(90deg, #65a30d, #4d7c0f) !important; }
+#root .bg-indigo-500 { background-color: #4d7c0f !important; }
+
+/* 结果 pre */
+#root pre {
+  font-size: 13px !important;
+  line-height: 1.75 !important;
+  border-radius: 12px !important;
+  background: #fffdf7 !important;
+  border: 1px solid var(--ts-line) !important;
+  color: #2b2417 !important;
+  padding: 12px 14px !important;
+}
+#root pre code { color: #2b2417 !important; font-size: 13px !important; }
+
+/* 重复项徽标 */
+#root .bg-amber-100 { background: #fdf0d5 !important; color: #92400e !important; font-weight: 700; }
+
+/* 使用说明 / 页脚 */
+#root details {
+  border-color: var(--ts-line) !important;
+  border-radius: 16px !important;
+  background: #fffdf7 !important;
+  padding: 4px 16px !important;
+}
+#root details summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #4a3a15 !important;
+}
+#root details li, #root details p { font-size: 12.5px !important; line-height: 1.8 !important; color: #5c4d2c !important; }
+#root footer { border-color: var(--ts-line) !important; background: #fdf9ee !important; font-size: 12.5px !important; }
+
+/* 回到顶部 */
+.xn-ts-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--ts-line);
+  background: #fffdf7;
+  color: var(--ts-deep);
+  box-shadow: 0 10px 24px -14px rgba(63, 45, 10, .6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-ts-top.is-on { display: flex; }
+.xn-ts-top:focus-visible { outline: 2px solid var(--ts); outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  #root textarea { font-size: 15px !important; min-height: 144px; }
+  #root pre { font-size: 12.5px !important; }
+  #root span.text-lg.font-bold { font-size: 20px !important; }
+  #root span.text-xl.font-bold { font-size: 24px !important; }
+}
