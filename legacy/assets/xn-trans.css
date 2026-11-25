@@ -1,0 +1,202 @@
+/* 小凝工具站 · 转机时间与衔接皮肤 xn-trans v1（纯 CSS，无图片）
+ * 主题：机场跑道 —— 冷蓝白底 + 跑道虚线 + 天空蓝 + 银灰。
+ * 注入：legacy/tbn7hlmk3t.html
+ */
+
+:root {
+  --tr: #1d4ed8;
+  --tr-2: #0ea5e9;
+  --tr-ink: #10213f;
+  --tr-body: #4b5f7a;
+  --tr-line: #dbe4f0;
+  --tr-soft: #f7fafd;
+}
+
+html { background: #eff4fa; }
+
+body {
+  background:
+    radial-gradient(920px 520px at 2% -12%, rgba(29, 78, 216, .13), transparent 62%),
+    radial-gradient(740px 430px at 104% -6%, rgba(14, 165, 233, .12), transparent 58%),
+    linear-gradient(180deg, #fbfdff 0%, #eff4fa 52%, #fbfdff 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 跑道虚线 + 45° 斜纹 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(180deg, rgba(29, 78, 216, .07) 0 14px, transparent 14px 42px),
+    repeating-linear-gradient(45deg, rgba(14, 165, 233, .03) 0 2px, transparent 2px 24px);
+  background-size: 3px 100%, auto;
+  background-repeat: repeat-y, repeat;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .38) 56%, rgba(0, 0, 0, .06) 92%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .38) 56%, rgba(0, 0, 0, .06) 92%);
+}
+
+#root { position: relative; z-index: 1; }
+
+#root h1 { color: #10213f !important; letter-spacing: .3px; }
+#root header p, #root h1 + p { color: #56698a !important; font-size: 13.5px !important; }
+
+/* ---------- 工具标签 ---------- */
+#root nav a.xn-trans-tab {
+  min-height: 44px !important;
+  padding: 8px 12px !important;
+  border-radius: 999px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: #3f5678 !important;
+  text-decoration: none !important;
+  border: 1px solid var(--tr-line) !important;
+  background: #fff !important;
+  transition: background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+#root nav a.xn-trans-tab:hover { background: #eff6ff !important; color: var(--tr) !important; }
+#root nav a.xn-trans-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #1d4ed8, #0ea5e9) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -15px rgba(29, 78, 216, .95);
+}
+
+/* 隐藏「工具 1」徽标 */
+#root .xn-trans-badge { display: none !important; }
+
+/* ---------- 面板 ---------- */
+#root section, #root .rounded-2xl.border, #root .rounded-xl.border { border-radius: 16px !important; border-color: var(--tr-line) !important; }
+#root h2 { font-size: 20px !important; color: var(--tr-ink) !important; letter-spacing: .2px; }
+#root h2::before { background: linear-gradient(180deg, #1d4ed8, #0ea5e9) !important; }
+#root h3 { font-size: 15.5px !important; color: #1e40af !important; }
+
+/* ---------- 开关行 ---------- */
+#root .xn-trans-switch {
+  position: relative;
+  min-height: 44px !important;
+  min-width: 46px !important;
+}
+#root .xn-trans-switch::after { content: ""; position: absolute; inset: -10px -8px; }
+#root .xn-trans-row { min-height: 56px; }
+
+/* ---------- 输入 ---------- */
+#root input[type="number"] {
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--tr-line) !important;
+  background: #fff !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--tr-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+#root input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+
+#root input:not([type="file"]):not([type="range"]):not([type="number"]):not([type="checkbox"]):not([type="radio"]) {
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--tr-line) !important;
+  background: #fff !important;
+  font-size: 16.5px !important;
+  font-weight: 700 !important;
+  color: var(--tr-ink) !important;
+}
+
+#root select {
+  height: 48px !important;
+  min-height: 48px;
+  border-radius: 12px !important;
+  border: 1px solid var(--tr-line) !important;
+  font-size: 15px !important;
+  color: #10213f !important;
+  background-color: #fff !important;
+}
+#root input:focus, #root select:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, .13) !important;
+  outline: none !important;
+}
+#root label { font-size: 13.5px !important; font-weight: 700 !important; color: #4b5f7a !important; }
+#root label + p, #root input + p { font-size: 12.5px !important; color: #6b7f9c !important; }
+
+/* ---------- 常用值胶囊 ---------- */
+.xn-trans-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-trans-q {
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid #c7d7ee;
+  background: #fff;
+  color: #1d4ed8;
+  font-size: 12.5px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background .14s ease, border-color .14s ease;
+}
+.xn-trans-q:hover { background: #eff6ff; border-color: #38bdf8; }
+.xn-trans-q:active { background: #dbeafe; }
+.xn-trans-q:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
+
+/* ---------- 主操作 / 次要 ---------- */
+#root button.xn-trans-primary {
+  min-height: 46px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #1d4ed8, #0ea5e9) !important;
+  color: #fff !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 12px 24px -16px rgba(29, 78, 216, .95);
+}
+#root button.xn-trans-primary:hover { filter: brightness(1.05); }
+
+/* ---------- 结果 ---------- */
+#root .xn-trans-val {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #1e40af !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-trans-total {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: #1d4ed8 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .text-xs { font-size: 12.5px !important; }
+
+/* 使用说明 */
+#root details > summary { min-height: 44px; display: flex; align-items: center; font-size: 13.5px !important; font-weight: 700; color: #3f5678; }
+#root details ul, #root details li, #root details p { font-size: 13px !important; line-height: 1.8; color: #56698a; }
+
+#root footer { color: #6b7f9c !important; font-size: 12.5px !important; }
+
+/* 回到顶部 */
+.xn-trans-top {
+  position: fixed; right: 18px; bottom: 22px; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--tr-line); background: #fff; color: var(--tr);
+  box-shadow: 0 10px 24px -14px rgba(29, 78, 216, .8);
+  display: none; align-items: center; justify-content: center; font-size: 18px; line-height: 1;
+}
+.xn-trans-top.is-on { display: flex; }
+.xn-trans-top:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root nav { flex-wrap: wrap !important; }
+  #root nav a.xn-trans-tab { min-height: 44px !important; font-size: 13px !important; padding: 6px 10px !important; }
+  #root h2 { font-size: 19px !important; }
+  #root input[type="number"] { height: 54px !important; font-size: 21px !important; }
+  .xn-trans-q { min-height: 40px; font-size: 13px; }
+  #root button.xn-trans-primary { min-height: 50px !important; }
+  #root .xn-trans-total { font-size: 24px !important; }
+}
