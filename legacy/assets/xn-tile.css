@@ -51,7 +51,8 @@ body::before {
 /* ---------- 工具标签 ---------- */
 #root .xn-tile-navwrap { display: flex !important; flex-wrap: wrap !important; gap: 6px !important; }
 #root .xn-tile-navwrap > a { flex: 1 1 120px; justify-content: center; }
-  min-height: 46px !important;
+#root .xn-tile-navwrap a.xn-tile-tab {
+  min-height: 48px !important;
   padding: 9px 16px !important;
   border-radius: 12px !important;
   font-size: 14.5px !important;
@@ -247,7 +248,7 @@ body::before {
 @media (max-width: 420px) {
   #root h1 { font-size: 29px !important; }
   #root .xn-tile-navwrap { display: flex !important; flex-wrap: wrap !important; gap: 6px !important; }
-#root .xn-tile-navwrap > a { flex: 1 1 120px; justify-content: center; } min-height: 46px !important; padding: 9px 12px !important; font-size: 14px !important; }
+  #root .xn-tile-navwrap > a { flex: 1 1 120px; min-height: 46px !important; padding: 9px 12px !important; font-size: 14px !important; }
   #root input[type="number"] { height: 52px !important; min-height: 52px !important; font-size: 22px !important; }
   #root h2.xn-tile-h2 { font-size: 19px !important; }
   #root .xn-tile-key { font-size: 26px !important; }
