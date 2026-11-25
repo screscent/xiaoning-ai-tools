@@ -1,0 +1,259 @@
+/* 小凝工具站 · 呼吸放松与节奏皮肤 xn-breath v1（纯 CSS，无图片）
+ * 主题：呼吸云雾 —— 淡蓝紫雾面 + 同心圆涟漪 + 浮尘光点。
+ * 注入：legacy/ny8rttpkdd.html
+ */
+
+:root {
+  --br: #3b82f6;
+  --br-2: #6366f1;
+  --br-ink: #1e2a44;
+  --br-body: #566683;
+  --br-line: #dbe4f6;
+  --br-soft: #f5f8ff;
+}
+
+html { background: #eef3fb; }
+
+body {
+  background:
+    radial-gradient(880px 520px at 6% -12%, rgba(59, 130, 246, .14), transparent 62%),
+    radial-gradient(760px 460px at 102% -6%, rgba(99, 102, 241, .14), transparent 58%),
+    linear-gradient(180deg, #fbfdff 0%, #eef3fb 54%, #fbfdff 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 同心圆涟漪 + 浮尘 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-radial-gradient(circle at 50% 12%, rgba(59, 130, 246, .075) 0 1px, transparent 1px 88px),
+    radial-gradient(circle at 22% 34%, rgba(255, 255, 255, .9) 0 2px, transparent 2px),
+    radial-gradient(circle at 76% 22%, rgba(99, 102, 241, .18) 0 2.5px, transparent 2.5px);
+  background-size: auto, 150px 150px, 190px 190px;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .38) 58%, rgba(0, 0, 0, .05) 94%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .38) 58%, rgba(0, 0, 0, .05) 94%);
+}
+
+#root { position: relative; z-index: 1; }
+
+#root h1 { color: var(--br-ink) !important; letter-spacing: .3px; }
+#root h1 + p, #root h1 + p + p { color: var(--br-body) !important; font-size: 13px !important; }
+
+/* ---------- 工具标签 ---------- */
+#root nav button.xn-br-tab {
+  min-height: 44px !important;
+  padding: 8px 18px !important;
+  border-radius: 12px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--br-line) !important;
+  color: #4a5f80 !important;
+  background: #fff !important;
+  transition: background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+#root nav button.xn-br-tab:hover { background: #eff5ff !important; color: var(--br) !important; }
+#root nav button.xn-br-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #3b82f6, #6366f1) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -15px rgba(59, 130, 246, .95);
+}
+
+/* ---------- 标题 ---------- */
+#root h2 {
+  font-size: 20px !important;
+  color: var(--br-ink) !important;
+  letter-spacing: .2px;
+  padding-left: 10px;
+  border-left: 3px solid var(--br);
+  line-height: 1.35 !important;
+}
+#root h3 { font-size: 15px !important; color: #2c4370 !important; }
+
+/* ---------- 参数区 ---------- */
+#root .bg-white.rounded-2xl {
+  border-color: #e3ebf9 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 14px 30px -26px rgba(30, 64, 140, .55) !important;
+}
+#root label.block.text-xs { font-size: 13px !important; font-weight: 700 !important; color: #4b5f80 !important; }
+#root input[type="number"] {
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--br-line) !important;
+  background: #fff !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  color: var(--br-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+#root input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--br-line) !important;
+  font-size: 15.5px !important;
+  font-weight: 600 !important;
+  color: var(--br-ink) !important;
+  background-color: #fff !important;
+}
+#root input:focus, #root select:focus {
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, .16) !important;
+  outline: none !important;
+}
+
+/* 常用值胶囊 */
+.xn-br-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-br-q {
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid #c9dbf7;
+  background: #fff;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background .14s ease, border-color .14s ease;
+}
+.xn-br-q:hover { background: #eff5ff; border-color: #7da9ee; }
+.xn-br-q:active { background: #dbeafe; }
+.xn-br-q:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
+
+/* ---------- 开始 / 次按钮 ---------- */
+#root button.xn-br-go {
+  min-height: 52px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #3b82f6, #6366f1) !important;
+  color: #fff !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: .5px;
+  border: none !important;
+  box-shadow: 0 14px 26px -18px rgba(59, 130, 246, .95);
+}
+#root button.xn-br-go:hover { filter: brightness(1.05); }
+#root button.xn-br-stop {
+  min-height: 52px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: #fff !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: .5px;
+  border: none !important;
+  box-shadow: 0 14px 26px -18px rgba(220, 38, 38, .9);
+}
+#root button.xn-br-go:focus-visible { outline: 3px solid #a5c8fb; outline-offset: 2px; }
+
+#root button.xn-br-secondary {
+  min-height: 46px !important;
+  border-radius: 12px !important;
+  border-color: var(--br-line) !important;
+  background: #fff !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #3f5a85 !important;
+}
+#root button.xn-br-secondary:hover { background: #f2f7ff !important; }
+
+/* ---------- 呼吸圆 ---------- */
+#root .xn-br-circle {
+  width: 220px !important;
+  height: 220px !important;
+  border-color: rgba(59, 130, 246, .22) !important;
+}
+#root .xn-br-circle > div > div:first-child {
+  font-size: 34px !important;
+  letter-spacing: 1px;
+  color: #2563eb !important;
+}
+#root .xn-br-circle > div > div:last-child { font-size: 26px !important; color: #334f7c !important; }
+#root .xn-br-legend span { font-size: 13px !important; font-weight: 600 !important; }
+#root .xn-br-legend span.text-gray-300 { color: #6f84a2 !important; }
+#root .xn-br-legend > div > div { width: 12px !important; height: 12px !important; }
+#root .xn-br-status { font-size: 15px !important; font-weight: 600 !important; color: #4a5f80 !important; }
+
+/* 进度统计 */
+#root .xn-br-stat span:first-child { font-size: 14px !important; color: #6b7f9c !important; }
+#root .xn-br-stat span:last-child { font-size: 16px !important; font-weight: 800 !important; color: #1e3f73 !important; font-variant-numeric: tabular-nums; }
+#root .xn-br-bar { height: 12px !important; background: #e8eefb !important; }
+#root .xn-br-bar > div {
+  background: linear-gradient(90deg, #60a5fa, #6366f1) !important;
+  border-radius: 999px;
+  transition: width .3s ease;
+}
+#root .xn-br-barmeta span { font-size: 13px !important; color: #61799e !important; font-weight: 600 !important; }
+
+/* 免责提示 */
+#root .xn-br-note { font-size: 13px !important; line-height: 1.7 !important; }
+
+/* ---------- 节奏表 ---------- */
+#root .xn-br-table { border-color: #e0e9f8 !important; border-radius: 14px !important; }
+#root .xn-br-table th {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #4b5f80 !important;
+  background: #f4f8ff !important;
+}
+#root .xn-br-table td { font-size: 15px !important; color: #33455f !important; }
+#root .xn-br-table td.font-medium { font-weight: 700 !important; color: #1e3f73 !important; font-variant-numeric: tabular-nums; }
+#root .xn-br-table tr.bg-gray-50 td { background: #f4f8ff !important; font-weight: 800 !important; color: #1d4ed8 !important; }
+#root .xn-br-budget { background: #eff6ff !important; border-color: #d3e3fb !important; border-radius: 12px !important; }
+#root .xn-br-budget span:first-child { font-size: 13px !important; color: #5a7194 !important; font-weight: 600 !important; }
+#root .xn-br-budget span:last-child { font-size: 21px !important; font-weight: 800 !important; color: #1d4ed8 !important; font-variant-numeric: tabular-nums; }
+
+/* ---------- 逐步指引 ---------- */
+#root .xn-br-steps li { font-size: 14px !important; min-height: 30px; color: #3c506b !important; }
+#root .xn-br-steps li > span:first-child { font-size: 12.5px !important; font-weight: 700 !important; color: #8ba0bd !important; }
+#root .xn-br-steps li > span:nth-child(2) { font-size: 12px !important; color: #93a6c1 !important; }
+#root .xn-br-steps li > span:nth-child(3) { width: 10px !important; height: 10px !important; }
+#root .xn-br-steps li > span:nth-child(4) { font-size: 14.5px !important; font-weight: 700 !important; color: #22375a !important; }
+#root .xn-br-steps li > span:nth-child(5) { font-size: 13.5px !important; color: #5c7392 !important; font-variant-numeric: tabular-nums; }
+#root .xn-br-stephead span { font-size: 13px !important; font-weight: 600 !important; }
+
+/* ---------- 使用说明 / 页脚 ---------- */
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 700;
+  color: #3f5a85 !important;
+}
+#root details p, #root details li { font-size: 13.5px !important; line-height: 1.8; color: #5a7194 !important; }
+#root footer { color: #7288a8 !important; font-size: 12.5px !important; }
+#root a[href*="screscent"] { min-height: 44px; display: inline-flex; align-items: center; font-weight: 700 !important; }
+
+/* 回到顶部 */
+.xn-br-top {
+  position: fixed; right: 18px; bottom: 22px; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--br-line); background: #fff; color: var(--br);
+  box-shadow: 0 10px 24px -14px rgba(59, 130, 246, .8);
+  display: none; align-items: center; justify-content: center; font-size: 18px; line-height: 1;
+}
+.xn-br-top.is-on { display: flex; }
+.xn-br-top:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root nav button.xn-br-tab { min-height: 46px !important; font-size: 14.5px !important; padding: 8px 16px !important; }
+  #root h2 { font-size: 19px !important; }
+  #root input[type="number"] { height: 54px !important; font-size: 22px !important; }
+  #root select { height: 50px !important; font-size: 16px !important; }
+  #root button.xn-br-go { min-height: 54px !important; }
+  .xn-br-q { min-height: 40px; font-size: 13px; }
+  #root .xn-br-circle > div > div:first-child { font-size: 30px !important; }
+  #root .xn-br-table td { font-size: 15px !important; }
+}
