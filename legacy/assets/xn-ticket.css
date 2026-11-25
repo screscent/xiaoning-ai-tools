@@ -1,0 +1,226 @@
+/* 小凝工具站 · 门票与通行预算皮肤 xn-ticket v1（纯 CSS，无图片）
+ * 主题：票券纸 —— 米白票纸 + 打孔虚线横纹 + 砖红主色。
+ * 注入：legacy/npcteh2aq6.html
+ */
+
+:root {
+  --tk: #b91c1c;
+  --tk-2: #f59e0b;
+  --tk-ink: #2a211c;
+  --tk-body: #6b5d50;
+  --tk-line: #eadfce;
+  --tk-soft: #fffaf3;
+}
+
+html { background: #fdfaf4; }
+
+body {
+  background:
+    radial-gradient(900px 520px at 4% -12%, rgba(185, 28, 28, .07), transparent 62%),
+    radial-gradient(760px 460px at 100% -4%, rgba(29, 78, 216, .06), transparent 58%),
+    linear-gradient(180deg, #fffdf9 0%, #fdfaf4 56%, #fffdf9 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 票券打孔虚线 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(170, 130, 90, .10) 0 2px, transparent 2px 8px, transparent 8px 118px),
+    radial-gradient(900px 500px at 90% -10%, rgba(245, 158, 11, .10), transparent 62%);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .03) 90%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .03) 90%);
+}
+
+#root { position: relative; z-index: 1; }
+
+#root h1 {
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  color: var(--tk-ink) !important;
+  letter-spacing: .2px;
+}
+#root h1 + p, #root h1 + p + p { color: var(--tk-body) !important; font-size: 13.5px !important; }
+
+/* ---------- 工具标签 ---------- */
+#root nav.xn-ticket-nav { display: flex !important; flex-wrap: nowrap !important; gap: 6px !important; overflow-x: auto !important; padding-bottom: 2px; }
+#root nav.xn-ticket-nav::-webkit-scrollbar { height: 6px; }
+#root nav.xn-ticket-nav::-webkit-scrollbar-thumb { background: rgba(150, 110, 70, .25); border-radius: 999px; }
+#root nav a.xn-ticket-tab {
+  min-height: 46px !important;
+  padding: 9px 14px !important;
+  border-radius: 12px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: #6b5d50 !important;
+  background: #fff !important;
+  border: 1px solid var(--tk-line) !important;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  transition: background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+#root nav a.xn-ticket-tab:hover { background: #fff4ee !important; color: var(--tk) !important; }
+#root nav a.xn-ticket-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #ef4444, #b91c1c) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -14px rgba(185, 28, 28, .9);
+}
+
+/* ---------- 卡片 ---------- */
+#root .xn-ticket-card {
+  border-radius: 18px !important;
+  border: 1px solid var(--tk-line) !important;
+  box-shadow: 0 18px 38px -32px rgba(90, 60, 30, .5) !important;
+}
+#root h2.xn-ticket-h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: var(--tk-ink) !important;
+  letter-spacing: .2px;
+}
+#root .xn-ticket-desc { font-size: 13.5px !important; line-height: 1.7 !important; color: var(--tk-body) !important; }
+
+/* ---------- 表单 ---------- */
+#root label { font-size: 13.5px !important; font-weight: 700 !important; color: #4a3d30 !important; }
+#root input[type="number"] {
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--tk-line) !important;
+  background: #fff !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--tk-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+#root input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+#root select {
+  height: 50px !important;
+  min-height: 50px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--tk-line) !important;
+  font-size: 15.5px !important;
+  font-weight: 600 !important;
+  color: var(--tk-ink) !important;
+  background-color: #fff !important;
+}
+#root input:focus, #root select:focus {
+  border-color: #fca5a5 !important;
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, .12) !important;
+  outline: none !important;
+}
+
+/* 常用值胶囊 */
+.xn-ticket-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-ticket-q {
+  min-height: 38px;
+  padding: 0 13px;
+  border-radius: 999px;
+  border: 1px solid #f2d7c9;
+  background: #fff;
+  color: #a13a1a;
+  font-size: 13.5px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background .14s ease, border-color .14s ease;
+}
+.xn-ticket-q:hover { background: #fff3ee; border-color: #eeb59c; }
+.xn-ticket-q:active { background: #fde4d9; }
+.xn-ticket-q:focus-visible { outline: 2px solid #ef4444; outline-offset: 2px; }
+
+/* ---------- 次按钮 ---------- */
+#root button.xn-ticket-sec {
+  min-height: 46px !important;
+  height: 46px !important;
+  padding: 0 18px !important;
+  border-radius: 12px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+}
+#root button.xn-ticket-sec[aria-label="复制计算结果"], #root button.xn-ticket-sec[aria-label="复制计算结果（快捷）"] {
+  background: linear-gradient(135deg, #ef4444, #b91c1c) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+#root button.xn-ticket-sec[aria-label="清空全部输入"] {
+  background: #fff !important;
+  color: #7a4a2a !important;
+  border: 1px solid var(--tk-line) !important;
+}
+#root button.xn-ticket-sec:focus-visible { outline: 2px solid #ef4444; outline-offset: 2px; }
+
+/* ---------- 结果卡 ---------- */
+#root .xn-ticket-result {
+  border-radius: 16px !important;
+  border: 1px solid #f0e2cc !important;
+  background: linear-gradient(180deg, #fffdf8, #fff7ea) !important;
+}
+#root .xn-ticket-result > p:first-child {
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  color: #8a6a3a !important;
+  letter-spacing: .5px;
+}
+#root .xn-ticket-result .xn-ticket-row { min-height: 34px; }
+#root .xn-ticket-result .xn-ticket-row > span:first-child { font-size: 14px !important; color: #6b5d50 !important; }
+#root .xn-ticket-result .xn-ticket-row > span:last-child { font-size: 16px !important; font-weight: 700 !important; color: var(--tk-ink) !important; font-variant-numeric: tabular-nums; }
+#root .xn-ticket-result .xn-ticket-row > span.xn-ticket-total {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: var(--tk) !important;
+  line-height: 1.1 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-ticket-result .xn-ticket-row > span.xn-ticket-per {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--tk) !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 注释 / 页脚 */
+#root .xn-ticket-note { font-size: 13.5px !important; line-height: 1.7 !important; color: #7a6a58 !important; }
+#root .xn-ticket-foot, #root .xn-ticket-foot * { font-size: 12.5px !important; line-height: 1.7 !important; color: #8a7d6b !important; }
+
+/* 回到顶部 */
+.xn-ticket-top {
+  position: fixed;
+  right: 20px;
+  bottom: 26px;
+  z-index: 60;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid var(--tk-line);
+  background: #fff;
+  color: #a13a1a;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(90, 60, 30, .7);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-ticket-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-ticket-top:hover { background: #fff4ee; }
+.xn-ticket-top:focus-visible { outline: 2px solid #ef4444; outline-offset: 2px; }
+
+@media (max-width: 420px) {
+  #root h1 { font-size: 29px !important; }
+  #root nav a.xn-ticket-tab { min-height: 46px !important; padding: 9px 12px !important; font-size: 13px !important; }
+  #root input[type="number"] { height: 50px !important; min-height: 50px !important; font-size: 21px !important; }
+  #root h2.xn-ticket-h2 { font-size: 18px !important; }
+  #root .xn-ticket-result .xn-ticket-row > span.xn-ticket-total { font-size: 26px !important; }
+  .xn-ticket-top { right: 14px; bottom: 18px; }
+}
