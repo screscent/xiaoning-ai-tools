@@ -1,0 +1,98 @@
+/* 小凝工具站 · 卫浴五金与浴室用品皮肤 xn-water v1（纯 CSS，无图片）
+ * 主题：水波蓝 —— 浅水底 + 同心水波环 + 天蓝主色。
+ * 注入：legacy/mkgezyrxwr.html
+ */
+:root {
+  --wt: #0284c7;
+  --wt-2: #22d3ee;
+  --wt-ink: #0c2a3a;
+  --wt-body: #4f6b7a;
+  --wt-line: #d8eaf3;
+  --wt-soft: #f4fafd;
+}
+html { background: #f4fafd; }
+body {
+  background:
+    radial-gradient(900px 520px at 4% -12%, rgba(2, 132, 199, .10), transparent 62%),
+    radial-gradient(760px 460px at 100% -4%, rgba(34, 211, 238, .12), transparent 58%),
+    linear-gradient(180deg, #fbfdff 0%, #f4fafd 56%, #fbfdff 100%) !important;
+  background-attachment: fixed !important;
+}
+body::before {
+  content: "";
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    repeating-radial-gradient(circle at 50% -30%, rgba(2, 132, 199, .06) 0 1px, transparent 1px 68px),
+    repeating-linear-gradient(90deg, rgba(2, 132, 199, .03) 0 1px, transparent 1px 36px);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0,0,0,.3) 50%, rgba(0,0,0,.03) 90%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0,0,0,.3) 50%, rgba(0,0,0,.03) 90%);
+}
+#root { position: relative; z-index: 1; }
+#root h1 { font-size: 36px !important; font-weight: 800 !important; color: var(--wt-ink) !important; }
+#root h1 + p, #root h1 + p + p { color: var(--wt-body) !important; font-size: 13.5px !important; }
+
+/* 标签 */
+#root nav.xn-water-nav, #root .xn-water-tabwrap { display: flex !important; flex-wrap: wrap !important; gap: 6px !important; }
+#root button.xn-water-tab {
+  min-height: 46px !important; padding: 9px 16px !important; border-radius: 999px !important;
+  font-size: 14px !important; font-weight: 700 !important;
+  border: 1px solid var(--wt-line) !important; background: #fff !important; color: #4f6b7a !important;
+}
+#root button.xn-water-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #38bdf8, #0284c7) !important; color: #fff !important;
+  border-color: transparent !important; box-shadow: 0 10px 22px -14px rgba(2, 132, 199, .9);
+}
+/* 卡片 */
+#root .xn-water-card { border-radius: 18px !important; border: 1px solid var(--wt-line) !important; box-shadow: 0 18px 38px -32px rgba(8, 60, 90, .45) !important; }
+#root h2.xn-water-h2 { font-size: 20px !important; font-weight: 800 !important; color: var(--wt-ink) !important; }
+#root .xn-water-desc { font-size: 13.5px !important; line-height: 1.7 !important; color: var(--wt-body) !important; }
+/* 表单 */
+#root label { font-size: 13.5px !important; font-weight: 700 !important; color: #40566c !important; }
+#root input[type="text"], #root input[type="number"], #root input:not([type]) {
+  height: 52px !important; min-height: 52px !important; border-radius: 12px !important;
+  border: 1px solid var(--wt-line) !important; background: #fff !important;
+  font-size: 22px !important; font-weight: 800 !important; color: var(--wt-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-outer-spin-button, #root input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+#root select {
+  height: 50px !important; min-height: 50px !important; border-radius: 12px !important;
+  border: 1px solid var(--wt-line) !important; font-size: 15.5px !important; font-weight: 600 !important;
+  color: var(--wt-ink) !important; background-color: #fff !important;
+}
+#root input:focus, #root select:focus { border-color: #7dd3fc !important; box-shadow: 0 0 0 3px rgba(2, 132, 199, .16) !important; outline: none !important; }
+/* 胶囊 */
+.xn-water-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-water-q { min-height: 38px; padding: 0 13px; border-radius: 999px; border: 1px solid #cfe8f6; background: #fff; color: #0369a1; font-size: 13.5px; font-weight: 700; cursor: pointer; }
+.xn-water-q:hover { background: #eef8ff; border-color: #93c5fd; }
+.xn-water-q:focus-visible { outline: 2px solid #0284c7; outline-offset: 2px; }
+/* 按钮 */
+#root button.xn-water-go {
+  min-height: 52px !important; height: 52px !important; border-radius: 12px !important;
+  font-size: 17px !important; font-weight: 800 !important;
+  background: linear-gradient(135deg, #38bdf8, #0284c7) !important; color: #fff !important;
+  box-shadow: 0 14px 26px -18px rgba(2, 132, 199, .95);
+}
+#root button.xn-water-go:focus-visible { outline: 2px solid #0369a1; outline-offset: 2px; }
+#root button.xn-water-copy { min-height: 46px !important; height: 46px !important; padding: 0 16px !important; border-radius: 12px !important; font-size: 14.5px !important; font-weight: 700 !important; }
+/* 结果 */
+#root .xn-water-result { border-radius: 16px !important; border: 1px solid #bae6fd !important; background: linear-gradient(180deg, #f7fcff, #eef8fe) !important; }
+#root .xn-water-metric { border-radius: 12px !important; border: 1px solid #e3f2fb !important; background: #fff !important; padding: 12px 14px !important; box-shadow: 0 6px 16px -14px rgba(8, 60, 90, .4); }
+#root .xn-water-metric dt { font-size: 13px !important; font-weight: 700 !important; color: #5b7f92 !important; }
+#root .xn-water-metric dd { font-size: 19px !important; font-weight: 800 !important; color: var(--wt-ink) !important; margin-top: 3px !important; }
+#root .xn-water-metric p { font-size: 13.5px !important; line-height: 1.75 !important; color: #5b7f92 !important; }
+/* 注释/页脚 */
+#root .xn-water-note { font-size: 13.5px !important; line-height: 1.7 !important; color: #6b8494 !important; }
+#root .xn-water-foot, #root .xn-water-foot * { font-size: 12.5px !important; line-height: 1.7 !important; color: #8a9aa6 !important; }
+/* 回到顶部 */
+.xn-water-top { position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px; border-radius: 14px; border: 1px solid var(--wt-line); background: #fff; color: #0369a1; font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer; box-shadow: 0 12px 26px -18px rgba(8,60,90,.6); opacity: 0; transform: translateY(8px); pointer-events: none; transition: opacity .2s ease, transform .2s ease; }
+.xn-water-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-water-top:hover { background: #eef8ff; }
+.xn-water-top:focus-visible { outline: 2px solid #0284c7; outline-offset: 2px; }
+@media (max-width: 420px) {
+  #root h1 { font-size: 29px !important; }
+  #root button.xn-water-tab { min-height: 46px !important; padding: 9px 13px !important; font-size: 13.5px !important; }
+  #root input[type="text"], #root input[type="number"], #root input:not([type]) { height: 50px !important; min-height: 50px !important; font-size: 21px !important; }
+  #root h2.xn-water-h2 { font-size: 18px !important; }
+  .xn-water-top { right: 14px; bottom: 18px; }
+}
