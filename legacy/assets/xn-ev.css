@@ -1,0 +1,287 @@
+/* 小凝工具站 · 新能源车续航与车险皮肤 xn-ev v1（纯 CSS，无图片）
+ * 主题：电光里程 —— 冷白电光底 + 电池格栅纹 + 电光蓝主色，补能提醒用琥珀。
+ * 注入：legacy/fr2qywgsra.html
+ */
+
+:root {
+  --ev: #2563eb;
+  --ev-2: #06b6d4;
+  --ev-ink: #0b2545;
+  --ev-body: #4b6178;
+  --ev-line: #dbe7f5;
+  --ev-soft: #f2f7fd;
+  --ev-amber: #d97706;
+}
+
+html { background: #eef5fc; }
+
+body {
+  background:
+    radial-gradient(900px 520px at 4% -12%, rgba(37, 99, 235, .11), transparent 62%),
+    radial-gradient(760px 460px at 100% -6%, rgba(6, 182, 212, .13), transparent 58%),
+    linear-gradient(180deg, #fbfdff 0%, #eef5fc 56%, #fbfdff 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 电池格栅 + 电流斜线 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(37, 99, 235, .06) 0 2px, transparent 2px 34px),
+    repeating-linear-gradient(135deg, rgba(6, 182, 212, .045) 0 1px, transparent 1px 22px);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .32) 50%, rgba(0, 0, 0, .03) 90%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .32) 50%, rgba(0, 0, 0, .03) 90%);
+}
+
+#root { position: relative; z-index: 1; }
+
+#root h1 {
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  color: var(--ev-ink) !important;
+  letter-spacing: .2px;
+}
+#root h1 + p, #root h1 + p + p { color: var(--ev-body) !important; font-size: 13px !important; }
+
+/* ---------- 工具标签 ---------- */
+#root button.xn-ev-tab {
+  min-height: 44px !important;
+  padding: 9px 18px !important;
+  border-radius: 12px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--ev-line) !important;
+  color: #4b6178 !important;
+  background: #fff !important;
+  transition: background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+#root button.xn-ev-tab:hover { background: #eef5ff !important; color: var(--ev) !important; }
+#root button.xn-ev-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -14px rgba(37, 99, 235, .9);
+}
+
+/* ---------- 卡片 ---------- */
+#root .xn-ev-card {
+  border-color: var(--ev-line) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 16px 34px -30px rgba(11, 37, 69, .5) !important;
+}
+#root .xn-ev-card > h2 {
+  font-size: 19px !important;
+  color: var(--ev-ink) !important;
+  padding-left: 10px;
+  border-left: 4px solid var(--ev-2);
+  line-height: 1.35 !important;
+}
+#root .xn-ev-card h3 {
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  color: var(--ev-ink) !important;
+  gap: 8px !important;
+}
+#root .xn-ev-no {
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 7px !important;
+  background: linear-gradient(140deg, #dbeafe, #bfdbfe) !important;
+  color: #1d4ed8 !important;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  flex-shrink: 0;
+}
+
+/* ---------- 表单 ---------- */
+#root label.text-xs { font-size: 13px !important; font-weight: 700 !important; color: #40566c !important; }
+#root input[type="number"] {
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--ev-line) !important;
+  background: #fff !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--ev-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+#root input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--ev-line) !important;
+  font-size: 15.5px !important;
+  font-weight: 600 !important;
+  color: var(--ev-ink) !important;
+  background-color: #fff !important;
+}
+#root input:focus, #root select:focus {
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .16) !important;
+  outline: none !important;
+}
+
+/* 常用值胶囊 */
+.xn-ev-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-ev-q {
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid #cfe0f7;
+  background: #fff;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background .14s ease, border-color .14s ease;
+}
+.xn-ev-q:hover { background: #eef5ff; border-color: #93c5fd; }
+.xn-ev-q:active { background: #dbeafe; }
+.xn-ev-q:focus-visible { outline: 2px solid #60a5fa; outline-offset: 2px; }
+
+/* ---------- 分段开关（开/关、是/否） ---------- */
+#root .xn-ev-seg { border-radius: 12px !important; border-color: var(--ev-line) !important; }
+#root .xn-ev-seg > button {
+  min-height: 44px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+}
+#root .xn-ev-seg > button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  color: #fff !important;
+}
+#root .xn-ev-seg > button[aria-pressed="false"] {
+  background: #fff !important;
+  color: #6b7f95 !important;
+}
+#root .xn-ev-seg > button:focus-visible { outline: 2px solid #60a5fa; outline-offset: -2px; }
+
+/* ---------- 主 / 次按钮 ---------- */
+#root button.xn-ev-go {
+  min-height: 52px !important;
+  height: 52px !important;
+  border-radius: 12px !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: .3px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  color: #fff !important;
+  box-shadow: 0 14px 26px -18px rgba(37, 99, 235, .95);
+}
+#root button.xn-ev-go:hover { filter: brightness(1.04); }
+#root button.xn-ev-go:active { transform: translateY(1px); }
+
+#root button.xn-ev-sec {
+  min-height: 46px !important;
+  height: 46px !important;
+  border-radius: 12px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+#root button.xn-ev-sec.xn-ev-sec-ghost {
+  background: #fff !important;
+  color: #33506e !important;
+  border: 1px solid var(--ev-line) !important;
+}
+#root button.xn-ev-sec:focus-visible { outline: 2px solid #60a5fa; outline-offset: 2px; }
+
+/* ---------- 结果 ---------- */
+#root .xn-ev-big { font-size: 38px !important; font-weight: 800 !important; color: var(--ev-ink) !important; line-height: 1 !important; font-variant-numeric: tabular-nums; letter-spacing: -.5px; }
+#root .xn-ev-price { font-size: 22px !important; font-weight: 800 !important; color: var(--ev-ink) !important; line-height: 1.1 !important; }
+#root .xn-ev-row { min-height: 32px; }
+#root .xn-ev-row > span:first-child { font-size: 13px !important; color: #5d7288 !important; }
+#root .xn-ev-row > span:last-child { font-size: 15px !important; font-weight: 700 !important; color: var(--ev-ink) !important; }
+#root .xn-ev-row > span:last-child span { font-size: 12.5px !important; font-weight: 600 !important; color: #8aa0b6 !important; }
+#root .xn-ev-formula { font-size: 13px !important; color: #7b8fa5 !important; line-height: 1.7 !important; }
+#root .xn-ev-pricecard {
+  border-radius: 12px !important;
+  padding: 12px 8px !important;
+  border-color: #dbe7f5 !important;
+  background: #f8fbff !important;
+}
+#root .xn-ev-pricecard.is-on { border-color: #60a5fa !important; background: #eef5ff !important; box-shadow: 0 8px 18px -16px rgba(37, 99, 235, .8); }
+#root .xn-ev-pricecard > div:first-child { font-size: 13px !important; color: #6b8098 !important; }
+#root .xn-ev-pricecard > div:last-child { font-size: 12.5px !important; color: #7b8fa5 !important; }
+
+/* 结论徽标（够用/需要补能） */
+#root .xn-ev-chip {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+}
+#root .xn-ev-chip[data-tone="ok"] { color: #047857 !important; background: #d1fae5 !important; }
+#root .xn-ev-chip[data-tone="warn"] { color: #b45309 !important; background: #fef3c7 !important; }
+
+/* 补能提醒框 */
+#root .xn-ev-warn {
+  font-size: 13.5px !important;
+  line-height: 1.75 !important;
+  border-radius: 10px !important;
+  padding: 11px 13px !important;
+  background: #fffbeb !important;
+  border: 1px solid #fde68a !important;
+  color: #92400e !important;
+}
+#root .xn-ev-warn b, #root .xn-ev-warn strong { font-size: 15px !important; font-weight: 800 !important; color: #b45309 !important; }
+
+/* 总保费 */
+#root .xn-ev-total > span:first-child { font-size: 14px !important; font-weight: 700 !important; color: #33506e !important; }
+#root .xn-ev-total > span:last-child { font-size: 30px !important; font-weight: 800 !important; color: #b91c1c !important; }
+#root .xn-ev-total > span:last-child span { font-size: 14px !important; font-weight: 600 !important; color: #8aa0b6 !important; }
+
+/* 注释 / 使用说明 / 页脚 */
+#root .xn-ev-note { font-size: 13.5px !important; line-height: 1.7 !important; color: #73879c !important; }
+#root details.xn-ev-sum { border-color: var(--ev-line) !important; border-radius: 12px !important; background: #fff !important; }
+#root details.xn-ev-sum > summary {
+  min-height: 44px;
+  padding: 11px 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #40566c !important;
+}
+
+/* 回到顶部 */
+.xn-ev-top {
+  position: fixed;
+  right: 20px;
+  bottom: 26px;
+  z-index: 60;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid var(--ev-line);
+  background: #fff;
+  color: #1d4ed8;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(11, 37, 69, .8);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-ev-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-ev-top:hover { background: #eef5ff; }
+.xn-ev-top:focus-visible { outline: 2px solid #60a5fa; outline-offset: 2px; }
+
+@media (max-width: 420px) {
+  #root h1 { font-size: 29px !important; }
+  #root button.xn-ev-tab { min-height: 44px !important; padding: 9px 14px !important; font-size: 14px !important; }
+  #root input[type="number"] { height: 50px !important; min-height: 50px !important; font-size: 21px !important; }
+  #root button.xn-ev-go { height: 54px !important; }
+  #root .xn-ev-big { font-size: 32px !important; }
+  .xn-ev-top { right: 14px; bottom: 18px; }
+}
