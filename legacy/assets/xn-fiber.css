@@ -1,0 +1,257 @@
+/* 小凝工具站 · 膳食纤维与蔬果份量皮肤 xn-fiber v1（纯 CSS，无图片）
+ * 主题：田园菜畦 —— 淡绿草底 + 菜畦网格 + 叶片光点。
+ * 注入：legacy/pz7bebqyzx.html
+ */
+
+:root {
+  --fb: #15803d;
+  --fb-2: #4ade80;
+  --fb-ink: #15301f;
+  --fb-body: #52695a;
+  --fb-line: #d8ead9;
+  --fb-soft: #f4fbf4;
+}
+
+html { background: #eef8ee; }
+
+body {
+  background:
+    radial-gradient(880px 520px at 4% -12%, rgba(21, 128, 61, .12), transparent 62%),
+    radial-gradient(720px 440px at 102% -6%, rgba(74, 222, 128, .13), transparent 58%),
+    linear-gradient(180deg, #fbfefb 0%, #eef8ee 54%, #fbfefb 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 菜畦网格 + 叶片光点 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(21, 128, 61, .045) 0 1px, transparent 1px 26px),
+    repeating-linear-gradient(90deg, rgba(21, 128, 61, .035) 0 1px, transparent 1px 26px),
+    radial-gradient(circle at 26% 24%, rgba(74, 222, 128, .22) 0 3px, transparent 3px);
+  background-size: auto, auto, 160px 160px;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .38) 58%, rgba(0, 0, 0, .05) 94%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .38) 58%, rgba(0, 0, 0, .05) 94%);
+}
+
+#root { position: relative; z-index: 1; }
+
+#root h1 { color: var(--fb-ink) !important; letter-spacing: .3px; }
+#root h1 + p, #root h1 + p + p { color: var(--fb-body) !important; font-size: 13px !important; }
+
+/* ---------- 工具标签 ---------- */
+#root nav button.xn-fb-tab {
+  min-height: 44px !important;
+  padding: 8px 16px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--fb-line) !important;
+  color: #4c6554 !important;
+  background: #fff !important;
+  transition: background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+#root nav button.xn-fb-tab:hover { background: #f1faf2 !important; color: var(--fb) !important; }
+#root nav button.xn-fb-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #15803d, #4ade80) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -15px rgba(21, 128, 61, .95);
+}
+
+/* ---------- 卡片 / 标题 ---------- */
+#root .rounded-xl.border {
+  border-color: #e0efe1 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 14px 30px -28px rgba(20, 90, 50, .55) !important;
+}
+#root h2 {
+  font-size: 18px !important;
+  color: var(--fb-ink) !important;
+  letter-spacing: .2px;
+  padding-left: 10px;
+  border-left: 3px solid var(--fb);
+  line-height: 1.35 !important;
+}
+#root label.text-sm { font-size: 13.5px !important; font-weight: 700 !important; color: #40604b !important; }
+#root label.text-sm span { font-size: 12.5px !important; color: #6f8574 !important; }
+
+/* ---------- 输入 / 下拉 ---------- */
+#root input[type="number"] {
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--fb-line) !important;
+  background: #fff !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  color: var(--fb-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+#root input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--fb-line) !important;
+  font-size: 15.5px !important;
+  font-weight: 600 !important;
+  color: var(--fb-ink) !important;
+  background-color: #fff !important;
+}
+#root input:focus, #root select:focus {
+  border-color: #4ade80 !important;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, .18) !important;
+  outline: none !important;
+}
+
+/* 常用值胶囊 */
+.xn-fb-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-fb-q {
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid #c9e6cb;
+  background: #fff;
+  color: #166534;
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background .14s ease, border-color .14s ease;
+}
+.xn-fb-q:hover { background: #f1faf2; border-color: #86d995; }
+.xn-fb-q:active { background: #dcf5df; }
+.xn-fb-q:focus-visible { outline: 2px solid #22c55e; outline-offset: 2px; }
+
+/* ---------- 开关 ---------- */
+#root button.xn-fb-switch {
+  position: relative;
+  width: 52px !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  border-radius: 999px !important;
+  background: #d9e8db !important;
+  border: none !important;
+}
+#root button.xn-fb-switch::after { content: ""; position: absolute; inset: -9px -6px; }
+#root button.xn-fb-switch > span {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  translate: none !important;
+  transform: translateX(2px) !important;
+  box-shadow: 0 2px 5px rgba(20, 80, 45, .25) !important;
+  transition: transform .18s ease;
+}
+#root button.xn-fb-switch[aria-checked="true"] { background: linear-gradient(135deg, #15803d, #4ade80) !important; }
+#root button.xn-fb-switch[aria-checked="true"] > span { transform: translateX(26px) !important; }
+
+/* ---------- 主按钮 / 次按钮 ---------- */
+#root button.xn-fb-go {
+  min-height: 52px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #15803d, #22c55e) !important;
+  color: #fff !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: .5px;
+  border: none !important;
+  box-shadow: 0 14px 26px -18px rgba(21, 128, 61, .95);
+}
+#root button.xn-fb-go:hover { filter: brightness(1.05); }
+#root button.xn-fb-go:focus-visible { outline: 3px solid #86efac; outline-offset: 2px; }
+
+#root button.xn-fb-secondary {
+  min-height: 46px !important;
+  border-radius: 12px !important;
+  border: 1px solid #c9e6cb !important;
+  background: #fff !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #256b3c !important;
+}
+#root button.xn-fb-secondary:hover { background: #f1faf2 !important; }
+
+/* ---------- 结果 ---------- */
+#root .xn-fb-rows { font-size: 14.5px !important; }
+#root .xn-fb-rows > div > span:first-child { color: #5c7463 !important; }
+#root .xn-fb-rows > div > span:last-child { font-weight: 700 !important; color: #22392b !important; }
+#root .xn-fb-total.text-xl {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #15803d !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-fb-veg .text-lg.font-bold, #root .xn-fb-fruit .text-lg.font-bold {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-fb-veg, #root .xn-fb-fruit { border-radius: 12px !important; }
+#root .xn-fb-veg > div:last-child, #root .xn-fb-fruit > div:last-child { font-size: 13px !important; color: #5c7463 !important; }
+#root .xn-fb-veg .text-sm, #root .xn-fb-fruit .text-sm { font-size: 14px !important; font-weight: 700 !important; }
+#root .xn-fb-note { font-size: 13px !important; line-height: 1.7 !important; }
+#root .xn-fb-table th {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #456953 !important;
+  background: #f2faf3 !important;
+}
+#root .xn-fb-table td { font-size: 14px !important; color: #33503d !important; }
+#root .xn-fb-table td.text-xs { font-size: 12.5px !important; }
+#root .xn-fb-swap { border-radius: 12px !important; background: #f5fbf6 !important; }
+#root .xn-fb-swap .text-sm { font-size: 14.5px !important; font-weight: 700 !important; }
+#root .xn-fb-swap .text-xs { font-size: 13px !important; color: #5c7463 !important; }
+#root .xn-fb-swap .text-sm.font-bold { font-size: 15px !important; font-weight: 800 !important; }
+#root .xn-fb-cap { font-size: 13px !important; color: #5c7463 !important; }
+
+/* 蔬果计划页 */
+#root .xn-fb-plan-sum { font-size: 15px !important; color: #40604b !important; }
+#root .xn-fb-fiber { background: #eefaf0 !important; font-size: 15px !important; }
+#root .xn-fb-fiber .font-bold { font-size: 17px !important; font-weight: 800 !important; color: #15803d !important; }
+#root .xn-fb-fiber .text-xs { font-size: 12.5px !important; color: #5c7463 !important; }
+#root .xn-fb-tips { font-size: 13px !important; line-height: 1.75 !important; color: #5c7463 !important; }
+
+/* ---------- 使用说明 / 页脚 ---------- */
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 700;
+  color: #40604b !important;
+}
+#root details p, #root details li { font-size: 13.5px !important; line-height: 1.8; color: #5c7463 !important; }
+#root footer { color: #708675 !important; font-size: 12.5px !important; }
+#root a[href*="screscent"] { min-height: 44px; display: inline-flex; align-items: center; font-weight: 700 !important; }
+
+/* 回到顶部 */
+.xn-fb-top {
+  position: fixed; right: 18px; bottom: 22px; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--fb-line); background: #fff; color: var(--fb);
+  box-shadow: 0 10px 24px -14px rgba(21, 128, 61, .8);
+  display: none; align-items: center; justify-content: center; font-size: 18px; line-height: 1;
+}
+.xn-fb-top.is-on { display: flex; }
+.xn-fb-top:focus-visible { outline: 2px solid #22c55e; outline-offset: 2px; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root nav button.xn-fb-tab { min-height: 46px !important; font-size: 14.5px !important; }
+  #root h2 { font-size: 17.5px !important; }
+  #root input[type="number"] { height: 54px !important; font-size: 22px !important; }
+  #root select { height: 50px !important; font-size: 16px !important; }
+  #root button.xn-fb-go { min-height: 54px !important; }
+  .xn-fb-q { min-height: 40px; font-size: 13px; }
+  #root .xn-fb-total { font-size: 30px !important; }
+  #root .xn-fb-table td { font-size: 14px !important; }
+}
