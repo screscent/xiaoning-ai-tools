@@ -1,0 +1,213 @@
+/* 小凝工具站 · 咖啡因代谢与残留曲线皮肤 xn-cof v1（纯 CSS，无图片）
+ * 主题：奶咖焦糖 —— 奶白底 + 咖啡豆点阵 + 焦糖棕 + 深咖文字。
+ * 注入：legacy/vfmbddlsqf.html
+ */
+
+:root {
+  --cf: #92400e;
+  --cf-2: #d97706;
+  --cf-ink: #3b2a1a;
+  --cf-body: #6b5847;
+  --cf-line: #eadfd3;
+  --cf-soft: #fdfaf6;
+}
+
+html { background: #f7f2ec; }
+
+body {
+  background:
+    radial-gradient(920px 520px at 2% -12%, rgba(146, 64, 14, .13), transparent 62%),
+    radial-gradient(740px 430px at 104% -6%, rgba(217, 119, 6, .11), transparent 58%),
+    linear-gradient(180deg, #fdfaf6 0%, #f7f2ec 52%, #fdfaf6 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 咖啡豆点阵 + 45° 麻布纹 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(ellipse 2.2px 3.2px at 12px 14px, rgba(120, 72, 32, .16), transparent 3.2px),
+    repeating-linear-gradient(45deg, rgba(146, 64, 14, .035) 0 2px, transparent 2px 22px);
+  background-size: 46px 46px, auto;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .42) 56%, rgba(0, 0, 0, .07) 92%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .42) 56%, rgba(0, 0, 0, .07) 92%);
+}
+
+#root { position: relative; z-index: 1; }
+
+#root h1 { color: #3b2a1a !important; letter-spacing: .3px; }
+#root header p, #root h1 + p { color: #7a6552 !important; font-size: 13.5px !important; }
+
+/* ---------- 工具标签 ---------- */
+#root button.xn-cof-tab {
+  min-height: 44px !important;
+  border-radius: 12px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+}
+#root button.xn-cof-tab[aria-pressed="true"] {
+  background: linear-gradient(135deg, #92400e, #c2620f) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -16px rgba(146, 64, 14, .95);
+}
+#root button.xn-cof-tab[aria-pressed="false"] {
+  background: #fff !important;
+  color: #6b5847 !important;
+  border: 1px solid var(--cf-line) !important;
+}
+#root button.xn-cof-tab[aria-pressed="false"]:hover { background: #fdf3e7 !important; }
+
+/* ---------- 卡片 ---------- */
+#root .rounded-xl.border, #root .rounded-2xl.border { border-radius: 16px !important; border-color: var(--cf-line) !important; }
+#root h2 { font-size: 20px !important; color: var(--cf-ink) !important; }
+#root h2::before { background: linear-gradient(180deg, #92400e, #d97706) !important; }
+#root h3 { font-size: 15.5px !important; color: #7c3a0d !important; }
+
+/* ---------- 输入 ---------- */
+#root input[type="number"] {
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--cf-line) !important;
+  background: #fff !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--cf-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+#root input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+
+#root select {
+  height: 48px !important;
+  min-height: 48px;
+  border-radius: 12px !important;
+  border: 1px solid var(--cf-line) !important;
+  font-size: 15px !important;
+  color: #3b2a1a !important;
+  background-color: #fff !important;
+}
+#root input:focus, #root select:focus {
+  border-color: #d97706 !important;
+  box-shadow: 0 0 0 3px rgba(146, 64, 14, .13) !important;
+  outline: none !important;
+}
+#root label { font-size: 13.5px !important; font-weight: 700 !important; color: #6b5847 !important; }
+#root label + p, #root input + p { font-size: 12.5px !important; color: #8a7461 !important; }
+
+/* ---------- 杯数 +/- ---------- */
+#root button.xn-cof-step {
+  min-height: 44px !important;
+  min-width: 44px !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--cf-line) !important;
+  background: #fff !important;
+  color: var(--cf) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+#root button.xn-cof-step:hover { background: #fdf3e7 !important; }
+
+/* ---------- 常用值胶囊 ---------- */
+.xn-cof-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-cof-q {
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid #e3cfb8;
+  background: #fff;
+  color: #92400e;
+  font-size: 12.5px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background .14s ease, border-color .14s ease;
+}
+.xn-cof-q:hover { background: #fdf3e7; border-color: #d97706; }
+.xn-cof-q:active { background: #fae8d2; }
+.xn-cof-q:focus-visible { outline: 2px solid #d97706; outline-offset: 2px; }
+
+/* ---------- 主操作 / 次要 ---------- */
+#root button.xn-cof-primary {
+  min-height: 50px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #92400e, #b45309) !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 12px 24px -16px rgba(146, 64, 14, .95);
+}
+#root button.xn-cof-primary:hover { filter: brightness(1.05); }
+#root button.xn-cof-secondary {
+  min-height: 44px !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--cf-line) !important;
+  background: #fff !important;
+  color: #7c5a3a !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+}
+#root button.xn-cof-secondary:hover { background: #fdf3e7 !important; }
+
+/* ---------- 结果数字 ---------- */
+#root .xn-cof-hero {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  color: #92400e !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-cof-mid {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  color: #7c3a0d !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-cof-val {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #92400e !important;
+  font-variant-numeric: tabular-nums;
+}
+/* 小卡残留值（mg） */
+#root .rounded-lg.border.bg-white, #root .rounded-lg.border { border-color: var(--cf-line) !important; }
+#root .text-xs { font-size: 12.5px !important; }
+
+/* 建议就寝时间卡：浅杏底 */
+#root .xn-cof-sleep { background: linear-gradient(135deg, #fffbeb, #fef3c7) !important; border-color: #fcd34d !important; }
+#root .xn-cof-sleep * { color: #78350f !important; }
+
+/* 使用说明 */
+#root details > summary { min-height: 44px; display: flex; align-items: center; font-size: 13.5px !important; font-weight: 700; color: #6b5847; }
+#root details ul, #root details li, #root details p { font-size: 13px !important; line-height: 1.8; color: #7a6552; }
+
+#root footer { color: #8a7461 !important; font-size: 12.5px !important; }
+
+/* 回到顶部 */
+.xn-cof-top {
+  position: fixed; right: 18px; bottom: 22px; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--cf-line); background: #fff; color: var(--cf);
+  box-shadow: 0 10px 24px -14px rgba(146, 64, 14, .8);
+  display: none; align-items: center; justify-content: center; font-size: 18px; line-height: 1;
+}
+.xn-cof-top.is-on { display: flex; }
+.xn-cof-top:focus-visible { outline: 2px solid #d97706; outline-offset: 2px; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root button.xn-cof-tab { min-height: 46px !important; font-size: 13.5px !important; }
+  #root h2 { font-size: 19px !important; }
+  #root input[type="number"] { height: 54px !important; font-size: 21px !important; }
+  .xn-cof-q { min-height: 40px; font-size: 13px; }
+  #root button.xn-cof-primary { min-height: 52px !important; }
+  #root .xn-cof-hero { font-size: 34px !important; }
+  #root .xn-cof-mid { font-size: 26px !important; }
+  #root .xn-cof-val { font-size: 21px !important; }
+}
