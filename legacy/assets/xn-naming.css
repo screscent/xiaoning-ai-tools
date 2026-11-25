@@ -1,0 +1,297 @@
+/* 小凝工具站 · 命名与大小写转换皮肤 xn-naming v1（纯 CSS，无图片）
+ * 主题：墨绿代码盘 —— 点阵底 + 墨绿主色 + 琥珀提示。
+ * 注入：legacy/uidvbyxjku.html
+ */
+
+:root {
+  --nm: #047857;
+  --nm-deep: #064e3b;
+  --nm-amber: #d97706;
+  --nm-ink: #132b24;
+  --nm-line: #d9e9e2;
+  --nm-soft: #f4fbf8;
+}
+
+html { background: #eaf4ef; }
+
+body {
+  background:
+    radial-gradient(940px 540px at 0% -12%, rgba(4, 120, 87, .20), transparent 62%),
+    radial-gradient(800px 470px at 104% -4%, rgba(217, 119, 6, .12), transparent 58%),
+    linear-gradient(180deg, #fbfefc 0%, #eaf4ef 48%, #fafefc 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 点阵 + 墨绿斜角 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(6, 78, 59, .16) 1px, transparent 1.4px),
+    linear-gradient(124deg, rgba(4, 120, 87, .15) 0 160px, transparent 160px),
+    linear-gradient(300deg, rgba(217, 119, 6, .09) 0 120px, transparent 120px);
+  background-size: 26px 26px, 100% 100%, 100% 100%;
+  opacity: .8;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .5) 48%, rgba(0, 0, 0, .14) 90%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .5) 48%, rgba(0, 0, 0, .14) 90%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签 ---------- */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  transition: background .15s, color .15s, box-shadow .15s, transform .12s;
+}
+#root a[href^="#/"]:hover { transform: translateY(-1px); }
+#root a[href^="#/"]:focus-visible { outline: 2px solid var(--nm); outline-offset: 2px; }
+#root a[href^="#/"][aria-current] {
+  background: linear-gradient(135deg, #047857, #064e3b) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -14px rgba(6, 78, 59, .9);
+}
+@media (max-width: 640px) {
+  .xn-nm-tabbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin: 0 -6px;
+    padding: 8px 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: rgba(251, 254, 252, .95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--nm-line);
+  }
+  .xn-nm-tabbar::-webkit-scrollbar { display: none; }
+  .xn-nm-tabbar a[href^="#/"] { min-width: 108px; justify-content: center; }
+}
+
+/* ---------- 标题 ---------- */
+#root h1 { letter-spacing: -.02em; color: var(--nm-deep) !important; }
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  color: var(--nm-ink) !important;
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(180deg, #34d399, var(--nm-amber)) 1;
+  padding-left: 10px !important;
+}
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; padding-left: 9px !important; }
+}
+
+/* ---------- 输入 ---------- */
+#root .rounded-xl { border-color: var(--nm-line) !important; }
+#root textarea {
+  font-size: 15.5px !important;
+  line-height: 1.7 !important;
+  border-radius: 12px !important;
+  border-color: var(--nm-line) !important;
+  background: #fcfefd !important;
+  min-height: 76px;
+}
+#root textarea:focus, #root select:focus, #root input:focus {
+  border-color: #6ecfae !important;
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, .15) !important;
+  outline: none !important;
+}
+#root label { color: #265047 !important; font-weight: 600; }
+#root select {
+  min-height: 48px !important;
+  border-radius: 11px !important;
+  border-color: var(--nm-line) !important;
+  font-size: 15px !important;
+  background: #fcfefd !important;
+}
+
+/* ---------- 按钮 ---------- */
+/* 清空：小字链接 → 36 视觉 / 44 热区 */
+#root button[aria-label^="清空"] {
+  min-height: 36px !important;
+  padding: 0 12px !important;
+  border-radius: 9px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  background: #fff !important;
+  border: 1px solid var(--nm-line) !important;
+  color: #557067 !important;
+  position: relative;
+}
+#root button[aria-label^="清空"]::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 9px;
+}
+#root button[aria-label^="清空"]:hover { background: #f2faf6 !important; color: #b91c1c !important; }
+/* 复制全部 */
+#root button[aria-label="复制全部结果"] {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #047857, #064e3b) !important;
+  border: 0 !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -16px rgba(6, 78, 59, .9);
+}
+#root button[aria-label="复制全部结果"]:hover { filter: brightness(1.08); }
+/* 行内图标复制 */
+#root button[title^="复制"] {
+  min-height: 36px !important;
+  min-width: 36px !important;
+  padding: 0 !important;
+  border-radius: 9px !important;
+  border: 1px solid var(--nm-line) !important;
+  background: #fff !important;
+  color: #4d6a60 !important;
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+#root button[title^="复制"]::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 9px;
+}
+#root button[title^="复制"]:hover { color: #047857 !important; border-color: #94d3ba !important; background: #f2faf6 !important; }
+/* 复制全部不受行内图标规则影响 */
+#root button[aria-label="复制全部结果"] {
+  min-height: 44px !important;
+  min-width: 0 !important;
+  padding: 0 18px !important;
+  background: linear-gradient(135deg, #047857, #064e3b) !important;
+  border: 0 !important;
+  color: #fff !important;
+}
+#root button:focus-visible { outline: 2px solid var(--nm); outline-offset: 2px; }
+
+/* ---------- 结果行 ---------- */
+#root .flex.items-center.gap-3 {
+  min-height: 44px;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+#root span.text-xs.text-gray-400.w-24 {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #557067 !important;
+  letter-spacing: 0 !important;
+  width: 116px !important;
+}
+#root span.text-sm.text-gray-800.break-all {
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  color: #0e2620 !important;
+  letter-spacing: .01em;
+  line-height: 1.55;
+}
+/* 词数 / 长度等附加数字行 */
+#root span.text-sm.text-gray-800.break-all:not(.font-mono) {
+  font-size: 15px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 目标场景胶囊 ---------- */
+#root .xn-nm-chip,
+#root .xn-nm-chip[aria-pressed] {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  border: 1px solid var(--nm-line) !important;
+  background: #fff !important;
+  color: #2f5a4d !important;
+}
+#root .xn-nm-chip::before { content: none !important; display: none !important; }
+#root .xn-nm-chip[aria-pressed="true"] {
+  background: linear-gradient(135deg, #047857, #064e3b) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 8px 16px -12px rgba(6, 78, 59, .9);
+}
+#root .xn-nm-chip:focus-visible { outline: 2px solid var(--nm); outline-offset: 2px; }
+
+/* ---------- 命名建议 ---------- */
+#root .xn-nm-tip {
+  font-size: 13px !important;
+  line-height: 1.9 !important;
+  color: #3d5a50 !important;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+}
+#root .xn-nm-tip .xn-nm-num {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--nm-amber);
+  padding: 0 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 使用说明 / 页脚 ---------- */
+#root details {
+  border-color: var(--nm-line) !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  padding: 4px 16px !important;
+}
+#root details summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #065f46 !important;
+}
+#root details li, #root details p { font-size: 12.5px !important; line-height: 1.8 !important; color: #3f5c52 !important; }
+#root footer { border-color: var(--nm-line) !important; background: #f6fcf9 !important; font-size: 12.5px !important; }
+
+/* 回到顶部 */
+.xn-nm-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--nm-line);
+  background: #fff;
+  color: var(--nm-deep);
+  box-shadow: 0 10px 24px -14px rgba(6, 78, 59, .6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-nm-top.is-on { display: flex; }
+.xn-nm-top:focus-visible { outline: 2px solid var(--nm); outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  #root textarea { font-size: 15px !important; }
+  #root span.text-sm.text-gray-800.break-all { font-size: 13.5px !important; }
+  #root span.text-xs.text-gray-400.w-24 { width: 96px !important; font-size: 12px !important; }
+}
