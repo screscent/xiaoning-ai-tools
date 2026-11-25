@@ -1,0 +1,234 @@
+/* 小凝工具站 · 车险与理赔自查皮肤 xn-claim v1（纯 CSS，无图片）
+ * 主题：沥青告警 —— 冷灰路面 + 车道虚线 + 警示橙主色 + 暖沙结果块。
+ * 注入：legacy/rdt8374t4r.html
+ */
+
+:root {
+  --cl: #c2410c;
+  --cl-2: #ea580c;
+  --cl-ink: #1f2937;
+  --cl-body: #4b5563;
+  --cl-line: #e2e8f0;
+  --cl-soft: #f8fafc;
+}
+
+html { background: #eef1f6; }
+
+body {
+  background:
+    radial-gradient(920px 540px at 0% -12%, rgba(194, 65, 12, .14), transparent 62%),
+    radial-gradient(800px 460px at 104% -6%, rgba(71, 85, 105, .12), transparent 58%),
+    linear-gradient(180deg, #fbfcfe 0%, #eef1f6 52%, #fbfcfe 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 车道虚线 + 斜纹警示 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(180deg, rgba(100, 116, 139, .13) 0 2px, transparent 2px 30px),
+    repeating-linear-gradient(135deg, rgba(194, 65, 12, .045) 0 2px, transparent 2px 26px),
+    linear-gradient(124deg, rgba(194, 65, 12, .10) 0 170px, transparent 170px);
+  background-size: auto, auto, 100% 100%;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .5) 52%, rgba(0, 0, 0, .10) 92%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .5) 52%, rgba(0, 0, 0, .10) 92%);
+}
+
+#root { position: relative; z-index: 1; }
+
+/* ---------- 标题 ---------- */
+#root h1 { color: #111827 !important; letter-spacing: .4px; }
+#root header p { color: #5b6478 !important; font-size: 13.5px; }
+
+/* ---------- 工具导航 ---------- */
+#root nav {
+  gap: 8px !important;
+  padding: 8px !important;
+  border-radius: 16px !important;
+  border-color: var(--cl-line) !important;
+  box-shadow: 0 10px 26px -22px rgba(15, 23, 42, .55);
+}
+#root .xn-cl-tab {
+  min-height: 46px !important;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #475569 !important;
+  text-decoration: none !important;
+  transition: background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+#root .xn-cl-tab:hover { background: #fff3ea !important; color: var(--cl) !important; }
+#root .xn-cl-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #c2410c, #ea580c) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -14px rgba(194, 65, 12, .9);
+}
+
+/* ---------- 通用卡片 ---------- */
+#root section {
+  border-radius: 18px !important;
+  border-color: var(--cl-line) !important;
+  box-shadow: 0 14px 36px -32px rgba(15, 23, 42, .6) !important;
+}
+#root section h2 {
+  font-size: 20px !important;
+  color: #1f2937 !important;
+  letter-spacing: .3px;
+}
+#root section > p,
+#root section .text-xs.text-slate-400 { font-size: 13.5px !important; line-height: 1.75 !important; color: #6b7280 !important; }
+
+/* 使用说明 */
+#root section ol { font-size: 13.5px !important; line-height: 1.9 !important; color: #5b6478 !important; }
+#root section ol li { font-size: 13.5px !important; line-height: 1.9 !important; }
+
+/* ---------- 表单 ---------- */
+#root label { font-size: 14px !important; font-weight: 600 !important; color: #374151 !important; }
+#root input[type="number"] {
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--cl-line) !important;
+  background: #fbfcfe !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: #111827 !important;
+  font-variant-numeric: tabular-nums;
+  padding: 0 14px !important;
+}
+#root input[type="number"] + span,
+#root input[type="number"] ~ span {
+  font-size: 13px !important;
+  color: #6b7280 !important;
+}
+#root input:focus,
+#root select:focus {
+  border-color: #fdba74 !important;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, .16) !important;
+  outline: none !important;
+}
+
+/* 选项胶囊 40 → 44 */
+#root .xn-cl-chip,
+#root .xn-cl-chip[aria-pressed] {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  border-radius: 11px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+}
+#root .xn-cl-chip[aria-pressed="true"] {
+  background: linear-gradient(135deg, rgba(194, 65, 12, .12), rgba(234, 88, 12, .10)) !important;
+  border-color: #c2410c !important;
+  color: #9a3412 !important;
+}
+
+/* 主按钮 */
+#root .xn-cl-primary {
+  min-height: 50px !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #c2410c, #ea580c) !important;
+  color: #fff !important;
+  border: 0 !important;
+  box-shadow: 0 14px 26px -18px rgba(194, 65, 12, .95);
+}
+#root .xn-cl-primary:hover { filter: brightness(1.06); }
+
+/* ---------- 结果 ---------- */
+#root section h3 { font-size: 17px !important; color: #1f2937 !important; }
+#root section h3 + * { margin-top: 6px; }
+/* 小节标题（■ 车辆与背景 等） */
+#root section .font-semibold.text-slate-800,
+#root section p.font-semibold,
+#root section div.font-semibold {
+  font-size: 15px !important;
+  color: #1f2937 !important;
+}
+#root section p { line-height: 1.85 !important; }
+#root section .text-sm.leading-relaxed.text-slate-600 {
+  font-size: 14.5px !important;
+  color: #374151 !important;
+}
+/* 强调数字块（≈ 860 元/年、3,260 – 4,000 元） */
+#root section p.bg-sky-50,
+#root section .bg-sky-50 {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #9a3412 !important;
+  background: linear-gradient(180deg, #fff7ed, #fef2e6) !important;
+  border: 1px solid #fed7aa !important;
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .2px;
+}
+/* 提示条保持暖色 */
+#root section .bg-amber-50,
+#root section .bg-orange-50 {
+  border-radius: 12px !important;
+  font-size: 13.5px !important;
+  line-height: 1.8 !important;
+}
+
+/* 复制结果 */
+#root .xn-cl-copy {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--cl-line) !important;
+  border-radius: 999px !important;
+  background: #fff !important;
+  color: var(--cl) !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+}
+#root .xn-cl-copy:hover { background: #fff5ee !important; border-color: #fdba74 !important; }
+
+#root footer { color: #7b8499 !important; font-size: 12.5px !important; }
+
+/* 回到顶部 */
+.xn-cl-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--cl-line);
+  background: #fff;
+  color: var(--cl);
+  box-shadow: 0 10px 24px -14px rgba(194, 65, 12, .8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-cl-top.is-on { display: flex; }
+.xn-cl-top:focus-visible { outline: 2px solid var(--cl-2); outline-offset: 2px; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root nav { gap: 6px !important; padding: 6px !important; }
+  #root .xn-cl-tab {
+    min-height: 48px !important;
+    height: 48px;
+    font-size: 13.5px !important;
+  }
+  /* 5 个标签两列时，最后一个占满整行 */
+  #root nav a:last-child:nth-child(odd) { grid-column: span 2; }
+  #root section { padding: 14px !important; }
+  #root section h2 { font-size: 19px !important; }
+  #root input[type="number"] { min-height: 54px !important; font-size: 22px !important; }
+  #root section .bg-sky-50 { font-size: 17px !important; }
+  #root section .text-sm.leading-relaxed.text-slate-600 { font-size: 14px !important; }
+  #root .xn-cl-primary { width: 100%; }
+}
