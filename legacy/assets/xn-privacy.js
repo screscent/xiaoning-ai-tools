@@ -1,164 +1,142 @@
-/* R1320 浏览器指纹与隐私评分合集 · xn-privacy.js
-   工具标题归一 / 标签语义 / 开关整行可点 / 数字与报告增强 */
+/* 小凝工具站 · 隐私设置自查增强 xn-privacy v1
+ * 能力：5 个工具卡片 72h/aria-label/选中靛蓝渐变；隐藏与卡片重复的胶囊导航；
+ *       清单行 64/68 + 勾选框 22 + 标题 15 + 说明 13.5；完成度 20px/800 + 进度条 10px；
+ *       全选/清空 44、复制整改清单 44 靛蓝；空态 13；回到顶部。
+ * 注入：legacy/ijankg8zig.html 的 xn-ux 脚本后追加 <script defer>。
+ */
 (function () {
+  "use strict";
   if (window.__XN_PRIVACY__) return;
   window.__XN_PRIVACY__ = true;
 
-  var CN = ["一", "二"];
-  var TOOLS = [
-    ["#/fingerprint", "浏览器指纹自查"],
-    ["#/privacyscore", "隐私暴露评分"]
-  ];
-
-  function visible(el) {
-    return !!el && el.getBoundingClientRect().height > 0;
+  function vis(el) {
+    return el && el.getBoundingClientRect().height > 0;
   }
 
-  /* ---- 标题归一：①浏览器指纹自查 → 工具一 · 浏览器指纹自查 ---- */
-  function normalizeHeadings() {
-    Array.prototype.forEach.call(document.querySelectorAll("#root h2"), function (h) {
-      var t = h.textContent.trim();
-      if (/^工具[一二]\s*·/.test(t)) {
-        h.classList.add("xn-pv-tool");
-        h.classList.remove("xn-pv-sec");
-        return;
-      }
-      var m = t.match(/^[①②]\s*(.+)$/);
-      if (m) {
-        var idx = t.charAt(0) === "①" ? 0 : 1;
-        var next = "工具" + CN[idx] + " · " + m[1].trim();
-        if (t !== next) h.textContent = next;
-        h.classList.add("xn-pv-tool");
-        h.classList.remove("xn-pv-sec");
-        return;
-      }
-      if (!h.classList.contains("xn-pv-sec")) h.classList.add("xn-pv-sec");
-    });
+  function clean(t) {
+    return (t || "").replace(/\s+/g, " ").trim();
   }
 
-  /* ---- 工具标签 ---- */
-  function enhanceTabs() {
-    var hash = location.hash || "";
-    Array.prototype.forEach.call(document.querySelectorAll("#root a"), function (a) {
-      var label = a.textContent.replace(/\s+/g, " ").trim();
-      if (!/^[①②]\s*(指纹自查|隐私评分)$/.test(label)) return;
-      var idx = label.charAt(0) === "①" ? 0 : 1;
-      a.classList.add("xn-pv-tab");
-      var active = String(a.className).indexOf("bg-slate-900") >= 0 || (hash && hash.indexOf(TOOLS[idx][0]) === 0);
-      a.classList.toggle("is-active", active);
-      if (active) a.setAttribute("aria-current", "page");
-      else a.removeAttribute("aria-current");
-      var al = "工具" + CN[idx] + "：" + TOOLS[idx][1] + (active ? "（当前）" : "");
-      if (a.getAttribute("aria-label") !== al) a.setAttribute("aria-label", al);
-      a.style.setProperty("min-height", "44px", "important");
-    });
-  }
-
-  /* ---- 开关：扩大热区 + 整行可点 ---- */
-  function enhanceSwitches() {
-    Array.prototype.forEach.call(document.querySelectorAll('#root button[role="switch"]'), function (b) {
-      b.classList.add("xn-pv-switch");
-      var row = b.parentElement;
-      if (row) {
-        row.classList.add("xn-pv-row");
-        Array.prototype.forEach.call(row.querySelectorAll("span"), function (sp) {
-          var c = String(sp.className);
-          if (/text-xs/.test(c) && /font-medium/.test(c) && !/rounded/.test(c)) sp.classList.add("xn-pv-swlabel");
-        });
-      }
-    });
-  }
-
-  /* ---- 关键数字 / 徽标 / 清单行 ---- */
-  function enhanceResults() {
-    Array.prototype.forEach.call(document.querySelectorAll("#root span"), function (sp) {
-      var cls = String(sp.className);
-      if (/text-2xl/.test(cls) && /font-bold/.test(cls)) sp.classList.add("xn-pv-ent");
-      if (/text-\[(10|11)px\]/.test(cls)) {
-        if (/font-mono/.test(cls)) sp.classList.add("xn-pv-mono");
-        else if (/rounded/.test(cls) && /(border|bg-)/.test(cls)) sp.classList.add("xn-pv-chip");
-        else sp.classList.add("xn-pv-note");
-      }
-      if (/text-xs/.test(cls) && /font-medium/.test(cls) && /sm:w-28/.test(cls)) sp.classList.add("xn-pv-item");
-    });
-    Array.prototype.forEach.call(document.querySelectorAll("#root p"), function (p) {
-      if (/text-3xl/.test(String(p.className))) p.classList.add("xn-pv-score");
-    });
-    Array.prototype.forEach.call(document.querySelectorAll("#root pre"), function (pre) {
-      pre.classList.add("xn-pv-pre");
-    });
-  }
-
-  /* ---- 按钮 ---- */
-  function enhanceButtons() {
-    var map = {
-      "开始自查": ["xn-pv-primary", "开始浏览器指纹自查"],
-      "复制报告": ["xn-pv-action", "复制脱敏自查报告"],
-      "复制评分报告": ["xn-pv-action", "复制隐私评分报告"],
-      "清空": ["xn-pv-action", "清空当前结果"]
-    };
+  function markCards() {
     Array.prototype.forEach.call(document.querySelectorAll("#root button"), function (b) {
-      var t = b.textContent.replace(/\s+/g, " ").trim();
-      if (!map[t]) return;
-      b.classList.add(map[t][0]);
-      if (b.getAttribute("aria-label") !== map[t][1]) b.setAttribute("aria-label", map[t][1]);
-      b.style.setProperty("min-height", t === "开始自查" ? "48px" : "44px", "important");
+      if (!vis(b)) return;
+      var text = clean(b.textContent);
+      var m = text.match(/^(.*?)已勾选\s*(\d+)\/(\d+)$/);
+      if (!m) return;
+      if (!b.classList.contains("xn-pv-card")) b.classList.add("xn-pv-card");
+      var name = m[1].trim();
+      if (!name) return;
+      var aria = name + "，已勾选 " + m[2] + " 项，共 " + m[3] + " 项";
+      if (b.getAttribute("aria-label") !== aria) b.setAttribute("aria-label", aria);
     });
   }
 
-  function run() {
+  function hideDuplicatePills() {
+    Array.prototype.forEach.call(document.querySelectorAll("#root div"), function (d) {
+      if (d.classList.contains("xn-pv-pills")) return;
+      var btns = Array.prototype.filter.call(d.querySelectorAll(":scope > button"), vis);
+      if (btns.length < 5) return;
+      var allPill = btns.every(function (b) { return /rounded-full/.test(b.className || ""); });
+      if (!allPill) return;
+      var names = btns.map(function (b) { return clean(b.textContent); });
+      var uniq = names.filter(function (n, i) { return names.indexOf(n) === i; });
+      if (uniq.length !== btns.length) return;
+      if (!/社交平台隐私/.test(names.join(""))) return;
+      d.classList.add("xn-pv-pills");
+    });
+  }
+
+  function markButtons() {
+    Array.prototype.forEach.call(document.querySelectorAll("#root main > section button"), function (b) {
+      if (!vis(b)) return;
+      if (/rounded-full/.test(b.className || "")) return;
+      var t = clean(b.textContent);
+      var aria = "";
+      if (t === "全选") aria = "全选当前清单";
+      else if (t === "清空") aria = "清空当前清单勾选";
+      else if (t === "一键复制整改清单") aria = "复制整改清单";
+      if (!aria) return;
+      if (b.getAttribute("aria-label") !== aria) b.setAttribute("aria-label", aria);
+      if (!b.title) b.title = aria;
+    });
+  }
+
+  function markProgress() {
+    Array.prototype.forEach.call(document.querySelectorAll("#root main > section div"), function (d) {
+      if (!vis(d) || d.classList.contains("xn-pv-progress")) return;
+      var txt = clean(d.textContent);
+      if (txt.indexOf("完成度") !== 0) return;
+      var pct = d.querySelector("span.font-semibold");
+      if (!pct || !/^\d+\/\d+ · \d+%$/.test(clean(pct.textContent))) return;
+      d.classList.add("xn-pv-progress");
+      pct.classList.add("xn-pv-pct");
+      if (pct.getAttribute("aria-live") !== "polite") pct.setAttribute("aria-live", "polite");
+    });
+  }
+
+  function fixNavHint() {
+    var box = document.querySelector("#root .border-dashed");
+    if (!box) return;
+    var ps = box.querySelectorAll("p");
+    for (var i = 0; i < ps.length; i++) {
+      var t = clean(ps[i].textContent);
+      if (t.indexOf("点击标签即可切换") < 0) continue;
+      ps[i].textContent = "下面有 5 个独立工具，点上方卡片即可切换；也可在地址后加 #social、#phone、#browser、#account、#mfa 直达对应清单。";
+      break;
+    }
+  }
+
+  var topBtn = null;
+  function ensureTop() {
+    if (topBtn && document.body.contains(topBtn)) return;
+    topBtn = document.createElement("button");
+    topBtn.type = "button";
+    topBtn.className = "xn-pv-top";
+    topBtn.setAttribute("aria-label", "回到顶部");
+    topBtn.title = "回到顶部";
+    topBtn.textContent = "↑";
+    topBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    document.body.appendChild(topBtn);
+  }
+
+  function tick() {
     try {
-      normalizeHeadings();
-      enhanceTabs();
-      enhanceSwitches();
-      enhanceResults();
-      enhanceButtons();
+      markCards();
+      hideDuplicatePills();
+      markButtons();
+      markProgress();
+      fixNavHint();
+      ensureTop();
     } catch (e) {}
   }
 
-  var timer = null;
-  function schedule() {
-    if (timer) return;
-    timer = window.setTimeout(function () {
-      timer = null;
-      run();
-    }, 90);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", tick, { once: true });
+  } else {
+    tick();
   }
+  window.setTimeout(tick, 900);
+  window.setTimeout(tick, 2200);
+  document.addEventListener("click", function () { window.setTimeout(tick, 160); }, true);
 
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", schedule);
-  else schedule();
+  var pending = false;
+  function schedule() {
+    if (pending) return;
+    pending = true;
+    window.setTimeout(function () {
+      pending = false;
+      tick();
+    }, 100);
+  }
+  var mo = new MutationObserver(schedule);
+  mo.observe(document.body, { childList: true, subtree: true, characterData: true });
+  window.setInterval(tick, 900);
 
-  /* 整行点击切换开关（点按钮本身不重复触发） */
-  document.addEventListener("click", function (e) {
-    var t = e.target;
-    if (!t || !t.closest) return;
-    var row = t.closest(".xn-pv-row");
-    if (row && !t.closest('button[role="switch"]')) {
-      var sw = row.querySelector('button[role="switch"]');
-      if (sw) {
-        sw.click();
-        return;
-      }
-    }
-    if (t.closest("a") || t.closest("button")) {
-      window.setTimeout(schedule, 120);
-      window.setTimeout(schedule, 460);
-    }
-  });
-  document.addEventListener("change", function (e) {
-    if (e.target && (e.target.tagName === "SELECT" || e.target.type === "checkbox")) {
-      window.setTimeout(schedule, 120);
-      window.setTimeout(schedule, 460);
-    }
-  });
-
-  var mo = new MutationObserver(function (muts) {
-    for (var i = 0; i < muts.length; i++) {
-      if (muts[i].type === "childList" && muts[i].addedNodes.length) { schedule(); return; }
-    }
-  });
-  try {
-    mo.observe(document.getElementById("root") || document.body, { childList: true, subtree: true });
-  } catch (e) {}
-  window.setInterval(run, 1200);
+  window.addEventListener("scroll", function () {
+    if (!topBtn) return;
+    if (window.scrollY > 620) topBtn.classList.add("is-on");
+    else topBtn.classList.remove("is-on");
+  }, { passive: true });
 })();
