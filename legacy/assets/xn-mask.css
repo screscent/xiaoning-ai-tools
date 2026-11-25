@@ -1,0 +1,252 @@
+/* 小凝工具站 · 敏感词检测与脱敏皮肤 xn-mask v1（纯 CSS，无图片）
+ * 主题：赤砂警示 —— 暖砂底 + 斜纹警戒带 + 赤红主色 + 青墨点缀。
+ * 注入：legacy/uisqu2xjku.html
+ */
+
+:root {
+  --mk: #b91c1c;
+  --mk-deep: #7f1d1d;
+  --mk-teal: #0f766e;
+  --mk-ink: #2a1412;
+  --mk-line: #f0d9d4;
+  --mk-soft: #fff8f5;
+}
+
+html { background: #fbeee9; }
+
+body {
+  background:
+    radial-gradient(940px 540px at 0% -12%, rgba(185, 28, 28, .16), transparent 62%),
+    radial-gradient(800px 470px at 104% -4%, rgba(15, 118, 110, .12), transparent 58%),
+    linear-gradient(180deg, #fffbf9 0%, #f9ece7 48%, #fffbfa 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 警戒斜纹 + 赤红斜角 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(185, 28, 28, .055) 0 2px, transparent 2px 18px),
+    linear-gradient(124deg, rgba(185, 28, 28, .14) 0 160px, transparent 160px),
+    linear-gradient(300deg, rgba(15, 118, 110, .09) 0 120px, transparent 120px);
+  background-size: auto, 100% 100%, 100% 100%;
+  opacity: .85;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .5) 48%, rgba(0, 0, 0, .14) 90%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .5) 48%, rgba(0, 0, 0, .14) 90%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签（按钮型） ---------- */
+#root .xn-mk-tab,
+#root .xn-mk-tab[aria-pressed] {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border: 1px solid var(--mk-line) !important;
+  background: #fff !important;
+  color: #6b3b33 !important;
+  transition: background .15s, color .15s, box-shadow .15s, transform .12s;
+}
+#root .xn-mk-tab::before { content: none !important; display: none !important; }
+#root .xn-mk-tab:hover { transform: translateY(-1px); }
+#root .xn-mk-tab[aria-pressed="true"] {
+  background: linear-gradient(135deg, #b91c1c, #7f1d1d) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -14px rgba(127, 29, 29, .9);
+}
+#root .xn-mk-tab:focus-visible { outline: 2px solid var(--mk); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .xn-mk-tabbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin: 0 -6px;
+    padding: 8px 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: rgba(255, 251, 250, .95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--mk-line);
+  }
+  .xn-mk-tabbar::-webkit-scrollbar { display: none; }
+  #root .xn-mk-tab { min-width: 118px; justify-content: center; }
+}
+
+/* ---------- 标题 ---------- */
+#root h1 { letter-spacing: -.02em; color: var(--mk-deep) !important; }
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  color: var(--mk-ink) !important;
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(180deg, #f87171, var(--mk-teal)) 1;
+  padding-left: 10px !important;
+}
+#root h3 {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #4a211c !important;
+}
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; padding-left: 9px !important; }
+}
+
+/* ---------- 输入 ---------- */
+#root .rounded-xl { border-color: var(--mk-line) !important; }
+#root textarea {
+  font-size: 15.5px !important;
+  line-height: 1.72 !important;
+  border-radius: 12px !important;
+  border-color: var(--mk-line) !important;
+  background: #fffdfc !important;
+  min-height: 140px;
+}
+#root textarea[readonly] {
+  background: #fffaf8 !important;
+  border-color: #efc9c2 !important;
+  color: #2a1412 !important;
+  font-size: 15px !important;
+}
+#root input[type="text"], #root select {
+  min-height: 48px !important;
+  height: 48px !important;
+  border-radius: 11px !important;
+  border-color: var(--mk-line) !important;
+  font-size: 15.5px !important;
+  background: #fffdfc !important;
+}
+#root textarea:focus, #root input:focus, #root select:focus {
+  border-color: #e28a7e !important;
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, .14) !important;
+  outline: none !important;
+}
+#root label { color: #6b3b33 !important; font-weight: 600; }
+
+/* 区分大小写开关：仅扩热区，不改视觉 */
+#root div[role="switch"] {
+  position: relative;
+  cursor: pointer;
+}
+#root div[role="switch"]::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 999px;
+}
+#root div[role="switch"]:focus-visible { outline: 2px solid var(--mk); outline-offset: 4px; }
+
+/* ---------- 按钮 ---------- */
+#root button { border-radius: 10px !important; }
+#root button[aria-label="开始检测敏感词"],
+#root button[aria-label="开始替换脱敏"] {
+  min-height: 50px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #b91c1c, #7f1d1d) !important;
+  border: 0 !important;
+  color: #fff !important;
+  box-shadow: 0 12px 22px -16px rgba(127, 29, 29, .95);
+}
+#root button[aria-label="开始检测敏感词"]:hover,
+#root button[aria-label="开始替换脱敏"]:hover { filter: brightness(1.08); }
+#root button[aria-label^="复制"] {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  background: #fff !important;
+  border: 1px solid var(--mk-line) !important;
+  color: #b91c1c !important;
+}
+#root button[aria-label^="复制"]:hover { background: #fff5f3 !important; }
+#root button[aria-label^="清空"] {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+#root button:focus-visible { outline: 2px solid var(--mk); outline-offset: 2px; }
+
+/* ---------- 命中词胶囊 ---------- */
+#root .hit-tag {
+  min-height: 36px;
+  padding: 6px 12px !important;
+  border-radius: 999px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+}
+#root .hit-tag > span:last-child {
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  min-width: 22px;
+  text-align: center;
+  padding: 1px 7px !important;
+}
+
+/* 内置词库说明 */
+#root .text-xs.text-gray-500 { font-size: 12.5px !important; line-height: 1.75 !important; color: #7a5a52 !important; }
+
+/* 风险提示 / 词库说明等蓝色块统一到暖砂色系 */
+#root .bg-blue-50 {
+  background: #fff7f0 !important;
+  border-color: #f2d7c9 !important;
+}
+#root .text-blue-700, #root .text-blue-600 { color: #9a3412 !important; }
+
+/* 使用说明 / 页脚 */
+#root details {
+  border-color: var(--mk-line) !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  padding: 4px 16px !important;
+}
+#root details summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #7f1d1d !important;
+}
+#root details li, #root details p { font-size: 12.5px !important; line-height: 1.8 !important; color: #6b4a43 !important; }
+#root footer { border-color: var(--mk-line) !important; background: #fffaf8 !important; font-size: 12.5px !important; }
+
+/* 回到顶部 */
+.xn-mk-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--mk-line);
+  background: #fff;
+  color: var(--mk-deep);
+  box-shadow: 0 10px 24px -14px rgba(127, 29, 29, .6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-mk-top.is-on { display: flex; }
+.xn-mk-top:focus-visible { outline: 2px solid var(--mk); outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  #root textarea { font-size: 15px !important; min-height: 132px; }
+  #root .hit-tag { font-size: 14px !important; }
+}
