@@ -1,0 +1,267 @@
+/* 小凝工具站 · 蛋白质摄入与食物换算皮肤 xn-protein v1（纯 CSS，无图片）
+ * 主题：营养绿意 —— 薄荷白底 + 28px 营养网格 + 嫩绿光点。
+ * 注入：legacy/ewz3cuixkx.html
+ */
+
+:root {
+  --pr: #059669;
+  --pr-2: #34d399;
+  --pr-ink: #12352b;
+  --pr-body: #4f6f63;
+  --pr-line: #d5ece1;
+  --pr-soft: #f3fbf7;
+}
+
+html { background: #eef8f2; }
+
+body {
+  background:
+    radial-gradient(880px 520px at 4% -12%, rgba(5, 150, 105, .12), transparent 62%),
+    radial-gradient(740px 440px at 102% -6%, rgba(52, 211, 153, .13), transparent 58%),
+    linear-gradient(180deg, #fbfefc 0%, #eef8f2 54%, #fbfefc 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 营养网格 + 光点 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(5, 150, 105, .05) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(5, 150, 105, .04) 0 1px, transparent 1px 28px),
+    radial-gradient(circle at 24% 22%, rgba(52, 211, 153, .22) 0 2.5px, transparent 2.5px);
+  background-size: auto, auto, 170px 170px;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .4) 58%, rgba(0, 0, 0, .06) 94%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .4) 58%, rgba(0, 0, 0, .06) 94%);
+}
+
+#root { position: relative; z-index: 1; }
+
+#root h1 { color: var(--pr-ink) !important; letter-spacing: .3px; }
+#root h1 + p, #root h1 + p + p { color: var(--pr-body) !important; font-size: 13px !important; }
+
+/* ---------- 工具标签 ---------- */
+#root nav button.xn-pro-tab {
+  min-height: 44px !important;
+  border-radius: 12px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--pr-line) !important;
+  color: #43685b !important;
+  background: #fff !important;
+  transition: background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+#root nav button.xn-pro-tab:hover { background: #f0fbf6 !important; color: var(--pr) !important; }
+#root nav button.xn-pro-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #059669, #34d399) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -15px rgba(5, 150, 105, .95);
+}
+
+/* ---------- 标题 / 卡片 ---------- */
+#root h2 {
+  font-size: 20px !important;
+  color: var(--pr-ink) !important;
+  letter-spacing: .2px;
+  padding-left: 10px;
+  border-left: 3px solid var(--pr);
+  line-height: 1.35 !important;
+}
+#root h3 { font-size: 15px !important; font-weight: 800 !important; color: #14624c !important; }
+#root .rounded-xl.border {
+  border-color: #e0efe7 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 14px 30px -28px rgba(6, 95, 70, .55) !important;
+}
+#root label.block.text-sm { font-size: 13.5px !important; font-weight: 700 !important; color: #3d5f53 !important; }
+#root label.text-sm.font-medium { font-size: 14px !important; font-weight: 700 !important; color: #3d5f53 !important; }
+
+/* ---------- 输入 / 下拉 ---------- */
+#root input[type="number"] {
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--pr-line) !important;
+  background: #fff !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  color: var(--pr-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+#root input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--pr-line) !important;
+  font-size: 15.5px !important;
+  font-weight: 600 !important;
+  color: var(--pr-ink) !important;
+  background-color: #fff !important;
+}
+#root input:focus, #root select:focus {
+  border-color: #34d399 !important;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, .18) !important;
+  outline: none !important;
+}
+
+/* 常用值胶囊 */
+.xn-pro-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-pro-q {
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid #bfe6d3;
+  background: #fff;
+  color: #047857;
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background .14s ease, border-color .14s ease;
+}
+.xn-pro-q:hover { background: #f0fbf6; border-color: #6ed3ab; }
+.xn-pro-q:active { background: #d8f5e7; }
+.xn-pro-q:focus-visible { outline: 2px solid #10b981; outline-offset: 2px; }
+
+/* ---------- 开关 ---------- */
+#root button.xn-pro-switch {
+  position: relative;
+  width: 50px !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  border-radius: 999px !important;
+  background: #d9e8e1 !important;
+  border: none !important;
+}
+#root button.xn-pro-switch::after { content: ""; position: absolute; inset: -9px -6px; }
+#root button.xn-pro-switch > span {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  translate: none !important;
+  transform: translateX(2px) !important;
+  box-shadow: 0 2px 5px rgba(6, 78, 59, .25) !important;
+  transition: transform .18s ease;
+}
+#root button.xn-pro-switch[aria-checked="true"] { background: linear-gradient(135deg, #059669, #34d399) !important; }
+#root button.xn-pro-switch[aria-checked="true"] > span { transform: translateX(24px) !important; }
+
+/* ---------- 主按钮 / 次按钮 ---------- */
+#root button.xn-pro-go {
+  min-height: 52px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #059669, #10b981) !important;
+  color: #fff !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: .5px;
+  border: none !important;
+  box-shadow: 0 14px 26px -18px rgba(5, 150, 105, .95);
+}
+#root button.xn-pro-go:hover { filter: brightness(1.05); }
+#root button.xn-pro-go:focus-visible { outline: 3px solid #86efac; outline-offset: 2px; }
+
+#root button.xn-pro-secondary {
+  min-height: 46px !important;
+  border-radius: 12px !important;
+  border-color: #bfe6d3 !important;
+  background: #fff !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #256b54 !important;
+}
+#root button.xn-pro-secondary:hover { background: #f0fbf6 !important; }
+
+/* ---------- 结果 ---------- */
+#root .xn-pro-big {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  color: #047857 !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .5px;
+}
+#root .xn-pro-formula {
+  font-size: 14.5px !important;
+  background: #f4fbf7 !important;
+  border-radius: 10px !important;
+  color: #3f6055 !important;
+}
+#root .xn-pro-formula .font-mono { font-size: 14.5px !important; font-weight: 700 !important; color: #14624c !important; }
+#root .xn-pro-chips span {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  background: #eaf8f0 !important;
+  color: #2f6b56 !important;
+  padding: 5px 10px !important;
+}
+#root .xn-pro-meal { background: #eefaf3 !important; border-radius: 10px !important; }
+#root .xn-pro-meal > div:first-child { font-size: 12.5px !important; color: #4f7a69 !important; font-weight: 600 !important; }
+#root .xn-pro-meal > div:last-child { font-size: 16px !important; font-weight: 800 !important; color: #047857 !important; font-variant-numeric: tabular-nums; }
+#root .xn-pro-result .text-sm.text-gray-400 { font-size: 14.5px !important; color: #4f7a69 !important; font-weight: 600 !important; }
+#root .xn-pro-table th {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #3d5f53 !important;
+  background: #f1faf5 !important;
+}
+#root .xn-pro-table td { font-size: 14.5px !important; color: #33544a !important; }
+#root .xn-pro-table td.font-medium, #root .xn-pro-table td:last-child {
+  font-weight: 700 !important;
+  color: #14624c !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-pro-table tr:hover td { background: #f6fdf9 !important; }
+#root .xn-pro-vegan .text-sm.text-gray-600 { font-size: 14px !important; }
+#root .xn-pro-vegan .text-xs { font-size: 13px !important; line-height: 1.7 !important; color: #4f6f63 !important; }
+#root .xn-pro-vegan p.font-medium { font-size: 15px !important; font-weight: 800 !important; }
+#root .xn-pro-note { font-size: 13px !important; color: #6b8578 !important; }
+
+/* 食物换算输出卡 */
+#root .xn-pro-out { border-color: #d5ece1 !important; }
+#root .xn-pro-out .text-xs.text-gray-500 { font-size: 13px !important; font-weight: 700 !important; color: #4f7a69 !important; }
+#root .xn-pro-out p.text-sm.text-gray-500 { font-size: 15px !important; font-weight: 600 !important; color: #3f6055 !important; }
+#root .xn-pro-out ul { font-size: 13px !important; line-height: 1.75 !important; color: #5a7669 !important; }
+
+/* ---------- 使用说明 / 页脚 ---------- */
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 700;
+  color: #3f6055 !important;
+}
+#root details p, #root details li { font-size: 13.5px !important; line-height: 1.8; color: #5a7669 !important; }
+#root footer { color: #6f8578 !important; font-size: 12.5px !important; }
+#root a[href*="screscent"] { min-height: 44px; display: inline-flex; align-items: center; font-weight: 700 !important; }
+
+/* 回到顶部 */
+.xn-pro-top {
+  position: fixed; right: 18px; bottom: 22px; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--pr-line); background: #fff; color: var(--pr);
+  box-shadow: 0 10px 24px -14px rgba(5, 150, 105, .8);
+  display: none; align-items: center; justify-content: center; font-size: 18px; line-height: 1;
+}
+.xn-pro-top.is-on { display: flex; }
+.xn-pro-top:focus-visible { outline: 2px solid #10b981; outline-offset: 2px; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root nav button.xn-pro-tab { min-height: 46px !important; font-size: 14.5px !important; }
+  #root h2 { font-size: 19px !important; }
+  #root input[type="number"] { height: 54px !important; font-size: 22px !important; }
+  #root select { height: 50px !important; font-size: 16px !important; }
+  #root button.xn-pro-go { min-height: 54px !important; }
+  .xn-pro-q { min-height: 40px; font-size: 13px; }
+  #root .xn-pro-big { font-size: 34px !important; }
+  #root .xn-pro-table th, #root .xn-pro-table td { font-size: 13.5px !important; }
+}
