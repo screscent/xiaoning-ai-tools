@@ -1,0 +1,331 @@
+/* 小凝工具站 · 家具尺寸与入户搬运皮肤 xn-move v1（纯 CSS，无图片）
+ * 主题：搬家纸箱与木作 —— 牛皮纸暖底 + 纸板网格 + 琥珀木色。
+ * 注入：legacy/qhp4pmstfq.html
+ */
+
+:root {
+  --mv: #b45309;
+  --mv-2: #d97706;
+  --mv-ink: #2f2415;
+  --mv-body: #6b5a44;
+  --mv-line: #e8dcc8;
+  --mv-soft: #fdf8f0;
+}
+
+html { background: #f6efe4; }
+
+body {
+  background:
+    radial-gradient(900px 520px at 4% -12%, rgba(180, 83, 9, .13), transparent 62%),
+    radial-gradient(760px 440px at 102% -4%, rgba(217, 119, 6, .12), transparent 58%),
+    linear-gradient(180deg, #fffdf8 0%, #f6efe4 54%, #fffdf8 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 纸板网格 + 封箱胶带斜纹 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(180, 83, 9, .055) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(90deg, rgba(180, 83, 9, .045) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(45deg, rgba(217, 119, 6, .035) 0 3px, transparent 3px 26px);
+  background-size: auto;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .42) 58%, rgba(0, 0, 0, .08) 94%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .42) 58%, rgba(0, 0, 0, .08) 94%);
+}
+
+#root { position: relative; z-index: 1; }
+
+#root h1 { color: var(--mv-ink) !important; letter-spacing: .3px; }
+#root header p, #root h1 + p { color: var(--mv-body) !important; font-size: 13.5px !important; }
+
+/* ---------- 工具标签（单行横滑） ---------- */
+#root nav > div {
+  display: flex !important;
+  gap: 6px !important;
+  overflow-x: auto !important;
+  padding: 6px !important;
+  background: #f3e9d9 !important;
+  border: 1px solid var(--mv-line) !important;
+  border-radius: 999px !important;
+  scrollbar-width: none;
+}
+#root nav > div::-webkit-scrollbar { display: none; }
+#root nav a.xn-mv-tab {
+  flex: 1 1 auto !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 12px !important;
+  border-radius: 999px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: #6b5a44 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  transition: background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+#root nav a.xn-mv-tab:hover { background: #fdf3e2 !important; color: var(--mv) !important; }
+#root nav a.xn-mv-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #b45309, #d97706) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 22px -15px rgba(180, 83, 9, .95);
+}
+
+/* ---------- 工具卡 ---------- */
+#root section {
+  border-radius: 18px !important;
+  border-color: var(--mv-line) !important;
+  background: #fffdf9 !important;
+  box-shadow: 0 14px 30px -26px rgba(120, 74, 20, .55);
+}
+#root .xn-mv-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 0 8px;
+  border-radius: 7px !important;
+  background: #fbeed8 !important;
+  color: #9a4a06 !important;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: .5px;
+  border: 1px solid #f0dbb9;
+}
+#root h2 { font-size: 20px !important; color: var(--mv-ink) !important; letter-spacing: .2px; }
+#root section > p { color: var(--mv-body) !important; font-size: 13.5px !important; }
+
+/* 分组小标题 */
+#root .xn-mv-group {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #7a6349 !important;
+  letter-spacing: .6px !important;
+}
+
+/* ---------- 输入 ---------- */
+#root label > span:first-child { font-size: 13.5px !important; font-weight: 700 !important; color: #55452f !important; }
+#root input[type="number"] {
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--mv-line) !important;
+  background: #fff !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--mv-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+#root input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+#root input:focus, #root select:focus {
+  border-color: #d97706 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, .16) !important;
+  outline: none !important;
+}
+
+/* ---------- 常用值胶囊 ---------- */
+.xn-mv-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-mv-q {
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid #e3cfae;
+  background: #fff;
+  color: #9a4a06;
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background .14s ease, border-color .14s ease;
+}
+.xn-mv-q:hover { background: #fdf3e2; border-color: #d9a35a; }
+.xn-mv-q:active { background: #fbe7c8; }
+.xn-mv-q:focus-visible { outline: 2px solid #d97706; outline-offset: 2px; }
+/* 三列布局里胶囊收窄，保证 3 个一组同行 */
+@media (min-width: 641px) {
+  #root .grid-cols-3 .xn-mv-qrow { gap: 5px; }
+  #root .grid-cols-3 .xn-mv-q { min-height: 34px; padding: 0 8px; font-size: 12.5px; }
+}
+
+/* ---------- 开关行（拆包装） ---------- */
+#root .xn-mv-switch {
+  min-height: 56px !important;
+  border-radius: 14px !important;
+  border-width: 1px !important;
+  border-color: var(--mv-line) !important;
+  background: #fffdf8 !important;
+}
+#root .xn-mv-switch > span:first-child {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 7px !important;
+  border-color: #d9c4a2 !important;
+}
+#root .xn-mv-switch[aria-checked="true"] {
+  border-color: #d9a35a !important;
+  background: #fdf5e8 !important;
+}
+#root .xn-mv-switch[aria-checked="true"] > span:first-child {
+  background: linear-gradient(135deg, #b45309, #d97706) !important;
+  border-color: transparent !important;
+}
+#root .xn-mv-switch > span:nth-child(2) > span:first-child { font-size: 14.5px !important; font-weight: 700 !important; color: var(--mv-ink) !important; }
+#root .xn-mv-switch > span:nth-child(2) > span:last-child { font-size: 12.5px !important; color: #7c6a52 !important; }
+
+/* ---------- 分段选项 ---------- */
+#root .xn-mv-seg {
+  background: #f4ecdf !important;
+  border-radius: 14px !important;
+  gap: 4px !important;
+  padding: 4px !important;
+}
+#root button.xn-mv-opt {
+  min-height: 44px !important;
+  padding: 6px 8px !important;
+  border-radius: 11px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #6b5a44 !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  line-height: 1.25 !important;
+}
+#root button.xn-mv-opt:hover { background: #fff8ec !important; }
+#root button.xn-mv-opt[aria-pressed="true"] {
+  background: linear-gradient(135deg, #b45309, #d97706) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 8px 18px -14px rgba(180, 83, 9, .9);
+}
+
+/* ---------- 计算按钮 ---------- */
+#root button.xn-mv-go {
+  min-height: 52px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #b45309, #d97706) !important;
+  color: #fff !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: .5px;
+  border: none !important;
+  box-shadow: 0 14px 26px -18px rgba(180, 83, 9, .95);
+}
+#root button.xn-mv-go:hover { filter: brightness(1.05); }
+#root button.xn-mv-go:focus-visible { outline: 3px solid #f1c37b; outline-offset: 2px; }
+
+/* ---------- 空状态 ---------- */
+#root .xn-mv-empty {
+  border: 2px dashed #e3cfae !important;
+  background: #fffaf2 !important;
+  color: #8a7357 !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+/* ---------- 结果卡 ---------- */
+#root .xn-mv-result {
+  border-color: #ecd9bd !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 32px -28px rgba(120, 74, 20, .6);
+}
+#root .xn-mv-rhead {
+  background: linear-gradient(135deg, #fdf3e2, #fffaf2) !important;
+  border-bottom-color: #f0e2ca !important;
+  min-height: 56px !important;
+}
+#root .xn-mv-rhead > span {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #7a4a12 !important;
+  letter-spacing: .3px;
+}
+#root button.xn-mv-copy {
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  border-radius: 11px !important;
+  border: 1px solid #e3cfae !important;
+  background: #fff !important;
+  color: #9a4a06 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+#root button.xn-mv-copy:hover { background: #fdf3e2 !important; }
+
+#root .xn-mv-banner {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.6 !important;
+  border-left: 4px solid #d97706 !important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+}
+#root .xn-mv-banner[class*="emerald"], #root .xn-mv-banner[class*="green"] { border-left-color: #059669 !important; }
+#root .xn-mv-banner[class*="red"], #root .xn-mv-banner[class*="rose"] { border-left-color: #dc2626 !important; }
+#root .xn-mv-result dl dt { font-size: 13.5px !important; color: #7c6a52 !important; }
+#root .xn-mv-result dl dd { font-size: 14.5px !important; font-weight: 700 !important; color: #3d3021 !important; }
+#root .xn-mv-result dl > div:first-child dt { font-size: 14px !important; color: #7a4a12 !important; font-weight: 700 !important; }
+#root .xn-mv-result dl > div:first-child dd {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: #b45309 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root .xn-mv-result ol, #root .xn-mv-result ul { font-size: 13.5px !important; line-height: 1.85 !important; color: #4a3c2b !important; }
+#root .xn-mv-result h3, #root .xn-mv-result h4 { font-size: 14.5px !important; font-weight: 800 !important; color: #7a4a12 !important; }
+#root .xn-mv-result .xn-mv-stepno {
+  font-weight: 800 !important;
+  color: #b45309 !important;
+}
+#root .xn-mv-result > div > div > div[class*="rounded"] { font-variant-numeric: tabular-nums; }
+
+/* ---------- 使用说明 / 页脚 / 返回 ---------- */
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 700;
+  color: #6b5334 !important;
+}
+#root details ul, #root details li, #root details p { font-size: 13.5px !important; line-height: 1.85; color: #6b5a44 !important; }
+#root footer { color: #8a7357 !important; font-size: 12.5px !important; }
+#root a[href*="sets/"] {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700 !important;
+  color: #9a4a06 !important;
+}
+
+/* 回到顶部 */
+.xn-mv-top {
+  position: fixed; right: 18px; bottom: 22px; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--mv-line); background: #fff; color: var(--mv);
+  box-shadow: 0 10px 24px -14px rgba(180, 83, 9, .8);
+  display: none; align-items: center; justify-content: center; font-size: 18px; line-height: 1;
+}
+.xn-mv-top.is-on { display: flex; }
+.xn-mv-top:focus-visible { outline: 2px solid #d97706; outline-offset: 2px; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root nav > div { padding: 5px !important; }
+  #root nav a.xn-mv-tab { flex: 0 0 auto !important; min-height: 44px !important; font-size: 13px !important; padding: 6px 12px !important; }
+  #root h2 { font-size: 19px !important; }
+  #root input[type="number"] { height: 54px !important; font-size: 21px !important; }
+  .xn-mv-q { min-height: 40px; font-size: 13px; }
+  #root button.xn-mv-opt { min-height: 46px !important; font-size: 13.5px !important; }
+  #root button.xn-mv-go { min-height: 54px !important; font-size: 17.5px !important; }
+  #root .xn-mv-result dl > div:first-child dd { font-size: 21px !important; }
+  #root .xn-mv-banner { font-size: 15px !important; }
+}
