@@ -1,0 +1,219 @@
+/* 小凝工具站 · 母婴护理与开销皮肤 xn-mom v1（纯 CSS，无图片）
+ * 主题：珊瑚奶杏 —— 暖白底 + 波点 + 45° 细斜纹 + 玫瑰红主色 + 奶橘辅色。
+ * 注入：legacy/qsnqwjnhme.html
+ */
+
+:root {
+  --mom: #e11d48;
+  --mom-2: #f97316;
+  --mom-ink: #3f1f26;
+  --mom-body: #6b5560;
+  --mom-line: #fde3e7;
+  --mom-soft: #fff8f6;
+}
+
+html { background: #fdf3f2; }
+
+body {
+  background:
+    radial-gradient(920px 520px at 2% -10%, rgba(225, 29, 72, .14), transparent 62%),
+    radial-gradient(760px 440px at 102% -4%, rgba(249, 115, 22, .12), transparent 58%),
+    linear-gradient(180deg, #fffaf8 0%, #fdf3f2 52%, #fffaf8 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 波点 + 45° 细斜纹 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(225, 29, 72, .10) 1.5px, transparent 1.6px),
+    repeating-linear-gradient(45deg, rgba(249, 115, 22, .05) 0 2px, transparent 2px 22px);
+  background-size: 22px 22px, auto;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .45) 55%, rgba(0, 0, 0, .08) 92%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .45) 55%, rgba(0, 0, 0, .08) 92%);
+}
+
+#root { position: relative; z-index: 1; }
+
+/* ---------- 标题 ---------- */
+#root h1 { color: #4a1d27 !important; letter-spacing: .3px; }
+#root header p { color: #7a5b64 !important; font-size: 13.5px !important; }
+
+/* haddock: 顶部合集说明卡 */
+#root section:has(h2) { border-radius: 18px !important; }
+
+/* ---------- 工具标签 ---------- */
+#root nav a.xn-mom-tab {
+  min-height: 44px !important;
+  padding: 8px 10px !important;
+  border-radius: 12px !important;
+  color: #7a4b55 !important;
+  text-decoration: none !important;
+  transition: background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+#root nav a.xn-mom-tab:hover { background: #fff1f2 !important; color: var(--mom) !important; }
+#root nav a.xn-mom-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #e11d48, #fb7185) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 22px -14px rgba(225, 29, 72, .95);
+}
+#root nav a.xn-mom-tab[aria-current="page"] * { color: #fff !important; }
+#root nav a.xn-mom-tab > span.truncate {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+/* ---------- 面板标题 ---------- */
+#root h2 {
+  font-size: 20px !important;
+  color: var(--mom-ink) !important;
+  letter-spacing: .2px;
+}
+#root h2::before { background: linear-gradient(180deg, #e11d48, #fb7185) !important; }
+#root h3 { font-size: 15.5px !important; color: #7a2b3a !important; }
+
+/* 使用说明：温和降级，不抢主视觉 */
+#root h2.xn-mom-guideh { font-size: 15px !important; color: #7a5b64 !important; }
+#root li, #root p { line-height: 1.8; }
+#root ul { font-size: 13.5px; color: #6b5560; }
+
+/* ---------- 输入 ---------- */
+#root input[type="date"],
+#root input[type="number"],
+#root input[type="text"] {
+  height: 52px !important;
+  min-height: 52px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--mom-line) !important;
+  background: #fff !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #3f1f26 !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="date"] { font-size: 16.5px !important; }
+/* 隐藏原生步进箭头，用常用值胶囊补位 */
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+#root input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+#root input:focus, #root select:focus {
+  border-color: #fb7185 !important;
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, .14) !important;
+  outline: none !important;
+}
+#root label { font-size: 13.5px !important; font-weight: 700 !important; color: #6b5560 !important; }
+#root label + p, #root input + p, #root p.text-xs { font-size: 12.5px !important; color: #8a6b73 !important; }
+
+/* ---------- 常用值胶囊 ---------- */
+.xn-mom-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-mom-q {
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid #fbcfd6;
+  background: #fff;
+  color: #a02a44;
+  font-size: 12.5px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background .14s ease, border-color .14s ease;
+}
+.xn-mom-q:hover { background: #fff1f2; border-color: #fb7185; }
+.xn-mom-q:active { background: #ffe4e6; }
+.xn-mom-q:focus-visible { outline: 2px solid #fb7185; outline-offset: 2px; }
+
+/* ---------- 模式胶囊（母乳 / 配方奶 / 混合） ---------- */
+#root button.xn-mom-mode {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+}
+#root button.xn-mom-mode[aria-pressed="true"] {
+  background: linear-gradient(135deg, #e11d48, #fb7185) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 8px 16px -12px rgba(225, 29, 72, .9);
+}
+
+/* ---------- 结果 ---------- */
+#root strong { font-size: 19px !important; font-weight: 800 !important; color: #be123c !important; font-variant-numeric: tabular-nums; }
+#root .tabular-nums { font-variant-numeric: tabular-nums; }
+#root .text-lg { font-size: 19px !important; }
+#root p.text-lg.font-bold, #root p.text-lg { font-weight: 800 !important; color: #be123c !important; }
+#root .text-xl { font-size: 20px !important; }
+
+/* 结果行：标签 / 值分级 + 分隔线 + 舒展行高 */
+#root .flex.items-center.justify-between { min-height: 46px; }
+#root .flex.items-start { min-height: 46px; }
+#root .divide-y > * + * { border-color: #fbe4e7 !important; }
+
+/* 结果卡内说明文字 */
+#root .text-xs { font-size: 12.5px !important; color: #8a6b73 !important; }
+
+/* ---------- 主按钮：一键复制结果 ---------- */
+#root button.xn-mom-primary {
+  min-height: 46px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #e11d48, #f43f5e) !important;
+  color: #fff !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 12px 24px -16px rgba(225, 29, 72, .95);
+}
+#root button.xn-mom-primary:hover { filter: brightness(1.04); }
+#root button:focus-visible, #root a:focus-visible {
+  outline: 2px solid #fb7185;
+  outline-offset: 2px;
+}
+
+#root footer { color: #8a6b73 !important; font-size: 12.5px !important; }
+
+/* 回到顶部 */
+.xn-mom-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--mom-line);
+  background: #fff;
+  color: var(--mom);
+  box-shadow: 0 10px 24px -14px rgba(225, 29, 72, .85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-mom-top.is-on { display: flex; }
+.xn-mom-top:focus-visible { outline: 2px solid #fb7185; outline-offset: 2px; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root nav > div { flex-wrap: wrap !important; }
+  #root nav a.xn-mom-tab { flex: 1 1 calc(33.333% - 6px) !important; min-height: 44px !important; padding: 6px 4px !important; }
+  #root nav a.xn-mom-tab:nth-child(4),
+  #root nav a.xn-mom-tab:nth-child(5) { flex-basis: calc(50% - 6px) !important; }
+  #root nav a.xn-mom-tab > span.truncate { font-size: 12.5px !important; }
+  #root h2 { font-size: 19px !important; }
+  #root input[type="date"], #root input[type="number"], #root input[type="text"] { height: 54px !important; font-size: 21px !important; }
+  #root input[type="date"] { font-size: 16px !important; }
+  .xn-mom-q { min-height: 40px; font-size: 13px; }
+  #root button.xn-mom-primary { min-height: 50px !important; }
+}
