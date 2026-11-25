@@ -1,0 +1,260 @@
+/* 小凝工具站 · Markdown 表格排版皮肤 xn-mdtable v1（纯 CSS，无图片）
+ * 主题：格纸薄荷 —— 淡薄荷方格纸 + 深松绿墨 + 珊瑚橙标注。
+ * 注入：legacy/x8slbmcakb.html
+ */
+
+:root {
+  --mt: #17705f;
+  --mt-deep: #0c3b33;
+  --mt-mint: #46b39a;
+  --mt-coral: #e2664a;
+  --mt-ink: #12332c;
+  --mt-line: #cde7df;
+  --mt-soft: #f0faf6;
+}
+
+html { background: #edf8f4; }
+
+body {
+  background:
+    radial-gradient(980px 560px at 4% -14%, rgba(23, 112, 95, .14), transparent 60%),
+    radial-gradient(820px 480px at 102% -6%, rgba(226, 102, 74, .09), transparent 58%),
+    linear-gradient(180deg, #fafefc 0%, #edf8f4 52%, #fbfefd 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 方格纸 20px 网格 + 交叉点 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(23, 112, 95, .09) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(180deg, rgba(23, 112, 95, .09) 0 1px, transparent 1px 20px),
+    radial-gradient(rgba(12, 59, 51, .18) 1px, transparent 1.1px);
+  background-size: 20px 20px, 20px 20px, 100px 100px;
+  opacity: .75;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .42) 36%, transparent 72%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .42) 36%, transparent 72%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签（6 个链接） ---------- */
+#root a[href^="#/"] {
+  min-height: 44px !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  transition: background .15s, color .15s, box-shadow .15s, transform .12s;
+}
+#root a[href^="#/"]:hover { transform: translateY(-1px); }
+#root a[href^="#/"]:focus-visible { outline: 2px solid var(--mt); outline-offset: 2px; }
+#root a[href^="#/"][aria-current] {
+  background: linear-gradient(135deg, #1d8f78, #0c3b33) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -14px rgba(12, 59, 51, .9);
+}
+@media (max-width: 640px) {
+  .xn-md-tabbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin: 0 -6px;
+    padding: 8px 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: rgba(250, 254, 252, .95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--mt-line);
+  }
+  .xn-md-tabbar::-webkit-scrollbar { display: none; }
+  .xn-md-tabbar a[href^="#/"] { min-width: 108px; justify-content: center; }
+}
+
+/* ---------- 标题 ---------- */
+#root h1 { letter-spacing: -.02em; color: var(--mt-deep) !important; }
+
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  color: var(--mt-ink) !important;
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(180deg, var(--mt-mint), var(--mt-coral)) 1;
+  padding-left: 10px !important;
+}
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; padding-left: 9px !important; }
+}
+
+/* ---------- 卡片与输入 ---------- */
+#root .rounded-xl, #root .rounded-lg.border {
+  border-color: var(--mt-line) !important;
+}
+#root textarea {
+  font-size: 15.5px !important;
+  line-height: 1.68 !important;
+  border-radius: 12px !important;
+  border-color: var(--mt-line) !important;
+  background: #fdfefd !important;
+  min-height: 168px;
+}
+#root textarea:focus, #root input[type="text"]:focus, #root select:focus {
+  border-color: #7fcdb9 !important;
+  box-shadow: 0 0 0 3px rgba(70, 179, 154, .16) !important;
+  outline: none !important;
+}
+#root label { color: #33574f !important; }
+
+/* 分隔符胶囊 */
+#root .xn-md-pill,
+#root .xn-md-pill[aria-pressed] {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  border-radius: 999px !important;
+  border: 1px solid var(--mt-line) !important;
+  background: #fff !important;
+  color: #33574f !important;
+  transition: background .15s, color .15s, box-shadow .15s, transform .12s;
+}
+#root .xn-md-pill:hover { transform: translateY(-1px); background: #f2fbf7 !important; }
+#root .xn-md-pill[aria-pressed="true"] {
+  background: linear-gradient(135deg, #1d8f78, #0c3b33) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 8px 16px -12px rgba(12, 59, 51, .85);
+}
+#root .xn-md-pill::before { content: none !important; display: none !important; }
+#root .xn-md-pill:focus-visible { outline: 2px solid var(--mt); outline-offset: 2px; }
+
+/* 示例胶囊 */
+.xn-md-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.xn-md-chips button {
+  min-height: 34px !important;
+  padding: 0 12px !important;
+  border-radius: 999px !important;
+  border: 1px solid #cfe9e1 !important;
+  background: #f2fbf7 !important;
+  color: #17705f !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  line-height: 1;
+  box-shadow: none !important;
+}
+.xn-md-chips button:hover { background: #e6f7f0 !important; border-color: #a7d9c9 !important; }
+.xn-md-chips button:active { transform: scale(.97); }
+.xn-md-chips button:focus-visible { outline: 2px solid var(--mt); outline-offset: 1px; }
+@media (max-width: 640px) {
+  .xn-md-chips button { min-height: 40px !important; padding: 0 14px !important; font-size: 13px !important; }
+}
+
+/* ---------- 按钮 ---------- */
+#root button { border-radius: 10px !important; }
+#root button[aria-label^="复制"],
+#root button[aria-label^="清空"] {
+  min-height: 44px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+#root button[aria-label^="复制"] {
+  background: #fff !important;
+  border: 1px solid #cfe9e1 !important;
+  color: #17705f !important;
+}
+#root button[aria-label^="复制"]:hover { background: #eefaf5 !important; }
+#root button[aria-label^="清空"] {
+  background: #fff !important;
+  border: 1px solid #ecd6cd !important;
+  color: #ad4a2f !important;
+}
+#root button[aria-label^="清空"]:hover { background: #fdf3ef !important; }
+#root button:focus-visible { outline: 2px solid var(--mt); outline-offset: 2px; }
+
+/* ---------- 结果 ---------- */
+#root pre {
+  font-size: 13px !important;
+  line-height: 1.72 !important;
+  border-radius: 12px !important;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 23px, rgba(23, 112, 95, .06) 23px 24px),
+    #fdfefd !important;
+  border: 1px solid var(--mt-line) !important;
+  color: #1d4038 !important;
+  padding: 12px 14px !important;
+  min-height: 56px;
+  max-height: 480px;
+}
+#root pre code { color: #1d4038 !important; font-size: 13px !important; }
+#root pre:not(:has(code)) { color: #6b8b83 !important; font-style: italic; }
+
+/* 结果标题行 */
+#root .flex.items-center.justify-between span { font-size: 13px !important; color: #33574f !important; }
+
+/* 使用说明 / 页脚 */
+#root details {
+  border-color: var(--mt-line) !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  padding: 4px 16px !important;
+}
+#root details summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #33574f !important;
+}
+#root details li { font-size: 12.5px !important; line-height: 1.8 !important; color: #45675f !important; }
+#root footer { border-color: var(--mt-line) !important; background: #f5fcf9 !important; font-size: 12.5px !important; }
+
+/* 回到顶部 */
+.xn-md-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--mt-line);
+  background: #fff;
+  color: var(--mt-deep);
+  box-shadow: 0 10px 24px -14px rgba(12, 59, 51, .6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-md-top.is-on { display: flex; }
+.xn-md-top:focus-visible { outline: 2px solid var(--mt); outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  #root textarea { font-size: 15px !important; min-height: 150px; }
+  #root pre { font-size: 12.5px !important; }
+  #root pre code { font-size: 12.5px !important; }
+}
