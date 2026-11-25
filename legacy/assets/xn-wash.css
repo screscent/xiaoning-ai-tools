@@ -1,0 +1,260 @@
+/* 小凝工具站 · 洗手计时与步骤提示皮肤 xn-wash v1（纯 CSS，无图片）
+ * 主题：清透水波与泡沫 —— 淡青水面 + 细密泡沫点阵 + 波纹线。
+ * 注入：legacy/rdqjum4t4r.html
+ */
+
+:root {
+  --wsh: #0f766e;
+  --wsh-2: #14b8a6;
+  --wsh-ink: #12312e;
+  --wsh-body: #4f6f6b;
+  --wsh-line: #cfe8e4;
+  --wsh-soft: #f2fbf9;
+}
+
+html { background: #eef8f6; }
+
+body {
+  background:
+    radial-gradient(900px 520px at 2% -10%, rgba(15, 118, 110, .12), transparent 62%),
+    radial-gradient(720px 420px at 102% -4%, rgba(20, 184, 166, .14), transparent 58%),
+    linear-gradient(180deg, #fbfefd 0%, #eaf7f4 52%, #fbfefd 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 水面波纹 + 泡沫点阵 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, .85) 0 2px, transparent 2px),
+    radial-gradient(circle at 70% 12%, rgba(20, 184, 166, .18) 0 2.5px, transparent 2.5px),
+    radial-gradient(circle at 45% 78%, rgba(255, 255, 255, .7) 0 2px, transparent 2px),
+    repeating-linear-gradient(180deg, rgba(15, 118, 110, .05) 0 1px, transparent 1px 26px);
+  background-size: 120px 120px, 160px 160px, 90px 90px, 100% 26px;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .4) 60%, rgba(0, 0, 0, .06) 94%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .4) 60%, rgba(0, 0, 0, .06) 94%);
+}
+
+#root { position: relative; z-index: 1; }
+
+#root h1 { color: var(--wsh-ink) !important; letter-spacing: .3px; }
+#root header p, #root h1 + p, #root h1 + p + p { color: var(--wsh-body) !important; font-size: 13px !important; }
+
+/* ---------- 工具标签 ---------- */
+#root nav button.xn-wash-tab {
+  min-height: 44px !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--wsh-line) !important;
+  color: #436b66 !important;
+  background: #fff !important;
+  transition: background .16s ease, color .16s ease, box-shadow .16s ease;
+}
+#root nav button.xn-wash-tab:hover { background: #eefaf7 !important; color: var(--wsh) !important; }
+#root nav button.xn-wash-tab[aria-current="page"] {
+  background: linear-gradient(135deg, #0f766e, #14b8a6) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 22px -15px rgba(15, 118, 110, .95);
+}
+
+/* ---------- 卡片 ---------- */
+#root .bg-white.rounded-2xl {
+  border-radius: 18px !important;
+  border-color: #e2efec !important;
+  box-shadow: 0 14px 30px -26px rgba(15, 90, 84, .55) !important;
+}
+#root h2 {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: var(--wsh-ink) !important;
+  letter-spacing: .2px;
+  text-transform: none !important;
+}
+#root h3 { font-size: 15px !important; color: #0f5f58 !important; }
+
+/* 设置行 */
+#root .xn-wash-row { min-height: 50px; }
+#root .xn-wash-row > span:first-child { font-size: 14.5px !important; font-weight: 700 !important; color: #34534f !important; min-width: 76px; white-space: nowrap; }
+
+/* ---------- 输入 / 下拉 ---------- */
+#root input[type="number"] {
+  height: 52px !important;
+  min-height: 52px !important;
+  width: 78px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--wsh-line) !important;
+  background: #fff !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--wsh-ink) !important;
+  font-variant-numeric: tabular-nums;
+}
+#root input[type="number"]::-webkit-outer-spin-button,
+#root input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+#root input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+#root select {
+  height: 48px !important;
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--wsh-line) !important;
+  font-size: 15.5px !important;
+  font-weight: 600 !important;
+  color: var(--wsh-ink) !important;
+  background-color: #fff !important;
+}
+#root input:focus, #root select:focus {
+  border-color: #14b8a6 !important;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, .16) !important;
+  outline: none !important;
+}
+
+/* 常用值胶囊 */
+.xn-wash-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; justify-content: flex-end; padding-left: 76px; }
+.xn-wash-q {
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid #bfe3de;
+  background: #fff;
+  color: #0f766e;
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background .14s ease, border-color .14s ease;
+}
+.xn-wash-q:hover { background: #eefaf7; border-color: #5fc9bb; }
+.xn-wash-q:active { background: #d6f3ee; }
+.xn-wash-q:focus-visible { outline: 2px solid #14b8a6; outline-offset: 2px; }
+
+/* ---------- 开关 ---------- */
+#root button.xn-wash-switch {
+  position: relative;
+  width: 50px !important;
+  height: 28px !important;
+  border-radius: 999px !important;
+  background: #d7e5e2 !important;
+  border: none !important;
+  transition: background .18s ease;
+}
+#root button.xn-wash-switch::after { content: ""; position: absolute; inset: -9px -6px; }
+#root button.xn-wash-switch > span {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  box-shadow: 0 2px 5px rgba(15, 60, 56, .25) !important;
+  translate: none !important;
+  transform: translateX(2px) !important;
+  transition: transform .18s ease;
+}
+#root button.xn-wash-switch[aria-checked="true"] {
+  background: linear-gradient(135deg, #0f766e, #14b8a6) !important;
+}
+#root button.xn-wash-switch[aria-checked="true"] > span { transform: translateX(24px) !important; }
+
+/* ---------- 开始 / 重置 / 复制 ---------- */
+#root button.xn-wash-go {
+  min-height: 52px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #0f766e, #14b8a6) !important;
+  color: #fff !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  letter-spacing: .5px;
+  border: none !important;
+  box-shadow: 0 14px 26px -18px rgba(15, 118, 110, .95);
+}
+#root button.xn-wash-go:hover { filter: brightness(1.05); }
+#root button.xn-wash-go:focus-visible { outline: 3px solid #7dd3c7; outline-offset: 2px; }
+
+#root button.xn-wash-secondary { min-height: 48px !important; }
+#root button.xn-wash-secondary > span {
+  min-height: 48px !important;
+  border-radius: 12px !important;
+  border-color: var(--wsh-line) !important;
+  color: #3f6863 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- 计时器 ---------- */
+#root .xn-wash-clock span.text-5xl { font-size: 54px !important; color: #0b4f49 !important; letter-spacing: 1px; }
+#root .xn-wash-clock span.text-xs { font-size: 13px !important; font-weight: 700 !important; color: #4f8c84 !important; }
+#root .xn-wash-status { font-size: 15px !important; font-weight: 600 !important; color: #4f6f6b !important; }
+#root .xn-wash-stepname { font-size: 11.5px !important; font-weight: 700 !important; color: #5d7d78 !important; }
+#root .xn-wash-stepdot { width: 12px !important; height: 12px !important; }
+#root .xn-wash-stepdot.bg-teal-600 { box-shadow: 0 0 0 4px rgba(20, 184, 166, .18); }
+
+/* 洗手要点 */
+#root .xn-wash-tipcard { background: rgba(255, 255, 255, .78) !important; border-color: #d7efe9 !important; }
+#root .xn-wash-tipcard > div > span { font-size: 14px !important; font-weight: 700 !important; color: #2f5350 !important; }
+#root .xn-wash-tipcard > p { font-size: 13px !important; line-height: 1.65 !important; color: #597874 !important; }
+
+/* ---------- 步骤列表 ---------- */
+#root .xn-wash-sum { font-size: 15px !important; color: #4f6f6b !important; }
+#root .xn-wash-sum .xn-wash-sec { font-size: 16.5px !important; font-weight: 800 !important; color: #0f766e !important; font-variant-numeric: tabular-nums; }
+#root .xn-wash-stepcard { border-color: #d9efe9 !important; background: #f5fcfa !important; border-radius: 14px !important; }
+#root .xn-wash-stepcard > div > span:first-child {
+  min-width: 20px !important;
+  min-height: 20px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  background: #d9f2ec !important;
+  color: #0f766e !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+#root .xn-wash-stepcard > div > span:nth-child(2) { font-size: 15px !important; font-weight: 700 !important; color: #173f3b !important; }
+#root .xn-wash-stepcard > div > span:last-child { font-size: 12.5px !important; font-weight: 700 !important; color: #3d7a71 !important; }
+#root .xn-wash-stepcard > p { font-size: 13px !important; line-height: 1.7 !important; color: #5a7a76 !important; }
+#root .xn-wash-tips { font-size: 13.5px !important; line-height: 1.8 !important; color: #5a7a76 !important; }
+
+/* ---------- 使用说明 / 页脚 ---------- */
+#root details > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 700;
+  color: #3f6863 !important;
+}
+#root details p, #root details li { font-size: 13.5px !important; line-height: 1.85; color: #5a7a76 !important; }
+#root footer { color: #6f8b87 !important; font-size: 12.5px !important; }
+#root a[href*="screscent"] { min-height: 44px; display: inline-flex; align-items: center; font-weight: 700 !important; }
+
+/* 回到顶部 */
+.xn-wash-top {
+  position: fixed; right: 18px; bottom: 22px; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--wsh-line); background: #fff; color: var(--wsh);
+  box-shadow: 0 10px 24px -14px rgba(15, 118, 110, .8);
+  display: none; align-items: center; justify-content: center; font-size: 18px; line-height: 1;
+}
+.xn-wash-top.is-on { display: flex; }
+.xn-wash-top:focus-visible { outline: 2px solid #14b8a6; outline-offset: 2px; }
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  #root nav button.xn-wash-tab { min-height: 46px !important; font-size: 14px !important; padding: 8px 14px !important; }
+  #root h2 { font-size: 19px !important; }
+  #root input[type="number"] { height: 54px !important; font-size: 23px !important; }
+  #root select { height: 50px !important; font-size: 16px !important; }
+  #root button.xn-wash-go { min-height: 54px !important; }
+  #root button.xn-wash-switch { width: 52px !important; height: 30px !important; min-height: 30px !important; }
+  #root button.xn-wash-switch > span { width: 26px !important; height: 26px !important; }
+  #root button.xn-wash-switch[aria-checked="true"] > span { transform: translateX(24px) !important; }
+  #root .xn-wash-clock span.text-5xl { font-size: 60px !important; }
+  #root .xn-wash-stepname { font-size: 12px !important; }
+  .xn-wash-q { min-height: 40px; font-size: 13px; }
+  .xn-wash-qrow { justify-content: flex-start; padding-left: 0; }
+}
