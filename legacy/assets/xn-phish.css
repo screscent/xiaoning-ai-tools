@@ -1,0 +1,264 @@
+/* 小凝工具站 · 钓鱼链接自查与分享自查皮肤 xn-phish v1（纯 CSS，无图片）
+ * 主题：琥珀警戒 —— 暖灰底 + 斜纹警戒 + 琥珀主色 + 石墨文字。
+ * 注入：legacy/mkplawrxwr.html
+ */
+
+:root {
+  --ph: #b45309;
+  --ph-deep: #1f2937;
+  --ph-teal: #0f766e;
+  --ph-ink: #1c1917;
+  --ph-line: #e8e0d2;
+  --ph-soft: #fbf8f2;
+}
+
+html { background: #f3efe6; }
+
+body {
+  background:
+    radial-gradient(940px 540px at 0% -12%, rgba(180, 83, 9, .16), transparent 62%),
+    radial-gradient(800px 470px at 104% -4%, rgba(15, 118, 110, .10), transparent 58%),
+    linear-gradient(180deg, #fdfbf6 0%, #f3efe6 48%, #fdfbf7 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* 斜纹警戒 + 琥珀斜角 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(180, 83, 9, .05) 0 2px, transparent 2px 20px),
+    linear-gradient(124deg, rgba(180, 83, 9, .13) 0 160px, transparent 160px),
+    linear-gradient(300deg, rgba(15, 118, 110, .08) 0 120px, transparent 120px);
+  background-size: auto, 100% 100%, 100% 100%;
+  opacity: .85;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .5) 48%, rgba(0, 0, 0, .14) 90%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .5) 48%, rgba(0, 0, 0, .14) 90%);
+}
+
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* ---------- 工具标签（按钮型） ---------- */
+#root .xn-ph-tab,
+#root .xn-ph-tab[aria-pressed] {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border: 1px solid var(--ph-line) !important;
+  background: #fff !important;
+  color: #5b4630 !important;
+  transition: background .15s, color .15s, box-shadow .15s, transform .12s;
+}
+#root .xn-ph-tab::before { content: none !important; display: none !important; }
+#root .xn-ph-tab:hover { transform: translateY(-1px); }
+#root .xn-ph-tab[aria-pressed="true"] {
+  background: linear-gradient(135deg, #b45309, #7c2d12) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px -14px rgba(124, 45, 18, .9);
+}
+#root .xn-ph-tab:focus-visible { outline: 2px solid var(--ph); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .xn-ph-tabbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    margin: 0 -6px;
+    padding: 8px 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: rgba(253, 251, 246, .95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--ph-line);
+  }
+  .xn-ph-tabbar::-webkit-scrollbar { display: none; }
+  #root .xn-ph-tab { min-width: 118px; justify-content: center; }
+}
+
+/* ---------- 标题 ---------- */
+#root h1 { letter-spacing: -.02em; color: #7c2d12 !important; }
+#root h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -.012em;
+  color: var(--ph-ink) !important;
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(180deg, #fbbf24, var(--ph-teal)) 1;
+  padding-left: 10px !important;
+}
+#root h3 { font-size: 15px !important; font-weight: 800 !important; color: #3f2f1c !important; }
+@media (max-width: 640px) {
+  #root h2 { font-size: 18.5px !important; padding-left: 9px !important; }
+}
+
+/* ---------- 输入 ---------- */
+#root .rounded-xl { border-color: var(--ph-line) !important; }
+#root textarea {
+  font-size: 15.5px !important;
+  line-height: 1.72 !important;
+  border-radius: 12px !important;
+  border-color: var(--ph-line) !important;
+  background: #fffdf9 !important;
+  min-height: 148px;
+}
+#root input[type="text"], #root select {
+  min-height: 48px !important;
+  height: 48px !important;
+  border-radius: 11px !important;
+  border-color: var(--ph-line) !important;
+  font-size: 15px !important;
+  background: #fffdf9 !important;
+}
+#root textarea:focus, #root input:focus, #root select:focus {
+  border-color: #d9a441 !important;
+  box-shadow: 0 0 0 3px rgba(180, 83, 9, .14) !important;
+  outline: none !important;
+}
+#root label { color: #5b4630 !important; font-weight: 600; }
+
+/* 检查项复选框：14 → 20，整行 36/44 */
+#root input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  accent-color: #b45309;
+  cursor: pointer;
+}
+#root label:has(> input[type="checkbox"]) {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 0 6px;
+  border-radius: 8px;
+  font-size: 13.5px !important;
+  cursor: pointer;
+}
+#root label:has(> input[type="checkbox"]):hover { background: #f9f3e8; }
+
+/* 显示风险评分开关：视觉 36×20 不变，热区扩 44 */
+#root button[role="switch"] {
+  position: relative;
+}
+#root button[role="switch"]::after {
+  content: "";
+  position: absolute;
+  inset: -12px -4px;
+  border-radius: 999px;
+}
+#root button[role="switch"]:focus-visible { outline: 2px solid var(--ph); outline-offset: 6px; }
+
+/* ---------- 按钮 ---------- */
+#root button { border-radius: 10px !important; }
+#root button[aria-label="开始检查链接"],
+#root button[aria-label="开始检查分享链接"] {
+  min-height: 50px !important;
+  padding: 0 22px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #b45309, #7c2d12) !important;
+  border: 0 !important;
+  color: #fff !important;
+  box-shadow: 0 12px 22px -16px rgba(124, 45, 18, .9);
+}
+#root button[aria-label="开始检查链接"]:hover,
+#root button[aria-label="开始检查分享链接"]:hover { filter: brightness(1.08); }
+#root button[aria-label^="复制"] {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  background: #fff !important;
+  border: 1px solid var(--ph-line) !important;
+  color: #b45309 !important;
+}
+#root button[aria-label^="复制"]:hover { background: #fdf6ea !important; }
+#root button[aria-label^="清空"] {
+  min-height: 44px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+#root button:focus-visible { outline: 2px solid var(--ph); outline-offset: 2px; }
+
+/* ---------- 结果表格 ---------- */
+#root table { font-size: 13.5px !important; }
+#root th {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #6b5a41 !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+#root td {
+  font-size: 13.5px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  line-height: 1.6;
+}
+#root td:first-child { font-weight: 700; color: #8a744f !important; }
+#root td span.rounded.border { font-size: 12.5px !important; font-weight: 800 !important; padding: 3px 8px !important; }
+
+/* 统计数字 */
+#root span.font-mono.font-medium.text-gray-800 { font-size: 15px !important; font-weight: 800 !important; color: #241c12 !important; }
+/* 综合评分大数字 */
+#root span.font-mono.text-lg.font-bold { font-size: 28px !important; font-weight: 800 !important; letter-spacing: -.01em; }
+#root span.min-w-\[3rem\] { min-width: 4rem !important; }
+/* 评分为 0 时的说明小字 */
+#root p.mt-1\.5.text-xs { font-size: 12.5px !important; color: #7a6647 !important; }
+
+/* ---------- 使用说明 / 页脚 ---------- */
+#root details {
+  border-color: var(--ph-line) !important;
+  border-radius: 16px !important;
+  background: #fffdf9 !important;
+  padding: 4px 16px !important;
+}
+#root details summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #7c2d12 !important;
+}
+#root details li, #root details p { font-size: 12.5px !important; line-height: 1.8 !important; color: #5f4c33 !important; }
+#root footer { border-color: var(--ph-line) !important; background: #fdf9f1 !important; font-size: 12.5px !important; }
+
+/* 回到顶部 */
+.xn-ph-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--ph-line);
+  background: #fff;
+  color: #7c2d12;
+  box-shadow: 0 10px 24px -14px rgba(124, 45, 18, .6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.xn-ph-top.is-on { display: flex; }
+.xn-ph-top:focus-visible { outline: 2px solid var(--ph); outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  #root textarea { font-size: 15px !important; min-height: 136px; }
+  #root label:has(> input[type="checkbox"]) { min-height: 44px; }
+  #root table { font-size: 12.5px !important; }
+  #root td { font-size: 12.5px !important; }
+  #root span.font-mono.text-lg.font-bold { font-size: 24px !important; }
+}
