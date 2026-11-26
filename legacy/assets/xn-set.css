@@ -227,3 +227,17 @@ footer { font-size: 12.5px !important; color: #64748b !important; border-top: 1p
   font-size: 13px !important; font-weight: 700 !important; border-radius: 10px !important;
   border: 1px solid #dbe4f7 !important; background: #eef2ff !important; color: #4338ca !important;
 }
+
+/* 出行类工具：字段内下拉与时间 */
+#root .fld select, .fld select {
+  height: 50px !important; min-height: 50px !important; width: 168px !important;
+  font-size: 16px !important; font-weight: 700 !important;
+  border: 1.5px solid var(--st-line) !important; border-radius: 10px !important;
+  background-color: #fff !important; color: #1e293b !important;
+}
+#root .fld input[type=time], .fld input[type=time] {
+  width: 150px !important; height: 50px !important; min-height: 50px !important;
+  font-size: 16px !important; font-weight: 600 !important;
+  border: 1.5px solid var(--st-line) !important; border-radius: 10px !important;
+  background: #fff !important; color: #1e293b !important;
+}
