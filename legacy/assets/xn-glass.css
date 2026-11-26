@@ -1,0 +1,164 @@
+/* 小凝工具站 · 玻璃拟态与卡片皮肤 xn-glass v1（纯 CSS，无图片）
+ * 主题：极光实验室 —— 近白底 + 紫/粉/青极光带 + 细网格；预览区本体不做改动。
+ * 注入：legacy/jarc8vkp5e.html（xn-ux 之后追加）。
+ */
+:root { --gl: #6366f1; --gl-2: #db2777; --gl-3: #0891b2; --gl-ink: #17142a; --gl-line: #e3e4f5; }
+html { background: #f8f8fd; }
+body {
+  background:
+    radial-gradient(760px 460px at 6% -8%, rgba(99,102,241,.14), transparent 62%),
+    radial-gradient(680px 420px at 96% 2%, rgba(219,39,119,.10), transparent 60%),
+    radial-gradient(760px 520px at 50% 108%, rgba(8,145,178,.09), transparent 62%),
+    linear-gradient(rgba(99,102,241,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,.03) 1px, transparent 1px),
+    #f8f8fd !important;
+  background-size: auto, auto, auto, 24px 24px, 24px 24px, auto !important;
+  background-attachment: fixed !important;
+  color: var(--gl-ink);
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(1100px 560px at 50% -12%, rgba(255,255,255,.86), transparent 62%);
+  -webkit-mask-image: none; mask-image: none; opacity: 1;
+}
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* 标题 */
+#root h1.xn-gl-h1 { font-size: 34px !important; font-weight: 800 !important; letter-spacing: -.4px !important; color: #12102a !important; }
+#root .xn-gl-h2 { font-size: 20px !important; font-weight: 800 !important; color: #12102a !important; }
+#root label { font-size: 13px !important; font-weight: 700 !important; color: #3c3757 !important; }
+
+/* 工具标签（锚点胶囊） */
+#root a.xn-gl-tab {
+  min-height: 44px !important; height: 44px !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  padding: 0 18px !important; border-radius: 999px !important;
+  font-size: 14.5px !important; font-weight: 800 !important;
+  color: #4a4468 !important; background: #fff !important; border: 1.5px solid var(--gl-line) !important;
+  text-decoration: none !important;
+}
+#root a.xn-gl-tab:hover { border-color: #c7c9f7 !important; color: #4338ca !important; }
+#root a.xn-gl-tab[aria-current="page"] {
+  color: #fff !important; border-color: transparent !important;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6 48%, #db2777) !important;
+  box-shadow: 0 10px 22px -16px rgba(99,102,241,.95) !important;
+}
+
+/* 卡片 */
+#root .xn-gl-card {
+  background: rgba(255,255,255,.97) !important;
+  border: 1px solid var(--gl-line) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 36px -30px rgba(23,20,42,.55) !important;
+}
+
+/* 参数值 */
+#root .xn-gl-val { font-size: 15px !important; font-weight: 800 !important; color: #4f46e5 !important; font-variant-numeric: tabular-nums; }
+
+/* 滑块 */
+#root input[type=range].xn-gl-range {
+  -webkit-appearance: none; appearance: none;
+  width: 100% !important; height: 44px !important; background: transparent !important;
+  border: none !important; cursor: pointer !important;
+}
+#root input[type=range].xn-gl-range::-webkit-slider-runnable-track {
+  height: 8px; border-radius: 999px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6 50%, #db2777);
+}
+#root input[type=range].xn-gl-range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 22px; height: 22px; margin-top: -7px;
+  border-radius: 50%; background: #fff; border: 3px solid #6366f1;
+  box-shadow: 0 2px 6px rgba(23,20,42,.28);
+}
+#root input[type=range].xn-gl-range::-moz-range-track {
+  height: 8px; border-radius: 999px; background: linear-gradient(90deg, #6366f1, #8b5cf6 50%, #db2777);
+}
+#root input[type=range].xn-gl-range::-moz-range-thumb {
+  width: 22px; height: 22px; border-radius: 50%; background: #fff;
+  border: 3px solid #6366f1; box-shadow: 0 2px 6px rgba(23,20,42,.28);
+}
+
+/* 下拉与主色 */
+#root select.xn-gl-select {
+  height: 52px !important; font-size: 16px !important; font-weight: 700 !important;
+  border-radius: 12px !important; border: 1.5px solid var(--gl-line) !important;
+  padding: 0 14px !important; background: #fff !important; color: var(--gl-ink) !important;
+}
+#root input[type=color].xn-gl-color {
+  width: 52px !important; height: 52px !important; min-width: 52px !important;
+  border-radius: 12px !important; border: 1.5px solid var(--gl-line) !important;
+  padding: 3px !important; background: #fff !important; cursor: pointer !important;
+}
+#root select:focus { border-color: #a5b4fc !important; box-shadow: 0 0 0 3px rgba(99,102,241,.15) !important; outline: none !important; }
+
+/* 顶部高光开关 */
+#root button.xn-gl-switch {
+  width: 54px !important; height: 32px !important; min-height: 32px !important;
+  border-radius: 999px !important; border: none !important; cursor: pointer !important;
+  position: relative !important; padding: 0 !important;
+}
+#root button.xn-gl-switch > span {
+  width: 26px !important; height: 26px !important; top: 3px !important; left: 3px !important;
+  transform: none !important; transition: left .18s ease !important;
+  box-shadow: 0 2px 6px rgba(23,20,42,.25) !important;
+}
+#root button.xn-gl-switch[aria-checked="true"] { background: linear-gradient(135deg, #6366f1, #db2777) !important; }
+#root button.xn-gl-switch[aria-checked="true"] > span { left: 25px !important; }
+#root button.xn-gl-switch[aria-checked="false"] { background: #cdcbe0 !important; }
+#root button.xn-gl-switch[aria-checked="false"] > span { left: 3px !important; }
+#root button.xn-gl-switch[aria-checked="true"]::before,
+#root button.xn-gl-switch[aria-checked="false"]::before { content: none !important; display: none !important; }
+
+/* 按钮 */
+#root button.xn-gl-btn {
+  min-height: 46px !important; height: 46px !important; padding: 0 18px !important;
+  border-radius: 12px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  border: 1.5px solid var(--gl-line) !important; background: #fff !important; color: #4338ca !important;
+  cursor: pointer !important;
+}
+#root button.xn-gl-btn:hover { background: #f5f4ff !important; border-color: #a5b4fc !important; }
+#root button.xn-gl-primary {
+  min-height: 46px !important; height: 46px !important; padding: 0 20px !important;
+  border-radius: 12px !important; font-size: 15px !important; font-weight: 800 !important;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6 48%, #db2777) !important;
+  color: #fff !important; border: none !important; cursor: pointer !important;
+  box-shadow: 0 12px 24px -18px rgba(99,102,241,.95) !important;
+}
+
+/* 代码块 */
+#root pre.xn-gl-pre {
+  background: #0d1024 !important; color: #e6e7ff !important;
+  font-size: 13.5px !important; line-height: 1.7 !important;
+  padding: 16px !important; border-radius: 12px !important;
+  border: 1px solid #232750 !important;
+  font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace !important;
+  tab-size: 2;
+}
+
+/* 说明 */
+#root p, #root li { line-height: 1.75; }
+#root .xn-gl-note { font-size: 13px !important; color: #4a4468 !important; }
+
+/* 回到顶部 */
+.xn-gl-top {
+  position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px;
+  border-radius: 14px; border: 1px solid var(--gl-line); background: #fff; color: #4338ca;
+  font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(23,20,42,.6);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-gl-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-gl-top:hover { background: #f5f4ff; }
+
+@media (max-width: 639px) {
+  #root h1.xn-gl-h1 { font-size: 27px !important; }
+  #root .xn-gl-h2 { font-size: 18px !important; }
+  #root a.xn-gl-tab { font-size: 14px !important; padding: 0 14px !important; }
+  #root pre.xn-gl-pre { font-size: 12.8px !important; padding: 13px !important; }
+  .xn-gl-top { right: 14px; bottom: 18px; }
+}
+
+/* 主色 HEX 小字 */
+#root .xn-gl-hex { font-size: 13px !important; font-weight: 700 !important; color: #475569 !important; letter-spacing: .3px; }
