@@ -174,3 +174,18 @@ footer { font-size: 12.5px !important; color: #64748b !important; border-top: 1p
   border: 1.5px solid var(--st-line) !important; border-radius: 10px !important;
   background: #fff !important; cursor: pointer !important;
 }
+
+/* 图片/数值类工具：数值字段与预设 chips */
+#root .fld input[type=number], .fld input[type=number] {
+  width: 128px !important; height: 50px !important; min-height: 50px !important;
+  font-size: 16px !important; font-weight: 700 !important; text-align: center !important;
+  border: 1.5px solid var(--st-line) !important; border-radius: 10px !important;
+  background: #fff !important; font-variant-numeric: tabular-nums;
+}
+#root .quick, .quick { display: flex; gap: 6px; flex-wrap: wrap; margin-left: 6px; }
+#root .quick button, .quick button {
+  height: 40px !important; min-height: 40px !important; padding: 0 10px !important;
+  font-size: 12.5px !important; font-weight: 700 !important; border-radius: 9px !important;
+  border: 1px solid var(--st-line) !important; background: #fff !important; color: #475569 !important;
+}
+#root .quick button:hover, .quick button:hover { border-color: var(--st) !important; color: var(--st) !important; background: #f6f7ff !important; }
