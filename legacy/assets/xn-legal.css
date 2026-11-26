@@ -1,0 +1,129 @@
+/* 小凝工具站 · 隐私与合规文档合集皮肤 xn-legal v1（纯 CSS，无图片）
+ * 主题：合规档案 —— 冷白纸底 + 24px 细网格 + 朱印红；藏青/印章红双色。
+ * 注入：legacy/wn5xhmj8gw.html（xn-ux 之后追加）。
+ */
+:root { --lg: #1e3a8a; --lg-2: #b91c1c; --lg-ink: #141c2e; --lg-line: #dde3ef; }
+html { background: #f7f8fc; }
+body {
+  background:
+    radial-gradient(520px 340px at 94% -8%, rgba(185,28,28,.10), transparent 62%),
+    linear-gradient(rgba(30,58,138,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,58,138,.035) 1px, transparent 1px),
+    #f7f8fc !important;
+  background-size: auto, 24px 24px, 24px 24px, auto !important;
+  background-attachment: fixed !important;
+  color: var(--lg-ink);
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(1100px 560px at 50% -12%, rgba(255,255,255,.92), transparent 62%);
+  opacity: 1;
+}
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+#root h1.xn-lg-h1 { font-size: 34px !important; font-weight: 800 !important; letter-spacing: -.3px !important; color: #101a30 !important; }
+#root .xn-lg-h2 { font-size: 20px !important; font-weight: 800 !important; color: #101a30 !important; }
+#root label { font-size: 13px !important; font-weight: 700 !important; color: #2f3f5e !important; }
+
+/* 工具分段导航 */
+#root .xn-lg-nav {
+  gap: 5px !important; padding: 5px !important;
+  border-radius: 14px !important; background: #eef1f9 !important; border: 1px solid var(--lg-line) !important;
+}
+#root a.xn-lg-tab {
+  min-height: 44px !important; height: 44px !important;
+  border-radius: 10px !important; font-size: 13px !important; font-weight: 800 !important;
+  color: #3a4a68 !important; background: transparent !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  text-decoration: none !important; white-space: nowrap !important;
+}
+#root a.xn-lg-tab:hover { background: rgba(255,255,255,.82) !important; }
+#root a.xn-lg-tab[aria-current="page"] {
+  color: #fff !important;
+  background: linear-gradient(135deg, #2b4c9e, #1e3a8a 60%, #b91c1c) !important;
+  box-shadow: 0 8px 16px -14px rgba(30,58,138,.95) !important;
+}
+
+/* 卡片 */
+#root .xn-lg-card {
+  background: rgba(255,255,255,.97) !important;
+  border: 1px solid var(--lg-line) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 36px -30px rgba(20,28,46,.5) !important;
+}
+
+/* 输入与文本域 */
+#root input[type=text].xn-lg-text.xn-lg-text {
+  height: 52px !important; border-radius: 12px !important;
+  font-size: 16px !important; font-weight: 600 !important;
+  border: 1.5px solid var(--lg-line) !important; background: #fff !important; color: var(--lg-ink) !important;
+}
+#root textarea.xn-lg-area {
+  min-height: 360px !important; border-radius: 12px !important;
+  font-size: 14.5px !important; line-height: 1.85 !important;
+  border: 1.5px solid var(--lg-line) !important; background: #fffdfd !important; color: #1c2436 !important;
+  padding: 16px !important;
+}
+#root select.xn-lg-select {
+  height: 52px !important; border-radius: 12px !important;
+  font-size: 16px !important; font-weight: 700 !important;
+  border: 1.5px solid var(--lg-line) !important; background-color: #fff !important;
+}
+#root input:focus, #root select:focus, #root textarea:focus { border-color: #93a8d8 !important; box-shadow: 0 0 0 3px rgba(30,58,138,.14) !important; outline: none !important; }
+
+/* 多选信息类型 */
+#root button.xn-lg-chip {
+  min-height: 44px !important; height: 44px !important;
+  border-radius: 10px !important; font-size: 13px !important; font-weight: 700 !important;
+  border: 1.5px solid var(--lg-line) !important; background: #fff !important; color: #3a4a68 !important; cursor: pointer !important;
+}
+#root button.xn-lg-chip[aria-pressed="true"] {
+  color: #fff !important; border-color: #1e3a8a !important;
+  background: linear-gradient(135deg, #3b5cb8, #1e3a8a) !important;
+}
+
+/* 按钮 */
+#root button.xn-lg-primary {
+  min-height: 48px !important; height: 48px !important; padding: 0 20px !important;
+  border-radius: 12px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  color: #fff !important; border: 1.5px solid #172e6e !important; cursor: pointer !important;
+  background: linear-gradient(135deg, #3b5cb8, #1e3a8a) !important;
+}
+#root button.xn-lg-btn {
+  min-height: 44px !important; height: 44px !important; padding: 0 16px !important;
+  border-radius: 10px !important; font-size: 13.5px !important; font-weight: 800 !important;
+  border: 1.5px solid var(--lg-line) !important; background: #fff !important; color: #1e3a8a !important; cursor: pointer !important;
+}
+#root button.xn-lg-danger { color: #b91c1c !important; border-color: #f0d2d2 !important; }
+
+/* 统计徽章 */
+#root .xn-lg-pill {
+  font-size: 12.5px !important; font-weight: 700 !important; color: #1e3a8a !important;
+  background: #eef2fd !important; border: 1px solid #dbe4f7 !important;
+}
+#root .xn-lg-pill .tabular-nums { font-size: 16px !important; font-weight: 800 !important; color: #b91c1c !important; }
+
+/* 说明 */
+#root p, #root li { line-height: 1.8; }
+
+/* 回到顶部 */
+.xn-lg-top {
+  position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px;
+  border-radius: 14px; border: 1px solid var(--lg-line); background: #fff; color: var(--lg);
+  font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(20,28,46,.55);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-lg-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-lg-top:hover { background: #f2f5fd; }
+
+@media (max-width: 639px) {
+  #root h1.xn-lg-h1 { font-size: 27px !important; }
+  #root .xn-lg-h2 { font-size: 18px !important; }
+  #root a.xn-lg-tab { font-size: 12px !important; padding: 0 8px !important; }
+  #root textarea.xn-lg-area { min-height: 300px !important; }
+  #root input[type=text].xn-lg-text { height: 50px !important; font-size: 15.5px !important; }
+  .xn-lg-top { right: 14px; bottom: 18px; }
+}
