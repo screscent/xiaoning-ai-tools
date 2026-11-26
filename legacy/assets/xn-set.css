@@ -189,3 +189,13 @@ footer { font-size: 12.5px !important; color: #64748b !important; border-top: 1p
   border: 1px solid var(--st-line) !important; background: #fff !important; color: #475569 !important;
 }
 #root .quick button:hover, .quick button:hover { border-color: var(--st) !important; color: var(--st) !important; background: #f6f7ff !important; }
+
+/* 结果头条：sets 页统一把首个结果数字提到 28/800 */
+.xn-set-sum {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  background: linear-gradient(135deg, #eef2ff, #ecfeff);
+  border: 1px solid #dbe4f7; border-radius: 12px; padding: 10px 14px; margin-bottom: 10px;
+}
+.xn-set-sum > span { font-size: 12.5px !important; font-weight: 700 !important; color: #64748b !important; letter-spacing: .3px; }
+.xn-set-sum > b { font-size: 28px !important; font-weight: 800 !important; color: #312e81 !important; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.xn-set-sum > em { font-style: normal; font-size: 12.5px !important; color: #64748b !important; }

@@ -50,6 +50,34 @@
     });
   }
 
+  function markSummary() {
+    var pre = document.getElementById("out");
+    if (!pre || !vis(pre)) return;
+    var txt = (pre.textContent || "").trim();
+    var parent = pre.parentElement;
+    var box = document.getElementById("xn-set-sum");
+    if (!txt) { if (box) box.remove(); return; }
+    if (!box) {
+      box = document.createElement("div");
+      box.id = "xn-set-sum"; box.className = "xn-set-sum";
+      box.innerHTML = '<span>结果</span><b></b><em></em>';
+      parent.insertBefore(box, pre);
+    }
+    var line = (txt.split(/\n/).filter(function (l) { return l.trim(); })[0] || txt).trim();
+    var re = /[-+]?\d[\d,.]*\s*(%|px|cm|mm|MP|KB|MB|GB|元|个|次|dpi)?/g, mm, first = null, best = null;
+    while ((mm = re.exec(line))) {
+      if (!first) first = mm[0].trim();
+      if (mm[1]) { best = mm[0].trim(); break; }
+    }
+    if (!best && !/^[+-]?[\d(]/.test(line)) { if (box) box.remove(); return; }
+    var val = best || first || line.slice(0, 18);
+    var b = box.querySelector("b");
+    if (b.textContent !== val) b.textContent = val;
+    var em = box.querySelector("em");
+    var note = line.slice(0, 30);
+    if (em.textContent !== note) em.textContent = note;
+  }
+
   var topBtn = null;
   function ensureTop() {
     if (topBtn && document.body.contains(topBtn)) return;
@@ -61,7 +89,7 @@
   }
 
   function tick() {
-    try { markTabs(); markFields(); markStats(); ensureTop(); } catch (e) {}
+    try { markTabs(); markFields(); markStats(); markSummary(); ensureTop(); } catch (e) {}
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tick, { once: true });
   else tick();
