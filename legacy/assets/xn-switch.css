@@ -1,0 +1,165 @@
+/* 小凝工具站 · 开关切换与开关组皮肤 xn-switch v1（纯 CSS，无图片）
+ * 主题：柔光开关台 —— 浅雾底 + 蓝/青双色柔光 + 点阵网格，蓝为主色。
+ * 注入：legacy/mkpwgxrxwr.html
+ */
+:root { --sw: #2563eb; --sw-2: #14b8a6; --sw-ink: #0f172a; --sw-line: #e2e8f0; }
+html { background: #f7fafc; }
+body {
+  background:
+    radial-gradient(900px 520px at 8% -10%, rgba(37,99,235,.13), transparent 62%),
+    radial-gradient(820px 500px at 96% 4%, rgba(20,184,166,.12), transparent 64%),
+    radial-gradient(700px 500px at 48% 106%, rgba(99,102,241,.08), transparent 66%),
+    radial-gradient(rgba(15,23,42,.06) 1px, transparent 1.4px),
+    #f7fafc !important;
+  background-size: auto, auto, auto, 18px 18px, auto !important;
+  color: var(--sw-ink);
+}
+/* 工具标签 */
+#root .xn-switch-tab {
+  min-height: 44px !important; height: 44px !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  padding: 0 18px !important; border-radius: 999px !important;
+  font-size: 14.5px !important; font-weight: 700 !important; line-height: 1 !important;
+  color: #334155 !important; background: rgba(255,255,255,.82) !important;
+  border: 1px solid var(--sw-line) !important; text-decoration: none !important;
+  box-shadow: 0 4px 12px -10px rgba(15,23,42,.5);
+}
+#root .xn-switch-tab[aria-current="page"] {
+  color: #fff !important; border-color: transparent !important;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb 55%, #0d9488) !important;
+  box-shadow: 0 8px 18px -10px rgba(37,99,235,.75) !important;
+}
+/* 卡片与标题 */
+#root section:not(.bg-slate-900) {
+  background: rgba(255,255,255,.92) !important;
+  border: 1px solid rgba(226,232,240,.95) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 30px -24px rgba(15,23,42,.55) !important;
+}
+#root section.bg-slate-900 {
+  background: #0f1b2d !important;
+  border: 1px solid rgba(45,212,191,.28) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 30px -24px rgba(2,10,25,.7) !important;
+}
+#root section.bg-slate-900 .xn-switch-h2, #root section.bg-slate-900 p { color: #e2e8f0 !important; }
+#root .xn-switch-h2 { font-size: 20px !important; font-weight: 800 !important; }
+#root section:not(.bg-slate-900) .xn-switch-h2 { color: var(--sw-ink) !important; }
+#root h3.xn-switch-h2 { font-size: 16.5px !important; }
+#root label { font-size: 13.5px !important; font-weight: 600 !important; color: #334155 !important; }
+/* 输入 */
+#root input.xn-switch-text:not([type="color"]):not([type="file"]):not([type="range"]):not([type="number"]):not([type="checkbox"]) {
+  height: 52px !important; font-size: 16px !important; font-weight: 600 !important;
+  padding: 0 14px !important; border-radius: 12px !important;
+  border: 1.5px solid #dbe3f0 !important; background: #fff !important;
+  box-sizing: border-box !important; color: var(--sw-ink) !important;
+}
+#root input.xn-switch-color {
+  width: 48px !important; min-width: 48px !important; height: 52px !important;
+  padding: 4px !important; border-radius: 12px !important;
+  border: 1.5px solid #dbe3f0 !important; background: #fff !important; cursor: pointer !important;
+}
+#root input.xn-switch-num {
+  height: 52px !important; min-width: 76px !important; width: 84px !important;
+  font-size: 22px !important; font-weight: 800 !important; text-align: center !important;
+  border-radius: 12px !important; border: 1.5px solid #dbe3f0 !important;
+  background: #fff !important; color: var(--sw-ink) !important;
+  font-variant-numeric: tabular-nums; flex-shrink: 0 !important;
+}
+#root .xn-switch-unit { font-size: 12px !important; white-space: nowrap !important; flex-shrink: 0 !important; color: #94a3b8 !important; }
+#root input.xn-switch-num::-webkit-outer-spin-button, #root input.xn-switch-num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+#root input.xn-switch-num { -moz-appearance: textfield; appearance: textfield; }
+/* 下拉 */
+#root select.xn-switch-select {
+  height: 50px !important; font-size: 15.5px !important; font-weight: 600 !important;
+  border-radius: 12px !important; border: 1.5px solid #dbe3f0 !important;
+  padding: 0 12px !important; background: #fff !important; color: var(--sw-ink) !important;
+}
+#root input:focus, #root select:focus {
+  border-color: #93c5fd !important; box-shadow: 0 0 0 3px rgba(37,99,235,.16) !important; outline: none !important;
+}
+/* 开关按钮：轨道 44h/68w，圆点 32px（≥44px 触控） */
+#root button.xn-switch-toggle {
+  width: 68px !important; height: 44px !important; min-height: 44px !important;
+  padding: 0 !important; border-radius: 999px !important;
+  margin: 0 8px !important; cursor: pointer !important;
+  box-shadow: 0 3px 10px -6px rgba(15,23,42,.6);
+}
+#root button.xn-switch-toggle > span {
+  width: 32px !important; height: 32px !important; top: 6px !important; left: 6px !important;
+}
+/* 宽度常用值胶囊 */
+.xn-switch-qrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.xn-switch-q {
+  min-height: 36px; padding: 0 13px; border-radius: 999px;
+  border: 1px solid #dbe3f0; background: #fff; color: #1d4ed8;
+  font-size: 13.5px; font-weight: 700; cursor: pointer; font-variant-numeric: tabular-nums;
+}
+.xn-switch-q:hover { background: #eff6ff; border-color: #93c5fd; }
+/* 按钮 */
+#root button.xn-switch-btn {
+  min-height: 46px !important; height: 46px !important; padding: 0 18px !important;
+  border-radius: 12px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  border: 1.5px solid #dbe3f0 !important; background: #fff !important;
+  color: var(--sw-ink) !important; cursor: pointer !important;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+#root button.xn-switch-btn:hover { transform: translateY(-1px); }
+#root button.xn-switch-btn-primary {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb) !important;
+  color: #fff !important; border-color: transparent !important;
+  box-shadow: 0 8px 18px -12px rgba(37,99,235,.9) !important;
+}
+/* 代码块 */
+#root pre.xn-switch-pre {
+  font-size: 14.5px !important; line-height: 1.7 !important;
+  background: #0f1b2d !important; color: #dbeafe !important;
+  border: 1px solid rgba(45,212,191,.28) !important; border-radius: 14px !important;
+  padding: 16px !important; overflow-x: auto !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.03), 0 12px 26px -20px rgba(2,10,25,.6) !important;
+}
+#root pre.xn-switch-pre code { font-size: 14.5px !important; color: #dbeafe !important; }
+/* 预览台 */
+#root .xn-switch-stage {
+  border-radius: 16px !important;
+  background:
+    radial-gradient(120% 130% at 50% 0%, rgba(37,99,235,.10), rgba(20,184,166,.08) 62%, rgba(255,255,255,.8)) !important;
+  border: 1px solid rgba(147,197,253,.5) !important;
+}
+/* 色值 / 摘要数字 */
+#root .xn-switch-hex { font-size: 13px !important; font-weight: 700 !important; color: #1d4ed8 !important; font-family: ui-monospace, SFMono-Regular, Menlo, monospace !important; }
+#root .xn-switch-num-txt { font-size: 16px !important; font-weight: 800 !important; color: var(--sw-ink) !important; font-variant-numeric: tabular-nums; }
+/* 说明 */
+#root p { line-height: 1.75; }
+/* 回到顶部 */
+.xn-switch-top {
+  position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px;
+  border-radius: 14px; border: 1px solid var(--sw-line); background: #fff; color: #1d4ed8;
+  font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(15,40,90,.6);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-switch-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-switch-top:hover { background: #eff6ff; }
+@media (prefers-reduced-motion: no-preference) {
+  body::before {
+    content: ""; position: fixed; inset: -10%; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(420px 300px at 26% 30%, rgba(37,99,235,.09), transparent 62%),
+      radial-gradient(380px 280px at 76% 64%, rgba(20,184,166,.08), transparent 64%);
+    animation: xn-switch-aura 26s ease-in-out infinite alternate;
+  }
+  @keyframes xn-switch-aura { 0% { transform: translate3d(-1.2%, -1%, 0); } 100% { transform: translate3d(1.2%, 1%, 0); } }
+}
+@media (max-width: 420px) {
+  #root h1 { font-size: 27px !important; }
+  #root .xn-switch-tab { min-height: 44px !important; height: 44px !important; padding: 0 14px !important; font-size: 14px !important; }
+  #root input.xn-switch-text:not([type="color"]):not([type="file"]):not([type="range"]):not([type="number"]):not([type="checkbox"]) { height: 50px !important; font-size: 15px !important; }
+  #root input.xn-switch-num { height: 50px !important; min-width: 68px !important; width: 74px !important; font-size: 21px !important; }
+  #root .xn-switch-h2 { font-size: 18px !important; }
+  #root pre.xn-switch-pre { font-size: 13px !important; }
+  #root button.xn-switch-toggle { margin: 0 6px !important; }
+  .xn-switch-top { right: 14px; bottom: 18px; }
+}
