@@ -75,11 +75,13 @@
       var ty = (x.getAttribute("type") || "text").toLowerCase();
       if (ty === "text") {
         add(x, "xn-ie-text");
+        // 通用层 input:not(...) 链特异性更高，字号用内联 important 兜底
+        if (x.style.getPropertyValue("font-size") !== "16px") x.style.setProperty("font-size", "16px", "important");
         var t = fieldLabelOf(x);
-        if (t) setA(x, "aria-label", t);
+        if (t) setA(x, "aria-label", t.replace(/\s*\d+\s*(%|px)?$/i, ""));
       } else if (ty === "range") {
         add(x, "xn-ie-range");
-        var lab = fieldLabelOf(x);
+        var lab = fieldLabelOf(x).replace(/\s*\d+\s*(%|px)?$/i, "");
         if (lab) { setA(x, "aria-label", lab); x.title = lab; }
       }
     });
