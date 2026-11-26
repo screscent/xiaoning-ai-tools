@@ -25,12 +25,13 @@
   }
 
   function markFields() {
-    var pick = document.getElementById("pick");
+    var pick = document.querySelector(".bar-in select");
     if (pick) { if (!pick.getAttribute("aria-label")) setA(pick, "aria-label", "选择工具"); }
     var q = document.getElementById("q");
     if (q) { if (!q.getAttribute("aria-label")) setA(q, "aria-label", "搜索工具"); }
     each(document.querySelectorAll("button"), function (b) {
       if (!vis(b)) return;
+      if (b.id === "pick" && !b.getAttribute("data-xn-file")) { setA(b, "aria-label", "导入文本文件"); setA(b, "data-xn-file", "1"); }
       if (b.classList.contains("primary") && !b.getAttribute("data-xn-btn")) {
         setA(b, "aria-label", clean(b.textContent) + "（主操作）");
         setA(b, "data-xn-btn", "1");

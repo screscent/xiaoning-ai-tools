@@ -40,13 +40,13 @@ h1 {
 
 /* 顶部工具选择与搜索 */
 .bar-in { gap: 9px !important; }
-#pick, #q {
+.bar-in select, .bar-in #q {
   min-height: 52px !important; height: 52px !important;
   font-size: 16px !important; font-weight: 700 !important;
   border: 1.5px solid var(--st-line) !important; border-radius: 12px !important;
   background: #fff !important; color: #1e293b !important;
 }
-#pick { min-width: 210px !important; }
+.bar-in select { min-width: 210px !important; }
 #q { font-weight: 600 !important; }
 #q::placeholder { color: #94a3b8 !important; }
 .bar-in > label { font-size: 13px !important; font-weight: 700 !important; color: #334155 !important; }
@@ -74,7 +74,7 @@ nav.tabs a.on {
   background: rgba(255,255,255,.98) !important;
   box-shadow: 0 20px 40px -34px rgba(30,41,89,.55) !important;
 }
-.toolhead h2 { font-size: 20px !important; font-weight: 800 !important; color: #0f172a !important; }
+.toolhead h2, #tname { font-size: 20px !important; font-weight: 800 !important; color: #0f172a !important; }
 .panel .hint { font-size: 13px !important; color: #5b6780 !important; }
 .opts {
   border-radius: 14px !important; border: 1px solid var(--st-line) !important;
@@ -154,9 +154,9 @@ footer { font-size: 12.5px !important; color: #64748b !important; border-top: 1p
 
 @media (max-width: 640px) {
   h1 { font-size: 27px !important; }
-  .toolhead h2 { font-size: 18px !important; }
+  .toolhead h2, #tname { font-size: 18px !important; }
   nav.tabs a { font-size: 12.5px !important; padding: 0 12px !important; }
-  #pick, #q { height: 48px !important; min-height: 48px !important; font-size: 15.5px !important; }
+  .bar-in select, .bar-in #q { height: 48px !important; min-height: 48px !important; font-size: 15.5px !important; }
   .field input { width: 160px !important; height: 46px !important; min-height: 46px !important; }
   textarea, pre { min-height: 240px !important; }
   .xn-set-top { right: 14px; bottom: 18px; }
