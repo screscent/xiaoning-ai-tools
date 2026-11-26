@@ -1,0 +1,168 @@
+/* 小凝工具站 · 加载动画与骨架屏皮肤 xn-load v1（纯 CSS，无图片）
+ * 主题：极光加载 —— 浅雾底 + 蓝紫极光带 + 微光扫掠，蓝紫主色。
+ * 注入：legacy/5cuungt6g5.html
+ */
+:root { --ld: #3b82f6; --ld-2: #8b5cf6; --ld-ink: #0f172a; --ld-line: #e2e8f0; }
+html { background: #f7f9ff; }
+body {
+  background:
+    radial-gradient(900px 520px at 10% -8%, rgba(59,130,246,.14), transparent 62%),
+    radial-gradient(820px 500px at 94% 2%, rgba(139,92,246,.13), transparent 64%),
+    radial-gradient(700px 520px at 50% 106%, rgba(20,184,166,.08), transparent 66%),
+    linear-gradient(120deg, rgba(59,130,246,.03), rgba(139,92,246,.03)),
+    #f7f9ff !important;
+  color: var(--ld-ink);
+}
+/* 工具标签 */
+#root .xn-load-tab {
+  min-height: 44px !important; height: 44px !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  padding: 0 20px !important; border-radius: 999px !important;
+  font-size: 14.5px !important; font-weight: 700 !important; line-height: 1 !important;
+  color: #334155 !important; background: rgba(255,255,255,.85) !important;
+  border: 1px solid var(--ld-line) !important; text-decoration: none !important;
+  box-shadow: 0 4px 12px -10px rgba(15,23,42,.5);
+}
+#root .xn-load-tab[aria-current="page"] {
+  color: #fff !important; border-color: transparent !important;
+  background: linear-gradient(135deg, #2563eb, #3b82f6 50%, #7c3aed) !important;
+  box-shadow: 0 8px 18px -10px rgba(59,130,246,.8) !important;
+}
+/* 卡片与标题 */
+#root section {
+  background: rgba(255,255,255,.92) !important;
+  border: 1px solid rgba(226,232,240,.95) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 30px -24px rgba(15,23,42,.55) !important;
+}
+#root .xn-load-h2 { font-size: 20px !important; font-weight: 800 !important; color: var(--ld-ink) !important; }
+#root h3.xn-load-h2 { font-size: 16.5px !important; }
+#root label { font-size: 13.5px !important; font-weight: 600 !important; color: #334155 !important; }
+/* 输入 */
+#root input.xn-load-color {
+  width: 48px !important; min-width: 48px !important; height: 52px !important;
+  padding: 4px !important; border-radius: 12px !important;
+  border: 1.5px solid #dbe3f0 !important; background: #fff !important; cursor: pointer !important;
+}
+#root input.xn-load-num {
+  height: 52px !important; min-width: 76px !important; width: 86px !important;
+  font-size: 22px !important; font-weight: 800 !important; text-align: center !important;
+  border-radius: 12px !important; border: 1.5px solid #dbe3f0 !important;
+  background: #fff !important; color: var(--ld-ink) !important;
+  font-variant-numeric: tabular-nums; flex-shrink: 0 !important;
+}
+#root input.xn-load-num::-webkit-outer-spin-button, #root input.xn-load-num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+#root input.xn-load-num { -moz-appearance: textfield; appearance: textfield; }
+/* 滑块 */
+#root input.xn-load-range {
+  height: 44px !important; -webkit-appearance: none !important; appearance: none !important;
+  background: transparent !important; cursor: pointer;
+}
+#root input.xn-load-range::-webkit-slider-runnable-track {
+  height: 10px; border-radius: 999px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1 60%, #8b5cf6);
+}
+#root input.xn-load-range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 26px; height: 26px; margin-top: -8px;
+  border-radius: 50%; background: #fff; border: 3px solid #3b82f6;
+  box-shadow: 0 3px 8px rgba(59,130,246,.35);
+}
+#root input.xn-load-range::-moz-range-track {
+  height: 10px; border-radius: 999px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1 60%, #8b5cf6);
+}
+#root input.xn-load-range::-moz-range-thumb {
+  width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 3px solid #3b82f6;
+}
+/* 下拉 */
+#root select.xn-load-select {
+  height: 50px !important; font-size: 15.5px !important; font-weight: 600 !important;
+  border-radius: 12px !important; border: 1.5px solid #dbe3f0 !important;
+  padding: 0 12px !important; background: #fff !important; color: var(--ld-ink) !important;
+}
+#root input:focus, #root select:focus {
+  border-color: #93c5fd !important; box-shadow: 0 0 0 3px rgba(59,130,246,.16) !important; outline: none !important;
+}
+/* 开关（尺寸/配色由 JS 内联兜底） */
+#root button.xn-load-switch {
+  width: 68px !important; height: 44px !important; min-height: 44px !important;
+  padding: 0 !important; border-radius: 999px !important;
+  margin: 0 6px !important; cursor: pointer !important;
+  box-shadow: 0 3px 10px -6px rgba(15,23,42,.6);
+}
+#root button.xn-load-switch > span {
+  position: absolute !important;
+  width: 32px !important; height: 32px !important; top: 6px !important; left: 6px !important;
+  margin: 0 !important;
+}
+/* 复选框（骨架屏动画开关） */
+#root input.xn-load-check {
+  width: 24px !important; height: 24px !important; min-width: 24px !important;
+  accent-color: #3b82f6 !important; cursor: pointer; flex-shrink: 0 !important;
+}
+/* 按钮 */
+#root button.xn-load-btn {
+  min-height: 46px !important; height: 46px !important; padding: 0 18px !important;
+  border-radius: 12px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  border: 1.5px solid #dbe3f0 !important; background: #fff !important;
+  color: var(--ld-ink) !important; cursor: pointer !important;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+#root button.xn-load-btn:hover { transform: translateY(-1px); }
+#root button.xn-load-btn-primary {
+  background: linear-gradient(135deg, #2563eb, #3b82f6 55%, #7c3aed) !important;
+  color: #fff !important; border-color: transparent !important;
+  box-shadow: 0 8px 18px -12px rgba(59,130,246,.9) !important;
+}
+#root button.xn-load-mini {
+  min-height: 44px !important; height: 44px !important; padding: 0 14px !important;
+  border-radius: 999px !important; font-size: 13.5px !important; font-weight: 700 !important;
+}
+/* 代码块 */
+#root pre.xn-load-pre {
+  font-size: 14.5px !important; line-height: 1.7 !important;
+  background: #0d1526 !important; color: #dbeafe !important;
+  border: 1px solid rgba(139,92,246,.3) !important; border-radius: 14px !important;
+  padding: 16px !important; overflow-x: auto !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.03), 0 12px 26px -20px rgba(2,10,25,.6) !important;
+}
+#root pre.xn-load-pre code { font-size: 14.5px !important; color: #dbeafe !important; }
+/* 骨架屏预览：原页 .sk 父级宽度为 0，显式给定宽度让骨架条可见 */
+#root .sk { width: 320px !important; min-width: 240px !important; max-width: 320px !important; }
+#root .sk-row { width: 100% !important; }
+#root .xn-load-unit { font-size: 12.5px !important; font-weight: 700 !important; color: #475569 !important; white-space: nowrap !important; }
+/* 数值强调 */
+#root .xn-load-numtxt { font-size: 16px !important; font-weight: 800 !important; color: #1d4ed8 !important; font-variant-numeric: tabular-nums; }
+/* 说明 */
+#root p, #root li { line-height: 1.75; }
+/* 回到顶部 */
+.xn-load-top {
+  position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px;
+  border-radius: 14px; border: 1px solid var(--ld-line); background: #fff; color: #1d4ed8;
+  font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(15,40,90,.6);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-load-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-load-top:hover { background: #eff6ff; }
+@media (prefers-reduced-motion: no-preference) {
+  body::before {
+    content: ""; position: fixed; inset: -12%; z-index: -1; pointer-events: none;
+    background:
+      linear-gradient(115deg, transparent 30%, rgba(59,130,246,.10) 45%, rgba(139,92,246,.10) 55%, transparent 70%);
+    background-size: 220% 220%;
+    animation: xn-load-aurora 22s linear infinite;
+  }
+  @keyframes xn-load-aurora { 0% { background-position: 0% 0%; } 100% { background-position: 100% 100%; } }
+}
+@media (max-width: 420px) {
+  #root h1 { font-size: 27px !important; }
+  #root .xn-load-tab { min-height: 44px !important; height: 44px !important; padding: 0 15px !important; font-size: 14px !important; }
+  #root input.xn-load-num { height: 50px !important; min-width: 68px !important; width: 74px !important; font-size: 21px !important; }
+  #root .xn-load-h2 { font-size: 18px !important; }
+  #root pre.xn-load-pre { font-size: 13px !important; }
+  #root button.xn-load-switch { margin: 0 4px !important; }
+  .xn-load-top { right: 14px; bottom: 18px; }
+}
