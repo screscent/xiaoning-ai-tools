@@ -1,0 +1,161 @@
+/* 小凝工具站 · ASCII 艺术与字符画皮肤 xn-ascii v1（纯 CSS，无图片）
+ * 主题：字符终端 —— 米绿纸底 + 翠绿/琥珀柔光 + 细扫描线，翠绿主色。
+ * 注入：legacy/bnxqa6nsmb.html
+ */
+:root { --as: #059669; --as-2: #d97706; --as-ink: #052e2b; --as-line: #dcebe3; }
+html { background: #f6f9f4; }
+body {
+  background:
+    radial-gradient(900px 520px at 8% -8%, rgba(5,150,105,.14), transparent 62%),
+    radial-gradient(820px 500px at 96% 4%, rgba(217,119,6,.10), transparent 64%),
+    repeating-linear-gradient(0deg, rgba(5,46,43,.028) 0 1px, transparent 1px 4px),
+    #f6f9f4 !important;
+  color: var(--as-ink);
+}
+/* 工具标签 */
+#root .xn-ascii-tab {
+  min-height: 44px !important; height: 44px !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  padding: 0 20px !important; border-radius: 999px !important;
+  font-size: 14.5px !important; font-weight: 700 !important; line-height: 1 !important;
+  color: #334155 !important; background: rgba(255,255,255,.85) !important;
+  border: 1px solid var(--as-line) !important;
+  box-shadow: 0 4px 12px -10px rgba(5,46,43,.5);
+}
+#root .xn-ascii-tab[aria-current="page"] {
+  color: #fff !important; border-color: transparent !important;
+  background: linear-gradient(135deg, #065f46, #059669 55%, #0d9488) !important;
+  box-shadow: 0 8px 18px -10px rgba(5,150,105,.8) !important;
+}
+/* 卡片与标题 */
+#root section, #root .xn-ascii-card {
+  background: rgba(255,255,255,.93) !important;
+  border: 1px solid rgba(220,235,227,.95) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 30px -24px rgba(5,46,43,.55) !important;
+}
+#root .xn-ascii-h2 { font-size: 20px !important; font-weight: 800 !important; color: var(--as-ink) !important; }
+#root h3.xn-ascii-h2 { font-size: 16.5px !important; }
+#root label { font-size: 13.5px !important; font-weight: 600 !important; color: #334155 !important; }
+/* 上传按钮 */
+#root .xn-ascii-upload {
+  min-height: 44px !important; height: 44px !important;
+  display: inline-flex !important; align-items: center !important; gap: 8px !important;
+  padding: 0 18px !important; border-radius: 12px !important;
+  font-size: 14.5px !important; font-weight: 800 !important; color: #fff !important;
+  background: linear-gradient(135deg, #047857, #059669 55%, #0d9488) !important;
+  box-shadow: 0 8px 18px -14px rgba(5,150,105,.9) !important;
+  cursor: pointer !important;
+}
+/* 滑块 */
+#root input.xn-ascii-range {
+  height: 44px !important; -webkit-appearance: none !important; appearance: none !important;
+  background: transparent !important; cursor: pointer;
+}
+#root input.xn-ascii-range::-webkit-slider-runnable-track {
+  height: 10px; border-radius: 999px;
+  background: linear-gradient(90deg, #059669, #0d9488 60%, #d97706);
+}
+#root input.xn-ascii-range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 26px; height: 26px; margin-top: -8px;
+  border-radius: 50%; background: #fff; border: 3px solid #059669;
+  box-shadow: 0 3px 8px rgba(5,150,105,.35);
+}
+#root input.xn-ascii-range::-moz-range-track {
+  height: 10px; border-radius: 999px;
+  background: linear-gradient(90deg, #059669, #0d9488 60%, #d97706);
+}
+#root input.xn-ascii-range::-moz-range-thumb {
+  width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 3px solid #059669;
+}
+/* 下拉 */
+#root select.xn-ascii-select {
+  height: 50px !important; font-size: 15.5px !important; font-weight: 600 !important;
+  border-radius: 12px !important; border: 1.5px solid var(--as-line) !important;
+  padding: 0 12px !important; background: #fff !important; color: var(--as-ink) !important;
+}
+#root input:focus, #root select:focus, #root textarea:focus {
+  border-color: #6ee7b7 !important; box-shadow: 0 0 0 3px rgba(5,150,105,.16) !important; outline: none !important;
+}
+/* 反色开关 */
+#root .xn-ascii-checklabel { min-height: 44px !important; display: inline-flex !important; align-items: center !important; gap: 10px !important; }
+#root .xn-ascii-checklabel .xn-ascii-track { width: 60px !important; height: 34px !important; display: inline-flex !important; }
+#root input.xn-ascii-check {
+  width: 60px !important; height: 34px !important; border-radius: 999px !important;
+  background: #cbd5e1 !important; cursor: pointer !important;
+}
+#root input.xn-ascii-check:checked { background: #059669 !important; }
+#root .xn-ascii-knob {
+  width: 28px !important; height: 28px !important; top: 3px !important; left: 3px !important;
+  background: #fff !important; box-shadow: 0 2px 6px rgba(5,46,43,.28) !important;
+}
+/* 按钮 */
+#root button.xn-ascii-btn {
+  min-height: 46px !important; height: 46px !important; padding: 0 18px !important;
+  border-radius: 12px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  border: 1.5px solid var(--as-line) !important; background: #fff !important;
+  color: var(--as-ink) !important; cursor: pointer !important;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+#root button.xn-ascii-btn:hover { transform: translateY(-1px); }
+#root button.xn-ascii-btn-primary {
+  background: linear-gradient(135deg, #047857, #059669) !important;
+  color: #fff !important; border-color: transparent !important;
+  box-shadow: 0 8px 18px -12px rgba(5,150,105,.9) !important;
+}
+/* 文字输入 */
+#root textarea.xn-ascii-text {
+  min-height: 98px !important; font-size: 16px !important; line-height: 1.7 !important;
+  padding: 12px 14px !important; border-radius: 12px !important;
+  border: 1.5px solid var(--as-line) !important; background: #fff !important;
+  color: var(--as-ink) !important; box-sizing: border-box !important;
+}
+/* ASCII / 字符画终端输出 */
+#root pre.xn-ascii-pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  font-size: 13.5px !important; line-height: 1.28 !important;
+  background: #0b1220 !important; color: #a7f3d0 !important;
+  border: 1px solid rgba(16,185,129,.3) !important; border-radius: 12px !important;
+  padding: 14px !important; overflow: auto !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.03) !important;
+}
+#root .xn-ascii-stage {
+  border-radius: 14px !important;
+  background:
+    repeating-linear-gradient(0deg, rgba(5,46,43,.03) 0 1px, transparent 1px 4px),
+    rgba(236,253,245,.65) !important;
+  border: 1.5px dashed rgba(5,150,105,.35) !important;
+}
+#root .xn-ascii-stage, #root .xn-ascii-stage * { color: #047857 !important; }
+/* 数值 */
+#root .xn-ascii-num { font-size: 18px !important; font-weight: 800 !important; color: #047857 !important; font-variant-numeric: tabular-nums; }
+/* 说明 */
+#root p, #root li { line-height: 1.75; }
+/* 回到顶部 */
+.xn-ascii-top {
+  position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px;
+  border-radius: 14px; border: 1px solid var(--as-line); background: #fff; color: #047857;
+  font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(5,46,43,.6);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-ascii-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-ascii-top:hover { background: #ecfdf5; }
+@media (prefers-reduced-motion: no-preference) {
+  body::before {
+    content: ""; position: fixed; inset: -10%; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(420px 300px at 24% 30%, rgba(5,150,105,.09), transparent 62%),
+      radial-gradient(380px 280px at 78% 66%, rgba(217,119,6,.07), transparent 64%);
+    animation: xn-ascii-aura 26s ease-in-out infinite alternate;
+  }
+  @keyframes xn-ascii-aura { 0% { transform: translate3d(-1.2%, -1%, 0); } 100% { transform: translate3d(1.2%, 1%, 0); } }
+}
+@media (max-width: 420px) {
+  #root h1 { font-size: 27px !important; }
+  #root .xn-ascii-tab { min-height: 44px !important; height: 44px !important; padding: 0 15px !important; font-size: 14px !important; }
+  #root .xn-ascii-h2 { font-size: 18px !important; }
+  #root pre.xn-ascii-pre { font-size: 12.5px !important; }
+  .xn-ascii-top { right: 14px; bottom: 18px; }
+}
