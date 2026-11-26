@@ -55,6 +55,20 @@
     });
   }
 
+  function stripToolPrefix() {
+    if (!/工具[A-F]/.test(document.body.textContent || "")) return;
+    var walker = document.createTreeWalker(document.querySelector("#root") || document.body, NodeFilter.SHOW_TEXT, null);
+    var n;
+    while ((n = walker.nextNode())) {
+      if (n.parentElement && n.parentElement.closest("pre, textarea, script, style")) continue;
+      var t = n.textContent;
+      if (/工具[A-F]/.test(t)) {
+        var s2 = t.replace(/工具[A-F]\s*/g, "");
+        if (s2 !== t) n.textContent = s2;
+      }
+    }
+  }
+
   function markCards() {
     each(document.querySelectorAll("#root section, #root div"), function (d) {
       if (!vis(d)) return;
@@ -113,7 +127,7 @@
   }
 
   function tick() {
-    try { markHeads(); markTabs(); markCards(); markInputs(); markButtons(); ensureTop(); } catch (e) {}
+    try { markHeads(); markTabs(); stripToolPrefix(); markCards(); markInputs(); markButtons(); ensureTop(); } catch (e) {}
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tick, { once: true });
   else tick();
