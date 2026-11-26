@@ -1,0 +1,136 @@
+/* 小凝工具站 · JSON 转多语言模型皮肤 xn-codegen v1（纯 CSS，无图片）
+ * 主题：IDE 蓝图 —— 冷白底 + 靛蓝/青绿双色 + 点阵 + 深色代码块。
+ * 注入：legacy/uiadeexjku.html（xn-ux 之后追加）。
+ */
+:root { --cg: #4f46e5; --cg-2: #0891b2; --cg-ink: #0f172a; --cg-line: #dde5f2; }
+html { background: #f5f8fd; }
+body {
+  background:
+    radial-gradient(900px 520px at 4% -10%, rgba(79,70,229,.12), transparent 62%),
+    radial-gradient(760px 480px at 100% 0%, rgba(8,145,178,.10), transparent 60%),
+    radial-gradient(rgba(15,23,42,.055) 1px, transparent 1.3px),
+    #f5f8fd !important;
+  background-size: auto, auto, 18px 18px, auto !important;
+  background-attachment: fixed !important;
+  color: var(--cg-ink);
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(1100px 560px at 50% -12%, rgba(255,255,255,.85), transparent 62%);
+  -webkit-mask-image: none; mask-image: none; opacity: 1;
+}
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* 标题 */
+#root h1.xn-cg-h1 { font-size: 34px !important; font-weight: 800 !important; letter-spacing: -.4px !important; color: #0b1430 !important; }
+#root .xn-cg-h2 { font-size: 20px !important; font-weight: 800 !important; color: #0b1430 !important; }
+#root label { font-size: 13.5px !important; font-weight: 700 !important; color: #334155 !important; }
+
+/* 工具卡（5 个入口） */
+#root .xn-cg-card {
+  min-height: 132px !important;
+  border-radius: 16px !important;
+  border: 1.5px solid var(--cg-line) !important;
+  background: rgba(255,255,255,.96) !important;
+  box-shadow: 0 10px 24px -24px rgba(15,23,42,.55) !important;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease !important;
+}
+#root .xn-cg-card:hover {
+  transform: translateY(-2px);
+  border-color: #c7d2fe !important;
+  box-shadow: 0 16px 30px -22px rgba(79,70,229,.55) !important;
+}
+#root .xn-cg-goto {
+  display: inline-flex !important; align-items: center !important; gap: 6px !important;
+  min-height: 32px !important; font-size: 13px !important; font-weight: 800 !important;
+  color: #4338ca !important;
+}
+#root .xn-cg-card:hover .xn-cg-goto { color: #0e7490 !important; }
+
+/* 工具区块卡片 */
+#root .xn-cg-sec {
+  border-radius: 18px !important;
+  border: 1px solid var(--cg-line) !important;
+  background: rgba(255,255,255,.97) !important;
+  box-shadow: 0 18px 36px -30px rgba(15,23,42,.55) !important;
+}
+
+/* 输入 JSON */
+#root textarea.xn-cg-text {
+  min-height: 260px !important; font-size: 15.5px !important; line-height: 1.7 !important;
+  padding: 14px !important; border-radius: 12px !important;
+  border: 1.5px solid var(--cg-line) !important; background: #fff !important;
+  color: var(--cg-ink) !important; font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace !important;
+  box-sizing: border-box !important;
+}
+#root textarea.xn-cg-text:focus { border-color: #a5b4fc !important; box-shadow: 0 0 0 3px rgba(79,70,229,.15) !important; outline: none !important; }
+
+/* 代码块：深色 IDE */
+#root pre.xn-cg-pre {
+  background: #0f172a !important;
+  color: #e2e8f0 !important;
+  font-size: 13.5px !important; line-height: 1.7 !important;
+  padding: 16px !important; border-radius: 12px !important;
+  border: 1px solid #1e293b !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04) !important;
+  tab-size: 2;
+  font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace !important;
+}
+#root pre.xn-cg-pre::selection { background: rgba(8,145,178,.45); }
+
+/* 复制 / 清空 */
+#root button.xn-cg-copy {
+  min-height: 44px !important; height: 44px !important; padding: 0 14px !important;
+  border-radius: 10px !important; font-size: 13.5px !important; font-weight: 800 !important;
+  border: 1.5px solid var(--cg-line) !important; background: #fff !important; color: #3730a3 !important;
+  cursor: pointer !important;
+}
+#root button.xn-cg-copy:hover { border-color: #a5b4fc !important; background: #f5f6ff !important; }
+#root button.xn-cg-clear {
+  min-height: 44px !important; height: 44px !important; padding: 0 16px !important;
+  border-radius: 10px !important; font-size: 13.5px !important; font-weight: 800 !important;
+  border: 1.5px solid var(--cg-line) !important; background: #f8fafc !important; color: #475569 !important;
+  cursor: pointer !important;
+}
+
+/* 下拉 */
+#root select.xn-cg-select {
+  height: 52px !important; font-size: 16px !important; font-weight: 700 !important;
+  border-radius: 12px !important; border: 1.5px solid var(--cg-line) !important;
+  padding: 0 14px !important; background: #fff !important; color: var(--cg-ink) !important;
+}
+#root input:focus, #root select:focus { border-color: #a5b4fc !important; box-shadow: 0 0 0 3px rgba(79,70,229,.15) !important; outline: none !important; }
+
+/* 说明与小字 */
+#root p, #root li { line-height: 1.75; }
+#root .xn-cg-note { font-size: 13.5px !important; color: #475569 !important; }
+#root .xn-cg-meta { font-size: 12.8px !important; font-weight: 700 !important; color: #64748b !important; }
+
+/* 回到顶部 */
+.xn-cg-top {
+  position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px;
+  border-radius: 14px; border: 1px solid var(--cg-line); background: #fff; color: #4338ca;
+  font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(15,23,42,.6);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-cg-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-cg-top:hover { background: #f5f6ff; }
+
+@media (max-width: 639px) {
+  #root h1.xn-cg-h1 { font-size: 27px !important; }
+  #root .xn-cg-h2 { font-size: 18px !important; }
+  #root textarea.xn-cg-text { min-height: 200px !important; font-size: 15px !important; }
+  #root pre.xn-cg-pre { font-size: 12.8px !important; padding: 13px !important; }
+  .xn-cg-top { right: 14px; bottom: 18px; }
+}
+
+/* 入口卡：等高、底部对齐「前往工具」 */
+#root a.xn-cg-card {
+  display: flex !important; flex-direction: column !important;
+  padding: 14px !important; min-height: 232px !important;
+}
+#root a.xn-cg-card > div:first-child { gap: 9px !important; }
+#root a.xn-cg-card .xn-cg-goto { margin-top: auto !important; }
