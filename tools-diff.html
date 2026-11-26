@@ -34,14 +34,24 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div class="xn-diff-ui" data-xn-diff="1">
+<div class="xn-pane"><label for="xnA">文本 A · 原始</label><textarea id="xnA" placeholder="粘贴原始版本，例如旧代码或旧文案"></textarea></div>
+<div class="xn-pane"><label for="xnB">文本 B · 对比</label><textarea id="xnB" placeholder="粘贴新版本，左右逐行对比"></textarea></div>
+</div>
+<div class="xn-tools" data-xn-diff="1">
+<span class="xn-thr" id="xnThrWrap" hidden><label for="xnThr">相似灵敏度</label><input type="range" id="xnThr" min="10" max="90" step="5" value="40" aria-label="相似度阈值"><b id="xnThrV">40%</b></span>
+<button type="button" id="xnSwap">交换 A/B</button>
+<button type="button" class="xn-preset" data-p="code">示例：代码改动</button>
+<button type="button" class="xn-preset" data-p="text">示例：文案改动</button>
+</div>
+<textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "diff", "name": "行级差异", "desc": "两段文本用一行 === 分隔 → +/- 逐行对比", "impl": "diffLines"}, {"key": "stats", "name": "差异统计", "desc": "新增/删除/相同行数与行相似度", "impl": "diffStats"}, {"key": "sim", "name": "文本相似度", "desc": "字符二元组 Dice 相似度（0~100%）", "impl": "textSim"}, {"key": "unified", "name": "统一 diff 格式", "desc": "---/+++/@@ 格式，可贴给协作方", "impl": "unifiedDiff"}, {"key": "first", "name": "首个差异定位", "desc": "定位第一处不同的行号/列号与上下文", "impl": "firstDiff"}, {"key": "norm", "name": "忽略空白与大小写", "desc": "规范化后再比较，判断是否只是格式差异", "impl": "difNormStats"}, {"key": "words", "name": "词级差异", "desc": "按词/字符切分，行内标出增删的词", "impl": "difWords"}, {"key": "sets", "name": "两列表集合运算", "desc": "逐行去重后给出交集/并集/双方独有项", "impl": "difSets"}, {"key": "side", "name": "并排对比视图", "desc": "按行号左右对齐，* 标出不同行", "impl": "difSideBySide"}, {"key": "lev", "name": "编辑距离与相似度", "desc": "字符级 Levenshtein（≤400 字符）", "impl": "levDistance"}, {"key": "html", "name": "差异转 HTML", "desc": "输出带 del/ins class 的 div 片段", "impl": "difHtml"}, {"key": "numbered", "name": "带行号差异", "desc": "左右行号对照，- 左 / + 右标记增删", "impl": "difNumbered"}, {"key": "common", "name": "公共行提取", "desc": "两段文本共有的行（去重保序）", "impl": "difCommonLines"}, {"key": "ignoreblank", "name": "忽略空行比较", "desc": "忽略空行和行首尾空白后再判断是否一致", "impl": "difIgnoreBlank"}, {"key": "char", "name": "字符级差异", "desc": "定位首个不同字符并给出左右增删片段", "impl": "charDiff"}, {"key": "multiset", "name": "忽略顺序比较", "desc": "行集合按出现次数比较，不关心顺序", "impl": "multisetEq"}, {"key": "linematch", "name": "行相似匹配", "desc": "为左侧每行在右侧找最相似行（阈值 40%）", "impl": "lineMatch"}];
+const TOOLS=[{"key": "diff", "name": "行级差异", "desc": "左右两段文本分别粘贴，逐行标出新增与删除", "impl": "diffLines"}, {"key": "stats", "name": "差异统计", "desc": "统计新增/删除/相同行数，并给出行相似度", "impl": "diffStats"}, {"key": "sim", "name": "文本相似度", "desc": "按字符二元组计算两段文本相似度（0~100%）", "impl": "textSim"}, {"key": "unified", "name": "统一 diff 格式", "desc": "生成通用统一 diff，可粘贴给协作方", "impl": "unifiedDiff"}, {"key": "first", "name": "首个差异定位", "desc": "定位第一处差异所在行列与上下文", "impl": "firstDiff"}, {"key": "norm", "name": "忽略空白与大小写", "desc": "忽略空白与大小写后再比较", "impl": "difNormStats"}, {"key": "words", "name": "词级差异", "desc": "按词切分，标出两段文本的增删", "impl": "difWords"}, {"key": "sets", "name": "两列表集合运算", "desc": "逐行去重后给出交集、并集与双方独有", "impl": "difSets"}, {"key": "side", "name": "并排对比视图", "desc": "按行号左右并排对齐，* 标出不同行", "impl": "difSideBySide"}, {"key": "lev", "name": "编辑距离与相似度", "desc": "字符级编辑距离与相似度（每段 ≤400 字符）", "impl": "levDistance"}, {"key": "html", "name": "差异转 HTML", "desc": "生成带 del/ins 高亮 class 的 HTML 片段", "impl": "difHtml"}, {"key": "numbered", "name": "带行号差异", "desc": "左右行号对照，- 左 / + 右标记增删", "impl": "difNumbered"}, {"key": "common", "name": "公共行提取", "desc": "提取两段文本共有的行（去重保序）", "impl": "difCommonLines"}, {"key": "ignoreblank", "name": "忽略空行比较", "desc": "忽略空行与行首尾空白后再判断", "impl": "difIgnoreBlank"}, {"key": "char", "name": "字符级差异", "desc": "定位首个不同字符，给出左右增删片段", "impl": "charDiff"}, {"key": "multiset", "name": "忽略顺序比较", "desc": "按行出现次数比较，不关心顺序", "impl": "multisetEq"}, {"key": "linematch", "name": "行相似匹配", "desc": "为左侧每行在右侧找最相似行，可调相似灵敏度", "impl": "lineMatch"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -1444,10 +1454,10 @@ function lineMatch(s){
       const sc=dice(l,r);
       if(sc>best){best=sc;bi=ri}
     });
-    if(bi>=0&&best>=0.4){used.add(bi);rows.push('L'+(idx+1)+' ↔ R'+(bi+1)+'（'+Math.round(best*100)+'%）'+l.slice(0,24))}
+    const TH=Math.max(0.05,Math.min(0.95,(window.__XN_THRESH||0.4)));if(bi>=0&&best>=TH){used.add(bi);rows.push('L'+(idx+1)+' ↔ R'+(bi+1)+'（'+Math.round(best*100)+'%）'+l.slice(0,24))}
     else rows.push('L'+(idx+1)+' ↔ 无匹配 '+l.slice(0,24));
   });
-  return '匹配 '+rows.filter(x=>!x.includes('无匹配')).length+' / '+rows.length+' 行（阈值 40%）\n'+rows.slice(0,30).join('\n');
+  const THP=Math.round(Math.max(0.05,Math.min(0.95,(window.__XN_THRESH||0.4)))*100);return '匹配 '+rows.filter(x=>!x.includes('无匹配')).length+' / '+rows.length+' 行（灵敏度 '+THP+'%）\n'+rows.slice(0,30).join('\n');
 }
 
 function dateTs(s){const t=s.trim();const n=/^-?\d+$/.test(t)?Number(t):NaN;if(!isNaN(n)){const ms=Math.abs(n)>=1e12?n:n*1000;const d=new Date(ms);return 'ISO: '+d.toISOString()+'\n本地: '+d.toLocaleString('zh-CN')+'\n秒: '+Math.floor(ms/1000)+'\n毫秒: '+ms}const d=new Date(t);if(isNaN(d))return '格式：1700000000 或 2026-01-01 12:00:00';return 'ISO: '+d.toISOString()+'\n本地: '+d.toLocaleString('zh-CN')+'\n秒: '+Math.floor(d.getTime()/1000)+'\n毫秒: '+d.getTime()}
@@ -6205,4 +6215,48 @@ r.onerror=()=>{{$('#err').textContent='文件读取失败'}};
 r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
-</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script></body></html>
+</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script><style data-xn-diff="1">
+#inp{display:none}
+.xn-diff-ui{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:4px 0 10px}
+.xn-pane{display:flex;flex-direction:column;gap:6px}
+.xn-pane label{font-size:13px;font-weight:700;color:#334155}
+.xn-pane textarea{width:100%;height:190px;resize:vertical;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.55;background:#f8fafc;color:#0f172a}
+.xn-pane textarea:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 10px}
+.xn-tools .xn-thr{display:flex;align-items:center;gap:8px;font-size:13px;color:#334155;font-weight:600}
+.xn-tools .xn-thr input[type=range]{width:160px;accent-color:#4338ca;height:28px}
+.xn-tools .xn-thr b{font-size:15px;color:#4338ca;min-width:44px;text-align:right}
+.xn-tools button{border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:12.5px;font-weight:700;border-radius:9px;padding:8px 12px;min-height:44px;cursor:pointer}
+.xn-tools button:hover{background:#e0e7ff}
+@media(max-width:720px){.xn-diff-ui{grid-template-columns:1fr}.xn-pane textarea{height:150px}.xn-tools .xn-thr input[type=range]{width:120px}}
+</style>
+<script data-xn-diff="1">
+(function(){
+  const A=document.getElementById('xnA'),B=document.getElementById('xnB'),INP=document.getElementById('inp');
+  if(!A||!B||!INP)return;
+  let composing=false;
+  const compose=()=>{composing=true;INP.value=A.value+'\n===\n'+B.value;composing=false;try{INP.dispatchEvent(new Event('input',{bubbles:true}))}catch(e){}};
+  const run=()=>{const b=document.getElementById('run');if(b)b.click()};
+  const KEY=()=> (location.hash||'').replace(/^#\//,'');
+  const syncThr=()=>{
+    const w=document.getElementById('xnThrWrap'),t=document.getElementById('xnThr'),v=document.getElementById('xnThrV');
+    if(!w||!t)return;
+    w.hidden = KEY()!=='linematch';
+    const pct=Number(t.value)||40; v.textContent=pct+'%'; window.__XN_THRESH=pct/100;
+  };
+  const presets={
+    code:{a:'function add(a,b){\n  return a+b;\n}\nconst x=1;',b:'function add(a,b){\n  return a + b; // 求和\n}\nconst x=2;'},
+    text:{a:'小凝工具站：把常用小工具做得更好用。\n支持本地运行，不上传数据。',b:'小凝 AI 工具集：把常用小工具做得更顺手好用。\n全部本地运行，数据不上传。'}
+  };
+  A.addEventListener('input',compose); B.addEventListener('input',compose);
+  INP.addEventListener('input',()=>{ if(composing)return; const v=INP.value||''; const i=v.indexOf('\n===\n');
+    if(i>=0){A.value=v.slice(0,i);B.value=v.slice(i+5);} else {A.value=v;B.value='';} });
+  document.getElementById('xnSwap').addEventListener('click',()=>{const t=A.value;A.value=B.value;B.value=t;compose()});
+  const thr=document.getElementById('xnThr');
+  if(thr){thr.addEventListener('input',()=>{syncThr();});}
+  document.querySelectorAll('.xn-preset').forEach(b=>b.addEventListener('click',()=>{
+    const p=presets[b.dataset.p]; if(!p)return; A.value=p.a;B.value=p.b;compose();run();
+  }));
+  window.addEventListener('hashchange',syncThr); syncThr();
+})();
+</script></body></html>
