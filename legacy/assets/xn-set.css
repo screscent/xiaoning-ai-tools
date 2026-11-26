@@ -161,3 +161,16 @@ footer { font-size: 12.5px !important; color: #64748b !important; border-top: 1p
   textarea, pre { min-height: 240px !important; }
   .xn-set-top { right: 14px; bottom: 18px; }
 }
+
+/* 颜色类工具：色板控件 */
+#root .fields, .fields { display: flex; gap: 12px; flex-wrap: wrap; }
+#root .fld, .fld {
+  display: flex; align-items: center; gap: 10px;
+  background: #f7f9ff; border: 1px solid var(--st-line); border-radius: 12px; padding: 8px 12px;
+}
+#root .fld label, .fld label { font-size: 13px !important; font-weight: 700 !important; color: #334155 !important; }
+#root .fld input[type=color], .fld input[type=color] {
+  width: 76px !important; height: 52px !important; padding: 4px !important;
+  border: 1.5px solid var(--st-line) !important; border-radius: 10px !important;
+  background: #fff !important; cursor: pointer !important;
+}
