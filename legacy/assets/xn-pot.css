@@ -1,0 +1,121 @@
+/* 小凝工具站 · 花盆与土壤配比皮肤 xn-pot v1（纯 CSS，无图片）
+ * 主题：陶土园艺 —— 米陶底 + 叶点纹 + 陶土/叶绿双色。
+ * 注入：legacy/puzcrj3a4t.html（xn-ux 之后追加）。
+ */
+:root { --pt: #b45309; --pt-2: #3f6212; --pt-ink: #22201a; --pt-line: #e7ded0; }
+html { background: #fbf8f2; }
+body {
+  background:
+    radial-gradient(520px 340px at 94% -8%, rgba(180,83,9,.14), transparent 62%),
+    radial-gradient(700px 440px at -4% -6%, rgba(63,98,18,.10), transparent 62%),
+    radial-gradient(rgba(63,98,18,.09) 1px, transparent 1.4px),
+    #fbf8f2 !important;
+  background-size: auto, auto, 22px 22px, auto !important;
+  background-attachment: fixed !important;
+  color: var(--pt-ink);
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(1100px 560px at 50% -12%, rgba(255,255,255,.9), transparent 62%);
+  opacity: 1;
+}
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+#root h1.xn-pt-h1 { font-size: 34px !important; font-weight: 800 !important; letter-spacing: -.3px !important; color: #241f16 !important; }
+#root .xn-pt-h2 { font-size: 20px !important; font-weight: 800 !important; color: #241f16 !important; }
+#root label { font-size: 13px !important; font-weight: 700 !important; color: #5a4a32 !important; }
+
+/* 工具页签 */
+#root .xn-pt-nav {
+  gap: 5px !important; padding: 5px !important;
+  border-radius: 14px !important; background: #f3ede2 !important; border: 1px solid var(--pt-line) !important;
+}
+#root button.xn-pt-tab {
+  min-height: 44px !important; height: 44px !important;
+  border-radius: 10px !important; font-size: 13px !important; font-weight: 800 !important;
+  color: #5c5340 !important; background: transparent !important; border: 0 !important; cursor: pointer !important;
+}
+#root button.xn-pt-tab:hover { background: rgba(255,255,255,.8) !important; }
+#root button.xn-pt-tab[aria-pressed="true"] {
+  color: #fff !important;
+  background: linear-gradient(135deg, #d97706, #b45309 55%, #3f6212) !important;
+  box-shadow: 0 8px 16px -14px rgba(146,64,14,.9) !important;
+}
+
+/* 卡片 */
+#root .xn-pt-card {
+  background: rgba(255,255,255,.97) !important;
+  border: 1px solid var(--pt-line) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 36px -30px rgba(34,32,26,.5) !important;
+}
+
+/* 数字输入 */
+#root input[type=number].xn-pt-num {
+  height: 52px !important; font-size: 22px !important; font-weight: 800 !important;
+  border-radius: 12px !important; border: 1.5px solid var(--pt-line) !important;
+  background: #fff !important; color: var(--pt-ink) !important; font-variant-numeric: tabular-nums;
+}
+#root input[type=number].xn-pt-num::-webkit-outer-spin-button, #root input[type=number].xn-pt-num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+#root input[type=number].xn-pt-num { -moz-appearance: textfield; appearance: textfield; }
+#root select.xn-pt-select {
+  height: 52px !important; border-radius: 12px !important;
+  font-size: 16px !important; font-weight: 700 !important;
+  border: 1.5px solid var(--pt-line) !important; background-color: #fff !important; color: var(--pt-ink) !important;
+}
+#root input:focus, #root select:focus { border-color: #fbbf24 !important; box-shadow: 0 0 0 3px rgba(180,83,9,.14) !important; outline: none !important; }
+
+/* 选项 chips */
+#root button.xn-pt-chip {
+  min-height: 44px !important; height: 44px !important;
+  border-radius: 10px !important; font-size: 13px !important; font-weight: 700 !important;
+  border: 1.5px solid var(--pt-line) !important; background: #fff !important; color: #5c5340 !important; cursor: pointer !important;
+}
+#root button.xn-pt-chip[aria-pressed="true"] {
+  color: #fff !important; border-color: #3f6212 !important;
+  background: linear-gradient(135deg, #65a30d, #3f6212) !important;
+}
+
+/* 主按钮与复制 */
+#root button.xn-pt-primary {
+  min-height: 48px !important; height: 48px !important; padding: 0 20px !important;
+  border-radius: 12px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  color: #fff !important; border: 1.5px solid #92400e !important; cursor: pointer !important;
+  background: linear-gradient(135deg, #d97706, #b45309) !important;
+}
+#root button.xn-pt-copy {
+  min-height: 44px !important; height: 44px !important; padding: 0 16px !important;
+  border-radius: 10px !important; font-size: 13.5px !important; font-weight: 800 !important;
+  border: 1.5px solid var(--pt-line) !important; background: #fff !important; color: #3f6212 !important; cursor: pointer !important;
+}
+
+/* 结果 */
+#root .xn-pt-sec { font-size: 14px !important; font-weight: 800 !important; color: #7c2d12 !important; letter-spacing: .2px !important; }
+#root .xn-pt-dt { font-size: 13.5px !important; font-weight: 700 !important; color: #6b5c46 !important; }
+#root dd.xn-pt-dd { font-size: 16px !important; font-weight: 600 !important; color: #2f2a20 !important; line-height: 1.65; }
+#root dd.xn-pt-dd.xn-pt-big { font-size: 24px !important; font-weight: 800 !important; color: #7c2d12 !important; font-variant-numeric: tabular-nums; }
+
+/* 说明 */
+#root p, #root li { line-height: 1.8; }
+
+/* 回到顶部 */
+.xn-pt-top {
+  position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px;
+  border-radius: 14px; border: 1px solid var(--pt-line); background: #fff; color: var(--pt);
+  font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(34,32,26,.55);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-pt-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-pt-top:hover { background: #fdf6ec; }
+
+@media (max-width: 639px) {
+  #root h1.xn-pt-h1 { font-size: 27px !important; }
+  #root .xn-pt-h2 { font-size: 18px !important; }
+  #root button.xn-pt-tab { font-size: 12px !important; padding: 0 8px !important; }
+  #root dd.xn-pt-dd.xn-pt-big { font-size: 21px !important; }
+  #root input[type=number].xn-pt-num { height: 50px !important; font-size: 21px !important; }
+  .xn-pt-top { right: 14px; bottom: 18px; }
+}
