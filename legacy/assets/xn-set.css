@@ -207,3 +207,10 @@ footer { font-size: 12.5px !important; color: #64748b !important; border-top: 1p
   border: 1.5px solid var(--st-line) !important; border-radius: 10px !important;
   background: #fff !important; color: #1e293b !important;
 }
+
+/* 多行文本字段：.fld.wide 纵向排布 */
+#root .fld.wide, .fld.wide { flex-direction: column !important; align-items: stretch !important; gap: 8px !important; }
+#root .fld.wide label, .fld.wide label { font-size: 13px !important; font-weight: 700 !important; color: #334155 !important; }
+#root .fld.wide textarea, .fld.wide textarea { width: 100% !important; min-height: 340px !important; }
+#root .fld.wide .quick, .fld.wide .quick { margin-left: 0 !important; }
+#root .fld .stats, .fld .stats { font-size: 12.5px !important; color: #7b8aa6 !important; }
