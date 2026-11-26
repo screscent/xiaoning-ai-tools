@@ -214,3 +214,16 @@ footer { font-size: 12.5px !important; color: #64748b !important; border-top: 1p
 #root .fld.wide textarea, .fld.wide textarea { width: 100% !important; min-height: 340px !important; }
 #root .fld.wide .quick, .fld.wide .quick { margin-left: 0 !important; }
 #root .fld .stats, .fld .stats { font-size: 12.5px !important; color: #7b8aa6 !important; }
+
+/* 密码/隐私类工具：口令框与显隐按钮 */
+#root .fld input[type=password], .fld input[type=password] {
+  width: 220px !important; height: 50px !important; min-height: 50px !important;
+  font-size: 16px !important; font-weight: 600 !important; letter-spacing: .4px;
+  border: 1.5px solid var(--st-line) !important; border-radius: 10px !important;
+  background: #fff !important; color: #1e293b !important;
+}
+#root .fld .reveal, .fld .reveal {
+  height: 44px !important; min-height: 44px !important; padding: 0 14px !important;
+  font-size: 13px !important; font-weight: 700 !important; border-radius: 10px !important;
+  border: 1px solid #dbe4f7 !important; background: #eef2ff !important; color: #4338ca !important;
+}
