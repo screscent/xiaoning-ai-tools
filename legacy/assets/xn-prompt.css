@@ -1,0 +1,113 @@
+/* 小凝工具站 · 提示词与上下文计算皮肤 xn-prompt v1（纯 CSS，无图片）
+ * 主题：上下文星图 —— 浅紫底 + 紫/琥珀柔光 + 星点网格。
+ * 注入：legacy/c7xbcvegmi.html
+ */
+:root { --pm: #7c3aed; --pm-2: #f59e0b; --pm-ink: #1b1533; --pm-line: #e7e3f7; }
+html { background: #faf9ff; }
+body {
+  background:
+    radial-gradient(900px 520px at 8% -8%, rgba(124,58,237,.13), transparent 62%),
+    radial-gradient(820px 500px at 96% 4%, rgba(245,158,11,.10), transparent 64%),
+    radial-gradient(rgba(27,21,51,.06) 1px, transparent 1.4px),
+    #faf9ff !important;
+  background-size: auto, auto, 20px 20px, auto !important;
+  color: var(--pm-ink);
+}
+/* 工具标签 */
+#root .xn-pm-tab {
+  min-height: 46px !important; height: 46px !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  padding: 0 14px !important; border-radius: 10px !important;
+  font-size: 14.5px !important; font-weight: 700 !important; line-height: 1 !important;
+  color: #4c4468 !important; background: rgba(255,255,255,.85) !important;
+  border: 1px solid var(--pm-line) !important; text-decoration: none !important;
+}
+#root .xn-pm-tab[aria-current="page"] {
+  color: #fff !important; border-color: transparent !important;
+  background: linear-gradient(135deg, #6d28d9, #7c3aed 55%, #d97706) !important;
+  box-shadow: 0 8px 18px -12px rgba(124,58,237,.9) !important;
+}
+/* 卡片与标题 */
+#root .xn-pm-card {
+  background: rgba(255,255,255,.94) !important;
+  border: 1px solid rgba(231,227,247,.95) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 14px 32px -26px rgba(27,21,51,.6) !important;
+}
+#root .xn-pm-h2 { font-size: 20px !important; font-weight: 800 !important; color: var(--pm-ink) !important; }
+#root h3.xn-pm-h2 { font-size: 16.5px !important; }
+#root label { font-size: 13.5px !important; font-weight: 700 !important; color: #3f3a55 !important; }
+/* 输入 */
+#root textarea.xn-pm-text {
+  min-height: 180px !important; font-size: 16px !important; line-height: 1.7 !important;
+  padding: 12px 14px !important; border-radius: 12px !important;
+  border: 1.5px solid var(--pm-line) !important; background: #fff !important;
+  color: var(--pm-ink) !important; box-sizing: border-box !important;
+}
+#root input.xn-pm-num {
+  height: 52px !important; min-width: 92px !important;
+  font-size: 22px !important; font-weight: 800 !important; text-align: center !important;
+  border-radius: 12px !important; border: 1.5px solid var(--pm-line) !important;
+  background: #fff !important; color: var(--pm-ink) !important;
+  font-variant-numeric: tabular-nums; flex-shrink: 0 !important;
+}
+#root input.xn-pm-num::-webkit-outer-spin-button, #root input.xn-pm-num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+#root input.xn-pm-num { -moz-appearance: textfield; appearance: textfield; }
+/* 下拉 */
+#root select.xn-pm-select {
+  height: 50px !important; font-size: 15.5px !important; font-weight: 600 !important;
+  border-radius: 12px !important; border: 1.5px solid var(--pm-line) !important;
+  padding: 0 12px !important; background: #fff !important; color: var(--pm-ink) !important;
+}
+#root input:focus, #root select:focus, #root textarea:focus {
+  border-color: #c4b5fd !important; box-shadow: 0 0 0 3px rgba(124,58,237,.16) !important; outline: none !important;
+}
+/* 按钮 */
+#root button.xn-pm-go {
+  min-height: 50px !important; height: 50px !important;
+  border-radius: 12px !important; font-size: 16px !important; font-weight: 800 !important;
+  background: linear-gradient(135deg, #6d28d9, #7c3aed 55%, #d97706) !important;
+  color: #fff !important; border: none !important; cursor: pointer !important;
+  box-shadow: 0 10px 20px -16px rgba(124,58,237,.95) !important;
+}
+#root button.xn-pm-btn {
+  min-height: 46px !important; height: 46px !important; padding: 0 18px !important;
+  border-radius: 12px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  border: 1.5px solid var(--pm-line) !important; background: #fff !important;
+  color: var(--pm-ink) !important; cursor: pointer !important;
+}
+/* 结果数字 */
+#root .xn-pm-big { font-size: 34px !important; font-weight: 800 !important; color: #6d28d9 !important; font-variant-numeric: tabular-nums; }
+#root .xn-pm-mid { font-size: 16px !important; font-weight: 800 !important; color: #1b1533 !important; font-variant-numeric: tabular-nums; }
+#root .xn-pm-mini { font-size: 13.5px !important; font-weight: 700 !important; color: #4c4468 !important; font-variant-numeric: tabular-nums; }
+/* 说明 */
+#root p, #root li { line-height: 1.75; }
+#root details summary { font-size: 14px !important; font-weight: 700 !important; color: #6d28d9 !important; }
+/* 回到顶部 */
+.xn-pm-top {
+  position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px;
+  border-radius: 14px; border: 1px solid var(--pm-line); background: #fff; color: #6d28d9;
+  font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(46,16,101,.6);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-pm-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-pm-top:hover { background: #f5f3ff; }
+@media (prefers-reduced-motion: no-preference) {
+  body::before {
+    content: ""; position: fixed; inset: -10%; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(420px 300px at 26% 30%, rgba(124,58,237,.08), transparent 62%),
+      radial-gradient(380px 280px at 76% 66%, rgba(245,158,11,.07), transparent 64%);
+    animation: xn-pm-aura 28s ease-in-out infinite alternate;
+  }
+  @keyframes xn-pm-aura { 0% { transform: translate3d(-1.2%, -1%, 0); } 100% { transform: translate3d(1.2%, 1%, 0); } }
+}
+@media (max-width: 420px) {
+  #root h1 { font-size: 27px !important; }
+  #root .xn-pm-tab { min-height: 46px !important; height: 46px !important; padding: 0 12px !important; font-size: 14px !important; }
+  #root .xn-pm-h2 { font-size: 18px !important; }
+  #root input.xn-pm-num { height: 50px !important; min-width: 78px !important; font-size: 21px !important; }
+  .xn-pm-top { right: 14px; bottom: 18px; }
+}
