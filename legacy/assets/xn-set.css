@@ -199,3 +199,11 @@ footer { font-size: 12.5px !important; color: #64748b !important; border-top: 1p
 .xn-set-sum > span { font-size: 12.5px !important; font-weight: 700 !important; color: #64748b !important; letter-spacing: .3px; }
 .xn-set-sum > b { font-size: 28px !important; font-weight: 800 !important; color: #312e81 !important; font-variant-numeric: tabular-nums; line-height: 1.1; }
 .xn-set-sum > em { font-style: normal; font-size: 12.5px !important; color: #64748b !important; }
+
+/* 文本字段：时间/字符串类工具 */
+#root .fld input[type=text], .fld input[type=text] {
+  width: 220px !important; height: 50px !important; min-height: 50px !important;
+  font-size: 16px !important; font-weight: 600 !important;
+  border: 1.5px solid var(--st-line) !important; border-radius: 10px !important;
+  background: #fff !important; color: #1e293b !important;
+}
