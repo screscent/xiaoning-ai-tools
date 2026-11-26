@@ -1,0 +1,198 @@
+/* 小凝工具站 · 图片旋转翻转与水印皮肤 xn-imgedit v1（纯 CSS，无图片）
+ * 主题：胶片暗房 —— 暖米纸底 + 琥珀/玫红双色 + 顶部胶片齿孔带 + 细颗粒。
+ * 注入：legacy/ygj23az2jf.html（xn-ux 之后追加）。
+ */
+:root { --ie: #b45309; --ie-2: #be123c; --ie-ink: #241a12; --ie-line: #ecdfcd; }
+html { background: #faf6f0; }
+body {
+  background:
+    radial-gradient(900px 520px at 4% -10%, rgba(180,83,9,.12), transparent 62%),
+    radial-gradient(760px 480px at 100% 0%, rgba(190,18,60,.09), transparent 60%),
+    radial-gradient(rgba(36,26,18,.05) 1px, transparent 1.3px),
+    #faf6f0 !important;
+  background-size: auto, auto, 18px 18px, auto !important;
+  background-attachment: fixed !important;
+  color: var(--ie-ink);
+}
+/* 顶部胶片齿孔带 */
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto 0; height: 10px; z-index: 5; pointer-events: none;
+  background:
+    repeating-linear-gradient(90deg, #2a211b 0 12px, #f3ebdf 12px 24px);
+  box-shadow: 0 2px 8px rgba(36,26,18,.18);
+}
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+/* 标题 */
+#root h1.xn-ie-h1 {
+  font-size: 34px !important; font-weight: 800 !important; letter-spacing: -.3px !important;
+  color: #2a1c10 !important; line-height: 1.25 !important;
+}
+#root .xn-ie-h2 { font-size: 20px !important; font-weight: 800 !important; color: #2a1c10 !important; }
+#root label { font-size: 13.5px !important; font-weight: 700 !important; color: #5b4634 !important; }
+
+/* 工具切换（旋转翻转 / 图片水印） */
+#root button.xn-ie-tab {
+  min-height: 46px !important; height: 46px !important;
+  padding: 0 18px !important; border-radius: 12px !important;
+  font-size: 14.5px !important; font-weight: 800 !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  color: #5b4634 !important; background: #fff !important; border: 1.5px solid var(--ie-line) !important;
+}
+#root button.xn-ie-tab:hover { border-color: #e7b06a !important; color: #b45309 !important; }
+#root button.xn-ie-tab[aria-pressed="true"] {
+  color: #fff !important; border-color: transparent !important;
+  background: linear-gradient(135deg, #b45309, #c2410c 55%, #be123c) !important;
+  box-shadow: 0 10px 22px -16px rgba(180,83,9,.95) !important;
+}
+#root button.xn-ie-tab[aria-pressed="true"]::before { content: none !important; display: none !important; }
+
+/* 卡片 */
+#root .xn-ie-card {
+  background: rgba(255,255,255,.96) !important;
+  border: 1px solid var(--ie-line) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 36px -30px rgba(36,26,18,.55) !important;
+}
+
+/* 上传区 */
+#root input[type=file].xn-ie-file {
+  height: auto !important; min-height: 60px !important;
+  padding: 8px !important; font-size: 13.5px !important;
+  border: 1.5px dashed #e7b06a !important; border-radius: 12px !important;
+  background: #fffaf3 !important; color: #6b5644 !important; cursor: pointer !important;
+}
+#root input[type=file].xn-ie-file::file-selector-button {
+  min-height: 44px !important; padding: 0 18px !important; margin-right: 12px !important;
+  border: none !important; border-radius: 10px !important;
+  font-size: 14.5px !important; font-weight: 800 !important; cursor: pointer !important;
+  color: #fff !important; background: linear-gradient(135deg, #b45309, #be123c) !important;
+}
+
+/* 下拉 / 文本输入 */
+#root select.xn-ie-select {
+  height: 52px !important; font-size: 16px !important; font-weight: 700 !important;
+  border-radius: 12px !important; border: 1.5px solid var(--ie-line) !important;
+  padding: 0 14px !important; background: #fff !important; color: var(--ie-ink) !important;
+}
+#root input[type=text].xn-ie-text {
+  height: 52px !important; font-size: 16px !important; font-weight: 600 !important;
+  border-radius: 12px !important; border: 1.5px solid var(--ie-line) !important;
+  padding: 0 14px !important; background: #fff !important; color: var(--ie-ink) !important;
+}
+#root input:focus, #root select:focus { border-color: #f0b573 !important; box-shadow: 0 0 0 3px rgba(180,83,9,.15) !important; outline: none !important; }
+
+/* 开关（水平翻转 / 垂直翻转） */
+#root button.xn-ie-switch {
+  width: 54px !important; height: 32px !important; min-height: 32px !important;
+  border-radius: 999px !important; border: none !important; cursor: pointer !important;
+  position: relative !important; padding: 0 !important;
+}
+#root button.xn-ie-switch > span {
+  width: 26px !important; height: 26px !important; top: 3px !important;
+  box-shadow: 0 2px 6px rgba(36,26,18,.25) !important;
+}
+#root button.xn-ie-switch[aria-checked="true"] { background: linear-gradient(135deg, #b45309, #be123c) !important; }
+#root button.xn-ie-switch[aria-checked="true"] > span { transform: translateX(24px) !important; }
+#root button.xn-ie-switch[aria-checked="false"] { background: #d6cbbd !important; }
+#root button.xn-ie-switch[aria-checked="false"] > span { transform: translateX(3px) !important; }
+#root button.xn-ie-switch[aria-checked="true"]::before,
+#root button.xn-ie-switch[aria-checked="false"]::before { content: none !important; display: none !important; }
+
+/* 九宫格位置 */
+#root button.xn-ie-pos {
+  min-height: 44px !important; height: 44px !important;
+  border-radius: 10px !important; font-size: 14px !important; font-weight: 800 !important;
+  border: 1.5px solid var(--ie-line) !important; background: #fff !important; color: #5b4634 !important;
+  cursor: pointer !important;
+}
+#root button.xn-ie-pos:hover { border-color: #e7b06a !important; color: #b45309 !important; background: #fffaf3 !important; }
+#root button.xn-ie-pos[aria-pressed="true"] {
+  color: #fff !important; border-color: transparent !important;
+  background: linear-gradient(135deg, #b45309, #c2410c 55%, #be123c) !important;
+  box-shadow: 0 8px 18px -16px rgba(180,83,9,.95) !important;
+}
+#root button.xn-ie-pos[aria-pressed="true"]::before { content: none !important; display: none !important; }
+
+/* 滑块 */
+#root input[type=range].xn-ie-range {
+  -webkit-appearance: none; appearance: none;
+  width: 100% !important; height: 44px !important; background: transparent !important;
+  border: none !important; cursor: pointer !important;
+}
+#root input[type=range].xn-ie-range::-webkit-slider-runnable-track {
+  height: 8px; border-radius: 999px;
+  background: linear-gradient(90deg, #f59e0b, #be123c);
+}
+#root input[type=range].xn-ie-range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 24px; height: 24px; margin-top: -8px;
+  border-radius: 50%; background: #fff; border: 3px solid #b45309;
+  box-shadow: 0 2px 6px rgba(36,26,18,.28);
+}
+#root input[type=range].xn-ie-range::-moz-range-track {
+  height: 8px; border-radius: 999px; background: linear-gradient(90deg, #f59e0b, #be123c);
+}
+#root input[type=range].xn-ie-range::-moz-range-thumb {
+  width: 24px; height: 24px; border-radius: 50%; background: #fff;
+  border: 3px solid #b45309; box-shadow: 0 2px 6px rgba(36,26,18,.28);
+}
+#root .xn-ie-val { font-size: 15px !important; font-weight: 800 !important; color: #b45309 !important; font-variant-numeric: tabular-nums; }
+
+/* 按钮 */
+#root button.xn-ie-primary {
+  min-height: 48px !important; height: 48px !important;
+  border-radius: 12px !important; font-size: 16px !important; font-weight: 800 !important;
+  background: linear-gradient(135deg, #b45309, #c2410c 55%, #be123c) !important;
+  color: #fff !important; border: none !important; cursor: pointer !important;
+  box-shadow: 0 12px 24px -18px rgba(180,83,9,.95) !important;
+}
+#root button.xn-ie-btn {
+  min-height: 46px !important; height: 46px !important;
+  border-radius: 12px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  border: 1.5px solid var(--ie-line) !important; background: #fff !important; color: #5b4634 !important;
+  cursor: pointer !important;
+}
+#root button.xn-ie-btn:hover { border-color: #e7b06a !important; color: #b45309 !important; }
+#root button.xn-ie-reset {
+  min-height: 46px !important; height: 46px !important;
+  border-radius: 12px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  background: #f5efe6 !important; color: #6b5644 !important; border: 1.5px solid var(--ie-line) !important;
+  cursor: pointer !important;
+}
+
+/* 空预览 */
+#root .xn-ie-empty {
+  display: block !important; padding: 44px 16px !important; min-height: 160px !important;
+  border: 2px dashed #e7b06a !important; border-radius: 14px !important;
+  background:
+    linear-gradient(135deg, rgba(180,83,9,.045) 25%, transparent 25%) 0 0 / 18px 18px,
+    linear-gradient(315deg, rgba(180,83,9,.045) 25%, transparent 25%) 0 0 / 18px 18px,
+    #fffbf5 !important;
+  color: #9a7c5e !important; font-size: 14px !important; font-weight: 700 !important;
+  text-align: center !important;
+}
+
+/* 说明 */
+#root p, #root li { line-height: 1.75; }
+#root .xn-ie-note { font-size: 13px !important; color: #6b5644 !important; }
+
+/* 回到顶部 */
+.xn-ie-top {
+  position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px;
+  border-radius: 14px; border: 1px solid var(--ie-line); background: #fff; color: #b45309;
+  font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(36,26,18,.6);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-ie-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-ie-top:hover { background: #fffaf3; }
+
+@media (max-width: 639px) {
+  #root button.xn-ie-tab { font-size: 14px !important; padding: 0 14px !important; }
+  #root h1.xn-ie-h1 { font-size: 27px !important; }
+  #root .xn-ie-h2 { font-size: 18px !important; }
+  #root button.xn-ie-pos { font-size: 13.5px !important; }
+  .xn-ie-top { right: 14px; bottom: 18px; }
+}
