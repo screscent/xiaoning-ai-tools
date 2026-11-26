@@ -1,0 +1,118 @@
+/* 小凝工具站 · 高尔夫入门与打球成本皮肤 xn-golf v1（纯 CSS，无图片）
+ * 主题：果岭晨光 —— 米白底 + 割草条纹 + 旗杆金；深松绿/沙金双色。
+ * 注入：legacy/samava9xrs.html（xn-ux 之后追加）。
+ */
+:root { --gf: #1e4130; --gf-2: #b8860b; --gf-ink: #17251c; --gf-line: #dfe3d2; }
+html { background: #f7f8f0; }
+body {
+  background:
+    radial-gradient(560px 360px at 92% -8%, rgba(184,134,11,.16), transparent 62%),
+    radial-gradient(760px 460px at -4% -6%, rgba(30,65,48,.10), transparent 62%),
+    repeating-linear-gradient(90deg, rgba(30,65,48,.038) 0 66px, rgba(30,65,48,0) 66px 132px),
+    #f7f8f0 !important;
+  background-size: auto, auto, auto, auto !important;
+  background-attachment: fixed !important;
+  color: var(--gf-ink);
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(1100px 560px at 50% -12%, rgba(255,255,255,.9), transparent 62%);
+  opacity: 1;
+}
+#root { position: relative; z-index: 1; }
+#root .min-h-screen { background: transparent !important; }
+
+#root h1.xn-gf-h1 { font-size: 34px !important; font-weight: 800 !important; letter-spacing: -.3px !important; color: #14261b !important; }
+#root .xn-gf-h2 { font-size: 20px !important; font-weight: 800 !important; color: #14261b !important; }
+#root label { font-size: 13px !important; font-weight: 700 !important; color: #33422f !important; }
+
+/* 工具分段导航 */
+#root .xn-gf-nav {
+  gap: 5px !important; padding: 5px !important;
+  border-radius: 14px !important; background: #eef1e3 !important; border: 1px solid var(--gf-line) !important;
+}
+#root a.xn-gf-tab {
+  min-height: 44px !important; height: 44px !important;
+  border-radius: 10px !important; font-size: 13px !important; font-weight: 800 !important;
+  color: #3d4c39 !important; background: transparent !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  text-decoration: none !important; white-space: nowrap !important;
+}
+#root a.xn-gf-tab:hover { background: rgba(255,255,255,.8) !important; }
+#root a.xn-gf-tab.is-on {
+  color: #fff !important;
+  background: linear-gradient(135deg, #2f5c42, #1e4130 60%, #b8860b) !important;
+  box-shadow: 0 8px 16px -14px rgba(30,65,48,.95) !important;
+}
+
+/* 卡片 */
+#root .xn-gf-card {
+  background: rgba(255,255,255,.97) !important;
+  border: 1px solid var(--gf-line) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 36px -30px rgba(23,37,28,.5) !important;
+}
+
+/* 输入与下拉 */
+#root input[type=number].xn-gf-num {
+  height: 52px !important; font-size: 22px !important; font-weight: 800 !important;
+  border-radius: 12px !important; border: 1.5px solid var(--gf-line) !important;
+  background: #fff !important; color: var(--gf-ink) !important; font-variant-numeric: tabular-nums;
+}
+#root input[type=number].xn-gf-num::-webkit-outer-spin-button, #root input[type=number].xn-gf-num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+#root input[type=number].xn-gf-num { -moz-appearance: textfield; appearance: textfield; }
+#root select.xn-gf-select {
+  height: 52px !important; border-radius: 12px !important;
+  font-size: 16px !important; font-weight: 700 !important;
+  border: 1.5px solid var(--gf-line) !important; background-color: #fff !important; color: var(--gf-ink) !important;
+}
+#root input:focus, #root select:focus { border-color: #86a98d !important; box-shadow: 0 0 0 3px rgba(30,65,48,.14) !important; outline: none !important; }
+
+/* 主按钮 */
+#root button.xn-gf-btn {
+  min-height: 48px !important; height: 48px !important; padding: 0 20px !important;
+  border-radius: 12px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  letter-spacing: .4px !important; color: #fff !important; cursor: pointer !important;
+  border: 1.5px solid #173327 !important;
+  background: linear-gradient(135deg, #2f5c42, #1e4130) !important;
+}
+
+/* 结果区 */
+#root .xn-gf-total { font-size: 30px !important; font-weight: 800 !important; color: #14301f !important; font-variant-numeric: tabular-nums; }
+#root .xn-gf-val { font-size: 22px !important; font-weight: 800 !important; color: #1f3527 !important; font-variant-numeric: tabular-nums; }
+#root .xn-gf-note { font-size: 12px !important; color: #6b7a66 !important; }
+#root .xn-gf-sec { font-size: 14px !important; font-weight: 800 !important; color: #2f4a36 !important; letter-spacing: .2px !important; }
+#root .xn-gf-copy {
+  min-height: 44px !important; height: 44px !important; padding: 0 16px !important;
+  border-radius: 10px !important; font-size: 13.5px !important; font-weight: 800 !important;
+  border: 1.5px solid #c9d3bb !important; background: #fff !important; color: #1e4130 !important; cursor: pointer !important;
+}
+
+/* 费用构成条 */
+#root .xn-gf-bar { background: #eef1e3 !important; border-radius: 999px !important; overflow: hidden; }
+#root .xn-gf-bar > div { background: linear-gradient(90deg, #2f5c42, #b8860b) !important; border-radius: 999px !important; }
+
+/* 说明 */
+#root p, #root li { line-height: 1.8; }
+
+/* 回到顶部 */
+.xn-gf-top {
+  position: fixed; right: 20px; bottom: 26px; z-index: 60; width: 46px; height: 46px;
+  border-radius: 14px; border: 1px solid var(--gf-line); background: #fff; color: #1e4130;
+  font-size: 20px; font-weight: 800; line-height: 1; cursor: pointer;
+  box-shadow: 0 12px 26px -18px rgba(23,37,28,.55);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.xn-gf-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.xn-gf-top:hover { background: #f3f6ec; }
+
+@media (max-width: 639px) {
+  #root h1.xn-gf-h1 { font-size: 27px !important; }
+  #root .xn-gf-h2 { font-size: 18px !important; }
+  #root a.xn-gf-tab { font-size: 12px !important; }
+  #root .xn-gf-total { font-size: 26px !important; }
+  #root .xn-gf-val { font-size: 20px !important; }
+  #root input[type=number].xn-gf-num { height: 50px !important; font-size: 21px !important; }
+  .xn-gf-top { right: 14px; bottom: 18px; }
+}
