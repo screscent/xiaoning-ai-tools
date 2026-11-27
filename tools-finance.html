@@ -1555,7 +1555,7 @@ function installmentApr(s){
     if(pv>P)lo=mid;else hi=mid;
   }
   const i=(lo+hi)/2;const annual=(Math.pow(1+i,12)-1)*100;
-  return '每期还款 '+pay.toFixed(2)+'\n名义年化 '+(fee*12).toFixed(2)+'%\n真实年化（IRR）'+annual.toFixed(2)+
+  return '每期还款 '+pay.toFixed(2)+'\n名义年化 '+(fee*12).toFixed(2)+'%\n真实年化（IRR）'+annual.toFixed(2)+'%'+
     '\n总手续费 '+(P*fee/100*n).toFixed(2)+'\n提示：手续费按期初全额计，真实资金成本高于名义值'
 }
 function compareLoan(s){
