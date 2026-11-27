@@ -34,14 +34,20 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div class="xn-path" data-xn-path="1">
+<div id="xnParams" class="xn-params"></div>
+<label class="xn-lbl" id="xnLbl" for="xnData">路径清单（每行一条）</label>
+<textarea id="xnData" placeholder="/Users/me/photo.jpg&#10;/Users/me/doc/readme.md"></textarea>
+<input id="xnSingle" class="xn-single" placeholder="输入路径，如 /Users/me/photo.jpg" hidden>
+</div>
+<textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "parse", "name": "路径解析", "desc": "拆出目录、文件名、主名、扩展名与层级", "impl": "fpParse"}, {"key": "rename", "name": "批量重命名预览", "desc": "首行「前缀|后缀」，逐行输出新文件名（不改文件）", "impl": "fpRename"}, {"key": "slash", "name": "斜杠互转", "desc": "Windows 反斜杠 ↔ Unix 正斜杠，自动合并重复斜杠", "impl": "fpSlash"}, {"key": "size", "name": "文件大小换算", "desc": "字节或 1.5 GB 等写法 ↔ 字节 / KB / MB / GB", "impl": "fpSize"}, {"key": "join", "name": "路径拼接与规范化", "desc": "每行「基准路径, 相对路径」，解析 . 与 ..", "impl": "fpJoin"}, {"key": "glob", "name": "通配符匹配", "desc": "首行通配符（* ? **），其后逐行路径，筛出命中项", "impl": "fpxGlob"}, {"key": "ext", "name": "按扩展名筛选", "desc": "首行写 .md,.txt 等扩展名，其后逐行路径", "impl": "fpxExt"}, {"key": "tree", "name": "目录树文本化", "desc": "多行路径 → 缩进树，目录/文件不同标记", "impl": "fpxTree"}, {"key": "extstat", "name": "扩展名统计", "desc": "多行文件名 → 按扩展名计数并排序", "impl": "fpxExtStat"}, {"key": "rel", "name": "去公共前缀", "desc": "多行路径 → 自动识别公共目录并输出相对路径", "impl": "fpxRel"}, {"key": "relcalc", "name": "相对路径计算", "desc": "首行写基准目录，逐行输出目标相对路径（解析 . 与 ..）", "impl": "fpzRelcalc"}, {"key": "renum", "name": "编号批量重命名", "desc": "首行模板 {name}{ext}{i} {i:03d}，逐行输出新文件名", "impl": "fpzRenum"}, {"key": "sanitize", "name": "文件名清洗", "desc": "替换非法字符、压缩空格、避开 Windows 保留名", "impl": "fpzSanitize"}, {"key": "natsort", "name": "路径自然排序", "desc": "a2 排在 a10 前（数字按数值比较）", "impl": "natsortPaths"}, {"key": "prefix", "name": "批量替换路径前缀", "desc": "首行「旧前缀 => 新前缀」，逐行替换", "impl": "pathPrefixSwap"}, {"key": "check", "name": "路径合法性检查", "desc": "非法字符/保留名/超长/相对路径等", "impl": "pathCheck"}, {"key": "dirs", "name": "目录提取去重", "desc": "多行路径 → 去重后的目录清单与目录数", "impl": "dirExtract"}, {"key": "extswap", "name": "批量替换扩展名", "desc": "首行新扩展名（.md），其后逐行输出新文件名", "impl": "extSwap"}, {"key": "depth", "name": "路径深度分析", "desc": "目录深度 / 总段数 / 文件名 / 绝对或相对", "impl": "pathDepth"}, {"key": "tocsv", "name": "路径清单转 CSV", "desc": "多行路径 → path/dir/name/stem/ext 表格", "impl": "pathCsv"}, {"key": "sizesum", "name": "多文件大小合计", "desc": "每行「大小 单位」→ 字节/KB/MB/GB 总计", "impl": "sizeSum"}, {"key": "dupbase", "name": "同名文件检测", "desc": "多行路径 → 按文件名分组找出重名冲突", "impl": "dupBase"}, {"key": "url", "name": "路径转 file URL", "desc": "本地路径 ↔ file:// URL 双向转换（自动百分号编码）", "impl": "pathUrl"}, {"key": "quote", "name": "路径加引号", "desc": "逐行判断是否需要 shell 引号，需要则单引号包裹", "impl": "pathQuote"}, {"key": "levelstat", "name": "路径层级分布", "desc": "统计每个层级的路径条数与最大深度", "impl": "pathLevelStat"}];
+const TOOLS=[{"key": "parse", "name": "路径解析", "desc": "拆出目录、文件名、主名、扩展名与层级", "impl": "fpParse"}, {"key": "rename", "name": "批量重命名预览", "desc": "批量重命名预览：设置前缀与后缀，逐行生成新文件名", "impl": "fpRename"}, {"key": "slash", "name": "斜杠互转", "desc": "Windows 反斜杠 ↔ Unix 正斜杠，自动合并重复斜杠", "impl": "fpSlash"}, {"key": "size", "name": "文件大小换算", "desc": "字节或 1.5 GB 等写法 ↔ 字节 / KB / MB / GB", "impl": "fpSize"}, {"key": "join", "name": "路径拼接与规范化", "desc": "路径拼接与规范化：基准路径 + 相对路径", "impl": "fpJoin"}, {"key": "glob", "name": "通配符匹配", "desc": "通配符筛选路径（支持 * ? **）", "impl": "fpxGlob"}, {"key": "ext", "name": "按扩展名筛选", "desc": "按扩展名筛选路径（如 .md,.txt）", "impl": "fpxExt"}, {"key": "tree", "name": "目录树文本化", "desc": "多行路径 → 缩进树，目录/文件不同标记", "impl": "fpxTree"}, {"key": "extstat", "name": "扩展名统计", "desc": "多行文件名 → 按扩展名计数并排序", "impl": "fpxExtStat"}, {"key": "rel", "name": "去公共前缀", "desc": "多行路径 → 自动识别公共目录并输出相对路径", "impl": "fpxRel"}, {"key": "relcalc", "name": "相对路径计算", "desc": "相对路径计算：设基准目录，逐行输出目标相对路径", "impl": "fpzRelcalc"}, {"key": "renum", "name": "编号批量重命名", "desc": "编号批量命名：模板支持 {name} {ext} {i} {i:03d}", "impl": "fpzRenum"}, {"key": "sanitize", "name": "文件名清洗", "desc": "替换非法字符、压缩空格、避开 Windows 保留名", "impl": "fpzSanitize"}, {"key": "natsort", "name": "路径自然排序", "desc": "a2 排在 a10 前（数字按数值比较）", "impl": "natsortPaths"}, {"key": "prefix", "name": "批量替换路径前缀", "desc": "批量替换路径前缀（旧前缀 → 新前缀）", "impl": "pathPrefixSwap"}, {"key": "check", "name": "路径合法性检查", "desc": "非法字符/保留名/超长/相对路径等", "impl": "pathCheck"}, {"key": "dirs", "name": "目录提取去重", "desc": "多行路径 → 去重后的目录清单与目录数", "impl": "dirExtract"}, {"key": "extswap", "name": "批量替换扩展名", "desc": "批量替换扩展名（如 .md，留空为去掉）", "impl": "extSwap"}, {"key": "depth", "name": "路径深度分析", "desc": "目录深度 / 总段数 / 文件名 / 绝对或相对", "impl": "pathDepth"}, {"key": "tocsv", "name": "路径清单转 CSV", "desc": "多行路径 → path/dir/name/stem/ext 表格", "impl": "pathCsv"}, {"key": "sizesum", "name": "多文件大小合计", "desc": "多文件大小合计（支持字节 / KB / MB / GB）", "impl": "sizeSum"}, {"key": "dupbase", "name": "同名文件检测", "desc": "多行路径 → 按文件名分组找出重名冲突", "impl": "dupBase"}, {"key": "url", "name": "路径转 file URL", "desc": "本地路径 ↔ file:// URL 双向转换（自动百分号编码）", "impl": "pathUrl"}, {"key": "quote", "name": "路径加引号", "desc": "逐行判断是否需要 shell 引号，需要则单引号包裹", "impl": "pathQuote"}, {"key": "levelstat", "name": "路径层级分布", "desc": "统计每个层级的路径条数与最大深度", "impl": "pathLevelStat"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -6227,7 +6233,7 @@ const show=v=>{$('#out').textContent=String(v)};
 if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
-$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><a class="open" href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;const cp=$('#copy');if(cp)cp.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
 $('#pick').onclick=()=>$('#file').click();
@@ -6239,4 +6245,109 @@ r.onerror=()=>{{$('#err').textContent='文件读取失败'}};
 r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
-</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script></body></html>
+</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script><style data-xn-path="1">
+#inp{display:none}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+#xnData,.xn-single{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.5;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+#xnData{height:170px;resize:vertical}
+.xn-single{height:48px}
+#xnData:focus,.xn-single:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-single[hidden]{display:none}
+#xnData[hidden]{display:none}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:4px 0 2px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld input{height:44px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:180px}
+.xn-fld input:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+@media(max-width:720px){#xnData{height:150px}.xn-fld input{min-width:120px}}
+</style>
+<script data-xn-path="1">
+(function(){
+  const DATA=document.getElementById('xnData'),SINGLE=document.getElementById('xnSingle'),
+        INP=document.getElementById('inp'),P=document.getElementById('xnParams'),LBL=document.getElementById('xnLbl');
+  if(!DATA||!INP||!P)return;
+  const KEY=()=> (location.hash||'').replace(/^#\//,'');
+  const SAMPLES={
+    parse:'/Users/me/doc/report.final.pdf', slash:'C:\\Users\\me\\doc.txt', size:'1.5 GB', url:'/Users/me/My File.txt',
+    rename:'photo.jpg\nnotes.txt', glob:'src/**/*.js', ext:'.md,.txt', join:'', tree:'/app/src/main.js\n/app/src/util.js\n/app/readme.md',
+    extstat:'a.md\nb.md\nc.txt', rel:'/a/b/x.txt\n/a/b/y.txt', relcalc:'', renum:'a.txt\nb.txt', sanitize:'a<b>:c?.txt',
+    natsort:'a10.txt\na2.txt', prefix:'', check:'a|b.txt', dirs:'/a/b/x.txt\n/a/b/y.txt', extswap:'a.txt\nb.md',
+    depth:'/a/b/c.txt', tocsv:'/a/b/c.txt', sizesum:'1 KB\n2 KB', dupbase:'/a/x.txt\n/b/x.txt', quote:'/a b/c.txt',
+    levelstat:'/a/b/c.txt\n/a/d.txt'
+  };
+  const CFG={
+    parse:{single:true}, slash:{single:true}, size:{single:true}, url:{single:true},
+    join:{dual:true,f:[{k:'base',t:'text',l:'基准路径',v:'/a/b/c.txt'}]},
+    rename:{f:[{k:'pre',t:'text',l:'前缀',v:'new_'},{k:'suf',t:'text',l:'后缀',v:''}]},
+    glob:{f:[{k:'pat',t:'text',l:'通配符',v:'**/*.js'}]},
+    ext:{f:[{k:'exts',t:'text',l:'扩展名（逗号分隔）',v:'.md,.txt'}]},
+    relcalc:{f:[{k:'base',t:'text',l:'基准目录',v:'/a/b'}]},
+    renum:{f:[{k:'tpl',t:'text',l:'命名模板',v:'{name}_{i:03d}{ext}'}]},
+    prefix:{f:[{k:'old',t:'text',l:'旧前缀',v:'/old'},{k:'new',t:'text',l:'新前缀',v:'/new'}]},
+    extswap:{f:[{k:'ext',t:'text',l:'新扩展名',v:'.md'}]},
+    tree:{f:[]},extstat:{f:[]},rel:{f:[]},sanitize:{f:[]},natsort:{f:[]},check:{f:[]},dirs:{f:[]},
+    depth:{f:[]},tocsv:{f:[]},sizesum:{f:[]},dupbase:{f:[]},quote:{f:[]},levelstat:{f:[]}
+  };
+  let composing=false;
+  const val=(id)=>{const e=document.getElementById(id);return e?e.value:''};
+  function compose(){
+    const cfg=CFG[KEY()]; if(!cfg)return;
+    composing=true;
+    if(cfg.single){INP.value=SINGLE.value;}
+    else if(cfg.dual){const base=val('xnP_base');INP.value=(DATA.value||'').split(/\r?\n/).filter(x=>x.trim()).map(x=>base+','+x.trim()).join('\n');}
+    else{
+      const f=cfg.f||[];let head='';
+      if(f.length){
+        if(KEY()==='rename')head=val('xnP_pre')+'|'+val('xnP_suf');
+        else if(KEY()==='prefix')head=val('xnP_old')+' => '+val('xnP_new');
+        else head=val('xnP_'+f[0].k);
+      }
+      INP.value=head?(head+'\n'+DATA.value):DATA.value;
+    }
+    composing=false;
+  }
+  function build(){
+    const key=KEY(),cfg=CFG[key]; if(!cfg)return;
+    P.innerHTML='';
+    const useSingle=!!cfg.single;
+    SINGLE.hidden=!useSingle; DATA.hidden=useSingle;
+    LBL.textContent=useSingle?'路径 / 数值输入':(cfg.dual?'相对路径清单（每行一条）':'路径 / 文件名清单（每行一条）');
+    (cfg.f||[]).forEach((f)=>{
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      const el=document.createElement('input');el.type='text';el.id='xnP_'+f.k;el.value=f.v||'';
+      wrap.appendChild(el);P.appendChild(wrap);
+    });
+    if(useSingle&&SINGLE.value===''&&SAMPLES[key])SINGLE.value=SAMPLES[key];
+    if(!useSingle&&DATA.value===''&&SAMPLES[key]&&!cfg.dual)DATA.value=SAMPLES[key];
+    compose();
+  }
+  ['input','change'].forEach(ev=>{DATA.addEventListener(ev,compose);SINGLE.addEventListener(ev,compose);P.addEventListener(ev,compose);});
+  INP.addEventListener('input',()=>{if(composing)return;DATA.value=INP.value;build();});
+  // 动作条合并 + 示例
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnPath='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    const run=document.getElementById('run'),copy=document.getElementById('copy'),pick=document.getElementById('pick');
+    if(run)bar.appendChild(run); if(copy)bar.appendChild(copy); if(pick)bar.appendChild(pick);
+    if(!oldRow.querySelector('button'))oldRow.remove();
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例';demo.addEventListener('click',()=>{
+    const key=KEY();const sm=SAMPLES[key]||'';
+    if(CFG[key]&&CFG[key].single)SINGLE.value=sm;else if(CFG[key]&&CFG[key].dual){DATA.value='/app/src/main.js\n/app/readme.md';}
+    else DATA.value=sm;
+    build();const r=document.getElementById('run');r&&r.click();
+  });
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  // 顶部标签导航：隐藏重复卡片网格，默认打开首个工具，搜索过滤标签
+  const XHOME=document.getElementById('home'); if(XHOME)XHOME.style.display='none';
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{const v=XQ.value.trim().toLowerCase();let n=0;XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;});
+  window.addEventListener('hashchange',build);build();
+})();
+</script></body></html>
