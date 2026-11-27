@@ -82,7 +82,7 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <details><summary>使用说明</summary><div>① 用上方下拉或标签切换工具，也可直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制或下载；④ 可导入 ≤2MB 文本文件自动填入；⑤ Ctrl / ⌘ + Enter 执行。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "trim", "name": "去首尾空白", "desc": "每行 trim", "impl": "tTrim"}, {"key": "noempty", "name": "去空行", "desc": "删除空白行", "impl": "tNoEmpty"}, {"key": "dedupe", "name": "行去重", "desc": "保留首次出现的行", "impl": "tDedupe"}, {"key": "sort", "name": "行排序", "desc": "按中文/字母排序", "impl": "tSort"}, {"key": "lineno", "name": "加行号", "desc": "每行前加序号", "impl": "tLineNo"}, {"key": "affix", "name": "批量前后缀", "desc": "首行写 前缀|后缀", "impl": "tAffix"}, {"key": "upper", "name": "转大写", "desc": "全部字母大写", "impl": "tUpper"}, {"key": "lower", "name": "转小写", "desc": "全部字母小写", "impl": "tLower"}, {"key": "tab", "name": "Tab 转空格", "desc": "首行写宽度，默认 4", "impl": "tTab"}, {"key": "full2half", "name": "全角转半角", "desc": "标点与字母全角转半角", "impl": "tFull2Half"}, {"key": "squeeze", "name": "合并多余空格", "desc": "连续空格/Tab 合并为一个", "impl": "tSqueeze"}, {"key": "join", "name": "多行合并", "desc": "首行写分隔符，默认逗号", "impl": "tJoin"}];
+const TOOLS=[{"key": "trim", "name": "去首尾空白", "desc": "每行 trim", "impl": "tTrim"}, {"key": "noempty", "name": "去空行", "desc": "删除空白行", "impl": "tNoEmpty"}, {"key": "dedupe", "name": "行去重", "desc": "保留首次出现的行", "impl": "tDedupe"}, {"key": "sort", "name": "行排序", "desc": "按中文/字母排序", "impl": "tSort"}, {"key": "lineno", "name": "加行号", "desc": "每行前加序号", "impl": "tLineNo"}, {"key": "affix", "name": "批量前后缀", "desc": "填写前缀与后缀，逐行包裹文本", "impl": "tAffix"}, {"key": "upper", "name": "转大写", "desc": "全部字母大写", "impl": "tUpper"}, {"key": "lower", "name": "转小写", "desc": "全部字母小写", "impl": "tLower"}, {"key": "tab", "name": "Tab 转空格", "desc": "选择每个 Tab 换成几个空格", "impl": "tTab"}, {"key": "full2half", "name": "全角转半角", "desc": "标点与字母全角转半角", "impl": "tFull2Half"}, {"key": "squeeze", "name": "合并多余空格", "desc": "连续空格/Tab 合并为一个", "impl": "tSqueeze"}, {"key": "join", "name": "多行合并", "desc": "选择行间分隔符，把多行合并成一行", "impl": "tJoin"}];
 
 function tTrim(s){return s.split(/\r?\n/).map(x=>x.trim()).join('\n')}
 function tNoEmpty(s){return s.split(/\r?\n/).filter(x=>x.trim()).join('\n')}
@@ -225,7 +225,7 @@ const show=v=>{$('#out').textContent=String(v);updateStats()};
 if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
-$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><a class="open" href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 (function(){const pt=$('#picktool');if(!pt)return;
 pt.innerHTML='<option value="">浏览全部工具</option>'+TOOLS.map(t=>`<option value="${t.key}">${t.name}</option>`).join('');
@@ -261,4 +261,23 @@ r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
 </script><nav aria-label="其他工具集" style="max-width:1180px;margin:8px auto 0;padding:0 16px 24px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12px;color:#64748b"><span>其他工具集：</span><a href="json-codegen.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">JSON 代码生成合集</a><a href="tools-codec.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">编码与哈希工具集</a><a href="tools-time.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">时间与日期工具集</a><a href="tools-color.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">颜色与 CSS 工具集</a><a href="tools-math.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">数学计算工具集</a><a href="tools-image.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">图片尺寸与体积工具集</a><a href="tools-privacy.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">隐私脱敏与口令强度工具集 · 在线工具合集（免费纯前端）</a><a href="tools-travel.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">出行换算与行程工具集</a><a href="../index.html#tool-sets" style="color:#4338ca;text-decoration:none">全部分组 →</a></nav><script src="../legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-textset="1">
+.bar-in label[for="picktool"],#picktool{display:none!important}
+</style>
+<script data-xn-textset="1">
+(function(){
+  var XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  var XTABS=[].slice.call(document.querySelectorAll('nav.tabs a'));
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  var XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',function(){
+    var v=XQ.value.trim().toLowerCase(),n=0;
+    XTABS.forEach(function(a){
+      var hit=!v||(a.textContent||'').toLowerCase().indexOf(v)>=0;
+      if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}
+    });
+    var c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+})();
+</script>
 </body></html>
