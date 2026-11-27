@@ -34,14 +34,21 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div class="xn-url" data-xn-url="1">
+<div id="xnParams" class="xn-params"></div>
+<div id="xnPairs" class="xn-pairs" hidden><div class="xn-pairs-head"><span>参数表</span><button type="button" class="xn-add" id="xnAddPair">+ 添加一组</button></div><div class="xn-pair-list"></div></div>
+<label class="xn-lbl" id="xnLbl" for="xnSingle">输入内容</label>
+<input id="xnSingle" type="text" placeholder="输入 URL 或文本…">
+<textarea id="xnData" spellcheck="false" hidden placeholder="每行一条…"></textarea>
+</div>
+<textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "parse", "name": "URL 结构解析", "desc": "协议 / 主机 / 端口 / 路径 / 查询 / 锚点", "impl": "urlParts"}, {"key": "qsparse", "name": "查询参数解析", "desc": "a=1&b=2 → 逐行 key = value（自动解码）", "impl": "qsParse"}, {"key": "qsbuild", "name": "查询串构造", "desc": "多行 key=value → a=1&b=2（自动编码）", "impl": "qsBuild"}, {"key": "join", "name": "相对路径拼接", "desc": "基准 URL + 相对路径 → 绝对 URL", "impl": "urlJoin"}, {"key": "clean", "name": "去追踪参数", "desc": "移除 utm_* / fbclid / gclid / spm 等", "impl": "urlClean"}, {"key": "bulk", "name": "批量 URL 编解码", "desc": "首行写 e（编码）或 d（解码），其后每行一条", "impl": "uBulk"}, {"key": "qsjson", "name": "查询串与 JSON 互转", "desc": "以 { 开头按 JSON→查询串，否则查询串→JSON（重复键转数组）", "impl": "uQsJson"}, {"key": "norm", "name": "URL 规范化", "desc": "去锚点、按键排序参数、统一小写主机与默认端口", "impl": "uNorm"}, {"key": "hosts", "name": "批量域名提取", "desc": "多行 URL → 去重域名与出现次数", "impl": "uHostList"}, {"key": "tomd", "name": "URL 转 Markdown 链接", "desc": "多行 URL → [域名/路径](原链接)", "impl": "uToMd"}, {"key": "segments", "name": "路径分段解析", "desc": "URL 路径 → 分段列表与末段", "impl": "uSegments"}, {"key": "find", "name": "正文提取链接", "desc": "从文本中提取 http(s) 链接并去重", "impl": "uFind"}, {"key": "compare", "name": "两个 URL 对比", "desc": "逐项对比协议/主机/端口/路径/查询/锚点差异", "impl": "uCompare"}, {"key": "base", "name": "基址与目录拆分", "desc": "提取 Origin、目录、文件名与相对基准", "impl": "uBase"}];
+const TOOLS=[{"key": "parse", "name": "URL 结构解析", "desc": "协议 / 主机 / 端口 / 路径 / 查询 / 锚点", "impl": "urlParts"}, {"key": "qsparse", "name": "查询参数解析", "desc": "a=1&b=2 → 逐行 key = value（自动解码）", "impl": "qsParse"}, {"key": "qsbuild", "name": "查询串构造", "desc": "逐行填写参数名与值，自动拼成查询串", "impl": "qsBuild"}, {"key": "join", "name": "相对路径拼接", "desc": "填写基准 URL 与相对路径，计算绝对地址", "impl": "urlJoin"}, {"key": "clean", "name": "去追踪参数", "desc": "移除 utm_* / fbclid / gclid / spm 等", "impl": "urlClean"}, {"key": "bulk", "name": "批量 URL 编解码", "desc": "选择编码或解码方向，批量处理 URL 清单", "impl": "uBulk"}, {"key": "qsjson", "name": "查询串与 JSON 互转", "desc": "以 { 开头按 JSON→查询串，否则查询串→JSON（重复键转数组）", "impl": "uQsJson"}, {"key": "norm", "name": "URL 规范化", "desc": "去锚点、按键排序参数、统一小写主机与默认端口", "impl": "uNorm"}, {"key": "hosts", "name": "批量域名提取", "desc": "多行 URL → 去重域名与出现次数", "impl": "uHostList"}, {"key": "tomd", "name": "URL 转 Markdown 链接", "desc": "多行 URL → [域名/路径](原链接)", "impl": "uToMd"}, {"key": "segments", "name": "路径分段解析", "desc": "URL 路径 → 分段列表与末段", "impl": "uSegments"}, {"key": "find", "name": "正文提取链接", "desc": "从文本中提取 http(s) 链接并去重", "impl": "uFind"}, {"key": "compare", "name": "两个 URL 对比", "desc": "填写两个 URL，逐项对比各组成部分差异", "impl": "uCompare"}, {"key": "base", "name": "基址与目录拆分", "desc": "提取 Origin、目录、文件名与相对基准", "impl": "uBase"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -5677,7 +5684,7 @@ const show=v=>{$('#out').textContent=String(v)};
 if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
-$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><a class="open" href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;const cp=$('#copy');if(cp)cp.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
 $('#pick').onclick=()=>$('#file').click();
@@ -5691,4 +5698,162 @@ $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document
 window.addEventListener('hashchange',route);route();
 </script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1">
 <script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-url="1">
+#inp{display:none}
+#out{overflow-wrap:anywhere}
+#xn-set-sum{display:none!important}
+#tool .cols{min-width:0}#tool .cols>div{min-width:0}
+@media(max-width:820px){#tool .cols{grid-template-columns:minmax(0,1fr)}}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+.xn-lbl[hidden],#xnData[hidden],#xnSingle[hidden],#xnPairs[hidden]{display:none}
+#xnData,#xnSingle{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.6;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+#xnData{height:180px;resize:vertical}
+#xnSingle{height:48px}
+#xnData:focus,#xnSingle:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:4px 0 2px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld input,.xn-fld select{height:46px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:220px;font-family:inherit}
+.xn-fld select{cursor:pointer;min-width:160px}
+.xn-fld input:focus,.xn-fld select:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-pairs{padding:10px 12px 4px;border:1px dashed #c7d2fe;border-radius:10px;background:#f5f7ff;margin:2px 0 10px}
+.xn-pairs-head{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;font-weight:700;color:#3730a3;margin-bottom:8px}
+.xn-add{border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-weight:700;border-radius:8px;padding:6px 12px;font-size:12.5px;cursor:pointer}
+.xn-pair{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.xn-pair input{flex:1;height:40px;border:1px solid #cbd5e1;border-radius:8px;padding:0 10px;font-size:13.5px;background:#fff;color:#0f172a;min-width:0}
+.xn-pair .xn-arrow{color:#6366f1;font-weight:700}
+.xn-pair .xn-del{min-width:40px;min-height:38px;padding:0;color:#b91c1c;border:1px solid #fecaca;background:#fff;border-radius:8px;cursor:pointer}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+@media(max-width:720px){#xnData{height:150px}.xn-fld input{min-width:150px}.xn-fld select{min-width:120px}}
+</style>
+<script data-xn-url="1">
+(function(){
+  const DATA=document.getElementById('xnData'),SINGLE=document.getElementById('xnSingle'),
+        INP=document.getElementById('inp'),P=document.getElementById('xnParams'),
+        LBL=document.getElementById('xnLbl'),PAIRS=document.getElementById('xnPairs');
+  if(!DATA||!SINGLE||!INP||!P||!LBL||!PAIRS)return;
+  const KEY=()=>(location.hash||'').replace(/^#\//,'');
+  const S_SAMPLES={parse:'https://example.com:8080/a/b?x=1&y=2#top',qsparse:'a=1&b=%E4%BD%A0%E5%A5%BD',
+    clean:'https://a.com/p?utm_source=x&id=3&fbclid=y',norm:'HTTPS://Example.COM:443/a?b=2&a=1#x',
+    segments:'https://a.com/x/y/z.html',base:'https://a.com/dir/page.html?q=1'};
+  const SAMPLES={qsjson:'a=1&b=2&b=3',hosts:'https://a.com/x\nhttps://b.com/y\nhttps://a.com/z',
+    tomd:'https://a.com/x\nhttps://b.com/y',find:'看这里 https://a.com/x 和 https://b.com/y 。',
+    bulk:'https://a.com/路径?q=1\nhttps://b.com/x'};
+  const CFG={
+    parse:{single:true,aLabel:'URL',ph:'https://example.com/a?x=1'},
+    qsparse:{single:true,aLabel:'查询串或完整 URL',ph:'a=1&b=2'},
+    clean:{single:true,aLabel:'URL',ph:'https://a.com/p?utm_source=x'},
+    norm:{single:true,aLabel:'URL',ph:'HTTPS://Example.COM/a?b=2&a=1'},
+    segments:{single:true,aLabel:'URL',ph:'https://a.com/x/y/z.html'},
+    base:{single:true,aLabel:'URL',ph:'https://a.com/dir/page.html?q=1'},
+    qsjson:{data:true,aLabel:'查询串或 JSON 对象'},
+    hosts:{data:true,aLabel:'URL 清单（每行一条）'},
+    tomd:{data:true,aLabel:'URL 清单（每行一条）'},
+    find:{data:true,aLabel:'含链接的文本'},
+    bulk:{data:true,aLabel:'URL / 文本清单（每行一条）',f:[{k:'dir',t:'select',l:'处理方向',v:'e',opts:[['e','编码（文本 → 百分号编码）'],['d','解码（百分号编码 → 文本）']]}]},
+    join:{f:[{k:'base',t:'text',l:'基准 URL',v:'https://a.com/dir/',ph:'https://a.com/dir/'},
+      {k:'rel',t:'text',l:'相对路径',v:'page.html',ph:'page.html 或 ../x'}]},
+    compare:{f:[{k:'a',t:'text',l:'URL A',v:'https://a.com/x?q=1',ph:'https://…'},
+      {k:'b',t:'text',l:'URL B',v:'https://a.com/y?q=2',ph:'https://…'}]},
+    qsbuild:{pairs:true,aLabel:'（参数用上方表格填写）'}
+  };
+  const DEFAULT={aLabel:'输入内容'};
+  let composing=false,lastKey='';
+  const val=(id)=>{const e=document.getElementById(id);return e?e.value:''};
+  function addPair(k,v){
+    const list=PAIRS.querySelector('.xn-pair-list');
+    const row=document.createElement('div');row.className='xn-pair';
+    const a=document.createElement('input');a.className='xn-k';a.placeholder='参数名';a.value=k||'';
+    const arrow=document.createElement('span');arrow.className='xn-arrow';arrow.textContent='=';
+    const b=document.createElement('input');b.className='xn-v';b.placeholder='参数值';b.value=v||'';
+    const del=document.createElement('button');del.type='button';del.className='xn-del';del.title='删除这一组';del.textContent='×';
+    del.addEventListener('click',()=>{row.remove();compose();});
+    row.append(a,arrow,b,del);list.appendChild(row);
+    compose();
+  }
+  function compose(){
+    if(composing)return;
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    composing=true;
+    if(cfg.single){INP.value=SINGLE.value;}
+    else if(key==='bulk'){INP.value=val('xnP_dir')+'\n'+DATA.value;}
+    else if(key==='join'){INP.value=(val('xnP_base')+' '+val('xnP_rel')).trim();}
+    else if(key==='compare'){INP.value=val('xnP_a')+'\n'+val('xnP_b');}
+    else if(key==='qsbuild'){
+      INP.value=[...PAIRS.querySelectorAll('.xn-pair')].map(r=>{
+        const k=r.querySelector('.xn-k').value.trim(),v=r.querySelector('.xn-v').value.trim();
+        return k?k+'='+v:'';
+      }).filter(Boolean).join('\n');
+    }
+    else{INP.value=DATA.value;}
+    composing=false;
+  }
+  function build(){
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    P.innerHTML='';
+    const single=!!cfg.single,useData=!!cfg.data,usePairs=!!cfg.pairs;
+    SINGLE.hidden=!single;DATA.hidden=!useData;PAIRS.hidden=!usePairs;
+    LBL.hidden=!(single||useData);
+    LBL.textContent=cfg.aLabel||DEFAULT.aLabel;
+    if(single)SINGLE.placeholder=cfg.ph||'';
+    const changed=key!==lastKey;
+    if(changed&&single&&S_SAMPLES[key]&&(!SINGLE.value||SINGLE.value===S_SAMPLES[lastKey]))SINGLE.value=S_SAMPLES[key];
+    if(changed&&useData&&(!DATA.value||DATA.value===SAMPLES[lastKey]))DATA.value=SAMPLES[key]||'';
+    (cfg.f||[]).forEach(f=>{
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      let el;
+      if(f.t==='select'){
+        el=document.createElement('select');
+        (f.opts||[]).forEach(([v,t])=>{const op=document.createElement('option');op.value=v;op.textContent=t;el.appendChild(op);});
+        el.value=f.v||'';
+      }else{
+        el=document.createElement('input');el.type='text';el.value=f.v||'';if(f.ph)el.placeholder=f.ph;
+      }
+      el.id='xnP_'+f.k;wrap.appendChild(el);P.appendChild(wrap);
+    });
+    if(usePairs&&!PAIRS.querySelector('.xn-pair')){addPair('q','小凝');addPair('page','2');}
+    lastKey=key;
+    compose();
+  }
+  ['input','change'].forEach(ev=>{DATA.addEventListener(ev,compose);SINGLE.addEventListener(ev,compose);P.addEventListener(ev,compose);PAIRS.addEventListener(ev,compose);});
+  const ADD=document.getElementById('xnAddPair');if(ADD)ADD.addEventListener('click',()=>addPair('',''));
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnUrl='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    ['run','copy','pick'].forEach(id=>{const b=document.getElementById(id);if(b)bar.appendChild(b);});
+    if(!oldRow.querySelector('button'))oldRow.remove();
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例';
+  demo.addEventListener('click',()=>{
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    if(cfg.single&&S_SAMPLES[key])SINGLE.value=S_SAMPLES[key];
+    if(cfg.data&&SAMPLES[key])DATA.value=SAMPLES[key];
+    build();const r=document.getElementById('run');r&&r.click();
+  });
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  const XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{
+    const v=XQ.value.trim().toLowerCase();let n=0;
+    XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});
+    const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+  const FILE=document.getElementById('file');
+  if(FILE)FILE.onchange=()=>{
+    const f=FILE.files&&FILE.files[0];if(!f)return;
+    if(f.size>2097152){document.getElementById('err').textContent='文件超过 2MB，请分段或改用粘贴';return;}
+    const r=new FileReader();
+    r.onload=()=>{const txt=String(r.result);if(!DATA.hidden)DATA.value=txt;else SINGLE.value=txt.trim();compose();const rb=document.getElementById('run');rb&&rb.click();};
+    r.onerror=()=>{document.getElementById('err').textContent='文件读取失败'};
+    r.readAsText(f,'utf-8');
+  };
+  window.addEventListener('hashchange',build);
+  build();
+})();
+</script>
 </body></html>
