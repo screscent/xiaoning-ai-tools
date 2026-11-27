@@ -88,7 +88,7 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <details><summary>使用说明</summary><div>① 用上方下拉或标签切换工具，也可直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制或下载；④ 可导入 ≤2MB 文本文件自动填入；⑤ Ctrl / ⌘ + Enter 执行。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "hex2rgb", "name": "HEX 转 RGB", "desc": "#RRGGBB → rgb()", "impl": "cHex2Rgb"}, {"key": "rgb2hex", "name": "RGB 转 HEX", "desc": "12,34,56 → #0c2238", "impl": "cRgb2Hex"}, {"key": "hex2hsl", "name": "HEX 转 HSL", "desc": "#RRGGBB → hsl()", "impl": "cHex2Hsl"}, {"key": "hsl2hex", "name": "HSL 转 HEX", "desc": "210, 40%, 50% → #hex", "impl": "cHsl2Hex"}, {"key": "lighten", "name": "变亮", "desc": "#hex 与百分比（首行/同行）", "impl": "cLighten"}, {"key": "darken", "name": "变暗", "desc": "#hex 与百分比", "impl": "cDarken"}, {"key": "rgba", "name": "转 RGBA", "desc": "#hex 与透明度", "impl": "cRgba"}, {"key": "contrast", "name": "对比度检测", "desc": "两个颜色，逗号分隔", "impl": "cContrast"}, {"key": "luminance", "name": "相对亮度", "desc": "#hex → 0~1", "impl": "cLum"}, {"key": "palette", "name": "明暗色阶", "desc": "#hex → 5 档色阶", "impl": "cPalette"}, {"key": "gradient", "name": "渐变 CSS", "desc": "两个颜色 → linear-gradient", "impl": "cGradient"}, {"key": "shadow", "name": "阴影 CSS", "desc": "示例输入 → box-shadow", "impl": "cShadow"}];
+const TOOLS=[{"key": "hex2rgb", "name": "HEX 转 RGB", "desc": "#RRGGBB → rgb()", "impl": "cHex2Rgb"}, {"key": "rgb2hex", "name": "RGB 转 HEX", "desc": "滑块调节 RGB 分量，输出十六进制色值", "impl": "cRgb2Hex"}, {"key": "hex2hsl", "name": "HEX 转 HSL", "desc": "#RRGGBB → hsl()", "impl": "cHex2Hsl"}, {"key": "hsl2hex", "name": "HSL 转 HEX", "desc": "滑块调节 H/S/L，输出十六进制色值", "impl": "cHsl2Hex"}, {"key": "lighten", "name": "变亮", "desc": "选颜色与提亮幅度，输出新色值", "impl": "cLighten"}, {"key": "darken", "name": "变暗", "desc": "选颜色与压暗幅度，输出新色值", "impl": "cDarken"}, {"key": "rgba", "name": "转 RGBA", "desc": "选颜色与不透明度，输出 rgba()", "impl": "cRgba"}, {"key": "contrast", "name": "对比度检测", "desc": "选文字色与背景色，检测对比度", "impl": "cContrast"}, {"key": "luminance", "name": "相对亮度", "desc": "#hex → 0~1", "impl": "cLum"}, {"key": "palette", "name": "明暗色阶", "desc": "#hex → 5 档色阶", "impl": "cPalette"}, {"key": "gradient", "name": "渐变 CSS", "desc": "两个颜色 → linear-gradient", "impl": "cGradient"}, {"key": "shadow", "name": "阴影 CSS", "desc": "滑块调偏移/模糊/颜色，生成 box-shadow", "impl": "cShadow"}];
 
 function cHex2Rgb(s){const h=s.trim().replace('#','');if(!/^[0-9a-fA-F]{6}$/.test(h))return '(请输入 #RRGGBB)';return `rgb(${parseInt(h.slice(0,2),16)}, ${parseInt(h.slice(2,4),16)}, ${parseInt(h.slice(4,6),16)})`}
 function cRgb2Hex(s){const m=s.match(/(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(!m)return '格式：12,34,56';return '#'+[m[1],m[2],m[3]].map(x=>Math.max(0,Math.min(255,+x)).toString(16).padStart(2,'0')).join('')}
@@ -291,7 +291,7 @@ const show=v=>{$('#out').textContent=String(v);updateStats();decorate(t)};
 if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
-$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><a class="open" href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 (function(){const pt=$('#picktool');if(!pt)return;
 pt.innerHTML='<option value="">浏览全部工具</option>'+TOOLS.map(t=>`<option value="${t.key}">${t.name}</option>`).join('');
@@ -327,4 +327,23 @@ r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
 </script><nav aria-label="其他工具集" style="max-width:1180px;margin:8px auto 0;padding:0 16px 24px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12px;color:#64748b"><span>其他工具集：</span><a href="json-codegen.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">JSON 代码生成合集</a><a href="tools-codec.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">编码与哈希工具集</a><a href="tools-time.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">时间与日期工具集</a><a href="tools-text.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">文本清洗工具集</a><a href="tools-math.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">数学计算工具集</a><a href="tools-image.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">图片尺寸与体积工具集</a><a href="tools-privacy.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">隐私脱敏与口令强度工具集 · 在线工具合集（免费纯前端）</a><a href="tools-travel.html" style="color:#334155;text-decoration:none;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:12px">出行换算与行程工具集</a><a href="../index.html#tool-sets" style="color:#4338ca;text-decoration:none">全部分组 →</a></nav><script src="../legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-color="1">
+.bar-in label[for="picktool"],#picktool{display:none!important}
+</style>
+<script data-xn-color="1">
+(function(){
+  var XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  var XTABS=[].slice.call(document.querySelectorAll('nav.tabs a'));
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  var XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',function(){
+    var v=XQ.value.trim().toLowerCase(),n=0;
+    XTABS.forEach(function(a){
+      var hit=!v||(a.textContent||'').toLowerCase().indexOf(v)>=0;
+      if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}
+    });
+    var c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+})();
+</script>
 </body></html>
