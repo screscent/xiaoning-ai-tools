@@ -34,14 +34,14 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div id="xnParams" class="xn-params"></div><label class="xn-lbl" id="xnLbl" for="xnData">待哈希文本</label><textarea id="xnData" spellcheck="false"></textarea><textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "md5", "name": "MD5", "desc": "文本 → 32 位 MD5 十六进制", "impl": "md5"}, {"key": "sha1", "name": "SHA-1", "desc": "文本 → 40 位十六进制", "impl": "sha1"}, {"key": "sha256", "name": "SHA-256", "desc": "文本 → 64 位十六进制", "impl": "sha256"}, {"key": "sha512", "name": "SHA-512", "desc": "文本 → 128 位十六进制", "impl": "sha512"}, {"key": "crc32", "name": "CRC32", "desc": "文本 → 8 位十六进制校验和", "impl": "crc32"}, {"key": "sha384", "name": "SHA-384", "desc": "文本 → 96 位十六进制", "impl": "sha384"}, {"key": "all", "name": "全算法一次对比", "desc": "MD5 / SHA-1 / SHA-256 / SHA-512 / CRC32", "impl": "hashAll"}, {"key": "verify", "name": "哈希比对校验", "desc": "首行期望哈希，其后原文；按长度识别算法", "impl": "hashVerify"}, {"key": "fnv", "name": "FNV-1a 快速哈希", "desc": "32/64 位非加密哈希，适合分桶与去重", "impl": "fnv1a"}, {"key": "adler", "name": "Adler-32 校验和", "desc": "zlib 使用的轻量校验和，附十进制值", "impl": "adler32"}, {"key": "hmac", "name": "HMAC-SHA256", "desc": "首行密钥，其后消息，输出十六进制签名", "impl": "hmacGen"}, {"key": "crc16", "name": "CRC16/MODBUS", "desc": "串口/工业协议常用校验，输出高字节在前形式", "impl": "crc16Modbus"}, {"key": "batch", "name": "批量哈希", "desc": "首行算法 md5/sha1/sha256，其后每行一条", "impl": "hashBatch"}, {"key": "format", "name": "哈希格式化", "desc": "去分隔符，输出小写/大写/每 8 位分组", "impl": "hashFormat"}];
+const TOOLS=[{"key": "md5", "name": "MD5", "desc": "文本 → 32 位 MD5 十六进制", "impl": "md5"}, {"key": "sha1", "name": "SHA-1", "desc": "文本 → 40 位十六进制", "impl": "sha1"}, {"key": "sha256", "name": "SHA-256", "desc": "文本 → 64 位十六进制", "impl": "sha256"}, {"key": "sha512", "name": "SHA-512", "desc": "文本 → 128 位十六进制", "impl": "sha512"}, {"key": "crc32", "name": "CRC32", "desc": "文本 → 8 位十六进制校验和", "impl": "crc32"}, {"key": "sha384", "name": "SHA-384", "desc": "文本 → 96 位十六进制", "impl": "sha384"}, {"key": "all", "name": "全算法一次对比", "desc": "MD5 / SHA-1 / SHA-256 / SHA-512 / CRC32", "impl": "hashAll"}, {"key": "verify", "name": "哈希比对校验", "desc": "粘贴期望哈希与原文，按哈希长度自动识别算法并比对", "impl": "hashVerify"}, {"key": "fnv", "name": "FNV-1a 快速哈希", "desc": "32/64 位非加密哈希，适合分桶与去重", "impl": "fnv1a"}, {"key": "adler", "name": "Adler-32 校验和", "desc": "zlib 使用的轻量校验和，附十进制值", "impl": "adler32"}, {"key": "hmac", "name": "HMAC-SHA256", "desc": "指定密钥与消息，输出 HMAC-SHA256 十六进制签名", "impl": "hmacGen"}, {"key": "crc16", "name": "CRC16/MODBUS", "desc": "串口/工业协议常用校验，输出高字节在前形式", "impl": "crc16Modbus"}, {"key": "batch", "name": "批量哈希", "desc": "选择算法，逐行批量计算哈希（显示前 12 位）", "impl": "hashBatch"}, {"key": "format", "name": "哈希格式化", "desc": "去分隔符，输出小写/大写/每 8 位分组", "impl": "hashFormat"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -1369,17 +1369,17 @@ function crc16Modbus(s){
   const hex=crc.toString(16).toUpperCase().padStart(4,'0');
   return 'CRC16/MODBUS '+hex+'\n高字节在前 '+hex.slice(0,2)+' '+hex.slice(2)+'\n十进制 '+crc;
 }
-function hashBatch(s){
+async function hashBatch(s){
   const lines=String(s).split(/\r?\n/).filter(x=>x.trim()!=='');
   if(lines.length<2)return '首行写算法（md5/sha1/sha256），其后每行一条';
   const alg=lines[0].trim().toLowerCase();
   const map={md5,sha1,sha256};
   const fn=map[alg];
   if(!fn)return '算法只支持 md5 / sha1 / sha256';
-  const rows=lines.slice(1).map(l=>{
-    const h=fn(l.trim());
+  const rows=await Promise.all(lines.slice(1).map(async l=>{
+    const h=await fn(l.trim());
     return h.slice(0,12)+'  '+l.trim().slice(0,40);
-  });
+  }));
   return rows.join('\n')+'\n\n共 '+rows.length+' 条（显示前 12 位）';
 }
 function hashFormat(s){
@@ -6919,4 +6919,96 @@ r.onerror=()=>{{$('#err').textContent='文件读取失败'}};
 r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
-</script></body></html>
+</script>
+<link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1">
+<script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-hash="1">
+#inp{display:none}
+#xn-set-sum{display:none!important}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+#xnData{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.7;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;height:200px;resize:vertical}
+#xnData:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:4px 0 2px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld input,.xn-fld select{height:44px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:150px;font-family:inherit}
+.xn-fld input:focus,.xn-fld select:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+#tool .cols{min-width:0}#tool .cols>div{min-width:0}
+@media(max-width:820px){#tool .cols{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){#xnData{height:150px}.xn-fld input,.xn-fld select{min-width:120px}}
+</style>
+<script data-xn-hash="1">
+(function(){
+  const INP=document.getElementById('inp');
+  const P=document.getElementById('xnParams');
+  const LBL=document.getElementById('xnLbl');
+  const DATA=document.getElementById('xnData');
+  if(!INP||!P||!LBL||!DATA)return;
+  const KEY=()=>(location.hash||'').replace(/^#\//,'');
+  const CFG={
+    verify:{pre:{k:'want',t:'text',l:'期望哈希（粘贴完整值）',v:'5d41402abc4b2a76b9719d911017c592'},lbl:'原文文本'},
+    hmac:{pre:{k:'key',t:'text',l:'密钥',v:'key'},lbl:'消息文本'},
+    batch:{sel:{k:'alg',l:'哈希算法',v:'md5',opts:[['md5','MD5'],['sha1','SHA-1'],['sha256','SHA-256']]},lbl:'每行一条原文'}
+  };
+  const SAMPLES={verify:'hello',hmac:'hello',batch:'hello\nworld\ntrae'};
+  let lastKey='';
+  function val(id){const e=document.getElementById(id);return e?e.value:''}
+  function compose(){
+    const cfg=CFG[KEY()]||{};
+    if(cfg.pre)INP.value=val('xnP_'+cfg.pre.k)+'\n'+DATA.value;
+    else if(cfg.sel)INP.value=val('xnP_'+cfg.sel.k)+'\n'+DATA.value;
+    else INP.value=DATA.value;
+  }
+  function build(){
+    const key=KEY(),cfg=CFG[key]||{};
+    P.innerHTML='';
+    [cfg.pre,cfg.sel].forEach(f=>{
+      if(!f)return;
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      let el;
+      if(f.opts){
+        el=document.createElement('select');el.id='xnP_'+f.k;
+        f.opts.forEach(o=>{const op=document.createElement('option');op.value=o[0];op.textContent=o[1];el.appendChild(op);});
+        el.value=f.v;
+      }else{
+        el=document.createElement('input');el.type=f.t||'text';el.value=f.v||'';el.id='xnP_'+f.k;
+      }
+      wrap.appendChild(el);P.appendChild(wrap);
+    });
+    P.style.display=(cfg.pre||cfg.sel)?'flex':'none';
+    LBL.textContent=cfg.lbl||'待哈希文本';
+    const changed=key!==lastKey,prev=SAMPLES[lastKey];
+    if(changed&&(DATA.value===''||DATA.value===prev))DATA.value=SAMPLES[key]||'';
+    lastKey=key;
+    compose();
+  }
+  ['input','change'].forEach(ev=>{DATA.addEventListener(ev,compose);P.addEventListener(ev,compose);});
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnHash='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    ['run','copy','pick'].forEach(id=>{const b=document.getElementById(id);if(b)bar.appendChild(b);});
+    oldRow.style.display='none';
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例';
+  demo.addEventListener('click',()=>{build();const r=document.getElementById('run');r&&r.click();});
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  const RUN=document.getElementById('run');if(RUN)RUN.textContent='计算哈希';
+  const XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  document.querySelectorAll('#home .card .chip').forEach(c=>c.remove());
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{
+    const v=XQ.value.trim().toLowerCase();let n=0;
+    XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});
+    const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+  window.addEventListener('hashchange',build);
+  build();
+})();
+</script>
+</body></html>
