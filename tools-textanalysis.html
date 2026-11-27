@@ -34,14 +34,19 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div class="xn-ta" data-xn-ta="1">
+<div id="xnParams" class="xn-params"></div>
+<label class="xn-lbl" id="xnLbl" for="xnData">待分析文本</label>
+<textarea id="xnData" spellcheck="false" placeholder="粘贴要分析的文本…"></textarea>
+</div>
+<textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "stats", "name": "字数与阅读时长", "desc": "中英文字数拆分、标点、段落与预计阅读时间", "impl": "taStats"}, {"key": "top", "name": "词频 TopN", "desc": "首行可写 N（默认 10），中英混合词频与权重", "impl": "taTop"}, {"key": "para", "name": "段落与句子统计", "desc": "段数、句数、平均句长、最长句", "impl": "taPara"}, {"key": "punct", "name": "标点统计", "desc": "中英文标点分类计数与标点密度", "impl": "taPunct"}, {"key": "dup", "name": "重复行检测", "desc": "每行一条，统计重复行数与占比", "impl": "taDup"}, {"key": "read", "name": "可读性评级", "desc": "平均句长与长句占比 → 易读/中等/偏难", "impl": "taRead"}, {"key": "sensitive", "name": "极限词与隐私扫描", "desc": "广告极限词 + 手机号/身份证/邮箱命中", "impl": "taSensitive"}, {"key": "spacing", "name": "中英混排空格检查", "desc": "中文与英文/数字之间补空格并给出建议文本", "impl": "taSpacing"}, {"key": "simdup", "name": "近似行去重", "desc": "首行写阈值（默认 0.8），按编辑距离合并近似重复行", "impl": "taSimdup"}, {"key": "summary", "name": "抽取式摘要", "desc": "首行写摘要句数（默认 3），按词频与位置抽取要点", "impl": "taSummary"}, {"key": "longsent", "name": "长句定位", "desc": "首行写阈值（默认 40 字），找出超长句便于拆分改写", "impl": "taLongsent"}, {"key": "keywords", "name": "关键词短语", "desc": "首行写数量（默认 10），2-4 字短语按频次×字数排序", "impl": "taKeywords"}, {"key": "sentdist", "name": "句长分布", "desc": "按 0-10/11-20/…/61+ 分桶统计句数并画条形", "impl": "taSentDist"}, {"key": "bracket", "name": "括号引号配对检查", "desc": "全角/半角括号与中英引号配对，定位错序与未闭合", "impl": "taBracket"}, {"key": "case", "name": "大小写与命名风格", "desc": "UPPER/lower/Title/camel/snake/kebab/CONSTANT", "impl": "tkCase"}, {"key": "cnnum", "name": "中文数字转换", "desc": "阿拉伯数字 ↔ 中文数字（0~99999999）", "impl": "cnNum"}, {"key": "repwords", "name": "相邻重复词检测", "desc": "检测 the the / 的的 等校对问题", "impl": "repWords"}, {"key": "chartop", "name": "单字频次 TopN", "desc": "首行可写 N（默认 10），统计字符出现次数", "impl": "taCharTop"}, {"key": "punctnorm", "name": "中文标点统一", "desc": "中文后的半角 , . ! ? 统一为全角", "impl": "taPunctNorm"}, {"key": "langmix", "name": "字符构成占比", "desc": "中文/英文/数字/空白/符号占比", "impl": "taLangMix"}, {"key": "bigram", "name": "中文二元字组频次", "desc": "相邻汉字二元组 Top15，发现高频搭配", "impl": "taBigram"}, {"key": "linelen", "name": "行长度分布", "desc": "最长/最短/平均行与超 40 字行数", "impl": "taLineLen"}, {"key": "merge", "name": "合并断行", "desc": "单换行合并为空格，空行保留分段", "impl": "taParaMerge"}, {"key": "extract", "name": "信息提取", "desc": "提取手机号/邮箱/URL/金额/日期/IP 并去重计数", "impl": "textExtract"}, {"key": "mask", "name": "文本脱敏", "desc": "手机号/邮箱/身份证/银行卡打码，报告处数", "impl": "textMask"}, {"key": "repeatphrase", "name": "重复短语检测", "desc": "找出 4~10 字、出现 ≥2 次的短语并排序", "impl": "textRepeatPhrase"}];
+const TOOLS=[{"key": "stats", "name": "字数与阅读时长", "desc": "中英文字数拆分、标点、段落与预计阅读时间", "impl": "taStats"}, {"key": "top", "name": "词频 TopN", "desc": "调节 TopN 数量，统计中英混合词频与权重", "impl": "taTop"}, {"key": "para", "name": "段落与句子统计", "desc": "段数、句数、平均句长、最长句", "impl": "taPara"}, {"key": "punct", "name": "标点统计", "desc": "中英文标点分类计数与标点密度", "impl": "taPunct"}, {"key": "dup", "name": "重复行检测", "desc": "每行一条，统计重复行数与占比", "impl": "taDup"}, {"key": "read", "name": "可读性评级", "desc": "平均句长与长句占比 → 易读/中等/偏难", "impl": "taRead"}, {"key": "sensitive", "name": "极限词与隐私扫描", "desc": "广告极限词 + 手机号/身份证/邮箱命中", "impl": "taSensitive"}, {"key": "spacing", "name": "中英混排空格检查", "desc": "中文与英文/数字之间补空格并给出建议文本", "impl": "taSpacing"}, {"key": "simdup", "name": "近似行去重", "desc": "拖动相似度，按编辑距离合并近似重复行", "impl": "taSimdup"}, {"key": "summary", "name": "抽取式摘要", "desc": "选择摘要句数，按词频与位置抽取要点", "impl": "taSummary"}, {"key": "longsent", "name": "长句定位", "desc": "调节超长句字数上限，便于拆分改写", "impl": "taLongsent"}, {"key": "keywords", "name": "关键词短语", "desc": "选择数量，提取 2-4 字关键词短语", "impl": "taKeywords"}, {"key": "sentdist", "name": "句长分布", "desc": "按 0-10/11-20/…/61+ 分桶统计句数并画条形", "impl": "taSentDist"}, {"key": "bracket", "name": "括号引号配对检查", "desc": "全角/半角括号与中英引号配对，定位错序与未闭合", "impl": "taBracket"}, {"key": "case", "name": "大小写与命名风格", "desc": "UPPER/lower/Title/camel/snake/kebab/CONSTANT", "impl": "tkCase"}, {"key": "cnnum", "name": "中文数字转换", "desc": "阿拉伯数字 ↔ 中文数字（0~99999999）", "impl": "cnNum"}, {"key": "repwords", "name": "相邻重复词检测", "desc": "检测 the the / 的的 等校对问题", "impl": "repWords"}, {"key": "chartop", "name": "单字频次 TopN", "desc": "调节 TopN 数量，统计单字出现次数", "impl": "taCharTop"}, {"key": "punctnorm", "name": "中文标点统一", "desc": "中文后的半角 , . ! ? 统一为全角", "impl": "taPunctNorm"}, {"key": "langmix", "name": "字符构成占比", "desc": "中文/英文/数字/空白/符号占比", "impl": "taLangMix"}, {"key": "bigram", "name": "中文二元字组频次", "desc": "相邻汉字二元组 Top15，发现高频搭配", "impl": "taBigram"}, {"key": "linelen", "name": "行长度分布", "desc": "最长/最短/平均行与超 40 字行数", "impl": "taLineLen"}, {"key": "merge", "name": "合并断行", "desc": "单换行合并为空格，空行保留分段", "impl": "taParaMerge"}, {"key": "extract", "name": "信息提取", "desc": "提取手机号/邮箱/URL/金额/日期/IP 并去重计数", "impl": "textExtract"}, {"key": "mask", "name": "文本脱敏", "desc": "手机号/邮箱/身份证/银行卡打码，报告处数", "impl": "textMask"}, {"key": "repeatphrase", "name": "重复短语检测", "desc": "找出 4~10 字、出现 ≥2 次的短语并排序", "impl": "textRepeatPhrase"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -6750,7 +6755,7 @@ const show=v=>{$('#out').textContent=String(v)};
 if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
-$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><a class="open" href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;const cp=$('#copy');if(cp)cp.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
 $('#pick').onclick=()=>$('#file').click();
@@ -6762,4 +6767,130 @@ r.onerror=()=>{{$('#err').textContent='文件读取失败'}};
 r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
-</script></body></html>
+</script>
+<link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1">
+<script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-ta="1">
+#inp{display:none}
+#xn-set-sum{display:none!important}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+#xnData{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.7;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;height:220px;resize:vertical}
+#xnData:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:4px 0 2px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld input{height:44px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:150px;font-family:inherit}
+.xn-fld input:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+#tool .cols{min-width:0}#tool .cols>div{min-width:0}
+@media(max-width:820px){#tool .cols{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){#xnData{height:170px}.xn-fld input{min-width:110px}}
+</style>
+<script data-xn-ta="1">
+(function(){
+  const DATA=document.getElementById('xnData'),INP=document.getElementById('inp'),
+        P=document.getElementById('xnParams'),LBL=document.getElementById('xnLbl');
+  if(!DATA||!INP||!P)return;
+  const KEY=()=>(location.hash||'').replace(/^#\//,'');
+  const SAMPLES={
+    stats:'你好世界。Hello world! 这是测试文本。',
+    top:'苹果 香蕉 苹果 橙子 苹果',
+    para:'第一段第一句。第一段第二句。\n\n第二段只有一句。',
+    punct:'你好，世界！Hello, world.',
+    dup:'重复行\n唯一行\n重复行',
+    read:'这是一句测试文本。',
+    sensitive:'全网最低价 电话13800138000',
+    spacing:'中文English混排123',
+    simdup:'这是测试文本一\n这是测试文本二\n完全不同的内容',
+    summary:'第一句要点。第二句内容。第三句总结。',
+    longsent:'短句。'+'长'.repeat(50)+'。',
+    keywords:'文本分析 文本分析 关键词 关键词 工具',
+    sentdist:'短句。中等长度的一句。',
+    bracket:'（未闭合',
+    case:'hello world',
+    cnnum:'123',
+    repwords:'the the cat',
+    chartop:'苹果香蕉苹果',
+    punctnorm:'中文,半角.',
+    langmix:'中文abc123',
+    bigram:'文本分析文本分析',
+    linelen:'短\n'+'长'.repeat(45),
+    merge:'第一行\n第二行\n\n第二段',
+    extract:'联系 13800138000 邮箱 a@b.com 金额 100 元',
+    mask:'13800138000 a@b.com',
+    repeatphrase:'这是重复短语测试这是重复短语测试'
+  };
+  const CFG={
+    top:{f:[{k:'n',t:'number',l:'TopN 数量',v:'10',min:1,max:50}]},
+    simdup:{f:[{k:'th',t:'number',l:'相似度阈值',v:'0.8',min:0.5,max:0.99,step:0.05}]},
+    summary:{f:[{k:'n',t:'number',l:'摘要句数',v:'3',min:1,max:10}]},
+    longsent:{f:[{k:'th',t:'number',l:'超长句阈值（字）',v:'40',min:10,max:200}]},
+    keywords:{f:[{k:'n',t:'number',l:'关键词数量',v:'10',min:1,max:30}]},
+    chartop:{f:[{k:'n',t:'number',l:'TopN 数量',v:'10',min:1,max:50}]}
+  };
+  const DEFAULT={};
+  let composing=false,lastKey='';
+  const val=(id)=>{const e=document.getElementById(id);return e?e.value:''};
+  function compose(){
+    if(composing)return;
+    const key=KEY(),cfg=CFG[key];
+    composing=true;
+    if(cfg&&cfg.f&&cfg.f.length)INP.value=val('xnP_'+cfg.f[0].k)+'\n'+DATA.value;
+    else INP.value=DATA.value;
+    composing=false;
+  }
+  function build(){
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    P.innerHTML='';
+    (cfg.f||[]).forEach(f=>{
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      const el=document.createElement('input');el.type=f.t||'text';el.value=f.v||'';
+      if(f.min!==undefined)el.min=f.min;
+      if(f.max!==undefined)el.max=f.max;
+      if(f.step!==undefined)el.step=f.step;
+      el.id='xnP_'+f.k;wrap.appendChild(el);P.appendChild(wrap);
+    });
+    const changed=key!==lastKey,prev=SAMPLES[lastKey];
+    if(changed&&(DATA.value===''||DATA.value===prev))DATA.value=SAMPLES[key]||'';
+    lastKey=key;
+    compose();
+  }
+  ['input','change'].forEach(ev=>{DATA.addEventListener(ev,compose);P.addEventListener(ev,compose);});
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnTa='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    ['run','copy','pick'].forEach(id=>{const b=document.getElementById(id);if(b)bar.appendChild(b);});
+    if(!oldRow.querySelector('button'))oldRow.remove();
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例';
+  demo.addEventListener('click',()=>{
+    const key=KEY();if(SAMPLES[key])DATA.value=SAMPLES[key];
+    build();const r=document.getElementById('run');r&&r.click();
+  });
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  const XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{
+    const v=XQ.value.trim().toLowerCase();let n=0;
+    XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});
+    const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+  const FILE=document.getElementById('file');
+  if(FILE)FILE.onchange=()=>{
+    const f=FILE.files&&FILE.files[0];if(!f)return;
+    if(f.size>2097152){document.getElementById('err').textContent='文件超过 2MB，请分段或改用粘贴';return;}
+    const r=new FileReader();
+    r.onload=()=>{DATA.value=String(r.result);compose();const rb=document.getElementById('run');rb&&rb.click();};
+    r.onerror=()=>{document.getElementById('err').textContent='文件读取失败'};
+    r.readAsText(f,'utf-8');
+  };
+  window.addEventListener('hashchange',build);
+  build();
+})();
+</script>
+</body></html>
