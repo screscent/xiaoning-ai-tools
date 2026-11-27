@@ -6269,6 +6269,13 @@ window.addEventListener('hashchange',route);route();
     const cols=document.querySelector('#tool .cols');
     if(cols) cols.insertAdjacentElement('afterend', bar);
   }
+  // xn-hidehome：顶部标签已承担导航，隐藏重复的首页卡片网格；默认打开第一个工具；搜索改为过滤标签
+  const XHOME=document.getElementById('home');
+  if(XHOME)XHOME.style.display='none';
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length){location.replace(XTABS[0].getAttribute('href'));}
+  const XQ=document.getElementById('q');
+  if(XQ){XQ.addEventListener('input',()=>{const v=XQ.value.trim().toLowerCase();let n=0;XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;});}
   window.addEventListener('hashchange',syncThr); syncThr();
 })();
 </script></body></html>
