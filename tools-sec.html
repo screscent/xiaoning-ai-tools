@@ -34,14 +34,20 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div class="xn-sec" data-xn-sec="1">
+<div id="xnParams" class="xn-params"></div>
+<label class="xn-lbl" id="xnLbl" for="xnSingle">输入内容</label>
+<input id="xnSingle" type="text" placeholder="输入…">
+<textarea id="xnData" spellcheck="false" hidden placeholder="每行一条…"></textarea>
+</div>
+<textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "pw", "name": "随机密码", "desc": "输入位数，生成强随机密码", "impl": "pwGen"}, {"key": "pin", "name": "随机 PIN", "desc": "输入位数，生成数字 PIN", "impl": "pinGen"}, {"key": "uuid", "name": "UUID v4", "desc": "生成一个 UUID v4（输入任意字符即可）", "impl": "uuid4"}, {"key": "rand", "name": "随机字符串", "desc": "输入长度，生成小写字母数字串", "impl": "randStr"}, {"key": "score", "name": "密码强度", "desc": "输入密码，返回长度/得分/等级", "impl": "pwScore"}, {"key": "batch", "name": "批量生成密码", "desc": "输入「条数 位数」，一次生成多条", "impl": "pwBatch"}, {"key": "phrase", "name": "密码短语", "desc": "输入词数（2~8），生成易记短语密码", "impl": "pwPhrase"}, {"key": "weak", "name": "弱密码检测", "desc": "命中常见开头/重复/弱字典/纯数字等模式", "impl": "pwWeak"}, {"key": "entropy", "name": "密码熵与破解时间", "desc": "估算字符空间、熵 bits 与离线暴力破解耗时", "impl": "pwEntropy"}, {"key": "policy", "name": "口令策略检查", "desc": "长度/大小写/数字/符号/重复/弱词 7 项逐条判定", "impl": "pwPolicy"}, {"key": "maskall", "name": "批量文本脱敏", "desc": "逐行识别手机号/邮箱/身份证/银行卡并脱敏", "impl": "maskAll"}, {"key": "uuidinfo", "name": "UUID 结构解析", "desc": "校验格式并解析版本/变体，v1 附生成时间", "impl": "uuidInfo"}, {"key": "secretscan", "name": "敏感信息扫描", "desc": "检测 AWS/GitHub/OpenAI/Slack/Google 密钥、JWT、私钥、密码赋值", "impl": "secretScan"}, {"key": "token", "name": "随机令牌", "desc": "首行 字节数[,hex|base64url]，生成 API 令牌", "impl": "randomToken"}];
+const TOOLS=[{"key": "pw", "name": "随机密码", "desc": "选择位数，生成强随机密码", "impl": "pwGen"}, {"key": "pin", "name": "随机 PIN", "desc": "选择位数，生成数字 PIN", "impl": "pinGen"}, {"key": "uuid", "name": "UUID v4", "desc": "点击转换即可生成一个 UUID v4", "impl": "uuid4"}, {"key": "rand", "name": "随机字符串", "desc": "选择长度，生成小写字母数字串", "impl": "randStr"}, {"key": "score", "name": "密码强度", "desc": "输入密码，返回长度/得分/等级", "impl": "pwScore"}, {"key": "batch", "name": "批量生成密码", "desc": "选择条数与位数，一次生成多条", "impl": "pwBatch"}, {"key": "phrase", "name": "密码短语", "desc": "选择词数（2~8），生成易记短语密码", "impl": "pwPhrase"}, {"key": "weak", "name": "弱密码检测", "desc": "命中常见开头/重复/弱字典/纯数字等模式", "impl": "pwWeak"}, {"key": "entropy", "name": "密码熵与破解时间", "desc": "估算字符空间、熵 bits 与离线暴力破解耗时", "impl": "pwEntropy"}, {"key": "policy", "name": "口令策略检查", "desc": "长度/大小写/数字/符号/重复/弱词 7 项逐条判定", "impl": "pwPolicy"}, {"key": "maskall", "name": "批量文本脱敏", "desc": "逐行识别手机号/邮箱/身份证/银行卡并脱敏", "impl": "maskAll"}, {"key": "uuidinfo", "name": "UUID 结构解析", "desc": "校验格式并解析版本/变体，v1 附生成时间", "impl": "uuidInfo"}, {"key": "secretscan", "name": "敏感信息扫描", "desc": "检测 AWS/GitHub/OpenAI/Slack/Google 密钥、JWT、私钥、密码赋值", "impl": "secretScan"}, {"key": "token", "name": "随机令牌", "desc": "选择字节数与输出编码，生成 API 令牌", "impl": "randomToken"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -6961,7 +6967,7 @@ const show=v=>{$('#out').textContent=String(v)};
 if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
-$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><a class="open" href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;const cp=$('#copy');if(cp)cp.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
 $('#pick').onclick=()=>$('#file').click();
@@ -6973,4 +6979,131 @@ r.onerror=()=>{{$('#err').textContent='文件读取失败'}};
 r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
-</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script></body></html>
+</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-sec="1">
+#inp{display:none}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+.xn-lbl[hidden]{display:none}
+#xnData,#xnSingle{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.6;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+#xnData{height:170px;resize:vertical}
+#xnSingle{height:48px}
+#xnData[hidden],#xnSingle[hidden]{display:none}
+#xnData:focus,#xnSingle:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:4px 0 2px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld input,.xn-fld select{height:46px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:150px;font-family:inherit}
+.xn-fld select{cursor:pointer;min-width:130px}
+.xn-fld input:focus,.xn-fld select:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+@media(max-width:720px){#xnData{height:150px}.xn-fld input,.xn-fld select{min-width:120px}}
+</style>
+<script data-xn-sec="1">
+(function(){
+  const DATA=document.getElementById('xnData'),SINGLE=document.getElementById('xnSingle'),
+        INP=document.getElementById('inp'),P=document.getElementById('xnParams'),LBL=document.getElementById('xnLbl');
+  if(!DATA||!SINGLE||!INP||!P||!LBL)return;
+  const KEY=()=>(location.hash||'').replace(/^#\//,'');
+  const S_SAMPLES={pw:'16',pin:'6',uuid:'1',rand:'10',score:'Abc123!@#',phrase:'4',weak:'123456',entropy:'Abc123!@#',policy:'Abc123!@#',uuidinfo:'550e8400-e29b-41d4-a716-446655440000'};
+  const SAMPLES={maskall:'手机 13800138000\n邮箱 me@example.com\n身份证 110101199001011234\n银行卡 6222020200112233445',
+    secretscan:'AWS AKIAIOSFODNN7EXAMPLE\nGitHub ghp_1234567890abcdefghijklmnopqrstuvwxyz'};
+  const CFG={
+    pw:{single:true,siType:'number',aLabel:'密码位数',ph:'16'},
+    pin:{single:true,siType:'number',aLabel:'PIN 位数',ph:'6'},
+    rand:{single:true,siType:'number',aLabel:'长度',ph:'10'},
+    uuid:{single:true,aLabel:'UUID（无需输入，直接点转换）',ph:'任意字符'},
+    score:{single:true,aLabel:'待检测密码',ph:'输入密码，本地评估'},
+    weak:{single:true,aLabel:'待检测密码',ph:'输入密码，检测弱模式'},
+    entropy:{single:true,aLabel:'待评估密码',ph:'输入密码，估算熵'},
+    policy:{single:true,aLabel:'待检查口令',ph:'输入口令，逐项判定'},
+    uuidinfo:{single:true,aLabel:'UUID 字符串',ph:'8-4-4-4-12'},
+    phrase:{single:true,siType:'number',aLabel:'词数（2~8）',ph:'4'},
+    batch:{f:[{k:'n',t:'number',l:'条数',v:'5',min:1,max:50},{k:'len',t:'number',l:'每条位数',v:'16',min:8,max:64}]},
+    token:{f:[{k:'n',t:'number',l:'字节数',v:'32',min:8,max:128},
+      {k:'enc',t:'select',l:'输出编码',v:'hex',opts:[['hex','Hex'],['base64url','Base64URL']]}]},
+    maskall:{data:true,aLabel:'文本清单（每行一条）'},
+    secretscan:{data:true,aLabel:'待扫描文本'}
+  };
+  const DEFAULT={aLabel:'输入内容'};
+  let composing=false,lastKey='';
+  const val=(id)=>{const e=document.getElementById(id);return e?e.value:''};
+  function compose(){
+    if(composing)return;
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    composing=true;
+    if(cfg.single){INP.value=SINGLE.value;}
+    else if(key==='batch'){INP.value=val('xnP_n')+' '+val('xnP_len');}
+    else if(key==='token'){INP.value=val('xnP_n')+','+val('xnP_enc');}
+    else{INP.value=DATA.value;}
+    composing=false;
+  }
+  function build(){
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    P.innerHTML='';
+    const single=!!cfg.single,useData=!!cfg.data;
+    SINGLE.hidden=!single;DATA.hidden=!useData;
+    LBL.hidden=!(single||useData);
+    LBL.textContent=cfg.aLabel||DEFAULT.aLabel;
+    if(single){SINGLE.type=cfg.siType||'text';SINGLE.placeholder=cfg.ph||'';}
+    const changed=key!==lastKey;
+    if(changed&&single&&S_SAMPLES[key]&&(!SINGLE.value||SINGLE.value===S_SAMPLES[lastKey]))SINGLE.value=S_SAMPLES[key];
+    if(changed&&useData&&(!DATA.value||DATA.value===SAMPLES[lastKey]))DATA.value=SAMPLES[key]||'';
+    (cfg.f||[]).forEach(f=>{
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      let el;
+      if(f.t==='select'){
+        el=document.createElement('select');
+        (f.opts||[]).forEach(([v,t])=>{const op=document.createElement('option');op.value=v;op.textContent=t;el.appendChild(op);});
+        el.value=f.v||'';
+      }else{
+        el=document.createElement('input');el.type=f.t||'text';
+        if(f.min!==undefined)el.min=f.min;
+        if(f.max!==undefined)el.max=f.max;
+        el.value=f.v||'';
+      }
+      el.id='xnP_'+f.k;wrap.appendChild(el);P.appendChild(wrap);
+    });
+    lastKey=key;
+    compose();
+  }
+  ['input','change'].forEach(ev=>{DATA.addEventListener(ev,compose);SINGLE.addEventListener(ev,compose);P.addEventListener(ev,compose);});
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnSec='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    ['run','copy','pick'].forEach(id=>{const b=document.getElementById(id);if(b)bar.appendChild(b);});
+    if(!oldRow.querySelector('button'))oldRow.remove();
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例';
+  demo.addEventListener('click',()=>{
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    if(cfg.single&&S_SAMPLES[key])SINGLE.value=S_SAMPLES[key];
+    if(cfg.data&&SAMPLES[key])DATA.value=SAMPLES[key];
+    build();const r=document.getElementById('run');r&&r.click();
+  });
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  const XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{
+    const v=XQ.value.trim().toLowerCase();let n=0;
+    XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});
+    const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+  const FILE=document.getElementById('file');
+  if(FILE)FILE.onchange=()=>{
+    const f=FILE.files&&FILE.files[0];if(!f)return;
+    if(f.size>2097152){document.getElementById('err').textContent='文件超过 2MB，请分段或改用粘贴';return;}
+    const r=new FileReader();
+    r.onload=()=>{const txt=String(r.result);if(!DATA.hidden)DATA.value=txt;else SINGLE.value=txt.trim();compose();const rb=document.getElementById('run');rb&&rb.click();};
+    r.onerror=()=>{document.getElementById('err').textContent='文件读取失败'};
+    r.readAsText(f,'utf-8');
+  };
+  window.addEventListener('hashchange',build);
+  build();
+})();
+</script>
+</body></html>
