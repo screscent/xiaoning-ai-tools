@@ -34,14 +34,20 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div class="xn-date" data-xn-date="1">
+<div id="xnParams" class="xn-params"></div>
+<label class="xn-lbl" id="xnLbl" for="xnSingle">日期 / 时间输入</label>
+<input id="xnSingle" type="text" placeholder="输入日期或时间…">
+<textarea id="xnData" spellcheck="false" hidden placeholder="每行一条…"></textarea>
+</div>
+<textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "ts", "name": "时间戳互转", "desc": "秒/毫秒时间戳 ↔ ISO/本地时间", "impl": "dateTs"}, {"key": "diff", "name": "日期相差", "desc": "两个日期 → 天数/周数/含首尾天数", "impl": "dateDiff2"}, {"key": "add", "name": "日期加减", "desc": "2026-01-01 +30 → 结果日期与星期", "impl": "dateAdd"}, {"key": "workdays", "name": "月度工作日", "desc": "YYYY-MM → 周一至周五天数", "impl": "workdays"}, {"key": "tz", "name": "时区换算", "desc": "时间 + 源 UTC 偏移 + 目标偏移", "impl": "tzConv"}, {"key": "batchts", "name": "批量时间戳转换", "desc": "每行一个时间戳/日期 → ISO + 本地", "impl": "batchTs"}, {"key": "workrange", "name": "区间工作日", "desc": "两个日期之间的工作日与周末天数", "impl": "workdaysBetween"}, {"key": "addbatch", "name": "批量日期加减", "desc": "每行「日期,偏移天数」→ 新日期与星期", "impl": "dateAddBatch"}, {"key": "tzbatch", "name": "批量时区换算", "desc": "首行 源/目标偏移，其后每行一个时间", "impl": "tzBatch"}, {"key": "fmt", "name": "批量日期格式化", "desc": "首行格式（YYYY/MM/DD），其后每行日期", "impl": "dateFmt"}, {"key": "cron", "name": "cron 表达式解析", "desc": "5 段表达式，展示分/时集合与接下来 5 次触发", "impl": "cronNext"}, {"key": "tzabbr", "name": "时区缩写速查", "desc": "CST/EST/JST 等缩写 → IANA 时区与当前偏移", "impl": "tzAbbr"}, {"key": "week", "name": "周与季度信息", "desc": "ISO 周号、本周起止、星期、季度、年内天数", "impl": "weekInfo"}, {"key": "isoweek", "name": "ISO 周反查日期", "desc": "2026-W07-3 → 具体日期（1=周一）", "impl": "isoWeekToDate"}, {"key": "monthCal", "name": "月历生成", "desc": "输入年月，输出周一起的日历与天数", "impl": "monthCal"}, {"key": "zodiac", "name": "星座与生肖", "desc": "日期 → 星座；年份 → 生肖", "impl": "zodiacInfo"}, {"key": "nthworkday", "name": "月度第 N 个工作日", "desc": "2026-11,3 → 当月第 3 个工作日的日期与星期", "impl": "nthWorkday"}, {"key": "workdayadd", "name": "工作日加减", "desc": "2026-11-13,+3 → 向后 3 个工作日（负数向前）", "impl": "workdayShift"}, {"key": "cndate", "name": "中文大写日期", "desc": "2026-11-14 → 二〇二六年十一月十四日（周六）", "impl": "cnDate"}, {"key": "span", "name": "日期区间重叠", "desc": "起1,止1,起2,止2 → 是否重叠与交集天数", "impl": "dateSpan"}, {"key": "age", "name": "精确年龄计算", "desc": "出生日期[,参考日期] → 岁/月/天与下次生日", "impl": "ageCalc"}, {"key": "duration", "name": "秒数转时长", "desc": "秒数 → 天/时/分/秒与时钟格式", "impl": "durationFmt"}, {"key": "monthdiff", "name": "月数差", "desc": "两个日期相差的整月数与余天（租期/工龄）", "impl": "dateMonthDiff"}, {"key": "worklist", "name": "工作日列举", "desc": "列出区间内所有工作日与周末天数（≤62 天）", "impl": "dateWorkdayList"}, {"key": "zones", "name": "多时区对照", "desc": "同一时刻在 UTC/北京/东京/伦敦/纽约/洛杉矶的当地时间", "impl": "dateZoneGrid"}];
+const TOOLS=[{"key": "ts", "name": "时间戳互转", "desc": "秒/毫秒时间戳 ↔ ISO/本地时间", "impl": "dateTs"}, {"key": "diff", "name": "日期相差", "desc": "两个日期 → 天数/周数/含首尾天数", "impl": "dateDiff2"}, {"key": "add", "name": "日期加减", "desc": "选择起始日期与天数，输出结果日期与星期", "impl": "dateAdd"}, {"key": "workdays", "name": "月度工作日", "desc": "选择年月，统计周一至周五天数", "impl": "workdays"}, {"key": "tz", "name": "时区换算", "desc": "选择时间与源/目标时区，换算当地时间", "impl": "tzConv"}, {"key": "batchts", "name": "批量时间戳转换", "desc": "每行一个时间戳或日期，批量转为 ISO 与本地时间", "impl": "batchTs"}, {"key": "workrange", "name": "区间工作日", "desc": "两个日期之间的工作日与周末天数", "impl": "workdaysBetween"}, {"key": "addbatch", "name": "批量日期加减", "desc": "为日期清单统一加减天数，逐行输出新日期", "impl": "dateAddBatch"}, {"key": "tzbatch", "name": "批量时区换算", "desc": "选择源/目标时区，批量换算时间清单", "impl": "tzBatch"}, {"key": "fmt", "name": "批量日期格式化", "desc": "选择格式并粘贴日期清单，批量输出", "impl": "dateFmt"}, {"key": "cron", "name": "cron 表达式解析", "desc": "5 段表达式，展示分/时集合与接下来 5 次触发", "impl": "cronNext"}, {"key": "tzabbr", "name": "时区缩写速查", "desc": "CST/EST/JST 等缩写 → IANA 时区与当前偏移", "impl": "tzAbbr"}, {"key": "week", "name": "周与季度信息", "desc": "ISO 周号、本周起止、星期、季度、年内天数", "impl": "weekInfo"}, {"key": "isoweek", "name": "ISO 周反查日期", "desc": "选择年、周、星期，反查具体日期", "impl": "isoWeekToDate"}, {"key": "monthCal", "name": "月历生成", "desc": "输入年月，输出周一起的日历与天数", "impl": "monthCal"}, {"key": "zodiac", "name": "星座与生肖", "desc": "日期 → 星座；年份 → 生肖", "impl": "zodiacInfo"}, {"key": "nthworkday", "name": "月度第 N 个工作日", "desc": "选择年月与序号，找出当月第 N 个工作日", "impl": "nthWorkday"}, {"key": "workdayadd", "name": "工作日加减", "desc": "选择起始日期与工作日数，向前/向后推算", "impl": "workdayShift"}, {"key": "cndate", "name": "中文大写日期", "desc": "日期 → 二〇二六年十一月十四日（含星期）", "impl": "cnDate"}, {"key": "span", "name": "日期区间重叠", "desc": "选择两个日期区间，判断是否重叠与交集天数", "impl": "dateSpan"}, {"key": "age", "name": "精确年龄计算", "desc": "选择出生日期与参考日期，计算岁/月/天与下次生日", "impl": "ageCalc"}, {"key": "duration", "name": "秒数转时长", "desc": "秒数 → 天/时/分/秒与时钟格式", "impl": "durationFmt"}, {"key": "monthdiff", "name": "月数差", "desc": "两个日期相差的整月数与余天（租期/工龄）", "impl": "dateMonthDiff"}, {"key": "worklist", "name": "工作日列举", "desc": "列出区间内所有工作日与周末天数（≤62 天）", "impl": "dateWorkdayList"}, {"key": "zones", "name": "多时区对照", "desc": "同一时刻在 UTC/北京/东京/伦敦/纽约/洛杉矶的当地时间", "impl": "dateZoneGrid"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -6272,7 +6278,7 @@ const show=v=>{$('#out').textContent=String(v)};
 if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
-$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><a class="open" href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;const cp=$('#copy');if(cp)cp.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
 $('#pick').onclick=()=>$('#file').click();
@@ -6284,4 +6290,166 @@ r.onerror=()=>{{$('#err').textContent='文件读取失败'}};
 r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
-</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script></body></html>
+</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-date="1">
+#inp{display:none}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+.xn-lbl[hidden]{display:none}
+#xnData,#xnSingle{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.6;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+#xnData{height:170px;resize:vertical}
+#xnSingle{height:48px}
+#xnData[hidden],#xnSingle[hidden]{display:none}
+#xnData:focus,#xnSingle:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:4px 0 2px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld input,.xn-fld select{height:46px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:150px;font-family:inherit}
+.xn-fld select{cursor:pointer;min-width:120px}
+.xn-fld input:focus,.xn-fld select:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+@media(max-width:720px){#xnData{height:150px}.xn-fld input,.xn-fld select{min-width:120px}}
+</style>
+<script data-xn-date="1">
+(function(){
+  const DATA=document.getElementById('xnData'),SINGLE=document.getElementById('xnSingle'),
+        INP=document.getElementById('inp'),P=document.getElementById('xnParams'),LBL=document.getElementById('xnLbl');
+  if(!DATA||!SINGLE||!INP||!P||!LBL)return;
+  const KEY=()=>(location.hash||'').replace(/^#\//,'');
+  const OFFS=['-12:00','-11:00','-10:00','-09:00','-08:00','-07:00','-06:00','-05:00','-04:00','-03:00','-02:00','-01:00','+00:00','+01:00','+02:00','+03:00','+04:00','+05:30','+07:00','+08:00','+09:00','+10:00','+11:00','+12:00','+13:00','+14:00'].map(v=>[v,'UTC'+v]);
+  const d2=()=>[{k:'a',t:'date',l:'起始日期',v:'2026-01-01'},{k:'b',t:'date',l:'结束日期',v:'2026-12-31'}];
+  const SAMPLES={batchts:'1700000000\n2026-01-01 12:00',tzbatch:'2026-01-01 12:00\n2026-06-01 09:30',fmt:'2026-01-01\n2026-12-31',addbatch:'2026-01-01\n2026-02-01'};
+  const S_SAMPLES={ts:'1700000000',cron:'*/5 * * * *',tzabbr:'CST',duration:'3661',zones:'1700000000'};
+  const CFG={
+    ts:{single:true,aLabel:'时间戳或日期时间',ph:'1700000000 或 2026-01-01 12:00'},
+    cron:{single:true,aLabel:'cron 表达式（分 时 日 月 周）',ph:'*/5 * * * *'},
+    tzabbr:{single:true,aLabel:'时区缩写',ph:'CST / EST / JST'},
+    duration:{single:true,siType:'number',aLabel:'秒数',ph:'3661'},
+    zones:{single:true,aLabel:'日期与时间（或秒级时间戳）',ph:'2026-11-15 10:00 或 1700000000'},
+    diff:{f:d2()},
+    workrange:{f:d2()},
+    monthdiff:{f:d2()},
+    worklist:{f:d2()},
+    add:{f:[{k:'a',t:'date',l:'起始日期',v:'2026-01-01'},{k:'n',t:'number',l:'偏移天数（负数向前）',v:'30'}]},
+    workdayadd:{f:[{k:'a',t:'date',l:'起始日期',v:'2026-11-13'},{k:'n',t:'number',l:'工作日偏移（负数向前）',v:'3'}]},
+    nthworkday:{f:[{k:'ym',t:'month',l:'年月',v:'2026-11'},{k:'n',t:'number',l:'第几个工作日',v:'3',min:1,max:23}]},
+    workdays:{f:[{k:'ym',t:'month',l:'年月',v:'2026-11'}]},
+    monthCal:{f:[{k:'ym',t:'month',l:'年月',v:'2026-11'}]},
+    tz:{f:[{k:'d',t:'date',l:'日期',v:'2026-01-01'},{k:'t',t:'time',l:'时间',v:'12:00'},
+      {k:'from',t:'select',l:'源时区',v:'+08:00',opts:OFFS},{k:'to',t:'select',l:'目标时区',v:'-05:00',opts:OFFS}]},
+    tzbatch:{f:[{k:'from',t:'select',l:'源时区',v:'+08:00',opts:OFFS},{k:'to',t:'select',l:'目标时区',v:'-05:00',opts:OFFS}],data:true,aLabel:'时间清单（每行一条）'},
+    fmt:{f:[{k:'spec',t:'text',l:'日期格式',v:'YYYY/MM/DD',ph:'YYYY年MM月DD日'}],data:true,aLabel:'日期清单（每行一条）'},
+    addbatch:{f:[{k:'n',t:'number',l:'统一偏移天数',v:'30'}],data:true,aLabel:'日期清单（每行一条）'},
+    batchts:{data:true,aLabel:'时间戳 / 日期清单（每行一条）'},
+    week:{f:[{k:'d',t:'date',l:'日期',v:'2026-11-14'}]},
+    zodiac:{f:[{k:'d',t:'date',l:'日期',v:'2026-11-14'}]},
+    cndate:{f:[{k:'d',t:'date',l:'日期',v:'2026-11-14'}]},
+    isoweek:{f:[{k:'y',t:'number',l:'年',v:'2026',min:2000,max:2100},{k:'w',t:'number',l:'ISO 周',v:'7',min:1,max:53},
+      {k:'wd',t:'select',l:'星期',v:'3',opts:[['1','周一'],['2','周二'],['3','周三'],['4','周四'],['5','周五'],['6','周六'],['7','周日']]}]},
+    span:{f:[{k:'a',t:'date',l:'区间 1 开始',v:'2026-01-01'},{k:'b',t:'date',l:'区间 1 结束',v:'2026-01-31'},
+      {k:'c',t:'date',l:'区间 2 开始',v:'2026-01-15'},{k:'d',t:'date',l:'区间 2 结束',v:'2026-02-10'}]},
+    age:{f:[{k:'a',t:'date',l:'出生日期',v:'1990-08-15'},{k:'b',t:'date',l:'参考日期（留空=今天）',v:'2026-11-15'}]}
+  };
+  const DEFAULT={aLabel:'日期 / 时间输入'};
+  let composing=false,lastKey='';
+  const val=(id)=>{const e=document.getElementById(id);return e?e.value:''};
+  const sg=v=>{const s=String(v).trim();if(s==='')return '';return (s[0]==='+'||s[0]==='-')?s:(Number(s)>=0?'+'+s:s)};
+  const lines=()=>DATA.value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  function compose(){
+    if(composing)return;
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    composing=true;
+    if(cfg.single){INP.value=SINGLE.value;}
+    else if(key==='tz'){INP.value=val('xnP_d')+' '+val('xnP_t')+' '+val('xnP_from')+' '+val('xnP_to');}
+    else if(key==='tzbatch'){INP.value=val('xnP_from')+','+val('xnP_to')+'\n'+DATA.value;}
+    else if(key==='fmt'){INP.value=val('xnP_spec')+'\n'+DATA.value;}
+    else if(key==='addbatch'){const n=sg(val('xnP_n'));INP.value=lines().map(x=>x+','+n).join('\n');}
+    else if(key==='add'){INP.value=val('xnP_a')+' '+sg(val('xnP_n'));}
+    else if(key==='workdayadd'){INP.value=val('xnP_a')+','+sg(val('xnP_n'));}
+    else if(key==='nthworkday'){INP.value=val('xnP_ym')+','+val('xnP_n');}
+    else if(key==='workdays'||key==='monthCal'){INP.value=val('xnP_ym');}
+    else if(key==='isoweek'){INP.value=val('xnP_y')+'-W'+String(val('xnP_w')).padStart(2,'0')+'-'+val('xnP_wd');}
+    else if(key==='span'){INP.value=[val('xnP_a'),val('xnP_b'),val('xnP_c'),val('xnP_d')].join(',');}
+    else if(key==='age'){const b=val('xnP_b');INP.value=val('xnP_a')+(b?','+b:'');}
+    else if(cfg.f){INP.value=cfg.f.map(f=>val('xnP_'+f.k)).join(',');}
+    else{INP.value=DATA.value;}
+    composing=false;
+  }
+  function build(){
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    P.innerHTML='';
+    const single=!!cfg.single,useData=!!cfg.data;
+    SINGLE.hidden=!single;DATA.hidden=!useData;
+    LBL.hidden=!(single||useData);
+    LBL.textContent=cfg.aLabel||DEFAULT.aLabel;
+    if(single){
+      SINGLE.type=cfg.siType||'text';
+      SINGLE.placeholder=cfg.ph||'';
+    }
+    const changed=key!==lastKey;
+    if(changed&&single&&S_SAMPLES[key]&&(!SINGLE.value||SINGLE.value===S_SAMPLES[lastKey]))SINGLE.value=S_SAMPLES[key];
+    if(changed&&useData&&(!DATA.value||DATA.value===SAMPLES[lastKey]))DATA.value=SAMPLES[key]||'';
+    (cfg.f||[]).forEach(f=>{
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      let el;
+      if(f.t==='select'){
+        el=document.createElement('select');
+        (f.opts||[]).forEach(([v,t])=>{const op=document.createElement('option');op.value=v;op.textContent=t;el.appendChild(op);});
+        el.value=f.v||'';
+      }else{
+        el=document.createElement('input');
+        el.type=f.t||'text';
+        if(f.min!==undefined)el.min=f.min;
+        if(f.max!==undefined)el.max=f.max;
+        el.value=f.v||'';
+        if(f.ph)el.placeholder=f.ph;
+      }
+      el.id='xnP_'+f.k;wrap.appendChild(el);P.appendChild(wrap);
+    });
+    lastKey=key;
+    compose();
+  }
+  ['input','change'].forEach(ev=>{DATA.addEventListener(ev,compose);SINGLE.addEventListener(ev,compose);P.addEventListener(ev,compose);});
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnDate='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    ['run','copy','pick'].forEach(id=>{const b=document.getElementById(id);if(b)bar.appendChild(b);});
+    if(!oldRow.querySelector('button'))oldRow.remove();
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例';
+  demo.addEventListener('click',()=>{
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    if(cfg.single&&S_SAMPLES[key])SINGLE.value=S_SAMPLES[key];
+    if(cfg.data&&SAMPLES[key])DATA.value=SAMPLES[key];
+    build();const r=document.getElementById('run');r&&r.click();
+  });
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  const XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{
+    const v=XQ.value.trim().toLowerCase();let n=0;
+    XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});
+    const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+  const FILE=document.getElementById('file');
+  if(FILE)FILE.onchange=()=>{
+    const f=FILE.files&&FILE.files[0];if(!f)return;
+    if(f.size>2097152){document.getElementById('err').textContent='文件超过 2MB，请分段或改用粘贴';return;}
+    const r=new FileReader();
+    r.onload=()=>{
+      const txt=String(r.result);
+      if(!DATA.hidden)DATA.value=txt;else SINGLE.value=txt.trim();
+      compose();const rb=document.getElementById('run');rb&&rb.click();
+    };
+    r.onerror=()=>{document.getElementById('err').textContent='文件读取失败'};
+    r.readAsText(f,'utf-8');
+  };
+  window.addEventListener('hashchange',build);
+  build();
+})();
+</script>
+</body></html>
