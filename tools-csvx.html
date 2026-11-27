@@ -34,14 +34,23 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div class="xn-csv" data-xn-csv="1">
+<div id="xnParams" class="xn-params"></div>
+<label class="xn-lbl" for="xnData">CSV 数据（首行表头，可直接粘贴）</label>
+<textarea id="xnData" placeholder="name,city,amount,qty&#10;Ann,Beijing,120,2&#10;Bob,Shanghai,80,3"></textarea>
+<div id="xnDual" class="xn-dual" hidden>
+<div class="xn-pane"><label for="xnA">表 A（左表）</label><textarea id="xnA" placeholder="name,city&#10;Ann,Beijing"></textarea></div>
+<div class="xn-pane"><label for="xnB">表 B（右表）</label><textarea id="xnB" placeholder="name,dept&#10;Ann,R&amp;D"></textarea></div>
+</div>
+</div>
+<textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "filter", "name": "按列筛选", "desc": "首行「列名=值」，保留匹配行", "impl": "csvzFilter"}, {"key": "sort", "name": "按列排序", "desc": "首行「列名,asc|desc」，数字/中文自动识别", "impl": "csvzSort"}, {"key": "dedup", "name": "按列去重", "desc": "单列或多列组合去重，保留首次出现", "impl": "csvzDedup"}, {"key": "math", "name": "列运算", "desc": "首行「新列=A+B」，支持 + - * /", "impl": "csvzMath"}, {"key": "sql", "name": "转 SQL INSERT", "desc": "首行表名，逐行生成 INSERT 并转义单引号", "impl": "csvzSql"}, {"key": "pivot", "name": "长表转宽表", "desc": "首行「行维度列,列维度列,值列」，重复数字自动求和", "impl": "csvzPivot"}, {"key": "melt", "name": "宽表转长表", "desc": "首行写 id 列名，其余列折叠为「变量,值」", "impl": "csvzMelt"}, {"key": "group", "name": "按列分组拆分", "desc": "首行写分组列名，分组输出块（含表头）便于分文件", "impl": "csvzGroup"}, {"key": "tomd", "name": "CSV 转 Markdown", "desc": "首行表头，输出标准 Markdown 表格", "impl": "csvzToMd"}, {"key": "stats", "name": "列统计", "desc": "每列非空/唯一值/数值 min·max·avg", "impl": "csvzStats"}, {"key": "cols", "name": "保留指定列", "desc": "首行写列名，输出裁剪后的 CSV", "impl": "csvzCols"}, {"key": "tohtml", "name": "CSV 转 HTML 表格", "desc": "输出可粘贴的 table 结构，含转义", "impl": "csvzToHtml"}, {"key": "ndjson", "name": "CSV 转 NDJSON", "desc": "每行一个 JSON 对象（JSON Lines）", "impl": "csvToNdjson"}, {"key": "numfilter", "name": "数值过滤", "desc": "首行「列 >= 100」，按数值筛选行", "impl": "csvNumFilter"}, {"key": "dropcols", "name": "删除指定列", "desc": "首行写要删除的列名，输出剩余列的 CSV", "impl": "csvxDropCols"}, {"key": "freq", "name": "列取值频次", "desc": "首行写列名，按出现次数降序统计占比", "impl": "csvxFreq"}, {"key": "transpose", "name": "行列转置", "desc": "小表（≤50 行 × ≤30 列）行列互换", "impl": "csvxTranspose"}, {"key": "join", "name": "两表按键连接", "desc": "首行键列名，表 A 与表 B 用 --- 分隔，左连接合并", "impl": "csvxJoin"}, {"key": "topn", "name": "分组取前 N 行", "desc": "首行「分组列,排序列,N」，按排序列降序每组取 N 行", "impl": "csvxTopN"}, {"key": "filldown", "name": "空值向下填充", "desc": "空白单元格沿用上一行同列值（合并单元格还原）", "impl": "csvxFillDown"}, {"key": "headernorm", "name": "表头规范化", "desc": "去空格、转小写、空格转下划线、重名加后缀", "impl": "csvHeaderNorm"}, {"key": "chunk", "name": "按行分块", "desc": "首行每块行数 → 分块计划（起止行与首行预览）", "impl": "csvChunk"}, {"key": "dropempty", "name": "删除空值行", "desc": "首行写列名，凡这些列为空的行删除", "impl": "csvDropEmptyRows"}];
+const TOOLS=[{"key": "filter", "name": "按列筛选", "desc": "按列筛选：选列、填值，保留匹配行", "impl": "csvzFilter"}, {"key": "sort", "name": "按列排序", "desc": "按列排序：选列与升/降序，数字与中文自动识别", "impl": "csvzSort"}, {"key": "dedup", "name": "按列去重", "desc": "按一列或多列去重，保留首次出现", "impl": "csvzDedup"}, {"key": "math", "name": "列运算", "desc": "新建计算列：列 A 与列 B 做 + − × ÷", "impl": "csvzMath"}, {"key": "sql", "name": "转 SQL INSERT", "desc": "导出 SQL INSERT：填表名即可，自动转义引号", "impl": "csvzSql"}, {"key": "pivot", "name": "长表转宽表", "desc": "长表转宽表：选行维度、列维度与值列，重复数字自动求和", "impl": "csvzPivot"}, {"key": "melt", "name": "宽表转长表", "desc": "宽表转长表：选保留的 id 列，其余列折叠为「变量,值」", "impl": "csvzMelt"}, {"key": "group", "name": "按列分组拆分", "desc": "按列分组拆分，输出各组块（含表头）", "impl": "csvzGroup"}, {"key": "tomd", "name": "CSV 转 Markdown", "desc": "CSV 转 Markdown 表格", "impl": "csvzToMd"}, {"key": "stats", "name": "列统计", "desc": "每列非空、唯一值与数值 min/max/avg", "impl": "csvzStats"}, {"key": "cols", "name": "保留指定列", "desc": "只保留勾选的列", "impl": "csvzCols"}, {"key": "tohtml", "name": "CSV 转 HTML 表格", "desc": "输出可粘贴的 HTML 表格，含转义", "impl": "csvzToHtml"}, {"key": "ndjson", "name": "CSV 转 NDJSON", "desc": "每行一个 JSON 对象（JSON Lines）", "impl": "csvToNdjson"}, {"key": "numfilter", "name": "数值过滤", "desc": "按数值条件筛选行（≥ ≤ > < ≠）", "impl": "csvNumFilter"}, {"key": "dropcols", "name": "删除指定列", "desc": "勾选要删除的列，输出剩余列", "impl": "csvxDropCols"}, {"key": "freq", "name": "列取值频次", "desc": "统计某列取值频次与占比", "impl": "csvxFreq"}, {"key": "transpose", "name": "行列转置", "desc": "小表行列互换（≤50 行 × ≤30 列）", "impl": "csvxTranspose"}, {"key": "join", "name": "两表按键连接", "desc": "两表按键左连接：左右各粘贴一张表", "impl": "csvxJoin"}, {"key": "topn", "name": "分组取前 N 行", "desc": "分组后按某列降序取前 N 行", "impl": "csvxTopN"}, {"key": "filldown", "name": "空值向下填充", "desc": "空白单元格沿用上一行同列值（还原合并单元格）", "impl": "csvxFillDown"}, {"key": "headernorm", "name": "表头规范化", "desc": "表头去空格、转小写、空格转下划线、重名加后缀", "impl": "csvHeaderNorm"}, {"key": "chunk", "name": "按行分块", "desc": "按每块行数生成分块计划（起止行与预览）", "impl": "csvChunk"}, {"key": "dropempty", "name": "删除空值行", "desc": "删除勾选列为空的行", "impl": "csvDropEmptyRows"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -6797,7 +6806,7 @@ const show=v=>{$('#out').textContent=String(v)};
 if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
-$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><a class="open" href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;const cp=$('#copy');if(cp)cp.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
 $('#pick').onclick=()=>$('#file').click();
@@ -6809,4 +6818,133 @@ r.onerror=()=>{{$('#err').textContent='文件读取失败'}};
 r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
-</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script></body></html>
+</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script><style data-xn-csv="1">
+#inp{display:none}
+.xn-csv{margin:2px 0 8px}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+#xnData,.xn-dual textarea{width:100%;height:170px;resize:vertical;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.5;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+#xnData:focus,.xn-dual textarea:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:4px 0 2px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld select,.xn-fld input[type=number],.xn-fld input[type=text]{height:44px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:128px}
+.xn-fld select:focus,.xn-fld input:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-cols{display:flex;flex-wrap:wrap;gap:6px 12px;max-width:560px}
+.xn-cols label{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#334155;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;min-height:40px;cursor:pointer}
+.xn-cols input{accent-color:#4338ca;width:16px;height:16px}
+.xn-dual{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.xn-dual[hidden]{display:none}
+.xn-pane{display:flex;flex-direction:column;gap:6px}
+.xn-pane label{font-size:13px;font-weight:700;color:#334155}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+@media(max-width:720px){.xn-dual{grid-template-columns:1fr}#xnData{height:150px}.xn-fld select,.xn-fld input[type=number],.xn-fld input[type=text]{min-width:104px}}
+</style>
+<script data-xn-csv="1">
+(function(){
+  const DATA=document.getElementById('xnData'),A=document.getElementById('xnA'),B=document.getElementById('xnB'),
+        INP=document.getElementById('inp'),P=document.getElementById('xnParams'),DUAL=document.getElementById('xnDual');
+  if(!DATA||!INP||!P)return;
+  const KEY=()=> (location.hash||'').replace(/^#\//,'');
+  const SAMPLE='name,city,amount,qty\nAnn,Beijing,120,2\nBob,Shanghai,80,3\nCara,Beijing,200,1';
+  const CFG={
+    filter:{f:[{k:'col',t:'col',l:'筛选列'},{k:'op',t:'sel',l:'条件',o:[['=','等于']]},{k:'val',t:'text',l:'值'}]},
+    sort:{f:[{k:'col',t:'col',l:'排序列'},{k:'dir',t:'sel',l:'方向',o:[['asc','升序'],['desc','降序']]}]},
+    dedup:{f:[{k:'cols',t:'cols',l:'去重列'}]},
+    math:{f:[{k:'newcol',t:'text',l:'新列名'},{k:'a',t:'col',l:'列 A'},{k:'op',t:'sel',l:'运算',o:[['+','+'],['-','−'],['*','×'],['/','÷']]},{k:'b',t:'col',l:'列 B'}]},
+    sql:{f:[{k:'table',t:'text',l:'表名'}]},
+    pivot:{f:[{k:'row',t:'col',l:'行维度'},{k:'col',t:'col',l:'列维度'},{k:'val',t:'col',l:'值列'}]},
+    melt:{f:[{k:'id',t:'col',l:'保留 id 列'}]},
+    group:{f:[{k:'col',t:'col',l:'分组列'}]},
+    tomd:{f:[]},stats:{f:[]},cols:{f:[{k:'cols',t:'cols',l:'保留列'}]},
+    tohtml:{f:[]},ndjson:{f:[]},
+    numfilter:{f:[{k:'col',t:'col',l:'数值列'},{k:'op',t:'sel',l:'条件',o:[['>=','≥'],['<=','≤'],['>','>'],['<','<'],['!=','≠']]},{k:'num',t:'num',l:'阈值'}]},
+    dropcols:{f:[{k:'cols',t:'cols',l:'删除列'}]},
+    freq:{f:[{k:'col',t:'col',l:'统计列'}]},
+    transpose:{f:[]},
+    join:{dual:true,f:[{k:'key',t:'text',l:'键列名'}]},
+    topn:{f:[{k:'col',t:'col',l:'分组列'},{k:'sort',t:'col',l:'排序列'},{k:'n',t:'num',l:'每组前 N'}]},
+    filldown:{f:[]},headernorm:{f:[]},
+    chunk:{f:[{k:'n',t:'num',l:'每块行数'}]},
+    dropempty:{f:[{k:'cols',t:'cols',l:'空值判定列'}]}
+  };
+  const head=(txt)=>{const line=(txt||'').split(/\r?\n/).find(x=>x.trim()!=='');return line?line.split(',').map(x=>x.trim()):[]};
+  const cols=()=>CFG[KEY()]&&CFG[KEY()].dual?head(A.value):head(DATA.value);
+  let composing=false;
+  const val=(id)=>{const e=document.getElementById(id);return e?e.value:''};
+  const checked=()=>[...document.querySelectorAll('input[name="xnP_cols"]:checked')].map(x=>x.value);
+  function compose(){
+    if(!CFG[KEY()])return;
+    composing=true;
+    if(CFG[KEY()].dual){INP.value=val('xnP_key')+'\n'+(A.value||'')+'\n---\n'+(B.value||'');}
+    else{
+      const f=CFG[KEY()].f||[];let cfg='';
+      if(f.length){
+        const get=(k)=>'xnP_'+k;
+        if(KEY()==='filter')cfg=val(get('col'))+'='+val(get('val'));
+        else if(KEY()==='sort')cfg=val(get('col'))+','+(val(get('dir'))||'asc');
+        else if(KEY()==='dedup'||KEY()==='cols'||KEY()==='dropcols'||KEY()==='dropempty')cfg=checked().join(',');
+        else if(KEY()==='math')cfg=(val(get('newcol'))||'新列')+'='+val(get('a'))+val(get('op'))+val(get('b'));
+        else if(KEY()==='pivot')cfg=[val(get('row')),val(get('col')),val(get('val'))].join(',');
+        else if(KEY()==='numfilter')cfg=val(get('col'))+' '+val(get('op'))+' '+val(get('num'));
+        else if(KEY()==='topn')cfg=[val(get('col')),val(get('sort')),val(get('n'))].join(',');
+        else cfg=val(get(f[0].k));
+      }
+      INP.value=cfg?(cfg+'\n'+DATA.value):DATA.value;
+    }
+    composing=false;
+  }
+  function build(){
+    const key=KEY(),cfg=CFG[key];P.innerHTML='';
+    if(!cfg)return;
+    if(cfg.dual){DUAL.hidden=false;DATA.style.display='none';}
+    else{DUAL.hidden=true;DATA.style.display='';}
+    const hd=cols();
+    cfg.f.forEach((f)=>{
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      if(f.t==='cols'){
+        const box=document.createElement('span');box.className='xn-cols';
+        hd.forEach((c,i)=>{const lb=document.createElement('label');const cb=document.createElement('input');cb.type='checkbox';cb.name='xnP_cols';cb.value=c;if(i===0)cb.checked=true;lb.appendChild(cb);lb.appendChild(document.createTextNode(c||'(空)'));box.appendChild(lb)});
+        wrap.appendChild(box);
+      }else if(f.t==='sel'){
+        const sel=document.createElement('select');sel.id='xnP_'+f.k;(f.o||[]).forEach(([v,t])=>{const o=document.createElement('option');o.value=v;o.textContent=t;sel.appendChild(o)});wrap.appendChild(sel);
+      }else if(f.t==='col'){
+        const sel=document.createElement('select');sel.id='xnP_'+f.k;hd.forEach((c)=>{const o=document.createElement('option');o.value=c;o.textContent=c||'(空)';sel.appendChild(o)});if(!hd.length){const o=document.createElement('option');o.value='';o.textContent='（先粘贴 CSV）';sel.appendChild(o)}wrap.appendChild(sel);
+      }else if(f.t==='num'){
+        const inp=document.createElement('input');inp.type='number';inp.id='xnP_'+f.k;inp.value=key==='chunk'?'1000':key==='numfilter'?'100':'1';inp.min='1';inp.step='1';wrap.appendChild(inp);
+      }else{
+        const inp=document.createElement('input');inp.type='text';inp.id='xnP_'+f.k;inp.value=key==='math'?'新列':key==='sql'?'t':'';wrap.appendChild(inp);
+      }
+      P.appendChild(wrap);
+    });
+    if(key==='join'&&!val('xnP_key')){const k=document.getElementById('xnP_key');if(k)k.value=head(A.value)[0]||'id';}
+    compose();
+  }
+  ['input','change'].forEach(ev=>{
+    DATA.addEventListener(ev,compose);
+    P.addEventListener(ev,compose);
+    if(A)A.addEventListener(ev,compose); if(B)B.addEventListener(ev,compose);
+  });
+  let t=null;
+  DATA.addEventListener('input',()=>{clearTimeout(t);t=setTimeout(build,220)});
+  if(A)A.addEventListener('input',()=>{clearTimeout(t);t=setTimeout(build,220)});
+  INP.addEventListener('input',()=>{if(composing)return;DATA.value=INP.value;build();});
+  document.querySelectorAll('.xn-bar,.xn-tools').forEach(x=>x&&x.remove());
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnCsv='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    const run=document.getElementById('run'),copy=document.getElementById('copy'),pick=document.getElementById('pick');
+    if(run)bar.appendChild(run); if(copy)bar.appendChild(copy); if(pick)bar.appendChild(pick);
+    if(!oldRow.querySelector('button'))oldRow.remove();
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例：销售表';demo.addEventListener('click',()=>{
+    if(CFG[KEY()]&&CFG[KEY()].dual){A.value='name,city\nAnn,Beijing\nBob,Shanghai';B.value='name,dept\nAnn,R&D\nBob,Sales';}
+    else DATA.value=SAMPLE;
+    build();const r=document.getElementById('run');r&&r.click();
+  });
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  window.addEventListener('hashchange',build);build();
+})();
+</script></body></html>
