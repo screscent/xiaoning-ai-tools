@@ -34,14 +34,22 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div class="xn-json" data-xn-json="1">
+<div id="xnParams" class="xn-params"></div>
+<div id="xnPairs" class="xn-pairs" hidden><div class="xn-pairs-head"><span>键名映射表</span><button type="button" class="xn-add" id="xnAddPair">+ 添加一组</button></div><div class="xn-pair-list"></div></div>
+<label class="xn-lbl" id="xnLbl" for="xnData">JSON 输入</label>
+<textarea id="xnData" spellcheck="false" placeholder='粘贴 JSON，如 {"a":1}'></textarea>
+<div id="xnBWrap" hidden><label class="xn-lbl" for="xnDataB">第二份 JSON（B）</label>
+<textarea id="xnDataB" spellcheck="false" placeholder='粘贴第二份 JSON'></textarea></div>
+</div>
+<textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "fmt", "name": "格式化", "desc": "2 空格缩进美化 JSON", "impl": "jsonFmt"}, {"key": "min", "name": "压缩", "desc": "去掉空白，输出紧凑 JSON", "impl": "jsonMin"}, {"key": "lint", "name": "校验", "desc": "检查是否为有效 JSON", "impl": "jsonLint"}, {"key": "esc", "name": "转义", "desc": "把文本转成 JSON 字符串字面量", "impl": "jsonEsc"}, {"key": "keys", "name": "键路径", "desc": "列出所有键的路径（a.b.0.c）", "impl": "jsonKeys"}, {"key": "path", "name": "JSONPath 简化查询", "desc": "首行写 $.a.b[0] 或 $.*.name，其后为 JSON", "impl": "jxPath"}, {"key": "diff", "name": "JSON 差异比较", "desc": "两份 JSON 用单独一行 --- 分隔，列出增删改路径", "impl": "jxDiff"}, {"key": "merge", "name": "JSON 深度合并", "desc": "两份 JSON 用 --- 分隔，右侧递归覆盖左侧", "impl": "jxMerge"}, {"key": "tocsv", "name": "JSON 转 CSV", "desc": "对象数组 → CSV，嵌套点号键，表头并集", "impl": "jxToCsv"}, {"key": "fromcsv", "name": "CSV 转 JSON", "desc": "首行表头 → 对象数组，数字/布尔自动转换", "impl": "csvToJx"}, {"key": "tree", "name": "JSON 结构树", "desc": "树状展示键、类型与数组长度", "impl": "jxTree"}, {"key": "flat", "name": "键路径扁平化", "desc": "嵌套对象 → 点号键单层对象（数组用 [i]）", "impl": "jxFlatten"}, {"key": "unflat", "name": "扁平对象还原", "desc": "点号键 → 嵌套对象", "impl": "jxUnflatten"}, {"key": "schema", "name": "生成 JSON Schema", "desc": "由样例推断 draft 2020-12 Schema", "impl": "jxSchema"}, {"key": "sort", "name": "数组排序", "desc": "首行写 键名,asc|desc（可点号嵌套），其后为数组", "impl": "jxSort"}, {"key": "clean", "name": "清理空值", "desc": "移除 null / 空串 / 空数组 / 空对象并统计", "impl": "jxClean"}, {"key": "keystats", "name": "键覆盖统计", "desc": "对象数组中每个键的出现/缺失次数与类型", "impl": "jxKeysStats"}, {"key": "types", "name": "节点类型分布", "desc": "递归统计 object/array/string/number/boolean/null 占比", "impl": "jxTypeStats"}, {"key": "pathvals", "name": "路径取值清单", "desc": "列出所有叶子节点的点号路径与值", "impl": "jxPathValues"}, {"key": "renamekey", "name": "键名批量改名", "desc": "首行写 旧键=新键（逗号分隔），递归改名", "impl": "jxRenameKeys"}, {"key": "sortkeys", "name": "键名排序", "desc": "递归按键名排序，输出稳定的规范 JSON", "impl": "jxSortKeys"}, {"key": "uniq", "name": "数组去重", "desc": "JSON 数组按值去重（对象按结构比较），报告删除数", "impl": "jxUniq"}, {"key": "jsonl", "name": "JSONL 互转", "desc": "JSON 数组 ↔ JSON Lines 自动识别方向", "impl": "jxJsonl"}];
+const TOOLS=[{"key": "fmt", "name": "格式化", "desc": "2 空格缩进美化 JSON", "impl": "jsonFmt"}, {"key": "min", "name": "压缩", "desc": "去掉空白，输出紧凑 JSON", "impl": "jsonMin"}, {"key": "lint", "name": "校验", "desc": "检查是否为有效 JSON", "impl": "jsonLint"}, {"key": "esc", "name": "转义", "desc": "把文本转成 JSON 字符串字面量", "impl": "jsonEsc"}, {"key": "keys", "name": "键路径", "desc": "列出所有键的路径（a.b.0.c）", "impl": "jsonKeys"}, {"key": "path", "name": "JSONPath 简化查询", "desc": "按表达式提取字段，支持点号、数组序号与通配，如 $.users[0].name", "impl": "jxPath"}, {"key": "diff", "name": "JSON 差异比较", "desc": "并排粘贴两份 JSON，逐路径列出新增、删除、修改", "impl": "jxDiff"}, {"key": "merge", "name": "JSON 深度合并", "desc": "并排粘贴两份 JSON，递归合并（右侧覆盖左侧）", "impl": "jxMerge"}, {"key": "tocsv", "name": "JSON 转 CSV", "desc": "对象数组 → CSV，嵌套点号键，表头并集", "impl": "jxToCsv"}, {"key": "fromcsv", "name": "CSV 转 JSON", "desc": "粘贴 CSV 文本，表头自动作为字段名，数字与布尔自动识别", "impl": "csvToJx"}, {"key": "tree", "name": "JSON 结构树", "desc": "树状展示键、类型与数组长度", "impl": "jxTree"}, {"key": "flat", "name": "键路径扁平化", "desc": "嵌套对象 → 点号键单层对象（数组用 [i]）", "impl": "jxFlatten"}, {"key": "unflat", "name": "扁平对象还原", "desc": "点号键 → 嵌套对象", "impl": "jxUnflatten"}, {"key": "schema", "name": "生成 JSON Schema", "desc": "由样例推断 draft 2020-12 Schema", "impl": "jxSchema"}, {"key": "sort", "name": "数组排序", "desc": "选择排序键与升降序，对 JSON 数组排序", "impl": "jxSort"}, {"key": "clean", "name": "清理空值", "desc": "移除 null / 空串 / 空数组 / 空对象并统计", "impl": "jxClean"}, {"key": "keystats", "name": "键覆盖统计", "desc": "对象数组中每个键的出现/缺失次数与类型", "impl": "jxKeysStats"}, {"key": "types", "name": "节点类型分布", "desc": "递归统计 object/array/string/number/boolean/null 占比", "impl": "jxTypeStats"}, {"key": "pathvals", "name": "路径取值清单", "desc": "列出所有叶子节点的点号路径与值", "impl": "jxPathValues"}, {"key": "renamekey", "name": "键名批量改名", "desc": "用映射表批量把旧键名改成新键名，递归生效", "impl": "jxRenameKeys"}, {"key": "sortkeys", "name": "键名排序", "desc": "递归按键名排序，输出稳定的规范 JSON", "impl": "jxSortKeys"}, {"key": "uniq", "name": "数组去重", "desc": "JSON 数组按值去重（对象按结构比较），报告删除数", "impl": "jxUniq"}, {"key": "jsonl", "name": "JSONL 互转", "desc": "JSON 数组 ↔ JSON Lines 自动识别方向", "impl": "jxJsonl"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -6317,7 +6325,7 @@ const show=v=>{$('#out').textContent=String(v)};
 if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
-$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><a class="open" href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;const cp=$('#copy');if(cp)cp.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
 $('#pick').onclick=()=>$('#file').click();
@@ -6331,4 +6339,194 @@ $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document
 window.addEventListener('hashchange',route);route();
 </script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1">
 <script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-json="1">
+#inp{display:none}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+#xnData,#xnDataB{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.5;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;height:190px;resize:vertical}
+#xnData:focus,#xnDataB:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+#xnBWrap[hidden],#xnPairs[hidden]{display:none}
+#xnBWrap{margin-top:4px}
+.xn-json[data-pair="1"] #xnData,.xn-json[data-pair="1"] #xnDataB{height:150px}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:4px 0 2px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld input,.xn-fld select{height:44px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:180px}
+.xn-fld select{cursor:pointer}
+.xn-fld input:focus,.xn-fld select:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-pairs{padding:10px 12px 4px;border:1px dashed #c7d2fe;border-radius:10px;background:#f5f7ff;margin:2px 0 10px}
+.xn-pairs-head{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;font-weight:700;color:#3730a3;margin-bottom:8px}
+.xn-add{border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-weight:700;border-radius:8px;padding:6px 12px;font-size:12.5px;cursor:pointer}
+.xn-pair{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.xn-pair input{flex:1;height:40px;border:1px solid #cbd5e1;border-radius:8px;padding:0 10px;font-size:13.5px;background:#fff;color:#0f172a;min-width:90px}
+.xn-pair .xn-arrow{color:#6366f1;font-weight:700}
+.xn-pair .xn-del{min-width:40px;min-height:38px;padding:0;color:#b91c1c;border:1px solid #fecaca;background:#fff;border-radius:8px;cursor:pointer}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+@media(max-width:720px){#xnData,#xnDataB{height:150px}.xn-fld input,.xn-fld select{min-width:120px}}
+</style>
+<script data-xn-json="1">
+(function(){
+  const DATA=document.getElementById('xnData'),DATAB=document.getElementById('xnDataB'),
+        BW=document.getElementById('xnBWrap'),INP=document.getElementById('inp'),
+        P=document.getElementById('xnParams'),LBL=document.getElementById('xnLbl'),
+        PAIRS=document.getElementById('xnPairs');
+  if(!DATA||!INP||!P||!PAIRS)return;
+  const KEY=()=>(location.hash||'').replace(/^#\//,'');
+  const SAMPLES={
+    fmt:'{"a":1,"b":[1,2],"c":{"d":true}}',
+    min:'{ "a" : 1, "b" : [1, 2] }',
+    lint:'{"a":1}',
+    esc:'你好 "小凝"\n第二行',
+    keys:'{"a":{"b":1},"c":2}',
+    path:'{"a":{"b":42}}',
+    diff:'{"a":1,"b":2}',
+    merge:'{"a":1,"b":{"x":1}}',
+    tocsv:'[{"a":1,"b":2},{"a":3,"b":4}]',
+    fromcsv:'a,b\n1,2\n3,4',
+    tree:'{"a":{"b":[1,2]},"c":true}',
+    flat:'{"a":{"b":1},"c":[{"d":2}]}',
+    unflat:'{"a.b":1,"c.d":2}',
+    schema:'{"name":"小凝","age":3,"tags":["a","b"]}',
+    sort:'[{"name":"b","age":30},{"name":"a","age":20}]',
+    clean:'{"a":null,"b":"","c":[],"d":0}',
+    keystats:'[{"a":1,"b":2},{"a":3}]',
+    types:'{"a":1,"b":"x","c":[1],"d":null}',
+    pathvals:'{"a":{"b":1},"c":[2]}',
+    renamekey:'{"a":1,"c":{"a":2}}',
+    sortkeys:'{"b":1,"a":{"d":4,"c":3}}',
+    uniq:'[1,2,2,{"a":1},{"a":1}]',
+    jsonl:'[{"a":1},{"a":2}]'
+  };
+  const SAMPLES_B={diff:'{"a":1,"b":3,"c":4}',merge:'{"b":{"y":2},"c":3}'};
+  const CFG={
+    path:{aLabel:'JSON 输入',f:[{k:'expr',l:'提取表达式',v:'$.a.b',ph:'如 $.users[0].name 或 $.*.name'}]},
+    diff:{pair:true,aLabel:'JSON A',bLabel:'JSON B'},
+    merge:{pair:true,aLabel:'JSON A',bLabel:'JSON B'},
+    sort:{aLabel:'JSON 数组',f:[
+      {k:'key',l:'排序键（可点号嵌套）',v:'age',ph:'如 user.age，留空则按元素本身'},
+      {k:'order',t:'select',l:'排序方向',v:'asc',opts:[['asc','升序 ↑'],['desc','降序 ↓']]}
+    ]},
+    renamekey:{pairs:true,aLabel:'JSON 输入'},
+    fromcsv:{aLabel:'CSV 文本（首行为表头）'},
+    esc:{aLabel:'文本输入'},
+    jsonl:{aLabel:'JSON 数组或 JSON Lines'},
+    tocsv:{aLabel:'JSON 对象数组'},
+    unflat:{aLabel:'扁平对象 JSON'},
+    keys:{aLabel:'JSON 输入'}
+  };
+  const DEFAULT={aLabel:'JSON 输入'};
+  let composing=false,lastKey='';
+  const val=(id)=>{const e=document.getElementById(id);return e?e.value:''};
+  function compose(){
+    if(composing)return;
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    composing=true;
+    if(cfg.pair){
+      INP.value=DATA.value+'\n---\n'+DATAB.value;
+    }else if(cfg.pairs){
+      const rows=[...PAIRS.querySelectorAll('.xn-pair')].map(r=>({
+        o:r.querySelector('.xn-old').value.trim(),
+        n:r.querySelector('.xn-new').value.trim()
+      })).filter(x=>x.o&&x.n).map(x=>x.o+'='+x.n).join(',');
+      INP.value=rows?rows+'\n'+DATA.value:DATA.value;
+    }else if(key==='path'){
+      INP.value=val('xnP_expr')+'\n'+DATA.value;
+    }else if(key==='sort'){
+      INP.value=val('xnP_key').replace(/,/g,'.')+','+val('xnP_order')+'\n'+DATA.value;
+    }else{
+      INP.value=DATA.value;
+    }
+    composing=false;
+  }
+  function addPair(o,n){
+    const list=PAIRS.querySelector('.xn-pair-list');
+    const row=document.createElement('div');row.className='xn-pair';
+    const a=document.createElement('input');a.className='xn-old';a.placeholder='旧键名';a.value=o||'';
+    const arrow=document.createElement('span');arrow.className='xn-arrow';arrow.textContent='→';
+    const b=document.createElement('input');b.className='xn-new';b.placeholder='新键名';b.value=n||'';
+    const del=document.createElement('button');del.type='button';del.className='xn-del';del.title='删除这一组';del.textContent='×';
+    del.addEventListener('click',()=>{row.remove();compose();});
+    row.append(a,arrow,b,del);list.appendChild(row);
+    compose();
+  }
+  function build(){
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    P.innerHTML='';
+    const usePair=!!cfg.pair,usePairs=!!cfg.pairs;
+    BW.hidden=!usePair;PAIRS.hidden=!usePairs;
+    const box=document.querySelector('.xn-json');if(box)box.dataset.pair=usePair?'1':'0';
+    LBL.textContent=cfg.aLabel||DEFAULT.aLabel;
+    const bLbl=BW.querySelector('label');if(bLbl&&cfg.bLabel)bLbl.textContent=cfg.bLabel;
+    (cfg.f||[]).forEach(f=>{
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      let el;
+      if(f.t==='select'){
+        el=document.createElement('select');
+        (f.opts||[]).forEach(([v,t])=>{const op=document.createElement('option');op.value=v;op.textContent=t;el.appendChild(op);});
+        el.value=f.v||'';
+      }else{
+        el=document.createElement('input');el.type='text';el.value=f.v||'';if(f.ph)el.placeholder=f.ph;
+      }
+      el.id='xnP_'+f.k;wrap.appendChild(el);P.appendChild(wrap);
+    });
+    const changed=key!==lastKey;
+    const prevSample=SAMPLES[lastKey];
+    if(changed&&(DATA.value===''||DATA.value===prevSample))DATA.value=SAMPLES[key]||'';
+    if(usePair&&changed&&(DATAB.value===''||DATAB.value===SAMPLES_B[lastKey]))DATAB.value=SAMPLES_B[key]||'';
+    if(usePairs&&!PAIRS.querySelector('.xn-pair'))addPair('a','b');
+    lastKey=key;
+    compose();
+  }
+  ['input','change'].forEach(ev=>{DATA.addEventListener(ev,compose);DATAB.addEventListener(ev,compose);P.addEventListener(ev,compose);PAIRS.addEventListener(ev,compose);});
+  const ADD=document.getElementById('xnAddPair');
+  if(ADD)ADD.addEventListener('click',()=>addPair('',''));
+  // 动作条合并（转换/复制/导入/示例 同一行，无重复按钮）
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnJson='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    ['run','copy','pick'].forEach(id=>{const b=document.getElementById(id);if(b)bar.appendChild(b);});
+    if(!oldRow.querySelector('button'))oldRow.remove();
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例';
+  demo.addEventListener('click',()=>{
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    if(SAMPLES[key])DATA.value=SAMPLES[key];
+    if(cfg.pair&&SAMPLES_B[key])DATAB.value=SAMPLES_B[key];
+    if(cfg.pairs&&!PAIRS.querySelector('.xn-pair'))addPair('a','b');
+    build();const r=document.getElementById('run');r&&r.click();
+  });
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');
+  if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  // 顶部标签已列全工具：隐藏重复卡片网格，默认打开首个工具，搜索过滤标签
+  const XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{
+    const v=XQ.value.trim().toLowerCase();let n=0;
+    XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});
+    const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+  // 导入文件：优先写入输入区，保留参数组合
+  const FILE=document.getElementById('file');
+  if(FILE)FILE.onchange=()=>{
+    const f=FILE.files&&FILE.files[0];if(!f)return;
+    if(f.size>2097152){document.getElementById('err').textContent='文件超过 2MB，请分段或改用粘贴';return;}
+    const r=new FileReader();
+    r.onload=()=>{
+      DATA.value=String(r.result);
+      const fn=document.getElementById('fname');
+      if(fn)fn.textContent=f.name+' · '+Math.max(1,Math.round(f.size/1024))+' KB';
+      compose();
+      const rb=document.getElementById('run');rb&&rb.click();
+    };
+    r.onerror=()=>{document.getElementById('err').textContent='文件读取失败'};
+    r.readAsText(f,'utf-8');
+  };
+  window.addEventListener('hashchange',build);
+  build();
+})();
+</script>
 </body></html>
