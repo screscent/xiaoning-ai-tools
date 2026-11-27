@@ -34,14 +34,19 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div class="xn-enc" data-xn-enc="1">
+<div id="xnParams" class="xn-params"></div>
+<label class="xn-lbl" id="xnLbl" for="xnData">输入内容</label>
+<textarea id="xnData" spellcheck="false" placeholder="粘贴文本或编码内容…"></textarea>
+</div>
+<textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "b32", "name": "Base32 编解码", "desc": "RFC 4648，自动去掉填充；非法字符报错", "impl": "b32Encode"}, {"key": "b58", "name": "Base58 编解码", "desc": "比特币字母表，保留前导零", "impl": "b58Encode"}, {"key": "uni", "name": "Unicode 转义", "desc": "文本 → \\uXXXX；\\u 开头自动反转义", "impl": "uniEsc"}, {"key": "b64url", "name": "Base64URL", "desc": "URL 安全字母表，无填充；可反向解码", "impl": "b64url"}, {"key": "hex", "name": "Hex Dump", "desc": "UTF-8 字节 → 偏移 / 十六进制 / ASCII", "impl": "hexDump"}, {"key": "htmlent", "name": "HTML 实体批量转义", "desc": "首行 e/d，逐行转义或反转义（含数字实体）", "impl": "entBulk"}, {"key": "b64lines", "name": "批量 Base64 编解码", "desc": "首行 e/d，逐行 UTF-8 安全的 Base64 编解码", "impl": "b64Bulk"}, {"key": "cookie", "name": "Cookie 与 JSON 互转", "desc": "以 { 开头按 JSON→Cookie，否则 Cookie→JSON（自动解码）", "impl": "cookieJson"}, {"key": "all", "name": "编码总览", "desc": "一次输出 Base64/Hex/URL/Binary/Unicode 五视图", "impl": "encAll"}, {"key": "u16", "name": "UTF-16 码元转换", "desc": "文本 ↔ \\uXXXX 序列（含代理对）", "impl": "u16Conv"}, {"key": "xesc", "name": "\\x 字节转义", "desc": "文本 ↔ \\xNN（UTF-8 字节），自动识别方向", "impl": "xEsc"}, {"key": "a85", "name": "Ascii85 编解码", "desc": "<~...~> 形式，按 4 字节 → 5 字符", "impl": "a85"}, {"key": "uri", "name": "URI 编码对比", "desc": "encodeURI 与 encodeURIComponent 结果对照", "impl": "uriCompare"}, {"key": "entropy", "name": "信息熵估算", "desc": "字节熵 bit/byte，判断文本/压缩/加密", "impl": "entropyCalc"}, {"key": "crc", "name": "CRC32 校验与体积", "desc": "文本 → CRC32 十六进制 / 十进制 / 字节数", "impl": "crc32Info"}, {"key": "datauri", "name": "Data URI 解析", "desc": "data:image/png;base64,... → MIME / 编码 / 解码字节", "impl": "dataUriInfo"}, {"key": "bytes", "name": "字节多进制视图", "desc": "文本 → UTF-8 字节的十/十六/八/二进制", "impl": "byteViews"}, {"key": "jwt", "name": "JWT 解码查看", "desc": "解码 header/payload，显示 exp/iat/nbf 与过期状态（不验签）", "impl": "jwtDecode"}, {"key": "puny", "name": "国际化域名转换", "desc": "中文域名 ↔ xn-- Punycode 互转", "impl": "punycodeConv"}, {"key": "utf8", "name": "UTF-8 合法性检查", "desc": "十六进制字节串 → 合法性、字符数与解码结果", "impl": "utf8Check"}, {"key": "b32hex", "name": "Base32hex 编解码", "desc": "RFC 4648 §7，字母表 0-9A-V，可自动识别解码", "impl": "b32hex"}, {"key": "b64var", "name": "Base64 变体判定", "desc": "识别标准/URL 安全/填充情况并给出解码预览", "impl": "b64Variant"}, {"key": "rot47", "name": "ROT47 编解码", "desc": "可打印 ASCII 轮转 47，再执行一次即还原", "impl": "rot47"}, {"key": "qp", "name": "Quoted-Printable", "desc": "邮件 QP 编解码，检测到 =XX 自动按解码处理", "impl": "qpConv"}, {"key": "b45", "name": "Base45 编解码", "desc": "RFC 9285，二维码/健康码常用紧凑编码", "impl": "b45Conv"}, {"key": "hexb64", "name": "Hex ↔ Base64", "desc": "首行 h2b 或 b2h，按字节互转", "impl": "hexB64Conv"}];
+const TOOLS=[{"key": "b32", "name": "Base32 编解码", "desc": "RFC 4648，自动去掉填充；非法字符报错", "impl": "b32Encode"}, {"key": "b58", "name": "Base58 编解码", "desc": "比特币字母表，保留前导零", "impl": "b58Encode"}, {"key": "uni", "name": "Unicode 转义", "desc": "文本 → \\uXXXX；\\u 开头自动反转义", "impl": "uniEsc"}, {"key": "b64url", "name": "Base64URL", "desc": "URL 安全字母表，无填充；可反向解码", "impl": "b64url"}, {"key": "hex", "name": "Hex Dump", "desc": "UTF-8 字节 → 偏移 / 十六进制 / ASCII", "impl": "hexDump"}, {"key": "htmlent", "name": "HTML 实体批量转义", "desc": "逐行转义或反转义 HTML 实体，方向可选（含数字实体）", "impl": "entBulk"}, {"key": "b64lines", "name": "批量 Base64 编解码", "desc": "逐行 Base64 编码或解码，方向可选，UTF-8 安全", "impl": "b64Bulk"}, {"key": "cookie", "name": "Cookie 与 JSON 互转", "desc": "以 { 开头按 JSON→Cookie，否则 Cookie→JSON（自动解码）", "impl": "cookieJson"}, {"key": "all", "name": "编码总览", "desc": "一次输出 Base64/Hex/URL/Binary/Unicode 五视图", "impl": "encAll"}, {"key": "u16", "name": "UTF-16 码元转换", "desc": "文本 ↔ \\uXXXX 序列（含代理对）", "impl": "u16Conv"}, {"key": "xesc", "name": "\\x 字节转义", "desc": "文本 ↔ \\xNN（UTF-8 字节），自动识别方向", "impl": "xEsc"}, {"key": "a85", "name": "Ascii85 编解码", "desc": "<~...~> 形式，按 4 字节 → 5 字符", "impl": "a85"}, {"key": "uri", "name": "URI 编码对比", "desc": "encodeURI 与 encodeURIComponent 结果对照", "impl": "uriCompare"}, {"key": "entropy", "name": "信息熵估算", "desc": "字节熵 bit/byte，判断文本/压缩/加密", "impl": "entropyCalc"}, {"key": "crc", "name": "CRC32 校验与体积", "desc": "文本 → CRC32 十六进制 / 十进制 / 字节数", "impl": "crc32Info"}, {"key": "datauri", "name": "Data URI 解析", "desc": "data:image/png;base64,... → MIME / 编码 / 解码字节", "impl": "dataUriInfo"}, {"key": "bytes", "name": "字节多进制视图", "desc": "文本 → UTF-8 字节的十/十六/八/二进制", "impl": "byteViews"}, {"key": "jwt", "name": "JWT 解码查看", "desc": "解码 header/payload，显示 exp/iat/nbf 与过期状态（不验签）", "impl": "jwtDecode"}, {"key": "puny", "name": "国际化域名转换", "desc": "中文域名 ↔ xn-- Punycode 互转", "impl": "punycodeConv"}, {"key": "utf8", "name": "UTF-8 合法性检查", "desc": "十六进制字节串 → 合法性、字符数与解码结果", "impl": "utf8Check"}, {"key": "b32hex", "name": "Base32hex 编解码", "desc": "RFC 4648 §7，字母表 0-9A-V，可自动识别解码", "impl": "b32hex"}, {"key": "b64var", "name": "Base64 变体判定", "desc": "识别标准/URL 安全/填充情况并给出解码预览", "impl": "b64Variant"}, {"key": "rot47", "name": "ROT47 编解码", "desc": "可打印 ASCII 轮转 47，再执行一次即还原", "impl": "rot47"}, {"key": "qp", "name": "Quoted-Printable", "desc": "邮件 QP 编解码，检测到 =XX 自动按解码处理", "impl": "qpConv"}, {"key": "b45", "name": "Base45 编解码", "desc": "RFC 9285，二维码/健康码常用紧凑编码", "impl": "b45Conv"}, {"key": "hexb64", "name": "Hex ↔ Base64", "desc": "Hex 与 Base64 按字节互转，方向可选", "impl": "hexB64Conv"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -6389,7 +6394,7 @@ const show=v=>{$('#out').textContent=String(v)};
 if(r&&typeof r.then==='function'){$('#out').textContent='计算中…';r.then(show).catch(e=>{$('#err').textContent='失败：'+e.message})}else show(r)
 }catch(e){$('#err').textContent='失败：'+e.message}}
 $('#tabs').innerHTML=TOOLS.map(t=>`<a href="#/${t.key}" data-k="${t.key}">${t.name}</a>`).join('');
-$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><span class="chip">${t.key}</span><a href="#/${t.key}">打开 →</a></div></article>`).join('');
+$('#home').innerHTML=TOOLS.map(t=>`<article class="card" data-search="${(t.name+t.desc).toLowerCase()}"><h3><a href="#/${t.key}">${t.name}</a></h3><p>${t.desc}</p><div class="row"><a class="open" href="#/${t.key}">打开 →</a></div></article>`).join('');
 $('#cnt').textContent=TOOLS.length+' 个工具';
 $('#run').onclick=run;const cp=$('#copy');if(cp)cp.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText($('#out').textContent||'');
 $('#pick').onclick=()=>$('#file').click();
@@ -6401,4 +6406,100 @@ r.onerror=()=>{{$('#err').textContent='文件读取失败'}};
 r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
-</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script></body></html>
+</script><link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1"><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-enc="1">
+#inp{display:none}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+#xnData{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.5;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;height:230px;resize:vertical}
+#xnData:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:4px 0 2px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld select{height:44px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:210px;cursor:pointer}
+.xn-fld select:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+@media(max-width:720px){#xnData{height:170px}.xn-fld select{min-width:160px}}
+</style>
+<script data-xn-enc="1">
+(function(){
+  const DATA=document.getElementById('xnData'),INP=document.getElementById('inp'),
+        P=document.getElementById('xnParams'),LBL=document.getElementById('xnLbl');
+  if(!DATA||!INP||!P)return;
+  const KEY=()=>(location.hash||'').replace(/^#\//,'');
+  const SAMPLES={
+    b32:'hello',b58:'hello',uni:'你好 ABC',b64url:'hello?',hex:'hello',
+    htmlent:'<a href="x">A&B</a>',b64lines:'hello\nworld',cookie:'a=1; b=2',all:'hello',
+    u16:'你好',xesc:'hi',a85:'hello',uri:'https://a.com/路径?q=1',entropy:'hello world',
+    crc:'hello',datauri:'data:text/plain;base64,aGVsbG8=',bytes:'hi',
+    jwt:'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIn0.sig',puny:'例子.中国',utf8:'e4bda0e5a5bd',
+    b32hex:'hello',b64var:'aGVsbG8=',rot47:'Hello',qp:'a=3Db',b45:'hello',hexb64:'68656c6c6f'
+  };
+  const CFG={
+    htmlent:{aLabel:'文本（每行一条）',f:[{k:'dir',l:'处理方向',v:'e',opts:[['e','转义（文本 → 实体）'],['d','反转义（实体 → 文本）']]}]},
+    b64lines:{aLabel:'文本或 Base64（每行一条）',f:[{k:'dir',l:'处理方向',v:'e',opts:[['e','编码（文本 → Base64）'],['d','解码（Base64 → 文本）']]}]},
+    hexb64:{aLabel:'内容',f:[{k:'dir',l:'转换方向',v:'h2b',opts:[['h2b','Hex → Base64'],['b2h','Base64 → Hex']]}]}
+  };
+  const DEFAULT={aLabel:'输入内容'};
+  let composing=false,lastKey='';
+  const val=(id)=>{const e=document.getElementById(id);return e?e.value:''};
+  function compose(){
+    if(composing)return;
+    const key=KEY(),cfg=CFG[key];
+    composing=true;
+    INP.value=(cfg&&cfg.f&&cfg.f.length)?val('xnP_'+cfg.f[0].k)+'\n'+DATA.value:DATA.value;
+    composing=false;
+  }
+  function build(){
+    const key=KEY(),cfg=CFG[key]||DEFAULT;
+    P.innerHTML='';
+    LBL.textContent=cfg.aLabel||DEFAULT.aLabel;
+    (cfg.f||[]).forEach(f=>{
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      const el=document.createElement('select');
+      (f.opts||[]).forEach(([v,t])=>{const op=document.createElement('option');op.value=v;op.textContent=t;el.appendChild(op);});
+      el.value=f.v||'';el.id='xnP_'+f.k;wrap.appendChild(el);P.appendChild(wrap);
+    });
+    const changed=key!==lastKey,prev=SAMPLES[lastKey];
+    if(changed&&(DATA.value===''||DATA.value===prev))DATA.value=SAMPLES[key]||'';
+    lastKey=key;
+    compose();
+  }
+  ['input','change'].forEach(ev=>{DATA.addEventListener(ev,compose);P.addEventListener(ev,compose);});
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnEnc='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    ['run','copy','pick'].forEach(id=>{const b=document.getElementById(id);if(b)bar.appendChild(b);});
+    if(!oldRow.querySelector('button'))oldRow.remove();
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例';
+  demo.addEventListener('click',()=>{
+    const key=KEY();if(SAMPLES[key])DATA.value=SAMPLES[key];
+    build();const r=document.getElementById('run');r&&r.click();
+  });
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  const XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{
+    const v=XQ.value.trim().toLowerCase();let n=0;
+    XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});
+    const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+  const FILE=document.getElementById('file');
+  if(FILE)FILE.onchange=()=>{
+    const f=FILE.files&&FILE.files[0];if(!f)return;
+    if(f.size>2097152){document.getElementById('err').textContent='文件超过 2MB，请分段或改用粘贴';return;}
+    const r=new FileReader();
+    r.onload=()=>{DATA.value=String(r.result);compose();const rb=document.getElementById('run');rb&&rb.click();};
+    r.onerror=()=>{document.getElementById('err').textContent='文件读取失败'};
+    r.readAsText(f,'utf-8');
+  };
+  window.addEventListener('hashchange',build);
+  build();
+})();
+</script>
+</body></html>
