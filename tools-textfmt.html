@@ -34,14 +34,14 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div id="xnParams" class="xn-params"></div><label class="xn-lbl" id="xnLbl" for="xnData">待处理文本</label><textarea id="xnData" spellcheck="false"></textarea><textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "en2cn", "name": "英文标点转中文", "desc": "中文语境里的 , . ! ? : ; ( ) → 全角标点", "impl": "enPunctToCn"}, {"key": "cn2en", "name": "中文标点转英文", "desc": "，。！？：；（）“” → 半角标点", "impl": "cnPunctToEn"}, {"key": "space", "name": "中英文加空格", "desc": "中文与英文/数字之间补空格，顺带压缩多余空格", "impl": "cjkSpace"}, {"key": "cipher", "name": "轻量文本混淆", "desc": "ROT47 / Atbash / 反转，三种结果并列输出", "impl": "cipherMix"}, {"key": "strip", "name": "去 HTML / Markdown 标记", "desc": "粘贴富文本，输出纯文本（保留换行结构）", "impl": "stripMarks"}, {"key": "ini", "name": "INI 与 JSON 互转", "desc": "以 { 开头按 JSON→INI，否则 INI→JSON", "impl": "iniJson"}, {"key": "case", "name": "大小写与命名风格", "desc": "首行写模式：lower/upper/title/sentence/snake/kebab/camel", "impl": "tfCase"}, {"key": "width", "name": "全角半角互转", "desc": "首行写 f2h 或 h2f，转换字母数字与标点宽度", "impl": "tfWidth"}, {"key": "bytes", "name": "字符与字节统计", "desc": "字符数、UTF-8/UTF-16 字节、微博与短信长度提示", "impl": "tfBytes"}, {"key": "punctrepeat", "name": "重复标点压缩", "desc": "！！！ / 。。。 → 单个标点", "impl": "punctSqueeze"}, {"key": "denumber", "name": "去除行首编号", "desc": "去掉 1. / - / • / （1） 等行首符号", "impl": "stripListNo"}, {"key": "wrap", "name": "批量行包裹", "desc": "首行「前缀|后缀」，逐行包裹（作引号/书名号）", "impl": "lineWrap"}];
+const TOOLS=[{"key": "en2cn", "name": "英文标点转中文", "desc": "中文语境里的 , . ! ? : ; ( ) → 全角标点", "impl": "enPunctToCn"}, {"key": "cn2en", "name": "中文标点转英文", "desc": "，。！？：；（）“” → 半角标点", "impl": "cnPunctToEn"}, {"key": "space", "name": "中英文加空格", "desc": "中文与英文/数字之间补空格，顺带压缩多余空格", "impl": "cjkSpace"}, {"key": "cipher", "name": "轻量文本混淆", "desc": "ROT47 / Atbash / 反转，三种结果并列输出", "impl": "cipherMix"}, {"key": "strip", "name": "去 HTML / Markdown 标记", "desc": "粘贴富文本，输出纯文本（保留换行结构）", "impl": "stripMarks"}, {"key": "ini", "name": "INI 与 JSON 互转", "desc": "以 { 开头按 JSON→INI，否则 INI→JSON", "impl": "iniJson"}, {"key": "case", "name": "大小写与命名风格", "desc": "选择命名风格，转换文本大小写与词形", "impl": "tfCase"}, {"key": "width", "name": "全角半角互转", "desc": "选择方向，转换全角/半角字符", "impl": "tfWidth"}, {"key": "bytes", "name": "字符与字节统计", "desc": "字符数、UTF-8/UTF-16 字节、微博与短信长度提示", "impl": "tfBytes"}, {"key": "punctrepeat", "name": "重复标点压缩", "desc": "！！！ / 。。。 → 单个标点", "impl": "punctSqueeze"}, {"key": "denumber", "name": "去除行首编号", "desc": "去掉 1. / - / • / （1） 等行首符号", "impl": "stripListNo"}, {"key": "wrap", "name": "批量行包裹", "desc": "设置前缀与后缀，逐行包裹文本", "impl": "lineWrap"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -4346,4 +4346,107 @@ r.onerror=()=>{{$('#err').textContent='文件读取失败'}};
 r.readAsText(f,'utf-8')}};
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
-</script></body></html>
+</script>
+<link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1">
+<script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-tf="1">
+#inp{display:none}
+#xn-set-sum{display:none!important}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+#xnData{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.7;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;height:220px;resize:vertical}
+#xnData:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:4px 0 2px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld input,.xn-fld select{height:44px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:150px;font-family:inherit}
+.xn-fld input:focus,.xn-fld select:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+#tool .cols{min-width:0}#tool .cols>div{min-width:0}
+@media(max-width:820px){#tool .cols{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){#xnData{height:170px}.xn-fld input,.xn-fld select{min-width:120px}}
+</style>
+<script data-xn-tf="1">
+(function(){
+  const INP=document.getElementById('inp');
+  const P=document.getElementById('xnParams');
+  const LBL=document.getElementById('xnLbl');
+  const DATA=document.getElementById('xnData');
+  if(!INP||!P||!LBL||!DATA)return;
+  const KEY=()=>(location.hash||'').replace(/^#\//,'');
+  const CFG={
+    case:{sel:{k:'mode',l:'命名风格',v:'lower',opts:[['lower','小写 lower'],['upper','大写 UPPER'],['title','首字母大写 Title'],['sentence','句首大写 Sentence'],['snake','蛇形 snake_case'],['kebab','短横 kebab-case'],['camel','驼峰 camelCase']]}},
+    width:{sel:{k:'dir',l:'转换方向',v:'f2h',opts:[['f2h','全角 → 半角'],['h2f','半角 → 全角']]}},
+    wrap:{pre:{k:'pre',t:'text',l:'前缀',v:'「'},suf:{k:'suf',t:'text',l:'后缀',v:'」'}}
+  };
+  const SAMPLES={
+    en2cn:'这是测试, 包含 English. 和 (括号)',
+    cn2en:'这是测试，English。',
+    space:'中文English混排123',
+    cipher:'Hello',
+    strip:'<h1>标题</h1><p>正文<b>加粗</b></p>[链接](https://a.b)',
+    ini:'{"a":1,"b":"x"}',
+    case:'hello world',
+    width:'ＡＢＣ１２３',
+    bytes:'hello你好',
+    punctrepeat:'太棒了！！！真的吗？？？',
+    denumber:'1. 第一项\n- 第二项\n（3）第三项',
+    wrap:'第一行\n第二行'
+  };
+  let lastKey='';
+  function val(id){const e=document.getElementById(id);return e?e.value:''}
+  function compose(){
+    const cfg=CFG[KEY()]||{};
+    if(cfg.sel)INP.value=val('xnP_'+cfg.sel.k)+'\n'+DATA.value;
+    else if(cfg.pre)INP.value=val('xnP_'+cfg.pre.k)+'|'+val('xnP_'+cfg.suf.k)+'\n'+DATA.value;
+    else INP.value=DATA.value;
+  }
+  function build(){
+    const key=KEY(),cfg=CFG[key]||{};
+    P.innerHTML='';
+    [cfg.sel,cfg.pre,cfg.suf].forEach(f=>{
+      if(!f)return;
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      let el;
+      if(f.opts){
+        el=document.createElement('select');el.id='xnP_'+f.k;
+        f.opts.forEach(o=>{const op=document.createElement('option');op.value=o[0];op.textContent=o[1];el.appendChild(op);});
+        el.value=f.v;
+      }else{
+        el=document.createElement('input');el.type=f.t||'text';el.value=f.v||'';el.id='xnP_'+f.k;
+      }
+      wrap.appendChild(el);P.appendChild(wrap);
+    });
+    P.style.display=(cfg.sel||cfg.pre)?'flex':'none';
+    const changed=key!==lastKey,prev=SAMPLES[lastKey];
+    if(changed&&(DATA.value===''||DATA.value===prev))DATA.value=SAMPLES[key]||'';
+    lastKey=key;
+    compose();
+  }
+  ['input','change'].forEach(ev=>{DATA.addEventListener(ev,compose);P.addEventListener(ev,compose);});
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnTf='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    ['run','copy','pick'].forEach(id=>{const b=document.getElementById(id);if(b)bar.appendChild(b);});
+    oldRow.style.display='none';
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例';
+  demo.addEventListener('click',()=>{build();const r=document.getElementById('run');r&&r.click();});
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  const XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  document.querySelectorAll('#home .card .chip').forEach(c=>c.remove());
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{
+    const v=XQ.value.trim().toLowerCase();let n=0;
+    XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});
+    const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+  window.addEventListener('hashchange',build);
+  build();
+})();
+</script>
+</body></html>
