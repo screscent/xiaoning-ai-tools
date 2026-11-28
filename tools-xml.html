@@ -2280,7 +2280,7 @@ function xml2csv(s){
   const tag=String(s).slice(0,i).trim();
   const xml=String(s).slice(i+1);
   if(!/^[\w:-]+$/.test(tag))return '标签名只能是字母/数字/:/-';
-  const re=new RegExp('<'+tag+'([^>]*)>([\\s\\S]*?)</'+tag+'>','g');
+  const re=new RegExp('<'+tag+'(?=[\\s/>])([^>]*)>([\\s\\S]*?)</'+tag+'>','g');
   const rows=[];let m;
   while((m=re.exec(xml))){
     const attrs={};
