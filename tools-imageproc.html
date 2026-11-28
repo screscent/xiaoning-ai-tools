@@ -34,7 +34,7 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><div class="row"><button id="pick" class="primary">选择图片</button><input type="file" id="file" accept="image/*" multiple hidden><span class="hint" id="fname"></span></div>
+<div class="cols"><div><div id="xnParams" class="xn-params"></div><div class="row"><button id="pick" class="primary">选择图片</button><input type="file" id="file" accept="image/*" multiple hidden><span class="hint" id="fname"></span></div>
 <img id="prev" alt="原图预览" style="max-width:100%;border:1px solid #e5e7eb;border-radius:10px;margin-top:8px;display:none">
 <div class="row"><input id="p" placeholder="参数：宽度 / 质量 / 边长（按工具说明，可空）"></div>
 <div class="row"><button id="run" class="primary">处理</button><span class="hint">可多选图片，逐张处理</span></div>
@@ -43,7 +43,7 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <details><summary>使用说明</summary><div>① 选工具或直接访问 #/key 直达；② 全部本地处理，不上传数据；③ 输出可一键复制；④ 可导入 ≤2MB 文本文件自动填入。</div></details>
 <footer><div class="cols"><div>人类作者：月牙寂（龚浩华）｜联系：15980989344｜邮箱：29185807@qq.com｜微信公众号：月牙寂</div><div>Agent 作者：月绡凝（小凝）</div></div></footer>
 <script>
-const TOOLS=[{"key": "info", "name": "图片信息", "desc": "读尺寸/宽高比/体积，并估算 JPEG 0.8 体积", "impl": "imInfo"}, {"key": "jpeg", "name": "压缩为 JPEG", "desc": "默认 0.8 质量；参数填 1~100 可自定义质量", "impl": "imJpeg"}, {"key": "png", "name": "转换为 PNG", "desc": "无损重编码，适合截图与线稿", "impl": "imPng"}, {"key": "webp", "name": "转换为 WebP", "desc": "0.9 质量，体积更小且兼容现代浏览器", "impl": "imWebp"}, {"key": "thumb", "name": "生成缩略图", "desc": "最长边压到 1280px（不放大），输出 JPEG", "impl": "imThumb"}, {"key": "resize", "name": "指定宽度缩放", "desc": "参数填目标宽度 px（如 800），高度等比缩放", "impl": "imWidth"}, {"key": "quality", "name": "质量调节", "desc": "参数填 1~100（或 0~1），输出 JPEG", "impl": "imQuality"}, {"key": "square", "name": "居中方形裁剪", "desc": "参数填边长 px（留空取短边），居中裁剪", "impl": "imSquare"}];
+const TOOLS=[{"key": "info", "name": "图片信息", "desc": "读尺寸/宽高比/体积，并估算 JPEG 0.8 体积", "impl": "imInfo"}, {"key": "jpeg", "name": "压缩为 JPEG", "desc": "质量可调（1~100），输出 JPEG", "impl": "imJpeg"}, {"key": "png", "name": "转换为 PNG", "desc": "无损重编码，适合截图与线稿", "impl": "imPng"}, {"key": "webp", "name": "转换为 WebP", "desc": "0.9 质量，体积更小且兼容现代浏览器", "impl": "imWebp"}, {"key": "thumb", "name": "生成缩略图", "desc": "最长边压到 1280px（不放大），输出 JPEG", "impl": "imThumb"}, {"key": "resize", "name": "指定宽度缩放", "desc": "设定目标宽度，高度等比缩放", "impl": "imWidth"}, {"key": "quality", "name": "质量调节", "desc": "质量可调（1~100），输出 JPEG", "impl": "imQuality"}, {"key": "square", "name": "居中方形裁剪", "desc": "设定边长居中裁剪（留空取短边）", "impl": "imSquare"}];
 
 function hexD(s){const a=s.trim().replace(/\s+/g,'').match(/.{1,2}/g)||[];return new TextDecoder().decode(new Uint8Array(a.map(h=>parseInt(h,16))))}
 function binE(s){return [...new TextEncoder().encode(s)].map(b=>b.toString(2).padStart(8,'0')).join(' ')}
@@ -2532,4 +2532,88 @@ $('#err').textContent='';$('#results').innerHTML='';
 };
 $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document.querySelectorAll('#home .card').forEach(c=>{const hit=!v||c.dataset.search.includes(v);c.hidden=!hit;if(hit)n++});$('#empty').hidden=n>0;$('#cnt').textContent=n+' / '+TOOLS.length};
 window.addEventListener('hashchange',route);route();
-</script></body></html>
+</script>
+<link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1">
+<script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
+<style data-xn-img="1">
+#xn-set-sum{display:none!important}
+.xn-params{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:0 0 10px}
+.xn-fld{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:#475569;font-weight:600}
+.xn-fld input{height:44px;border:1px solid #cbd5e1;border-radius:9px;padding:0 10px;font-size:14px;background:#fff;color:#0f172a;min-width:170px;font-family:inherit}
+.xn-fld input:focus{outline:2px solid #4338ca33;border-color:#4338ca}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+#tool .cols{min-width:0}#tool .cols>div{min-width:0}
+@media(max-width:820px){#tool .cols{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){.xn-fld input{min-width:130px}}
+</style>
+<script data-xn-img="1">
+(function(){
+  const P=document.getElementById('xnParams');
+  const RUN=document.getElementById('run');
+  const PICK=document.getElementById('pick');
+  const PIN=document.getElementById('p');
+  if(!P||!RUN||!PICK||!PIN)return;
+  const KEY=()=>(location.hash||'').replace(/^#\//,'');
+  const CFG={
+    jpeg:{f:{k:'q',l:'质量（1~100）',v:'80',min:1,max:100,step:5}},
+    quality:{f:{k:'q',l:'质量（1~100）',v:'80',min:1,max:100,step:5}},
+    resize:{f:{k:'w',l:'目标宽度（px）',v:'800',min:1,max:8000}},
+    square:{f:{k:'s',l:'边长（px，留空取短边）',v:'',min:1,max:8000}}
+  };
+  function build(){
+    const cfg=CFG[KEY()]||{};
+    P.innerHTML='';
+    if(cfg.f){
+      const f=cfg.f;
+      const wrap=document.createElement('label');wrap.className='xn-fld';
+      const cap=document.createElement('span');cap.textContent=f.l;wrap.appendChild(cap);
+      const el=document.createElement('input');el.type='number';el.id='xnP_'+f.k;el.value=f.v;
+      el.min=f.min;el.max=f.max;if(f.step)el.step=f.step;
+      el.addEventListener('input',()=>{PIN.value=el.value;});
+      wrap.appendChild(el);P.appendChild(wrap);
+      PIN.value=f.v;
+    }else PIN.value='';
+    P.style.display=cfg.f?'flex':'none';
+  }
+  const pRow=PIN.parentElement;if(pRow)pRow.style.display='none';
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnImg='1';
+  bar.appendChild(PICK);bar.appendChild(RUN);
+  const FN=document.getElementById('fname');if(FN)bar.appendChild(FN);
+  const demo=document.createElement('button');demo.type='button';demo.textContent='用示例图';
+  demo.addEventListener('click',()=>{
+    const c=document.createElement('canvas');c.width=640;c.height=400;
+    const g=c.getContext('2d');
+    const grd=g.createLinearGradient(0,0,640,400);
+    grd.addColorStop(0,'#4338ca');grd.addColorStop(1,'#06b6d4');
+    g.fillStyle=grd;g.fillRect(0,0,640,400);
+    g.fillStyle='#fff';g.font='bold 40px sans-serif';g.fillText('小凝示例图 640×400',56,220);
+    c.toBlob((blob)=>{
+      const f=new File([blob],'sample-640x400.png',{type:'image/png'});
+      const dt=new DataTransfer();dt.items.add(f);
+      const fi=document.getElementById('file');
+      fi.files=dt.files;
+      fi.dispatchEvent(new Event('change',{bubbles:true}));
+      setTimeout(()=>{const r=document.getElementById('run');r&&r.click();},400);
+    },'image/png');
+  });
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  const firstRow=PICK.closest('.row');if(firstRow)firstRow.style.display='none';
+  const runRow=RUN.closest('.row');if(runRow)runRow.style.display='none';
+  const XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  document.querySelectorAll('#home .card .chip').forEach(c=>c.remove());
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{
+    const v=XQ.value.trim().toLowerCase();let n=0;
+    XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});
+    const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+  window.addEventListener('hashchange',build);
+  build();
+})();
+</script>
+</body></html>
