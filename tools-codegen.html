@@ -35,7 +35,7 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 <nav class="tabs" id="tabs"></nav>
 <main><section id="home" class="cardgrid"></section>
 <section id="tool" class="panel" hidden><h2 id="tname">—</h2><div class="hint" id="thint"></div>
-<div class="cols"><div><textarea id="inp" spellcheck="false"></textarea>
+<div class="cols"><div><div id="xnParams" class="xn-params"></div><label class="xn-lbl" id="xnLbl" for="xnData">JSON 输入</label><textarea id="xnData" spellcheck="false"></textarea><textarea id="inp" spellcheck="false"></textarea>
 <div class="row"><button id="run" class="primary">转换</button><button id="copy">复制输出</button><button id="pick">导入文件</button><input type="file" id="file" accept=".txt,.csv,.tsv,.json,.md,.markdown,.xml,.yaml,.yml,.ini,.log,.sql,.html,.css,.js,.ts,.py,.sh,.conf,.env" hidden><span class="hint" id="fname"></span></div>
 <div class="err" id="err"></div></div><div><pre id="out"></pre></div></div></section>
 <div id="empty" class="hint" hidden>没有匹配的工具，换个关键词</div></main>
@@ -7196,4 +7196,52 @@ $('#q').oninput=()=>{const v=$('#q').value.trim().toLowerCase();let n=0;document
 window.addEventListener('hashchange',route);route();
 </script><script src="legacy/assets/xn-set.js?v=20261127e" defer data-xn-set="1"></script>
 <link rel="stylesheet" href="legacy/assets/xn-set.css?v=20261127j" data-xn-set="1">
+<style data-xn-cg="1">
+#inp{display:none}
+#xn-set-sum{display:none!important}
+.xn-lbl{display:block;font-size:13px;font-weight:700;color:#334155;margin:8px 0 6px}
+#xnData{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.7;background:#f8fafc;color:#0f172a;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;height:220px;resize:vertical}
+#xnData:focus{outline:2px solid #4338ca33;border-color:#4338ca;background:#fff}
+.xn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+.xn-bar button:not(.primary){border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;font-size:13px;font-weight:700;border-radius:9px;padding:8px 14px;min-height:44px;cursor:pointer}
+.xn-bar button:not(.primary):hover{background:#e0e7ff}
+#tool .cols{min-width:0}#tool .cols>div{min-width:0}
+@media(max-width:820px){#tool .cols{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){#xnData{height:170px}}
+</style>
+<script data-xn-cg="1">
+(function(){
+  const INP=document.getElementById('inp');
+  const DATA=document.getElementById('xnData');
+  if(!INP||!DATA)return;
+  const SAMPLE='{"id":1,"name":"小凝","tags":["a","b"],"profile":{"age":3,"active":true}}';
+  let lastKey='';
+  function compose(){INP.value=DATA.value}
+  DATA.addEventListener('input',compose);
+  DATA.addEventListener('change',compose);
+  const bar=document.createElement('div');bar.className='xn-bar';bar.dataset.xnCg='1';
+  const oldRow=document.querySelector('#tool .row');
+  if(oldRow){
+    ['run','copy','pick'].forEach(id=>{const b=document.getElementById(id);if(b)bar.appendChild(b);});
+    oldRow.style.display='none';
+  }
+  const demo=document.createElement('button');demo.type='button';demo.textContent='示例 JSON';
+  demo.addEventListener('click',()=>{DATA.value=SAMPLE;compose();const r=document.getElementById('run');r&&r.click();});
+  bar.appendChild(demo);
+  const colsEl=document.querySelector('#tool .cols');if(colsEl)colsEl.insertAdjacentElement('afterend',bar);
+  if(!DATA.value)DATA.value=SAMPLE;
+  const XHOME=document.getElementById('home');if(XHOME)XHOME.style.display='none';
+  document.querySelectorAll('#home .card .chip').forEach(c=>c.remove());
+  const XTABS=[...document.querySelectorAll('nav.tabs a')];
+  if(!location.hash&&XTABS.length)location.replace(XTABS[0].getAttribute('href'));
+  const XQ=document.getElementById('q');
+  if(XQ)XQ.addEventListener('input',()=>{
+    const v=XQ.value.trim().toLowerCase();let n=0;
+    XTABS.forEach(a=>{const hit=!v||(a.textContent||'').toLowerCase().includes(v);if(hit){a.style.removeProperty('display');n++;}else{a.style.setProperty('display','none','important');}});
+    const c=document.getElementById('cnt');if(c)c.textContent=n+' / '+XTABS.length;
+  });
+  window.addEventListener('hashchange',()=>{compose();lastKey=(location.hash||'');});
+  compose();
+})();
+</script>
 </body></html>
